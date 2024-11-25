@@ -24,10 +24,10 @@ In order to limit the work of updating the catalog, records are designed to cove
 
 The questions regarding the structure of the catalog can benefit from community input.  Please add your ideas to one of the issues below.
 
-1. [What should the basic shape of a catalog entrty look like?](./issues/1)
-2. [How should we handle links from an asset to its online access point(s)?](./issues/2)
-3. [How should we handle links between assets (e.g. software dependencies)?](./issues/3)
-4. [What SKOS concepts should we use to structure the catalog?](./issues/4)
+1. [What should the basic shape of a catalog entrty look like?](https://github.com/solid/catalog/issues/1)
+2. [How should we handle links from an asset to its online access point(s)?](https://github.com/solid/catalog/issues/2)
+3. [How should we handle links between assets (e.g. software dependencies)?](https://github.com/solid/catalog/issues/3)
+4. [What SKOS concepts should we use to structure the catalog?](https://github.com/solid/catalog/issues/4)
 
 In addition to contributing to the issues and eventually to the catalog data itself, everyone is invited to share their ideas in the [Solid Practitioners matrix chat](https://matrix.to/#/#solid-practitioners:matrix.org).  Occassional meetings regarding the catalog will be announced there. Ping me (@jeff-zucker) or @elf-pavlik if you have questions.
 
