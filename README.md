@@ -6,6 +6,8 @@
 
 The purpose of this project is to create and make public a comprehensive listing of people, organizations, products, services, and events useful to people wanting to learn about, use, create, or promote the Solid software ecosystyem.  Data will be kept in RDF as described in this repo and can therefore be reused by multiple applications.  Two initial applications are in progress. [Solid Catalog](https://github.com/solid-contrib/catalog) is an app to display a searchable version of the catalog on the Solid Project website and pod. [Solid Efforts](https://github.com/elf-pavlik/solid-efforts) is an app intended to support exploration of the interal links between the Solid Specifications and other parts of the Solid ecosystem. 
 
+Checkout the (very preliminary) [online version of catalog](https://solidproject.solidcommunity.net/catalog/)!
+
 **Note** This is a work in progress, please do not take any of the data presented as representative of the people, organizations, and software listed - the data has not been vetted.  And please don't send corrections yet. Once the initial issues listed below have been at least preliminarily solved, we'll make a call for corrections and additions.
 
 ## Long Term Goals
