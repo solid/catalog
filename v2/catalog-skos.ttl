@@ -1,0 +1,211 @@
+@prefix con: <#> . # this file, Solid SKOS concept tree
+
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+con:SolidCatalogTaxonomy 
+  a skos:ConceptScheme ;
+  skos:hasTopConcept
+    con:ProductType,
+    con:ServiceType,
+    con:OrganizationType,
+    con:LearningResourceType,
+    con:Status .
+
+###
+# Product Type
+###
+
+con:ProductType
+  a skos:Concept;
+  skos:inScheme con:SolidCatalogTaxonomy ;
+  skos:preflabel "Product Type".
+
+con:Application
+  a skos:Concept ;
+  skos:broader con:ProductType ;
+  skos:preflabel "Application (client)" .
+
+con:PodServer
+  a skos:Concept ;
+  skos:broader con:ProductType ;
+  skos:description "supports identity & storage" ;
+  skos:preflabel "Pod Server" .
+
+con:ServerPlugin
+  a skos:Concept ;
+  skos:broader con:ProductType ;
+  skos:preflabel "Server Plugin or Component" .
+
+con:DevelopmentTool
+  a skos:Concept ;
+  skos:broader con:ProductType ;
+  skos:preflabel "Development Tool (library,webcomponent,SDK,...)" .
+
+con:IdentityServer
+  a skos:Concept ;
+  skos:broader con:ProductType ;
+  skos:preflabel "Identity Server" .
+
+con:StorageServer
+  a skos:Concept ;
+  skos:broader con:ProductType ;
+  skos:preflabel "Storage Server" .
+
+
+###
+# STATUS
+###
+con:Status
+    a skos:Concept ;
+    skos:definition "Predefined values for specifying the status of a project." ;
+    skos:inScheme :SolidCatalogTaxonomy .
+
+con:Exploration
+    a skos:Concept ;
+    skos:broader con:Status ;
+    skos:preflabel "Exploration"@en ;
+    skos:definition "Project is in a planning stage."@en .
+
+con:Development
+    a skos:Concept ;
+    skos:broader con:Status ;
+    skos:preflabel "Development"@en ;
+    skos:definition "Project is being worked on but not fully ready."@en .
+
+con:Production 
+    a skos:Concept ;
+    skos:broader con:Status ;
+    skos:preflabel "Production"@en ;
+    skos:definition "Project is ready for use."@en .
+
+con:Archived
+    a skos:Concept ;
+    skos:broader con:Status ;
+    skos:preflabel "Archived"@en ;
+    skos:definition "Project has been archived for historical purposes." .
+
+###
+# Service Type
+###
+
+con:ServiceType
+  a skos:Concept;
+  skos:inScheme con:SolidCatalogTaxonomy ;
+  skos:preflabel "Service Type".
+
+con:GeneralPurposePodService
+  a skos:Concept ;
+  skos:broader con:ServiceType ;
+  skos:preflabel "General Public Pod Provider" .
+
+con:SpecializedPodService
+  a skos:Concept ;
+  skos:broader con:ServiceType ;
+  skos:preflabel "Targeted Audience Pod Provider" .
+
+con:IdentityService
+  a skos:Concept ;
+  skos:broader con:ServiceType ;
+  skos:preflabel "Identity Service" .
+
+con:StorageService
+  a skos:Concept ;
+  skos:broader con:ServiceType ;
+  skos:preflabel "Storage Service" .
+
+con:ChatService
+  a skos:Concept ;
+  skos:broader con:ServiceType ;
+  skos:preflabel "Chat Service" .
+
+con:ForumService
+  a skos:Concept ;
+  skos:broader con:ServiceType ;
+  skos:preflabel "Forum Service" .
+
+con:MailingListService
+  a skos:Concept ;
+  skos:broader con:ServiceType ;
+  skos:preflabel "Mailing List Service" .
+
+###
+# Organization Type
+###
+
+con:OrganizationType
+  a skos:Concept;
+  skos:inScheme con:SolidCatalogTaxonomy ;
+  skos:preflabel "Organization Type".
+
+con:Company
+  a skos:Concept ;
+  skos:broader con:OrganizationType ;
+  skos:preflabel "Company or Enterprise" .
+
+con:GovernmentalOrganization
+  a skos:Concept ;
+  skos:broader con:OrganizationType ;
+  skos:preflabel "Governmental Organiazation" .
+
+con:UniversityProject
+  a skos:Concept ;
+  skos:broader con:OrganizationType ;
+  skos:preflabel "University department or unit" .
+
+con:OpenSourceProject
+  a skos:Concept ;
+  skos:broader con:OrganizationType ;
+  skos:preflabel "Open Source Project" .
+
+con:FundingOrganization
+  a skos:Concept ;
+  skos:broader con:OrganizationType ;
+  skos:preflabel "Funding Organization" .
+
+con:NonGovernmentalOrganization
+  a skos:Concept ;
+  skos:broader con:OrganizationType ;
+  skos:preflabel "Other NGO" .
+
+###
+# Learning Resource Type
+###
+
+con:LearningResourceType
+  a skos:Concept;
+  skos:inScheme con:SolidCatalogTaxonomy ;
+  skos:preflabel "Learning Resource Type".
+
+con:Tutorial
+  a skos:Concept ;
+  skos:broader con:LearningResourceType ;
+  skos:preflabel "Print Tutorial" .
+
+con:ResearchPaper
+  a skos:Concept ;
+  skos:broader con:LearningResourceType ;
+  skos:preflabel "Research Paper" .
+
+con:Explainer
+  a skos:Concept ;
+  skos:broader con:LearningResourceType ;
+  skos:preflabel "Explainer" .
+
+con:SpecificationSupplement
+  a skos:Concept ;
+  skos:broader con:LearningResourceType ;
+  skos:preflabel "Specification Supplement (primers,use cases,...)" .
+
+con:Video
+  a skos:Concept ;
+  skos:broader con:LearningResourceType ;
+  skos:preflabel "Video" .
+
+con:OtherLearningResource
+  a skos:Concept ;
+  skos:broader con:LearningResourceType ;
+  skos:preflabel "Other Learning Resource" .
+

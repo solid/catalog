@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solid Resources Catalog Report</title>
+    <script type="module" src='https://cdn.jsdelivr.net/npm/mashlib@latest/dist/mashlib.min.js'></script>
+    <style>
+      pre {
+        font-size:1em !important;
+        font-family:Sans-Serif !important;
+      }
+      li { 
+        margin-top:0.5em; 
+        margin-bottom:0.5em; 
+      }
+    </style>
+</head>
+<body>
+
+  <script type="module">
+    import {report} from '../scripts/utils.js';
+    async function run(){
+      const currentFolder = 'http://localhost:8444/home/s/c/catalog/v2/'; // CHANGE THIS!!!
+      const dataURL  = currentFolder + 'catalog-data.ttl'
+      const shaclURL = currentFolder + 'catalog-shacl.ttl'
+      const skosURL  = currentFolder + 'catalog-skos.ttl'
+      const shape    = 'Product';
+      const reportContent = await report(dataURL,shaclURL,skosURL,shape);
+      document.body.innerHTML += `
+        <p><a href="index.html"> Solid Resources Catalog</a> > Report</p>
+        <PRE>${reportContent}</PRE>
+      `;
+    }
+    run();
+
+  </script>
+
+</body>
+</html>
+
+

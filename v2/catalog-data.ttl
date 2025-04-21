@@ -1,0 +1,2489 @@
+@prefix cdata: <#> .
+@prefix ex: <http://example.org/#> . # uses tmp namespace until predicates finalized
+@prefix con: <./catalog-skos.ttl#> .  # SKOS concept tree
+
+###########
+# SERVICE #
+###########
+
+###
+# POD SERVICE
+###
+
+cdata:InruptPodSpaces      
+  a ex:Service ;
+  ex:name "Inrupt Pod Spaces" ;
+  ex:subType con:GeneralPurposePodService ;
+  ex:serviceEndpoint <https://start.inrupt.com/> ;
+  ex:serviceBackend :ESS ;
+  ex:provider :Inrupt ;
+  ex:description """
+     Inrupt Pod Spaces is an instance of the Enterprise Solid Server provided by Inrupt, Inc., hosted by Amazon.
+  """@en .
+
+cdata:SolidCommunityDotNet
+  a ex:Service ;
+  ex:subType con:GeneralPurposePodService ;
+  ex:name "solidcommunity.net" ;
+  ex:provider :ODI ;
+  ex:logo <https://solid.inrupt.com/themes/custom/solid/logo.svg>;
+  ex:description "solidcommunity.net is a public Solid server maintained by the Open Data Institute.";
+  ex:serviceEndpoint <https://solidcommunity.net> ;
+  ex:serviceBackend :Pivot .
+
+cdata:SolidWebDotOrg  
+  a ex:Service ;
+  ex:name "solidweb.org" ;
+  ex:subType con:GeneralPurposePodService ;
+  ex:provider :SolidGrassroots ;
+  ex:logo <https://www.serverproject.de/logo2.png>;
+  ex:description "solidweb.org is a public Solid server based in Germany which is in an experimental state.";
+  ex:serviceEndpoint <https://solidweb.org> ;
+  ex:serviceBackend :NSS .
+
+cdata:SolidWebDotMe  
+  a ex:Service ;
+  ex:subType con:GeneralPurposePodService ;
+  ex:name "solidweb.me" ;
+  ex:provider :Meisdata ;
+  ex:serviceEndpoint <https://solidweb.me> ;
+  ex:serviceBackend :CSS .
+
+cdata:TrinpodService
+  a ex:Service ;
+  ex:name "Trinpod" ;
+  ex:subType con:GeneralPurposePodService ;
+  ex:provider :Graphmetrix ;
+  ex:logo <https://trinpod.us/img/gmx_logo.5a794ad6.png> ;
+  ex:description "trinpod.us is a public Solid server provided by Graphmetrix, U.S.A..";
+  ex:serviceEndpoint <https://trinpod.com> ;
+  ex:serviceBackend :Trinpod .
+
+cdata:StartinBloxDotCom
+  a ex:Service ;
+  ex:subType con:GeneralPurposePodService ;
+  ex:name "Startin'Blox" ;
+  ex:provider   :StartinBlox ;
+  ex:serviceEndpoint <https://startinblox.com/> ;
+  ex:serviceBackend :CSS .
+
+cdata:Mastopod
+  a ex:Service ;
+  ex:name "Mastopod" ;
+  ex:subType con:GeneralPurposePodService ;
+  ex:serviceEndpoint <https://mastopod.com/> ;
+  ex:serviceBackend  :ActivityPods .
+
+cdata:PodDotLiquidSurf
+  a ex:Service ;
+  ex:name "Liquid Surf" ;
+  ex:subType con:GeneralPurposePodService ;
+  ex:provider :LiquidSurf ;
+  ex:serviceEndpoint <https://pod.liquid.surf/> ;
+  ex:serviceBackend :CSS ; 
+  ex:serviceFrontend :EasyPenny.
+
+cdata:TeamIdLive
+  a ex:Service ;
+  ex:name "teamid.live" ;
+  ex:subType con:GeneralPurposePodService ;
+  ex:serviceEndpoint <https://teamid.live/> ;
+  ex:provider :Meisdata;
+  ex:serviceBackend :CSS .
+
+cdata:IgrantIo
+  a ex:Service ;
+  ex:name "Data Pod" ;
+  ex:subType con:GeneralPurposePodService ;
+  ex:provider :IgrantIoOrg ;
+  ex:serviceEndpoint <https://datapod.igrant.io/> ;
+  ex:serviceBackend :NSS .
+
+cdata:RedpencilService
+  a ex:Service ;
+  ex:name "redpencil.io" ;
+  ex:subType con:GeneralPurposePodService ;
+  ex:provider :Redpencil ;
+  ex:serviceEndpoint <https://solid.redpencil.io/> ;
+  ex:serviceBackend :CSS .
+
+cdata:SolidCommunityAUpods
+  a ex:Service ;
+  ex:name "Solid Community AU" ;
+  ex:subType con:GeneralPurposePodService ;
+  ex:landingPage <https://www.solidproject.au/> ;
+  ex:serviceEndpoint <https://pods.solidcommunity.au/> ;  
+  ex:provider :SolidCommunityAU, :AkamiTechnologies ;
+  ex:serviceBackend :CSS .
+
+cdata:UseId
+  a ex:Service ;
+  ex:name "use.id" ;
+  ex:subType con:GeneralPurposePodService ;
+  ex:serviceEndpoint <https://get.use.id/> ;
+  ex:provider :Digita ;
+  ex:serviceBackend :CSS .
+
+cdata:OpenLinks2
+  a ex:Service ;
+  ex:name "OpenLinks Solid Server #2";
+  ex:subType con:GeneralPurposePodService ;
+  ex:serviceEndpoint <https://solid.openlinksw.com:8445/>;
+  ex:provider :OpenLink;
+  ex:serviceBackend :OpenLinkNSSFork .
+
+cdata:OpenLinks1
+  a ex:Service ;
+  ex:name "OpenLinks Solid Server #1";
+  ex:subType con:GeneralPurposePodService ;
+  ex:serviceEndpoint <https://solid.openlinksw.com:8444/>;
+  ex:provider :OpenLink;
+  ex:serviceBackend :OpenLinkNSSFork .
+
+###
+# SPECIALIZED POD SERVICE
+###
+
+cdata:SolidHealthAU
+  a ex:Service ;
+  ex:subType con:SpecializedPodService ;
+  ex:name "Solid Health" ;
+  ex:domainKeyword "health","ethnicity","access to public resources" ;
+  ex:provider :AUnationalU, :GurrinyHealthClinic ;
+  ex:landingPage <https://sii.anu.edu.au/projects.html> ;
+  ex:serviceAudience "Members of the Yarrabah Aboriginal Community" ;
+  ex:description """
+   Members of the Yarrabah Aboriginal Community in Queensland each have a POD hosted on the Yarrabah Solid Server containing their own private health data.
+  """ .
+
+cdata:DigitalFlanders
+  a ex:Service ;
+  ex:name "Digital Flanders" ;
+  ex:subType con:SpecializedPodService ;
+  ex:domainKeyword "employment","access to public resources" ;
+  ex:serviceAudience "Citizens of Belgium" ;
+  ex:provider :GovernmentOfFlanders.
+
+cdata:WelcomeToMyPlace
+  a ex:Service ;
+  ex:name "Welcome to My Place" ;
+  ex:subType con:SpecializedPodService ;
+  ex:domainKeyword "housing", "resource sharing" ;
+  ex:serviceEndpoint <https://mastopod.com/> ;
+  ex:serviceBackend  :ActivityPods ;
+  ex:description      """
+    Private meetings at home that promote a living together based on welcome,
+    trust and mutuall aid.
+  """ .
+
+cdata:MutualAid
+  a ex:Service ;
+  ex:name        "Mutual Aid" ;
+  ex:subType con:SpecializedPodService ;
+  ex:domainKeyword "resource sharing" ;
+  ex:serviceEndpoint <https://mutual-aid.app/> ;
+  ex:serviceBackend  :ActivityPods ;
+  ex:description      """
+    Classified ads to support each other within a trusted network.
+  """ .
+
+cdata:SleepyBike
+  a ex:Service ;
+  ex:name  "sleepy.bike" ;
+  ex:subType con:SpecializedPodService ;
+  ex:domainKeyword "housing", "transportation", "resource sharing" ;
+  ex:serviceEndpoint <https://sleepy.bike/> ;
+  ex:provider :OpenHospitalityNetwork ;
+  ex:serviceBackend :CSS ; 
+  ex:serviceFrontend :SleepyBikePlatform;
+  ex:description      """
+    A decentralized hospitality exchange community for slow travellers.
+  """ .
+
+cdata:PASS
+  a ex:Service ;
+  ex:subType con:SpecializedPodService ;
+  ex:name "Personalized Access System for Services (PASS)" ;
+  ex:serviceType con:SpecializedPodService ;
+  ex:status con:Development ;
+  ex:domainKeyword "housing", "access to public resources" ;
+  ex:provider   :CodePDX ;
+  ex:serviceBackend :CSS ;
+  ex:serviceFrontend :PASSPlatform;
+  ex:serviceAudience "homeless people", "housing services case workers" ;
+  ex:landingPage <https://github.com/codeforpdx/PASS> ;
+  ex:description """An open source digital wallet for providing home-insecure individuals a safe place to store documents within their control. PASS additionally aims to assist caseworkers with processing and providing documents needed to complete the housing-assistance application process.""" .
+
+cdata:Mycelium
+  a ex:Service ;
+  ex:name "Mycelium Project" ;
+  ex:subType con:SpecializedPodService ;
+  ex:domainKeyword "food", "farming", "short supply chain", "business management" ;
+  ex:provider :INRIA, :StartinBloxCo ;
+  ex:description """
+    applications to manage farms (products, harvests, sales, accounting, etc.) using taxonomies for short food supply chains.
+  """ .
+
+cdata:HUBL
+  a ex:Service ;
+  ex:name "HUBL" ;
+  ex:subType con:SpecializedPodService ;
+  ex:domainKeyword "employment", "resource sharing" ;
+  ex:provider :INRIA, :StartinBloxCo ;
+  ex:description """
+    allows you to find freelancers in a community of users
+  """ .
+
+cdata:Solid-Clinic
+  a ex:Service ;
+  ex:subType con:SpecializedPodService;
+  ex:name "Solid Clinic" ;
+  ex:serviceEndpoint <https://chuixuewan.github.io/solid-clinic/> .
+
+###
+# COMMUNICATION SERVICES
+###
+
+cdata:SolidForum
+  a ex:Service ;
+  ex:name "Solid Forum" ;
+  ex:subType con:ForumService ;
+  ex:serviceEndpoint <https://forum.solidproject.org> ;
+  ex:provider :ODI ;
+  ex:description """
+     An open forum for comments, questions, and discussions happening in the Solid community.
+  """ .
+
+cdata:SolidMatrixChat
+  a ex:Service ;
+  ex:name "Solid Matrix Chat" ;
+  ex:subType con:ChatService ;
+  ex:serviceEndpoint <https://matrix.to/to/#/#solid_project> ;
+  ex:provider :ODI ;
+  ex:description """
+    The Solid Matrix Chat is a live chat where community members can connect.
+  """ .
+
+cdata:CG-mailingList
+  a ex:Service ;
+  ex:name "W3C Solid Community Group Mailing List" ;
+  ex:subType con:MailingListService ;
+  ex:serviceEndpoint <mailto:public-solid-request@w3.org?subject=subscribe> ;
+  ex:landingPage <https://lists.w3.org/Archives/Public/public-solid/> ;
+  ex:provider :SolidCG .
+
+cdata:SolidReddit
+  a ex:Service ;
+  ex:name "Solid Sub-Reddit" ;
+  ex:subType con:ForumService ;
+  ex:serviceEndpoint <https://www.reddit.com/r/SOLID/> ;
+  ex:provider :ODI .
+
+################
+# ORGANIZATION #
+################
+
+cdata:GovernmentOfFlanders
+  a ex:Organization ;
+  ex:subType con:GovernmentalOrganization ;
+  ex:name "Digital Flanders".
+
+cdata:SolidOSteam
+  a ex:Organization ;
+  ex:subType con:OpenSourceProject ;
+  ex:name "SolidOS Coding Group" ;
+  ex:description "The operating system for Solid. Members of this team maintain and develop core Solid libraries - rdflib, solid-ui, solid-panes, mashlib." ;
+  ex:landingPage <https://github.com/SolidOS/solidos> .
+
+cdata:LiquidSurf
+  a ex:Organization ;
+  ex:subType con:OpenSourceProject ;
+  ex:name "Liquid Surf" .
+
+cdata:CodePDX
+  a ex:Organization ;
+  ex:subType con:OpenSourceProject ;
+  ex:name "CodePDX" .
+
+cdata:INRIA
+  a ex:Organization ;
+  ex:subType con:UniversityProject ;
+  ex:name "INRIA" .
+
+cdata:DataFoodNetwork
+  a ex:Organization ;
+  ex:subType con:NonGovernmentalOrganization ;
+  ex:name "Data Food Network" .
+
+cdata:UofSouthhampton
+  a ex:Organization ;
+  ex:subType con:UniversityProject ;
+  ex:name "University of Southampton" .
+
+cdata:UofLondon
+  a ex:Organization ;
+  ex:subType con:UniversityProject ;
+  ex:name "University of London" .
+
+cdata:DataSwift
+  a ex:Organization ;
+  ex:subType con:Company ;
+  ex:name "Data Swift" .
+
+cdata:OxfordHumanCenteredComputingGroup
+  a ex:Organization ;
+  ex:subType con:UniversityProject ;
+  ex:name "Oxford University, Human Centered Computing Group" .
+
+cdata:EDWADAproject
+  a ex:Organization ;
+  ex:subType con:UniversityProject ;
+  ex:name "EDWADA Project" .
+
+cdata:OpenHospitalityNetwork
+  a ex:Organization ;
+  ex:subType con:NonGovernmentalOrganization ;
+  ex:name "Open Hospitality Network" ;
+  ex:landingPage <https://github.com/OpenHospitalityNetwork> .
+
+cdata:SolidProject
+  a ex:Organization ;
+  ex:subType con:OpenSourceProject ;
+  ex:name "The Solid Project" .
+
+cdata:SolidTeam
+  a ex:Organization ;
+  ex:subType con:OpenSourceProject ;
+  ex:name "The Solid Team" .
+
+cdata:SolidCG
+  a ex:Organization ;
+  ex:subType con:OpenSourceProject ;
+  ex:name "W3C Solid Community Group" .
+
+cdata:LinkedWebStoragWG
+  a ex:Organization ;
+  ex:subType con:OpenSourceProject ;
+  ex:name "W3C Linked Web Storage Working Group" .
+
+cdata:Inrupt
+  a ex:Organization ;
+  ex:subType con:Company ;
+  ex:name "Inrupt, Inc.".
+
+cdata:Graphmetrix
+  a ex:Organization ;
+  ex:subType con:Company ;
+  ex:name "Graphmetrix, Inc." .
+
+cdata:Digita
+  a ex:Organization ;
+  ex:subType con:Company ;
+  ex:landingPage <https://www.digita.ai/> ;
+  ex:name "Digita" .
+
+cdata:IgrantIoOrg
+  a ex:Organization ;
+  ex:subType con:OpenSourceProject ;
+  ex:name "iGrant.IO" .
+
+cdata:Redpencil
+  a ex:Organization ;
+  ex:subType con:Company ;
+  ex:landingPage <https://redpencil.io/> ;
+  ex:name "redpencil.io" .
+
+cdata:Meisdata
+  a ex:Organization ;
+  ex:subType con:OpenSourceProject ;
+  ex:name "Meisdata" .
+
+cdata:Manomayam
+  a ex:Organization ;
+  ex:subType con:OpenSourceProject ;
+  ex:name "Manomayam" ;
+  ex:landingPage <https://github.com/manomayam> .
+
+cdata:Oteam
+  a ex:Organization ;
+  ex:subType con:OpenSourceProject ;
+  ex:name "O-Team" .
+
+cdata:Imec
+  a ex:Organization ;
+  ex:subType con:UniversityProject ;
+  ex:name "Imec" .
+
+cdata:SolidGrassroots
+  a ex:Organization ;
+  ex:subType con:OpenSourceProject ;
+  ex:landingPage <https://gitlab.com/groups/solidweb.org/-/group_members> ;
+  ex:name "Solid Grassroots" .
+
+cdata:OpenLink
+  a ex:Organization ;
+  ex:subType con:Company ;
+  ex:name "OpenLink Software" .
+
+cdata:SolidPractitioners
+  a ex:Organization ;
+  ex:subType con:OpenSourceProject ;
+  ex:name "Solid Practitioners" .
+
+cdata:PDSINTEROP
+  a ex:Organization ;
+  ex:subType con:UniversityProject ;
+  ex:name "PDS Interop" ;
+  ex:landingPage <https://pdsinterop.org/> .
+
+cdata:SolidCommunityAU
+  a ex:Organization ;
+  ex:subType con:OpenSourceProject ;
+  ex:name "Solid Community AU" ;
+  ex:landingPage <https://solidcommunity.au/> .
+
+cdata:AkamiTechnologies
+  a ex:Organization ;
+  ex:subType con:Company ;
+  ex:landingPage <https://www.akamai.com/>;
+  ex:name "Akamai Technologies" .
+
+cdata:AUnationalU
+  a ex:Organization ;
+  ex:subType con:UniversityProject ;
+  ex:landingPage <https://sii.anu.edu.au/index.html>;
+  ex:name "Australian National University Software Innovation Institute" .
+
+cdata:Pounder
+  a ex:Organization ;
+  ex:subType con:OpenSourceProject ;
+  ex:name "Pounder" .
+
+cdata:GurrinyHealthClinic 
+  a ex:Organization ;
+  ex:subType con:NonGovernmentalOrganization ;
+  ex:name "Gurriny Health Clinic" ;
+  ex:landingPage <https://www.gyhsac.org.au/> .
+
+cdata:ODI
+  a ex:Organization ;
+  ex:subType con:NonGovernmentalOrganization ;
+  ex:name "Open Data Institute (ODI)" ;
+  ex:landingPage <https://theodi.org/> .
+
+cdata:UofSingapore
+  a ex:Organization ;
+  ex:subType con:UniversityProject ;
+  ex:name "University of Singapore" .
+
+cdata:StartinBloxCo
+  a ex:Organization ;
+  ex:subType con:Company ;
+  ex:name "Startin'Blox" .
+
+cdata:Espresso
+  a ex:Organization ;
+  ex:subType con:UniversityProject ;
+  ex:name        "Espresso" ;
+  ex:provider    :UofSouthhampton, :UofLondon, :UofSingapore, :DataSwift ;
+  ex:landingPage <https://espressoproject.org/> ;
+  ex:description """
+    Efficient Search over Personal Repositories - Secure and Sovereign
+  """ .
+
+
+####################
+# FUNDING PROGRAMS #
+####################
+
+cdata:CCIG 
+  a ex:Organization ;
+  ex:subType con:FundingOrganization ; 
+  ex:name "Consensus Community Innovation Grants"@en ;
+  ex:landingPage <http://agree.org/> .
+
+cdata:DDG 
+  a ex:Organization ;
+  ex:subType con:FundingOrganization ; 
+  ex:name "DuckDuckGo Donations"@en ;
+  ex:landingPage <https://duckduckgo.com/donations> .
+
+cdata:GithubSponsors
+  a ex:Organization ;
+  ex:subType con:FundingOrganization ; 
+  ex:name "GitHub Sponsors"@en ;
+  ex:landingPage  <https://github.com/sponsors> .
+
+cdata:GrantForTheWeb
+  a ex:Organization ;
+  ex:subType con:FundingOrganization ; 
+  ex:name "Grant for the web"@en ;
+  ex:landingPage <https://forum.grantfortheweb.org/t/call-for-proposals-early-2020/959> .
+
+cdata:BAAS
+  a ex:Organization ;
+  ex:subType con:FundingOrganization ; 
+  ex:name "Je Data de Baas by SIDN"@en ;
+  ex:landingPage <https://www.sidnfonds.nl/nieuws/follow-up-call-je-data-de-baas> .
+
+cdata:Ledger
+  a ex:Organization ;
+  ex:subType con:FundingOrganization ; 
+  ex:name "Ledger Project"@en ;
+  ex:landingPage <https://ledgerproject.eu> .
+
+cdata:MozillaOpenScience
+  a ex:Organization ;
+  ex:subType con:FundingOrganization ; 
+  ex:name "Mozilla Open Science Mini Grants"@en ;
+  ex:landingPage <https://docs.google.com/document/d/1EJXg9G01CG7dBRbmbZzFnB9Bex2ibAVza_4xE8iqQqI/edit> .
+
+cdata:MozillaOpenSource
+  a ex:Organization ;
+  ex:subType con:FundingOrganization ; 
+  ex:name "Mozilla Open Source Support"@en ;
+  ex:landingPage  <https://www.mozilla.org/en-US/moss/> .
+
+cdata:NLnet
+  a ex:Organization ;
+  ex:subType con:FundingOrganization ; 
+  ex:name "NLnet Foundation"@en ;
+  ex:landingPage <https://nlnet.nl> ;
+  ex:description "Since 1997 NLnet foundation has been financially supporting organizations and people that contribute to an open information society. It funds those with ideas to fix the internet." .
+
+cdata:NGI
+  a ex:Organization ;
+  ex:subType con:FundingOrganization ; 
+  ex:name "Next Generation Internet"@en ;
+  ex:landingPage <https://www.ngi.eu> ;
+  ex:description "The Next Generation Internet (NGI) is a European Commission initiative that aims to shape the development and evolution of the Internet into an Internet of Trust. An Internet that responds to people’s fundamental needs, including trust, security, and inclusion, while reflecting the values and the norms all citizens enjoy in Europe." .
+
+cdata:NGICore
+  a ex:Organization ;
+  ex:subType con:FundingOrganization ; 
+  ex:name "NGI Zero Core"@en ;
+  ex:landingPage <https://nlnet.nl/core/> ;
+  ex:description "Moving the internet forward." .
+
+cdata:NGIEntrust
+  a ex:Organization ;
+  ex:subType con:FundingOrganization ; 
+  ex:name "NGI Zero Entrust"@en ;
+  ex:landingPage <https://nlnet.nl/entrust/> ;
+  ex:description "Trustworthiness and data sovereignty." .
+
+cdata:NGISargasso
+  a ex:Organization ;
+  ex:subType con:FundingOrganization ; 
+  ex:name "NGI Sargasso"@en ;
+  ex:landingPage <https://ngisargasso.eu> ;
+  ex:description "Promoting the transatlantic cooperation for NGI technologies." .
+
+cdata:SIDN
+  a ex:Organization ;
+  ex:subType con:FundingOrganization ; 
+  ex:name "SIDN Fonds"@en ;
+  ex:landingPage <https://www.sidnfonds.nl/excerpt/> .
+
+cdata:Slack
+  a ex:Organization ;
+  ex:subType con:FundingOrganization ; 
+  ex:name "Slack Fund"@en ;
+  ex:landingPage <https://slack.com/developers/fund> .
+
+cdata:KnightFoundation
+  a ex:Organization ;
+  ex:subType con:FundingOrganization ; 
+  ex:name "The Knight Foundation"@en ;
+  ex:landingPage <https://knightfoundation.org> .
+
+cdata:KnightFoundationTechnologyInnovation
+  a ex:Organization ;
+  ex:subType con:FundingOrganization ; 
+  ex:name "The Knight Foundation for Technology Innovation"@en ;
+  ex:landingPage <https://knightfoundation.org/programs/technology> .
+
+
+##########
+# PERSON #
+##########
+
+cdata:RezaSoltani
+   ex:name "Reza Soltani" ;
+   a ex:Person .
+
+cdata:AngeloVeltens
+   ex:name "Angelo Veltens" ;
+   a ex:Person .
+
+cdata:Eduardo_Rodriguez
+  ex:forumHandle "@eduardoinnorway" ;
+  ex:name "Eduardo Rodriguez" ;
+  a ex:Person .
+
+
+cdata:VirginiaBalseiro
+  a ex:Person ;
+  ex:name "Virginia Balseiro" .
+
+cdata:AadVersteden
+  a ex:Person ;
+  ex:name "Aad Versteden" .
+
+cdata:Arne_Hassel
+  a ex:Person ;
+  ex:name "Arne Hassel" .
+
+cdata:Alain_Bourgeois
+  a ex:Person ;
+  ex:name "Alain Bourgeois" .
+
+cdata:Dmitri_Zagidulin
+  a ex:Person ;
+  ex:name "Dmitri Zagidulin" .
+
+cdata:Henry_Story
+  a ex:Person ;
+  ex:name "Henry Story" .
+
+cdata:Emelia_Smith
+  a ex:Person ;
+  ex:name "Emelia Smith" .
+
+cdata:Alexander_James_Phillips
+  a ex:Person ;
+  ex:name "Alexander James Phillips" .
+
+cdata:Anna_Kallenborn-Bolden
+  a ex:Person ;
+  ex:name "Anna Kallenborn-Bolden" .
+
+cdata:Chelsea_Pinka
+  a ex:Person ;
+  ex:name "Chelsea Pinka" .
+
+cdata:Dan_Barclay
+  a ex:Person ;
+  ex:name "Dan Barclay" .
+
+cdata:David_Faveris
+  a ex:Person ;
+  ex:name "David Faveris" .
+
+cdata:Daniel_Friedman
+  a ex:Person ;
+  ex:name "Daniel Friedman" .
+
+cdata:Andrei_Sambra
+  a ex:Person ;
+  ex:name "Andrei Sambra" .
+
+cdata:Dylan_Martin
+  a ex:Person ;
+  ex:name "Dylan Martin" .
+
+cdata:Gertjan_de_Mulder
+  a ex:Person ;
+  ex:name "Gertjan de Mulder" .
+
+cdata:Astrid_Gamoneda_Arrunada
+  a ex:Person ;
+  ex:name "Astrid GamonedaArrunada" .
+
+cdata:Christian_Buggedei
+  a ex:Person ;
+  ex:name "Christian Buggedei" .
+
+cdata:Altynbek_Orumbayev
+  a ex:Person ;
+  ex:name "Altynbek Orumbayev" .
+
+cdata:Matthew
+  ex:forumHandle "@Kludgy4" ;
+  a ex:Person ;
+  ex:webid <https://comp495x.duckdns.org/Pod1/profile#me> ;
+  ex:name "Matthew" .
+
+cdata:Matthew_Fowle
+  ex:name "Matthew Fowle" ;
+  a ex:Person .
+
+cdata:Matthias_Evering
+  ex:name "Matthias Evering" ;
+  ex:forumHandle "@ewingson" ;
+  ex:landingPage <https://github.com/ewingson> ;
+  a ex:Person ;
+  ex:webid <https://ewingson.solidcommunity.net/profile/card#me> .
+
+cdata:Matthias_Thorner
+  ex:forumHandle "@mthorner" ;
+  ex:name "Matthias Thorner" ;
+  a ex:Person .
+
+cdata:Matthieu_Bosquet
+  ex:name "Matthieu Bosquet" ;
+  ex:landingPage <https://github.com/matthieubosquet> ;
+  a ex:Person .
+
+cdata:Matthieu_Jacquot
+  ex:name "Matthieu Jacquot" ;
+  a ex:Person .
+
+cdata:Max_Froumentin
+  ex:name "Max Froumentin" ;
+  a ex:Person .
+
+cdata:Max_Van_Kleek
+  ex:name "Max Van Kleek" ;
+  a ex:Person .
+
+cdata:Max_Wardeh
+  ex:name "Max Wardeh" ;
+  a ex:Person .
+
+cdata:Maxime_Lecoq
+  ex:forumHandle "@lecoqlibre" ;
+  ex:name "Maxime Lecoq" ;
+  a ex:Person .
+
+cdata:Melissa_Wood
+  ex:name "Melissa Wood" ;
+  a ex:Person .
+
+cdata:Melvin_Carvalho
+  ex:name "Melvin Carvalho" ;
+  a ex:Person ;
+  ex:webid <https://melvin.solidcommunity.net/profile/card#me> ;
+  ex:landingPage <https://github.com/melvincarvalho> .
+
+cdata:Michael_Dierick
+  ex:name "Michaël Dierick" ;
+  a ex:Person .
+
+cdata:Michael_Dundas
+  ex:name "Michael Dundas" ;
+  a ex:Person .
+
+cdata:Michael_Farber
+  ex:name "Michael Farber" ;
+  a ex:Person .
+
+cdata:Michael_Herman
+  ex:name "Michael Herman" ;
+  a ex:Person .
+
+cdata:Michael_McCallister
+  ex:forumHandle "@workingwriter" ;
+  ex:name "Michael McCallister" ;
+  a ex:Person .
+
+cdata:Michael_Paduch
+  ex:name "Michael Paduch" ;
+  a ex:Person .
+
+cdata:Michael_Pelikan
+  ex:name "Michael Pelikan" ;
+  a ex:Person .
+
+cdata:Michael_Pigott
+  ex:name "Michael Pigott" ;
+  a ex:Person .
+
+cdata:Michael_Thornburgh
+  ex:name "Michael Thornburgh" ;
+  a ex:Person .
+
+cdata:Michael_Toomim
+  ex:forumHandle "@toomim" ;
+  ex:name "Michael Toomim" ;
+  a ex:Person .
+
+cdata:Michal
+  ex:forumHandle "@mrkvon" ;
+  a ex:Person ;
+  ex:name "Michal" .
+
+cdata:Michiel_de_Jong
+  ex:name "Michiel de Jong" ;
+  ex:landingPage <https://github.com/michielbdejong> ;
+  a ex:Person ;
+  ex:webid <https://michielbdejong.inrupt.net/profile/card#me> .
+
+cdata:Miel_Vander_Sande
+  ex:name "Miel Vander Sande" ;
+  a ex:Person ;
+  ex:webid <https://mvs.inrupt.net/profile/card#me> .
+
+cdata:Miguel_Ceriani
+  ex:name "Miguel Ceriani" ;
+  a ex:Person .
+
+cdata:Mike_Adams
+  ex:forumHandle "@adventure" ;
+  ex:name "Mike Adams" ;
+  a ex:Person ;
+  ex:webid <https://newyork.solid.community/profile/card#me> .
+
+cdata:Mike_O_Neill
+  ex:name "Mike O'Neill" ;
+  a ex:Person .
+
+cdata:Mirek
+  a ex:Person ;
+  ex:webid <https://sopekmir.inrupt.net/profile/card#me> ;
+  ex:name "Mirek" .
+
+cdata:Mischa_Tuffield
+  ex:name "Mischa Tuffield" ;
+  a ex:Person .
+
+cdata:Mitzi_Laszlo
+  ex:forumHandle "@MitziLaszlo" ;
+  ex:name "Mitzi Laszlo" ;
+  a ex:Person ;
+  ex:webid <https://mitzilaszlo.solidcommunity.net/profile/card#me> ;
+  ex:landingPage <https://github.com/Mitzi-Laszlo> .
+
+cdata:Mohamed_Hamed
+  ex:name "Mohamed Hamed" ;
+  a ex:Person ;
+  ex:webid <https://mohamedsaidhamed.org/profile/card#me> .
+
+cdata:Mordax
+  ex:forumHandle "@Mordax" ;
+  a ex:Person ;
+  ex:name "Mordax" .
+
+cdata:Nada_Akl
+  ex:name "Nada Akl" ;
+  a ex:Person .
+
+cdata:Naman_Goel
+  ex:name "Naman Goel" ;
+  a ex:Person .
+
+cdata:Nathan_Borson
+  ex:forumHandle "@nborson" ;
+  ex:name "Nathan Borson" ;
+  a ex:Person ;
+  ex:webid <https://nborson.solidcommunity.net/profile/card#me> .
+
+cdata:Nick-Form
+  ex:forumHandle "@nickform" ;
+  a ex:Person ;
+  ex:webid <https://nickform.inrupt.net/profile/card#me> ;
+  ex:name "Nick-Form" .
+
+cdata:Nicolas_Mondada
+  ex:name "Nicolas Mondada" ;
+  a ex:Person ;
+  ex:landingPage <https://github.com/nicolasmondada> .
+
+cdata:Nicolas_Seydoux
+  ex:name "Nicolas Seydoux" ;
+  a ex:Person ;
+  ex:landingPage <https://github.com/NSeydoux> ;
+  ex:webid <https://nseydoux.inrupt.net/profile/card#me>, <https://solid.zwifi.eu/profile/card#me> .
+
+cdata:Nigel_Shadbolt
+  ex:name "Nigel Shadbolt" ;
+  a ex:Person .
+
+cdata:Noel_De_Martin
+  ex:name "Noel De Martin" ;
+  ex:forumHandle "@NoelDeMartin" ;
+  a ex:Person ;
+  ex:webid <https://noeldemartin.solidcommunity.net/profile/card#me> .
+
+cdata:Omar_Teixeira_Gonzalez
+  ex:forumHandle "@Omitg24" ;
+  ex:name "Omar Teixeira Gonzalez" ;
+  a ex:Person ;
+  ex:webid <https://omitg.inrupt.net/profile/card#me> .
+
+cdata:Onur_Yuksel
+  ex:name "Onur Yüksel" ;
+  a ex:Person .
+
+cdata:Osmar_Olivio
+  ex:name "Osmar Olivio" ;
+  a ex:Person .
+
+cdata:Osmar_Olivo
+  ex:name "Osmar Olivo" ;
+  a ex:Person ;
+  ex:webid <https://oz.inrupt.net/profile/card#me> .
+
+cdata:Otto_AA
+  ex:name "Otto AA" ;
+  a ex:Person .
+
+cdata:Owen_Sacco
+  ex:name "Owen Sacco" ;
+  a ex:Person .
+
+cdata:Oz
+  ex:forumHandle "@oolivo" ;
+  a ex:Person ;
+  ex:name "Oz" .
+
+cdata:Ozcan_Seker
+  ex:name "Özcan Seker" ;
+  a ex:Person .
+
+cdata:Pablo
+  a ex:Person ;
+  ex:webid <https://jprod.inrupt.net/profile/card#me> ;
+  ex:name "Pablo" .
+
+cdata:Pano_Maria
+  ex:name "Pano Maria" ;
+  a ex:Person .
+
+cdata:Parle
+  a ex:Person ;
+  ex:webid <https://parle.inrupt.net/profile/card#me> ;
+  ex:name "Parle" .
+
+cdata:Pat_McBennett
+  ex:name "Pat McBennett" ;
+  a ex:Person ;
+  ex:webid <https://pmcb55.inrupt.net/profile/card#me> ;
+  ex:landingPage <https://github.com/pmcb55> .
+
+cdata:Patricia_Garcia
+  ex:forumHandle "@garciafdezpatricia" ;
+  ex:name "Patricia Garcia" ;
+  a ex:Person .
+
+cdata:Patrick
+  a ex:Person ;
+  ex:webid <https://pmcb55.inrupt.net/profile/card#me> ;
+  ex:name "Patrick" .
+
+cdata:Patrick_Hochstenbach
+  ex:name "Patrick Hochstenbach" ;
+  ex:forumHandle "@hochstenbach" ;
+  a ex:Person ;
+  ex:webid <https://hochstenbach.solidcommunity.net/profile/card#me> .
+
+cdata:Paul
+  ex:forumHandle "@SolarDrift" ;
+  a ex:Person ;
+  ex:name "Paul" .
+
+cdata:Paul_Mundt
+  ex:name "Paul Mundt" ;
+  a ex:Person .
+
+cdata:Paul_Worrall
+  ex:name "Paul Worrall" ;
+  a ex:Person ;
+  ex:webid <https://worrallp.inrupt.net/profile/card#me> .
+
+cdata:Paula_Veltens
+  ex:name "Paula Veltens" ;
+  a ex:Person ;
+  ex:webid <https://paula.veltens.org/profile/card#me> .
+
+cdata:Pavlik_Elf
+  ex:name "Pavlik Elf" ;
+  a ex:Person ;
+  ex:landingPage <https://github.com/elf-pavlik> .
+
+cdata:Pavlos_Pseftoyiannis
+  ex:name "Pavlos Pseftoyiannis" ;
+  a ex:Person .
+
+cdata:Pedro_Gomez_Lopez
+  ex:forumHandle "@pegomez" ;
+  ex:name "Pedro Gomez Lopez" ;
+  a ex:Person .
+
+cdata:Pete_Edwards
+  ex:name "Pete Edwards" ;
+  a ex:Person .
+
+cdata:Peter_Bruhn_Andersen
+  ex:name "Peter Bruhn Andersen" ;
+  a ex:Person .
+
+cdata:Peter_Hartman
+  ex:name "Peter Hartman" ;
+  a ex:Person ;
+  ex:webid <https://pjh.inrupt.net/profile/card> .
+
+cdata:Peter_Hatherley
+  ex:name "Peter Hatherley" ;
+  a ex:Person ;
+  ex:webid <https://peterhatherley.inrupt.net/profile/card#me> .
+
+cdata:Peter_Zuiddam
+  ex:name "Peter Zuiddam" ;
+  a ex:Person .
+
+cdata:Philip_Laszkowicz
+  ex:name "Philip Laszkowicz" ;
+  a ex:Person .
+
+cdata:Philipp_Gfeller
+  ex:name "Philipp Gfeller" ;
+  a ex:Person .
+
+cdata:Philippe_Duchesne
+  ex:name "Philippe Duchesne" ;
+  a ex:Person .
+
+cdata:Pierre-Antoine_Champin
+  ex:forumHandle "@p20n" ;
+  ex:name "Pierre-Antoine Champin" ;
+  a ex:Person ;
+  ex:webid <https://solid.champin.net/pa/profile/card#me> .
+
+cdata:Pieter_Heyvaert
+  ex:forumHandle "@pheyvaer" ;
+  ex:name "Pieter Heyvaert" ;
+  a ex:Person .
+
+cdata:Pieter_van_Everdingen
+  ex:forumHandle "@PietervanEverdingen" ;
+  ex:name "Pieter van Everdingen" ;
+  a ex:Person .
+
+cdata:Pol_Alvarez
+  ex:name "Pol Alvarez" ;
+  a ex:Person .
+
+cdata:Presbrey
+  a ex:Person ;
+  ex:landingPage <https://github.com/presbrey> ;
+  ex:name "Presbrey" .
+
+cdata:RahulGupta
+  ex:forumHandle "@CxRes" ;
+  ex:name "Rahul Gupta" ;
+  a ex:Person ;
+  ex:landingPage <https://github.com/CxRes> .
+
+cdata:Raju_George
+  ex:forumHandle "@rajugeorge" ;
+  ex:name "Raju George" ;
+  a ex:Person ;
+  ex:webid <https://id.inrupt.com/rajugeorge> .
+
+cdata:Rami_Rustom
+  ex:name "Rami Rustom" ;
+  a ex:Person .
+
+cdata:Raul_R_Pearson
+  ex:name "Raúl R. Pearson" ;
+  a ex:Person .
+
+cdata:Reuben_Binns
+  ex:name "Reuben Binns" ;
+  a ex:Person .
+
+cdata:Ricardo_Usbeck
+  ex:name "Ricardo Usbeck" ;
+  a ex:Person .
+
+cdata:Richard
+  ex:forumHandle "@richard" ;
+  a ex:Person ;
+  ex:name "Richard" .
+
+cdata:Richard_Marshall
+  ex:name "Richard Marshall" ;
+  a ex:Person .
+
+cdata:Ricky_White
+  ex:name "Ricky White" ;
+  a ex:Person .
+
+cdata:Rishabh_Gupta
+  ex:name "Rishabh Gupta" ;
+  a ex:Person .
+
+cdata:RJ_Herrick
+  ex:name "RJ Herrick" ;
+  a ex:Person .
+
+cdata:Rob
+  ex:forumHandle "@rob" ;
+  a ex:Person ;
+  ex:name "Rob" .
+
+cdata:Robert_Ganger
+  ex:forumHandle "@rganger" ;
+  ex:name "Robert Ganger" ;
+  a ex:Person .
+
+cdata:Rodrigo_Witzel
+  ex:forumHandle "@rwitzel" ;
+  ex:name "Rodrigo Witzel" ;
+  a ex:Person .
+
+cdata:Roger_Perry
+  ex:name "Roger Perry" ;
+  a ex:Person .
+
+cdata:Rosano
+  ex:forumHandle "@rosano" ;
+  a ex:Person ;
+  ex:landingPage <https://github.com/rosano> ;
+  ex:name "Rosano" .
+
+cdata:Roy_Leon
+  ex:name "Roy Leon" ;
+  a ex:Person .
+
+cdata:Ruben_Taelman
+  ex:name "Ruben Taelman" ;
+  ex:forumHandle "@rubensworks" ;
+  ex:landingPage <https://github.com/rubensworks> ;
+  a ex:Person .
+
+cdata:Ruben_Verborgh
+  ex:name "Ruben Verborgh" ;
+  ex:forumHandle "@RubenVerborgh" ;
+  ex:landingPage <https://github.com/RubenVerborgh> ;
+  a ex:Person ;
+  ex:webid <https://ruben.verborgh.org/profile/#me>, <https://rubenverborgh.inrupt.net/profile/card#me> .
+
+cdata:RuiZhao
+  ex:forumHandle "@renyuneyun" ;
+  ex:name "Rui Zhao" ;
+  a ex:Person ;
+  ex:webid <https://renyuneyun.solidcommunity.net/profile/card#me> .
+
+cdata:Ryan_Aelen
+  ex:forumHandle "@RyanAelen" ;
+  ex:name "Ryan Aelen" ;
+  a ex:Person .
+
+cdata:Sabrina_Kirrane
+  ex:name "Sabrina Kirrane" ;
+  a ex:Person ;
+  ex:webid <https://skirrane.inrupt.net/profile/card#me> .
+
+cdata:Samir_Loumachi
+  ex:forumHandle "@GSL" ;
+  ex:name "Samir Loumachi" ;
+  a ex:Person .
+
+cdata:Samy_Vincent
+  ex:name "Samy Vincent" ;
+  a ex:Person .
+
+cdata:Sander
+  a ex:Person ;
+  ex:webid <https://gatos.inrupt.net/profile/card#me> ;
+  ex:name "Sander" .
+
+cdata:Sandra_Wachter
+  ex:name "Sandra Wachter" ;
+  a ex:Person .
+
+cdata:Santi_Lozano
+  ex:name "Santi Lozano" ;
+  a ex:Person .
+
+cdata:Sarah_Hutton
+  ex:name "Sarah Hutton" ;
+  a ex:Person .
+
+cdata:Sarven_Capadisli
+  ex:name "Sarven Capadisli" ;
+  a ex:Person ;
+  ex:webid <https://csarven.ca/#i> .
+
+cdata:Sascha
+  ex:forumHandle "@Sascha" ;
+  a ex:Person ;
+  ex:webid <https://sascha.inrupt.net/profile/card#me> ;
+  ex:name "Sascha" .
+
+cdata:Sebastien_Rosset
+  ex:forumHandle "@srosset81" ;
+  ex:name "Sebastien Rosset" ;
+  a ex:Person ;
+  ex:webid <https://armoise.co/sro> .
+
+
+cdata:Sharon_Stratsianis
+  ex:name "Sharon Stratsianis" ;
+  ex:forumHandle "@SharonStrats" ;
+  ex:landingPage <https://github.com/SharonStrats> ;
+  a ex:Person ;
+  ex:webid <https://sharonstrats.inrupt.net/profile/card#me> .
+
+cdata:Sheff_Engi
+  ex:name "Sheff Engi" ;
+  a ex:Person .
+
+cdata:Siddharth_Rahul_Raut
+  ex:forumHandle "@SiddharthRaut" ;
+  ex:name "Siddharth Rahul Raut" ;
+  a ex:Person .
+
+cdata:Simon_Chabot
+  ex:name "Simon Chabot" ;
+  a ex:Person ;
+  ex:webid <https://schabot.solidcommunity.net/profile/card#me> .
+
+cdata:Simon_Grant
+  ex:name "Simon Grant" ;
+  a ex:Person .
+
+cdata:Simon_Lauvet
+  ex:name "Simon Lauvet" ;
+  a ex:Person .
+
+cdata:Simon_Shapiro
+  ex:forumHandle "@SimonShapiro" ;
+  ex:name "Simon Shapiro" ;
+  a ex:Person .
+
+cdata:Sina_Bahram
+  ex:name "Sina Bahram" ;
+  a ex:Person .
+
+cdata:Sjoerd_van_Groning
+  ex:forumHandle "@sjoerdvangroning" ;
+  ex:name "Sjoerd van Groning" ;
+  a ex:Person .
+
+cdata:Soeren_Grauslund
+  ex:name "Søren Grauslund" ;
+  a ex:Person .
+
+cdata:Sofia_Martin
+  ex:forumHandle "@sofimrtn" ;
+  ex:name "Sofía Martín" ;
+  a ex:Person .
+
+cdata:Souen_Mazouin
+  ex:name "Souen Mazouin" ;
+  a ex:Person .
+
+
+cdata:Soto_Estevez
+  ex:name "Soto Estevez" ;
+  a ex:Person ;
+  ex:landingPage <https://github.com/kriogenia> .
+
+
+cdata:Stefan_Dercon
+  ex:name "Stefan Dercon" ;
+  a ex:Person .
+
+cdata:Stefan_Hohn
+  ex:name "Stefan Höhn" ;
+  a ex:Person ;
+  ex:webid <https://dewomser.solidcommunity.net/profile/card#me> .
+
+cdata:Stefan_Rother-Stubs
+  ex:name "Stefan Rother-Stübs" ;
+  a ex:Person ;
+  ex:webid <https://srs.solidcommunity.net/profile/card#me> .
+
+cdata:Stein_Vraale
+  ex:forumHandle "@ztein" ;
+  ex:name "Stein Vråle" ;
+  a ex:Person .
+
+cdata:Steven_Vandevelde
+  ex:name "Steven Vandevelde" ;
+  a ex:Person .
+
+cdata:Stijn_Taelemans
+  ex:name "Stijn Taelemans" ;
+  a ex:Person ;
+  ex:webid <https://stijntaelemans.inrupt.net/profile/card#me> .
+
+cdata:Sven_Lieber
+  ex:name "Sven Lieber" ;
+  a ex:Person ;
+  ex:webid <https://sven-lieber.org/profile#me> .
+
+cdata:Swan_Bouvier-Muller
+  ex:name "Swan Bouvier-Muller" ;
+  a ex:Person .
+
+cdata:Syed_Ali_Raza_Zaidi
+  ex:name "Syed Ali Raza Zaidi" ;
+  a ex:Person .
+
+cdata:Sylvain_Le_Bon
+  ex:name "Sylvain Le Bon" ;
+  a ex:Person .
+
+cdata:Sylvain_Saint-Andre
+  ex:name "Sylvain Saint-André" ;
+  a ex:Person .
+
+cdata:Taekhoon_Kim
+  ex:name "Taekhoon Kim" ;
+  a ex:Person ;
+  ex:webid <https://techny.inrupt.net/profile/card#me> .
+
+cdata:Taisuke_Fukuno
+  ex:name "Taisuke Fukuno" ;
+  a ex:Person ;
+  ex:landingPage <https://github.com/taisukef> .
+
+cdata:Takeo_Nishikata
+  ex:name "Takeo Nishikata" ;
+  a ex:Person .
+
+cdata:Tao_Chen
+  ex:name "Tao Chen" ;
+  a ex:Person .
+
+cdata:Ted_Thibodeau
+  ex:name "Ted Thibodeau" ;
+  a ex:Person ;
+  ex:webid <https://id.myopenlink.net/dataspace/person/tthibodeau#this> ;
+  ex:landingPage <https://github.com/TallTed> .
+
+cdata:Teodora_Petkova
+  ex:name "Teodora Petkova" ;
+  a ex:Person ;
+  ex:webid <https://teodora.solidcommunity.net/profile/card#me> .
+
+cdata:Terence_Eden
+  ex:name "Terence Eden" ;
+  a ex:Person .
+
+cdata:Theodora_Petkova
+  ex:forumHandle "@TheodoraPetkova" ;
+  ex:name "Theodora Petkova" ;
+  a ex:Person .
+
+cdata:Thomas_Fritz
+  ex:name "Thomas Fritz" ;
+  a ex:Person ;
+  ex:landingPage <https://github.com/thomasfr> .
+
+cdata:Thomas_Gallagher
+  ex:name "Thomas Gallagher" ;
+  a ex:Person .
+
+cdata:Thomas_Shouten
+  ex:name "Thomas Shouten" ;
+  a ex:Person .
+
+cdata:Thomas_Tanon
+  ex:name "Thomas Tanon" ;
+  a ex:Person ;
+  ex:landingPage <https://github.com/Tpt> .
+
+cdata:Tic_Tac_Moe
+  ex:name "Tic Tac Moe" ;
+  a ex:Person ;
+  ex:webid <https://tic-tac-moe.inrupt.net/profile/card#me> .
+
+cdata:Tim_Berners-Lee
+  ex:name "Tim Berners-Lee" ;
+  ex:forumHandle "@timbl" ;
+  ex:landingPage <https://github.com/timbl> ;
+  a ex:Person ;
+  ex:webid <https://timbl.inrupt.net/profile/card#me>, <https://timbl.solidcommunity.net/profile/card#me>, <https://www.w3.org/People/Berners-Lee/card#> .
+
+cdata:Timea_Turdean
+  ex:description "Example of HTML page as a pod's root." ;
+  ex:name "Timea Turdean" ;
+  ex:landingPage <https://github.com/timea-solid> ;
+  a ex:Person ;
+  ex:webid <https://timea.solidcommunity.net/profile/card#me> .
+
+cdata:Timo_Kankaanpaa
+  ex:name "Timo Kankaanpää" ;
+  a ex:Person ;
+  ex:webid <https://timojkankaanpaa.solidcommunity.net/profile/card#me> .
+
+cdata:Toby
+  a ex:Person ;
+  ex:webid <https://tobytoberson.inrupt.net/profile/card#me> ;
+  ex:name "Toby" .
+
+cdata:Tom
+  ex:forumHandle "@anon36056958" ;
+  a ex:Person ;
+  ex:landingPage <https://gitlab.com/tag42git> ;
+  ex:name "Tom" .
+
+cdata:Tom_Friendly
+  ex:name "Tom Friendly" ;
+  a ex:Person ;
+  ex:webid <https://carloss.inrupt.net/profile/card#me> .
+
+cdata:Tory_Clasen
+  ex:name "Tory Clasen" ;
+  a ex:Person .
+
+cdata:Travis_Vachon
+  ex:name "Travis Vachon" ;
+  a ex:Person ;
+  ex:webid <https://tvachon.inrupt.net/profile/card#me> .
+
+
+cdata:Tyler_Childs
+  ex:forumHandle "@tychi" ;
+  ex:name "Tyler Childs" ;
+  a ex:Person ;
+  ex:webid <https://tychi.inrupt.net> .
+
+cdata:V_Sri
+  ex:name "V Sri" ;
+  a ex:Person ;
+  ex:webid <https://vsri.inrupt.net/profile/card#me> .
+
+cdata:Victor_Gonzalo_Cristobal
+  ex:name "Víctor Gonzalo Cristóbal" ;
+  a ex:Person ;
+  ex:webid <https://victorgon.inrupt.net/profile/card#me> .
+
+cdata:Victor_Rodriguez-Doncel
+  ex:name "Víctor_Rodríguez-Doncel" ;
+  a ex:Person .
+
+cdata:Vincent_Tunru
+  ex:name "Vincent Tunru" ;
+  ex:forumHandle "@Vincent" ;
+  ex:landingPage <https://github.com/Vinnl> ;
+  a ex:Person ;
+  ex:webid <https://vincentt.inrupt.net/profile/card#me> .
+
+cdata:Virginia_Balseiro
+  ex:name "Virginia Balseiro" ;
+  ex:forumHandle "@Virginia" ;
+  ex:landingPage <https://github.com/VirginiaBalseiro> ;
+  a ex:Person ;
+  ex:webid <https://virginia.inrupt.net/profile/card#me>, <https://virginiabalseiro.com/#me> .
+
+cdata:Walter_Almeida
+  ex:name "Walter Almeida" ;
+  a ex:Person .
+
+cdata:Wendell_Baker
+  ex:name "Wendell Baker" ;
+  a ex:Person .
+
+cdata:Wim_Tobback
+  ex:name "Wim Tobback" ;
+  a ex:Person .
+
+cdata:Wonsuk_Lee
+  ex:name "Wonsuk Lee" ;
+  a ex:Person .
+
+cdata:Woods_Denny
+  ex:name "Woods Denny" ;
+  a ex:Person .
+
+cdata:Wout_Schellaert
+  ex:name "Wout Schellaert" ;
+  a ex:Person ;
+  ex:landingPage <https://github.com/wschella> .
+
+cdata:Wouter_Janssens
+  ex:name "Wouter Janssens" ;
+  a ex:Person ;
+  ex:webid <https://wouteraj.inrupt.net/profile/card#me> .
+
+cdata:Wouter_Kok
+  ex:name "Wouter Kok" ;
+  a ex:Person .
+
+cdata:Wouter_Termont
+  ex:forumHandle "@woutermont" ;
+  ex:name "Wouter Termont" ;
+  a ex:Person ;
+  ex:webid <https://woutermont.solidcommunity.net/profile/card#me> .
+
+cdata:Yehua_Chen
+  ex:name "Yehua Chen" ;
+  a ex:Person .
+
+cdata:Yujin_Park
+  ex:name "Yujin Park" ;
+  a ex:Person ;
+  ex:webid <https://shrck1015.solidcommunity.net/profile/card#me> .
+
+cdata:Yuri_Savateev
+  ex:name "Yuri Savateev" ;
+  a ex:Person .
+
+cdata:Yvo_Brevoort
+  ex:name "Yvo Brevoort" ;
+  a ex:Person .
+
+cdata:Zhilin_Zhang
+  ex:name "Zhilin Zhang" ;
+  a ex:Person .
+
+cdata:Zongyan_Li
+  ex:name "Zongyan Li" ;
+  a ex:Person .
+
+cdata:Hunar_Batra
+  ex:name "Hunar Batra" ;
+  a ex:Person .
+
+cdata:Hunter_Lester
+  ex:name "Hunter Lester" ;
+  a ex:Person ;
+  ex:webid <https://hunterlester.inrupt.net/profile/card#me> .
+
+cdata:Ian_Wilson
+  ex:name "Ian Wilson" ;
+  a ex:Person ;
+  ex:webid <https://communitylinksense.inrupt.net/profile/card#me> ;
+  ex:landingPage <https://github.com/YetAnotherJonWilson> .
+
+cdata:Ieben_Smessaert
+  ex:name "Ieben Smessaert" ;
+  a ex:Person ;
+  ex:webid <https://solid.smessie.com/profile/card#me> .
+
+cdata:Inge_La_Riviere
+  ex:name "Inge La Riviere" ;
+  a ex:Person .
+
+cdata:Isaac_Foster
+  ex:forumHandle "@thegreatfatzby" ;
+  ex:name "Isaac Foster" ;
+  a ex:Person .
+
+cdata:J_Reynolds
+  ex:name "J Reynolds" ;
+  a ex:Person ;
+  ex:landingPage <https://github.com/JKReynolds> .
+
+cdata:Jack_Lawson
+  ex:name "Jack Lawson" ;
+  a ex:Person ;
+  ex:landingPage <https://github.com/ajacksified> .
+
+cdata:Jackson_Morgan
+  ex:name "Jackson Morgan" ;
+  ex:forumHandle "@jaxoncreed" ;
+  a ex:Person ;
+  ex:webid <https://jackson.solidcommunity.net/profile/card#me> .
+
+cdata:Jacob_Dreesen
+  ex:name "Jacob Dreesen" ;
+  a ex:Person .
+
+cdata:Jacopo_Scazzosi
+  ex:name "Jacopo Scazzosi" ;
+  a ex:Person ;
+  ex:landingPage <https://github.com/jacoscaz> .
+
+cdata:Jake_Stein
+  ex:name "Jake Stein" ;
+  a ex:Person .
+
+cdata:Jakub_Klimek
+  ex:name "Jakub Klimek" ;
+  a ex:Person ;
+  ex:landingPage <https://github.com/jakubklimek> .
+
+cdata:James_Birmingham
+  ex:name "James Birmingham" ;
+  a ex:Person .
+
+cdata:James_Martin
+  ex:forumHandle "@james.martin" ;
+  ex:name "James Martin" ;
+  a ex:Person ;
+  ex:webid <https://jmartin-6.inrupt.net/profile/card#me>, <https://jmartin.inrupt.net/profile/card#me> .
+
+cdata:Jan_Schill
+  ex:name "Jan Schill" ;
+  ex:forumHandle "@janschill" ;
+  ex:landingPage <https://github.com/janschill> ;
+  a ex:Person .
+
+cdata:Jarlath_Holleran
+  ex:name "Jarlath Holleran" ;
+  a ex:Person ;
+  ex:webid <https://jholleran.inrupt.net/profile/card#me> .
+
+cdata:Jasmine_Leonard
+  ex:name "Jasmine Leonard" ;
+  a ex:Person .
+
+cdata:Jason_Paulos
+  ex:name "Jason Paulos" ;
+  a ex:Person ;
+  ex:landingPage <https://github.com/jasonpaulos> .
+
+cdata:Jasper_Vandenberghen
+  ex:name "Jasper Vandenberghen" ;
+  a ex:Person ;
+  ex:webid <https://jaspervandenberghen.inrupt.net/profile/card#me> .
+
+cdata:Jaxon_Creed
+  ex:name "Jaxon Creed" ;
+  a ex:Person ;
+  ex:landingPage <https://github.com/jaxoncreed> .
+
+cdata:Jeeth_Garageshwara
+  ex:name "Jeeth Garageshwara" ;
+  a ex:Person .
+
+cdata:Jeff_Zucker
+  ex:name "Jeff Zucker" ;
+  ex:forumHandle "@jeffz" ;
+  ex:matrixHandle "@jeff-zucker" ;
+  ex:landingPage <https://github.com/jeff-zucker> ;
+  a ex:Person ;
+  ex:webid <https://jeff-zucker.solidcommunity.net/profile/card#me> .
+
+cdata:Jegan_Davies-Jones
+  ex:name "Jegan Davies-Jones" ;
+  a ex:Person .
+
+cdata:Jenni_Inglis
+  ex:name "Jenni Inglis" ;
+  a ex:Person ;
+  ex:webid <https://jenni.inrupt.net/profile/card#me> .
+
+cdata:Jeroen_van_Beele
+  ex:name "Jeroen van Beele" ;
+  a ex:Person .
+
+cdata:Jess_Martin
+  ex:forumHandle "@jessmartin" ;
+  ex:name "Jess Martin" ;
+  a ex:Person .
+
+cdata:Jesse_Wright
+  ex:name "Jesse Wright" ;
+  a ex:Person ;
+  ex:landingPage <https://github.com/jeswr> .
+
+cdata:Jessica
+  ex:forumHandle "@jessica" ;
+  ex:description "Used vue.js trying make Solid apps" ;
+  a ex:Person ;
+  ex:name "Jessica" .
+
+cdata:Jim_Collinson
+  ex:forumHandle "@JimCollinson" ;
+  ex:name "Jim Collinson" ;
+  a ex:Person .
+
+cdata:Jim_Hendler
+  ex:name "Jim Hendler" ;
+  a ex:Person .
+
+cdata:Jitse_de_Smet
+  ex:name "Jitse de Smet" ;
+  a ex:Person ;
+  ex:landingPage <https://github.com/jitsedesmet> .
+
+cdata:Joachim_Dornbush
+  ex:forumHandle "@jdp1ps" ;
+  ex:name "Joachim Dornbush" ;
+  a ex:Person .
+
+cdata:Joachim_van_Herwegen
+  ex:name "Joachim van Herwegen" ;
+  a ex:Person ;
+  ex:landingPage <https://github.com/joachimvh> .
+
+cdata:Joel_Bender
+  ex:forumHandle "@JoelBender" ;
+  ex:name "Joel Bender" ;
+  a ex:Person .
+
+cdata:Joep_Meindertsma
+  ex:name "Joep Meindertsma" ;
+  a ex:Person .
+
+cdata:Johan_Bove
+  ex:name "Johan Bove" ;
+  a ex:Person ;
+  ex:webid <https://johanbove.inrupt.net/profile/card#me> .
+
+cdata:Johannes_Winter
+  ex:name "Johannes Winter" ;
+  a ex:Person ;
+  ex:landingPage <https://github.com/y0va> .
+
+cdata:John_Bartas
+  ex:forumHandle "@Stitch626" ;
+  ex:name "John Bartas" ;
+  a ex:Person .
+
+cdata:John_Bruce
+  ex:name "John Bruce" ;
+  a ex:Person ;
+  ex:webid <https://johnb.inrupt.net/profile/card#me> .
+
+cdata:John_Fletcher
+  ex:forumHandle "@ubernatural" ;
+  ex:name "John Fletcher" ;
+  a ex:Person ;
+  ex:webid <https://ubernatural.inrupt.net/profile/card#me> .
+
+cdata:John_Yu
+  ex:name "John Yu" ;
+  a ex:Person .
+
+cdata:Jon_Pederson
+  ex:name "Jon Pederson" ;
+  a ex:Person .
+
+cdata:Jon_Wilson
+  ex:forumHandle "@jonwilson" ;
+  ex:name "Jon Wilson" ;
+  a ex:Person .
+
+cdata:Jonas_Smedegaard
+  ex:name "Jonas Smedegaard" ;
+  a ex:Person .
+
+cdata:Jose_Emilio_Labra_Gayo
+  ex:name "Jose Emilio Labra Gayo" ;
+  ex:landingPage <https://github.com/labra> ;
+  a ex:Person .
+
+cdata:Joseph_Guillaume
+  ex:forumHandle "@josephguillaume" ;
+  ex:name "Joseph Guillaume" ;
+  a ex:Person .
+
+cdata:Joseph_Wade_Nobles
+  ex:forumHandle "@JosephWNobles" ;
+  ex:name "Joseph Wade Nobles" ;
+  a ex:Person .
+
+cdata:Josh_Collins
+  ex:name "Josh Collins" ;
+  a ex:Person ;
+  ex:webid <https://joshcollins.inrupt.net/profile/card#me> ;
+  ex:landingPage <https://github.com/joshdcollins> .
+
+cdata:Jules
+  a ex:Person ;
+  ex:webid <https://julian-cole.inrupt.net/profile/card#me> ;
+  ex:name "Jules" .
+
+cdata:Juliette_Carter
+  ex:name "Juliette Carter" ;
+  a ex:Person .
+
+cdata:JunZhao
+  ex:name "Jun Zhao" ;
+  a ex:Person .
+
+cdata:Juraj_Zvolensky
+  ex:forumHandle "@jzvolensky" ;
+  ex:name "Juraj Zvolensky" ;
+  a ex:Person ;
+  ex:webid <https://jzvolensky.solidcommunity.net/profile/card#me> .
+
+cdata:Justin_Bingham
+  ex:name "Justin Bingham" ;
+  ex:forumHandle "@justin" ;
+  ex:landingPage <https://github.com/justinwb> ;
+  a ex:Person ;
+  ex:webid <https://justin.inrupt.net/profile/card#me> .
+
+cdata:Kai_Chen
+  ex:name "Kai Chen" ;
+  a ex:Person .
+
+cdata:Kai_Gilb
+  ex:name "Kai Gilb" ;
+  a ex:Person .
+
+cdata:Kangchan_Lee
+  ex:name "Kangchan Lee" ;
+  a ex:Person .
+
+cdata:Karl_Richter
+  ex:name "Karl Richter" ;
+  a ex:Person ;
+  ex:webid <https://karlhrichter.inrupt.net/profile/card#me> .
+
+cdata:Kartika_Tulusan
+  ex:name "Kartika Tulusan" ;
+  a ex:Person ;
+  ex:webid <https://kartikatulusan.inrupt.net/profile/card#me> .
+
+cdata:Kay_Kim
+  ex:forumHandle "@kay-kim" ;
+  ex:name "Kay Kim" ;
+  a ex:Person ;
+  ex:webid <https://kay.inrupt.net/profile/card#me> ;
+  ex:landingPage <https://github.com/kay-kim> .
+
+cdata:Kayode_Ezike
+  ex:name "Kayode Ezike" ;
+  a ex:Person ;
+  ex:landingPage <https://github.com/kezike> .
+
+cdata:Kelly_O_Brien
+  ex:name "Kelly O'Brien" ;
+  a ex:Person .
+
+cdata:Kelly_OBrien
+  ex:name "Kelly O'Brien" ;
+  a ex:Person ;
+  ex:webid <https://kellyo.inrupt.net/profile/card#me> .
+
+cdata:Kevin_Dunglas
+  ex:name "Kevin Dunglas" ;
+  a ex:Person .
+
+cdata:Kevin_Howard
+  ex:name "Kevin Howard" ;
+  a ex:Person ;
+  ex:webid <https://khoward.inrupt.net/profile/card#me> .
+
+cdata:Kevin_Poulsen
+  ex:name "Kevin Poulsen" ;
+  a ex:Person .
+
+cdata:Kevin_Weber
+  ex:name "Kevin Weber" ;
+  a ex:Person .
+
+cdata:Khalid_Alnuaim
+  ex:name "Khalid Alnuaim" ;
+  a ex:Person .
+
+cdata:Kingsley_Idehen
+  ex:name "Kingsley Idehen" ;
+  a ex:Person ;
+  ex:webid <https://kingsley.idehen.net/public_home/kidehen/profile.ttl#i> .
+
+cdata:Kjetil_Kjernsmo
+  ex:name "Kjetil Kjernsmo" ;
+  a ex:Person .
+
+
+cdata:Knut-Olav_Hoven
+  ex:name "Knut-Olav Hoven" ;
+  a ex:Person .
+
+cdata:Kofi_Kyei
+  ex:name "Kofi Kyei" ;
+  a ex:Person .
+
+cdata:Kyra_Assaad
+  ex:forumHandle "@KyraAssaad" ;
+  ex:name "Kyra Assaad" ;
+  a ex:Person ;
+  ex:webid <https://pod.inrupt.com/kyra/profile/card#me> ;
+  ex:landingPage <https://github.com/kyraassaad> .
+
+cdata:Lalana_Kagal
+  ex:name "Lalana Kagal" ;
+  a ex:Person .
+
+cdata:Lars_Fosdal
+  ex:forumHandle "@LarsFosdal" ;
+  ex:name "Lars Fosdal" ;
+  a ex:Person .
+
+cdata:Lauernce_Zhang
+  ex:name "Lauernce Zhang" ;
+  a ex:Person .
+
+cdata:Laurens_Debackere
+  ex:name "Laurens Debackere" ;
+  a ex:Person ;
+  ex:webid <https://www.thundr.be/profile/laurens.ttl#me> .
+
+cdata:Leon_Porter
+  ex:name "Leon Porter" ;
+  a ex:Person .
+
+cdata:Leonard_Rosenthol
+  ex:name "Leonard Rosenthol" ;
+  a ex:Person .
+
+cdata:Liam_Broza
+  ex:name "Liam Broza" ;
+  a ex:Person ;
+  ex:webid <https://hegemon.inrupt.net/profile/card#me> .
+
+cdata:Lin_Onetwo
+  ex:forumHandle "@linonetwo" ;
+  ex:name "Lin Onetwo" ;
+  a ex:Person .
+
+cdata:Luc
+ a ex:Person ;
+  ex:webid <https://45h.inrupt.net/profile/card#me> ;
+  ex:name "Luc" .
+
+cdata:Ludwig_Schubi
+  ex:forumHandle "@ludwigschubi" ;
+  ex:name "Ludwig Schubi" ;
+  a ex:Person .
+
+cdata:Luis_Aguilar
+  ex:name "Luis Aguilar" ;
+  a ex:Person ;
+  ex:webid <https://ldaguilar88.inrupt.net/profile/card#me> .
+
+cdata:Luk_Overmeire
+  ex:name "Luk Overmeire" ;
+  a ex:Person .
+
+cdata:Maico_Oliveira_Buss
+  ex:name "Maico Oliveira Buss" ;
+  a ex:Person .
+
+cdata:Manoharan_Ramachandran
+  ex:name "Manoharan Ramachandran" ;
+  a ex:Person .
+
+cdata:Manu_Sporny
+  ex:name "Manu Sporny" ;
+  a ex:Person .
+
+cdata:Marc_Fornos
+  ex:name "Marc Fornos" ;
+  a ex:Person ;
+  ex:landingPage <https://gitlab.com/frozen.pomelo> .
+
+cdata:Marco_Neumann
+  ex:name "Marco Neumann" ;
+  a ex:Person .
+
+cdata:Maria_Dimou
+  ex:name "Maria Dimou" ;
+  a ex:Person .
+
+cdata:Mark
+  ex:forumHandle "@happybeing" ;
+  a ex:Person ;
+  ex:webid <https://thewebalyst.solidcommunity.net/profile/card#me> ;
+  ex:name "Mark" .
+
+cdata:Mark_Baker
+  ex:name "Mark Baker" ;
+  a ex:Person .
+
+cdata:Mark_Hughes
+  ex:name "Mark Hughes" ;
+  a ex:Person .
+
+cdata:Mark_Lizar
+  ex:name "Mark Lizar" ;
+  a ex:Person .
+
+cdata:Mark_Senefsky
+  ex:name "Mark Senefsky" ;
+  a ex:Person .
+
+cdata:Mark_Thompson
+  ex:name "Mark Thompson" ;
+  a ex:Person .
+
+cdata:Mark_Weiler
+  ex:name "Mark Weiler" ;
+  a ex:Person .
+
+cdata:Markjspivey
+  a ex:Person ;
+  ex:webid <https://markjspivey.inrupt.net/profile/card#me> ;
+  ex:name "Markjspivey" .
+
+cdata:Marrelle_Bailey
+  ex:name "Marrelle Bailey" ;
+  a ex:Person .
+
+cdata:Martin_Tews
+  ex:name "Martin Tews" ;
+  a ex:Person .
+
+cdata:Mats_Berg
+  ex:name "Mats Berg" ;
+  a ex:Person ;
+  ex:webid <https://mats.inrupt.net/profile/card#me> .
+
+cdata:Matt_Wallis
+  ex:name "Matt Wallis" ;
+  a ex:Person .
+
+
+
+###########
+# PRODUCT #
+###########
+
+###
+# SERVERS
+###
+
+cdata:CSS
+  a ex:Product ;
+  ex:subType con:PodServer ;
+  ex:name "Community Solid Server (CSS)" ;
+  ex:provider :Inrupt, :Imec ;
+  ex:landingPage <https://communitysolidserver.github.io/CommunitySolidServer/latest/> .
+
+cdata:PHP_Solid_Server
+  a ex:Product ;
+  ex:name "PHP Solid Server" ;
+  ex:subType con:PodServer ;
+  ex:provider :PDSINTEROP ;
+  ex:landingPage <https://pdsinterop.org/php-solid-server/> .
+
+cdata:Manas
+  a ex:Product ;
+  ex:name "Manas (मनस्)";
+  ex:subType con:PodServer ;
+  ex:landingPage <https://manomayam.github.io/manas/introduction.html>;
+  ex:provider :Manomayam .
+
+cdata:Trinpod
+  a ex:Product ;
+  ex:name "Trinpod" ;
+  ex:subType con:PodServer ;
+  ex:landingPage <https://graphmetrix.com/trinpod-server> ;
+  ex:provider :Graphmetrix .
+
+cdata:NSS
+  a ex:Product ;
+  ex:subType con:PodServer ;
+  ex:landingPage <https://github.com/nodeSolidServer/node-solid-server> ;
+  ex:name "Node Solid Server (NSS)" .
+
+cdata:ESS
+  a ex:Product ;
+  ex:name "Enterprise Solid Server (ESS)" ;
+  ex:subType con:PodServer ;
+  ex:landingPage <https://www.inrupt.com/products/enterprise-solid-server>;
+  ex:provider :Inrupt .
+
+cdata:OpenLinkNSSFork
+  ex:name "OpenLink NSS Fork" ;
+  a ex:Product ;
+  ex:subType con:PodServer ;
+  ex:provider :OpenLink .
+
+cdata:Gold
+  ex:name "Gold";
+  a ex:Product ;
+  ex:subType con:PodServer ;
+  ex:landingPage <https://github.com/linkeddata/gold> .
+
+cdata:Solid-Lite
+  a ex:Product ;
+  ex:name "Solid Lite";
+  ex:subType con:PodServer ;
+  ex:landingPage <https://github.com/solid-lite/server> .
+
+cdata:Pivot
+  ex:name "Pivot";
+  a ex:Product ;
+  ex:subType con:PodServer ;
+  ex:landingPage <https://github.com/solid-lite/server> ;
+  ex:description """
+    Pivot is a fork of CSS created as a community-maintained server.
+  """ .
+
+#####################
+# DEVELOPMENT TOOLS #
+#####################
+
+cdata:StartinBlox
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:name "Startin'Blox" ;
+  ex:provider :StartinBloxCo ;
+  ex:mainKeyword "application creator","web components" ;
+  ex:landingPage <https://startinblox.com/en/technology/> ;
+  ex:landingPage <https://git.startinblox.com/explore/groups> .
+
+cdata:EmberSolid
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:name "Startin'Blox" ;
+  ex:name "Ember Solid" ;
+  ex:provider :RedPencil ;
+  ex:landingPage <https://chuixuewan.github.io/solid-clinic/> .
+
+cdata:ActivityPods
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:name "ActivityPods" ;
+  ex:description "A new kind of architecture for web applications which aims to reconcile the ActivityPub and Solid standards." ;
+  ex:provider :Sebastien_Rosset ;
+  ex:landingPage <https://activitypods.org/> ;
+  ex:landingPage  <https://github.com/activitypods/activitypods> ;
+  ex:description      """
+    Brings together two game-changing technologies, ActivityPub and Solid Pods, 
+    and empowers developers to create truly decentralized applications
+  """ .
+
+
+###
+# RDF PARSING
+###
+
+cdata:LDO
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:name "LDO - Linked Data Objects" ;
+  ex:programmingLanguage "typescript" ;
+  ex:domainKeyword "rdf parsing, general purpose library" .
+
+cdata:EasyRDF
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Exploration ;
+  ex:description "A library designed to make it easy to consume and produce RDF in PHP." ;
+  ex:domainKeyword "rdf parsing", "general purpose library" ;
+  ex:name "EasyRDF" .
+
+cdata:Idflex_query
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Exploration ;
+  ex:name "Idflex query" ;
+  ex:domainKeyword "rdf parsing", "general purpose library" .
+
+
+cdata:Rdf_ext
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Exploration ;
+  ex:description "RDF-Ext is a developer-friendly extension for RDF/JS." ;
+  ex:name "Rdf ext" ;
+  ex:domainKeyword "rdf parsing", "general purpose library" ;
+  ex:landingPage <https://github.com/rdf-ext/rdf-ext> .
+
+cdata:Rdflib
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "Linked Data API for JavaScript." ;
+  ex:provider :SolidOSteam;
+  ex:name "rdflib" ;
+  ex:domainKeyword "rdf parsing", "general purpose library" ;
+  ex:landingPage <https://github.com/linkeddata/rdflib.js> .
+
+cdata:Solid_namespace
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "A collection of common RDF namespaces used in the Solid project." ;
+  ex:name "Solid namespace" ;
+  ex:domainKeyword "rdf parsing", "general purpose library", "ontologies" ;
+  ex:landingPage <https://github.com/solid/solid-namespace> .
+
+cdata:Solid_react_graphql_ld
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "React components and hooks for building Solid apps with GraphQL-LD." ;
+  ex:name "Solid react graphql ld" ;
+  ex:provider :Ruben_Taelman ;
+  ex:domainKeyword "rdf parsing", "general purpose library" ;
+  ex:landingPage <https://github.com/rubensworks/solid-react-graphql-ld> .
+
+cdata:Tripledoc
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "A library for easy manipulation of RDF." ;
+  ex:domainKeyword "rdf parsing", "general purpose library" ;
+  ex:name "Tripledoc" .
+
+cdata:Soukai_Solid
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "A Soukai ODM extension adapting Solid to the engine." ;
+  ex:provider :Noel_De_Martin ;
+  ex:name "Soukai Solid" ;
+  ex:domainKeyword "rdf parsing", "general purpose library" .
+
+cdata:GraphQL_ld_comunica_solid
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "A GraphQL-LD engine that is backed by Comunica with Solid authentication." ;
+  ex:name "GraphQL ld comunica solid" ;
+  ex:provider :Ruben_Taelman ;
+  ex:domainKeyword "rdf parsing", "general purpose library" ;
+  ex:landingPage <https://github.com/rubensworks/graphql-ld-comunica-solid.js> .
+
+cdata:Query_solid
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "Simple access to data in Solid pods through LDflex expressions." ;
+  ex:provider :Ruben_Verborgh ;
+  ex:name "Query solid" ;
+  ex:domainKeyword "rdf parsing", "general purpose library" ;
+  ex:landingPage <https://github.com/LDflex/Query-Solid> .
+
+###
+# ACCESS
+###
+
+cdata:OIDC_auth_manager
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "An OpenID Connect (OIDC) authentication manager (OP, RP and RS) for decentralized peer-to-peer authentication." ;
+  ex:name "OIDC auth manager" ;
+  ex:domainKeyword "authentication" ;
+  ex:landingPage <https://github.com/nodeSolidServer/oidc-auth-manager> .
+
+cdata:OIDC_provider
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "OpenID Connect Provider for Node.js." ;
+  ex:name "OIDC provider" ;
+  ex:domainKeyword "authentication" ;
+  ex:landingPage <https://github.com/nodeSolidServer/oidc-op> .
+
+cdata:OIDC_relying_party
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "OpenID Connect Relying Party client library." ;
+  ex:name "OIDC relying party" ;
+  ex:domainKeyword "authentication";
+  ex:landingPage <https://github.com/nodeSolidServer/oidc-rp> .
+
+cdata:OIDC_resource_server_auth
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "OpenID Connect Resource Server Authentication for Node.js." ;
+  ex:name "OIDC resource server auth" ;
+  ex:domainKeyword "authentication"   ;
+  ex:landingPage <https://github.com/nodeSolidServer/oidc-rs> .
+
+cdata:ACL_check
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "Simple check of Web Access Control (WAC) access." ;
+  ex:domainKeyword "access control", "wac" ;
+  ex:name "ACL check" ;
+  ex:provider :Arne_Hassel, :Kjetil_Kjernsmo, :Michiel_de_Jong ;
+  ex:landingPage <https://github.com/nodeSolidServer/acl-check> .
+
+cdata:KeyChain
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "KeyChain for use with Web Cryptography API in Node.js." ;
+  ex:domainKeyword "encryption","authentication" ;
+  ex:landingPage <https://github.com/nodeSolidServer/keychain> ;
+  ex:name "KeyChain" .
+
+cdata:Solid_file_widget
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:provider :Alain_Bourgeois ;
+  ex:domainKeyword "authentication","pod management";
+  ex:description "Widget authorization for a Solid webapp." ;
+  ex:name "Solid file widget" ;
+  ex:landingPage <https://github.com/bourgeoa/solid-file-widget> .
+
+###
+# SOLID CLIENTS
+###
+
+cdata:Solid_auth_fetcher
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "Login and session management." ;
+  ex:domainKeyword "solid client" ;
+  ex:name "Solid auth fetcher" ;
+  ex:programmingLanguage "Javascript" ;
+  ex:platform "node","browser" ;
+  ex:landingPage <https://github.com/solid-contrib/solid-auth-fetcher> .
+
+cdata:Solid_auth_swift
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "Swift-based authentication for a Solid Pod." ;
+  ex:domainKeyword "solid client" ;
+  ex:name "Solid auth swift" ;
+  ex:programmingLanguage "Swift" ;
+  ex:platform "node" ;
+  ex:landingPage <https://github.com/crspybits/SolidAuthSwift> .
+
+cdata:Solid_client_authn_browser
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:name "Solid client authn browser" ;
+  ex:domainKeyword "solid client" ;
+  ex:provider :Inrupt;
+  ex:programmingLanguage "Typescript" .
+
+cdata:Solid_client_authn_node
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "A client library for authenticating with Solid." ;
+  ex:name "Solid client authn node" ;
+  ex:provider :Inrupt;
+  ex:domainKeyword "solid client" ;
+  ex:programmingLanguage "Typescript" ;
+  ex:landingPage <https://github.com/inrupt/solid-client-authn-js> .
+
+cdata:Solid_client_credentials_py
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description " Solid authentication with client credentials." ;
+  ex:domainKeyword "solid client" ;
+  ex:name "Solid client credentials py" ;
+  ex:programmingLanguage "Python" ;
+  ex:landingPage <https://github.com/Otto-AA/solid-client-credentials-py> .
+
+cdata:Solid_oidc_py
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "A solid-OIDC client in python." ;
+  ex:domainKeyword "solid client" ;
+  ex:name "Solid oidc py" ;
+  ex:programmingLanguage "Python" ;
+  ex:landingPage <https://github.com/Otto-AA/solid-oidc-py> .
+
+cdata:Web_Solid_Auth
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "A Perl Solid web client" ;
+  ex:domainKeyword "solid client" ;
+  ex:programmingLanguage "Perl" ;
+  ex:name "Web::Solid::Auth" .
+
+cdata:Solid_client_php
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "PHP library for accessing data and managing permissions on data stored in a Solid Pod." ;
+  ex:provider :Jacob_Dreesen, :Kevin_Dunglas ;
+  ex:name "Solid client php" ;
+  ex:domainKeyword "solid client" ;
+  ex:programmingLanguage "PHP" .
+
+cdata:Solid_node_client
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "Nodejs login/session for Pods & Solid access to local file systems, and other backends." ;
+  ex:name "Solid node client" ;
+  ex:domainKeyword "solid client" ;
+  ex:programmingLanguage "Typescript" ;
+  ex:landingPage <https://github.com/solid/solid-node-client> .
+
+###
+# COMPONENTS & FRAMEWORKS
+###
+cdata:Shighl_elements
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "Webcomponents based on Shighl" ;
+  ex:name "Shighl elements" ;
+  ex:domainKeyword "web components","general purpose library" .
+
+cdata:AerogelJS
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:name "AerogelJS" ;
+  ex:landingPage  <https://aerogel.js.org/>;
+  ex:domainKeyword "general purpose library", "application creator" .
+
+
+cdata:SolidWebComponents
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:name "Solid Web Components" ;
+  ex:landingPage <https://github.com/solidos/solid-web-components> ;
+  ex:domainKeyword "web components","general purpose library" .
+
+cdata:Molid
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "A mock server that can be used for apps." ;
+  ex:landingPage <https://www.npmjs.com/package/molid> ;
+  ex:programmingLanguage "javascript" ;
+  ex:domainKeyword "test server","general purpose library" ;
+  ex:description "Mock Solid Server" ;
+  ex:name "Molid" .
+
+cdata:Solid_rest
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "A client-side API which supports any backend for Solid requests." ;
+  ex:name "Solid rest" ;
+  ex:provider :Jeff_Zucker;
+  ex:domainKeyword "alternate storage","general purpose library" ;
+  ex:landingPage <https://github.com/solid-contrib/solid-rest> .
+
+cdata:SolidOS
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:name "Solid OS" ;
+  ex:domainKeyword "pod frontend","general purpose library" ;
+  ex:description "Solid-compatible data mashup library and Data Browser." ;
+  ex:landingPage <https://solidos.solidcomunity.net/> ;
+  ex:clientID  <https://solidos.solidcomunity.net/profile/card#me> ;
+  ex:landingPage <https://github.com/solidos/mashlib> .
+
+cdata:Solid_Logic
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "Core business logic of Solid OS" ;
+  ex:domainKeyword "general purpose library" ;
+  ex:name "Solid Logic" ;  ex:name "Solid Logic" ;
+  ex:landingPage <https://github.com/solidos/solid-logic> .
+
+cdata:Solid_Panes
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "A set of core solid-compatible apps based on solid-ui." ;
+  ex:domainKeyword "general purpose library" ;
+  ex:name "Solid Panes" ;
+  ex:landingPage <https://github.com/solidos/solid-panes> .
+
+cdata:Solid_UI
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:description "User Interface widgets and utilities for Solid." ;
+  ex:name "Solid UI" ;
+  ex:domainKeyword "general purpose library" ;
+  ex:provider :SolidOSteam;
+  ex:landingPage <https://github.com/solidos/solid-ui> .
+
+

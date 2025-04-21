@@ -1,0 +1,17 @@
+cert.pem
+key.pem
+/v2/notes.md
+#*
+*~
+./custom-config.json
+/.acl
+/.eslintcache
+/componentsjs-error-state.json
+/coverage
+/data
+/dist
+/docs
+/drafts
+/node_modules
+/test/tmp
+/.idea

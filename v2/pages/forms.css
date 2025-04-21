@@ -1,0 +1,96 @@
+body {
+  background:#000022;
+  color:#eeeeff;
+  padding:1em;
+  margin:0;
+  overflow-x:hidden;
+}
+a {
+  color:#eeeeff !important;
+}
+#searchPage input {
+  width:60ch !important;
+}
+#searchPage header {
+  width:70ch;
+  margin-bottom:2em;
+}
+#searchPage h1 {font-size:1.1em;margin-bottom:0;}
+#searchPage h2 {margin-top:0.25em;}
+
+#iframeDisplay {
+  border:none;
+  display:none;
+  height:100vh;
+  width:100vw;
+  padding:0;
+  margin:0;
+}
+
+.searchPage li {
+  margin-bottom:0.25em;
+}
+* {
+  font-family:Sans-Serif;
+  font-size:1em;
+}
+form {
+  margin:1em;
+  padding:1em;
+  padding-bottom:0;
+  border:1px solid gray;
+  border-radius:0.4em;  
+  background:#444466;
+  color:#eeeeff;
+  width:fit-content;
+}
+.menubar button{
+  display:inline-block;
+  margin-left:3em;
+}
+form .field {
+  margin-bottom:1em;
+}
+form .fieldLabel {
+  display:inline-block;
+  margin-top:0.5em;
+  margin-right:1em;
+  text-align:right;
+  width: 10em;
+  vertical-align:top;
+}
+form .fieldDescription {
+  margin-left:1em;
+  display:inline-block;
+  max-width:22em;
+  vertical-align:top;
+}
+input, select, textarea, button {
+  padding:0.3em;
+  border-radius:0.4em;  
+  background:#ddddff;
+  color:black;
+}
+button {
+  display:inline-block;
+  margin-right:2em;
+}
+form input, form textarea {
+  width:22em;
+}
+select {
+  width:22.8em;
+}
+form textarea {
+  height:4em;
+}
+#menubar {
+  color:yellow;
+  margin:1em;
+  margin-top:0;
+  font-size:1.1em;
+}
+#menubar select {
+  margin-left:1em;
+  width:25em;
+}

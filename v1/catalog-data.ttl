@@ -1,0 +1,3681 @@
+@prefix : <#> .
+#@prefix oar: <https://github.com/solid/organizations/tree/main/vocabularies/oar.ttl#> .
+@prefix soar: <http://example.com/soar#> .
+@prefix schema: <http://schema.org/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix siocs: <http://rdfs.org/sioc/services#> .
+@prefix sioct: <http://rdfs.org/sioc/types#> .
+@prefix meet: <https://www.w3.org/ns/pim/meeting#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix solid: <http://www.w3.org/ns/solid/terms#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/homepage> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+###
+# Not currently used
+#
+# @prefix fabio: <http://purl.org/spar/fabio/> .
+# @prefix pto: <http://productontology.org/id/> .
+# @prefix gr: <https://www.heppnetz.de/ontologies/goodrelations/v1.html#> .
+# @prefix org: <http://www.w3.org/ns/org#> .
+###
+
+###
+# SERVICES
+###
+
+:InruptPodSpaces      
+  a soar:PodService ;
+  # a soar:OpenIdService, soar:SolidStorageService ;
+  schema:name "Inrupt Pod Spaces" ;
+  schema:provider :Inrupt ;
+  doap:service-endpoint <https://start.inrupt.com/> ;
+  # schema:isAccessibleForFree false ;
+  # schema:image <https://cdn.prod.website-files.com/62d722f9cc456d1fb015d3e7/62d7239e66227a7c641e22dc_dark.webp>;
+  # schema:termsOfService <https://inrupt.com/terms-of-service> ;
+  # soar:platformProvider external:Amazon ;
+  # schema:location "Germany" ;
+  # schema:description "Inrupt Pod Spaces is an instance of the Enterprise Solid Server provided by Inrupt, Inc., hosted by Amazon and in Alpha stadium."@en ;
+  schema:actionApplication :ESS .
+
+:SolidCommunityDotNet
+  a soar:PodService ;
+  # a soar:OpenIdService, soar:SolidStorageService ;
+  schema:name "solidcommunity.net" ;
+  # schema:isAccessibleForFree true ;
+  schema:provider :SolidTeam ;
+  # schema:image <https://solid.inrupt.com/themes/custom/solid/logo.svg>;
+  # schema:description "solidcommunity.net is a public Solid server maintained by the Solid Team.";
+  doap:service-endpoint <https://solidcommunity.net> ;
+  # schema:termsOfService <https://github.com/solid/solidcommunity.net?tab=readme-ov-file#Solidcommunitynet-Acceptable-Use-Policy> ;
+  # soar:platformProvider external:DigitalOcean ;
+  # schema:location "UK" ;
+  schema:actionApplication :NSS .
+
+:SolidWebDotOrg  
+  a soar:PodService ;
+  # a soar:OpenIdService, soar:SolidStorageService ;
+  schema:name "solidweb.org" ;
+  # schema:isAccessibleForFree true ;
+  schema:provider :SolidGrassroots ;
+  # schema:location "France" ;
+  # soar:platformProvider external:Hosteurope ;
+  # schema:image "https://www.serverproject.de/logo2.png";
+  # schema:description "solidweb.org is a public Solid server based in Germany which is in an experimental state.";
+  # schema:termsOfService <https://www.serverproject.de/files/solidweb_org_terms.txt> ;
+  doap:service-endpoint <https://solidweb.org> ;
+  schema:actionApplication :NSS .
+
+:SolidWebDotMe  
+  a soar:PodService ;
+  # a soar:OpenIdService, soar:SolidStorageService ;
+  schema:name "solidweb.me" ;
+  # schema:isAccessibleForFree true ;
+  schema:provider :Meisdata ;
+  # schema:location "France" ;
+  # schema:termsOfService <https://gitlab.com/groups/solidweb.org/-/group_members> ;
+  doap:service-endpoint <https://solidweb.me> ;
+  # soar:platformProvider external:Hosteurope ;
+  schema:actionApplication :CSS .
+
+:TrinpodService
+  a soar:PodService ;
+  # a soar:OpenIdService, soar:SolidStorageService ;
+  # schema:isAccessibleForFree true ;
+  schema:name "Trinpod" ;
+  # schema:termsOfService <https://graphmetrix.com/terms> ;
+  schema:provider :Graphmetrix ;
+  # schema:location "USA" ;
+  # schema:image <https://trinpod.us/img/gmx_logo.5a794ad6.png> ;
+  # schema:description "trinpod.us is a public Solid server provided by Graphmetrix, U.S.A..";
+  doap:service-endpoint <https://trinpod.com> ;
+  # soar:platformProvider external:Hetzner ;
+  schema:actionApplication :Trinpod .
+
+# Organization
+#
+  :StartinBloxCo
+    a schema:Corporation ;
+    schema:name "Startin'Blox" .
+
+# Software Library
+#
+  :StartinBlox
+    a soar:SolidSDK ;
+    schema:provider :StartinBloxCo ;
+    schema:keywords "application creator","web components" ;
+    doap:homepage <https://startinblox.com/en/technology/> ;
+    doap:repository <https://git.startinblox.com/explore/groups> ;
+    schema:name "Startin'Blox" .
+
+# Software Service
+#
+  :StartinBloxDotCom
+    a soar:PodService ;
+    # schema:isAccessibleForFree true ;
+    schema:name "Startin'Blox" ;
+    schema:provider   :StartinBlox ;
+    doap:service-endpoint <https://startinblox.com/> ;
+    schema:actionApplication :CSS .
+
+:Mastopod
+  a soar:PodService ;
+  # a soar:OpenIdService, soar:SolidStorageService ;
+  schema:name        "Mastopod" ;
+  # schema:isAccessibleForFree true ;
+  doap:service-endpoint <https://mastopod.com/> ;
+  schema:actionApplication :ActivityPods .
+
+:PodDotLiquidSurf
+  a soar:PodService ;
+  # a soar:OpenIdService, soar:SolidStorageService ;
+  schema:name        "Liquid Surf" ;
+  schema:provider :LiquidSurf ;
+  doap:service-endpoint <https://pod.liquid.surf/> ;
+  doap:repository <https://github.com/liquid-surf/easy-penny> ;
+  schema:actionApplication :CSS .
+
+:TeamIdLive
+  a soar:PodService ;
+  # a soar:OpenIdService, soar:SolidStorageService ;
+  # schema:isAccessibleForFree true ;
+  doap:service-endpoint <https://teamid.live/> ;
+  schema:name "teamid.live" ;
+  schema:provider :Meisdata;
+  # schema:termsOfService <https://github.com/serverproject-dev> ;
+  # schema:location "EU" ;
+  schema:actionApplication :CSS .
+
+:IgrantIo
+  a soar:PodService ;
+  # a soar:OpenIdService, soar:SolidStorageService ;
+  schema:name "Data Pod" ;
+  schema:provider :IgrantIoOrg ;
+  # schema:location "Sweden" ;
+  doap:service-endpoint <https://datapod.igrant.io/> ;
+  # schema:termsOfService <https://igrant.io/> ;
+  # schema:isAccessibleForFree true ;
+  schema:actionApplication :NSS .
+
+:RedpencilService
+  a soar:PodService ;
+  # a soar:OpenIdService, soar:SolidStorageService ;
+  schema:name "redpencil.io" ;
+  schema:provider :Redpencil ;
+  # schema:termsOfService <https://redpencil.io/> ;
+  # schema:isAccessibleForFree true ;
+  doap:service-endpoint <https://solid.redpencil.io/> ;
+  schema:actionApplication :CSS .
+
+:SolidCommunityAUpods
+  a soar:PodService ;
+  # a soar:OpenIdService, soar:SolidStorageService ;
+  schema:name "Solid Community AU" ;
+  doap:homepage <https://www.solidproject.au/> ;
+  doap:service-endpoint <https://pods.solidcommunity.au/> ;  
+  schema:provider :SolidCommunityAU, :AkamiTechnologies ;
+  schema:location "AU" ;
+  schema:actionApplication :CSS .
+
+:UseId
+  a soar:PodService ;
+  # a soar:OpenIdService, soar:SolidStorageService ;
+  doap:service-endpoint <https://get.use.id/> ;
+  schema:name "use.id" ;
+  schema:provider :Digita ;
+  # schema:termsOfService <https://get.use.id/> ;
+  # schema:location "EU" ;
+  # schema:isAccessibleForFree true ;
+  # soar:platformProvider external:DigitalOcean ;
+  schema:actionApplication :CSS .
+
+:OpenLinks2
+#  a soar:PodService ;
+#  a soar:OpenIdService, soar:SolidStorageService ;
+  schema:name "OpenLinks Solid Server #2";
+  doap:service-endpoint <https://solid.openlinksw.com:8445/>;
+  #schema:termsOfService <https://solid.openlinksw.com:8445/>;
+  schema:provider :OpenLink;
+  schema:actionApplication :OpenLinkNSSFork .
+
+:OpenLinks1
+#  a soar:PodService ;
+#  a soar:OpenIdService, soar:SolidStorageService ;
+  schema:name "OpenLinks Solid Server #1";
+  doap:service-endpoint <https://solid.openlinksw.com:8444/>;
+  schema:termsOfService <https://solid.openlinksw.com:8444/>;
+  schema:provider :OpenLink;
+  schema:actionApplication :OpenLinkNSSFork .
+
+
+###
+# SERVERS
+###
+
+:CSS
+  a soar:PodServer ;
+  schema:name "Community Solid Server" ;
+  schema:alternateName "CSS" ;
+  schema:provider :Imec ;
+  # schema:isAccessibleForFree true ;
+  doap:homepage <https://communitysolidserver.github.io/CommunitySolidServer/latest/>;
+  doap:repository <https://github.com/CommunitySolidServer/CommunitySolidServer> ;
+  doap:programming_language "Typescript" ;
+  schema:license "MIT" .
+
+:PHP_Solid_Server
+  a soar:PodServer ;
+  schema:name "PHP Solid Server" ;
+  schema:provider :PDSINTEROP ;
+  doap:repository <https://github.com/pdsinterop/php-solid-server>;
+  doap:homepage <https://pdsinterop.org/php-solid-server/> ;
+  schema:license "MIT" ;
+  # schema:isAccessibleForFree true ;
+  doap:programming_language "PHP" .
+
+:Manas
+  a soar:PodServer ;
+  schema:name "Manas" ;
+  schema:alternateName "मनस्";
+  doap:repository <https://github.com/manomayam/manas> ;
+  doap:homepage <https://manomayam.github.io/manas/introduction.html>;
+  schema:license "MIT or Apache" ;
+  schema:provider :Manomayam ;
+  # schema:isAccessibleForFree true ;
+  doap:programming_language "Rust" .
+
+:Trinpod
+  a soar:PodServer ;
+  schema:name "Trinpod" ;
+  doap:homepage <https://graphmetrix.com/trinpod-server> ;
+  schema:provider :Graphmetrix ;
+  # schema:isAccessibleForFree false ;
+  schema:license "proprietary" .
+
+:NSS
+  a soar:PodServer ;
+  # schema:isAccessibleForFree true ;
+  doap:repository <https://github.com/nodeSolidServer/node-solid-server> ;
+  schema:name "Node Solid Server" ;
+  schema:alternateName "NSS" ;
+  # schema:isAccessibleForFree true ;
+  doap:programming_language "Javascript" ;
+  schema:license "MIT" .
+
+:ESS
+  a soar:PodServer ;
+  doap:homepage <https://www.inrupt.com/products/enterprise-solid-server>;
+  # schema:isAccessibleForFree false ;
+  schema:provider :Inrupt ;
+  schema:name "Enterprise Solid Server" ;
+  schema:alternateName "ESS" ;
+  schema:license "proprietary" .
+
+:OpenLinkNSSFork
+  # a soar:OpenIdServer, soar:SolidStorageServer ;
+  schema:provider :OpenLink ;
+  # schema:isAccessibleForFree true ;
+  schema:name "OpenLink NSS Fork" .
+
+:Gold
+  schema:name "Gold";
+  a soar:PodServer ;
+  # schema:isAccessibleForFree true ;
+  doap:repository <https://github.com/linkeddata/gold> ;
+  schema:license "MIT" ;
+  # schema:isAccessibleForFree true ;
+  doap:programming_language "Go" .
+
+:Solid-Lite
+  schema:name "Solid Lite";
+  a soar:PodServer ;
+  doap:repository <https://github.com/solid-lite/server> ;
+  schema:license "MIT" ;
+  # schema:isAccessibleForFree true ;
+  doap:programming_language "Javascript" .
+
+###
+# LEARNING RESOURCES
+###
+
+:Solid-Clinic
+  a soar:SpecializedPodService;
+  schema:name "Solid Clinic" ;
+  doap:service-endpoint <https://chuixuewan.github.io/solid-clinic/> .
+
+:Tim_Berners-Lee
+  a schema:Person ;
+  schema:name "Tim Berners-Lee" .
+
+:Certiman
+  a schema:Person ;
+  schema:name "".
+
+:VueSolidPod
+  schema:name "Vue Solid Pod" ;
+  doap:repository <https://github.com/Certiman/vue-solid-pod> ;
+  schema:description "This web application reproduces the SOLID POD Tutorial App using the vite & vue3 starter template. The intention is to demo how Solid pods can easily be integrated into Vue3 apps." ;
+  schema:provider :Certiman  ;
+  a schema:LearningResource, soar:AppTutorial .
+
+:ActivityPodsDocs
+  schema:name "Create your first social app" ;
+  doap:homepage <https://docs.activitypods.org/tutorials/create-your-first-social-app/> ;
+  schema:description "We created a boilerplate to help you quickly setup a social app in a local environment, and connect it with a local Pod provider. In just a few minutes, you should be able to play with your first ActivityPods-compatible app!" ;
+  schema:about :ActivityPods ;
+  a schema:LearningResource, soar:AppTutorial .
+
+:PdsInteropConventions
+  schema:name "PDS Interop Conventions" ;
+  doap:homepage <https://github.com/pdsinterop/conventions?tab=readme-ov-file> ;
+  schema:description "Conventions around how apps and services store data on your personal data store." ;
+  schema:provider :PDSINTEROP ;
+  a schema:LearningResource, soar:AppTutorial .
+
+:SolidTagExplainer
+  schema:name "TAG Explainer for Solid" ;
+  doap:homepage <https://timbl.solidcommunity.net/2023/03%20EWADA/TAGExplainerforSolid.html> ;
+  schema:provider :Tim_Berners-Lee ;
+  a schema:LearningResource, soar:ExplainerResource .
+
+:RDF-JS
+  schema:name "RDF+JS = &hearts;" ;
+  schema:provider :Arne_Hassel ;
+  doap:homepage <https://rdfjs.dev/> ;
+  a schema:LearningResource, soar:AppTutorial .
+
+:WebComponentsDiscussion
+  schema:name "Solid Web Components Discussion" ;
+  a schema:LearningResource, soar:AppTutorial .
+
+:SolidShapesWiki
+  schema:name "Solid Shapes Wiki" ;
+  doap:wiki <https://github.com/solid/shapes/wiki> ;
+  a schema:LearningResource, soar:AppTutorial .
+
+:GettingStarted
+  schema:name "Getting Started withSolid" ;
+  doap:repository <https://github.com/solid-contrib/getting-started/> ;
+  a schema:LearningResource, soar:AppTutorial .
+
+:JavaTutorial
+  a schema:LearningResource, soar:AppTutorial;
+  schema:name "Java tutorial";
+  #schema:availableLanguage "English" ;
+  schema:provider :Inrupt;
+  doap:homepage <https://docs.inrupt.com/developer-tools/java/client-libraries/getting-started/>  .
+
+:JavaScriptTutorial
+  a schema:LearningResource, soar:AppTutorial;
+  schema:name "Javascript tutorial";
+  #schema:availableLanguage "English" ;
+  schema:provider :Inrupt;
+  doap:homepage <https://docs.inrupt.com/developer-tools/javascript/client-libraries/tutorial/getting-started/> .
+
+:LDOtutorial
+  a schema:LearningResource, soar:AppTutorial;
+  schema:name "Using LDO to build a Solid Application for React";
+  #schema:availableLanguage "English" ;
+  schema:provider :Oteam;
+  doap:homepage <https://ldo.js.org/guides/solid_react/> .
+                  
+:VocabsTutorial
+  a schema:LearningResource, soar:AppTutorial ;
+  schema:name "Creating Vocabularies";
+  #schema:availableLanguage "English" ;
+  schema:provider :SolidTeam;
+  doap:homepage <https://github.com/solid/solidproject.org/wiki/Vocabularies-Overview> .
+
+
+:TodoApp
+  a schema:LearningResource, soar:AppTutorial ;
+  schema:name "How to Build a Solid To-Do App with React" ;
+  #schema:availableLanguage "English" ;
+  schema:provider :VirginiaBalseiro ;
+  doap:homepage <https://virginiabalseiro.com/blogposts/tutorial-create-a-solid-to-do-app> .
+
+
+:EmberSolidVideo
+  a schema:LearningResource, soar:AppTutorial ;
+  schema:name "Ember Solid - a video tutorial" ;
+  #schema:availableLanguage "English" ;
+  schema:about :EmberSolid ;
+  schema:provider :AadVersteden ;
+  schema:homepage <https://nextcloud.hellofuture.be/s/nYYNwGceFSNotJY> .
+
+:EmberSolid
+  a soar:SoftwareLibrary, soar:SolidSDK ;
+  schema:name "Ember Solid" ;
+  schema:provider :RedPencil ;
+  schema:homepage <https://chuixuewan.github.io/solid-clinic/> .
+
+###
+# COMMUNICATIONS
+###
+:SolidForum
+  schema:name "Solid Forum" ;
+  a sioc:Forum, sioct:MessageBoard ;
+  doap:service-endpoint <https://forum.solidproject.org> ;
+  # sioc:has_administrator :JustinBingham, :JacksonMorgan;
+  # sioc:has_moderator :Arne_Hassel, :JeffZucker ;
+  # schema:isAccessibleForFree true ;
+  schema:provider :SolidTeam ;
+  schema:description """
+     Create and respond to comments, questions, and discussions happening
+     in the community.
+  """ .
+
+:SolidMatrixChat
+  schema:name "Solid Matrix Chat" ;
+  # schema:isAccessibleForFree true ;
+  a sioct:ChatChannel, sioc:Forum ;
+  doap:service-endpoint <https://matrix.to/to/#/#solid_project> ;
+  schema:provider :SolidTeam ;
+  schema:description """
+    The Solid Matrix Chat is a live chat where community members can connect.
+  """ .
+
+:CG-mailingList
+  schema:name "W3C Solid Community Group Mailing List" ;
+  a sioc:Forum, sioct:MailingList ;
+  doap:service-endpoint <mailto:public-solid-request@w3.org?subject=subscribe> ;
+  doap:repository <https://lists.w3.org/Archives/Public/public-solid/> ;
+  # schema:isAccessibleForFree true ;
+  schema:provider :SolidCG .
+
+:SolidReddit
+  schema:name "Solid Sub-Reddit" ;
+  # schema:isAccessibleForFree true ;
+  a sioc:Forum, sioct:MessageBoard ;
+  doap:service-endpoint <https://www.reddit.com/r/SOLID/> ;
+  schema:provider :SolidTeam .
+
+###
+# EVENTS
+###
+:SolidWorld
+  schema:name "Solid World" ;
+  a schema:Event.
+
+:SolidSymposium
+  schema:name "Solid Symposium" ;
+  a schema:Event .
+
+:SolidPractitioners-WeeklyCall
+  schema:name "Solid Practitioners Video Call" ;
+  a schema:Event, meet:Meeting ;
+  schema:provider :SolidPractitioners, :SolidTeam ;
+  meet:videoCallPage  <https://meet.jit.si/solid-practitioners> ;
+  doap:repository <https://github.com/solid-contrib/practitioners/tree/main/meetings> ;
+  schema:description "A hub for those putting the Solid vision into practice." ;
+  # schema:isAccessibleForFree true ;
+  soar:Schedule "Every other Monday at 18:00 UTC" .
+
+:SolidCG-WeeklyCall
+  schema:name "W3C Solid Community Group Video Call" ;
+  a schema:Event, meet:Meeting ;
+  schema:provider :SolidCG ;
+  meet:videoCallPage  <https://meet.jit.si/solid-cg> ;
+  doap:repository <https://github.com/solid/specification/tree/main/meetings> ;
+  # schema:audience :TBD ;
+  # schema:about :TBD ;
+  schema:description "Learn and work on Solid specifications." ;
+  # schema:isAccessibleForFree true ;
+  soar:Schedule "Every Wednesday at 15:00 UTC" ;
+  rdfs:seeAlso <https://www.w3.org/events/meetings/a810b828-7a85-47b8-8a6d-2359a491a7f7/20240703T140000/>.
+
+:SolidOS-WeeklyCall
+  schema:name "SolidOS Video Call" ;
+  a schema:Event ;
+  a meet:Meeting ;
+  schema:provider :SolidOSteam ;
+  meet:videoCallPage  <https://meet.jit.si/solid-os> ;
+  doap:repository <https://github.com/solid-contrib/practitioners/tree/main/meetings> ;
+  schema:description "Coding discussion to support the SolidOS stack of libraries and apps." ;
+  # schema:isAccessibleForFree true ;
+  soar:Schedule "Every Wednesday at 17:00 UTC" .
+
+:DataModulesVideoCall
+  schema:name "Data Modules Video Call" ;
+  a schema:Event, meet:Meeting .
+
+###
+# Social Apps
+###
+:SolidHealthAU
+  a soar:SpecializedPodService ;
+  schema:name "Solid Health" ;
+  schema:keywords "health","ethnicity","access to public resources" ;
+  schema:provider :AUnationalU, :GurrinyHealthClinic ;
+  # schema:isAccessibleForFree true ;
+  doap:homepage <https://sii.anu.edu.au/projects.html> ;
+  schema:description """
+   Members of the Yarrabah Aboriginal Community in Queensland each have a POD hosted on the Yarrabah Solid Server containing their own private health data.
+  """ .
+
+:DigitalFlanders
+  schema:name "Digital Flanders" ;
+  a soar:SpecializedPodService ;
+  schema:keywords "employment","access to public resources" ;
+  schema:provider :GovernmentOfFlanders.
+
+:WelcomeToMyPlace
+  a soar:SpecializedPodService ;
+  schema:keywords "housing", "resource sharing" ;
+  schema:name        "Welcome to My Place" ;
+  doap:service-endpoint <https://mastopod.com/> ;
+  schema:actionApplication  :ActivityPods ;
+  schema:description      """
+    Private meetings at home that promote a living together based on welcome,
+    trust and mutuall aid.
+  """ .
+
+:MutualAid
+  a  soar:SpecializedPodService ;
+  schema:name        "Mutual Aid" ;
+  schema:keywords "resource sharing" ;
+  doap:service-endpoint <https://mutual-aid.app/> ;
+  schema:actionApplication  :ActivityPods ;
+  schema:description      """
+    Classified ads to support each other within a trusted neteork.
+  """ .
+
+:SleepyBike
+  a soar:SpecializedPodService ;
+  schema:name  "sleepy.bike" ;
+  schema:keywords "housing", "transportation", "resource sharing" ;
+  doap:service-endpoint <https://sleepy.bike/> ;
+  doap:implements :Solid, :Solid-OIDC ;
+  schema:provider :OpenHospitalityNetwork ;
+  schema:actionApplication :CSS, :SleepyBikePlatform;
+  schema:description      """
+    A decentralized hospitality exchange community for slow travellers.
+  """ .
+
+:PASS
+  a  soar:SpecializedPodService ;
+  schema:name       "Personalized Access System for Services" ;
+  schema:keywords "housing", "access to public resources" ;
+  schema:provider   :CodePDX ;
+  schema:actionApplication :CSS, :PASSPlatform;
+  doap:wiki       <https://github.com/codeforpdx/PASS/wiki> ;
+  doap:repository <https://github.com/codeforpdx/PASS> ;
+  schema:description """
+    An open source digital wallet for providing home-insecure individuals a safe
+    place to store documents within their control. PASS additionally aims to assist 
+    caseworkers with processing and providing documents needed to complete the 
+    housing-assistance application process.
+  """ .
+
+:Mycelium
+  a  soar:SpecializedPodService ;
+  schema:keywords "food", "farming", "short supply chain", "business management" ;
+  schema:name "Mycelium Project" ;
+  schema:provider :INRIA, :StartinBloxCo ;
+  dc:references :DataFoodNetwork ;
+  schema:description """
+    applications to manage farms (products, harvests, sales, accounting, etc.) using taxonomies for short food supply chains.
+  """ .
+
+:HUBL
+  a  soar:SpecializedPodService ;
+  schema:name "HUBL" ;
+  schema:keywords "employment", "resource sharing" ;
+  schema:provider :INRIA, :StartinBloxCo ;
+  schema:description """
+    allows you to find freelancers in a community of users
+  """ .
+
+
+###
+#
+###
+:ActivityPods
+  schema:description "A new kind of architecture for web applications which aims to reconcile the ActivityPub and Solid standards." ;
+  a schema:SoftwareLibrary, soar:SolidSDK ;
+  schema:provider :Sebastien_Rosset ;
+  schema:name "ActivityPods" ;
+  doap:homepage <https://activitypods.org/> ;
+  doap:repository  <https://github.com/activitypods/activitypods> ;
+  schema:description      """
+    Brings together two game-changing technologies, ActivityPub and Solid Pods, 
+    and empowers developers to create truly decentralized applications
+  """ .
+
+:Espresso
+  a schema:ResearchOrganization ;
+  schema:name        "Espresso" ;
+  schema:audience    "App Developers" ;
+  schema:provider    :UofSouthhampton, :UofLondon, :UofSingapore, :DataSwift ;
+  schema:status      soar:Development ;
+  doap:homepage <https://espressoproject.org/> ;
+  schema:description """
+    Efficient Search over Personal Repositories - Secure and Sovereign
+  """ .
+
+:LiquidSurfFedCM
+  a schema:SoftwareApplication, soar:GeneralPurposeApp ;
+  schema:name        "Liquid Surf FedCM Demo" ;
+  doap:repository <https://github.com/liquid-surf/fedcm-demo> ;
+  schema:description      """
+    an experiment with FedCM and Solid-OIDC integration
+  """ .
+
+###
+# LIBRARIES
+#   RDF PARSING
+#   ACCESS & AUTH
+#   SOLID CLIENTS
+#   HIGH LEVEL LIBRARIES
+###
+
+###
+# RDF PARSING
+###
+:LDO
+  schema:name "LDO - Linked Data Objects" ;
+  doap:programming_language "typescript" ;
+  schema:keywords "rdf parsing", "general purpose library" ;
+  a soar:SoftwareLibrary , soar:SolidLinkedDataLibrary .
+
+:EasyRDF
+  schema:description "A library designed to make it easy to consume and produce RDF in PHP." ;
+  a soar:SoftwareLibrary , soar:SolidLinkedDataLibrary;
+  schema:keywords "rdf parsing", "general purpose library" ;
+  schema:name "EasyRDF" .
+
+:Idflex_query
+  schema:name "Idflex query" ;
+  schema:keywords "rdf parsing", "general purpose library" ;
+  a soar:SoftwareLibrary, soar:SolidLinkedDataLibrary .
+
+:Rdf_ext
+  schema:description "RDF-Ext is a developer-friendly extension for RDF/JS." ;
+  schema:name "Rdf ext" ;
+  schema:keywords "rdf parsing", "general purpose library" ;
+  a soar:SoftwareLibrary, soar:SolidLinkedDataLibrary ;
+  doap:repository <https://github.com/rdf-ext/rdf-ext> .
+
+:Rdflib
+  schema:description "Linked Data API for JavaScript." ;
+  schema:provider :SolidOSteam;
+  schema:name "rdflib" ;
+  schema:keywords "rdf parsing", "general purpose library" ;
+  a soar:SoftwareLibrary, soar:SolidLinkedDataLibrary ;
+  doap:repository <https://github.com/linkeddata/rdflib.js> .
+
+:Solid_namespace
+  schema:description "A collection of common RDF namespaces used in the Solid project." ;
+  schema:name "Solid namespace" ;
+  a soar:SoftwareLibrary, soar:SolidLinkedDataLibrary ;
+  schema:keywords "rdf parsing", "general purpose library" ;
+  doap:repository <https://github.com/solid/solid-namespace> .
+
+:Solid_react_graphql_ld
+  schema:description "React components and hooks for building Solid apps with GraphQL-LD." ;
+  schema:name "Solid react graphql ld" ;
+  schema:provider :Ruben_Taelman ;
+  a soar:SolidSDK ;
+  schema:keywords "rdf parsing", "general purpose library" ;
+  doap:repository <https://github.com/rubensworks/solid-react-graphql-ld> .
+
+:Tripledoc
+  schema:description "A library for easy manipulation of RDF." ;
+  a soar:SoftwareLibrary, soar:SolidLinkedDataLibrary ;
+  schema:keywords "rdf parsing", "general purpose library" ;
+  schema:name "Tripledoc" .
+
+:Soukai_Solid
+  schema:description "A Soukai ODM extension adapting Solid to the engine." ;
+  schema:provider :Noel_De_Martin ;
+  schema:name "Soukai Solid" ;
+  schema:keywords "rdf parsing", "general purpose library" ;
+  a soar:SoftwareLibrary, soar:SolidSDK .
+
+:GraphQL_ld_comunica_solid
+  schema:description "A GraphQL-LD engine that is backed by Comunica with Solid authentication." ;
+  schema:name "GraphQL ld comunica solid" ;
+  schema:provider :Ruben_Taelman ;
+  a soar:SoftwareLibrary, soar:SolidLinkedDataLibrary   ;
+  schema:keywords "rdf parsing", "general purpose library" ;
+  doap:repository <https://github.com/rubensworks/graphql-ld-comunica-solid.js> .
+
+:Query_solid
+  schema:description "Simple access to data in Solid pods through LDflex expressions." ;
+  schema:provider :Ruben_Verborgh ;
+  schema:name "Query solid" ;
+  schema:keywords "rdf parsing", "general purpose library" ;
+  a soar:SoftwareLibrary, soar:SolidLinkedDataLibrary   ;
+  doap:repository <https://github.com/LDflex/Query-Solid> .
+
+###
+# ACCESS
+###
+:OIDC_auth_manager
+  schema:description "An OpenID Connect (OIDC) authentication manager (OP, RP and RS) for decentralized peer-to-peer authentication." ;
+  schema:name "OIDC auth manager" ;
+  a soar:SoftwareLibrary, soar:SolidLowLevelLibrary ;
+  schema:keywords "authentication" ;
+  doap:repository <https://github.com/nodeSolidServer/oidc-auth-manager> .
+
+:OIDC_provider
+  schema:description "OpenID Connect Provider for Node.js." ;
+  schema:name "OIDC provider" ;
+  a soar:SoftwareLibrary, soar:SolidLowLevelLibrary ;
+  schema:keywords "authentication" ;
+  doap:repository <https://github.com/nodeSolidServer/oidc-op> .
+
+:OIDC_relying_party
+  schema:description "OpenID Connect Relying Party client library." ;
+  schema:name "OIDC relying party" ;
+  a soar:SoftwareLibrary, soar:SolidLowLevelLibrary ;
+  schema:keywords "authentication";
+  doap:repository <https://github.com/nodeSolidServer/oidc-rp> .
+
+:OIDC_resource_server_auth
+  schema:description "OpenID Connect Resource Server Authentication for Node.js." ;
+  schema:name "OIDC resource server auth" ;
+  schema:keywords "authentication"   ;
+  a soar:SoftwareLibrary, soar:SolidLowLevelLibrary ;
+  doap:repository <https://github.com/nodeSolidServer/oidc-rs> .
+
+:ACL_check
+  schema:description "Simple check of Web Access Control (WAC) access." ;
+  schema:keywords "access control", "wac" ;
+  schema:name "ACL check" ;
+  schema:provider :Arne_Hassel, :Kjetil_Kjernsmo, :Michiel_de_Jong ;
+  a soar:SoftwareLibrary, soar:SolidLowLevelLibrary ;
+  doap:repository <https://github.com/nodeSolidServer/acl-check> .
+
+:KeyChain
+  schema:description "KeyChain for use with Web Cryptography API in Node.js." ;
+  schema:keywords "encryption","authentication" ;
+  a soar:SoftwareLibrary, soar:SolidLowLevelLibrary ;
+  doap:repository <https://github.com/nodeSolidServer/keychain> ;
+  schema:name "KeyChain" .
+
+:Solid_file_widget
+  schema:provider :Alain_Bourgeois ;
+  schema:keywords "authentication","pod management";
+  schema:description "Widget authorization for a Solid webapp." ;
+  schema:name "Solid file widget" ;
+  a soar:SoftwareLibrary, soar:SolidSDK ;
+  doap:repository <https://github.com/bourgeoa/solid-file-widget> .
+
+###
+# SOLID CLIENTS
+###
+:Solid_auth_fetcher
+  schema:description "Login and session management." ;
+  schema:keywords "solid client" ;
+  schema:name "Solid auth fetcher" ;
+  a soar:SoftwareLibrary, soar:SolidFetchClient  ;
+  doap:programming_language "Javascript" ;
+  doap:platform "node","browser" ;
+  doap:repository <https://github.com/solid-contrib/solid-auth-fetcher> .
+
+:Solid_auth_swift
+  schema:description "Swift-based authentication for a Solid Pod." ;
+  schema:keywords "solid client" ;
+  schema:name "Solid auth swift" ;
+  a soar:SoftwareLibrary, soar:SolidFetchClient  ;
+  doap:programming_language "Swift" ;
+  doap:platform "node" ;
+  doap:repository <https://github.com/crspybits/SolidAuthSwift> .
+
+:Solid_client_authn_browser
+  schema:name "Solid client authn browser" ;
+  schema:keywords "solid client" ;
+  schema:provider :Inrupt;
+  doap:programming_language "Typescript" ;
+  doap:platform "browser" ;
+  a soar:SoftwareLibrary, soar:SolidFetchClient  .
+
+:Solid_client_authn_node
+  schema:description "A client library for authenticating with Solid." ;
+  schema:name "Solid client authn node" ;
+  schema:provider :Inrupt;
+  a soar:SoftwareLibrary, soar:SolidFetchClient  ;
+  schema:keywords "solid client" ;
+  doap:programming_language "Typescript" ;
+  doap:platform "node" ;
+  doap:repository <https://github.com/inrupt/solid-client-authn-js> .
+
+:Solid_client_credentials_py
+  schema:description " Solid authentication with client credentials." ;
+  schema:keywords "solid client" ;
+  schema:name "Solid client credentials py" ;
+  a soar:SoftwareLibrary, soar:SolidFetchClient  ;
+  doap:programming_language "Python" ;
+  doap:platform "node" ;
+  doap:repository <https://github.com/Otto-AA/solid-client-credentials-py> .
+
+:Solid_oidc_py
+  schema:description "A solid-OIDC client in python." ;
+  schema:keywords "solid client" ;
+  schema:name "Solid oidc py" ;
+  a soar:SoftwareLibrary, soar:SolidFetchClient  ;
+  doap:programming_language "Python" ;
+  doap:platform "node" ;
+  doap:repository <https://github.com/Otto-AA/solid-oidc-py> .
+
+:Web_Solid_Auth
+  schema:description "A Perl Solid web client" ;
+  schema:keywords "solid client" ;
+  a soar:SoftwareLibrary ;
+  doap:programming_language "Perl" ;
+  doap:platform "browser" ;
+  schema:name "Web::Solid::Auth" .
+
+:Solid_client_php
+  schema:description "PHP library for accessing data and managing permissions on data stored in a Solid Pod." ;
+  schema:provider :Jacob_Dreesen, :Kevin_Dunglas ;
+  schema:name "Solid client php" ;
+  schema:keywords "solid client" ;
+  doap:programming_language "PHP" ;
+  doap:platform "node" ;
+  a soar:SoftwareLibrary, soar:SolidFetchClient  .
+
+:Solid_node_client
+  schema:description "Nodejs login/session for Pods & Solid access to local file systems, and other backends." ;
+  schema:name "Solid node client" ;
+  schema:keywords "solid client" ;
+  a soar:SoftwareLibrary, soar:SolidFetchClient  ;
+  doap:programming_language "Typescript" ;
+  doap:platform "node" ;
+  doap:repository <https://github.com/solid/solid-node-client> .
+
+###
+# COMPONENTS & FRAMEWORKS
+###
+:Shighl_elements
+  schema:description "Webcomponents based on Shighl" ;
+  schema:name "Shighl elements" ;
+  schema:keywords "web components","general purpose library" ;
+  a soar:SoftwareLibrary, soar:SolidSDK .
+
+:AerogelJS
+  schema:name "AerogelJS" ;
+  doap:homepage  <https://aerogel.js.org/>;
+  schema:keywords "general purpose library", "application creator" ;
+  a soar:SoftwareLibrary, soar:SolidSDK .
+
+:SolidWebComponents
+  schema:name "Solid Web Components" ;
+  doap:repository <https://github.com/solidos/solid-web-components> ;
+  schema:keywords "web components","general purpose library" ;
+  a soar:SoftwareLibrary, soar:SolidSDK .
+
+:Molid
+  soar:featured true;
+  schema:description "A mock server that can be used for apps." ;
+  doap:repository <https://www.npmjs.com/package/molid> ;
+  a soar:SoftwareLibrary  , soar:SolidLowLevelLibrary ;
+  doap:programming_language "javascript" ;
+  schema:keywords "test server","general purpose library" ;
+  schema:description "Mock Solid Server" ;
+  schema:name "Molid" .
+
+:Solid_rest
+  schema:description "A client-side API which supports any backend for Solid requests." ;
+  schema:name "Solid rest" ;
+  schema:provider :Jeff_Zucker;
+  schema:keywords "alternate storage","general purpose library" ;
+  a soar:SoftwareLibrary, soar:SolidSDK ;
+  doap:repository <https://github.com/solid-contrib/solid-rest> .
+
+:SolidOS
+  schema:name "Solid OS" ;
+  schema:alternateName "mashlib" ;
+  a soar:SoftwareLibrary, schema:SoftwareApplication ;
+  schema:keywords "pod frontend","general purpose library" ;
+  schema:description "Solid-compatible data mashup library and Data Browser." ;
+  doap:homepage <https://solidos.solidcomunity.net/> ;
+  solid:webid  <https://solidos.solidcomunity.net/profile/card#me> ;
+  doap:repository <https://github.com/solidos/mashlib> .
+
+:Solid_Logic
+  schema:description "Core business logic of Solid OS" ;
+  schema:keywords "general purpose library" ;
+  schema:name "Solid Logic" ;  schema:name "Solid Logic" ;
+  a soar:SoftwareLibrary, soar:SolidLowLevelLibrary ;
+  doap:repository <https://github.com/solidos/solid-logic> .
+
+:Solid_Panes
+  schema:description "A set of core solid-compatible apps based on solid-ui." ;
+  schema:keywords "general purpose library" ;
+  schema:name "Solid Panes" ;
+  a soar:SoftwareLibrary, soar:SolidLowLevelLibrary ;
+  doap:repository <https://github.com/solidos/solid-panes> .
+
+:Solid_UI
+  schema:description "User Interface widgets and utilities for Solid." ;
+  schema:name "Solid UI" ;
+  schema:keywords "general purpose library" ;
+  schema:provider :SolidOSteam;
+  a soar:SoftwareLibrary, soar:SolidLowLevelLibrary ;
+  doap:repository <https://github.com/solidos/solid-ui> .
+
+
+###
+# APPS
+####
+
+:Syntropize
+  a schema:SoftwareApplication, soar:GeneralPurposeApp  ;
+  schema:name "Syntropize" ;
+  schema:audience "everyone" ;
+  schema:status     soar:Production ;
+  schema:provider   :RahulGupta ;
+  doap:homepage <https://syntropize.com/> ;
+  doap:repository <https://gitlab.com/syntropize/syntropize> ;
+  schema:description """
+     a proposal to reclaim the original vision of the personal computer as the means for
+     intelligence augmentation and seamless collaboration
+  """ .
+
+:SolidFlix
+  a schema:SoftwareApplication, soar:LeisureApp ;
+  schema:name "SolidFlix" ;
+  doap:homepage <https://oxfordhcc.github.io/solid-media/login/?redirect=%2Fsolid-media%2F> ;
+  schema:provider    :RuiZhao, :JunZhao ;
+  schema:partOf      :OxfordHumanCenteredComputingGroup, :EDWADAproject ;
+  schema:status      soar:Development ;
+  doap:repository  <https://github.com/OxfordHCC/solid-media> ;
+  schema:description      """
+    A movie tracking and sharing application with personalised recommendations.
+  """ .
+
+:MediaKraken
+  schema:name "Media Kraken" ;
+  a schema:SoftwareApplication, soar:LeisureApp ;
+  doap:homepage  <https://noeldemartin.github.io/media-kraken/> .
+
+:TrinAppSuite
+  schema:name "TrinApp Suite" ;
+  doap:homepage <https://graphmetrix.com/trinapp> ;
+  a schema:SoftwareApplication, soar:PersonalProductivityApp  .
+
+
+###
+# POD FRONT ENDS
+###
+:Solvent
+  a schema:SoftwareApplication, soar:PodTool ;
+  doap:repository <https://github.com/manomayam/solvent> ;
+  schema:provider :Manomayam ;
+  schema:keywords "pod frontend","self-hosted pod" ;
+  schema:name "Solvent" .
+
+:DataKitchen
+  schema:name "Data Kitchen" ;
+  doap:repository <https://github.com/solidos/data-kitchen> ;
+  schema:provider :JeffZucker ;
+  schema:description "The solid databrowser technology as a stand-alone electron app." ;
+  schema:keywords "pod frontend","self-hosted pod" ;
+  a schema:SoftwareApplication, soar:PodTool .
+
+:Penny
+  schema:description "Pod data inspector" ;
+  schema:provider :Vincent_Tunru ;
+  a schema:SoftwareApplication, soar:PodTool  ;
+  schema:keywords "pod frontend";
+  schema:name "Penny" .
+
+:PodOS
+  schema:provider :AngeloVeltens ;
+  schema:name "PodOS" ;
+  doap:repository <https://github.com/pod-os/PodOS> ;
+  schema:keywords "pod frontend" ;
+  a schema:SoftwareApplication, soar:PodTool  .
+
+:SolidOSWebApp
+  schema:name "SolidOS Webapp" ;
+  schema:keywords "pod frontend";
+  a schema:SoftwareApplication, soar:PodTool  .
+
+:solidpod
+  schema:name "SolidPod";
+  a schema:SoftwareApplication, soar:PodTool ;
+  schema:keywords "pod frontend";
+  doap:repository <https://pub.dev/packages/solidpod> ;
+  schema:description """
+    Support easy access to data stored on Solid Pod servers.
+  """ .
+
+###
+# POD MANGEMENT
+###
+:Solid_Shell
+  soar:featured true;
+  doap:programming_language "javascript" ;  
+  schema:description "A command-line and interactive shell for Solid." ;
+  schema:name "Solid Shell" ;
+  a schema:SoftwareApplication, soar:PodTool ;
+  doap:repository <https://github.com/jeff-zucker/solid-shell> ;
+  schema:keywords "pod management" ;
+  doap:platform "node" ;
+  schema:provider :Jeff_Zucker .
+
+:Pod_Explorer
+  schema:name "Pod Explorer" ;
+  schema:keywords "pod management";
+  a schema:SoftwareApplication, soar:PodTool  .
+
+:PodPro
+  schema:description "Development tool for working with Solid Pods" ;
+  schema:keywords "pod management";
+  schema:provider :Jasmine_Leonard ;
+  a schema:SoftwareApplication, soar:PodTool ;
+  schema:name "PodPro" .
+
+:Solid_File_Manager
+  schema:provider :Otto_AA ;
+  schema:keywords "pod management";
+  soar:featured true;
+  doap:programming_language "javascript" ;  
+  schema:name "Solid File Manager" ;
+  doap:repository <https://github.com/Otto-AA/solid-filemanager> ;
+  a schema:SoftwareApplication, soar:PodTool  .
+
+:Solid_IDE
+  schema:name "Solid IDE" ;
+  schema:keywords "pod management";
+  doap:repository <https://github.com/jeff-zucker/solid-content-manager> ;
+  schema:provider :Jeff_Zucker ;
+  a schema:SoftwareApplication, soar:PodTool .
+
+:Solid_file_client
+  schema:description "A Javascript library for creating and managing files and folders in Solid data stores." ;
+  schema:keywords "pod management" ;
+  schema:name "Solid file client" ;
+  a schema:SoftwareApplication, soar:PodTool  ;
+  schema:provider :Jeff_Zucker ;
+  doap:repository <https://github.com/jeff-zucker/solid-file-client> .
+
+:Solid_file_python
+  schema:description "Python library for creating and managing files and folders in Solid pods." ;
+  schema:keywords "pod management" ;
+  schema:name "Solid file python" ;
+  a schema:SoftwareApplication, soar:PodTool  ;
+  doap:repository <https://github.com/twonote/solid-file-python> .
+
+:webid_Profile_editor
+  schema:keywords "pod management","profile" ;
+  schema:name "WebID Profile editor" ;
+  schema:provider :Andrei_Sambra ;
+  a schema:SoftwareApplication, soar:PodTool  ;
+  doap:repository <https://github.com/linkeddata/profile-editor> .
+
+:Poddit
+  schema:description "Private bookmarking" ;
+  a schema:SoftwareApplication, soar:PodTool  ;
+  doap:repository <https://gitlab.com/vincenttunru/poddit> ;
+  schema:provider :Vincent_Tunru ;
+  schema:name "Poddit" .
+
+:URIBurner
+  schema:description "SPARQL Query Service Endpoint that supports WebID-OIDC for authenticating WebIDs en route to functionality that isn’t granted to the un-authenticated Public." ;
+  a schema:SoftwareApplication, soar:GeneralPurposeApp ;
+  schema:name "URIBurner" .
+
+
+:Smag0
+  a schema:SoftwareApplication , soar:GeneralPurposeApp ;
+  solid:webid <https://smag0.solidcommunity.net/profile/card#me> ;
+  schema:provider :David_Faveris ;
+  schema:name "Smag0" .
+
+:Markbook
+  a schema:SoftwareApplication , soar:GeneralPurposeApp ;
+  schema:name "Markbook" .
+
+:Martin
+  a schema:SoftwareApplication , soar:GeneralPurposeApp ;
+  schema:provider :Vincent_Tunru ;
+  schema:name "Martin" .
+
+:Visited_Countries
+  schema:description "Tracks the countries and places you visited, and see all the visited countries and places shared by the other users of this application." ;
+  schema:name "Visited Countries and Places" ;
+  schema:provider :Walter_Almeida ;
+  a schema:SoftwareApplication, soar:LeisureApp ; .
+
+:WebClip
+  schema:description "Chrome extension to extract structured data from any web page and store it to a Solid Pod." ;
+  doap:repository <https://github.com/codecentric/web-clip> ;
+  a schema:SoftwareApplication, soar:GeneralPurposeApp  ;
+  schema:name "WebClip" .
+
+:Umai
+  schema:description "Collect and share recipes" ;
+  a schema:SoftwareApplication, soar:LeisureApp ;
+  schema:provider :Noel_De_Martin ;
+  doap:repository <https://github.com/noeldemartin/umai> ;
+  schema:name "Umai" .
+
+:Useconcept
+  a schema:SoftwareApplication, soar:GeneralPurposeApp  ;
+  schema:name "Useconcept" .
+
+:Tadanime
+  schema:description "Decentralized anime rating Web application" ;
+  doap:repository <https://github.com/pheyvaer/tadanime> ;
+  a schema:SoftwareApplication, soar:LeisureApp ;
+  schema:name "Tadanime" .
+
+:Taisukef
+  a schema:SoftwareApplication, soar:PersonalProductivityApp ;
+  schema:provider :Taisuke_Fukuno ;
+  doap:repository <https://github.com/taisukef/solid-addfriend> ;
+  schema:name "Taisukef" .
+
+:Tiddlywiki
+  schema:description "A non-linear personal web notebook" ;
+  schema:provider :Alain_Bourgeois ;
+  a schema:SoftwareApplication , soar:PersonalProductivityApp ;
+  schema:name "Tiddlywiki" .
+
+:Spoggy
+  schema:description "Creates nodes and edges of a graph" ;
+  a schema:SoftwareApplication , soar:GeneralPurposeApp ;
+  schema:name "Spoggy" ;
+  solid:webid <https://spoggy-test3.solidcommunity.net/profile/card#me>, <https://spoggy.solidcommunity.net/profile/card#me> .
+
+:Stash-Dat
+  a schema:SoftwareApplication  , soar:GeneralPurposeApp ;
+  schema:name "Stash-Dat" .
+
+:SolidCalendar
+  schema:name "Solid Calendar";
+  schema:provider :TimStanden ;
+  a schema:SoftwareApplication  , soar:PersonalProductivityApp  .
+
+:Solid_Calendar_1
+  schema:provider :Dylan_Martin ;
+  schema:name "Solid Calendar" ;
+  doap:repository <https://bitbucket.org/dylanmartin/solidcalendar> ;
+  a schema:SoftwareApplication  , soar:PersonalProductivityApp .
+
+:Solid_Chat
+  schema:name "Solid Chat" ;
+  a schema:SoftwareApplication .
+
+:Solid_Chess
+  schema:name "Solid Chess" ;
+  a schema:SoftwareApplication  , soar:LeisureApp ;
+  doap:repository <https://github.com/pheyvaer/solid-chess> .
+
+:Solid_Groups
+  schema:name "Solid Groups" ;
+  a schema:SoftwareApplication , soar:PersonalProductivityApp  ;
+  schema:provider :Angelo_Veltens ;
+  doap:repository <https://gitlab.com/angelo-v/solid-groups> .
+
+:Solid_Health
+  schema:provider :Jason_Paulos ;
+  schema:description "A proof-of-concept mobile app for decentralized health record management." ;
+  schema:name "Solid Health" ;
+  doap:repository <https://github.com/jasonpaulos/solid-health> ;
+  a schema:SoftwareApplication, soar:PersonalProductivityApp .
+
+:Solid_LBS
+  schema:name "Solid LBS" ;
+  doap:repository <https://github.com/SharonStrats/SOLIDLBSPrototype> ;
+  schema:provider :Sharon_Stratsianis ;
+  a schema:SoftwareApplication , soar:GeneralPurposeApp  .
+
+:Solid_Migrator
+  schema:description "Moves data from one solid pod to another." ;
+  schema:name "Solid Migrator" ;
+  a schema:SoftwareApplication , soar:GeneralPurposeApp  .
+
+:Solid_Profile_Viewer
+  schema:name "Solid Profile Viewer" ;
+  a schema:SoftwareApplication, soar:PersonalProductivityApp ; 
+  doap:repository <https://gitlab.com/angelo-v/solid-profile-viewer> ;
+  schema:provider :Angelo_Veltens .
+
+:Solid_Signup
+  schema:description "Creates WebID accounts with Solid compatible providers." ;
+  schema:name "Solid Signup";
+  doap:repository <https://github.com/solid-contrib/solid-signup> ;
+  schema:provider :Andrei_Sambra ;
+  a schema:SoftwareApplication, soar:PersonalProductivityApp  .
+
+:Solid_Text_editor
+  schema:name "Solid Text editor" ;
+  a schema:SoftwareApplication, soar:PersonalProductivityApp  .
+
+:Solid_Weather
+  schema:name "Solid Weather" ;
+  a schema:SoftwareApplication, soar:PersonalProductivityApp ; 
+  doap:repository <https://bitbucket.org/dylanmartin/solidweatherapp/src/master> ;
+  schema:provider :Dylan_Martin .
+
+:Solid_wrap
+  schema:description "Simple example of authenticated reads/writes to a Solid pod" ;
+  schema:name "Solid wrap" ;
+  a schema:SoftwareLibrary, soar:AuthenticatedFetch .
+
+:Solidarity
+  schema:description "Solid-based community discussion app" ;
+  a schema:SoftwareApplication, soar:PersonalProductivityApp ; 
+  solid:webid <https://solidarity.inrupt.net/profile/card#me> ;
+  schema:name "Solidarity" .
+
+:SolidVC
+  doap:repository <https://github.com/kezike/solid-vc> ;
+  schema:provider :Kayode_Ezike ;
+  a schema:SoftwareApplication, soar:PersonalProductivityApp ; 
+  schema:name "SolidVC" .
+
+:Solside
+  a schema:SoftwareApplication, soar:PodTool ; 
+  schema:provider :Mike_Adams ;
+  schema:name "Solside" .
+
+:PROV4ITDaTa
+  a schema:SoftwareApplication, soar:GeneralPurposeApp ;  
+  doap:repository <https://github.com/RMLio/prov4itdata-web-app> ;
+  schema:provider :Gertjan_de_Mulder ;
+  schema:name "PROV4ITDaTa" .
+
+:Ramen
+  schema:description "Tests solid servers on compliance to Solid standards" ;
+  a schema:SoftwareApplication, soar:LeisureApp ;
+  schema:name "Ramen" .
+
+:Polymer
+  schema:description "A rudimentary resource browser for Solid, using Polymer 2." ;
+  a schema:SoftwareApplication, soar:GeneralPurposeApp ; 
+  doap:repository <https://gitlab.com/tag42git/polymer-solid> ;
+  schema:provider :Tom ;
+  schema:name "Polymer" .
+
+:PoPock
+  a schema:SoftwareApplication, soar:PodTool ;
+  doap:repository <https://github.com/scenaristeur/solid-vue-panes> ;
+  schema:name "PoPock" .
+
+:Portal
+  doap:repository <https://github.com/steamory/portal> ;
+  a schema:SoftwareApplication , soar:PersonalProductivityApp  ;
+  schema:name "Portal" .
+
+:Peditor
+  a schema:SoftwareApplication, soar:PersonalProductivityApp ; 
+  doap:repository <https://github.com/pondersource/solidProfileEditor> ;
+  schema:name "Peditor" .
+
+:Pixolid
+  a schema:SoftwareApplication , soar:LeisureApp ; 
+  schema:name "Pixolid" .
+
+:Planning_Poker
+  schema:description "A simple planner poker deck" ;
+  schema:name "Planning Poker" ;
+  a schema:SoftwareApplication  , soar:LeisureApp ; 
+  schema:provider :Noel_De_Martin .
+
+:Plume
+  schema:description "Blogging platform." ;
+  a schema:SoftwareApplication,  soar:PersonalProductivityApp ; 
+  doap:repository <https://github.com/happybeing/solid-plume> ;
+  schema:provider :Andrei_Sambra ;
+  schema:name "Plume" .
+
+:Pod_Chat
+  schema:name "Pod Chat" ;
+  a schema:SoftwareApplication, soar:CommunicationsApp ;
+  solid:webid <https://pod-chat.solidcommunity.net/profile/card#me> .
+
+
+:Mdr_Notes
+  schema:name "Mdr Notes" ;
+  a schema:SoftwareApplication, soar:PersonalProductivityApp  .
+
+:Media_Kraken
+  schema:description "An app to track movies and create collections" ;
+  schema:name "Media Kraken" ;
+  a schema:SoftwareApplication,  soar:LeisureApp ; 
+  schema:provider :Noel_De_Martin .
+
+:Node_sparql_client
+  schema:name "Node sparql client" ;
+  schema:provider :Thomas_Fritz ;
+  a schema:SoftwareApplication, soar:GeneralPurposeApp   .
+
+:Notepod
+  schema:description "A note-taking app for Solid" ;
+  a schema:SoftwareApplication, soar:PersonalProductivityApp ; 
+  doap:repository <https://github.com/Vinnl/notepod> ;
+  schema:provider :Vincent_Tunru ;
+  schema:name "Notepod" .
+
+:ODS_Briefcase
+  schema:name "ODS Briefcase" ;
+  a schema:SoftwareApplication, soar:PersonalProductivityApp  .
+
+:Ohmypod
+  doap:repository <https://github.com/empathyco/solid-oh-my-pod> ;
+  schema:provider :Astrid_Gamoneda_Arrunada ;
+  a schema:SoftwareApplication, soar:PodTool  ;
+  schema:name "Ohmypod" .
+
+:OKH_Solid_App
+  schema:description "Stores hardware project data and files on Solid pods" ;
+  schema:name "OKH Solid App" ;
+  a schema:SoftwareApplication, soar:GeneralPurposeApp ; 
+  schema:provider :Jackson_Morgan, :Max_Wardeh, :Sarah_Hutton .
+
+:Shighl
+  soar:featured true;
+  doap:programming_language "javascript" ;  
+  schema:description "Lets to write simply HTML/JavaScript to interact with a Solid Pod Session, Profile, Inboxand Chat" ;
+  schema:provider :David_Faveris ;
+  a schema:SoftwareLibrary, soar:SolidSDK ;
+  schema:name "Shighl" .
+
+:SleepyBikePlatform
+  schema:description "'Couchsurfing' for bicycle travellers" ;
+  schema:name "Sleepy Bike Platform" ;
+  doap:repository <https://github.com/OpenHospitalityNetwork/sleepy.bike> ;
+  a schema:SoftwareApplication .
+
+:Social_linked_beer
+  schema:name "Social linked beer" ;
+  a schema:SoftwareApplication ;
+  doap:repository <https://github.com/ozcanseker/Social-linked-beer> ;
+  schema:provider :Ozcan_Seker .
+
+:Socialid
+  schema:description "Inbox prototype" ;
+  a schema:SoftwareApplication ;
+  schema:name "Socialid" .
+
+:OpenLink_Smart_Data_Bot
+  schema:description "Smart agent that provides a single RESTful interface for interacting with a variety of Actions (operations) provided by APIs." ;
+  schema:name "OpenLink Smart Data Bot" ;
+  a schema:SoftwareApplication .
+
+:OpenLink_Structured_Data_Editor
+  schema:description "RDF editor that can save content to any Solid Pod." ;
+  schema:name "OpenLink Structured Data Editor" ;
+  a schema:SoftwareApplication .
+
+:OpenLink_Structured_Data_Sniffer
+  schema:description "Extracts Metadata in a variety of notations from HTML docs and enables storage to any Solid Pod." ;
+  schema:name "OpenLink Structured Data Sniffer" ;
+  a schema:SoftwareApplication .
+
+:OpenLink_YouID
+  schema:description "Identity and credentials document generator." ;
+  schema:name "OpenLink YouID" ;
+  a schema:SoftwareApplication .
+
+
+:0data_hello
+  schema:name "0data hello" ;
+  doap:repository <https://github.com/0dataapp/hello> ;
+  schema:provider :Rosano ;
+  a schema:SoftwareApplication .
+
+:Assemblage
+  doap:repository <https://gitlab.com/omd_public/assemblage> ;
+  schema:provider :Marc_Fornos ;
+  a schema:SoftwareApplication ;
+  schema:name "Assemblage" .
+
+:Beer_counter
+  schema:name "Beer counter" ;
+  a schema:SoftwareApplication ;
+  doap:repository <https://github.com/ozcanseker/Solid-Pod-beer-counter> ;
+  schema:provider :Ozcan_Seker .
+
+:Bingokaart
+  a schema:SoftwareApplication ;
+  schema:name "Bingokaart" .
+
+:Booklice
+  schema:description "Bookmarks app with community sharing." ;
+  a schema:SoftwareApplication ;
+  doap:repository <https://github.com/scenaristeur/booklice> ;
+  schema:name "Booklice" .
+
+:Bookmarker
+  a schema:SoftwareApplication ;
+  doap:repository <https://github.com/pondersource/solidBookmarker> ;
+  schema:name "Bookmarker" .
+
+:Collectie_registratie_systeem
+  schema:name "Collectie registratie systeem" ;
+  a schema:SoftwareApplication .
+
+:Comunica
+  schema:description "A knowledge graph querying framework for JavaScript." ;
+  schema:provider :Imec;
+  a schema:SoftwareApplication ;
+  doap:repository <https://github.com/comunica/comunica> ;
+  schema:name "Comunica" .
+
+:Conformance_Test_Harness
+  schema:description "Harness used to run Solid conformance tests and generate reports" ;
+  schema:name "Conformance Test Harness" ;
+  doap:repository <https://github.com/solid-contrib/conformance-test-harness> ;
+  schema:provider :Pete_Edwards ;
+  a schema:SoftwareApplication .
+
+:Contacts
+  schema:description "Stores Vcard Contacts on the POD" ;
+  a schema:SoftwareApplication ;
+  schema:name "Contacts" .
+
+
+:Cypress_Solid
+  schema:description "Cypress Plugin to test applications using the Solid Protocol" ;
+  schema:name "Cypress Solid" ;
+  a schema:SoftwareApplication ;
+  schema:provider :Noel_De_Martin .
+
+:Darcy
+  schema:provider :Christian_Buggedei ;
+  a schema:SoftwareApplication ;
+  schema:name "Darcy" .
+
+:Datasister
+  a schema:SoftwareApplication ;
+  schema:name "Datasister" .
+
+:DataVillage_platform
+  schema:description "Platform to perform confidential data processing on personal data, where end users can allow service providers to process their data to produce derived data, while having the guarantee that the original data will not be read by the service provider itself." ;
+  schema:name "DataVillage platform" ;
+  a schema:SoftwareApplication .
+
+:Dokieli
+  schema:description "Clientside editor for decentralised article publishing, annotations and social interactions." ;
+  schema:name "Dokieli" ;
+  a schema:SoftwareApplication ;
+  doap:repository <https://github.com/linkeddata/dokieli> ;
+  schema:provider :Sarven_Capadisli .
+
+:Drive
+  schema:description "Tool to create and share resources with contacts" ;
+  a schema:SoftwareApplication ;
+  schema:name "drive" .
+
+:Ess_table
+  schema:description "Kanban and tables on Solid" ;
+  schema:name "Ess table" ;
+  a schema:SoftwareApplication .
+
+:Focus
+  schema:description "Solid Task Manager" ;
+  a schema:SoftwareApplication ;
+  schema:provider :Noel_De_Martin ;
+  schema:name "Focus" .
+
+:Friend_Requests
+  schema:description "For given webid shows friends in common" ;
+  schema:name "Friend Requests Exploration" ;
+  a schema:SoftwareApplication .
+
+:Generator
+  a schema:SoftwareApplication ;
+  schema:name "Generator" .
+
+
+:Golf_Course_Assistant
+  schema:name "Golf Course Assistant" ;
+  a schema:SoftwareApplication ;
+  doap:repository <https://github.com/michaud/gca-solid> .
+
+:Graphmetrix_browser
+  schema:name "Graphmetrix browser" ;
+  a schema:SoftwareApplication .
+
+:Holon
+  a schema:SoftwareApplication ;
+  doap:repository <https://github.com/scenaristeur/holon> ;
+  schema:name "Holon" .
+
+:Hypey
+  schema:description "Images manipulation app in the development(?)" ;
+  a schema:SoftwareApplication ;
+  schema:name "Hypey" .
+
+:Ibex
+  a schema:SoftwareApplication ;
+  schema:name "Ibex" .
+
+:Inbox
+  doap:repository <https://github.com/solid-contrib/solid-inbox> ;
+  schema:provider :Andrei_Sambra ;
+  a schema:SoftwareApplication ;
+  schema:name "Inbox" .
+
+:Inbox_App
+  schema:name "Inbox App" ;
+  a schema:SoftwareApplication ;
+  solid:webid <https://inbox-app.inrupt.net/profile/card#me> .
+
+
+:Inox
+  a schema:SoftwareApplication ;
+  schema:name "Inox" .
+
+:IPGS
+  a schema:SoftwareApplication ;
+  schema:name "IPGS" .
+
+
+:KNoodle
+  schema:description "A solid-based alternative to Doodle." ;
+  doap:repository <https://github.com/KNowledgeOnWebScale/knoodle> ;
+  a schema:SoftwareApplication ;
+  schema:name "KNoodle" .
+
+:Linked_Pipes
+  schema:description "Linked Data visualizations sharing and collaboration via Solid." ;
+  schema:name "Linked Pipes" ;
+  a schema:SoftwareApplication ;
+  doap:repository <https://github.com/linkedpipes/applications> ;
+  schema:provider :Altynbek_Orumbayev, :Jakub_Klimek .
+
+:Liqid_Chat
+  schema:name "Liqid Chat" ;
+  schema:provider :Jackson_Morgan ;
+  a schema:SoftwareApplication .
+
+  :Inbox             a soar:PodTool ; schema:keywords "pod tool","pod management" .
+  :Inbox_App         a soar:PodTool ; schema:keywords "pod tool","pod management" .
+
+:SolidCatlog
+  schema:name "Solid Catalog" ;
+  schema:provider :Jeff_Zucker ;
+  schema:description "Catalog the resources of an organization with low-code";
+  a schema:SoftwareApplication, soar:OrganizationalApp .
+###
+# ORGANIZATIONS
+###
+
+#Company                  :AkamiTechnologies :StartinBlox :LiquidSurf :DataSwift :Inrupt :Graphmetrix :Digita :Oteam :OpenLink
+#GovernmentalOrganization :DigitalFlanders
+#ResearchOrganization     :UofSingapore :AUnationalU :INRIA :UofSouthhampton :UofLondon :OxfordHumanCenteredComputingGroup :Imec
+#BasicNeedsOrganization   :GurrinyHealthClinic :DataFoodNetwork :OpenHospitalityNetwork
+#OpenSourceProject        :SolidOSteam :CodePDX :SolidTeam :IgrantIoOrg :Redpencil :Meisdata :Manomayam :SolidGrassroots :PDSINTEROP :Pounder
+#                         :SolidProject :SolidCG :SolidPractitioners :SolidCommunityAU
+#
+#Companies
+#Universities
+#Basic Needs Projects
+#Software Projects
+
+:GovernmentOfFlanders
+  a schema:GovernmentalOrganization ;
+  schema:name "Digital Flanders".
+
+:SolidOSteam
+  a soar:OpenSourceProject ;
+  schema:description "The operating system for Solid. Members of this team maintain and develop core Solid libraries - rdflib, solid-ui, solid-panes, mashlib." ;
+  schema:name "SolidOS" ;
+  doap:repository <https://github.com/SolidOS/solidos> .
+
+:LiquidSurf
+  a schema:Corporation ;
+  schema:name "Liquid Surf" .
+
+:CodePDX
+  a soar:OpenSourceProject;
+  schema:name "CodePDX" .
+
+:INRIA
+  a schema:ResearchOrganization;
+  schema:name "INRIA" .
+
+:DataFoodNetwork
+  a schema:NGO;
+  schema:name "Data Food Network" .
+
+:UofSouthhampton
+  a schema:ResearchOrganization;
+  schema:name "University of Southampton" .
+
+:UofLondon
+  a schema:ResearchOrganization;
+  schema:name "University of London" .
+
+:DataSwift
+  a schema:Corporation ;
+  schema:name "Data Swift" .
+
+:OxfordHumanCenteredComputingGroup
+  a schema:ResearchOrganization;
+  schema:name "Oxford University, Human Centered Computing Group" .
+
+:EDWADAproject
+  a schema:ResearchOrganization;
+  schema:name "EDWADA Project" .
+
+:OpenHospitalityNetwork
+  a schema:NGO;
+  schema:name "Open Hospitality Network" ;
+  doap:repository <https://github.com/OpenHospitalityNetwork> .
+
+:SolidProject
+  a soar:OpenSourceProject;
+  schema:name "The Solid Project" .
+
+:SolidTeam
+  schema:name "The Solid Team" ;
+  a soar:OpenSourceProject.
+
+:SolidCG
+  schema:name "W3C Solid Community Group" ;
+  a soar:OpenSourceProject.
+
+:Inrupt
+  a schema:Corporation ;
+  schema:name "Inrupt, Inc.".
+
+:Graphmetrix
+  a schema:Corporation ;
+  schema:name "Graphmetrix, Inc." .
+
+:Digita
+  a schema:Corporation ;
+  doap:homepage <https://www.digita.ai/> ;
+  schema:name "Digita" .
+
+:IgrantIoOrg
+  a soar:OpenSourceProject ;
+  schema:location "Sweden" ;
+  schema:name "iGrant.IO" .
+
+:Redpencil
+  a schema:Corporation ;
+  doap:homepage <https://redpencil.io/> ;
+  schema:name "redpencil.io" .
+
+:Meisdata
+  a soar:OpenSourceProject ;
+  schema:name "Meisdata" .
+
+:Manomayam
+  a soar:OpenSourceProject ;
+  schema:name "Manomayam" ;
+  doap:homepage <https://github.com/manomayam> .
+
+:Oteam
+  a soar:OpenSourceProject ;
+  schema:name "O-Team" .
+
+:Imec
+  a schema:ResearchOrganization ;
+  schema:name "Imec" .
+
+:SolidGrassroots
+  a soar:OpenSourceProject ;
+  doap:homepage <https://gitlab.com/groups/solidweb.org/-/group_members> ;
+  schema:name "Solid Grassroots" .
+
+:OpenLink
+  a schema:Corporation ;
+  schema:name "OpenLink Software" .
+
+:SolidPractitioners
+  a soar:OpenSourceProject ;
+  schema:name "Solid Practitioners" .
+
+:PDSINTEROP
+  a schema:ResearchOrganization ;
+  schema:name "PDS Interop" ;
+  doap:homepage <https://pdsinterop.org/> .
+
+:SolidCommunityAU
+  a soar:OpenSourceProject ;
+  schema:name "Solid Community AU" ;
+  doap:homepage <https://solidcommunity.au/> .
+
+:AkamiTechnologies
+  a schema:Corporation ;
+  doap:homepage <https://www.akamai.com/>;
+  schema:name "Akamai Technologies" .
+
+:AUnationalU
+  a schema:ResearchOrganization ;
+  doap:homepage <https://sii.anu.edu.au/index.html>;
+  schema:name "Australian National University Software Innovation Institute" .
+
+:Pounder
+  a soar:OpenSourceProject ;
+  schema:name "Pounder" .
+
+:GurrinyHealthClinic 
+  a schema:NGO ;
+  schema:name "Gurriny Health Clinic" ;
+  doap:homepage <https://www.gyhsac.org.au/> .
+
+:UofSingapore
+  a schema:ResearchOrganization ;
+  schema:name "University of Singapore" .
+
+###
+# PEOPLE
+###
+:RezaSoltani
+   schema:name "Reza Soltani" ;
+   a schema:Person .
+
+:AngeloVeltens
+   schema:name "Angelo Veltens" ;
+   a schema:Person .
+
+:Eduardo_Rodriguez
+  :forumid "@eduardoinnorway" ;
+  schema:name "Eduardo Rodriguez" ;
+  a schema:Person .
+
+
+:VirginiaBalseiro
+  a schema:Person ;
+  schema:name "Virginia Balseiro" .
+
+:AadVersteden
+  a schema:Person ;
+  schema:name "Aad Versteden" .
+
+:Arne_Hassel
+  a schema:Person ;
+  schema:name "Arne Hassel" .
+
+:Alain_Bourgeois
+  a schema:Person ;
+  schema:name "Alain Bourgeois" .
+
+:Dmitri_Zagidulin
+  a schema:Person ;
+  schema:name "Dmitri Zagidulin" .
+
+:Henry_Story
+  a schema:Person ;
+  schema:name "Henry Story" .
+
+:Emelia_Smith
+  a schema:Person ;
+  schema:name "Emelia Smith" .
+
+:Alexander_James_Phillips
+  a schema:Person ;
+  schema:name "Alexander James Phillips" .
+
+:Anna_Kallenborn-Bolden
+  a schema:Person ;
+  schema:name "Anna Kallenborn-Bolden" .
+
+:Chelsea_Pinka
+  a schema:Person ;
+  schema:name "Chelsea Pinka" .
+
+:Dan_Barclay
+  a schema:Person ;
+  schema:name "Dan Barclay" .
+
+:David_Faveris
+  a schema:Person ;
+  schema:name "David Faveris" .
+
+:Daniel_Friedman
+  a schema:Person ;
+  schema:name "Daniel Friedman" .
+
+:Andrei_Sambra
+  a schema:Person ;
+  schema:name "Andrei Sambra" .
+
+:Dylan_Martin
+  a schema:Person ;
+  schema:name "Dylan Martin" .
+
+:Gertjan_de_Mulder
+  a schema:Person ;
+  schema:name "Gertjan de Mulder" .
+
+:Astrid_Gamoneda_Arrunada
+  a schema:Person ;
+  schema:name "Astrid GamonedaArrunada" .
+
+:Christian_Buggedei
+  a schema:Person ;
+  schema:name "Christian Buggedei" .
+
+:Altynbek_Orumbayev
+  a schema:Person ;
+  schema:name "Altynbek Orumbayev" .
+
+:Matthew
+  :forumid "@Kludgy4" ;
+  a schema:Person ;
+  solid:webid <https://comp495x.duckdns.org/Pod1/profile#me> ;
+  schema:name "Matthew" .
+
+:Matthew_Fowle
+  schema:name "Matthew Fowle" ;
+  a schema:Person .
+
+:Matthias_Evering
+  schema:name "Matthias Evering" ;
+  :forumid "@ewingson" ;
+  doap:repository <https://github.com/ewingson> ;
+  a schema:Person ;
+  solid:webid <https://ewingson.solidcommunity.net/profile/card#me> .
+
+:Matthias_Thorner
+  :forumid "@mthorner" ;
+  schema:name "Matthias Thorner" ;
+  a schema:Person .
+
+:Matthieu_Bosquet
+  schema:name "Matthieu Bosquet" ;
+  doap:repository <https://github.com/matthieubosquet> ;
+  a schema:Person .
+
+:Matthieu_Jacquot
+  schema:name "Matthieu Jacquot" ;
+  a schema:Person .
+
+:Max_Froumentin
+  schema:name "Max Froumentin" ;
+  a schema:Person .
+
+:Max_Van_Kleek
+  schema:name "Max Van Kleek" ;
+  a schema:Person .
+
+:Max_Wardeh
+  schema:name "Max Wardeh" ;
+  a schema:Person .
+
+:Maxime_Lecoq
+  :forumid "@lecoqlibre" ;
+  schema:name "Maxime Lecoq" ;
+  a schema:Person .
+
+:Melissa_Wood
+  schema:name "Melissa Wood" ;
+  a schema:Person .
+
+:Melvin_Carvalho
+  schema:name "Melvin Carvalho" ;
+  a schema:Person ;
+  solid:webid <https://melvin.solidcommunity.net/profile/card#me> ;
+  doap:repository <https://github.com/melvincarvalho> .
+
+:Michael_Dierick
+  schema:name "Michaël Dierick" ;
+  a schema:Person .
+
+:Michael_Dundas
+  schema:name "Michael Dundas" ;
+  a schema:Person .
+
+:Michael_Farber
+  schema:name "Michael Farber" ;
+  a schema:Person .
+
+:Michael_Herman
+  schema:name "Michael Herman" ;
+  a schema:Person .
+
+:Michael_McCallister
+  :forumid "@workingwriter" ;
+  schema:name "Michael McCallister" ;
+  a schema:Person .
+
+:Michael_Paduch
+  schema:name "Michael Paduch" ;
+  a schema:Person .
+
+:Michael_Pelikan
+  schema:name "Michael Pelikan" ;
+  a schema:Person .
+
+:Michael_Pigott
+  schema:name "Michael Pigott" ;
+  a schema:Person .
+
+:Michael_Thornburgh
+  schema:name "Michael Thornburgh" ;
+  a schema:Person .
+
+:Michael_Toomim
+  :forumid "@toomim" ;
+  schema:name "Michael Toomim" ;
+  a schema:Person .
+
+:Michal
+  :forumid "@mrkvon" ;
+  a schema:Person ;
+  schema:name "Michal" .
+
+:Michiel_de_Jong
+  schema:name "Michiel de Jong" ;
+  doap:repository <https://github.com/michielbdejong> ;
+  a schema:Person ;
+  solid:webid <https://michielbdejong.inrupt.net/profile/card#me> .
+
+:Miel_Vander_Sande
+  schema:name "Miel Vander Sande" ;
+  a schema:Person ;
+  solid:webid <https://mvs.inrupt.net/profile/card#me> .
+
+:Miguel_Ceriani
+  schema:name "Miguel Ceriani" ;
+  a schema:Person .
+
+:Mike_Adams
+  :forumid "@adventure" ;
+  schema:name "Mike Adams" ;
+  a schema:Person ;
+  solid:webid <https://newyork.solid.community/profile/card#me> .
+
+:Mike_O_Neill
+  schema:name "Mike O'Neill" ;
+  a schema:Person .
+
+:Mirek
+  a schema:Person ;
+  solid:webid <https://sopekmir.inrupt.net/profile/card#me> ;
+  schema:name "Mirek" .
+
+:Mischa_Tuffield
+  schema:name "Mischa Tuffield" ;
+  a schema:Person .
+
+:Mitzi_Laszlo
+  :forumid "@MitziLaszlo" ;
+  schema:name "Mitzi Laszlo" ;
+  a schema:Person ;
+  solid:webid <https://mitzilaszlo.solidcommunity.net/profile/card#me> ;
+  doap:repository <https://github.com/Mitzi-Laszlo> .
+
+:Mohamed_Hamed
+  schema:name "Mohamed Hamed" ;
+  a schema:Person ;
+  solid:webid <https://mohamedsaidhamed.org/profile/card#me> .
+
+:Mordax
+  :forumid "@Mordax" ;
+  a schema:Person ;
+  schema:name "Mordax" .
+
+:Nada_Akl
+  schema:name "Nada Akl" ;
+  a schema:Person .
+
+:Naman_Goel
+  schema:name "Naman Goel" ;
+  a schema:Person .
+
+:Nathan_Borson
+  :forumid "@nborson" ;
+  schema:name "Nathan Borson" ;
+  a schema:Person ;
+  solid:webid <https://nborson.solidcommunity.net/profile/card#me> .
+
+:Nick-Form
+  :forumid "@nickform" ;
+  a schema:Person ;
+  solid:webid <https://nickform.inrupt.net/profile/card#me> ;
+  schema:name "Nick-Form" .
+
+:Nicolas_Mondada
+  schema:name "Nicolas Mondada" ;
+  a schema:Person ;
+  doap:repository <https://github.com/nicolasmondada> .
+
+:Nicolas_Seydoux
+  schema:name "Nicolas Seydoux" ;
+  a schema:Person ;
+  doap:repository <https://github.com/NSeydoux> ;
+  solid:webid <https://nseydoux.inrupt.net/profile/card#me>, <https://solid.zwifi.eu/profile/card#me> .
+
+:Nigel_Shadbolt
+  schema:name "Nigel Shadbolt" ;
+  a schema:Person .
+
+:Noel_De_Martin
+  schema:name "Noel De Martin" ;
+  :forumid "@NoelDeMartin" ;
+  a schema:Person ;
+  solid:webid <https://noeldemartin.solidcommunity.net/profile/card#me> .
+
+:Omar_Teixeira_Gonzalez
+  :forumid "@Omitg24" ;
+  schema:name "Omar Teixeira Gonzalez" ;
+  a schema:Person ;
+  solid:webid <https://omitg.inrupt.net/profile/card#me> .
+
+:Onur_Yuksel
+  schema:name "Onur Yüksel" ;
+  a schema:Person .
+
+:Osmar_Olivio
+  schema:name "Osmar Olivio" ;
+  a schema:Person .
+
+:Osmar_Olivo
+  schema:name "Osmar Olivo" ;
+  a schema:Person ;
+  solid:webid <https://oz.inrupt.net/profile/card#me> .
+
+:Otto_AA
+  schema:name "Otto AA" ;
+  a schema:Person .
+
+:Owen_Sacco
+  schema:name "Owen Sacco" ;
+  a schema:Person .
+
+:Oz
+  :forumid "@oolivo" ;
+  a schema:Person ;
+  schema:name "Oz" .
+
+:Ozcan_Seker
+  schema:name "Özcan Seker" ;
+  a schema:Person .
+
+:Pablo
+  a schema:Person ;
+  solid:webid <https://jprod.inrupt.net/profile/card#me> ;
+  schema:name "Pablo" .
+
+:Pano_Maria
+  schema:name "Pano Maria" ;
+  a schema:Person .
+
+:Parle
+  a schema:Person ;
+  solid:webid <https://parle.inrupt.net/profile/card#me> ;
+  schema:name "Parle" .
+
+:Pat_McBennett
+  schema:name "Pat McBennett" ;
+  a schema:Person ;
+  solid:webid <https://pmcb55.inrupt.net/profile/card#me> ;
+  doap:repository <https://github.com/pmcb55> .
+
+:Patricia_Garcia
+  :forumid "@garciafdezpatricia" ;
+  schema:name "Patricia Garcia" ;
+  a schema:Person .
+
+:Patrick
+  a schema:Person ;
+  solid:webid <https://pmcb55.inrupt.net/profile/card#me> ;
+  schema:name "Patrick" .
+
+:Patrick_Hochstenbach
+  schema:name "Patrick Hochstenbach" ;
+  :forumid "@hochstenbach" ;
+  a schema:Person ;
+  solid:webid <https://hochstenbach.solidcommunity.net/profile/card#me> .
+
+:Paul
+  :forumid "@SolarDrift" ;
+  a schema:Person ;
+  schema:name "Paul" .
+
+:Paul_Mundt
+  schema:name "Paul Mundt" ;
+  a schema:Person .
+
+:Paul_Worrall
+  schema:name "Paul Worrall" ;
+  a schema:Person ;
+  solid:webid <https://worrallp.inrupt.net/profile/card#me> .
+
+:Paula_Veltens
+  schema:name "Paula Veltens" ;
+  a schema:Person ;
+  solid:webid <https://paula.veltens.org/profile/card#me> .
+
+:Pavlik_Elf
+  schema:name "Pavlik Elf" ;
+  a schema:Person ;
+  doap:repository <https://github.com/elf-pavlik> .
+
+:Pavlos_Pseftoyiannis
+  schema:name "Pavlos Pseftoyiannis" ;
+  a schema:Person .
+
+:Pedro_Gomez_Lopez
+  :forumid "@pegomez" ;
+  schema:name "Pedro Gomez Lopez" ;
+  a schema:Person .
+
+:Pete_Edwards
+  schema:name "Pete Edwards" ;
+  a schema:Person .
+
+:Peter_Bruhn_Andersen
+  schema:name "Peter Bruhn Andersen" ;
+  a schema:Person .
+
+:Peter_Hartman
+  schema:name "Peter Hartman" ;
+  a schema:Person ;
+  solid:webid <https://pjh.inrupt.net/profile/card> .
+
+:Peter_Hatherley
+  schema:name "Peter Hatherley" ;
+  a schema:Person ;
+  solid:webid <https://peterhatherley.inrupt.net/profile/card#me> .
+
+:Peter_Zuiddam
+  schema:name "Peter Zuiddam" ;
+  a schema:Person .
+
+:Philip_Laszkowicz
+  schema:name "Philip Laszkowicz" ;
+  a schema:Person .
+
+:Philipp_Gfeller
+  schema:name "Philipp Gfeller" ;
+  a schema:Person .
+
+:Philippe_Duchesne
+  schema:name "Philippe Duchesne" ;
+  a schema:Person .
+
+:Pierre-Antoine_Champin
+  :forumid "@p20n" ;
+  schema:name "Pierre-Antoine Champin" ;
+  a schema:Person ;
+  solid:webid <https://solid.champin.net/pa/profile/card#me> .
+
+:Pieter_Heyvaert
+  :forumid "@pheyvaer" ;
+  schema:name "Pieter Heyvaert" ;
+  a schema:Person .
+
+:Pieter_van_Everdingen
+  :forumid "@PietervanEverdingen" ;
+  schema:name "Pieter van Everdingen" ;
+  a schema:Person .
+
+:Pol_Alvarez
+  schema:name "Pol Alvarez" ;
+  a schema:Person .
+
+:Presbrey
+  a schema:Person ;
+  doap:repository <https://github.com/presbrey> ;
+  schema:name "Presbrey" .
+
+:RahulGupta
+  :forumid "@CxRes" ;
+  schema:name "Rahul Gupta" ;
+  a schema:Person ;
+  doap:repository <https://github.com/CxRes> .
+
+:Raju_George
+  :forumid "@rajugeorge" ;
+  schema:name "Raju George" ;
+  a schema:Person ;
+  solid:webid <https://id.inrupt.com/rajugeorge> .
+
+:Rami_Rustom
+  schema:name "Rami Rustom" ;
+  a schema:Person .
+
+:Raul_R_Pearson
+  schema:name "Raúl R. Pearson" ;
+  a schema:Person .
+
+:Reuben_Binns
+  schema:name "Reuben Binns" ;
+  a schema:Person .
+
+:Ricardo_Usbeck
+  schema:name "Ricardo Usbeck" ;
+  a schema:Person .
+
+:Richard
+  :forumid "@richard" ;
+  a schema:Person ;
+  schema:name "Richard" .
+
+:Richard_Marshall
+  schema:name "Richard Marshall" ;
+  a schema:Person .
+
+:Ricky_White
+  schema:name "Ricky White" ;
+  a schema:Person .
+
+:Rishabh_Gupta
+  schema:name "Rishabh Gupta" ;
+  a schema:Person .
+
+:RJ_Herrick
+  schema:name "RJ Herrick" ;
+  a schema:Person .
+
+:Rob
+  :forumid "@rob" ;
+  a schema:Person ;
+  schema:name "Rob" .
+
+:Robert_Ganger
+  :forumid "@rganger" ;
+  schema:name "Robert Ganger" ;
+  a schema:Person .
+
+:Rodrigo_Witzel
+  :forumid "@rwitzel" ;
+  schema:name "Rodrigo Witzel" ;
+  a schema:Person .
+
+:Roger_Perry
+  schema:name "Roger Perry" ;
+  a schema:Person .
+
+:Rosano
+  :forumid "@rosano" ;
+  a schema:Person ;
+  doap:repository <https://github.com/rosano> ;
+  schema:name "Rosano" .
+
+:Roy_Leon
+  schema:name "Roy Leon" ;
+  a schema:Person .
+
+:Ruben_Taelman
+  schema:name "Ruben Taelman" ;
+  :forumid "@rubensworks" ;
+  doap:repository <https://github.com/rubensworks> ;
+  a schema:Person .
+
+:Ruben_Verborgh
+  schema:name "Ruben Verborgh" ;
+  :forumid "@RubenVerborgh" ;
+  doap:repository <https://github.com/RubenVerborgh> ;
+  a schema:Person ;
+  solid:webid <https://ruben.verborgh.org/profile/#me>, <https://rubenverborgh.inrupt.net/profile/card#me> .
+
+:RuiZhao
+  :forumid "@renyuneyun" ;
+  schema:name "Rui Zhao" ;
+  a schema:Person ;
+  solid:webid <https://renyuneyun.solidcommunity.net/profile/card#me> .
+
+:Ryan_Aelen
+  :forumid "@RyanAelen" ;
+  schema:name "Ryan Aelen" ;
+  a schema:Person .
+
+:Sabrina_Kirrane
+  schema:name "Sabrina Kirrane" ;
+  a schema:Person ;
+  solid:webid <https://skirrane.inrupt.net/profile/card#me> .
+
+:Samir_Loumachi
+  :forumid "@GSL" ;
+  schema:name "Samir Loumachi" ;
+  a schema:Person .
+
+:Samy_Vincent
+  schema:name "Samy Vincent" ;
+  a schema:Person .
+
+:Sander
+  a schema:Person ;
+  solid:webid <https://gatos.inrupt.net/profile/card#me> ;
+  schema:name "Sander" .
+
+:Sandra_Wachter
+  schema:name "Sandra Wachter" ;
+  a schema:Person .
+
+:Santi_Lozano
+  schema:name "Santi Lozano" ;
+  a schema:Person .
+
+:Sarah_Hutton
+  schema:name "Sarah Hutton" ;
+  a schema:Person .
+
+:Sarven_Capadisli
+  schema:name "Sarven Capadisli" ;
+  a schema:Person ;
+  solid:webid <https://csarven.ca/#i> .
+
+:Sascha
+  :forumid "@Sascha" ;
+  a schema:Person ;
+  solid:webid <https://sascha.inrupt.net/profile/card#me> ;
+  schema:name "Sascha" .
+
+:Sebastien_Rosset
+  :forumid "@srosset81" ;
+  schema:name "Sebastien Rosset" ;
+  a schema:Person ;
+  solid:webid <https://armoise.co/sro> .
+
+
+:Sharon_Stratsianis
+  schema:name "Sharon Stratsianis" ;
+  :forumid "@SharonStrats" ;
+  doap:repository <https://github.com/SharonStrats> ;
+  a schema:Person ;
+  solid:webid <https://sharonstrats.inrupt.net/profile/card#me> .
+
+:Sheff_Engi
+  schema:name "Sheff Engi" ;
+  a schema:Person .
+
+:Siddharth_Rahul_Raut
+  :forumid "@SiddharthRaut" ;
+  schema:name "Siddharth Rahul Raut" ;
+  a schema:Person .
+
+:Simon_Chabot
+  schema:name "Simon Chabot" ;
+  a schema:Person ;
+  solid:webid <https://schabot.solidcommunity.net/profile/card#me> .
+
+:Simon_Grant
+  schema:name "Simon Grant" ;
+  a schema:Person .
+
+:Simon_Lauvet
+  schema:name "Simon Lauvet" ;
+  a schema:Person .
+
+:Simon_Shapiro
+  :forumid "@SimonShapiro" ;
+  schema:name "Simon Shapiro" ;
+  a schema:Person .
+
+:Sina_Bahram
+  schema:name "Sina Bahram" ;
+  a schema:Person .
+
+:Sjoerd_van_Groning
+  :forumid "@sjoerdvangroning" ;
+  schema:name "Sjoerd van Groning" ;
+  a schema:Person .
+
+:Soeren_Grauslund
+  schema:name "Søren Grauslund" ;
+  a schema:Person .
+
+:Sofia_Martin
+  :forumid "@sofimrtn" ;
+  schema:name "Sofía Martín" ;
+  a schema:Person .
+
+:Souen_Mazouin
+  schema:name "Souen Mazouin" ;
+  a schema:Person .
+
+
+:Soto_Estevez
+  schema:name "Soto Estevez" ;
+  a schema:Person ;
+  doap:repository <https://github.com/kriogenia> .
+
+
+:Stefan_Dercon
+  schema:name "Stefan Dercon" ;
+  a schema:Person .
+
+:Stefan_Hohn
+  schema:name "Stefan Höhn" ;
+  a schema:Person ;
+  solid:webid <https://dewomser.solidcommunity.net/profile/card#me> .
+
+:Stefan_Rother-Stubs
+  schema:name "Stefan Rother-Stübs" ;
+  a schema:Person ;
+  solid:webid <https://srs.solidcommunity.net/profile/card#me> .
+
+:Stein_Vraale
+  :forumid "@ztein" ;
+  schema:name "Stein Vråle" ;
+  a schema:Person .
+
+:Steven_Vandevelde
+  schema:name "Steven Vandevelde" ;
+  a schema:Person .
+
+:Stijn_Taelemans
+  schema:name "Stijn Taelemans" ;
+  a schema:Person ;
+  solid:webid <https://stijntaelemans.inrupt.net/profile/card#me> .
+
+:Sven_Lieber
+  schema:name "Sven Lieber" ;
+  a schema:Person ;
+  solid:webid <https://sven-lieber.org/profile#me> .
+
+:Swan_Bouvier-Muller
+  schema:name "Swan Bouvier-Muller" ;
+  a schema:Person .
+
+:Syed_Ali_Raza_Zaidi
+  schema:name "Syed Ali Raza Zaidi" ;
+  a schema:Person .
+
+:Sylvain_Le_Bon
+  schema:name "Sylvain Le Bon" ;
+  a schema:Person .
+
+:Sylvain_Saint-Andre
+  schema:name "Sylvain Saint-André" ;
+  a schema:Person .
+
+:Taekhoon_Kim
+  schema:name "Taekhoon Kim" ;
+  a schema:Person ;
+  solid:webid <https://techny.inrupt.net/profile/card#me> .
+
+:Taisuke_Fukuno
+  schema:name "Taisuke Fukuno" ;
+  a schema:Person ;
+  doap:repository <https://github.com/taisukef> .
+
+:Takeo_Nishikata
+  schema:name "Takeo Nishikata" ;
+  a schema:Person .
+
+:Tao_Chen
+  schema:name "Tao Chen" ;
+  a schema:Person .
+
+:Ted_Thibodeau
+  schema:name "Ted Thibodeau" ;
+  a schema:Person ;
+  solid:webid <https://id.myopenlink.net/dataspace/person/tthibodeau#this> ;
+  doap:repository <https://github.com/TallTed> .
+
+:Teodora_Petkova
+  schema:name "Teodora Petkova" ;
+  a schema:Person ;
+  solid:webid <https://teodora.solidcommunity.net/profile/card#me> .
+
+:Terence_Eden
+  schema:name "Terence Eden" ;
+  a schema:Person .
+
+:Theodora_Petkova
+  :forumid "@TheodoraPetkova" ;
+  schema:name "Theodora Petkova" ;
+  a schema:Person .
+
+:Thomas_Fritz
+  schema:name "Thomas Fritz" ;
+  a schema:Person ;
+  doap:repository <https://github.com/thomasfr> .
+
+:Thomas_Gallagher
+  schema:name "Thomas Gallagher" ;
+  a schema:Person .
+
+:Thomas_Shouten
+  schema:name "Thomas Shouten" ;
+  a schema:Person .
+
+:Thomas_Tanon
+  schema:name "Thomas Tanon" ;
+  a schema:Person ;
+  doap:repository <https://github.com/Tpt> .
+
+:Tic_Tac_Moe
+  schema:name "Tic Tac Moe" ;
+  a schema:Person ;
+  solid:webid <https://tic-tac-moe.inrupt.net/profile/card#me> .
+
+:Tim_Berners-Lee
+  schema:name "Tim Berners-Lee" ;
+  :forumid "@timbl" ;
+  doap:repository <https://github.com/timbl> ;
+  a schema:Person ;
+  solid:webid <https://timbl.inrupt.net/profile/card#me>, <https://timbl.solidcommunity.net/profile/card#me>, <https://www.w3.org/People/Berners-Lee/card#> .
+
+:Timea_Turdean
+  schema:description "Example of HTML page as a pod's root." ;
+  schema:name "Timea Turdean" ;
+  doap:repository <https://github.com/timea-solid> ;
+  a schema:Person ;
+  solid:webid <https://timea.solidcommunity.net/profile/card#me> .
+
+:Timo_Kankaanpaa
+  schema:name "Timo Kankaanpää" ;
+  a schema:Person ;
+  solid:webid <https://timojkankaanpaa.solidcommunity.net/profile/card#me> .
+
+:Toby
+  a schema:Person ;
+  solid:webid <https://tobytoberson.inrupt.net/profile/card#me> ;
+  schema:name "Toby" .
+
+:Tom
+  :forumid "@anon36056958" ;
+  a schema:Person ;
+  doap:repository <https://gitlab.com/tag42git> ;
+  schema:name "Tom" .
+
+:Tom_Friendly
+  schema:name "Tom Friendly" ;
+  a schema:Person ;
+  solid:webid <https://carloss.inrupt.net/profile/card#me> .
+
+:Tory_Clasen
+  schema:name "Tory Clasen" ;
+  a schema:Person .
+
+:Travis_Vachon
+  schema:name "Travis Vachon" ;
+  a schema:Person ;
+  solid:webid <https://tvachon.inrupt.net/profile/card#me> .
+
+
+:Tyler_Childs
+  :forumid "@tychi" ;
+  schema:name "Tyler Childs" ;
+  a schema:Person ;
+  solid:webid <https://tychi.inrupt.net> .
+
+:V_Sri
+  schema:name "V Sri" ;
+  a schema:Person ;
+  solid:webid <https://vsri.inrupt.net/profile/card#me> .
+
+:Victor_Gonzalo_Cristobal
+  schema:name "Víctor Gonzalo Cristóbal" ;
+  a schema:Person ;
+  solid:webid <https://victorgon.inrupt.net/profile/card#me> .
+
+:Victor_Rodriguez-Doncel
+  schema:name "Víctor_Rodríguez-Doncel" ;
+  a schema:Person .
+
+:Vincent_Tunru
+  schema:name "Vincent Tunru" ;
+  :forumid "@Vincent" ;
+  doap:repository <https://github.com/Vinnl> ;
+  a schema:Person ;
+  solid:webid <https://vincentt.inrupt.net/profile/card#me> .
+
+:Virginia_Balseiro
+  schema:name "Virginia Balseiro" ;
+  :forumid "@Virginia" ;
+  doap:repository <https://github.com/VirginiaBalseiro> ;
+  a schema:Person ;
+  solid:webid <https://virginia.inrupt.net/profile/card#me>, <https://virginiabalseiro.com/#me> .
+
+:Walter_Almeida
+  schema:name "Walter Almeida" ;
+  a schema:Person .
+
+:Wendell_Baker
+  schema:name "Wendell Baker" ;
+  a schema:Person .
+
+:Wim_Tobback
+  schema:name "Wim Tobback" ;
+  a schema:Person .
+
+:Wonsuk_Lee
+  schema:name "Wonsuk Lee" ;
+  a schema:Person .
+
+:Woods_Denny
+  schema:name "Woods Denny" ;
+  a schema:Person .
+
+:Wout_Schellaert
+  schema:name "Wout Schellaert" ;
+  a schema:Person ;
+  doap:repository <https://github.com/wschella> .
+
+:Wouter_Janssens
+  schema:name "Wouter Janssens" ;
+  a schema:Person ;
+  solid:webid <https://wouteraj.inrupt.net/profile/card#me> .
+
+:Wouter_Kok
+  schema:name "Wouter Kok" ;
+  a schema:Person .
+
+:Wouter_Termont
+  :forumid "@woutermont" ;
+  schema:name "Wouter Termont" ;
+  a schema:Person ;
+  solid:webid <https://woutermont.solidcommunity.net/profile/card#me> .
+
+:Yehua_Chen
+  schema:name "Yehua Chen" ;
+  a schema:Person .
+
+:Yujin_Park
+  schema:name "Yujin Park" ;
+  a schema:Person ;
+  solid:webid <https://shrck1015.solidcommunity.net/profile/card#me> .
+
+:Yuri_Savateev
+  schema:name "Yuri Savateev" ;
+  a schema:Person .
+
+:Yvo_Brevoort
+  schema:name "Yvo Brevoort" ;
+  a schema:Person .
+
+:Zhilin_Zhang
+  schema:name "Zhilin Zhang" ;
+  a schema:Person .
+
+:Zongyan_Li
+  schema:name "Zongyan Li" ;
+  a schema:Person .
+
+
+:Hunar_Batra
+  schema:name "Hunar Batra" ;
+  a schema:Person .
+
+:Hunter_Lester
+  schema:name "Hunter Lester" ;
+  a schema:Person ;
+  solid:webid <https://hunterlester.inrupt.net/profile/card#me> .
+
+:Ian_Wilson
+  schema:name "Ian Wilson" ;
+  a schema:Person ;
+  solid:webid <https://communitylinksense.inrupt.net/profile/card#me> ;
+  doap:repository <https://github.com/YetAnotherJonWilson> .
+
+:Ieben_Smessaert
+  schema:name "Ieben Smessaert" ;
+  a schema:Person ;
+  solid:webid <https://solid.smessie.com/profile/card#me> .
+
+:Inge_La_Riviere
+  schema:name "Inge La Riviere" ;
+  a schema:Person .
+
+:Isaac_Foster
+  :forumid "@thegreatfatzby" ;
+  schema:name "Isaac Foster" ;
+  a schema:Person .
+
+:J_Reynolds
+  schema:name "J Reynolds" ;
+  a schema:Person ;
+  doap:repository <https://github.com/JKReynolds> .
+
+:Jack_Lawson
+  schema:name "Jack Lawson" ;
+  a schema:Person ;
+  doap:repository <https://github.com/ajacksified> .
+
+:Jackson_Morgan
+  schema:name "Jackson Morgan" ;
+  :forumid "@jaxoncreed" ;
+  a schema:Person ;
+  solid:webid <https://jackson.solidcommunity.net/profile/card#me> .
+
+:Jacob_Dreesen
+  schema:name "Jacob Dreesen" ;
+  a schema:Person .
+
+:Jacopo_Scazzosi
+  schema:name "Jacopo Scazzosi" ;
+  a schema:Person ;
+  doap:repository <https://github.com/jacoscaz> .
+
+:Jake_Stein
+  schema:name "Jake Stein" ;
+  a schema:Person .
+
+:Jakub_Klimek
+  schema:name "Jakub Klimek" ;
+  a schema:Person ;
+  doap:repository <https://github.com/jakubklimek> .
+
+:James_Birmingham
+  schema:name "James Birmingham" ;
+  a schema:Person .
+
+:James_Martin
+  :forumid "@james.martin" ;
+  schema:name "James Martin" ;
+  a schema:Person ;
+  solid:webid <https://jmartin-6.inrupt.net/profile/card#me>, <https://jmartin.inrupt.net/profile/card#me> .
+
+:Jan_Schill
+  schema:name "Jan Schill" ;
+  :forumid "@janschill" ;
+  doap:repository <https://github.com/janschill> ;
+  a schema:Person .
+
+:Jarlath_Holleran
+  schema:name "Jarlath Holleran" ;
+  a schema:Person ;
+  solid:webid <https://jholleran.inrupt.net/profile/card#me> .
+
+:Jasmine_Leonard
+  schema:name "Jasmine Leonard" ;
+  a schema:Person .
+
+:Jason_Paulos
+  schema:name "Jason Paulos" ;
+  a schema:Person ;
+  doap:repository <https://github.com/jasonpaulos> .
+
+:Jasper_Vandenberghen
+  schema:name "Jasper Vandenberghen" ;
+  a schema:Person ;
+  solid:webid <https://jaspervandenberghen.inrupt.net/profile/card#me> .
+
+:Jaxon_Creed
+  schema:name "Jaxon Creed" ;
+  a schema:Person ;
+  doap:repository <https://github.com/jaxoncreed> .
+
+:Jeeth_Garageshwara
+  schema:name "Jeeth Garageshwara" ;
+  a schema:Person .
+
+:Jeff_Zucker
+  schema:name "Jeff Zucker" ;
+  :forumid "@jeffz" ;
+  doap:repository <https://github.com/jeff-zucker> ;
+  a schema:Person ;
+  solid:webid <https://jeff-zucker.solidcommunity.net/profile/card#me> .
+
+:Jegan_Davies-Jones
+  schema:name "Jegan Davies-Jones" ;
+  a schema:Person .
+
+:Jenni_Inglis
+  schema:name "Jenni Inglis" ;
+  a schema:Person ;
+  solid:webid <https://jenni.inrupt.net/profile/card#me> .
+
+:Jeroen_van_Beele
+  schema:name "Jeroen van Beele" ;
+  a schema:Person .
+
+:Jess_Martin
+  :forumid "@jessmartin" ;
+  schema:name "Jess Martin" ;
+  a schema:Person .
+
+:Jesse_Wright
+  schema:name "Jesse Wright" ;
+  a schema:Person ;
+  doap:repository <https://github.com/jeswr> .
+
+:Jessica
+  :forumid "@jessica" ;
+  schema:description "Used vue.js trying make Solid apps" ;
+  a schema:Person ;
+  schema:name "Jessica" .
+
+:Jim_Collinson
+  :forumid "@JimCollinson" ;
+  schema:name "Jim Collinson" ;
+  a schema:Person .
+
+:Jim_Hendler
+  schema:name "Jim Hendler" ;
+  a schema:Person .
+
+:Jitse_de_Smet
+  schema:name "Jitse de Smet" ;
+  a schema:Person ;
+  doap:repository <https://github.com/jitsedesmet> .
+
+:Joachim_Dornbush
+  :forumid "@jdp1ps" ;
+  schema:name "Joachim Dornbush" ;
+  a schema:Person .
+
+:Joachim_van_Herwegen
+  schema:name "Joachim van Herwegen" ;
+  a schema:Person ;
+  doap:repository <https://github.com/joachimvh> .
+
+:Joel_Bender
+  :forumid "@JoelBender" ;
+  schema:name "Joel Bender" ;
+  a schema:Person .
+
+:Joep_Meindertsma
+  schema:name "Joep Meindertsma" ;
+  a schema:Person .
+
+:Johan_Bove
+  schema:name "Johan Bove" ;
+  a schema:Person ;
+  solid:webid <https://johanbove.inrupt.net/profile/card#me> .
+
+:Johannes_Winter
+  schema:name "Johannes Winter" ;
+  a schema:Person ;
+  doap:repository <https://github.com/y0va> .
+
+:John_Bartas
+  :forumid "@Stitch626" ;
+  schema:name "John Bartas" ;
+  a schema:Person .
+
+:John_Bruce
+  schema:name "John Bruce" ;
+  a schema:Person ;
+  solid:webid <https://johnb.inrupt.net/profile/card#me> .
+
+:John_Fletcher
+  :forumid "@ubernatural" ;
+  schema:name "John Fletcher" ;
+  a schema:Person ;
+  solid:webid <https://ubernatural.inrupt.net/profile/card#me> .
+
+:John_Yu
+  schema:name "John Yu" ;
+  a schema:Person .
+
+:Jon_Pederson
+  schema:name "Jon Pederson" ;
+  a schema:Person .
+
+:Jon_Wilson
+  :forumid "@jonwilson" ;
+  schema:name "Jon Wilson" ;
+  a schema:Person .
+
+:Jonas_Smedegaard
+  schema:name "Jonas Smedegaard" ;
+  a schema:Person .
+
+:Jose_Emilio_Labra_Gayo
+  schema:name "Jose Emilio Labra Gayo" ;
+  doap:repository <https://github.com/labra> ;
+  a schema:Person .
+
+:Joseph_Guillaume
+  :forumid "@josephguillaume" ;
+  schema:name "Joseph Guillaume" ;
+  a schema:Person .
+
+:Joseph_Wade_Nobles
+  :forumid "@JosephWNobles" ;
+  schema:name "Joseph Wade Nobles" ;
+  a schema:Person .
+
+:Josh_Collins
+  schema:name "Josh Collins" ;
+  a schema:Person ;
+  solid:webid <https://joshcollins.inrupt.net/profile/card#me> ;
+  doap:repository <https://github.com/joshdcollins> .
+
+:Jules
+  a schema:Person ;
+  solid:webid <https://julian-cole.inrupt.net/profile/card#me> ;
+  schema:name "Jules" .
+
+:Juliette_Carter
+  schema:name "Juliette Carter" ;
+  a schema:Person .
+
+:JunZhao
+  schema:name "Jun Zhao" ;
+  a schema:Person .
+
+:Juraj_Zvolensky
+  :forumid "@jzvolensky" ;
+  schema:name "Juraj Zvolensky" ;
+  a schema:Person ;
+  solid:webid <https://jzvolensky.solidcommunity.net/profile/card#me> .
+
+:Justin_Bingham
+  schema:name "Justin Bingham" ;
+  :forumid "@justin" ;
+  doap:repository <https://github.com/justinwb> ;
+  a schema:Person ;
+  solid:webid <https://justin.inrupt.net/profile/card#me> .
+
+:Kai_Chen
+  schema:name "Kai Chen" ;
+  a schema:Person .
+
+:Kai_Gilb
+  schema:name "Kai Gilb" ;
+  a schema:Person .
+
+:Kangchan_Lee
+  schema:name "Kangchan Lee" ;
+  a schema:Person .
+
+:Karl_Richter
+  schema:name "Karl Richter" ;
+  a schema:Person ;
+  solid:webid <https://karlhrichter.inrupt.net/profile/card#me> .
+
+:Kartika_Tulusan
+  schema:name "Kartika Tulusan" ;
+  a schema:Person ;
+  solid:webid <https://kartikatulusan.inrupt.net/profile/card#me> .
+
+:Kay_Kim
+  :forumid "@kay-kim" ;
+  schema:name "Kay Kim" ;
+  a schema:Person ;
+  solid:webid <https://kay.inrupt.net/profile/card#me> ;
+  doap:repository <https://github.com/kay-kim> .
+
+:Kayode_Ezike
+  schema:name "Kayode Ezike" ;
+  a schema:Person ;
+  doap:repository <https://github.com/kezike> .
+
+:Kelly_O_Brien
+  schema:name "Kelly O'Brien" ;
+  a schema:Person .
+
+:Kelly_OBrien
+  schema:name "Kelly O'Brien" ;
+  a schema:Person ;
+  solid:webid <https://kellyo.inrupt.net/profile/card#me> .
+
+:Kevin_Dunglas
+  schema:name "Kevin Dunglas" ;
+  a schema:Person .
+
+:Kevin_Howard
+  schema:name "Kevin Howard" ;
+  a schema:Person ;
+  solid:webid <https://khoward.inrupt.net/profile/card#me> .
+
+:Kevin_Poulsen
+  schema:name "Kevin Poulsen" ;
+  a schema:Person .
+
+:Kevin_Weber
+  schema:name "Kevin Weber" ;
+  a schema:Person .
+
+:Khalid_Alnuaim
+  schema:name "Khalid Alnuaim" ;
+  a schema:Person .
+
+:Kingsley_Idehen
+  schema:name "Kingsley Idehen" ;
+  a schema:Person ;
+  solid:webid <https://kingsley.idehen.net/public_home/kidehen/profile.ttl#i> .
+
+:Kjetil_Kjernsmo
+  schema:name "Kjetil Kjernsmo" ;
+  a schema:Person .
+
+
+:Knut-Olav_Hoven
+  schema:name "Knut-Olav Hoven" ;
+  a schema:Person .
+
+:Kofi_Kyei
+  schema:name "Kofi Kyei" ;
+  a schema:Person .
+
+:Kyra_Assaad
+  :forumid "@KyraAssaad" ;
+  schema:name "Kyra Assaad" ;
+  a schema:Person ;
+  solid:webid <https://pod.inrupt.com/kyra/profile/card#me> ;
+  doap:repository <https://github.com/kyraassaad> .
+
+:Lalana_Kagal
+  schema:name "Lalana Kagal" ;
+  a schema:Person .
+
+:Lars_Fosdal
+  :forumid "@LarsFosdal" ;
+  schema:name "Lars Fosdal" ;
+  a schema:Person .
+
+:Lauernce_Zhang
+  schema:name "Lauernce Zhang" ;
+  a schema:Person .
+
+:Laurens_Debackere
+  schema:name "Laurens Debackere" ;
+  a schema:Person ;
+  solid:webid <https://www.thundr.be/profile/laurens.ttl#me> .
+
+:Leon_Porter
+  schema:name "Leon Porter" ;
+  a schema:Person .
+
+:Leonard_Rosenthol
+  schema:name "Leonard Rosenthol" ;
+  a schema:Person .
+
+:Liam_Broza
+  schema:name "Liam Broza" ;
+  a schema:Person ;
+  solid:webid <https://hegemon.inrupt.net/profile/card#me> .
+
+:Lin_Onetwo
+  :forumid "@linonetwo" ;
+  schema:name "Lin Onetwo" ;
+  a schema:Person .
+
+:Luc
+  a schema:Person ;
+  solid:webid <https://45h.inrupt.net/profile/card#me> ;
+  schema:name "Luc" .
+
+:Ludwig_Schubi
+  :forumid "@ludwigschubi" ;
+  schema:name "Ludwig Schubi" ;
+  a schema:Person .
+
+:Luis_Aguilar
+  schema:name "Luis Aguilar" ;
+  a schema:Person ;
+  solid:webid <https://ldaguilar88.inrupt.net/profile/card#me> .
+
+:Luk_Overmeire
+  schema:name "Luk Overmeire" ;
+  a schema:Person .
+
+:Maico_Oliveira_Buss
+  schema:name "Maico Oliveira Buss" ;
+  a schema:Person .
+
+:Manoharan_Ramachandran
+  schema:name "Manoharan Ramachandran" ;
+  a schema:Person .
+
+:Manu_Sporny
+  schema:name "Manu Sporny" ;
+  a schema:Person .
+
+:Marc_Fornos
+  schema:name "Marc Fornos" ;
+  a schema:Person ;
+  doap:repository <https://gitlab.com/frozen.pomelo> .
+
+:Marco_Neumann
+  schema:name "Marco Neumann" ;
+  a schema:Person .
+
+:Maria_Dimou
+  schema:name "Maria Dimou" ;
+  a schema:Person .
+
+:Mark
+  :forumid "@happybeing" ;
+  a schema:Person ;
+  solid:webid <https://thewebalyst.solidcommunity.net/profile/card#me> ;
+  schema:name "Mark" .
+
+:Mark_Baker
+  schema:name "Mark Baker" ;
+  a schema:Person .
+
+:Mark_Hughes
+  schema:name "Mark Hughes" ;
+  a schema:Person .
+
+:Mark_Lizar
+  schema:name "Mark Lizar" ;
+  a schema:Person .
+
+:Mark_Senefsky
+  schema:name "Mark Senefsky" ;
+  a schema:Person .
+
+:Mark_Thompson
+  schema:name "Mark Thompson" ;
+  a schema:Person .
+
+:Mark_Weiler
+  schema:name "Mark Weiler" ;
+  a schema:Person .
+
+:Markjspivey
+  a schema:Person ;
+  solid:webid <https://markjspivey.inrupt.net/profile/card#me> ;
+  schema:name "Markjspivey" .
+
+:Marrelle_Bailey
+  schema:name "Marrelle Bailey" ;
+  a schema:Person .
+
+:Martin_Tews
+  schema:name "Martin Tews" ;
+  a schema:Person .
+
+:Mats_Berg
+  schema:name "Mats Berg" ;
+  a schema:Person ;
+  solid:webid <https://mats.inrupt.net/profile/card#me> .
+
+:Matt_Wallis
+  schema:name "Matt Wallis" ;
+  a schema:Person .
+
+###
+# VOCABULARIES
+###
+
+:acl-vocab
+  a owl:Ontology ;
+  rdfs:label "Basic Access Control" ;
+  vann:preferredNamespaceURI "http://www.w3.org/ns/auth/acl#" ;
+  vann:preferredNamespacePrefix "acl:" .
+
+:as-vocab
+  a owl:Ontology ;
+  rdfs:label "Activity Streams"@en ;
+  vann:preferredNamespaceURI "https://www.w3.org/ns/activitystreams#" ;
+  vann:preferredNamespacePrefix "as:" .
+
+:cc-vocab
+  a owl:Ontology ;
+  rdfs:label "Creative Commons" ;
+  vann:preferredNamespaceURI "http://creativecommons.org/ns#" ;
+  vann:preferredNamespacePrefix "cc:" .
+
+:cert-vocab
+  a owl:Ontology ;
+  rdfs:label "Cert" ;
+  vann:preferredNamespaceURI "http://www.w3.org/ns/auth/cert#" ;
+  vann:preferredNamespacePrefix "cert:" .
+
+:dc-elements-vocab
+  a owl:Ontology ;
+  rdfs:label "Dublin Core Elements"@en ;
+  vann:preferredNamespaceURI "http://purl.org/dc/elements/1.1/" ;
+  vann:preferredNamespacePrefix "elements:" .
+
+:foaf-vocab
+  a owl:Ontology ;
+  rdfs:label "Friends of a Friend"@en ;
+  vann:preferredNamespaceURI "http://xmlns.com/foaf/0.1/" ;
+  vann:preferredNamespacePrefix "foaf:" .
+
+:geo-vocab
+  a owl:Ontology ;
+  rdfs:label "GeoNames" ;
+  vann:preferredNamespaceURI "http://www.geonames.org/ontology" ;
+  vann:preferredNamespacePrefix "geo:" .
+
+:basic-geo-vocab
+  a owl:Ontology ;
+  rdfs:label "Basic Geo" ;
+  vann:preferredNamespaceURI "http://www.w3.org/2003/01/geo/wgs84_pos#" ;
+  vann:preferredNamespacePrefix "wgs84_pos:" .
+
+:http-vocab
+  a owl:Ontology ;
+  rdfs:label "HTTP" ;
+  vann:preferredNamespaceURI "http://www.w3.org/2007/ont/http#" ;
+  vann:preferredNamespacePrefix "http:" .
+
+:httph-vocab
+  a owl:Ontology ;
+  rdfs:label "HTTPH" ;
+  vann:preferredNamespaceURI "http://www.w3.org/2007/ont/httph#" ;
+  vann:preferredNamespacePrefix "httph:" .
+
+:iana-vocab
+  a owl:Ontology ;
+  rdfs:label "Media Types" ;
+  vann:preferredNamespaceURI "https://www.w3.org/ns/iana/media-types/" ;
+  vann:preferredNamespacePrefix "iana:" .
+
+:ical-vocab
+  a owl:Ontology ;
+  rdfs:label "iCal" ;
+  vann:preferredNamespaceURI "http://www.w3.org/2002/12/cal/ical" ;
+  vann:preferredNamespacePrefix "ical:" .
+
+:ldp-vocab
+  a owl:Ontology ;
+  rdfs:label "Linked Data Platform" ;
+  vann:preferredNamespaceURI "http://www.w3.org/ns/ldp#" ;
+  vann:preferredNamespacePrefix "ldp:" .
+
+:mee-vocab
+  a owl:Ontology ;
+  rdfs:label "Meeting" ;
+  vann:preferredNamespaceURI "http://www.w3.org/ns/pim/meeting#" ;
+  vann:preferredNamespacePrefix "mee:" .
+
+:mo-vocab
+  a owl:Ontology ;
+  rdfs:label "Music" ;
+  vann:preferredNamespaceURI "http://purl.org/ontology/mo/" ;
+  vann:preferredNamespacePrefix "mo:" .
+
+:owl-vocab
+  a owl:Ontology ;
+  rdfs:label "Web Ontology Language (OWL)" ;
+  vann:preferredNamespaceURI "http://www.w3.org/2002/07/owl#" ;
+  vann:preferredNamespacePrefix "owl:" .
+
+:stat-vocab
+  a owl:Ontology ;
+  rdfs:label "Stat" ;
+  vann:preferredNamespaceURI "http://www.w3.org/ns/posix/stat#" ;
+  vann:preferredNamespacePrefix "posix:" .
+
+:rdf-vocab
+  a owl:Ontology ;
+  rdfs:label "RDF Syntax" ;
+  vann:preferredNamespaceURI "http://www.w3.org/1999/02/22-rdf-syntax-ns#" ;
+  vann:preferredNamespacePrefix "rdf:" .
+
+:rdfs-vocab
+  a owl:Ontology ;
+  rdfs:label "RDF Schema" ;
+  vann:preferredNamespaceURI "http://www.w3.org/2000/01/rdf-schema#" ;
+  vann:preferredNamespacePrefix "rdfs:" .
+
+:rLog-vocab
+  a owl:Ontology ;
+  rdfs:label "rLog" ;
+  vann:preferredNamespaceURI "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#" ;
+  vann:preferredNamespacePrefix "rlog:" .
+
+:schema-vocab
+  a owl:Ontology ;
+  rdfs:label "Schema" ;
+  vann:preferredNamespaceURI "https://schema.org/" ;
+  vann:preferredNamespacePrefix "schema:" .
+
+:sioc-vocab
+  a owl:Ontology ;
+  rdfs:label "Socially Inter-linked Online Communities " ;
+  vann:preferredNamespaceURI "http://rdfs.org/sioc/ns#" ;
+  vann:preferredNamespacePrefix "sioc:" .
+
+:siocs-vocab
+  a owl:Ontology ;
+  rdfs:label "Socially Inter-linked Online Communities - Services" ;
+  vann:preferredNamespaceURI "http://rdfs.org/sioc/services#" ;
+  vann:preferredNamespacePrefix "siocs:" .
+
+:sioct-vocab
+  a owl:Ontology ;
+  rdfs:label "Socially Inter-linked Online Communities - Types" ;
+  vann:preferredNamespaceURI "http://rdfs.org/sioc/types#" ;
+  vann:preferredNamespacePrefix "sioct:" .
+
+:skos-vocab
+  a owl:Ontology ;
+  rdfs:label "Simple Knowledge Organization System" ;
+  vann:preferredNamespaceURI "http://www.w3.org/2004/02/skos/core#" ;
+  vann:preferredNamespacePrefix "skos:" .
+
+:solid-terms-vocab
+  a owl:Ontology ;
+  rdfs:label "Solid Terms" ;
+  vann:preferredNamespaceURI "http://www.w3.org/ns/solid/terms#" ;
+  vann:preferredNamespacePrefix "solid:" .
+
+:pim-spac-vocab
+  a owl:Ontology ;
+  rdfs:label "Workspace" ;
+  vann:preferredNamespaceURI "http://www.w3.org/ns/pim/space#" ;
+  vann:preferredNamespacePrefix "space:" .
+
+:dc-terms-vocab
+  a owl:Ontology ;
+  rdfs:label "Dublin Core Terms"@en ;
+  vann:preferredNamespaceURI "http://purl.org/dc/terms/" ;
+  vann:preferredNamespacePrefix "terms:" .
+
+:time-vocab
+  a owl:Ontology ;
+  rdfs:label "Time" ;
+  vann:preferredNamespaceURI "http://www.w3.org/2006/time#" ;
+  vann:preferredNamespacePrefix "time:" .
+
+:timezone-vocab
+  a owl:Ontology ;
+  rdfs:label "Timezone" ;
+  vann:preferredNamespaceURI "http://www.w3.org/2006/timezone#" ;
+  vann:preferredNamespacePrefix "tzont:" .
+
+:ui-vocab
+  a owl:Ontology ;
+  rdfs:label "User Interface" ;
+  vann:preferredNamespaceURI "http://www.w3.org/ns/ui#" ;
+  vann:preferredNamespacePrefix "ui:" .
+
+:vcard-vocab
+  a owl:Ontology ;
+  rdfs:label "vCard"@en ;
+  vann:preferredNamespaceURI "https://www.w3.org/2006/vcard/ns#" ;
+  vann:preferredNamespacePrefix "vcard:" .
+
+:issue-vocab
+  a owl:Ontology ;
+  rdfs:label "Issue Tracking" ;
+  vann:preferredNamespaceURI "http://www.w3.org/2005/01/wf/flow#" ;
+  vann:preferredNamespacePrefix "wf:" .
+
+:xsd-vocab
+  a owl:Ontology ;
+  rdfs:label "XML Schema" ;
+  vann:preferredNamespaceURI "http://www.w3.org/2001/XMLSchema#" ;
+  vann:preferredNamespacePrefix "xsd:" .
+
+#####
+# Keywords for apps
+#####
+  :Focus             a soar:PersonalProductivityApp ; schema:keywords "personal productivity","tasks" .
+  :Booklice          a soar:PersonalProductivityApp ; schema:keywords "personal productivity","bookmarks" .
+  :Bookmarker        a soar:PersonalProductivityApp ; schema:keywords "personal productivity","bookmarks" .
+  :Poddit            a soar:PersonalProductivityApp ; schema:keywords "personal productivity","bookmarks" .
+  :Notepod           a soar:PersonalProductivityApp ; schema:keywords "personal productivity","editors" .
+  :Mdr_Notes         a soar:PersonalProductivityApp ; schema:keywords "personal productivity","editors" .
+  :Tiddlywiki        a soar:PersonalProductivityApp ; schema:keywords "personal productivity","editors" .
+  :Solid_Text_editor a soar:PersonalProductivityApp ; schema:keywords "personal productivity","editors" .
+  :Plume             a soar:PersonalProductivityApp ; schema:keywords "personal productivity","editors","blogs" .
+  :Dokieli           a soar:PersonalProductivityApp ; schema:keywords "personal productivity","editors","RDFa" .
+  :SolidCalendar     a soar:PersonalProductivityApp ; schema:keywords "personal productivity","calendars" .
+  :Solid_Calendar_1  a soar:PersonalProductivityApp ; schema:keywords "personal productivity","calendars" .
+  :Friend_Requests   a soar:PersonalProductivityApp ; schema:keywords "personal productivity","contacts" .
+  :Solid_Groups      a soar:PersonalProductivityApp ; schema:keywords "personal productivity","contacts" .
+  :Contacts          a soar:PersonalProductivityApp ; schema:keywords "personal productivity","contacts" .
+  :Pixolid           a soar:LeisureApp ; schema:keywords "leisure activities","movies" .
+  :SolidFlix         a soar:LeisureApp ; schema:keywords "leisure activities","movies" .
+  :MediaKraken       a soar:LeisureApp ; schema:keywords "leisure activities","movies" .
+  :Tadanime          a soar:LeisureApp ; schema:keywords "leisure activities","movies" .
+  :Solid_Weather     a soar:LeisureApp ; schema:keywords "leisure activities","weather" .
+  :Ramen             a soar:LeisureApp ; schema:keywords "leisure activities","food and drink" .
+  :Umai              a soar:LeisureApp ; schema:keywords "leisure activities","food and drink" .
+  :Beer_counter      a soar:LeisureApp ; schema:keywords "leisure activities","food and drink" .
+  :Social_linked_beer a soar:LeisureApp ; schema:keywords "leisure activities","food and drink" .
+  :Visited_Countries a soar:LeisureApp ; schema:keywords "leisure activities","travel" .
+  :Solid_Chess       a soar:LeisureApp ; schema:keywords "leisure activities","games" .
+  :Planning_Poker    a soar:LeisureApp ; schema:keywords "leisure activities","games" .
+  :Bingokaart        a soar:LeisureApp ; schema:keywords "leisure activities","games" .
+  :Golf_Course_Assistant a soar:LeisureApp ; schema:keywords "leisure activities","games" .
+  :Solid_Chat        a soar:CommunicationApp ; schema:keywords "communication" .
+  :Solidarity        a soar:CommunicationApp ; schema:keywords "communication" .
+  :Pod_Chat          a soar:CommunicationApp ; schema:keywords "communication" .
+  :Darcy             a soar:CommunicationApp ; schema:keywords "communication" .
+  :Liqid_Chat        a soar:CommunicationApp ; schema:keywords "communication" .
+  :Polymer             a soar:PodTool ; schema:keywords "pod tool","pod frontend" .
+  :Graphmetrix_browser a soar:PodTool ; schema:keywords "pod tool","pod frontend" .
+  :Solid_Migrator      a soar:PodTool ; schema:keywords "pod tool","pod management" .
+  :Solid_Profile_Viewer a soar:PodTool ; schema:keywords "pod tool","pod management" .
+  :Solid_Signup        a soar:PodTool ; schema:keywords "pod tool","pod management" .
+  :Solid_wrap        a soar:PodTool ; schema:keywords "pod tool","pod management" .
+  :Solside           a soar:PodTool ; schema:keywords "pod tool","pod management" .
+  :Peditor           a soar:PodTool ; schema:keywords "pod tool","pod management" .
+  :Ohmypod           a soar:PodTool ; schema:keywords "pod tool","pod management" .
+  :Socialid          a soar:PodTool ; schema:keywords "pod tool","pod management" .
+  :Inbox             a soar:PodTool ; schema:keywords "pod tool","pod management" .
+  :Inbox_App         a soar:PodTool ; schema:keywords "pod tool","pod management" .
+  :TrinAppSuite      a soar:GeneralPurposeApp ; schema:keywords "general purpose app" .
+  :Syntropize        a soar:GeneralPurposeApp ; schema:keywords "general purpose app" .
+  :WebClip           a soar:GeneralPurposeApp ; schema:keywords "general purpose app" .
+  :Solid_Health      a soar:GeneralPurposeApp ; schema:keywords "general purpose app" .
+  :OKH_Solid_App     a soar:GeneralPurposeApp ; schema:keywords "general purpose app" .
+  :Hypey             a soar:GeneralPurposeApp ; schema:keywords "general purpose app","visualization" .
+  :Ess_table         a soar:GeneralPurposeApp ; schema:keywords "general purpose app","visualization" .
+  :KNoodle           a soar:GeneralPurposeApp ; schema:keywords "general purpose app","visualization" .
+  :Smag0             a soar:GeneralPurposeApp ; schema:keywords "general purpose app" .
+  :Markbook          a soar:GeneralPurposeApp ;    schema:keywords "general purpose app" .
+  :Martin            a soar:GeneralPurposeApp ;  schema:keywords "general purpose app" .
+  :Useconcept        a soar:GeneralPurposeApp ;      schema:keywords "general purpose app" .
+  :Taisukef          a soar:GeneralPurposeApp ;    schema:keywords "general purpose app" .
+  :Stash-Dat         a soar:GeneralPurposeApp ;     schema:keywords "general purpose app" .
+  :Solid_LBS         a soar:GeneralPurposeApp ;     schema:keywords "general purpose app" .
+  :SolidVC           a soar:GeneralPurposeApp ;   schema:keywords "general purpose app" .
+  :PROV4ITDaTa       a soar:GeneralPurposeApp ;       schema:keywords "general purpose app" .
+  :PoPock            a soar:GeneralPurposeApp ;  schema:keywords "general purpose app" .
+  :Spoggy            a soar:GeneralPurposeApp ;  schema:keywords "general purpose app" .
+  :Portal            a soar:GeneralPurposeApp ;  schema:keywords "general purpose app" .
+  :ODS_Briefcase             a soar:GeneralPurposeApp ; schema:keywords "general purpose app" .
+  :Assemblage             a soar:GeneralPurposeApp ; schema:keywords "general purpose app" .
+  :Collectie_registratie_systeem             a soar:GeneralPurposeApp ; schema:keywords "general purpose app" .
+  :Datasister             a soar:GeneralPurposeApp ; schema:keywords "general purpose app" .
+  :DataVillage_platform             a soar:GeneralPurposeApp ; schema:keywords "general purpose app" .
+  :Drive             a soar:GeneralPurposeApp ; schema:keywords "general purpose app" .
+  :Inox             a soar:GeneralPurposeApp ; schema:keywords "general purpose app" .
+  :IPGS             a soar:GeneralPurposeApp ; schema:keywords "general purpose app" .
+  :Holon            a soar:GeneralPurposeApp ;  schema:keywords "general purpose app" .
+  :Ibex             a soar:GeneralPurposeApp ; schema:keywords "general purpose app" .
+
+###
+# SPECS
+###
+
+
+:Solid_Protocol
+  a doap:Specification ;
+  schema:name "Solid Protocol" ;
+  doap:homepage <https://solidproject.org/TR/protocol> ;
+  doap:repository <https://github.com/solid/specification> .
+    
+:Solid_WebID_Profile
+  a doap:Specification ;
+  schema:name "Solid WebID Profile" ;
+  doap:homepage <https://solid.github.io/webid-profile/> ;
+  doap:repository <https://github.com/solid/webid-profile> .
+    
+:Solid-OIDC
+  a doap:Specification ;
+  schema:name "Solid-OIDC" ;
+  doap:homepage <https://solidproject.org/TR/oidc> ;
+  doap:repository <https://github.com/solid/solid-oidc> .
+    
+:HTTPSig_Authentication_for_Solid
+  a doap:Specification ;
+  schema:name "HTTPSig Authentication for Solid" ;
+  doap:homepage <https://solid.github.io/httpsig/> ;
+  doap:repository <https://github.com/solid/httpsig> .
+    
+:Web_Access_Control
+  a doap:Specification ;
+  schema:name "Web Access Control" ;
+  doap:homepage <https://solidproject.org/TR/wac> ;
+  doap:repository <https://github.com/solid/web-access-control-spec/> .
+    
+:Access_Control_Policy
+  a doap:Specification ;
+  schema:name "Access Control Policy" ;
+  doap:homepage <https://solidproject.org/TR/acp> ;
+  doap:repository <https://github.com/solid/authorization-panel> .
+    
+:Solid_Application_Interoperability
+  a doap:Specification ;
+  schema:name "Solid Application Interoperability" ;
+  doap:homepage <https://solid.github.io/data-interoperability-panel/specification/> ;
+  doap:repository <https://github.com/solid/data-interoperability-panel> .
+    
+:Shape_Trees
+  a doap:Specification ;
+  schema:name "Shape Trees" ;
+  doap:homepage <https://shapetrees.org/TR/specification/> ;
+  doap:repository <https://github.com/shapetrees/specification> .
+    
+:Solid_DID_Method
+  a doap:Specification ;
+  schema:name "Solid DID Method" ;
+  doap:homepage <https://solid.github.io/did-method-solid/> ;
+  doap:repository <https://github.com/solid/did-method-solid> .
+    
+:Solid_Notifications_Protocol
+  a doap:Specification ;
+  schema:name "Solid Notifications Protocol" ;
+  doap:homepage <https://solidproject.org/TR/notifications-protocol> ;
+  doap:repository <https://github.com/solid/notifications> .
+    
+:EventSourceChannel2023
+  a doap:Specification ;
+  schema:name "EventSourceChannel2023" ;
+  doap:homepage <https://solid.github.io/notifications/eventsource-channel-2023> ;
+  doap:repository <https://github.com/solid/notifications> .
+    
+:LDNChannel2023
+  a doap:Specification ;
+  schema:name "LDNChannel2023" ;
+  doap:homepage <https://solid.github.io/notifications/ldn-channel-2023> ;
+  doap:repository <https://github.com/solid/notifications> .
+    
+:StreamingHTTPChannel2023
+  a doap:Specification ;
+  schema:name "StreamingHTTPChannel2023" ;
+  doap:homepage <https://solid.github.io/notifications/streaming-http-channel-2023> ;
+  doap:repository <https://github.com/solid/notifications> .
+    
+:WebSocketChannel2023
+  a doap:Specification ;
+  schema:name "WebSocketChannel2023" ;
+  doap:homepage <https://solid.github.io/notifications/websocket-channel-2023> ;
+  doap:repository <https://github.com/solid/notifications> .
+    
+:WebhookChannel2023
+  a doap:Specification ;
+  schema:name "WebhookChannel2023" ;
+  doap:homepage <https://solid.github.io/notifications/webhook-channel-2023> ;
+  doap:repository <https://github.com/solid/notifications> .
+    
+:Solid-PREP
+  a doap:Specification ;
+  schema:name "Solid-PREP" ;
+  doap:homepage <https://solid.github.io/solid-prep/protocol/> ;
+  doap:repository <https://github.com/solid/solid-prep> .
+    
+:Solid_Chat
+  a doap:Specification ;
+  schema:name "Solid Chat" ;
+  doap:homepage <https://solid.github.io/chat/> ;
+  doap:repository <https://github.com/solid/chat> .
+
+:Solid_QA
+  a schema:LearningResource, soar:SpecificationsSupplement     ;
+  schema:name "Solid QA" ;
+  schema:keywords "solid","quality assurance","specifications" ;
+  doap:homepage <https://solidproject.org/ED/qa> ;
+  doap:repository <https://github.com/solid/specification> .
+    
+:Solid_Security_Considerations
+  schema:name "Solid Security Considerations" ;
+  a schema:LearningResource, soar:SpecificationsSupplement ;
+  schema:keywords "solid","security","specifications" ;
+  doap:homepage <https://solid.github.io/security-considerations/> ;
+  doap:repository <https://github.com/solid/security-considerations> .
+    
+:Solid_OIDC_Primer
+  schema:name "Solid OIDC Primer" ;
+  schema:about :Solid-OIDC ;
+  a schema:LearningResource, soar:SpecificationsSupplement     ;
+  schema:keywords "solid-OIDC","authentication","specifications" ;
+  doap:homepage <https://solidproject.org/TR/oidc-primer> ;
+  doap:repository <https://github.com/solid/solid-oidc> .
+    
+:Authorization_Use_Cases_and_Requirements
+  a schema:LearningResource, soar:SpecificationsSupplement ;
+  schema:keywords "authorization","use case","requirement","specifications" ;
+  schema:name "Authorization Use Cases and Requirements" ;
+  doap:homepage <https://solid.github.io/authorization-panel/authorization-ucr/> ;
+  doap:repository <https://github.com/solid/authorization-panel> .
+    
+:Authorization_Use_Cases_Survey
+  a schema:LearningResource, soar:SpecificationsSupplement ;
+  schema:keywords "authorization","use case","requirement","specifications" ;
+  schema:name "Authorization Use Cases Survey" ;
+  doap:homepage <https://github.com/solid/authorization-panel/blob/master/proposals/authorization-ucr/uc-survey.md> ;
+  doap:repository <https://github.com/solid/authorization-panel> .
+    
+:Solid_Application_Interoperability__Application_Primer
+  schema:name "Solid Application Interoperability: Application Primer" ;
+  a schema:LearningResource, soar:SpecificationsSupplement ; 
+  schema:keywords "interoperability","applications","specifications" ;
+  doap:homepage <https://solid.github.io/data-interoperability-panel/primer/application.html> ;
+  doap:repository <https://github.com/solid/data-interoperability-panel> .
+    
+:Solid_Application_Interoperability__Authorization_Agent_Primer
+  a schema:LearningResource , soar:SpecificationsSupplement ;
+  schema:keywords "interoperability","authorization agent","specifications" ;
+  schema:name "Solid Application Interoperability: Authorization Agent Primer" ;
+  doap:homepage <https://solid.github.io/data-interoperability-panel/primer/authorization-agent.html> ;
+  doap:repository <https://github.com/solid/data-interoperability-panel> .
+
+####
+# FUNDING PROGRAMS
+#   originally from solidproject.org website
+#   PR'd here by Timea Turdean https://github.com/solid-contrib/practitioners/pull/3
+#   preliminary RDF by Jeff Zucker 2023-11-20
+####
+
+@prefix : <#> .
+@prefix roh: <http://w3id.org/roh/0.3/#> .
+@prefix schema: <http://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+:CCIG 
+  a roh:FundingProgram ; 
+  rdfs:label "Consensus Community Innovation Grants"@en ;
+  doap:homepage <http://agree.org/> .
+
+:DDG 
+  a roh:FundingProgram ; 
+  rdfs:label "DuckDuckGo Donations"@en ;
+  doap:homepage <https://duckduckgo.com/donations> .
+
+:GithubSponsors
+  a roh:FundingProgram ; 
+  rdfs:label "GitHub Sponsors"@en ;
+  doap:homepage  <https://github.com/sponsors> .
+
+:GrantForTheWeb
+  a roh:FundingProgram ; 
+  rdfs:label "Grant for the web"@en ;
+  doap:homepage <https://forum.grantfortheweb.org/t/call-for-proposals-early-2020/959> .
+
+:BAAS
+  a roh:FundingProgram ; 
+  rdfs:label "Je Data de Baas by SIDN"@en ;
+  doap:homepage <https://www.sidnfonds.nl/nieuws/follow-up-call-je-data-de-baas> .
+
+:Ledger
+  a roh:FundingProgram ; 
+  rdfs:label "Ledger Project"@en ;
+  doap:homepage <https://ledgerproject.eu> .
+
+:MozillaOpenScience
+  a roh:FundingProgram ; 
+  rdfs:label "Mozilla Open Science Mini Grants"@en ;
+  doap:homepage <https://docs.google.com/document/d/1EJXg9G01CG7dBRbmbZzFnB9Bex2ibAVza_4xE8iqQqI/edit> .
+
+:MozillaOpenSource
+  a roh:FundingProgram ; 
+  rdfs:label "Mozilla Open Source Support"@en ;
+  doap:homepage  <https://www.mozilla.org/en-US/moss/> .
+
+:NLnet
+  a schema:Organization ; 
+  rdfs:label "NLnet Foundation"@en ;
+  doap:homepage <https://nlnet.nl> ;
+  rdfs:description "Since 1997 NLnet foundation has been financially supporting organizations and people that contribute to an open information society. It funds those with ideas to fix the internet." .
+
+:NGI
+  a roh:FundingProgram ; 
+  rdfs:label "Next Generation Internet"@en ;
+  doap:homepage <https://www.ngi.eu> ;
+  rdfs:description "The Next Generation Internet (NGI) is a European Commission initiative that aims to shape the development and evolution of the Internet into an Internet of Trust. An Internet that responds to people’s fundamental needs, including trust, security, and inclusion, while reflecting the values and the norms all citizens enjoy in Europe." .
+
+:NGICore
+  a roh:FundingProgram ; 
+  rdfs:label "NGI Zero Core"@en ;
+  doap:homepage <https://nlnet.nl/core/> ;
+  rdfs:description "Moving the internet forward." .
+
+:NGIEntrust
+  a roh:FundingProgram ; 
+  rdfs:label "NGI Zero Entrust"@en ;
+  doap:homepage <https://nlnet.nl/entrust/> ;
+  rdfs:description "Trustworthiness and data sovereignty." .
+
+:NGISargasso
+  a roh:FundingProgram ; 
+  rdfs:label "NGI Sargasso"@en ;
+  doap:homepage <https://ngisargasso.eu> ;
+  rdfs:description "Promoting the transatlantic cooperation for NGI technologies." .
+
+:SIDN
+  a roh:FundingProgram ; 
+  rdfs:label "SIDN Fonds"@en ;
+  doap:homepage <https://www.sidnfonds.nl/excerpt/> .
+
+:Slack
+  a roh:FundingProgram ; 
+  rdfs:label "Slack Fund"@en ;
+  doap:homepage <https://slack.com/developers/fund> .
+
+:KnightFoundation
+  a roh:FundingProgram ; 
+  rdfs:label "The Knight Foundation"@en ;
+  doap:homepage <https://knightfoundation.org> .
+
+:KnightFoundationTechnologyInnovation
+  a roh:FundingProgram ; 
+  rdfs:label "The Knight Foundation for Technology Innovation"@en ;
+  doap:homepage <https://knightfoundation.org/programs/technology> .

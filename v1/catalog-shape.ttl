@@ -1,0 +1,186 @@
+@prefix : <#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/homepage> .
+@prefix meet: <https://www.w3.org/ns/pim/meeting#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix roh: <http://w3id.org/roh/0.3/#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix siocs: <http://rdfs.org/sioc/services#> .
+@prefix sioct: <http://rdfs.org/sioc/types#> .
+@prefix soar: <http://example.com/soar#> .
+@prefix solid: <http://www.w3.org/ns/solid/terms#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vcard: <https://www.w3.org/2006/vcard/ns-2006.html#> .
+
+:SolidProjectResourceShape
+    a sh:NodeShape ;
+    rdfs:label "Solid Project Resource Shape" ;
+
+    # expected types
+    #
+    sh:or (
+        [ sh:targetClass soar:PodService ]
+        [ sh:targetClass schema:LearningResource ]
+        [ sh:targetClass sioc:Forum ]
+        [ sh:targetClass schema:Event ] 
+        [ sh:targetClass soar:SpecializedPodService ]
+        [ sh:targetClass soar:PodServer ] 
+        [ sh:targetClass schema:SoftwareApplication ]
+        [ sh:targetClass soar:SoftwareLibrary ]
+        [ sh:targetClass doap:Specification ]
+        [ sh:targetClass owl:Ontology ] 
+        [ sh:targetClass schema:Person ]
+        [ sh:targetClass schema:Organization ] 
+        [ sh:targetClass schema:Offer ] 
+    ) ;
+  
+    # expected properties
+    #
+    sh:property [
+        sh:path <http://schema.org/name> ;
+        rdfs:label "name" ;
+    ] ;
+    sh:property [
+        sh:path <http://schema.org/about> ;
+        rdfs:label "about" ;
+    ] ;
+    sh:property [
+        sh:path <http://schema.org/alternateName> ;
+        rdfs:label "alternateName" ;
+    ] ;
+    sh:property [
+        sh:path <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> ;
+        rdfs:label "type" ;
+    ] ;
+    sh:property [
+        sh:path <http://schema.org/description> ;
+        rdfs:label "description" ;
+    ] ;
+    sh:property [
+        sh:path <http://schema.org/keywords> ;
+        rdfs:label "keywords" ;
+    ] ;
+    sh:property [
+        sh:path <http://usefulinc.com/ns/doap#homepage> ;
+        rdfs:label "homepage" ;
+    ] ;
+    sh:property [
+        sh:path <http://usefulinc.com/ns/doap#repository> ;
+        rdfs:label "repository" ;
+    ] ;
+    sh:property [
+        sh:path <http://usefulinc.com/ns/doap#wiki> ;
+        rdfs:label "wiki" ;
+    ] ;
+    sh:property [
+        sh:path <http://www.w3.org/ns/solid/terms#webid> ;
+        rdfs:label "webid" ;
+    ] ;
+    sh:property [
+        sh:path <http://schema.org/provider> ;
+        rdfs:label "provider" ;
+    ] ;
+    sh:property [
+        sh:path <http://schema.org/logo> ;
+        rdfs:label "logo" ;
+    ] ;
+    sh:property [
+        sh:path <http://schema.org/license> ;
+        rdfs:label "license" ;
+    ] ;
+    sh:property [
+        sh:path <http://schema.org/audience> ;
+        rdfs:label "audience" ;
+    ] ;
+    sh:property [
+        sh:path <http://usefulinc.com/ns/doap#implements> ;
+        rdfs:label "implements" ;
+    ] ;
+    sh:property [
+        sh:path <http://usefulinc.com/ns/doap#programming_language> ;
+        rdfs:label "programming_language" ;
+    ] ;
+    sh:property [
+        sh:path <http://usefulinc.com/ns/doap#platform> ;
+        rdfs:label "platform" ;
+    ] ;
+    sh:property [
+        sh:path <http://schema.org/screenshot> ;
+        rdfs:label "screenshot" ;
+    ] ;
+    sh:property [
+        sh:path <http://schema.org/actionApplication> ;
+        rdfs:label "actionApplication" ;
+    ] ;
+    sh:property [
+        sh:path <http://usefulinc.com/ns/doap#service-endpoint> ;
+        rdfs:label "service_endpoint" ;
+    ] ;
+    sh:property [
+        sh:path <http://purl.org/vocab/vann/preferredNamespacePrefix> ;
+        rdfs:label "preferredNamespacePrefix" ;
+    ] ;
+    sh:property [
+        sh:path <http://purl.org/vocab/vann/preferredNamespaceURI> ;
+        rdfs:label "preferredNamespaceURI" ;
+    ] ;
+    sh:property [
+        sh:path <https://www.w3.org/ns/pim/meeting#videoCallPage> ;
+        rdfs:label "videoCallPage" ;
+    ] ;
+    sh:property [
+        sh:path <http://example.com/soar#forumid> ;
+        rdfs:label "forumid" ;
+    ] .
+
+## Labels & subclasses for expected types
+#
+soar:PodService            rdfs:label "Pod Hosting Services" .
+schema:LearningResource    rdfs:label "Learning Resources" .
+  soar:ExplainerResource      rdfs:subClassOf schema:LearningResource; rdfs:label "About Solid" .
+  soar:AppTutorial            rdfs:subClassOf schema:LearningResource; rdfs:label "About Apps & Libraries" .
+  soar:SpecificationsSupplement rdfs:subClassOf schema:LearningResource; rdfs:label "About Specifications" .
+sioc:Forum                 rdfs:label "Communication Channels" .
+  sioct:ChatChannel               rdfs:subClassOf sioc:Forum .
+  sioct:MailingList               rdfs:subClassOf sioc:Forum .
+  sioct:MessageBoard              rdfs:subClassOf sioc:Forum .
+schema:Event               rdfs:label "Events" .
+  meet:Meeting                    rdfs:subClassOf schema:Event; rdfs:label "Ongoing Events" .
+  soar:UpcomingEvent              rdfs:subClassOf schema:Event; rdfs:label "Upcoming Events" .
+  soar:PastEvent                  rdfs:subClassOf schema:Event; rdfs:label "Past Events" .
+soar:SpecializedPodService rdfs:label "Services for specific communities" .
+soar:PodServer             rdfs:label "Solid Server Software" .
+schema:SoftwareApplication rdfs:label "Applications" .
+  soar:PersonalProductivityApp  rdfs:subClassOf schema:SoftwareApplication; rdfs:label "Personal Productivity" .
+  soar:OrganizationalApp rdfs:subClassOf schema:SoftwareApplication; rdfs:label "Organizational Productivity" .
+  soar:LeisureApp  rdfs:subClassOf schema:SoftwareApplication; rdfs:label "Leisure Activities" .
+  soar:CommunicationApp  rdfs:subClassOf schema:SoftwareApplication; rdfs:label "Communications" .
+  soar:PodTool  rdfs:subClassOf schema:SoftwareApplication; rdfs:label "Pod Tools" .
+  soar:GeneralPurposeApp  rdfs:subClassOf schema:SoftwareApplication; rdfs:label "General Purpose" .
+soar:SoftwareLibrary       rdfs:label "Developer Tools" .
+  soar:SolidFetchClient           rdfs:subClassOf soar:SoftwareLibrary; rdfs:label "Authenticated Fetch" .
+  soar:SolidLinkedDataLibrary     rdfs:subClassOf soar:SoftwareLibrary; rdfs:label "Linked Data" .
+  soar:SolidSDK                   rdfs:subClassOf soar:SoftwareLibrary; rdfs:label "SDKs & Components" .
+  soar:SolidLowLevelLibrary       rdfs:subClassOf soar:SoftwareLibrary; rdfs:label "Low Level Libraries" .
+doap:Specification         rdfs:label "Specifications" .
+owl:Ontology               rdfs:label "Vocabularies" .
+schema:Organization        rdfs:label "Organizations" . 
+  schema:Corporation              rdfs:subClassOf schema:Organization; rdfs:label "Companies" . 
+  schema:GovernmentalOrganization rdfs:subClassOf schema:Organization; rdfs:label "Governments" .
+  schema:NGO                      rdfs:subClassOf schema:Organization; rdfs:label "Nonprofits" .
+  schema:ResearchOrganization     rdfs:subClassOf schema:Organization; rdfs:label "Universities" .
+  soar:OpenSourceProject          rdfs:subClassOf schema:Organization; rdfs:label "Open Source Projects" .
+schema:Person              rdfs:label "People" .
+schema:Offer               rdfs:label "Resources Offered/Wanted" .
+  roh:FundingProgram              rdfs:subClassOf schema:Offer; rdfs:label "Funding Sources" .
+  schema:JobPosting               rdfs:subClassOf schema:Offer; rdfs:label "Jobs Offered" .
+  soar:JobSoughtPosting           rdfs:subClassOf schema:Offer; rdfs:label "Jobs Wanted" .
+
+
+###
+# END
+###

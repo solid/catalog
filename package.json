@@ -1,0 +1,17 @@
+{
+  "name": "Solid Resources Catalog",
+  "version": "2.0.0",
+  "type": "module",
+  "description": "-- a listing of things useful to the Solid Community",
+  "main": "catalog.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jeff Zucker",
+  "license": "MIT",
+  "dependencies": {
+    "@solid-rest/file": "^2.1.20",
+    "rdflib": "^2.2.37"
+  }
+}
