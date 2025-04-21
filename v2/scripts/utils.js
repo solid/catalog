@@ -241,6 +241,9 @@ export async function shacl2form(shaclURL,skosURL,dataURL,shape,id) {
 
   properties.forEach( property => {
     const path = store.any(property.object, $rdf.sym('http://www.w3.org/ns/shacl#path'));
+    const minCount = store.any(property.object, $rdf.sym('http://www.w3.org/ns/shacl#minCount'))||{value:0};
+    const maxCount = store.any(property.object, $rdf.sym('http://www.w3.org/ns/shacl#maxCount'))||{value:0};
+    const isRequired = minCount.value==1 && maxCount.value==1;
     const length = store.any(property.object, $rdf.sym('http://www.w3.org/ns/shacl#maxLength'));
     let datatype = store.any(property.object, $rdf.sym('http://www.w3.org/ns/shacl#datatype'));
     let desc = store.any(property.object, $rdf.sym('http://www.w3.org/ns/shacl#description'));
@@ -283,6 +286,7 @@ export async function shacl2form(shaclURL,skosURL,dataURL,shape,id) {
         input.name = label.innerHTML = fieldName;
         label.classList.add('fieldLabel');
         input.classList.add('fieldValue');
+        if(isRequired) label.innerHTML += `<b style="color:red">*</b>`;
         field.appendChild(label);
         field.appendChild(input);
         field.appendChild(descField);
@@ -302,6 +306,7 @@ export async function shacl2form(shaclURL,skosURL,dataURL,shape,id) {
       return concepts;
     }
     function createMenubar(shape,recordURL,dataURL){
+      const form = document.getElementsByTagName('form')[0];
       const menubar = document.getElementById('menubar'); 
       const shapeLabel = node2label(shape);
       let recordLabel = findName(store,recordURL,dataURL);
@@ -322,10 +327,18 @@ export async function shacl2form(shaclURL,skosURL,dataURL,shape,id) {
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 `;
-        const form = document.querySelector('form');
+      let nameInput = form.querySelector('[name=name]');
+      let description = form.querySelector('[name=description]');
+      if(!nameInput.value) {
+        alert("ERROR: You must enter a name!");
+        return;
+      }
+      if(!description.value) {
+        alert("ERROR: You must enter a description!");
+        return;
+      }
         let subject = form.getAttribute('id');
         if(!subject){
-          let nameInput = form.querySelector('[name=name]');
           subject = dataURL + "#" + nameInput.value.replace(/\s+/g,'_');
         }
         let subjectLabel;
@@ -428,21 +441,18 @@ export async function shacl2form(shaclURL,skosURL,dataURL,shape,id) {
 
 /*
 
-
 @prefix cdata: <http://localhost:8444/home/s/catalog/v2/catalog-data.ttl#> .
 @prefix ex: <http://example.org/#> .
 @prefix con: <http://localhost:8444/home/s/catalog/v2/catalog-skos.ttl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
-cdata:InruptPodSpaces a ex:#Service ;
+cdata:InruptPodSpaces a ex:Service ;
     ex:name  """Inrupt Pod Spaces"""@en ;
     ex:subType  con:GeneralPurposePodService ;
     ex:status  con:Exploration ;
     ex:description  """Inrupt Pod Spaces is an instance of the Enterprise Solid Server provided by Inrupt, Inc., hosted by Amazon."""@en ;
     ex:provider  """Inrupt"""@en ;
     ex:serviceBackend  """ESS"""@en ;
-  <http://example.org/#modified> "2025-04-21T15:30:09.177Z"^^xsd:dateTime .
-
-
+    ex:modified "2025-04-21T15:32:54.676Z"^^xsd:dateTime .
 
 */
