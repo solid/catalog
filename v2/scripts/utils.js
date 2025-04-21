@@ -315,35 +315,53 @@ export async function shacl2form(shaclURL,skosURL,dataURL,shape,id) {
       let saveButton = document.getElementById('saveRecord');
       let cancelButton = document.getElementById('cancelButton');
       saveButton.addEventListener('click', async function() {
-        let all = `@prefix xsd: <http://www.w3.org/2001/XMLSchema#>. \n\n`;
+        let all = `
+@prefix cdata: <${source().dataURL}#> .
+@prefix ex: <${source().vocURL}#> .
+@prefix con: <${source().skosURL}#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+`;
         const form = document.querySelector('form');
         let subject = form.getAttribute('id');
         if(!subject){
           let nameInput = form.querySelector('[name=name]');
           subject = dataURL + "#" + nameInput.value.replace(/\s+/g,'_');
         }
-        all += `<${subject}>\na <${source().vocURL}#${shape}> ;\n\n`;
+        let subjectLabel;
+        if(subject.match(dataURL)){
+          subjectLabel = subject.replace(source().dataURL+'#','cdata:');
+        }
+        else subjectLabel = `<${subject}>`;
+        all += `${subjectLabel} a ex:${shape} ;\n`;
         const fields = document.querySelectorAll('.field');
         for(let field of fields){
           let input = field.querySelector('input') || field.querySelector('textarea') || field.querySelector('select');
           let object = input.value;
-          const predicate = field.getAttribute('id');
+          let predicate = field.getAttribute('id');
           const type = field.getAttribute('datatype');
           if(object.length == 0) continue;
+          if(predicate.match(source().vocURL)){
+            predicate = predicate.replace(source().vocURL+'#','ex:');
+          }
+          else predicate = `<${predicate}>`;
           if(type.match(/anyURI/)){
-            all += `  <${predicate}>\n  <${object}> ;\n\n`;
+            if(object.match(source().skosURL)){
+              object = object.replace(source().skosURL+'#','con:');
+            }
+            else object = `<${object}>`;
           }
-          else {
-            all += `  <${predicate}>\n  """${object.trim()}"""@en ;\n\n`;
+          else  {
+            object = `"""${object.trim()}"""@en`;
           }
+          all += `    ${predicate}  ${object} ;\n`;
         }
         const dateLabel = new Date().toISOString();
-        all = all + `  <${source().vocURL}#modified> "${new Date().toISOString()}"^^xsd:dateTime .\n\n`;
+        all = all + `    ex:modified "${new Date().toISOString()}"^^xsd:dateTime .\n\n`;
         console.log(all)
         if(!recordLabel){
           recordLabel = document.querySelector('[name=name]').value;
         }
-alert(recordLabel);
         let url = source().newDataURL + encodeURIComponent(dateLabel+'-'+recordLabel.replace(/\s+/g,'_'))+'.ttl';
         try {
           let r = await fetcher._fetch( url, {
@@ -407,3 +425,24 @@ alert(recordLabel);
         }
       }
     }
+
+/*
+
+
+@prefix cdata: <http://localhost:8444/home/s/catalog/v2/catalog-data.ttl#> .
+@prefix ex: <http://example.org/#> .
+@prefix con: <http://localhost:8444/home/s/catalog/v2/catalog-skos.ttl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+cdata:InruptPodSpaces a ex:#Service ;
+    ex:name  """Inrupt Pod Spaces"""@en ;
+    ex:subType  con:GeneralPurposePodService ;
+    ex:status  con:Exploration ;
+    ex:description  """Inrupt Pod Spaces is an instance of the Enterprise Solid Server provided by Inrupt, Inc., hosted by Amazon."""@en ;
+    ex:provider  """Inrupt"""@en ;
+    ex:serviceBackend  """ESS"""@en ;
+  <http://example.org/#modified> "2025-04-21T15:30:09.177Z"^^xsd:dateTime .
+
+
+
+*/
