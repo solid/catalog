@@ -2488,3 +2488,1044 @@ cdata:Solid_UI
   ex:landingPage <https://github.com/solidos/solid-ui> .
 
 
+###
+# APPS
+####
+
+cdata:LiquidSurfFedCM
+  ex:name        "Liquid Surf FedCM Demo" ;
+  a ex:Product ;
+  ex:status con:Exploration ;
+  ex:subType con:Application ;
+  ex:landingPage <https://github.com/liquid-surf/fedcm-demo> ;
+  ex:description      """
+    an experiment with FedCM and Solid-OIDC integration
+  """ .
+
+cdata:Syntropize
+  a ex:Product ;
+  ex:status con:Production ;
+  ex:subType con:Application ;
+  ex:name "Syntropize" ;
+  ex:provider   :RahulGupta ;
+  ex:landingPage <https://syntropize.com/> ;
+  ex:description """
+     a proposal to reclaim the original vision of the personal computer as the means for
+     intelligence augmentation and seamless collaboration
+  """ .
+
+cdata:SolidFlix
+  a ex:Product ;
+  ex:status con:Exploration ;
+  ex:subType con:Application ;
+  ex:name "SolidFlix" ;
+  ex:landingPage <https://oxfordhcc.github.io/solid-media/login/?redirect=%2Fsolid-media%2F> ;
+  ex:provider    :RuiZhao, :JunZhao ;
+  ex:landingPage  <https://github.com/OxfordHCC/solid-media> ;
+  ex:description      """
+    A movie tracking and sharing application with personalised recommendations.
+  """ .
+
+cdata:MediaKraken
+  a ex:Product ;
+  ex:status con:Production ;
+  ex:subType con:Application ;
+  ex:name "Media Kraken" ;
+  ex:softwareKeyword "LeisureApp" ;
+  ex:landingPage  <https://noeldemartin.github.io/media-kraken/> .
+
+cdata:TrinAppSuite
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "TrinApp Suite" ;
+  ex:landingPage <https://graphmetrix.com/trinapp> ;
+  ex:softwareKeyword "PersonalProductivityApp"  .
+
+
+cdata:URIBurner
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "SPARQL Query Service Endpoint that supports WebID-OIDC for authenticating WebIDs en route to functionality that isn’t granted to the un-authenticated Public." ;
+  ex:softwareKeyword "GeneralPurposeApp" ;
+  ex:name "URIBurner" .
+
+
+cdata:Smag0
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "GeneralPurposeApp" ;
+  ex:clientID <https://smag0.solidcommunity.net/profile/card#me> ;
+  ex:provider :David_Faveris ;
+  ex:name "Smag0" .
+
+cdata:Markbook
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "GeneralPurposeApp" ;
+  ex:name "Markbook" .
+
+cdata:Martin
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "GeneralPurposeApp" ;
+  ex:provider :Vincent_Tunru ;
+  ex:name "Martin" .
+
+cdata:Visited_Countries
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Tracks the countries and places you visited, and see all the visited countries and places shared by the other users of this application." ;
+  ex:name "Visited Countries and Places" ;
+  ex:provider :Walter_Almeida ;
+  ex:softwareKeyword "LeisureApp" ; .
+
+cdata:WebClip
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Chrome extension to extract structured data from any web page and store it to a Solid Pod." ;
+  ex:landingPage <https://github.com/codecentric/web-clip> ;
+  ex:softwareKeyword "GeneralPurposeApp"  ;
+  ex:name "WebClip" .
+
+cdata:Umai
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Collect and share recipes" ;
+  ex:softwareKeyword "LeisureApp" ;
+  ex:provider :Noel_De_Martin ;
+  ex:landingPage <https://github.com/noeldemartin/umai> ;
+  ex:name "Umai" .
+
+cdata:Useconcept
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "GeneralPurposeApp"  ;
+  ex:name "Useconcept" .
+
+cdata:Tadanime
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Decentralized anime rating Web application" ;
+  ex:landingPage <https://github.com/pheyvaer/tadanime> ;
+  ex:softwareKeyword "LeisureApp" ;
+  ex:name "Tadanime" .
+
+cdata:Taisukef
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "PersonalProductivityApp" ;
+  ex:provider :Taisuke_Fukuno ;
+  ex:landingPage <https://github.com/taisukef/solid-addfriend> ;
+  ex:name "Taisukef" .
+
+cdata:Tiddlywiki
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "A non-linear personal web notebook" ;
+  ex:provider :Alain_Bourgeois ;
+  ex:softwareKeyword "PersonalProductivityApp" ;
+  ex:name "Tiddlywiki" .
+
+cdata:Spoggy
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Creates nodes and edges of a graph" ;
+  ex:softwareKeyword "GeneralPurposeApp" ;
+  ex:name "Spoggy" ;
+  ex:clientID <https://spoggy-test3.solidcommunity.net/profile/card#me>, <https://spoggy.solidcommunity.net/profile/card#me> .
+
+cdata:Stash-Dat
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "GeneralPurposeApp" ;
+  ex:name "Stash-Dat" .
+
+cdata:SolidCalendar
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Solid Calendar";
+  ex:provider :TimStanden ;
+  ex:softwareKeyword "PersonalProductivityApp"  .
+
+cdata:Solid_Calendar_1
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:provider :Dylan_Martin ;
+  ex:name "Solid Calendar" ;
+  ex:landingPage <https://bitbucket.org/dylanmartin/solidcalendar> ;
+  ex:softwareKeyword "PersonalProductivityApp" .
+
+cdata:Solid_Chat
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Solid Chat" .
+
+cdata:Solid_Chess
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Solid Chess" ;
+  ex:softwareKeyword "LeisureApp" ;
+  ex:landingPage <https://github.com/pheyvaer/solid-chess> .
+
+cdata:Solid_Groups
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Solid Groups" ;
+  ex:softwareKeyword "PersonalProductivityApp"  ;
+  ex:provider :Angelo_Veltens ;
+  ex:landingPage <https://gitlab.com/angelo-v/solid-groups> .
+
+cdata:Solid_Health
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:provider :Jason_Paulos ;
+  ex:description "A proof-of-concept mobile app for decentralized health record management." ;
+  ex:name "Solid Health" ;
+  ex:landingPage <https://github.com/jasonpaulos/solid-health> ;
+  ex:softwareKeyword "PersonalProductivityApp" .
+
+cdata:Solid_LBS
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Solid LBS" ;
+  ex:landingPage <https://github.com/SharonStrats/SOLIDLBSPrototype> ;
+  ex:provider :Sharon_Stratsianis ;
+  ex:softwareKeyword "GeneralPurposeApp"  .
+
+cdata:Solid_Migrator
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Moves data from one solid pod to another." ;
+  ex:name "Solid Migrator" ;
+  ex:softwareKeyword "GeneralPurposeApp"  .
+
+cdata:Solid_Profile_Viewer
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Solid Profile Viewer" ;
+  ex:softwareKeyword "PersonalProductivityApp" ; 
+  ex:landingPage <https://gitlab.com/angelo-v/solid-profile-viewer> ;
+  ex:provider :Angelo_Veltens .
+
+cdata:Solid_Signup
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Creates WebID accounts with Solid compatible providers." ;
+  ex:name "Solid Signup";
+  ex:landingPage <https://github.com/solid-contrib/solid-signup> ;
+  ex:provider :Andrei_Sambra ;
+  ex:softwareKeyword "PersonalProductivityApp"  .
+
+cdata:Solid_Text_editor
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Solid Text editor" ;
+  ex:softwareKeyword "PersonalProductivityApp"  .
+
+cdata:Solid_Weather
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Solid Weather" ;
+  ex:softwareKeyword "PersonalProductivityApp" ; 
+  ex:landingPage <https://bitbucket.org/dylanmartin/solidweatherapp/src/master> ;
+  ex:provider :Dylan_Martin .
+
+cdata:Solid_wrap
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Simple example of authenticated reads/writes to a Solid pod" ;
+  ex:name "Solid wrap" ;
+  ex:softwareKeyword "AuthenticatedFetch" .
+
+cdata:Solidarity
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Solid-based community discussion app" ;
+  ex:softwareKeyword "PersonalProductivityApp" ; 
+  ex:clientID <https://solidarity.inrupt.net/profile/card#me> ;
+  ex:name "Solidarity" .
+
+cdata:SolidVC
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:landingPage <https://github.com/kezike/solid-vc> ;
+  ex:provider :Kayode_Ezike ;
+  ex:softwareKeyword "PersonalProductivityApp" ; 
+  ex:name "SolidVC" .
+
+cdata:Solside
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "PodTool" ; 
+  ex:provider :Mike_Adams ;
+  ex:name "Solside" .
+
+cdata:PROV4ITDaTa
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "GeneralPurposeApp" ;  
+  ex:landingPage <https://github.com/RMLio/prov4itdata-web-app> ;
+  ex:provider :Gertjan_de_Mulder ;
+  ex:name "PROV4ITDaTa" .
+
+cdata:Ramen
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Tests solid servers on compliance to Solid standards" ;
+  ex:softwareKeyword "LeisureApp" ;
+  ex:name "Ramen" .
+
+cdata:Polymer
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "A rudimentary resource browser for Solid, using Polymer 2." ;
+  ex:softwareKeyword "GeneralPurpaseApp"  ; 
+  ex:landingPage <https://gitlab.com/tag42git/polymer-solid> ;
+  ex:provider :Tom ;
+  ex:name "Polymer" .
+
+cdata:PoPock
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "PodTool" ;
+  ex:landingPage <https://github.com/scenaristeur/solid-vue-panes> ;
+  ex:name "PoPock" .
+
+cdata:Portal
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:landingPage <https://github.com/steamory/portal> ;
+  ex:softwareKeyword "PersonalProductivityApp"  ;
+  ex:name "Portal" .
+
+cdata:Peditor
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "PersonalProductivityApp" ; 
+  ex:landingPage <https://github.com/pondersource/solidProfileEditor> ;
+  ex:name "Peditor" .
+
+cdata:Pixolid
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "LeisureApp" ; 
+  ex:name "Pixolid" .
+
+cdata:Planning_Poker
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "A simple planner poker deck" ;
+  ex:name "Planning Poker" ;
+  ex:softwareKeyword "LeisureApp" ; 
+  ex:provider :Noel_De_Martin .
+
+cdata:Plume
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Blogging platform." ;
+  ex:softwareKeyword "PersonalProductivityApp" ; 
+  ex:landingPage <https://github.com/happybeing/solid-plume> ;
+  ex:provider :Andrei_Sambra ;
+  ex:name "Plume" .
+
+cdata:Pod_Chat
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Pod Chat" ;
+  ex:softwareKeyword "CommunicationsApp" ;
+  ex:clientID <https://pod-chat.solidcommunity.net/profile/card#me> .
+
+
+cdata:Mdr_Notes
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Mdr Notes" ;
+  ex:softwareKeyword "PersonalProductivityApp"  .
+
+cdata:Media_Kraken
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "An app to track movies and create collections" ;
+  ex:name "Media Kraken" ;
+  ex:softwareKeyword "LeisureApp" ; 
+  ex:provider :Noel_De_Martin .
+
+cdata:Node_sparql_client
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Node sparql client" ;
+  ex:provider :Thomas_Fritz ;
+ex:softwareKeyword "GeneralPurpaseApp"    .
+
+cdata:Notepod
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "A note-taking app for Solid" ;
+  ex:softwareKeyword "PersonalProductivityApp" ; 
+  ex:landingPage <https://github.com/Vinnl/notepod> ;
+  ex:provider :Vincent_Tunru ;
+  ex:name "Notepod" .
+
+cdata:ODS_Briefcase
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "ODS Briefcase" ;
+  ex:softwareKeyword "PersonalProductivityApp"  .
+
+cdata:Ohmypod
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:landingPage <https://github.com/empathyco/solid-oh-my-pod> ;
+  ex:provider :Astrid_Gamoneda_Arrunada ;
+  ex:softwareKeyword "PodTool"  ;
+  ex:name "Ohmypod" .
+
+cdata:OKH_Solid_App
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Stores hardware project data and files on Solid pods" ;
+  ex:name "OKH Solid App" ;
+  ex:softwareKeyword "GeneralPurpaseApp"  ; 
+  ex:provider :Jackson_Morgan, :Max_Wardeh, :Sarah_Hutton .
+
+cdata:Shighl
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:programmingLanguage "javascript" ;  
+  ex:description "Lets to write simply HTML/JavaScript to interact with a Solid Pod Session, Profile, Inboxand Chat" ;
+  ex:provider :David_Faveris ;
+  ex:softwareKeyword "SolidSDK" ;
+  ex:name "Shighl" .
+
+cdata:SleepyBikePlatform
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "'Couchsurfing' for bicycle travellers" ;
+  ex:name "Sleepy Bike Platform" ;
+  ex:landingPage <https://github.com/OpenHospitalityNetwork/sleepy.bike> .
+
+cdata:Social_linked_beer
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Social linked beer" ;
+  ex:landingPage <https://github.com/ozcanseker/Social-linked-beer> ;
+  ex:provider :Ozcan_Seker .
+
+cdata:Socialid
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Inbox prototype" ;
+  ex:name "Socialid" .
+
+cdata:OpenLink_Smart_Data_Bot
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Smart agent that provides a single RESTful interface for interacting with a variety of Actions (operations) provided by APIs." ;
+  ex:name "OpenLink Smart Data Bot" .
+
+cdata:OpenLink_Structured_Data_Editor
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "RDF editor that can save content to any Solid Pod." ;
+  ex:name "OpenLink Structured Data Editor" .
+
+cdata:OpenLink_Structured_Data_Sniffer
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Extracts Metadata in a variety of notations from HTML docs and enables storage to any Solid Pod." ;
+  ex:name "OpenLink Structured Data Sniffer" .
+
+cdata:OpenLink_YouID
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Identity and credentials document generator." ;
+  ex:name "OpenLink YouID" .
+
+cdata:0data_hello
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "0data hello" ;
+  ex:landingPage <https://github.com/0dataapp/hello> ;
+  ex:provider :Rosano .
+
+cdata:Assemblage
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:landingPage <https://gitlab.com/omd_public/assemblage> ;
+  ex:provider :Marc_Fornos ;
+  ex:name "Assemblage" .
+
+cdata:Beer_counter
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Beer counter" ;
+  ex:landingPage <https://github.com/ozcanseker/Solid-Pod-beer-counter> ;
+  ex:provider :Ozcan_Seker .
+
+cdata:Bingokaart
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Bingokaart" .
+
+cdata:Booklice
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Bookmarks app with community sharing." ;
+  ex:landingPage <https://github.com/scenaristeur/booklice> ;
+  ex:name "Booklice" .
+
+cdata:Bookmarker
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:landingPage <https://github.com/pondersource/solidBookmarker> ;
+  ex:name "Bookmarker" .
+
+cdata:Collectie_registratie_systeem
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Collectie registratie systeem" .
+
+cdata:Comunica
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "A knowledge graph querying framework for JavaScript." ;
+  ex:provider :Imec;
+  ex:landingPage <https://github.com/comunica/comunica> ;
+  ex:name "Comunica" .
+
+cdata:Conformance_Test_Harness
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Harness used to run Solid conformance tests and generate reports" ;
+  ex:name "Conformance Test Harness" ;
+  ex:landingPage <https://github.com/solid-contrib/conformance-test-harness> ;
+  ex:provider :Pete_Edwards .
+
+cdata:Contacts
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Stores Vcard Contacts on the POD" ;
+  ex:name "Contacts" .
+
+cdata:Cypress_Solid
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Cypress Plugin to test applications using the Solid Protocol" ;
+  ex:name "Cypress Solid" ;
+  ex:provider :Noel_De_Martin .
+
+cdata:Darcy
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:provider :Christian_Buggedei ;
+  ex:name "Darcy" .
+
+cdata:Datasister
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Datasister" .
+
+cdata:DataVillage_platform
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Platform to perform confidential data processing on personal data, where end users can allow service providers to process their data to produce derived data, while having the guarantee that the original data will not be read by the service provider itself." ;
+  ex:name "DataVillage platform" .
+
+cdata:Dokieli
+  a ex:Product ;
+  ex:status con:Production ;
+  ex:subType con:Application ;
+  ex:description "Clientside editor for decentralised article publishing, annotations and social interactions." ;
+  ex:name "Dokieli" ;
+  ex:landingPage <https://github.com/linkeddata/dokieli> ;
+  ex:provider :Sarven_Capadisli .
+
+cdata:Drive
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Tool to create and share resources with contacts" ;
+  ex:name "drive" .
+
+cdata:Ess_table
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Kanban and tables on Solid" ;
+  ex:name "Ess table" .
+
+cdata:Focus
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Solid Task Manager" ;
+  ex:provider :Noel_De_Martin ;
+  ex:name "Focus" .
+
+cdata:Friend_Requests
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "For given webid shows friends in common" ;
+  ex:name "Friend Requests Exploration".
+
+cdata:Holon
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:landingPage <https://github.com/scenaristeur/holon> ;
+  ex:name "Holon" .
+
+cdata:Hypey
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Images manipulation app in the development(?)" ;
+  ex:name "Hypey" .
+
+cdata:Ibex
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Ibex" .
+
+cdata:Inbox
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:landingPage <https://github.com/solid-contrib/solid-inbox> ;
+  ex:provider :Andrei_Sambra ;
+  ex:name "Inbox" .
+
+cdata:Inbox_App
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Inbox App" ;
+  ex:clientID <https://inbox-app.inrupt.net/profile/card#me> .
+
+cdata:Inox
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Inox" .
+
+cdata:IPGS
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "IPGS" .
+
+cdata:KNoodle
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "A solid-based alternative to Doodle." ;
+  ex:landingPage <https://github.com/KNowledgeOnWebScale/knoodle> ;
+  ex:name "KNoodle" .
+
+cdata:Linked_Pipes
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Linked Data visualizations sharing and collaboration via Solid." ;
+  ex:name "Linked Pipes" ;
+  ex:landingPage <https://github.com/linkedpipes/applications> ;
+  ex:provider :Altynbek_Orumbayev, :Jakub_Klimek .
+
+cdata:Liqid_Chat
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Liqid Chat" ;
+  ex:provider :Jackson_Morgan .
+
+cdata:SolidCatlog
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Solid Catalog" ;
+  ex:provider :Jeff_Zucker ;
+  ex:description "Catalog the resources of an organization with low-code";
+  ex:softwareKeyword "OrganizationalApp" .
+
+
+#####
+# Keywords for apps
+#####
+cdata:Focus             ex:softwareKeyword "PersonalProductivityApp" ; ex:softwareKeyword "personal productivity","tasks" .
+cdata:Booklice          ex:softwareKeyword "PersonalProductivityApp" ; ex:softwareKeyword "personal productivity","bookmarks" .
+cdata:Bookmarker        ex:softwareKeyword "PersonalProductivityApp" ; ex:softwareKeyword "personal productivity","bookmarks" .
+cdata:Poddit            ex:softwareKeyword "PersonalProductivityApp" ; ex:softwareKeyword "personal productivity","bookmarks" .
+cdata:Notepod           ex:softwareKeyword "PersonalProductivityApp" ; ex:softwareKeyword "personal productivity","editors" .
+cdata:Mdr_Notes         ex:softwareKeyword "PersonalProductivityApp" ; ex:softwareKeyword "personal productivity","editors" .
+cdata:Tiddlywiki        ex:softwareKeyword "PersonalProductivityApp" ; ex:softwareKeyword "personal productivity","editors" .
+cdata:Solid_Text_editor ex:softwareKeyword "PersonalProductivityApp" ; ex:softwareKeyword "personal productivity","editors" .
+cdata:Plume             ex:softwareKeyword "PersonalProductivityApp" ; ex:softwareKeyword "personal productivity","editors","blogs" .
+cdata:Dokieli           ex:softwareKeyword "PersonalProductivityApp" ; ex:softwareKeyword "personal productivity","editors","RDFa" .
+cdata:SolidCalendar     ex:softwareKeyword "PersonalProductivityApp" ; ex:softwareKeyword "personal productivity","calendars" .
+cdata:Solid_Calendar_1  ex:softwareKeyword "PersonalProductivityApp" ; ex:softwareKeyword "personal productivity","calendars" .
+cdata:Friend_Requests   ex:softwareKeyword "PersonalProductivityApp" ; ex:softwareKeyword "personal productivity","contacts" .
+cdata:Solid_Groups      ex:softwareKeyword "PersonalProductivityApp" ; ex:softwareKeyword "personal productivity","contacts" .
+cdata:Contacts          ex:softwareKeyword "PersonalProductivityApp" ; ex:softwareKeyword "personal productivity","contacts" .
+cdata:Pixolid           ex:softwareKeyword "LeisureApp" ; ex:softwareKeyword "leisure activities","movies" .
+cdata:SolidFlix         ex:softwareKeyword "LeisureApp" ; ex:softwareKeyword "leisure activities","movies" .
+cdata:MediaKraken       ex:softwareKeyword "LeisureApp" ; ex:softwareKeyword "leisure activities","movies" .
+cdata:Tadanime          ex:softwareKeyword "LeisureApp" ; ex:softwareKeyword "leisure activities","movies" .
+cdata:Solid_Weather     ex:softwareKeyword "LeisureApp" ; ex:softwareKeyword "leisure activities","weather" .
+cdata:Ramen             ex:softwareKeyword "LeisureApp" ; ex:softwareKeyword "leisure activities","food and drink" .
+cdata:Umai              ex:softwareKeyword "LeisureApp" ; ex:softwareKeyword "leisure activities","food and drink" .
+cdata:Beer_counter      ex:softwareKeyword "LeisureApp" ; ex:softwareKeyword "leisure activities","food and drink" .
+cdata:Social_linked_beer ex:softwareKeyword "LeisureApp" ; ex:softwareKeyword "leisure activities","food and drink" .
+cdata:Visited_Countries ex:softwareKeyword "LeisureApp" ; ex:softwareKeyword "leisure activities","travel" .
+cdata:Solid_Chess       ex:softwareKeyword "LeisureApp" ; ex:softwareKeyword "leisure activities","games" .
+cdata:Planning_Poker    ex:softwareKeyword "LeisureApp" ; ex:softwareKeyword "leisure activities","games" .
+cdata:Bingokaart        ex:softwareKeyword "LeisureApp" ; ex:softwareKeyword "leisure activities","games" .
+cdata:Golf_Course_Assistant
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "LeisureApp" ; ex:softwareKeyword "leisure activities","games" .
+cdata:Solid_Chat        ex:softwareKeyword "CommunicationApp" ; ex:softwareKeyword "communication" .
+cdata:Solidarity        ex:softwareKeyword "CommunicationApp" ; ex:softwareKeyword "communication" .
+cdata:Pod_Chat          ex:softwareKeyword "CommunicationApp" ; ex:softwareKeyword "communication" .
+cdata:Darcy             ex:softwareKeyword "CommunicationApp" ; ex:softwareKeyword "communication" .
+cdata:Liqid_Chat        ex:softwareKeyword "CommunicationApp" ; ex:softwareKeyword "communication" .
+cdata:TrinAppSuite      ex:softwareKeyword "GeneralPurposeApp" ; ex:softwareKeyword "general purpose app" .
+cdata:Syntropize        ex:softwareKeyword "GeneralPurposeApp" ; ex:softwareKeyword "general purpose app" .
+cdata:WebClip           ex:softwareKeyword "GeneralPurposeApp" ; ex:softwareKeyword "general purpose app" .
+cdata:Solid_Health      ex:softwareKeyword "GeneralPurposeApp" ; ex:softwareKeyword "general purpose app" .
+cdata:OKH_Solid_App     ex:softwareKeyword "GeneralPurposeApp" ; ex:softwareKeyword "general purpose app" .
+cdata:Hypey             ex:softwareKeyword "GeneralPurposeApp" ; ex:softwareKeyword "general purpose app","visualization" .
+cdata:Ess_table         ex:softwareKeyword "GeneralPurposeApp" ; ex:softwareKeyword "general purpose app","visualization" .
+cdata:KNoodle           ex:softwareKeyword "GeneralPurposeApp" ; ex:softwareKeyword "general purpose app","visualization" .
+cdata:Smag0             ex:softwareKeyword "GeneralPurposeApp" ; ex:softwareKeyword "general purpose app" .
+cdata:Markbook          ex:softwareKeyword "GeneralPurposeApp" ;    ex:softwareKeyword "general purpose app" .
+cdata:Martin            ex:softwareKeyword "GeneralPurposeApp" ;  ex:softwareKeyword "general purpose app" .
+cdata:Useconcept        ex:softwareKeyword "GeneralPurposeApp" ;      ex:softwareKeyword "general purpose app" .
+cdata:Taisukef          ex:softwareKeyword "GeneralPurposeApp" ;    ex:softwareKeyword "general purpose app" .
+cdata:Stash-Dat         ex:softwareKeyword "GeneralPurposeApp" ;     ex:softwareKeyword "general purpose app" .
+cdata:Solid_LBS         ex:softwareKeyword "GeneralPurposeApp" ;     ex:softwareKeyword "general purpose app" .
+cdata:SolidVC           ex:softwareKeyword "GeneralPurposeApp" ;   ex:softwareKeyword "general purpose app" .
+cdata:PROV4ITDaTa       ex:softwareKeyword "GeneralPurposeApp" ;       ex:softwareKeyword "general purpose app" .
+cdata:PoPock            ex:softwareKeyword "GeneralPurposeApp" ;  ex:softwareKeyword "general purpose app" .
+cdata:Spoggy            ex:softwareKeyword "GeneralPurposeApp" ;  ex:softwareKeyword "general purpose app" .
+cdata:Portal            ex:softwareKeyword "GeneralPurposeApp" ;  ex:softwareKeyword "general purpose app" .
+cdata:ODS_Briefcase             ex:softwareKeyword "GeneralPurposeApp" ; ex:softwareKeyword "general purpose app" .
+cdata:Assemblage             ex:softwareKeyword "GeneralPurposeApp" ; ex:softwareKeyword "general purpose app" .
+cdata:Collectie_registratie_systeem             ex:softwareKeyword "GeneralPurposeApp" ; ex:softwareKeyword "general purpose app" .
+cdata:Datasister             ex:softwareKeyword "GeneralPurposeApp" ; ex:softwareKeyword "general purpose app" .
+cdata:DataVillage_platform             ex:softwareKeyword "GeneralPurposeApp" ; ex:softwareKeyword "general purpose app" .
+cdata:Drive             ex:softwareKeyword "GeneralPurposeApp" ; ex:softwareKeyword "general purpose app" .
+cdata:Inox             ex:softwareKeyword "GeneralPurposeApp" ; ex:softwareKeyword "general purpose app" .
+cdata:IPGS             ex:softwareKeyword "GeneralPurposeApp" ; ex:softwareKeyword "general purpose app" .
+cdata:Holon            ex:softwareKeyword "GeneralPurposeApp" ;  ex:softwareKeyword "general purpose app" .
+cdata:Ibex             ex:softwareKeyword "GeneralPurposeApp" ; ex:softwareKeyword "general purpose app" .
+
+###################
+# END-OF-SOFTWARE #
+###################
+
+###
+# POD FRONT ENDS
+###
+
+cdata:SolidOS
+  a ex:Product ;
+  ex:subType con:DevelopmentTool ;
+  ex:status con:Production ;
+  ex:name "Solid OS" ;
+  ex:softwareKeyword "pod frontend","contacts","chat","task manager" ;
+  ex:description "Solid-compatible data mashup library and Data Browser." ;
+  ex:landingPage <https://solidos.solidcomunity.net/> ;
+  ex:clientID  <https://solidos.solidcomunity.net/profile/card#me> ;
+  ex:landingPage <https://github.com/solidos/mashlib> .
+
+cdata:EasyPenny
+  ex:name "Easy Penny" ;
+  a ex:Product ;
+  ex:status con:Production ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "Pod Frontend" ;
+  ex:landingPage <https://github.com/liquid-surf/easy-penny>  ;
+  ex:provider :LiquidSurf .
+
+cdata:Solvent
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:landingPage <https://github.com/manomayam/solvent> ;
+  ex:provider :Manomayam ;
+  ex:softwareKeyword "pod frontend","self-hosted pod" ;
+  ex:name "Solvent" .
+
+cdata:DataKitchen
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Data Kitchen" ;
+  ex:landingPage <https://github.com/solidos/data-kitchen> ;
+  ex:provider :JeffZucker ;
+  ex:description "The solid databrowser technology as a stand-alone electron app." ;
+  ex:softwareKeyword "pod frontend","self-hosted pod" .
+
+cdata:Penny
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Pod data inspector" ;
+  ex:provider :Vincent_Tunru ;
+  ex:softwareKeyword "pod frontend";
+  ex:name "Penny" .
+
+cdata:PodOS
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:provider :AngeloVeltens ;
+  ex:name "PodOS" ;
+  ex:landingPage <https://github.com/pod-os/PodOS> ;
+  ex:softwareKeyword "pod frontend" .
+
+cdata:SolidOSWebApp
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "SolidOS Webapp" ;
+  ex:softwareKeyword "pod frontend".
+
+cdata:solidpod
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "SolidPod";
+  ex:softwareKeyword "pod frontend";
+  ex:landingPage <https://pub.dev/packages/solidpod> ;
+  ex:description """
+    Support easy access to data stored on Solid Pod servers.
+  """ .
+
+  :Polymer             ex:softwareKeyword "PodTool" ; ex:softwareKeyword "pod tool","pod frontend" .
+
+cdata:Graphmetrix_browser
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "pod tool","pod frontend" .
+
+
+###
+# POD MANGEMENT
+###
+cdata:Solid_Shell
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:programmingLanguage "javascript" ;  
+  ex:description "A command-line and interactive shell for Solid." ;
+  ex:name "Solid Shell" ;
+  ex:landingPage <https://github.com/jeff-zucker/solid-shell> ;
+  ex:softwareKeyword "pod management" ;
+  ex:platform "node" ;
+  ex:provider :Jeff_Zucker .
+
+cdata:Pod_Explorer
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Pod Explorer" ;
+  ex:softwareKeyword "pod management".
+
+cdata:PodPro
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Development tool for working with Solid Pods" ;
+  ex:softwareKeyword "pod management";
+  ex:provider :Jasmine_Leonard ;
+  ex:name "PodPro" .
+
+cdata:Solid_File_Manager
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:provider :Otto_AA ;
+  ex:softwareKeyword "pod management";
+  ex:programmingLanguage "javascript" ;  
+  ex:name "Solid File Manager" ;
+  ex:landingPage <https://github.com/Otto-AA/solid-filemanager> .
+
+cdata:Solid_IDE
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:name "Solid IDE" ;
+  ex:softwareKeyword "pod management";
+  ex:landingPage <https://github.com/jeff-zucker/solid-content-manager> ;
+  ex:provider :Jeff_Zucker .
+
+cdata:Solid_file_client
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "A Javascript library for creating and managing files and folders in Solid data stores." ;
+  ex:softwareKeyword "pod management" ;
+  ex:name "Solid file client" ;
+  ex:provider :Jeff_Zucker ;
+  ex:landingPage <https://github.com/jeff-zucker/solid-file-client> .
+
+cdata:Solid_file_python
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Python library for creating and managing files and folders in Solid pods." ;
+  ex:softwareKeyword "pod management" ;
+  ex:name "Solid file python" ;
+  ex:landingPage <https://github.com/twonote/solid-file-python> .
+
+cdata:webid_Profile_editor
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "pod management","profile" ;
+  ex:name "WebID Profile editor" ;
+  ex:provider :Andrei_Sambra ;
+  ex:landingPage <https://github.com/linkeddata/profile-editor> .
+
+cdata:Poddit
+  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:description "Private bookmarking" ;
+  ex:landingPage <https://gitlab.com/vincenttunru/poddit> ;
+  ex:provider :Vincent_Tunru ;
+  ex:name "Poddit" .
+
+cdata:Inbox  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "pod tool","pod management" .
+
+cdata:Inbox_App  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "pod tool","pod management" .
+
+cdata:Solid_Migrator  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "pod tool","pod management" .
+
+cdata:Solid_Profile_Viewer  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "pod tool","pod management" .
+
+cdata:Solid_Signup  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "PodTool" ; ex:softwareKeyword "pod tool","pod management" .
+
+cdata:Solid_wrap  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "pod tool","pod management" .
+
+cdata:Solside  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "pod tool","pod management" .
+
+cdata:Peditor  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "pod tool","pod management" .
+
+cdata:Ohmypod  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "pod tool","pod management" .
+
+cdata:Socialid  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "pod tool","pod management" .
+
+cdata:Inbox  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "pod tool","pod management" .
+
+cdata:Inbox_App  a ex:Product ;
+  ex:status con:Development ;
+  ex:subType con:Application ;
+  ex:softwareKeyword "pod tool","pod management" .

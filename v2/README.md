@@ -31,14 +31,14 @@ An `X` indicates the file for that class is fully migrated to v2 format. A `~` i
   | CLASS            | SHACL | DATA
   | -----------------|-------|------
   | Service          |   X   |  X
-  | Product          |   X   |  ~
+  | Product          |   X   |  X
   | Organization     |   X   |  X
   | Person           |   X   |  X
   | LearningResource |       |
-  | Offer            |       |
   | Event            |       | 
   | Ontology         |       |
   | Specification    |       |
+  | Offer            |       |
 
 ## Some caveats about v2:
 

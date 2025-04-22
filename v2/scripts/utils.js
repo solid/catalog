@@ -42,6 +42,7 @@ export async function prepNewRecordForm(shaclURL){
   let cancelButton = document.getElementById('cancelButton');
   await fetcher.load(shaclURL);
   let types = findKnownTypes(store,shaclURL);
+  console.log(types);    
   selector.innerHTML = "";
   for(let t  of Object.keys(types)){
     selector.innerHTML += `<option value="${t}">${types[t]}</option>`;
@@ -148,7 +149,7 @@ export async function report(dataURL,shaclURL,skosURL,shape){
     if(!knownType[tval]){
       types.missing.push(s.value);
     }
-    if(!type.value.match('Person') && !knownSubType[sval]){
+    if(!type || (!type.value.match('Person') && !knownSubType[sval])){
       subTypes.missing.push(s.value);
     }
     if(type && knownType[type.value]){
