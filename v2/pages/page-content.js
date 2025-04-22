@@ -27,6 +27,7 @@ export const pageContent = {
 
 <p>
 <b>Notes:</b><ul>
+<li>If you or your organization create a product, mark yourself or the organization as `provider` on the product form rather than your own form. Viewers should automatically display that on your own page since links are bi-directional.
 <li>A <b>Service</b> includes deployed identity &/or storage servers and also communication services like chats & forums.</li>
 <li>An <b>Organization</b> includes an informal coding group like the SolidOS Coding Group.</li>
 <li><b>Learning Resources</b> include primers, tutorials, use cases, and test result reports.</li>
