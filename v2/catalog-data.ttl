@@ -1,6 +1,8 @@
 @prefix cdata: <#> .
 @prefix ex: <http://example.org/#> . # uses tmp namespace until predicates finalized
 @prefix con: <./catalog-skos.ttl#> .  # SKOS concept tree
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
 
 ###########
 # SERVICE #
@@ -3529,3 +3531,524 @@ cdata:Inbox_App  a ex:Product ;
   ex:status con:Development ;
   ex:subType con:Application ;
   ex:softwareKeyword "pod tool","pod management" .
+
+
+#########
+# SPECS #
+#########
+
+cdata:Solid_Protocol
+  a ex:Specification ;
+  ex:name "Solid Protocol" ;
+  ex:landingPage <https://solidproject.org/TR/protocol> ;
+  ex:landingPage <https://github.com/solid/specification> .
+    
+cdata:Solid_WebID_Profile
+  a ex:Specification ;
+  ex:name "Solid WebID Profile" ;
+  ex:landingPage <https://solid.github.io/webid-profile/> ;
+  ex:landingPage <https://github.com/solid/webid-profile> .
+    
+cdata:Solid-OIDC
+  a ex:Specification ;
+  ex:name "Solid-OIDC" ;
+  ex:landingPage <https://solidproject.org/TR/oidc> ;
+  ex:landingPage <https://github.com/solid/solid-oidc> .
+    
+cdata:HTTPSig_Authentication_for_Solid
+  a ex:Specification ;
+  ex:name "HTTPSig Authentication for Solid" ;
+  ex:landingPage <https://solid.github.io/httpsig/> ;
+  ex:landingPage <https://github.com/solid/httpsig> .
+    
+cdata:Web_Access_Control
+  a ex:Specification ;
+  ex:name "Web Access Control" ;
+  ex:landingPage <https://solidproject.org/TR/wac> ;
+  ex:landingPage <https://github.com/solid/web-access-control-spec/> .
+    
+cdata:Access_Control_Policy
+  a ex:Specification ;
+  ex:name "Access Control Policy" ;
+  ex:landingPage <https://solidproject.org/TR/acp> ;
+  ex:landingPage <https://github.com/solid/authorization-panel> .
+    
+cdata:Solid_Application_Interoperability
+  a ex:Specification ;
+  ex:name "Solid Application Interoperability" ;
+  ex:landingPage <https://solid.github.io/data-interoperability-panel/specification/> ;
+  ex:landingPage <https://github.com/solid/data-interoperability-panel> .
+    
+cdata:Shape_Trees
+  a ex:Specification ;
+  ex:name "Shape Trees" ;
+  ex:landingPage <https://shapetrees.org/TR/specification/> ;
+  ex:landingPage <https://github.com/shapetrees/specification> .
+    
+cdata:Solid_DID_Method
+  a ex:Specification ;
+  ex:name "Solid DID Method" ;
+  ex:landingPage <https://solid.github.io/did-method-solid/> ;
+  ex:landingPage <https://github.com/solid/did-method-solid> .
+    
+cdata:Solid_Notifications_Protocol
+  a ex:Specification ;
+  ex:name "Solid Notifications Protocol" ;
+  ex:landingPage <https://solidproject.org/TR/notifications-protocol> ;
+  ex:landingPage <https://github.com/solid/notifications> .
+    
+cdata:EventSourceChannel2023
+  a ex:Specification ;
+  ex:name "EventSourceChannel2023" ;
+  ex:landingPage <https://solid.github.io/notifications/eventsource-channel-2023> ;
+  ex:landingPage <https://github.com/solid/notifications> .
+    
+cdata:LDNChannel2023
+  a ex:Specification ;
+  ex:name "LDNChannel2023" ;
+  ex:landingPage <https://solid.github.io/notifications/ldn-channel-2023> ;
+  ex:landingPage <https://github.com/solid/notifications> .
+    
+cdata:StreamingHTTPChannel2023
+  a ex:Specification ;
+  ex:name "StreamingHTTPChannel2023" ;
+  ex:landingPage <https://solid.github.io/notifications/streaming-http-channel-2023> ;
+  ex:landingPage <https://github.com/solid/notifications> .
+    
+cdata:WebSocketChannel2023
+  a ex:Specification ;
+  ex:name "WebSocketChannel2023" ;
+  ex:landingPage <https://solid.github.io/notifications/websocket-channel-2023> ;
+  ex:landingPage <https://github.com/solid/notifications> .
+    
+cdata:WebhookChannel2023
+  a ex:Specification ;
+  ex:name "WebhookChannel2023" ;
+  ex:landingPage <https://solid.github.io/notifications/webhook-channel-2023> ;
+  ex:landingPage <https://github.com/solid/notifications> .
+
+cdata:Solid_Chat_Spec
+  a ex:Specification ;
+  ex:name "Solid Chat" ;
+  ex:landingPage <https://solid.github.io/chat/> ;
+  ex:landingPage <https://github.com/solid/chat> .
+
+cdata:Solid-PREP
+  a ex:Specification ;
+  ex:name "Solid-PREP" ;
+  ex:landingPage <https://solid.github.io/solid-prep/protocol/> ;
+  ex:landingPage <https://github.com/solid/solid-prep> .
+    
+##############
+# ONTOLOGIES #
+##############
+
+cdata:acl-vocab
+  a ex:Ontology ;
+  ex:name "Basic Access Control" ;
+  ex:namespaceURI "http://www.w3.org/ns/auth/acl#" ;
+  ex:prefix "acl:" .
+
+cdata:as-vocab
+  a ex:Ontology ;
+  ex:name "Activity Streams"@en ;
+  ex:namespaceURI "https://www.w3.org/ns/activitystreams#" ;
+  ex:prefix "as:" .
+
+cdata:cc-vocab
+  a ex:Ontology ;
+  ex:name "Creative Commons" ;
+  ex:namespaceURI "http://creativecommons.org/ns#" ;
+  ex:prefix "cc:" .
+
+cdata:cert-vocab
+  a ex:Ontology ;
+  ex:name "Cert" ;
+  ex:namespaceURI "http://www.w3.org/ns/auth/cert#" ;
+  ex:prefix "cert:" .
+
+cdata:dc-elements-vocab
+  a ex:Ontology ;
+  ex:name "Dublin Core Elements"@en ;
+  ex:namespaceURI "http://purl.org/dc/elements/1.1/" ;
+  ex:prefix "elements:" .
+
+cdata:foaf-vocab
+  a ex:Ontology ;
+  ex:name "Friends of a Friend"@en ;
+  ex:namespaceURI "http://xmlns.com/foaf/0.1/" ;
+  ex:prefix "foaf:" .
+
+cdata:geo-vocab
+  a ex:Ontology ;
+  ex:name "GeoNames" ;
+  ex:namespaceURI "http://www.geonames.org/ontology" ;
+  ex:prefix "geo:" .
+
+cdata:basic-geo-vocab
+  a ex:Ontology ;
+  ex:name "Basic Geo" ;
+  ex:namespaceURI "http://www.w3.org/2003/01/geo/wgs84_pos#" ;
+  ex:prefix "wgs84_pos:" .
+
+cdata:http-vocab
+  a ex:Ontology ;
+  ex:name "HTTP" ;
+  ex:namespaceURI "http://www.w3.org/2007/ont/http#" ;
+  ex:prefix "http:" .
+
+cdata:httph-vocab
+  a ex:Ontology ;
+  ex:name "HTTPH" ;
+  ex:namespaceURI "http://www.w3.org/2007/ont/httph#" ;
+  ex:prefix "httph:" .
+
+cdata:iana-vocab
+  a ex:Ontology ;
+  ex:name "Media Types" ;
+  ex:namespaceURI "https://www.w3.org/ns/iana/media-types/" ;
+  ex:prefix "iana:" .
+
+cdata:ical-vocab
+  a ex:Ontology ;
+  ex:name "iCal" ;
+  ex:namespaceURI "http://www.w3.org/2002/12/cal/ical" ;
+  ex:prefix "ical:" .
+
+cdata:ldp-vocab
+  a ex:Ontology ;
+  ex:name "Linked Data Platform" ;
+  ex:namespaceURI "http://www.w3.org/ns/ldp#" ;
+  ex:prefix "ldp:" .
+
+cdata:mee-vocab
+  a ex:Ontology ;
+  ex:name "Meeting" ;
+  ex:namespaceURI "http://www.w3.org/ns/pim/meeting#" ;
+  ex:prefix "mee:" .
+
+cdata:mo-vocab
+  a ex:Ontology ;
+  ex:name "Music" ;
+  ex:namespaceURI "http://purl.org/ontology/mo/" ;
+  ex:prefix "mo:" .
+
+cdata:owl-vocab
+  a ex:Ontology ;
+  ex:name "Web Ontology Language (OWL)" ;
+  ex:namespaceURI "http://www.w3.org/2002/07/owl#" ;
+  ex:prefix "ex:" .
+
+cdata:stat-vocab
+  a ex:Ontology ;
+  ex:name "Stat" ;
+  ex:namespaceURI "http://www.w3.org/ns/posix/stat#" ;
+  ex:prefix "posix:" .
+
+cdata:rdf-vocab
+  a ex:Ontology ;
+  ex:name "RDF Syntax" ;
+  ex:namespaceURI "http://www.w3.org/1999/02/22-rdf-syntax-ns#" ;
+  ex:prefix "rdf:" .
+
+cdata:rdfs-vocab
+  a ex:Ontology ;
+  ex:name "RDF Schema" ;
+  ex:namespaceURI "http://www.w3.org/2000/01/rdf-schema#" ;
+  ex:prefix "rdfs:" .
+
+cdata:rLog-vocab
+  a ex:Ontology ;
+  ex:name "rLog" ;
+  ex:namespaceURI "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#" ;
+  ex:prefix "rlog:" .
+
+cdata:schema-vocab
+  a ex:Ontology ;
+  ex:name "Schema" ;
+  ex:namespaceURI "https://schema.org/" ;
+  ex:prefix "schema:" .
+
+cdata:sioc-vocab
+  a ex:Ontology ;
+  ex:name "Socially Inter-linked Online Communities " ;
+  ex:namespaceURI "http://rdfs.org/sioc/ns#" ;
+  ex:prefix "sioc:" .
+
+cdata:siocs-vocab
+  a ex:Ontology ;
+  ex:name "Socially Inter-linked Online Communities - Services" ;
+  ex:namespaceURI "http://rdfs.org/sioc/services#" ;
+  ex:prefix "siocs:" .
+
+cdata:sioct-vocab
+  a ex:Ontology ;
+  ex:name "Socially Inter-linked Online Communities - Types" ;
+  ex:namespaceURI "http://rdfs.org/sioc/types#" ;
+  ex:prefix "sioct:" .
+
+cdata:skos-vocab
+  a ex:Ontology ;
+  ex:name "Simple Knowledge Organization System" ;
+  ex:namespaceURI "http://www.w3.org/2004/02/skos/core#" ;
+  ex:prefix "skos:" .
+
+cdata:solid-terms-vocab
+  a ex:Ontology ;
+  ex:name "Solid Terms" ;
+  ex:namespaceURI "http://www.w3.org/ns/solid/terms#" ;
+  ex:prefix "solid:" .
+
+cdata:pim-spac-vocab
+  a ex:Ontology ;
+  ex:name "Workspace" ;
+  ex:namespaceURI "http://www.w3.org/ns/pim/space#" ;
+  ex:prefix "space:" .
+
+cdata:dc-terms-vocab
+  a ex:Ontology ;
+  ex:name "Dublin Core Terms"@en ;
+  ex:namespaceURI "http://purl.org/dc/terms/" ;
+  ex:prefix "terms:" .
+
+cdata:time-vocab
+  a ex:Ontology ;
+  ex:name "Time" ;
+  ex:namespaceURI "http://www.w3.org/2006/time#" ;
+  ex:prefix "time:" .
+
+cdata:timezone-vocab
+  a ex:Ontology ;
+  ex:name "Timezone" ;
+  ex:namespaceURI "http://www.w3.org/2006/timezone#" ;
+  ex:prefix "tzont:" .
+
+cdata:ui-vocab
+  a ex:Ontology ;
+  ex:name "User Interface" ;
+  ex:namespaceURI "http://www.w3.org/ns/ui#" ;
+  ex:prefix "ui:" .
+
+cdata:vcard-vocab
+  a ex:Ontology ;
+  ex:name "vCard"@en ;
+  ex:namespaceURI "https://www.w3.org/2006/vcard/ns#" ;
+  ex:prefix "vcard:" .
+
+cdata:issue-vocab
+  a ex:Ontology ;
+  ex:name "Issue Tracking" ;
+  ex:namespaceURI "http://www.w3.org/2005/01/wf/flow#" ;
+  ex:prefix "wf:" .
+
+cdata:xsd-vocab
+  a ex:Ontology ;
+  ex:name "XML Schema" ;
+  ex:namespaceURI "http://www.w3.org/2001/XMLSchema#" ;
+  ex:prefix "xsd:" .
+
+###
+# LEARNING RESOURCES
+###
+
+cdata:ActivityPodsDocs
+  ex:name "Create your first social app" ;
+  ex:landingPage <https://docs.activitypods.org/tutorials/create-your-first-social-app/> ;
+  ex:description "We created a boilerplate to help you quickly setup a social app in a local environment, and connect it with a local Pod provider. In just a few minutes, you should be able to play with your first ActivityPods-compatible app!" ;
+  ex:about :ActivityPods ;
+  a ex:LearningResource ;
+  ex:subType con:Tutorial .
+
+cdata:PdsInteropConventions
+  ex:name "PDS Interop Conventions" ;
+  ex:landingPage <https://github.com/pdsinterop/conventions?tab=readme-ov-file> ;
+  ex:description "Conventions around how apps and services store data on your personal data store." ;
+  ex:provider :PDSINTEROP ;
+  a ex:LearningResource ;
+  ex:subType con:Tutorial .
+
+cdata:SolidTagExplainer
+  ex:name "TAG Explainer for Solid" ;
+  ex:landingPage <https://timbl.solidcommunity.net/2023/03%20EWADA/TAGExplainerforSolid.html> ;
+  ex:provider :Tim_Berners-Lee ;
+  a ex:LearningResource ;
+  ex:subType con:Explainer .
+
+cdata:RDF-JS
+  ex:name "RDF+JS = &hearts;" ;
+  ex:provider :Arne_Hassel ;
+  ex:landingPage <https://rdfjs.dev/> ;
+  a ex:LearningResource ;
+  ex:subType con:Tutorial .
+
+cdata:WebComponentsDiscussion
+  ex:name "Solid Web Components Discussion" ;
+  a ex:LearningResource ;
+  ex:subType con:Tutorial .
+
+cdata:SolidShapesWiki
+  ex:name "Solid Shapes Wiki" ;
+  ex:landingPage <https://github.com/solid/shapes/wiki> ;
+  a ex:LearningResource ;
+  ex:subType con:Tutorial .
+
+cdata:GettingStarted
+  ex:name "Getting Started withSolid" ;
+  ex:landingPage <https://github.com/solid-contrib/getting-started/> ;
+  a ex:LearningResource ;
+  ex:subType con:Tutorial .
+
+cdata:JavaTutorial
+  a ex:LearningResource ;
+  ex:subType con:Tutorial;
+  ex:name "Java tutorial";
+  ex:provider :Inrupt;
+  ex:landingPage <https://docs.inrupt.com/developer-tools/java/client-libraries/getting-started/>  .
+
+cdata:JavaScriptTutorial
+  a ex:LearningResource ;
+  ex:subType con:Tutorial;
+  ex:name "Javascript tutorial";
+  ex:provider :Inrupt;
+  ex:landingPage <https://docs.inrupt.com/developer-tools/javascript/client-libraries/tutorial/getting-started/> .
+
+cdata:LDOtutorial
+  a ex:LearningResource ;
+  ex:subType con:Tutorial;
+  ex:name "Using LDO to build a Solid Application for React";
+  ex:provider :Oteam;
+  ex:landingPage <https://ldo.js.org/guides/solid_react/> .
+                  
+cdata:VocabsTutorial
+  a ex:LearningResource ;
+  ex:subType con:Tutorial ;
+  ex:name "Creating Vocabularies";
+  ex:provider :SolidTeam;
+  ex:landingPage <https://github.com/solid/solidproject.org/wiki/Vocabularies-Overview> .
+
+
+cdata:TodoApp
+  a ex:LearningResource ;
+  ex:subType con:Tutorial ;
+  ex:name "How to Build a Solid To-Do App with React" ;
+  ex:provider :VirginiaBalseiro ;
+  ex:landingPage <https://virginiabalseiro.com/blogposts/tutorial-create-a-solid-to-do-app> .
+
+
+cdata:EmberSolidVideo
+  a ex:LearningResource ;
+  ex:subType con:Tutorial ;
+  ex:name "Ember Solid - a video tutorial" ;
+  ex:about :EmberSolid ;
+  ex:provider :AadVersteden ;
+  ex:landingPage <https://nextcloud.hellofuture.be/s/nYYNwGceFSNotJY> .
+
+
+cdata:VueSolidPod
+  ex:name "Vue Solid Pod" ;
+  ex:landingPage <https://github.com/Certiman/vue-solid-pod> ;
+  ex:description "This web application reproduces the SOLID POD Tutorial App using the vite & vue3 starter template. The intention is to demo how Solid pods can easily be integrated into Vue3 apps." ;
+  ex:provider :Certiman  ;
+  a ex:LearningResource ;
+  ex:subType con:Tutorial .
+
+cdata:Solid_QA
+  a ex:LearningResource ;
+  ex:subType con:SpecificationSupplement     ;
+  ex:name "Solid QA" ;
+  ex:softwareKeyword "solid","quality assurance","specifications" ;
+  ex:landingPage <https://solidproject.org/ED/qa> ;
+  ex:landingPage <https://github.com/solid/specification> .
+    
+cdata:Solid_Security_Considerations
+  ex:name "Solid Security Considerations" ;
+  a ex:LearningResource ;
+  ex:subType con:SpecificationSupplement ;
+  ex:softwareKeyword "solid","security","specifications" ;
+  ex:landingPage <https://solid.github.io/security-considerations/> ;
+  ex:landingPage <https://github.com/solid/security-considerations> .
+    
+cdata:Solid_OIDC_Primer
+  ex:name "Solid OIDC Primer" ;
+  ex:about :Solid-OIDC ;
+  a ex:LearningResource ;
+  ex:subType con:SpecificationSupplement     ;
+  ex:softwareKeyword "solid-OIDC","authentication","specifications" ;
+  ex:landingPage <https://solidproject.org/TR/oidc-primer> ;
+  ex:landingPage <https://github.com/solid/solid-oidc> .
+    
+cdata:Authorization_Use_Cases_and_Requirements
+  a ex:LearningResource ;
+  ex:subType con:SpecificationSupplement ;
+  ex:softwareKeyword "authorization","use case","requirement","specifications" ;
+  ex:name "Authorization Use Cases and Requirements" ;
+  ex:landingPage <https://solid.github.io/authorization-panel/authorization-ucr/> ;
+  ex:landingPage <https://github.com/solid/authorization-panel> .
+    
+cdata:Authorization_Use_Cases_Survey
+  a ex:LearningResource ;
+  ex:subType con:SpecificationSupplement ;
+  ex:softwareKeyword "authorization","use case","requirement","specifications" ;
+  ex:name "Authorization Use Cases Survey" ;
+  ex:landingPage <https://github.com/solid/authorization-panel/blob/master/proposals/authorization-ucr/uc-survey.md> ;
+  ex:landingPage <https://github.com/solid/authorization-panel> .
+    
+cdata:Solid_Application_Interoperability__Application_Primer
+  ex:name "Solid Application Interoperability: Application Primer" ;
+  a ex:LearningResource ;
+  ex:subType con:SpecificationSupplement ; 
+  ex:softwareKeyword "interoperability","applications","specifications" ;
+  ex:landingPage <https://solid.github.io/data-interoperability-panel/primer/application.html> ;
+  ex:landingPage <https://github.com/solid/data-interoperability-panel> .
+    
+cdata:Solid_Application_Interoperability__Authorization_Agent_Primer
+  a ex:LearningResource ;
+  ex:subType con:SpecificationSupplement ;
+  ex:softwareKeyword "interoperability","authorization agent","specifications" ;
+  ex:name "Solid Application Interoperability: Authorization Agent Primer" ;
+  ex:landingPage <https://solid.github.io/data-interoperability-panel/primer/authorization-agent.html> ;
+  ex:landingPage <https://github.com/solid/data-interoperability-panel> .
+
+###
+# EVENTS
+###
+
+cdata:SolidWorld
+  ex:name "Solid World" ;
+  a ex:Event.
+
+cdata:SolidSymposium
+  ex:name "Solid Symposium" ;
+  a ex:Event .
+
+cdata:SolidPractitioners-WeeklyCall
+  ex:name "Solid Practitioners Video Call" ;
+  a ex:Event;
+  ex:provider :SolidPractitioners, :SolidTeam ;
+  ex:videoCallPage  <https://meet.jit.si/solid-practitioners> ;
+  ex:landingPage <https://github.com/solid-contrib/practitioners/tree/main/meetings> ;
+  ex:description "A hub for those putting the Solid vision into practice." ;
+  ex:schedule "Every other Monday at 18:00 UTC" .
+
+cdata:SolidCG-WeeklyCall
+  ex:name "W3C Solid Community Group Video Call" ;
+  a ex:Event;
+  ex:provider :SolidCG ;
+  ex:videoCallPage  <https://meet.jit.si/solid-cg> ;
+  ex:landingPage <https://github.com/solid/specification/tree/main/meetings> ;
+  ex:description "Learn and work on Solid specifications." ;
+  ex:Schedule "Every Wednesday at 15:00 UTC" .
+
+cdata:SolidOS-WeeklyCall
+  ex:name "SolidOS Video Call" ;
+  a ex:Event ;
+  ex:provider :SolidOSteam ;
+  ex:videoCallPage  <https://meet.jit.si/solid-os> ;
+  ex:landingPage <https://github.com/solid-contrib/practitioners/tree/main/meetings> ;
+  ex:description "Coding discussion to support the SolidOS stack of libraries and apps." ;
+  ex:schedule "Every Wednesday at 17:00 UTC" .
+
+cdata:DataModulesVideoCall
+  ex:name "Data Modules Video Call" ;
+  a ex:Event .
+

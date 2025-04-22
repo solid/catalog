@@ -149,7 +149,7 @@ export async function report(dataURL,shaclURL,skosURL,shape){
     if(!knownType[tval]){
       types.missing.push(s.value);
     }
-    if(!type || (!type.value.match('Person') && !knownSubType[sval])){
+    if(!type || (!type.value.match(/Person|Specification|Ontology|Event/) && !knownSubType[sval])){
       subTypes.missing.push(s.value);
     }
     if(type && knownType[type.value]){
@@ -166,7 +166,8 @@ export async function report(dataURL,shaclURL,skosURL,shape){
   }
   let report = "<b>Solid Resources Catalog Report</b> (" +  new Date().toLocaleDateString() +") " + subjects.length+" records\n<ul>";
   for(let dType of Object.keys(types.found)){
-    report += "<li><b>"+dType.replace(source().vocURL+'#','') + "</b>&nbsp;&nbsp;"+types.found[dType].count + "</li>";
+      report += "<li><b>"+node2label(dType) + "</b>&nbsp;&nbsp;"+types.found[dType].count + "</li>";
+//      report += "<li><b>"+node2label(dType).replace(source().vocURL+'#','') + "</b>&nbsp;&nbsp;"+types.found[dType].count + "</li>";
     report += "<ul>";
     for(let dSubType of Object.keys(subTypes.found)){
       if(subTypes.found[dSubType].inType != dType) continue;
@@ -174,7 +175,7 @@ export async function report(dataURL,shaclURL,skosURL,shape){
     }
     report += "</ul>";
   }
-  report += "<li><b>Types missing or unknown</b> "+types.missing.length + "</b></li>";
+  report += "</ul><ul><li><b>Types missing or unknown</b> "+types.missing.length + "</b></li>";
   report += "<li><b>Sub-Types missing or unknown "+subTypes.missing.length+"</b></li>";
   report += "</ul>";
   if(types.missing.length>0){

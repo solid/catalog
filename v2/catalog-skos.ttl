@@ -197,7 +197,7 @@ con:Explainer
 con:SpecificationSupplement
   a skos:Concept ;
   skos:broader con:LearningResourceType ;
-  skos:preflabel "Specification Supplement (primers,use cases,...)" .
+  skos:preflabel "Specification Supplement (primers,use cases,test results)" .
 
 con:Video
   a skos:Concept ;
@@ -208,4 +208,5 @@ con:OtherLearningResource
   a skos:Concept ;
   skos:broader con:LearningResourceType ;
   skos:preflabel "Other Learning Resource" .
+
 

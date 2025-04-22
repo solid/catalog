@@ -345,3 +345,160 @@ ex:Person a sh:NodeShape ;
     sh:maxLength 280 ;
     sh:description "funding, mentorship, collaboration, offered; separate multiple with a blank line"
   ] .
+
+  
+#################
+# SPECIFICATION #
+#################
+
+ex:Specification a sh:NodeShape ;
+  sh:targetClass ex:Specification ;
+  sh:property [
+    sh:path ex:name ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1
+  ] ;
+  sh:property [
+    sh:path ex:description ;
+    sh:datatype xsd:string ;
+    sh:maxLength 280 ;
+    sh:description "describe the specification" ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path ex:landingPage ;
+    sh:datatype xsd:anyURI ;
+    sh:maxCount 1
+  ] .
+
+############
+# ONTOLOGY #
+############
+
+ex:Ontology a sh:NodeShape ;
+  sh:targetClass ex:Ontology ;
+  sh:property [
+    sh:path ex:name ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1
+  ] ;
+  sh:property [
+    sh:path ex:description ;
+    sh:datatype xsd:string ;
+    sh:maxLength 280 ;
+    sh:description "describe the ontology" ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path ex:namespaceURI ;
+    sh:datatype xsd:anyURI ;
+    sh:maxCount 1
+  ] ;
+  sh:property [
+    sh:path  ex:prefix ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1
+  ] .
+
+#####################
+# LEARNING-RESOURCE #
+#####################
+
+ex:LearningResource a sh:NodeShape ;
+  sh:targetClass ex:LearningResource ;
+  sh:property [
+    sh:path ex:name ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1
+  ] ;
+  sh:property [
+    sh:path ex:subType ;
+    sh:or (
+      con:Tutorial
+      con:ResearchPaper
+      con:Explainer
+      con:SpecificationSupplement
+      con:Video
+      con:OtherLearningResource
+    ) ;
+    sh:minCount 1 ;
+    sh:maxCount 1
+  ] ;
+  sh:property [
+    sh:path ex:description ;
+    sh:datatype xsd:string ;
+    sh:maxLength 280 ;
+    sh:description "describe the learning resource" ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path ex:about ;
+    sh:description "the product or topic of the learning resource" ;
+    sh:datatype xsd:anyURI ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path ex:softwareKeyword ;
+    sh:description "comma-separated list for product type e.g. game, calendar, contacts manager" ;
+    sh:datatype xsd:string ;
+    sh:zeroOrMore true
+  ] ;
+  sh:property [
+    sh:path ex:landingPage ;
+    sh:datatype xsd:anyURI ;
+    sh:maxCount 1
+  ] .
+
+#########
+# EVENT #
+#########
+
+ex:Event a sh:NodeShape ;
+  sh:targetClass ex:Event ;
+  sh:property [
+    sh:path ex:name ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1
+  ] ;
+  sh:property [
+    sh:path ex:description ;
+    sh:datatype xsd:string ;
+    sh:maxLength 280 ;
+    sh:description "describe the event" ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path ex:about ;
+    sh:description "the product or topic of the learning resource" ;
+    sh:datatype xsd:anyURI ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path ex:provider ;
+    sh:datatype xsd:anyURI ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path ex:schedule ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path ex:provider ;
+    sh:datatype xsd:anyURI ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path ex:videoCallPage ;
+    sh:datatype xsd:anyURI ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path ex:landingPage ;
+    sh:datatype xsd:anyURI ;
+    sh:maxCount 1
+  ] .
