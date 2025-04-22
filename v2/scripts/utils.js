@@ -333,10 +333,7 @@ export async function shacl2form(shaclURL,skosURL,dataURL,shape,id) {
         alert("ERROR: You must enter a name!");
         return;
       }
-      if(!description.value) {
-        alert("ERROR: You must enter a description!");
-        return;
-      }
+
         let subject = form.getAttribute('id');
         if(!subject){
           subject = dataURL + "#" + nameInput.value.replace(/\s+/g,'_');

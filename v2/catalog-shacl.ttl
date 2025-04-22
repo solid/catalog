@@ -45,7 +45,6 @@ ex:Service a sh:NodeShape ;
     sh:path ex:description ;
     sh:datatype xsd:string ;
     sh:maxLength 280 ;
-    sh:minCount 1 ;
     sh:maxCount 1
   ] ;
   sh:property [
@@ -195,7 +194,7 @@ ex:Product a sh:NodeShape ;
     sh:maxCount 1
   ] ;
   sh:property [
-    sh:path ex:programmingLanguage ;
+   sh:path ex:programmingLanguage ;
     sh:datatype xsd:string ;
   ] ;
   sh:property [
@@ -207,7 +206,7 @@ ex:Product a sh:NodeShape ;
 # PATHS FOR LATER
 #
 # ex:platform (operating evnironment Server/Browser/Native-Client)
-# ex:implements (e.g. protocol)
+# ex:implements (e.g. protocol,requirement)
 # ex:reads (shape,conceptScheme,vocabulary,rdfs:Class)
 # ex:writes (shape,conceptScheme,vocabulary,rdfs:Class)
 
@@ -248,7 +247,6 @@ ex:Organization a sh:NodeShape ;
     sh:path ex:description ;
     sh:datatype xsd:string ;
     sh:maxLength 280 ;
-    sh:maxCount 1 ;
     sh:maxCount 1
   ] ;
   sh:property [
