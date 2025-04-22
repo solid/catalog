@@ -1386,6 +1386,7 @@ cdata:Tic_Tac_Moe
 cdata:Tim_Berners-Lee
   ex:name "Tim Berners-Lee" ;
   ex:forumHandle "@timbl" ;
+  ex:matrixHandle "@timbl" ;
   ex:landingPage <https://github.com/timbl> ;
   a ex:Person ;
   ex:webid <https://timbl.inrupt.net/profile/card#me>, <https://timbl.solidcommunity.net/profile/card#me>, <https://www.w3.org/People/Berners-Lee/card#> .

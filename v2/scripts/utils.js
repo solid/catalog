@@ -422,7 +422,7 @@ export async function shacl2form(shaclURL,skosURL,dataURL,shape,id) {
         if(valueLabel.length > 1){
           let v = [];
           for(let va of valueLabel) v.push(va.value);
-          valueLabel = v.join(',');
+            valueLabel = v.join(',');
         }
         else {
           valueLabel = valueLabel[0] ?valueLabel[0].value : "";
@@ -431,9 +431,9 @@ export async function shacl2form(shaclURL,skosURL,dataURL,shape,id) {
         let input;
         if(element) input = element.getElementsByTagName('input')[0] || element.getElementsByTagName('textarea')[0] || element.getElementsByTagName('select')[0];
         if(input){
-//          let newValue = valueLabel.replace(new RegExp(dataURLglobal, 'g'), '').replace(/\s+/g,' ').trim();
-          let newValue = node2label(valueLabel);
-          input.value = input.tagName==='SELECT' ?value :newValue;
+            let newValue = valueLabel.replace(new RegExp(source().dataURL+'#', 'g'), '').replace(/\s+/g,' ').trim();
+//          let newValue = node2label(valueLabel);
+	  input.value = input.tagName==='SELECT' ?value :newValue;
           input.value = input.value.trim();
         }
       }
