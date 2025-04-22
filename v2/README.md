@@ -34,11 +34,11 @@ An `X` indicates the file for that class is fully migrated to v2 format. A `~` i
   | Product          |   X   |  X
   | Organization     |   X   |  X
   | Person           |   X   |  X
-  | LearningResource |       |
-  | Event            |       | 
-  | Ontology         |       |
-  | Specification    |       |
-  | Offer            |       |
+  | LearningResource |   X   |  X
+  | Event            |   X   |  X
+  | Ontology         |   X   |  X
+  | Specification    |   X   |  X
+
 
 ## Some caveats about v2:
 

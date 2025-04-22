@@ -27,9 +27,9 @@ export const pageContent = {
 
 <p>
 <b>Notes:</b><ul>
-<li>A Service includes deployed identity &/or storage servers and also communication services like chats & forums.</li>
-<li>An Organization includes an informal coding group like the SolidOS Coding Group.</li>
-<li>More types coming soon (LearningResources,Specifications,etc.)</li>
+<li>A <b>Service</b> includes deployed identity &/or storage servers and also communication services like chats & forums.</li>
+<li>An <b>Organization</b> includes an informal coding group like the SolidOS Coding Group.</li>
+<li><b>Learning Resources</b> include primers, tutorials, use cases, and test result reports.</li>
 <ul></p>
 `,
 }
