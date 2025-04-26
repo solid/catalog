@@ -1,4 +1,4 @@
-import {loadCatalog,source,store,showPage,node2label,findName,parseRdfCollection} from './utils.js';
+import {loadCatalog,source,store,fetcher,showPage,node2label,findName,parseRdfCollection} from './utils.js';
 
 export async function shacl2form(shape,id) {
   await loadCatalog();
