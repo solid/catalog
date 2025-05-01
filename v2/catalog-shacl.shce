@@ -37,7 +37,7 @@ shape ex:Product -> ex:Product {
 	% .
 	ex:status [1..1] in=[con:Exploration con:Development con:Production con:Archived] .
 	ex:contactEmail xsd:string [0..1] pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
-		sh:description "if you wish to share the email privately to ODI, leave this blank & contact @jesswr"
+		sh:description "if you wish to share the email privately to ODI, leave this blank & contact solid+catalog@theodi.org"
 	% .
 	ex:description xsd:string [0..1] maxLength=280 .
 	ex:clientID xsd:string [0..1] %
@@ -64,7 +64,7 @@ shape ex:Organization -> ex:Organization {
 	ex:name xsd:string [1..1] .
 	ex:subType [1..1] in=[con:Company con:GovernmentalOrganization con:UniversityProject con:OpenSourceProject con:FundingOrganization con:OtherNGO] .
 	ex:contactEmail xsd:string [0..1] pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
-		sh:description "if you wish to share the email privately to ODI, leave this blank & contact @jesswr"
+		sh:description "if you wish to share the email privately to ODI, leave this blank & contact solid+catalog@theodi.org"
 	% .
 	ex:description xsd:string [0..1] maxLength=280 .
 	ex:logo IRI [0..1] .
@@ -83,7 +83,7 @@ shape ex:Organization -> ex:Organization {
 shape ex:Person -> ex:Person {
 	ex:name xsd:string [1..1] .
 	ex:contactEmail xsd:string [0..1] pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
-		sh:description "if you wish to share the email privately to ODI, leave this blank & contact @jesswr"
+		sh:description "if you wish to share the email privately to ODI, leave this blank & contact solid+catalog@theodi.org"
 	% .
 	ex:webid xsd:string [0..1] %
 		sh:description "your WebID"
