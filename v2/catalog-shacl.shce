@@ -71,7 +71,6 @@ shape ex:Organization -> ex:Organization {
 	ex:landingPage IRI [0..1] .
 	ex:socialKeyword xsd:string %
 		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry" ;
-		sh:zeroOrMore true
 	% .
 	ex:resourcesWanted xsd:string maxLength=280 %
 		sh:description "funding, employees, interns, partners, separate multiple with a blank line"
