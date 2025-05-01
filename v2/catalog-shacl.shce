@@ -1,0 +1,152 @@
+PREFIX con: <catalog-skos.ttl#>
+PREFIX ex: <http://example.org/#>
+
+shape ex:Service -> ex:Service {
+	ex:name xsd:string [1..1] .
+	ex:subType [1..1] in=[con:GeneralPurposePodService con:SpecializedPodService con:IdentityService con:StorageService con:ChatService con:ForumService con:MailingListService] .
+	ex:status [1..1] in=[con:Exploration con:Development con:Production con:Archived] .
+	ex:description xsd:string [0..1] maxLength=280 .
+	ex:contactEmail xsd:string [0..1] pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
+		sh:description "if you wish to share the email privately to ODI, leave this blank & contact @jesswr"
+	% .
+	ex:logo IRI [0..1] .
+	ex:landingPage IRI [0..1] .
+	ex:serviceEndpoint IRI [0..1] .
+	ex:provider xsd:string %
+		sh:description "name of Person(s) and/or Organization(s)"
+	% .
+	ex:socialKeyword xsd:string %
+		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry" ;
+		sh:zeroOrMore true
+	% .
+	ex:serviceBackend xsd:string %
+		sh:description "name of server software (e.g. ESS for inrupt.com)"
+	% .
+	ex:serviceFrontend xsd:string %
+		sh:description "name of server frontend (e.g. SolidOS or Penny)"
+	% .
+	ex:serviceAudience xsd:string [0..1] %
+		sh:description "for targeted Pod Services only; e.g. 'citizens of Belgium' or 'Yarrabah community'"
+	% .
+}
+shape ex:Product -> ex:Product {
+	ex:name xsd:string [1..1] .
+	ex:subType [1..1] in=[con:Application con:PodServer con:ServerPlugin con:DevelopmentTool con:StorageServer con:IdentityServer] .
+	ex:partOf xsd:string %
+		sh:description "for ServerPlugin/Component, name of server; for other product, name of software product is part of"
+	% .
+	ex:status [1..1] in=[con:Exploration con:Development con:Production con:Archived] .
+	ex:contactEmail xsd:string [0..1] pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
+		sh:description "if you wish to share the email privately to ODI, leave this blank & contact @jesswr"
+	% .
+	ex:description xsd:string [0..1] maxLength=280 .
+	ex:clientID xsd:string [0..1] %
+		sh:description "an OIDC ClientID, if available"
+	% .
+	ex:logo IRI [0..1] .
+	ex:landingPage IRI [0..1] .
+	ex:webAppEndpoint IRI [0..1] %
+		sh:description "URL of an app that can be run from an online endpoint"
+	% .
+	ex:provider xsd:string %
+		sh:description "name of Person(s) and/or Organization(s)"
+	% .
+	ex:socialKeyword xsd:string %
+		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry" ;
+		sh:zeroOrMore true
+	% .
+	ex:technicalKeyword xsd:string %
+		sh:description "comma-separated list for product type e.g. game, calendar, contacts manager" ;
+		sh:zeroOrMore true
+	% .
+}
+shape ex:Organization -> ex:Organization {
+	ex:name xsd:string [1..1] .
+	ex:subType [1..1] in=[con:Company con:GovernmentalOrganization con:UniversityProject con:OpenSourceProject con:FundingOrganization con:OtherNGO] .
+	ex:contactEmail xsd:string [0..1] pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
+		sh:description "if you wish to share the email privately to ODI, leave this blank & contact @jesswr"
+	% .
+	ex:description xsd:string [0..1] maxLength=280 .
+	ex:logo IRI [0..1] .
+	ex:landingPage IRI [0..1] .
+	ex:socialKeyword xsd:string %
+		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry" ;
+		sh:zeroOrMore true
+	% .
+	ex:resourcesWanted xsd:string maxLength=280 %
+		sh:description "funding, employees, interns, partners, separate multiple with a blank line"
+	% .
+	ex:resourcesOffered xsd:string maxLength=280 %
+		sh:description "funding, mentorship, collaboration,  separate multiple with a blank line"
+	% .
+}
+shape ex:Person -> ex:Person {
+	ex:name xsd:string [1..1] .
+	ex:contactEmail xsd:string [0..1] pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
+		sh:description "if you wish to share the email privately to ODI, leave this blank & contact @jesswr"
+	% .
+	ex:webid xsd:string [0..1] %
+		sh:description "your WebID"
+	% .
+	ex:forumHandle xsd:string [0..1] %
+		sh:description "your handle on the Solid Forum"
+	% .
+	ex:matrixHandle xsd:string [0..1] %
+		sh:description "your handle in the Matric chatrooms"
+	% .
+	ex:description xsd:string [0..1] maxLength=280 %
+		sh:description "describe your interest and/or work in Solid"
+	% .
+	ex:image IRI [0..1] .
+	ex:landingPage IRI [0..1] .
+	ex:resourcesWanted xsd:string maxLength=280 %
+		sh:description "positions or funding wanted; separate multiple requests with blank lines"
+	% .
+	ex:resourcesOffered xsd:string maxLength=280 %
+		sh:description "funding, mentorship, collaboration, offered; separate multiple with a blank line"
+	% .
+}
+shape ex:Specification -> ex:Specification {
+	ex:name xsd:string [1..1] .
+	ex:description xsd:string [0..1] maxLength=280 %
+		sh:description "describe the specification"
+	% .
+	ex:landingPage IRI [0..1] .
+}
+shape ex:Ontology -> ex:Ontology {
+	ex:name xsd:string [1..1] .
+	ex:description xsd:string [0..1] maxLength=280 %
+		sh:description "describe the ontology"
+	% .
+	ex:namespaceURI IRI [0..1] .
+	ex:prefix xsd:string [0..1] .
+}
+shape ex:LearningResource -> ex:LearningResource {
+	ex:name xsd:string [1..1] .
+	ex:subType [1..1] in=[con:Tutorial con:ResearchPaper con:Explainer con:SpecificationSupplement con:Video con:OtherLearningResource] .
+	ex:description xsd:string [0..1] maxLength=280 %
+		sh:description "describe the learning resource"
+	% .
+	ex:about IRI [0..1] %
+		sh:description "the product or topic of the learning resource"
+	% .
+	ex:technicalKeyword xsd:string %
+		sh:description "comma-separated list for product type e.g. game, calendar, contacts manager" ;
+		sh:zeroOrMore true
+	% .
+	ex:landingPage IRI [0..1] .
+}
+shape ex:Event -> ex:Event {
+	ex:name xsd:string [1..1] .
+	ex:description xsd:string [0..1] maxLength=280 %
+		sh:description "describe the event"
+	% .
+	ex:about IRI [0..1] %
+		sh:description "the product or topic of the learning resource"
+	% .
+	ex:provider IRI [0..1] .
+	ex:schedule xsd:string [0..1] .
+	ex:provider IRI [0..1] .
+	ex:videoCallPage IRI [0..1] .
+	ex:landingPage IRI [0..1] .
+}

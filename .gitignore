@@ -16,3 +16,4 @@ symposium-2025
 /node_modules
 /test/tmp
 /.idea
+v2/catalog-shacl.ttl
