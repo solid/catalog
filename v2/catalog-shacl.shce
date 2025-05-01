@@ -1,4 +1,4 @@
-PREFIX con: <catalog-skos.ttl#>
+PREFIX con: </catalog-skos.ttl#>
 PREFIX ex: <http://example.org/#>
 
 shape ex:Service -> ex:Service {
@@ -88,7 +88,7 @@ shape ex:Person -> ex:Person {
 		sh:description "your handle on the Solid Forum"
 	% .
 	ex:matrixHandle xsd:string [0..1] %
-		sh:description "your handle in the Matric chatrooms"
+		sh:description "your handle in the Matrix chatrooms"
 	% .
 	ex:description xsd:string [0..1] maxLength=280 %
 		sh:description "describe your interest and/or work in Solid"
