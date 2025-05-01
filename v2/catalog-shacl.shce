@@ -7,7 +7,7 @@ shape ex:Service -> ex:Service {
 	ex:status [1..1] in=[con:Exploration con:Development con:Production con:Archived] .
 	ex:description xsd:string [0..1] maxLength=280 .
 	ex:contactEmail xsd:string [0..1] pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
-		sh:description "if you wish to share the email privately to ODI, leave this blank & contact @jesswr"
+		sh:description "if you wish to share the email privately to ODI, leave this blank & contact solid+catalog@theodi.org"
 	% .
 	ex:logo IRI [0..1] .
 	ex:landingPage IRI [0..1] .
