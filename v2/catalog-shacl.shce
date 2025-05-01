@@ -16,8 +16,7 @@ shape ex:Service -> ex:Service {
 		sh:description "name of Person(s) and/or Organization(s)"
 	% .
 	ex:socialKeyword xsd:string %
-		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry" ;
-		sh:zeroOrMore true
+		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry"
 	% .
 	ex:serviceBackend xsd:string %
 		sh:description "name of server software (e.g. ESS for inrupt.com)"
@@ -52,12 +51,10 @@ shape ex:Product -> ex:Product {
 		sh:description "name of Person(s) and/or Organization(s)"
 	% .
 	ex:socialKeyword xsd:string %
-		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry" ;
-		sh:zeroOrMore true
+		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry"
 	% .
 	ex:technicalKeyword xsd:string %
-		sh:description "comma-separated list for product type e.g. game, calendar, contacts manager" ;
-		sh:zeroOrMore true
+		sh:description "comma-separated list for product type e.g. game, calendar, contacts manager"
 	% .
 }
 shape ex:Organization -> ex:Organization {
@@ -70,7 +67,7 @@ shape ex:Organization -> ex:Organization {
 	ex:logo IRI [0..1] .
 	ex:landingPage IRI [0..1] .
 	ex:socialKeyword xsd:string %
-		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry" ;
+		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry"
 	% .
 	ex:resourcesWanted xsd:string maxLength=280 %
 		sh:description "funding, employees, interns, partners, separate multiple with a blank line"
@@ -130,8 +127,7 @@ shape ex:LearningResource -> ex:LearningResource {
 		sh:description "the product or topic of the learning resource"
 	% .
 	ex:technicalKeyword xsd:string %
-		sh:description "comma-separated list for product type e.g. game, calendar, contacts manager" ;
-		sh:zeroOrMore true
+		sh:description "comma-separated list for product type e.g. game, calendar, contacts manager"
 	% .
 	ex:landingPage IRI [0..1] .
 }
