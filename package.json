@@ -6,7 +6,7 @@
   "main": "catalog.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rdf-transform-cli ./v2/catalog-shacl.shce ./v2/catalog-shacl.ttl"
+    "build": "rdf-transform-cli ./v2/catalog-shacl.shce ./v2/catalog-shacl.ttl -p"
   },
   "keywords": [],
   "author": "Jeff Zucker",
@@ -16,6 +16,6 @@
     "rdflib": "^2.2.37"
   },
   "devDependencies": {
-    "rdf-transform-cli": "^1.0.0"
+    "rdf-transform-cli": "^1.1.0"
   }
 }
