@@ -18,16 +18,20 @@ const pathNode = $rdf.sym('http://www.w3.org/ns/shacl#path') ;
 */   
 export function source(){
   window.currentFolder = window.location.href.replace(/\/pages\/[^\/]+$/,'/');
+  let vocURL= 'http://example.org/';
   return {
     dataURL   : currentFolder + 'catalog-data.ttl',
     shaclURL  : currentFolder + 'catalog-shacl.ttl',
     skosURL   : currentFolder + 'catalog-skos.ttl',
     newDataURL    : currentFolder + 'new-data/',
-    vocURL    : 'http://example.org/',
+    vocURL,
     dataNode  : $rdf.sym(currentFolder + 'catalog-data.ttl'),
     shaclNode : $rdf.sym(currentFolder + 'catalog-shacl.ttl'),
     skosNode  : $rdf.sym(currentFolder + 'catalog-skos.ttl'),
-      isa : $rdf.sym('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'),
+   isa : $rdf.sym('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'),
+    subtypeNode : $rdf.sym(vocURL+'#subType'),
+    techKeywordsNode : $rdf.sym(vocURL+'#technicalKeyword'),
+    socKeywordsNode : $rdf.sym(vocURL+'#socialKeyword'),
   }
 }
 
@@ -35,7 +39,7 @@ export function source(){
 */   
 export function node2label(thing){
   let label = thing.value ?thing.value :thing;
-  return label.replace(/.*\//,'').replace(/.*#/,'');
+  return label.replace(/.*#/,'').replace(/.*\//,'');
 }
 
 /* findName -- get name predicate value from subject node
@@ -48,13 +52,24 @@ export function findName(url){
   return (label && label.value) ?label.value :"";
 }
 
-/* findPrefLabel -- get prefLabel predicate value from subject node
+/* findPrefLabel -- get prefLabel predicate value from SKOS subject node
 */   
 export function findPrefLabel(subject){
   if(!subject) return "";
   let node = subject.value ?subject :$rdf.sym(subject);
   let labelNode = $rdf.sym("http://www.w3.org/2004/02/skos/core#prefLabel");
-  let label = store.any(subject,labelNode,null,source().skosNode);
+//  let label = store.any(subject,labelNode,null,source().skosNode);
+  let label = store.any(node,labelNode,null,source().skosNode);
+  return (label && label.value) ?label.value :"";
+}
+
+/* findShaclName -- get sh:name from SHACL subject node
+*/   
+export function findShaclName(subject){
+  if(!subject) return "";
+  let node = subject.value ?subject :$rdf.sym(subject);
+  let labelNode = $rdf.sym('http://www.w3.org/ns/shacl#name');
+  let label = store.any(subject,labelNode,null,source().shaclNode);
   return (label && label.value) ?label.value :"";
 }
 
@@ -64,11 +79,14 @@ export function findPrefLabel(subject){
 */
 export function findNodeShapes(){
   const shapeNode = $rdf.sym('http://www.w3.org/ns/shacl#NodeShape');
+  const targetNode = $rdf.sym('http://www.w3.org/ns/shacl#targetClass');
   let shapes = store.each(null,isa,shapeNode,source().shaclNode);
-  console.log(source().shaclNode.value,shapes)    
   let knownShape = {} ;
   for(let s of shapes){
-    knownShape[s.value] = node2label(s.value);
+//    knownShape[s.value] = node2label(s.value);
+//    knownShape[s.value] = findShaclName(s);
+    const targetClass = store.any(s,targetNode,null,source().shaclNode);
+    knownShape[targetClass] = findShaclName(s);
   }
   return knownShape;
 }
@@ -78,15 +96,167 @@ export function findNodeShapes(){
                     e.g. {'https://ex/#Product':'Product'}
 */
 export function findKnownSubTypes(){
+  let nodeShapeNode = $rdf.sym('http://www.w3.org/2004/02/skos/core#NodeShape');
   let subTypes = store.match(null,null,null,source().skosNode);
   let knownSubType = {} ;
   for(let t of subTypes){
-//      let label = store.match(t,prefLabelNode,null,source().skosNode);
-      let label = findPrefLabel(t.subject);
+    let label = findPrefLabel(t.subject);
     knownSubType[t.subject.value] = label ;
+//    knownSubType[t.subject.value] = true ;
   }
   return knownSubType;
 }
+export function findRecord(subjectURL){
+  const subject = $rdf.sym(subjectURL);
+  let predicates = store.match(subject,null,null,source().dataNode);
+  let objects = store.match(null,null,subject,source().dataNode) ;
+  let record = getRecordPredicates({},subject,predicates,'subject');
+  record = getRecordPredicates(record,subject,objects,'object');
+/*
+  let subtype = store.any(subject,source().subtypeNode,null,source().dataNode);
+  if(subtype && subtype.value.match(source().skosURL)) subtype = findPrefLabel(subtype);
+  let name = findName(subject);
+  let type = store.any(subject,source().isa,null,source().dataNode);
+  let isPred = {};
+  let record = {};
+  for(let p of triples){
+    if(isPred[p.predicate.value]) continue;
+    isPred[p.predicate.value]=true;
+    let fieldName = node2label(p.predicate.value);
+    let newValue = store.match(subject,p.predicate,null,source().dataNode);
+    let valArray= [];
+    for(let nv of newValue){
+      let n = {...nv.object};  
+      if(n.value.match(source().dataURL)){
+        let label = findName(n.value);
+        n.value = `<a href="${n.value}">${label}</a>`;
+      }
+      else if(n.value.match(source().skosURL)){
+        n.value = findPrefLabel(n.value);
+      }
+      else if(p.predicate.value.match(/keyword/i)){
+        n.value = `<a href="${n.value}">${n.value}</a>`;
+      }
+      valArray.push(n.value);
+    }
+    let fieldValue= valArray.join(', ')
+    if(p.predicate.value.match(/subType/i)) fieldValue = subtype;
+    record[fieldName]=fieldValue;
+  }
+  let type = store.any(subject,source().isa,null,source().dataNode);
+  record.type = node2label(type);
+*/
+  return record;
+}
+
+function getRecordPredicates(record,subject,triples,posOfThing) {
+  let isPred = {};
+  let name = findName(subject);
+  let subtype = store.any(subject,source().subtypeNode,null,source().dataNode);
+  if(subtype && subtype.value.match(source().skosURL)) subtype = findPrefLabel(subtype);
+  for(let p of triples){
+    if(isPred[p.predicate.value]) continue;
+    isPred[p.predicate.value]=true;
+    let fieldName = node2label(p.predicate.value);
+    let newValue = posOfThing==='subject' 
+      ? store.match(subject,p.predicate,null,source().dataNode)
+      : store.match(null,p.predicate,subject,source().dataNode);
+    let valArray= [];
+    for(let nv of newValue){
+      let n = posOfThing==='subject' ?{...nv.object} :{...nv.subject};  
+      if(n.value.match(source().dataURL)){
+        let label = findName(n.value);
+        n.value = `<a href="${n.value}">${label}</a>`;
+      }
+      else if(n.value.match(source().skosURL)){
+        n.value = findPrefLabel(n.value);
+      }
+      else if(p.predicate.value.match(/keyword/i)){
+        n.value = `<a href="${n.value}">${n.value}</a>`;
+      }
+      valArray.push(n.value);
+    }
+    let fieldValue= valArray.join(', ')
+    if(p.predicate.value.match(/subType/i)) fieldValue = subtype;
+    if(posOfThing==='object') fieldName += "Of";
+    record[fieldName]=fieldValue;
+  }
+  let type = store.any(subject,source().isa,null,source().dataNode);
+  record.type = node2label(type);
+  return record;
+}
+
+export function findRecordsByType(type){
+  let subs = [];
+  let records = store.match(null,source().isa,$rdf.sym(type),source().dataNode).map(match => match.subject);
+  return records.sort();
+}
+export function findRecordsBySubtype(subtype){
+  let subs = [];
+  let records = store.match(null,source().subtypeNode,$rdf.sym(subtype),source().dataNode).map(match => match.subject);
+  return records.sort();
+}
+export function findRecordsByTechKeyword(keyword){
+  let records = [];
+  let raw = store.match(null,source().techKeywordsNode,null,source().dataNode);
+  for(let r of raw){
+    if(r.object.value.trim().match(keyword)){
+      let label = findName(r.subject);
+      records.push({link:r.subject,label});
+    }
+  }
+  return records.sort();
+}
+export function findRecordsByKeyword(keyword){
+  let records = [];
+  let tech = store.match(null,source().techKeywordsNode,null,source().dataNode);
+  let soc = store.match(null,source().socKeywordsNode,null,source().dataNode);
+  for(let r of tech.concat(soc)){
+    if(!keyword || r.object.value.trim().match(keyword)){
+      let label = findName(r.subject);
+      records.push({link:r.subject.value,label});
+    }
+  }
+  records.sort((a, b) => {
+    if (a.label < b.label) return -1;
+    if (a.label > b.label) return 1;
+    return 0;
+  });
+  return records;
+}
+export function findKeywords(){
+  let keys = [];
+  let isKey = {};
+  let tech = store.match(null,source().techKeywordsNode,null,source().dataNode);
+  let soc = store.match(null,source().socKeywordsNode,null,source().dataNode);
+  for(let r of tech.concat(soc)){
+    let key = r.object.value;
+    if(isKey[key]) continue ;
+    isKey[key]=true;
+    keys.push(key);
+  }
+  return keys.sort();
+}
+
+
+export function findTechKeywords(subtype){
+  let keys = [];
+  let isKey = {};
+  let records = store.match(null,source().subtypeNode,$rdf.sym(subtype),source().dataNode).map(match => match.subject);
+  for(let r of records){
+    let keywords = store.each(r,source().techKeywordsNode,null,source().dataNode);
+    for(let k of keywords){
+      let k2 = k.value.split(',');
+      for(let k3 of k2){
+        if(isKey[k3]) continue;
+        isKey[k3]=true;
+        keys.push(k3.trim());
+      }
+    }
+  }
+  return keys.sort();
+}
+
 
 /* parseRdfCollection -- finds SKOS concepts from a collection
 */   
@@ -125,6 +295,29 @@ export function findUniqueSubjects(){
   return subjects;
 }
 
+/* findFullText
+*/   
+export function findFullText(term){
+  const subjects = [];
+  const isSubject = {}
+  const notUnique = store.match(null,null,null,source().dataNode);
+  for(let s of notUnique){
+    let recordStr="";
+    if(isSubject[s.subject.value]) continue;
+    isSubject[s.subject.value] = true;
+    let all = store.match(s.subject,null,null,source().dataNode);
+    for(let a of all){  
+      recordStr += [a.subject.value,a.predicate.value,a.object.value].join(" ");
+    }
+    if(recordStr.match(term)){
+      let label = findName(s.subject);
+      subjects.push({link:s.subject.value,label});
+      continue;
+    }
+  }
+  return subjects.sort();
+}
+
 /* PAGE DISPLAY */
 
 /*
@@ -132,28 +325,36 @@ export function findUniqueSubjects(){
 */
 export async function showPage(pageType,options){
   options ||= {};
-  const o = Object.assign({},parent.window.options(),options);
-  let main = parent.document.getElementById('searchPage');
-  let iframe = parent.document.getElementById('iframeDisplay');
-  let shaclURL = o.shaclURL;
+  const o = Object.assign({},source(),options);
+//  let main = parent.document.getElementById('searchPage');
+  let main = parent.document.getElementById('main-content');
+  let form = parent.document.querySelector('form.record');
+  let formsArea = parent.document.getElementById('forms-area');
+//  let iframe = parent.document.getElementById('iframeDisplay');
+  let iframe = formsArea;
+  let shaclURL = source().shaclURL;
   if(pageType=='main'){
-    let main = parent.document.getElementById('searchPage');
+//    let main = parent.document.getElementById('searchPage');
     main.style.display="block";
-    iframe.style.display="none";
+//    form.classList.add('formHidden');
+formsArea.innerHTML="";
+formsArea.style.display="none";
+main.style.display="block";
+//    iframe.style.display="none";
   }
   if(pageType=='type-chooser'){
     iframe.innerHTML = pageContent.typeChooser;
-    await prepNewRecordForm(o.shaclURL);
+    await prepNewRecordForm(source().shaclURL);
     main.style.display = "none";
     iframe.style.display = "block";
   }
   if(pageType=='record'){
     main.style.display = "none";
     iframe.style.display = "block";
-    const shape    = node2label(o.type);
+    let shape    = node2label(o.type);
     iframe.innerHTML = `<div id="menubar"></div><form id="shacl2form"></form>`;
+//shape = shape.replace('>','Shape');;
     await shacl2form(shape,o.id);
-//    if(o.id) loadRecord(o.id);
   }
 }
 
@@ -170,6 +371,7 @@ export async function search(term){
   for(let subject of subjects){
     const label = (store.any(subject,labelNode,null,dataNode)||{}).value;
     if(label && label.match(new RegExp(term,'i'))) { 
+//      string2search += ( `<li><a href="${subject.value}">${label}</a></li>\n` );  
       string2search += ( `<li><a href="${subject.value}">${label}</a></li>\n` );  
     }
   }

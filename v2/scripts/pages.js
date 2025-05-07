@@ -51,7 +51,7 @@ export async function prepRecordSearchForm(){
         e.preventDefault();
         const node = $rdf.sym(e.target.getAttribute('href'));
         const type = store.any(node,source().isa,null,dataNode)
-        showPage('record',{id:node.value,type:type.value});
+        showPage('record',{id:node.value,type:type.value+"Shape"});
         return false;
       });
     }

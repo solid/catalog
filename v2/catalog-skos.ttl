@@ -23,10 +23,10 @@ con:ProductType
   skos:inScheme con:SolidCatalogTaxonomy ;
   skos:prefLabel "Product Type".
 
-con:Application
+con:OtherApp
   a skos:Concept ;
   skos:broader con:ProductType ;
-  skos:prefLabel "Application (client)" .
+  skos:prefLabel "Application" .
 
 con:PodServer
   a skos:Concept ;
@@ -37,22 +37,27 @@ con:PodServer
 con:ServerPlugin
   a skos:Concept ;
   skos:broader con:ProductType ;
-  skos:prefLabel "Server Plugin or Component" .
+  skos:prefLabel "Server Extension" .
 
-con:DevelopmentTool
+con:SoftwareLibrary
   a skos:Concept ;
   skos:broader con:ProductType ;
-  skos:prefLabel "Development Tool (library,webcomponent,SDK,...)" .
+  skos:prefLabel "Software Library (module,webcomponent,SDK,...)" .
 
-con:IdentityServer
+con:ProductivityApp
   a skos:Concept ;
   skos:broader con:ProductType ;
-  skos:prefLabel "Identity Server" .
+  skos:prefLabel "Personal Productivity App" .
 
-con:StorageServer
+con:PodApp
   a skos:Concept ;
   skos:broader con:ProductType ;
-  skos:prefLabel "Storage Server" .
+  skos:prefLabel "Pod Management App" .
+
+con:LeisureApp
+  a skos:Concept ;
+  skos:broader con:ProductType ;
+  skos:prefLabel "Leisure Activity App" .
 
 
 ###
@@ -116,20 +121,10 @@ con:StorageService
   skos:broader con:ServiceType ;
   skos:prefLabel "Storage Service" .
 
-con:ChatService
+con:CommunicationService
   a skos:Concept ;
   skos:broader con:ServiceType ;
-  skos:prefLabel "Chat Service" .
-
-con:ForumService
-  a skos:Concept ;
-  skos:broader con:ServiceType ;
-  skos:prefLabel "Forum Service" .
-
-con:MailingListService
-  a skos:Concept ;
-  skos:broader con:ServiceType ;
-  skos:prefLabel "Mailing List Service" .
+  skos:prefLabel "Communication Service" .
 
 ###
 # Organization Type
@@ -168,7 +163,7 @@ con:FundingOrganization
 con:NonGovernmentalOrganization
   a skos:Concept ;
   skos:broader con:OrganizationType ;
-  skos:prefLabel "Other NGO" .
+  skos:prefLabel "NGO" .
 
 ###
 # Learning Resource Type
@@ -182,7 +177,7 @@ con:LearningResourceType
 con:Tutorial
   a skos:Concept ;
   skos:broader con:LearningResourceType ;
-  skos:prefLabel "Print Tutorial" .
+  skos:prefLabel "Tutorial" .
 
 con:ResearchPaper
   a skos:Concept ;
@@ -197,16 +192,11 @@ con:Explainer
 con:SpecificationSupplement
   a skos:Concept ;
   skos:broader con:LearningResourceType ;
-  skos:prefLabel "Specification Supplement (primers,use cases,test results)" .
-
-con:Video
-  a skos:Concept ;
-  skos:broader con:LearningResourceType ;
-  skos:prefLabel "Video" .
+  skos:prefLabel "Infrastructure Information (primer,use case,test result)" .
 
 con:OtherLearningResource
   a skos:Concept ;
   skos:broader con:LearningResourceType ;
-  skos:prefLabel "Other Learning Resource" .
+  skos:prefLabel "Learning Resource" .
 
 

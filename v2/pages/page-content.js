@@ -1,6 +1,6 @@
 export const pageContent = {
   recordSearch : `
-<sol-login></sol-login>
+<!-- <sol-login></sol-login> -->
 <div id="searchPage">
   <div style="color:yellow"><b>Solid Resources Catalog</b> Record Search Menu</div>
   <header>
@@ -15,7 +15,7 @@ export const pageContent = {
 <div id="iframeDisplay" src=""></div>
 `,
   typeChooser:`
-<div class="searchPage">
+<div class="searchPage" style="padding:1em;">
   <div style="color:yellow"><b>Solid Resources Catalog</b> New Record Menu</div>
 <header>
 <p>Use the form below to indicate what type of new record you want to create.</p>

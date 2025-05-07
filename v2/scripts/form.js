@@ -1,16 +1,45 @@
-import {loadCatalog,source,store,fetcher,showPage,node2label,findName,parseRdfCollection} from './utils.js';
+import {findFullText,loadCatalog,source,store,fetcher,showPage,node2label,findName,parseRdfCollection,findShaclName} from './utils.js';
 
-export async function shacl2form(shape,id) {
+export async function editRecord(id,area,shape) {
+  return await shacl2form(shape,id,area)
+}
+function shapeFromId(id){
+}
+export async function shacl2form(shape,id,area) {
   await loadCatalog();
-  const form = document.getElementById('shacl2form');
-  clearForm(form);      
-//  const shapeNode = $rdf.sym(dataURL + '#' + shape);
-  const shapeNode = $rdf.sym(source().vocURL + '#' + shape);
-    const properties = store.match(shapeNode, $rdf.sym('http://www.w3.org/ns/shacl#property',null,source().shaclNode));
+  area ||= 'forms-area';
+  if(!shape){
+    shape = (store.any($rdf.sym(id),source().isa,null,source().dataNode)||{}).value;
+  }
+  shape = shape.replace('>','').replace(/.*#/,'') + 'Shape';
+  let shapeNode = $rdf.sym(source().shaclURL + '#' + shape);
+  const mainArea = document.getElementById('main-content');
+  const formsArea = document.getElementById('forms-area');
+  let menubar = document.querySelector('#menubar'); 
+  if(!menubar){
+      menubar = document.createElement('div');
+      menubar.setAttribute('id','menubar');
+      formsArea.appendChild(menubar);
+  }
+  let form = document.querySelector('form');
+  if(!form) {
+    form = document.createElement('form'); 
+    formsArea.appendChild(form);
+  }
+    form.classList.add('record');
+//  clearForm(form);      
+//form.innerHTML="";
+//form.classList.add('formShown');
+formsArea.style.display="block";
+mainArea.style.display="none";
 
-    createMenubar(shape,id);
-//  populateRecordsDropdown(dataURL,shape);
-
+//console.log(1,shapeNode.value)
+//shapeNode=$rdf.sym('http://localhost:8444/home/s/catalog/v2/catalog-shacl.ttl#LearningResourceShape');
+//console.log(2,shapeNode.value)
+  const properties = store.match(shapeNode, $rdf.sym('http://www.w3.org/ns/shacl#property'),null,source().shaclNode);
+//  const properties = store.match(null, $rdf.sym('http://www.w3.org/ns/shacl#property'),null,source().shaclNode);
+console.log(3,properties);
+  createMenubar(shapeNode,id);
   properties.forEach( property => {
     const path = store.any(property.object, $rdf.sym('http://www.w3.org/ns/shacl#path'));
     const minCount = store.any(property.object, $rdf.sym('http://www.w3.org/ns/shacl#minCount'))||{value:0};
@@ -28,9 +57,9 @@ export async function shacl2form(shape,id) {
     field.classList.add('field');
     if (path) {
       field.setAttribute('id',path.value);
-//      field.setAttribute('path',path.value);
       if(datatype) field.setAttribute('datatype',datatype);
-      const fieldName = path.value.split('#')[1];
+//      const fieldName = path.value.split('#')[1];
+      const fieldName = findShaclName(property.object)
       let label = document.createElement('span');
       label.innerHTML = fieldName;
       label.classList.add('fieldLabel');
@@ -55,10 +84,14 @@ export async function shacl2form(shape,id) {
           datatype = datatype.match(/#/) ?datatype.split('#')[1] :datatype.replace(/.*\//,'') ;
           input.type = datatype === 'string' ? 'text' : 'url';
         }
-        input.name = label.innerHTML = fieldName;
+        let labelContent = fieldName;
+        input.name = fieldName;
         label.classList.add('fieldLabel');
         input.classList.add('fieldValue');
-        if(isRequired) label.innerHTML += `<b style="color:red">*</b>`;
+        if(isRequired) labelContent += '*';
+        label.innerHTML = labelContent;
+        if(isRequired) label.style.color="yellow";
+   
         field.appendChild(label);
         field.appendChild(input);
         field.appendChild(descField);
@@ -69,18 +102,25 @@ export async function shacl2form(shape,id) {
 
 
     function createMenubar(shape,recordURL){
-      const form = document.getElementsByTagName('form')[0];
-      const menubar = document.getElementById('menubar'); 
-      const shapeLabel = node2label(shape);
+      const form = document.querySelector('form.record');
+//      const menubar = document.getElementById('forms-menubar'); 
+      const formsAarea = document.getElementById('forms-area'); 
+      let menubar = document.querySelector('#menubar'); 
+      shape.value = (shape.value || shape).replace(/>/,'');
+      const shapeLabel = findShaclName(shape)||"";
       let recordLabel = findName(recordURL);
       const text = recordLabel ?`Edit ${shapeLabel} - '${recordLabel}'` :`Edit new ${shapeLabel}</span>`;
-      menubar.innerHTML = `<span>Solid Resources Catalog - ${text}`;
-      menubar.innerHTML += `
-        <span class="menubar">
-        <button id="saveRecord">save</button>
-        <button id="cancelButton">cancel</button>
+      let targetNode = $rdf.sym('http://www.w3.org/ns/shacl#targetClass');
+      const targetClass = store.any($rdf.sym(shape),targetNode,null,source().shaclNode);
+      menubar.innerHTML = `
+        <b>Solid Resources Catalog - ${text}</b>
+        <span class="buttons">
+          <button id="saveRecord">save</button>
+          <button id="cancelButton">cancel</button>
+        </span>
       `;
       let saveButton = document.getElementById('saveRecord');
+      let deleteButton = document.getElementById('deleteButton');
       let cancelButton = document.getElementById('cancelButton');
       saveButton.addEventListener('click', async function() {
         let all = `
@@ -106,8 +146,8 @@ export async function shacl2form(shape,id) {
           subjectLabel = subject.replace(source().dataURL+'#','cdata:');
         }
         else subjectLabel = `<${subject}>`;
-        all += `${subjectLabel} a ex:${shape} ;\n`;
-        const fields = document.querySelectorAll('.field');
+        all += `${subjectLabel} a ex:${shapeLabel.replace(/Shape$/,'')} ;\n`;
+        const fields = document.querySelectorAll('form.record .field');
         for(let field of fields){
           let input = field.querySelector('input') || field.querySelector('textarea') || field.querySelector('select');
           let object = input.value;
@@ -167,12 +207,14 @@ export async function shacl2form(shape,id) {
     }
 
     export function loadRecord(subject){
-      const form = document.getElementsByTagName('form')[0];
+//      const form = document.getElementById('forms-record');
+      const form = document.querySelector('form.record');
       clearForm(form);      
       //      const chooser = document.getElementById('chooser'); 
       //    let subject = $rdf.sym(chooser.value);
       subject = subject.value ?subject :$rdf.sym(subject);
       form.setAttribute('id',subject.value);
+      form.classList.add('record');
       let record = store.match(subject);
       for(let field of record){
         let predicate = field.predicate.value;

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solid Resources Catalog</title>
+  <script type="module" src='https://cdn.jsdelivr.net/npm/mashlib@latest/dist/mashlib.min.js'></script>
+  <link rel="stylesheet" type="text/css" href="./viewer.css">  
+  <link rel="stylesheet" type="text/css" href="./forms.css">  
+</head>
+<body>
+<div id="main-content">
+  <div class="sol-header">
+    <img src="https://solidproject.org/image/logo.svg" class="logo">
+    <span class="sol-header-content">
+      <b style="display:inline-block;padding-left:1rem;padding-right:1rem;"> Solid Resources Catalog </b>
+      <sol-catalog-search class="search-input"><input type="text"> 
+      <button class="search-button">search</button></sol-catalog-search>
+      <button class="keyword-index-button">keyword index</button>
+      <button class="new-record-button">new record</button>
+      <button class="about-button" source="./catalog-about.html">about</button>
+    </span>
+  </div>
+
+  <div id="main">
+    <div id="left-column"> </div>
+    <div id="right-column">
+      <div id="right-top"></div>
+      <div id="right-bottom"></div>
+    </div>
+  </div>
+</div>
+
+<div id="forms-area" style="display:none">
+  <div id="menubar"></div>
+  <form id="forms-record" class="record"></form>
+</div>
+
+<div id="help" style="display:none">
+<button style="text-align:right" onclick="document.body.classList.remove('showHelp')"><<</button>
+<h1 style="font-size:1.4em !important">Solid Resources Catalog</h1>
+
+<p>This catalog is a work in progress and not all data has been recently updated.  Please help by updataing records for yourself, your organization, and your projects.</p>
+
+<p>There are three main ways to navigate the catalog:</p>
+
+<ul>
+<li> Use the list of resource types at the left of the screenb
+<li> Use the full text searchbar at the top of the screen
+<li> Use the keyword index at the top of the screen
+<li> Navigate to a record and jump to related records
+</ul>
+
+<p>If you do not find a record for yourself or your projects, use the *new record* button at the top of the screen to create one.</p>
+
+<p>To read more about the catalog and other viewers for it, see <a href="https://github.com/solid/catalog">the gitihub repository</a> and/or catch me (@jeff-zucker) on matrix.</p>
+</div>
+
+  <script type="module">
+    import {viewer} from '../scripts/viewer.js';
+    await viewer();
+  </script>
+
+</body>
+</html>
+
+

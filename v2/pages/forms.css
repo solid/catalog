@@ -1,3 +1,4 @@
+/*
 body {
   background:#000022;
   color:#eeeeff;
@@ -34,16 +35,110 @@ a {
   font-family:Sans-Serif;
   font-size:1em;
 }
-form {
+*/
+form.record {
   margin:1em;
   padding:1em;
   padding-bottom:0;
   border:1px solid gray;
   border-radius:0.4em;  
-  background:#444466;
   color:#eeeeff;
   width:fit-content;
 }
+form.record.formShown * {
+  display:block;
+}
+#forms-area {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:-1;
+}
+#forms-area * {
+//  display:none;	 
+}
+#menubar {
+  display:inline-block;
+  padding:1em;
+  font-size:1.2em !important;
+}
+#menubar .buttons {
+  display:inline-block;
+  text-align:right;
+  margin-left:3em;
+}
+select,button, #menubar button {
+//  background:#2683fb !important;
+  color:#2683fb !important;
+  background:transparent;
+  padding:0.4em;
+  border-radius:0.4em;
+  border:1px solid #2683fb;
+  cursor:pointer;
+}
+form.record .fieldLabel ,
+.fieldName {
+    display:table-cell;
+    text-align:right;
+    width:10em;
+    padding-right:1em;
+    padding-bottom:0.5em;
+  }
+  .fieldValue { 
+    display:table-cell;
+   vertical-align:top;
+  }
+form.record  .fieldDescription {
+    display:table-cell;
+    vertical-align:top;
+    padding-left:1em !important;
+    max-width:40vw;
+  }
+form.record .field  {
+  display:table-row;
+}
+form.record input,
+form.record textarea,
+form.record select {
+  width:24em;
+  border-radius:0.4em;
+  padding:0.5em;
+  margin-bottom:1em;
+  background:#3a3a3a;
+  color:#eeeeff;
+
+}
+form.record option {
+  background:#6a6a6a;
+}
+form.record select {
+  width:25em;
+}
+form.record textarea {
+  height:4em;
+}
+form.record .field {
+  display:table-row;
+}
+
+form.record {
+  display:table;
+  border-collapse:separate;
+  border-spacing 1em 0;
+}
+/*
+
+.form.record .fieldName,
+  .form.record .fieldValue,
+  .form.record .fieldDescription {
+    display:table-cell;
+    display:inline-block;
+  background:orange;
+  }
+*/
+/*
 .menubar button{
   display:inline-block;
   margin-left:3em;
@@ -94,3 +189,4 @@ form textarea {
   margin-left:1em;
   width:25em;
 }
+*/
