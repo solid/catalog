@@ -1,7 +1,8 @@
 cert.pem
 key.pem
 symposium-2025
-/v2/notes.md
+/v2/scripts/notes.md
+/v2/new-data
 #*
 *~
 ./custom-config.json
