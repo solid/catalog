@@ -186,7 +186,7 @@ console.log(3,properties);
             body: all,
           });
            showPage( 'main' );
-           alert("File saved!")
+           alert("File saved! -- Note: edits will not be immedidiately encorporated in the data.")
           }catch(e){alert(e)}
        });       
        cancelButton.addEventListener('click', function() {
