@@ -91,14 +91,16 @@ export async function viewer(){
   for(let span of subAnchors){
     let subType = span.innerHTML;
     let label = findPrefLabel(subType).replace(/\(.*/,'').trim(); //*
+/*
     if(hasKeywords[label]){
       span.innerHTML = `<a href="#")">${label}</a>`;
       span.addEventListener('click', (e)=>{showFoundKeywords(e,all,subType,label)});
     }
     else {
+*/
       span.innerHTML = `<a href="#")">${label}</a>`;
       span.addEventListener('click', (e)=>{e.preventDefault();showFoundSubTypes(e,all,subType,label)});
-    }
+//    }
   }
   addListeners();
   readSearchParams();
@@ -218,8 +220,8 @@ function showRecord(subject){
 function showFoundKeywords(event,all,subtype,label){
   event.preventDefault();
   let keys = findTechKeywords(subtype);
-  const display = document.getElementById('center-column');
-  document.getElementById('right-column').innerHTML="";
+  const display = document.getElementById('right-top');
+  document.getElementById('right-bottom').innerHTML="";
   display.innerHTML = `<b>${label}</b><ul>`;
   for(let k of keys){
     let newItem = document.createElement('li');
