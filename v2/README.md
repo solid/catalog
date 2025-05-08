@@ -1,24 +1,23 @@
 # Notes for catalog v2
 
+## Features of V2
+* clickable tree of resource types with number of records in each
+* on each record 
+    * bi-directional links (e.g. provider <-> product, service <-> serviceBackend)
+    * links to off-site (repos,services,etc)
+    * links from keyword on a record to other records with same keyword
+* keyword index
+* full text search
+* edit records directly from viewer
+* forms to add records for each major resource type
+* can go direct to a record search from location bar ?search=term
+
+
 ## This folder contains
 
 * catalog-data.ttl - the main data file aggregated from ./data/*
 * catalog-shacl.ttl - the main SHACL file  aggregated from ./shacl/*
 * catalog-skos.ttl - the main SKOS controlled vocabulary concept scheme
-
-Note: during development, v2/catalog-data.ttl and v2/catalog-shacl.ttl will only contain the parts that have been fully migrated. See report.html.
-
-## The ./pages folder contains
-
-* forms.html -- the forms editing system
-* report.html -- checks that all subjects have a known type & subtype, reports missing/unknown
-* page-content.js -- content for the forms system pages
-* *.css - stylesheets
-* index.html minimal menu
-
-## The ./scripts folder contains
-
-* utils.js - needs modularizing, currently has reports, forms, and utilities
 
 ## The ./new-data folder contains
 
