@@ -47,6 +47,20 @@ cdata:Pivot a ex:Product ;
   ex:repository <https://github.com/solid-lite/server> .
 
 cdata:SolidWebDotOrg a ex:Service ;
+    ex:name  """solidweb.org"""@en ;
+    ex:subType  con:GeneralPurposePodService ;
+    ex:status  con:Exploration ;
+    ex:description  """solidweb.org is a public Solid server based in Germany which is in an experimental state."""@en ;
+    ex:contactEmail  """info@meisdata.io"""@en ;
+    ex:logo  <logo2.png> ;
+    ex:serviceEndpoint  <https://solidweb.org> ;
+    ex:provider  """SolidGrassroots"""@en ;
+    ex:domainKeyword  """Pod-Provider"""@en ;
+    ex:serviceBackend  cdata:NSS ;
+    ex:serviceFrontend  cdata:SolidOS ;
+    ex:modified "2025-04-22T03:40:39.786Z"^^xsd:dateTime .
+
+cdata:SolidWebDotOrg a ex:Service ;
   ex:name "solidweb.org" ;
   ex:status con:Production ;
   ex:subType con:GeneralPurposePodService ;
@@ -75,9 +89,19 @@ cdata:SolidWebDotMe a ex:Service ;
   ex:serviceBackend cdata:CSS ;
   ex:provider cdata:Meisdata .
 
+
 cdata:Meisdata a ex:Organization ;
-  ex:name "Meisdata" ;
-  ex:subType con:OpenSourceProject .
+    ex:name  """Meisdata"""@en ;
+    ex:subType  con:OpenSourceProject ;
+    ex:contactEmail  """info@meisdata.io"""@en ;
+    ex:description  """a small org providing a NSS a CSS and a Pivot"""@en ;
+    ex:logo  <https://www.serverproject.de/logo2.png> ;
+    ex:landingPage  <https://meisdata.io> ;
+    ex:domainKeyword  """Pod-Provider"""@en ;
+    ex:resourcesWanted  """knowledge experience funding snippets rdf turtle"""@en ;
+    ex:resourcesOffered  """server-maintenance"""@en ;
+    ex:modified "2025-04-22T03:39:06.075Z"^^xsd:dateTime .
+
 
 cdata:CSS a ex:Product ;
   ex:name "Community Solid Server (CSS)" ;
@@ -131,13 +155,14 @@ cdata:Mastopod a ex:Service ;
   ex:serviceBackend cdata:ActivityPods .
 
 cdata:ActivityPods a ex:Product ;
-  ex:name "ActivityPods" ;
-  ex:subType con:SoftwareLibrary ;
-  ex:provider cdata:Sebastien_Rosset ;
-  ex:description "A new kind of architecture for web applications which aims to reconcile the ActipvityPub and Solid standards.", "\n    Brings together two game-changing technologies, ActivityPub and Solid Pods, \n    and empowers developers to create truly decentralized applications\n  " ;
-  ex:landingPage <https://activitypods.org/> ;
-  ex:repository <https://github.com/activitypods/activitypods> ;
-  ex:status con:Production .
+    ex:name  """ActivityPods"""@en ;
+    ex:subType  con:SoftwareLibrary ;
+    ex:status  con:Production ;
+    ex:description  """A new kind of architecture for web applications which aims to reconcile the ActivityPub and Solid standards., Brings together two game-changing technologies, ActivityPub and Solid Pods, and empowers developers to create truly decentralized applications"""@en ;
+    ex:landingPage  <https://activitypods.org/> ;
+    ex:repository  <https://github.com/activitypods/activitypods> ;
+    ex:provider  cdata:Sebastien_Rosset ;
+    ex:modified "2025-05-08T08:47:52.971Z"^^xsd:dateTime .
 
 cdata:PodDotLiquidSurf a ex:Service ;
   ex:name "Liquid Surf" ;
@@ -160,12 +185,20 @@ cdata:EasyPenny a ex:Product ;
   ex:status con:Production ;
   ex:technicalKeyword "pod frontend" .
 
+
 cdata:TeamIdLive a ex:Service ;
-  ex:name "teamid.live" ;
-  ex:subType con:GeneralPurposePodService ;
-  ex:serviceEndpoint <https://teamid.live/> ;
-  ex:serviceBackend cdata:CSS ;
-  ex:provider cdata:Meisdata .
+    ex:name  """teamid.live"""@en ;
+    ex:subType  con:GeneralPurposePodService ;
+    ex:status  con:Exploration ;
+    ex:description  """Pivot"""@en ;
+    ex:contactEmail  <mailto:info@meisdata.io> ;
+    ex:logo  <https://www.serverproject.de/logo2.png> ;
+    ex:serviceEndpoint  <https://teamid.live> ;
+    ex:provider  cdata:Meisdata ;
+    ex:domainKeyword  """Pod-Provider"""@en ;
+    ex:serviceBackend  cdata:Pivot ;
+    ex:serviceFrontend  cdata:SolidOS ;
+    ex:modified "2025-04-22T03:43:06.788Z"^^xsd:dateTime .
 
 cdata:IgrantIo a ex:Service ;
   ex:name "Data Pod" ;
@@ -587,7 +620,7 @@ cdata:KnightFoundationTechnologyInnovation a ex:Organization ;
 cdata:RezaSoltani a ex:Person ;
   ex:name "Reza Soltani" .
 
-cdata:AngeloVeltens a ex:Person ;
+cdata:Angelo_Veltens a ex:Person ;
   ex:name "Angelo Veltens" .
 
 cdata:Eduardo_Rodriguez a ex:Person ;
@@ -617,6 +650,14 @@ cdata:Emelia_Smith a ex:Person ;
 
 cdata:Alexander_James_Phillips a ex:Person ;
   ex:name "Alexander James Phillips" .
+
+cdata:Friedrich-Alexander-Universität_Erlangen-Nürnberg a ex:Organization ;
+    ex:name  """Friedrich-Alexander-Universität Erlangen-Nürnberg"""@en ;
+    ex:subType  con:UniversityProject ;
+    ex:contactEmail  <mailto:andreas.harth@fau.de> ;
+    ex:description  """The Chair of Information Systems, with a focus on Technical Information Systems, conducts research in areas such as the Semantic Web, Linked Data, Knowledge Graphs, and decentralised information systems. The research is carried out in close collaboration with the department of Data Spaces and Internet of Things Solutions at the Fraunhofer Institute for Integrated Circuits IIS."""@en ;
+    ex:modified "2025-04-25T07:56:28.092Z"^^xsd:dateTime .
+
 
 cdata:Anna_Kallenborn-Bolden a ex:Person ;
   ex:name "Anna Kallenborn-Bolden" .
@@ -660,10 +701,28 @@ cdata:Matthew_Fowle a ex:Person ;
   ex:name "Matthew Fowle" .
 
 cdata:Matthias_Evering a ex:Person ;
-  ex:name "Matthias Evering" ;
-  ex:repository <https://github.com/ewingson> ;
-  ex:forumHandle "@ewingson" ;
-  ex:webid <https://ewingson.solidcommunity.net/profile/card#me> .
+    ex:name  """Matthias Evering"""@en ;
+    ex:contactEmail  <mailto:me@evering.eu> ;
+    ex:webid  <https://solidweb.me/testpro-dev/profile/card#me> ;
+    ex:forumHandle  """@ewingson"""@en ;
+    ex:matrixHandle  """@ewingson"""@en ;
+    ex:description  """baby coder"""@en ;
+    ex:logo  <https://avatars.githubusercontent.com/u/36561948?s=400&u=f9432d40dbea4f2291b9def6676dde978133709c&v=4> ;
+    ex:landingPage  <https://configedit.com/> ;
+    ex:repository  <https://github.com/ewingson> ;
+    ex:resourcesOffered  """NSS CSS and Pivot"""@en ;
+    ex:resourcesWanted  """rdf turtle community building pod-provider solution-focused communication diversity equity inclusion"""@en ;
+    ex:resourcesOffered  """pod-provider NSS CSS Pivot"""@en ;
+    ex:modified "2025-05-08T04:34:58.868Z"^^xsd:dateTime .
+
+
+cdata:Ross_Horne a ex:Person ;
+    ex:name  """Ross Horne"""@en ;
+    ex:contactEmail  <mailto:ross.horne@strath.ac.uk> ;
+    ex:description  """Interested in authentication protocols and security policy models."""@en ;
+    ex:resourcesOffered  """Security analysis of proposals for authentication and access control."""@en ;
+    ex:modified "2025-04-25T07:49:04.398Z"^^xsd:dateTime .
+
 
 cdata:Matthias_Thorner a ex:Person ;
   ex:name "Matthias Thorner" ;
@@ -730,8 +789,13 @@ cdata:Michael_Toomim a ex:Person ;
   ex:forumHandle "@toomim" .
 
 cdata:Michal a ex:Person ;
-  ex:name "Michal" ;
-  ex:forumHandle "@mrkvon" .
+    ex:name  """Michal"""@en ;
+    ex:webid  <https://id.mrkvon.org> ;
+    ex:forumHandle  """@mrkvon"""@en ;
+    ex:matrixHandle  """@mrkvon:matrix.org"""@en ;
+    ex:landingPage  <https://mrkvon.org> ;
+    ex:repository  <https://github.com/mrkvon> ;
+    ex:modified "2025-05-08T01:12:44.757Z"^^xsd:dateTime .
 
 cdata:Michiel_de_Jong a ex:Person ;
   ex:name "Michiel de Jong" ;
@@ -880,8 +944,12 @@ cdata:Paula_Veltens a ex:Person ;
   ex:webid <https://paula.veltens.org/profile/card#me> .
 
 cdata:Pavlik_Elf a ex:Person ;
-  ex:name "Pavlik Elf" ;
-  ex:repository <https://github.com/elf-pavlik> .
+    ex:name  """elf Pavlik"""@en ;
+    ex:webid  <https://elf-pavlik.hackers4peace.net> ;
+    ex:description  """On of Solid CG co-chairs. Co-editor of Solid Application Interoperability, Solid-OIDC, Security Consi  derations and some Solid Notification channel types. Maintainer of sai-js."""@en ;
+    ex:repository <https://github.com/elf-pavlik> ;
+    ex:modified "2025-05-08T01:08:56.392Z"^^xsd:dateTime .
+
 
 cdata:Pavlos_Pseftoyiannis a ex:Person ;
   ex:name "Pavlos Pseftoyiannis" .
@@ -1009,9 +1077,18 @@ cdata:Ruben_Verborgh a ex:Person ;
   ex:webid <https://ruben.verborgh.org/profile/#me> .
 
 cdata:RuiZhao a ex:Person ;
-  ex:name "Rui Zhao" ;
-  ex:forumHandle "@renyuneyun" ;
-  ex:webid <https://renyuneyun.solidcommunity.net/profile/card#me> .
+    ex:name  """Rui Zhao"""@en ;
+    ex:contactEmail  """me@ryey.icu"""@en ;
+    ex:webid <https://renyuneyun.solidcommunity.net/profile/card#me> ;
+    ex:forumHandle  """@renyuneyun"""@en ;
+    ex:matrixHandle  """@renyuneyun:matrix.org"""@en ;
+    ex:landingPage  <https://me.ryey.icu> ;
+    ex:resourcesOffered  """Mentorship
+Research Collaboration
+Development Collaboration
+Libraries
+Apps"""@en ;
+    ex:modified "2025-04-25T07:55:57.565Z"^^xsd:dateTime .
 
 cdata:Ryan_Aelen a ex:Person ;
   ex:name "Ryan Aelen" ;
@@ -1138,6 +1215,13 @@ cdata:Syed_Ali_Raza_Zaidi a ex:Person ;
 cdata:Sylvain_Le_Bon a ex:Person ;
   ex:name "Sylvain Le Bon" .
 
+cdata:Andreas_Harth a ex:Person ;
+    ex:name  """Andreas Harth"""@en ;
+    ex:contactEmail  <mailto:andreas@harth.org> ;
+    ex:webid  <http://harth.org/andreas/foaf#ah> ;
+    ex:matrixHandle  """@aharth:matrix.org"""@en ;
+    ex:modified "2025-04-25T07:53:45.052Z"^^xsd:dateTime .
+
 cdata:Sylvain_Saint-Andre a ex:Person ;
   ex:name "Sylvain Saint-André" .
 
@@ -1209,6 +1293,14 @@ cdata:Timo_Kankaanpaa a ex:Person ;
 cdata:Toby a ex:Person ;
   ex:name "Toby" ;
   ex:webid <https://tobytoberson.inrupt.net/profile/card#me> .
+
+cdata:Tobias_Käfer a ex:Person ;
+    ex:name  """Tobias Käfer"""@en ;
+    ex:contactEmail  <mailto:tobias.kaefer@kit.edu> ;
+    ex:webid  <https://kaefer3000.solidcommunity.net/profile/card#me> ;
+    ex:landingPage  <https://websci.aifb.kit.edu/Tobias_Kaefer.php> ;
+    ex:modified "2025-04-25T07:58:10.536Z"^^xsd:dateTime .
+
 
 cdata:Tom a ex:Person ;
   ex:name "Tom" ;
@@ -2021,15 +2113,6 @@ cdata:SolidFlix a ex:Product ;
   ex:status con:Exploration ;
   ex:technicalKeyword "movies" .
 
-cdata:Media_Kraken a ex:Product ;
-  ex:name "Media Kraken" ;
-  ex:subType con:LeisureApp ;
-  ex:provider cdata:Noel_De_Martin ;
-  ex:description "An app to track movies and create collections" ;
-  ex:landingPage <https://noeldemartin.github.io/media-kraken/> ;
-  ex:status con:Production ;
-  ex:technicalKeyword "movies" .
-
 cdata:TrinAppSuite a ex:Product ;
   ex:name "TrinApp Suite" ;
   ex:subType con:PodApp ;
@@ -2168,7 +2251,8 @@ cdata:Solid_Groups a ex:Product ;
   ex:provider cdata:Angelo_Veltens ;
   ex:landingPage <https://gitlab.com/angelo-v/solid-groups> ;
   ex:status con:Development ;
-  ex:technicalKeyword "contacts" .
+  ex:technicalKeyword "contacts" ;
+  ex:modified "2025-05-08T15:43:17.080Z"^^xsd:dateTime .
 
 cdata:Solid_Health a ex:Product ;
   ex:name "Solid Health (Paulos)" ;
@@ -2201,7 +2285,8 @@ cdata:Solid_Profile_Viewer a ex:Product ;
   ex:provider cdata:Angelo_Veltens ;
   ex:landingPage <https://gitlab.com/angelo-v/solid-profile-viewer> ;
   ex:status con:Development ;
-  ex:technicalKeyword "pod management" .
+  ex:technicalKeyword "pod management" ;
+  ex:modified "2025-05-08T15:43:00.452Z"^^xsd:dateTime .
 
 cdata:Solid_Signup a ex:Product ;
   ex:name "Solid Signup" ;
@@ -2649,9 +2734,13 @@ cdata:Poddit a ex:Product ;
   ex:status con:Development ;
   ex:technicalKeyword "bookmarks" .
 
-cdata:MediaKraken a ex:Product;
-  ex:provider cdata:Noel_De_Martin ;
+
+cdata:Media_Kraken a ex:Product ;
+  ex:name "Media Kraken" ;
   ex:subType con:LeisureApp ;
+  ex:provider cdata:Noel_De_Martin ;
+  ex:description "An app to track movies and create collections" ;
+  ex:landingPage <https://noeldemartin.github.io/media-kraken/> ;
   ex:status con:Production ;
   ex:technicalKeyword "movies" .
 
@@ -2695,13 +2784,16 @@ cdata:Penny a ex:Product ;
   ex:status con:Development ;
   ex:technicalKeyword "pod frontend" .
 
+
 cdata:PodOS a ex:Product ;
-  ex:name "PodOS" ;
-  ex:subType con:PodApp ;
-  ex:provider cdata:AngeloVeltens ;
-  ex:repository <https://github.com/pod-os/PodOS> ;
-  ex:status con:Development ;
-  ex:technicalKeyword "pod frontend" .
+    ex:name  """PodOS"""@en ;
+    ex:subType  con:PodApp ;
+    ex:status  con:Development ;
+    ex:description  """Your personal online data operating system"""@en ;
+    ex:repository  <https://github.com/pod-os/PodOS> ;
+    ex:provider  cdata:Angelo_Veltens ;
+    ex:technicalKeyword  """pod frontend"""@en ;
+    ex:modified "2025-05-08T15:40:08.515Z"^^xsd:dateTime .
 
 cdata:SolidOSWebApp a ex:Product ;
   ex:name "SolidOS Webapp" ;
