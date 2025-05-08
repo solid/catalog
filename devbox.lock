@@ -1,0 +1,53 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "resolved": "github:NixOS/nixpkgs/b3582c75c7f21ce0b429898980eddbbf05c68e55?lastModified=1746576598&narHash=sha256-FshoQvr6Aor5SnORVvh%2FZdJ1Sa2U4ZrIMwKBX5k2wu0%3D"
+    },
+    "nodejs@latest": {
+      "last_modified": "2025-05-07T00:09:58Z",
+      "plugin_version": "0.0.2",
+      "resolved": "github:NixOS/nixpkgs/b3582c75c7f21ce0b429898980eddbbf05c68e55#nodejs_24",
+      "source": "devbox-search",
+      "version": "24.0.0",
+      "systems": {
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/4bhnzcl6mk7i3lbmn4r5ls7i22n4qlc7-nodejs-24.0.0",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/3vnslzzihs8r5qx8mci972415wlp58fk-nodejs-24.0.0-dev"
+            },
+            {
+              "name": "libv8",
+              "path": "/nix/store/wmf4gfzzby0z4gzx7qm2dilplzc1v3rx-nodejs-24.0.0-libv8"
+            }
+          ],
+          "store_path": "/nix/store/4bhnzcl6mk7i3lbmn4r5ls7i22n4qlc7-nodejs-24.0.0"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/lv07xcpg100cv31mfcrgncwswzz708gl-nodejs-24.0.0",
+              "default": true
+            },
+            {
+              "name": "dev",
+              "path": "/nix/store/kva4qpzl1mbp2m1kvsjsh888x5nhwwba-nodejs-24.0.0-dev"
+            },
+            {
+              "name": "libv8",
+              "path": "/nix/store/qmmv7bkhfk6g26iinv4xgmy14k3zjhwy-nodejs-24.0.0-libv8"
+            }
+          ],
+          "store_path": "/nix/store/lv07xcpg100cv31mfcrgncwswzz708gl-nodejs-24.0.0"
+        }
+      }
+    }
+  }
+}
