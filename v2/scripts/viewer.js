@@ -34,13 +34,17 @@ function addListeners(){
 function showHelp(){
   let main = document.getElementById('main-content');
   let help = document.getElementById('help');
-  document.body.classList = [];
+  document.body.classList.remove('noHelp');
   document.body.classList.add('showHelp');
+//  main.style.display="none";
+  help.style.display="block";
 }
 function hideHelp(){
   let main = document.getElementById('main-content');
   let help = document.getElementById('help');
-  document.body.classList = [];
+  main.style.display="block";
+  help.style.display="none";
+  document.body.classList.remove('showHelp');
   document.body.classList.add('noHelp');
 }
 function readSearchParams(){

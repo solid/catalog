@@ -1,7 +1,7 @@
 @prefix xsd: <https://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix cdata: <http://localhost:8444/home/s/catalog/v2/catalog-data.ttl#> .
-@prefix con: <http://localhost:8444/home/s/catalog/v2/catalog-skos.ttl#> .
+@prefix cdata: <#> .
+@prefix con: <./catalog-skos.ttl#> .
 @prefix ex: <http://example.org/#> .
 
 cdata:InruptPodSpaces a ex:Service ;
