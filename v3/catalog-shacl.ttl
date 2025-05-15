@@ -1,9 +1,12 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <#> .                      # SHACL Shapes
 @prefix ex: <http://example.org/#> . # Data Classes & Properties
 @prefix con: <catalog-skos.ttl#> .   # SKOS concept tree
 
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+: a owl:Ontology .
 
 #####################
 # LEARNING-RESOURCE #
@@ -144,7 +147,7 @@
 :statusShape a sh:PropertyShape ;
   sh:path ex:status ;
   sh:name "status"@en;
-  sh:or(
+  sh:in (
     con:Exploration
     con:Development
     con:Production
@@ -223,7 +226,7 @@
 :serviceSubtypeShape a sh:PropertyShape ;
   sh:path ex:subType ;
   sh:name "subtype"@en;
-  sh:or (  
+  sh:in (  
     con:GeneralPurposePodService
     con:SpecializedPodService
     con:CommunicationService
@@ -261,7 +264,7 @@
 :organizationSubtypeShape a sh:PropertyShape ;
     sh:path ex:subType ;
     sh:name "subtype" ;
-    sh:or (
+    sh:in (
       con:Company
       con:GovernmentalOrganization
       con:UniversityProject
@@ -294,7 +297,7 @@
 
 :learningResourceSubtypeShape a sh:PropertyShape ;
     sh:path ex:subType ;
-    sh:or (
+    sh:in (
       con:Tutorial
       con:ResearchPaper
       con:Explainer
