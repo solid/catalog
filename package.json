@@ -6,7 +6,7 @@
   "main": "catalog.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rdf-transform-cli ./v3/catalog-shacl.ttl ./v3/catalog-shacl.shce -p"
+    "build": "rdf-transform-cli ./v3/catalog-shacl.shce ./v3/catalog-shacl.ttl -p"
   },
   "keywords": [],
   "author": "Jeff Zucker",

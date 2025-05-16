@@ -5,124 +5,95 @@ PREFIX ex: <http://example.org/#>
 
 shape :LearningResourceShape -> ex:LearningResource ;
 	sh:name "Learning Resource"@en {
-	ex:name xsd:string [1..1] %
-		a sh:PropertyShape ;
-		sh:name "name"@en
+	ex:name xsd:string [1..1] % 
+		sh:name "name"@en 
 	% .
-	ex:subType [1..1] in=[con:Tutorial con:ResearchPaper con:Explainer con:SpecificationSupplement con:OtherLearningResource] %
-		a sh:PropertyShape
-	% .
+	ex:subType [1..1] in=[con:Tutorial con:ResearchPaper con:Explainer con:SpecificationSupplement con:OtherLearningResource] .
 	ex:about xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
 		sh:name "about" ;
 		sh:description "the product or topic of the learning resource"
 	% .
-	ex:technicalKeyword xsd:string %
-		a sh:PropertyShape ;
+	ex:technicalKeyword* xsd:string %
 		sh:name "technical keyword"@en ;
-		sh:description "comma-separated list for product type e.g. game, calendar, contacts manager" ;
-		sh:zeroOrMore true
+		sh:description "comma-separated list for product type e.g. game, calendar, contacts manager"
 	% .
-	ex:landingPage xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
-		sh:name "landing page"@en
+	ex:landingPage xsd:anyURI [0..1] % 
+		sh:name "landing page"@en 
 	% .
 }
 shape :EventShape -> ex:Event ;
 	sh:name "Event"@en {
 	ex:name xsd:string [1..1] %
-		a sh:PropertyShape ;
 		sh:name "name"@en
 	% .
 	ex:description xsd:string [0..1] maxLength=280 %
-		a sh:PropertyShape ;
 		sh:name "description"@en
 	% .
 	ex:about xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
 		sh:name "about" ;
 		sh:description "the product or topic of the learning resource"
 	% .
 	ex:provider xsd:string %
-		a sh:PropertyShape ;
 		sh:name "provider"@en ;
 		sh:description "comma-separated list of name(s) of Person(s) and/or Organization(s)"
 	% .
 	ex:schedule xsd:string [0..1] %
-		a sh:PropertyShape ;
 		sh:name "schedule"
 	% .
 	ex:videoCallPage xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
 		sh:name "video call URL"
 	% .
 	ex:landingPage xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
 		sh:name "landing page"@en
 	% .
 }
 shape :ServiceShape -> ex:Service ;
 	sh:name "Service"@en {
 	ex:name xsd:string [1..1] %
-		a sh:PropertyShape ;
 		sh:name "name"@en
 	% .
 	ex:subType [1..1] in=[con:GeneralPurposePodService con:SpecializedPodService con:CommunicationService con:IdentityService con:StorageService] %
-		a sh:PropertyShape ;
 		sh:name "subtype"@en
 	% .
 	ex:status [1..1] in=[con:Exploration con:Development con:Production con:Archived] %
-		a sh:PropertyShape ;
 		sh:name "status"@en
 	% .
 	ex:description xsd:string [0..1] maxLength=280 %
-		a sh:PropertyShape ;
 		sh:name "description"@en
 	% .
 	ex:contactEmail xsd:string [0..1] pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
-		a sh:PropertyShape ;
 		sh:name "contact email"@en ;
 		sh:description "if you wish to share the email privately to ODI, leave this blank & contact solid@theodi.org"
 	% .
 	ex:logo xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
 		sh:name "logo"@en
 	% .
 	ex:landingPage xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
 		sh:name "landing page"@en
 	% .
 	ex:repository xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
 		sh:name "repository"@en
 	% .
 	ex:serviceEndpoint xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
 		sh:name "service endpoint"@en
 	% .
 	ex:provider xsd:string %
-		a sh:PropertyShape ;
 		sh:name "provider"@en ;
 		sh:description "comma-separated list of name(s) of Person(s) and/or Organization(s)"
 	% .
-	ex:socialKeyword xsd:string %
-		a sh:PropertyShape ;
+	ex:socialKeyword* xsd:string %
 		sh:name "social keyword"@en ;
-		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry" ;
-		sh:zeroOrMore true
+		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry"
 	% .
 	ex:serviceBackend xsd:string %
-		a sh:PropertyShape ;
 		sh:name "service backend"@en ;
 		sh:description "name of server software (e.g. ESS for inrupt.com)"
 	% .
 	ex:serviceFrontend xsd:string %
-		a sh:PropertyShape ;
 		sh:name "service frontend"@en ;
 		sh:description "name of server frontend (e.g. SolidOS or Penny)"
 	% .
 	ex:serviceAudience xsd:string [0..1] %
-		a sh:PropertyShape ;
 		sh:name "service audience"@en ;
 		sh:description "for targeted Pod Services only; e.g. 'citizens of Belgium' or 'Yarrabah community'"
 	% .
@@ -130,107 +101,81 @@ shape :ServiceShape -> ex:Service ;
 shape :ProductShape -> ex:Product ;
 	sh:name "Product"@en {
 	ex:name xsd:string [1..1] %
-		a sh:PropertyShape ;
 		sh:name "name"@en
 	% .
 	ex:subType [1..1] in=[con:ProductivityApp con:LeisureApp con:PodApp con:OtherApp con:PodServer con:ServerPlugin con:SoftwareLibrary] %
-		a sh:PropertyShape ;
 		sh:name "subtype"
 	% .
 	ex:partOf xsd:string %
-		a sh:PropertyShape ;
 		sh:name "part of" ;
 		sh:description "for ServerPlugin/Component, name of server; for other product, name of software product is part of"
 	% .
 	ex:status [1..1] in=[con:Exploration con:Development con:Production con:Archived] %
-		a sh:PropertyShape ;
 		sh:name "status"@en
 	% .
 	ex:contactEmail xsd:string [0..1] pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
-		a sh:PropertyShape ;
 		sh:name "contact email"@en ;
 		sh:description "if you wish to share the email privately to ODI, leave this blank & contact solid@theodi.org"
 	% .
 	ex:description xsd:string [0..1] maxLength=280 %
-		a sh:PropertyShape ;
 		sh:name "description"@en
 	% .
 	ex:clientID xsd:string [0..1] %
-		a sh:PropertyShape ;
 		sh:name "ClientID" ;
 		sh:description "an OIDC ClientID, if available"
 	% .
 	ex:logo xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
 		sh:name "logo"@en
 	% .
 	ex:landingPage xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
 		sh:name "landing page"@en
 	% .
 	ex:repository xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
 		sh:name "repository"@en
 	% .
 	ex:webAppEndpoint xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
 		sh:name "Webapp URL" ;
 		sh:description "URL of an app that can be run from an online endpoint"
 	% .
 	ex:provider xsd:string %
-		a sh:PropertyShape ;
 		sh:name "provider"@en ;
 		sh:description "comma-separated list of name(s) of Person(s) and/or Organization(s)"
 	% .
-	ex:socialKeyword xsd:string %
-		a sh:PropertyShape ;
+	ex:socialKeyword* xsd:string %
 		sh:name "social keyword"@en ;
-		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry" ;
-		sh:zeroOrMore true
+		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry"
 	% .
-	ex:technicalKeyword xsd:string %
-		a sh:PropertyShape ;
+	ex:technicalKeyword* xsd:string %
 		sh:name "technical keyword"@en ;
-		sh:description "comma-separated list for product type e.g. game, calendar, contacts manager" ;
-		sh:zeroOrMore true
+		sh:description "comma-separated list for product type e.g. game, calendar, contacts manager"
 	% .
 }
 shape :SpecificationShape -> ex:Specification ;
 	sh:name "Specification"@en {
 	ex:name xsd:string [1..1] %
-		a sh:PropertyShape ;
 		sh:name "name"@en
 	% .
 	ex:description xsd:string [0..1] maxLength=280 %
-		a sh:PropertyShape ;
 		sh:name "description"@en
 	% .
 	ex:repository xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
 		sh:name "repository"@en
 	% .
 	ex:landingPage xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
 		sh:name "landing page"@en
 	% .
 }
 shape :OntologyShape -> ex:Ontology ;
 	sh:name "Ontology"@en {
-	ex:name xsd:string [1..1] %
-		a sh:PropertyShape ;
-		sh:name "name"@en
-	% .
+	ex:name xsd:string [1..1] % sh:name "name"@en % .
 	ex:description xsd:string [0..1] maxLength=280 %
-		a sh:PropertyShape ;
 		sh:name "description"@en
 	% .
 	ex:namespaceURI xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
 		sh:name "namespace URL" ;
 		sh:description "e.g. http://www.w3.org/ns/shacl#"
 	% .
 	ex:prefix xsd:string [0..1] %
-		a sh:PropertyShape ;
 		sh:name "prefix" ;
 		sh:description "e.g. sh: for the SHACL ontology"
 	% .
@@ -238,47 +183,37 @@ shape :OntologyShape -> ex:Ontology ;
 shape :OrganizationShape -> ex:Organization ;
 	sh:name "Organization"@en {
 	ex:name xsd:string [1..1] %
-		a sh:PropertyShape ;
 		sh:name "name"@en
 	% .
 	ex:subType [1..1] in=[con:Company con:GovernmentalOrganization con:UniversityProject con:OpenSourceProject con:FundingOrganization con:OtherNGO] %
-		a sh:PropertyShape ;
 		sh:name "subtype"
 	% .
 	ex:contactEmail xsd:string [0..1] pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
-		a sh:PropertyShape ;
 		sh:name "contact email"@en ;
 		sh:description "if you wish to share the email privately to ODI, leave this blank & contact solid@theodi.org"
 	% .
 	ex:description xsd:string [0..1] maxLength=280 %
-		a sh:PropertyShape ;
 		sh:name "description"@en
 	% .
 	ex:logo xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
 		sh:name "logo"@en
 	% .
 	ex:landingPage xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
 		sh:name "landing page"@en
 	% .
 	ex:repository xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
 		sh:name "repository"@en
 	% .
 	ex:socialKeyword xsd:string %
-		a sh:PropertyShape ;
 		sh:name "social keyword"@en ;
 		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry" ;
 		sh:zeroOrMore true
 	% .
 	ex:resourcesWanted xsd:string maxLength=280 %
-		a sh:PropertyShape ;
 		sh:name "resources wanted"@en ;
 		sh:description "funding, employees, interns, partners, separate multiple with a blank line"
 	% .
 	ex:resourcesOffered xsd:string maxLength=280 %
-		a sh:PropertyShape ;
 		sh:name "resources offered"@en ;
 		sh:description "funding, mentorship, collaboration, offered; separate multiple with a blank line"
 	% .
@@ -286,51 +221,40 @@ shape :OrganizationShape -> ex:Organization ;
 shape :PersonShape -> ex:Person ;
 	sh:name "Person"@en {
 	ex:name xsd:string [1..1] %
-		a sh:PropertyShape ;
 		sh:name "name"@en
 	% .
 	ex:contactEmail xsd:string [0..1] pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
-		a sh:PropertyShape ;
 		sh:name "contact email"@en ;
 		sh:description "if you wish to share the email privately to ODI, leave this blank & contact solid@theodi.org"
 	% .
 	ex:webid xsd:string [0..1] %
-		a sh:PropertyShape ;
 		sh:name "WebID"
 	% .
 	ex:forumHandle xsd:string [0..1] %
-		a sh:PropertyShape ;
 		sh:name "forum handle" ;
 		sh:description "your handle/nick on the Solid Forum"
 	% .
 	ex:matrixHandle xsd:string [0..1] %
-		a sh:PropertyShape ;
 		sh:name "matrix handle" ;
 		sh:description "your handle/nick in the Matrix chatrooms"
 	% .
 	ex:description xsd:string [0..1] maxLength=280 %
-		a sh:PropertyShape ;
 		sh:name "description"@en
 	% .
 	ex:logo xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
 		sh:name "logo"@en
 	% .
 	ex:landingPage xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
 		sh:name "landing page"@en
 	% .
 	ex:repository xsd:anyURI [0..1] %
-		a sh:PropertyShape ;
 		sh:name "repository"@en
 	% .
 	ex:resourcesWanted xsd:string maxLength=280 %
-		a sh:PropertyShape ;
 		sh:name "resources wanted"@en ;
 		sh:description "funding, employees, interns, partners, separate multiple with a blank line"
 	% .
 	ex:resourcesOffered xsd:string maxLength=280 %
-		a sh:PropertyShape ;
 		sh:name "resources offered"@en ;
 		sh:description "funding, mentorship, collaboration, offered; separate multiple with a blank line"
 	% .
