@@ -9,7 +9,7 @@ shape :LearningResourceShape -> ex:LearningResource ;
 		sh:name "name"@en 
 	% .
 	ex:subType [1..1] in=[con:Tutorial con:ResearchPaper con:Explainer con:SpecificationSupplement con:OtherLearningResource] .
-	ex:about xsd:anyURI [0..1] %
+	ex:about IRI [0..1] %
 		sh:name "about" ;
 		sh:description "the product or topic of the learning resource"
 	% .
@@ -17,7 +17,7 @@ shape :LearningResourceShape -> ex:LearningResource ;
 		sh:name "technical keyword"@en ;
 		sh:description "comma-separated list for product type e.g. game, calendar, contacts manager"
 	% .
-	ex:landingPage xsd:anyURI [0..1] % 
+	ex:landingPage IRI [0..1] % 
 		sh:name "landing page"@en 
 	% .
 }
@@ -29,7 +29,7 @@ shape :EventShape -> ex:Event ;
 	ex:description xsd:string [0..1] maxLength=280 %
 		sh:name "description"@en
 	% .
-	ex:about xsd:anyURI [0..1] %
+	ex:about IRI [0..1] %
 		sh:name "about" ;
 		sh:description "the product or topic of the learning resource"
 	% .
@@ -40,10 +40,10 @@ shape :EventShape -> ex:Event ;
 	ex:schedule xsd:string [0..1] %
 		sh:name "schedule"
 	% .
-	ex:videoCallPage xsd:anyURI [0..1] %
+	ex:videoCallPage IRI [0..1] %
 		sh:name "video call URL"
 	% .
-	ex:landingPage xsd:anyURI [0..1] %
+	ex:landingPage IRI [0..1] %
 		sh:name "landing page"@en
 	% .
 }
@@ -65,16 +65,16 @@ shape :ServiceShape -> ex:Service ;
 		sh:name "contact email"@en ;
 		sh:description "if you wish to share the email privately to ODI, leave this blank & contact solid@theodi.org"
 	% .
-	ex:logo xsd:anyURI [0..1] %
+	ex:logo IRI [0..1] %
 		sh:name "logo"@en
 	% .
-	ex:landingPage xsd:anyURI [0..1] %
+	ex:landingPage IRI [0..1] %
 		sh:name "landing page"@en
 	% .
-	ex:repository xsd:anyURI [0..1] %
+	ex:repository IRI [0..1] %
 		sh:name "repository"@en
 	% .
-	ex:serviceEndpoint xsd:anyURI [0..1] %
+	ex:serviceEndpoint IRI [0..1] %
 		sh:name "service endpoint"@en
 	% .
 	ex:provider xsd:string %
@@ -124,16 +124,16 @@ shape :ProductShape -> ex:Product ;
 		sh:name "ClientID" ;
 		sh:description "an OIDC ClientID, if available"
 	% .
-	ex:logo xsd:anyURI [0..1] %
+	ex:logo IRI [0..1] %
 		sh:name "logo"@en
 	% .
-	ex:landingPage xsd:anyURI [0..1] %
+	ex:landingPage IRI [0..1] %
 		sh:name "landing page"@en
 	% .
-	ex:repository xsd:anyURI [0..1] %
+	ex:repository IRI [0..1] %
 		sh:name "repository"@en
 	% .
-	ex:webAppEndpoint xsd:anyURI [0..1] %
+	ex:webAppEndpoint IRI [0..1] %
 		sh:name "Webapp URL" ;
 		sh:description "URL of an app that can be run from an online endpoint"
 	% .
@@ -158,10 +158,10 @@ shape :SpecificationShape -> ex:Specification ;
 	ex:description xsd:string [0..1] maxLength=280 %
 		sh:name "description"@en
 	% .
-	ex:repository xsd:anyURI [0..1] %
+	ex:repository IRI [0..1] %
 		sh:name "repository"@en
 	% .
-	ex:landingPage xsd:anyURI [0..1] %
+	ex:landingPage IRI [0..1] %
 		sh:name "landing page"@en
 	% .
 }
@@ -171,7 +171,7 @@ shape :OntologyShape -> ex:Ontology ;
 	ex:description xsd:string [0..1] maxLength=280 %
 		sh:name "description"@en
 	% .
-	ex:namespaceURI xsd:anyURI [0..1] %
+	ex:namespaceURI IRI [0..1] %
 		sh:name "namespace URL" ;
 		sh:description "e.g. http://www.w3.org/ns/shacl#"
 	% .
@@ -195,13 +195,13 @@ shape :OrganizationShape -> ex:Organization ;
 	ex:description xsd:string [0..1] maxLength=280 %
 		sh:name "description"@en
 	% .
-	ex:logo xsd:anyURI [0..1] %
+	ex:logo IRI [0..1] %
 		sh:name "logo"@en
 	% .
-	ex:landingPage xsd:anyURI [0..1] %
+	ex:landingPage IRI [0..1] %
 		sh:name "landing page"@en
 	% .
-	ex:repository xsd:anyURI [0..1] %
+	ex:repository IRI [0..1] %
 		sh:name "repository"@en
 	% .
 	ex:socialKeyword xsd:string %
@@ -241,13 +241,13 @@ shape :PersonShape -> ex:Person ;
 	ex:description xsd:string [0..1] maxLength=280 %
 		sh:name "description"@en
 	% .
-	ex:logo xsd:anyURI [0..1] %
+	ex:logo IRI [0..1] %
 		sh:name "logo"@en
 	% .
-	ex:landingPage xsd:anyURI [0..1] %
+	ex:landingPage IRI [0..1] %
 		sh:name "landing page"@en
 	% .
-	ex:repository xsd:anyURI [0..1] %
+	ex:repository IRI [0..1] %
 		sh:name "repository"@en
 	% .
 	ex:resourcesWanted xsd:string maxLength=280 %
