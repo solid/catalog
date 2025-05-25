@@ -206,7 +206,7 @@ shape :OrganizationShape -> ex:Organization ;
 	% .
 	ex:socialKeyword xsd:string %
 		sh:name "social keyword"@en ;
-		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry" ;
+		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry"
 	% .
 	ex:resourcesWanted xsd:string maxLength=280 %
 		sh:name "resources wanted"@en ;
