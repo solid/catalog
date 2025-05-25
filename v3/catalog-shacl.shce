@@ -13,7 +13,7 @@ shape :LearningResourceShape -> ex:LearningResource ;
 		sh:name "about" ;
 		sh:description "the product or topic of the learning resource"
 	% .
-	ex:technicalKeyword* xsd:string %
+	ex:technicalKeyword xsd:string %
 		sh:name "technical keyword"@en ;
 		sh:description "comma-separated list for product type e.g. game, calendar, contacts manager"
 	% .
@@ -81,7 +81,7 @@ shape :ServiceShape -> ex:Service ;
 		sh:name "provider"@en ;
 		sh:description "comma-separated list of name(s) of Person(s) and/or Organization(s)"
 	% .
-	ex:socialKeyword* xsd:string %
+	ex:socialKeyword xsd:string %
 		sh:name "social keyword"@en ;
 		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry"
 	% .
@@ -141,11 +141,11 @@ shape :ProductShape -> ex:Product ;
 		sh:name "provider"@en ;
 		sh:description "comma-separated list of name(s) of Person(s) and/or Organization(s)"
 	% .
-	ex:socialKeyword* xsd:string %
+	ex:socialKeyword xsd:string %
 		sh:name "social keyword"@en ;
 		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry"
 	% .
-	ex:technicalKeyword* xsd:string %
+	ex:technicalKeyword xsd:string %
 		sh:name "technical keyword"@en ;
 		sh:description "comma-separated list for product type e.g. game, calendar, contacts manager"
 	% .
@@ -207,7 +207,6 @@ shape :OrganizationShape -> ex:Organization ;
 	ex:socialKeyword xsd:string %
 		sh:name "social keyword"@en ;
 		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry" ;
-		sh:zeroOrMore true
 	% .
 	ex:resourcesWanted xsd:string maxLength=280 %
 		sh:name "resources wanted"@en ;
