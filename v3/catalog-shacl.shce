@@ -1,4 +1,4 @@
-BASE <#>
+pBASE <#>
 PREFIX : <#>
 PREFIX con: <catalog-skos.ttl#>
 PREFIX ex: <http://example.org/#>
@@ -31,9 +31,9 @@ shape :EventShape -> ex:Event ;
 	% .
 	ex:about IRI [0..1] %
 		sh:name "about" ;
-		sh:description "the product or topic of the learning resource"
+		sh:description "the topic of the event"
 	% .
-	ex:provider xsd:string %
+	ex:provider IRI %
 		sh:name "provider"@en ;
 		sh:description "comma-separated list of name(s) of Person(s) and/or Organization(s)"
 	% .
@@ -77,7 +77,7 @@ shape :ServiceShape -> ex:Service ;
 	ex:serviceEndpoint IRI [0..1] %
 		sh:name "service endpoint"@en
 	% .
-	ex:provider xsd:string %
+	ex:provider IRI %
 		sh:name "provider"@en ;
 		sh:description "comma-separated list of name(s) of Person(s) and/or Organization(s)"
 	% .
@@ -85,11 +85,11 @@ shape :ServiceShape -> ex:Service ;
 		sh:name "social keyword"@en ;
 		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry"
 	% .
-	ex:serviceBackend xsd:string %
+	ex:serviceBackend IRI %
 		sh:name "service backend"@en ;
 		sh:description "name of server software (e.g. ESS for inrupt.com)"
 	% .
-	ex:serviceFrontend xsd:string %
+	ex:serviceFrontend IRI %
 		sh:name "service frontend"@en ;
 		sh:description "name of server frontend (e.g. SolidOS or Penny)"
 	% .
@@ -120,7 +120,7 @@ shape :ProductShape -> ex:Product ;
 	ex:description xsd:string [0..1] maxLength=280 %
 		sh:name "description"@en
 	% .
-	ex:clientID xsd:string [0..1] %
+	ex:clientID IRI [0..1] %
 		sh:name "ClientID" ;
 		sh:description "an OIDC ClientID, if available"
 	% .
@@ -137,7 +137,7 @@ shape :ProductShape -> ex:Product ;
 		sh:name "Webapp URL" ;
 		sh:description "URL of an app that can be run from an online endpoint"
 	% .
-	ex:provider xsd:string %
+	ex:provider IRI %
 		sh:name "provider"@en ;
 		sh:description "comma-separated list of name(s) of Person(s) and/or Organization(s)"
 	% .
@@ -226,7 +226,7 @@ shape :PersonShape -> ex:Person ;
 		sh:name "contact email"@en ;
 		sh:description "if you wish to share the email privately to ODI, leave this blank & contact solid@theodi.org"
 	% .
-	ex:webid xsd:string [0..1] %
+	ex:webid IRI [0..1] %
 		sh:name "WebID"
 	% .
 	ex:forumHandle xsd:string [0..1] %
