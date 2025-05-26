@@ -3,6 +3,7 @@ key.pem
 symposium-2025
 /v2/scripts/notes.md
 /v2/new-data
+/v3/catalog-shacl.ttl
 #*
 *~
 ./custom-config.json

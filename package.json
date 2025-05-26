@@ -5,7 +5,8 @@
   "description": "-- a listing of things useful to the Solid Community",
   "main": "catalog.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "rdf-dereference ./v3/catalog-shacl.ttl && rdf-dereference ./v3/catalog-skos.ttl && rdf-dereference ./v3/catalog-data.ttl",
+    "build": "rdf-transform-cli ./v3/catalog-shacl.shce ./v3/catalog-shacl.ttl -p"
   },
   "keywords": [],
   "author": "Jeff Zucker",
@@ -13,5 +14,9 @@
   "dependencies": {
     "@solid-rest/file": "^2.1.20",
     "rdflib": "^2.2.37"
+  },
+  "devDependencies": {
+    "rdf-dereference": "^4.0.0",
+    "rdf-transform-cli": "^1.1.0"
   }
 }
