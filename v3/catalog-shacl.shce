@@ -1,4 +1,4 @@
-pBASE <#>
+BASE <#>
 PREFIX : <#>
 PREFIX con: <catalog-skos.ttl#>
 PREFIX ex: <http://example.org/#>
