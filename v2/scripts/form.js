@@ -51,8 +51,14 @@ console.log(3,properties);
     let descField = document.createElement('span');
     descField.innerHTML = desc ?desc.value :"";
     descField.classList.add('fieldDescription');
-    datatype = datatype ?datatype.value :'http://www.w3.org/2001/XMLSchema#anyURI';
+
+    datatype = datatype ?datatype.value :'http://www.w3.org/ns/shacl#IRI';
+    const orCollectionStart = store.any(property.object, $rdf.sym('http://www.w3.org/ns/shacl#in'));
+/*JZ
     const orCollectionStart = store.any(property.object, $rdf.sym('http://www.w3.org/ns/shacl#or'));
+    datatype = datatype ?datatype.value :'http://www.w3.org/2001/XMLSchema#anyURI';
+*/
+
     let field = document.createElement('div');
     field.classList.add('field');
     if (path) {
@@ -158,7 +164,7 @@ console.log(3,properties);
             predicate = predicate.replace(source().vocURL+'#','ex:');
           }
           else predicate = `<${predicate}>`;
-          if(type.match(/anyURI/)){
+/*JZ*/    if(type.match(/(IRI|anyURI)/)){
             if(object.match(source().skosURL)){
               object = object.replace(source().skosURL+'#','con:');
             }

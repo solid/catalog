@@ -66,7 +66,7 @@ con:LeisureApp
 con:Status
     a skos:Concept ;
     skos:definition "Predefined values for specifying the status of a project." ;
-    skos:inScheme :SolidCatalogTaxonomy .
+    skos:inScheme con:SolidCatalogTaxonomy .
 
 con:Exploration
     a skos:Concept ;
