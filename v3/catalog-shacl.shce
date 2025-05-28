@@ -198,6 +198,9 @@ shape :OrganizationShape -> ex:Organization ;
 	ex:logo IRI [0..1] %
 		sh:name "logo"@en
 	% .
+	ex:webid IRI [0..1] %
+		sh:name "WebID"
+	% .
 	ex:landingPage IRI [0..1] %
 		sh:name "landing page"@en
 	% .
