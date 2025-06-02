@@ -166,13 +166,27 @@ function showRecord(subject){
       <p><b class="record-name">${record.name}</b><br>${article} ${displayType.replace(/\(.*$/,'')}</p>
     <p>${record.description||""}</p>
   `;
+  if(record.logo) {
+    str+= `<img src="${record.logo}" alt="logo">`;
+  }
   for(let f of Object.keys(record)){
-    if(f==="name" || f.match(/(type|description|keyword|landingPage|serviceEndpoint|socialKeyword|technicalKeyword|webid|clientid|videoCallPage|repository)/i)) continue;
-    str += `
-      <div class="field">
-        <b class="fieldName">${f}</b> <span class="fieldValue">${record[f]}</span>
-      </div>
-    `;
+    if(f==="name" || f.match(/(type|description|keyword|landingPage|serviceEndpoint|socialKeyword|technicalKeyword|webid|clientid|videoCallPage|repository|logo)/i)) continue;
+    if(f=="contactEmail"){
+      let val = (record[f].match(/^mailto:/)) ?record[f] :`mailto:${record[f]}`
+      val = `<a href="${val}" target="_BLANK">${val}</a>`;
+      str += `
+        <div class="field">
+          <b class="fieldName">contact email</b> <span class="fieldValue">${val}</span>
+        </div>
+      `
+    }
+    else {
+      str += `
+        <div class="field">
+          <b class="fieldName">${f}</b> <span class="fieldValue">${record[f]}</span>
+        </div>
+      `;
+     }
   }
   let s = `<p class="record-links">`;
   if(record.webid) s += `<a href="${record.webid}" target="_BLANK">WebID profile</a>`;

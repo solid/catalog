@@ -86,6 +86,9 @@
   .sol-header img {
     height:3em;
   }
+  img {
+    height:6em;
+  }
 * {
   caret-color: transparent;
 }

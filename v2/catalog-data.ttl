@@ -1274,11 +1274,13 @@ cdata:Tic_Tac_Moe a ex:Person ;
   ex:webid <https://tic-tac-moe.inrupt.net/profile/card#me> .
 
 cdata:Tim_Berners-Lee a ex:Person ;
-  ex:name "Tim Berners-Lee" ;
-  ex:repository <https://github.com/timbl> ;
-  ex:forumHandle "@timbl" ;
-  ex:webid <https://www.w3.org/People/Berners-Lee/card#> ;
-  ex:matrixHandle "@timbl" .
+    ex:name  "Tim Berners-Lee" ;
+    ex:webid  <https://timbl.solidcommunity.net/profile/card#me> ;
+    ex:forumHandle  "@timbl" ;
+    ex:matrixHandle  "@timbl" ;
+    ex:repository  <https://github.com/timbl> ;
+    ex:modified "2025-05-15T19:00:05.011Z"^^xsd:dateTime .
+
 
 cdata:Timea_Turdean a ex:Person ;
   ex:name "Timea Turdean" ;
@@ -1733,6 +1735,12 @@ cdata:Manu_Sporny a ex:Person ;
 cdata:Marc_Fornos a ex:Person ;
   ex:name "Marc Fornos" ;
   ex:landingPage <https://gitlab.com/frozen.pomelo> .
+
+cdata:Marc_Haddle a ex:Person ;
+    ex:name  "Marc Haddle" ;
+    ex:contactEmail  "marc.haddle@datasolids.com" ;
+    ex:description  """CEO, Datasolids"""@en ;
+    ex:modified "2025-05-15T15:18:59.233Z"^^xsd:dateTime .
 
 cdata:Marco_Neumann a ex:Person ;
   ex:name "Marco Neumann" .
@@ -2601,6 +2609,15 @@ cdata:Datasister a ex:Product ;
   ex:subType con:OtherApp ;
   ex:status con:Development ;
   ex:technicalKeyword "general purpose app" .
+
+cdata:Datasolids a ex:Organization ;
+    ex:name  "Datasolids" ;
+    ex:subType  con:Company ;
+    ex:contactEmail  "marc.haddle@datasolids.com" ;
+    ex:description  """Solid principles to store & share health data."""@en ;
+    ex:resourcesWanted  """Funding"""@en ;
+    ex:resourcesOffered  """Security expertise, GTM"""@en ;
+    ex:modified "2025-05-28T14:21:51.810Z"^^xsd:dateTime .
 
 cdata:DataVillage_platform a ex:Product ;
   ex:name "DataVillage platform" ;
