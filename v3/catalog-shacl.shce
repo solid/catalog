@@ -2,6 +2,9 @@ BASE <#>
 PREFIX : <#>
 PREFIX con: <catalog-skos.ttl#>
 PREFIX ex: <http://example.org/#>
+PREFIX spec: <http://www.w3.org/ns/spec#>
+PREFIX schema: <http://schema.org/>
+PREFIX doap: <http://usefulinc.com/ns/doap#>
 
 shape :LearningResourceShape -> ex:LearningResource ;
 	sh:name "Learning Resource"@en {
@@ -141,6 +144,14 @@ shape :ProductShape -> ex:Product ;
 		sh:name "provider"@en ;
 		sh:description "comma-separated list of name(s) of Person(s) and/or Organization(s)"
 	% .
+	doap:maintainer IRI ex:Person %
+		sh:name "maintainer"@en ;
+		sh:description "person responsible for maintaining the software"
+	% .
+	doap:developer IRI ex:Person %
+		sh:name "developer"@en ;
+		sh:description "person contributiong to the software"
+	% .
 	ex:socialKeyword xsd:string %
 		sh:name "social keyword"@en ;
 		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry"
@@ -149,8 +160,16 @@ shape :ProductShape -> ex:Product ;
 		sh:name "technical keyword"@en ;
 		sh:description "comma-separated list for product type e.g. game, calendar, contacts manager"
 	% .
+	spec:conformsTo IRI ex:CassOfProduct %
+		sh:name "conforms to"@en ;
+		sh:description "a class of product, from a specification, that this implementation conforms to"
+	% .
+	spec:hasDependencyOn IRI ex:Product %
+		sh:name "has dependency on"@en ;
+		sh:description "a library/module that this software depends on"
+	% .
 }
-shape :SpecificationShape -> ex:Specification ;
+shape :SpecificationShape -> spec:Specification ;
 	sh:name "Specification"@en {
 	ex:name xsd:string [1..1] %
 		sh:name "name"@en
@@ -164,7 +183,25 @@ shape :SpecificationShape -> ex:Specification ;
 	ex:landingPage IRI [0..1] %
 		sh:name "landing page"@en
 	% .
+	schema:editor IRI ex:Person %
+		sh:name "editor"@en
+	% .
+	schema:author IRI ex:Person %
+		sh:name "author"@en
+	% .
+	spec:definesConformanceFor IRI ex:CassOfProduct %
+		sh:name "defines conformance for"@en ;
+		sh:description "a class of product which this specification defines"
+	% .
 }
+
+shape :ClassOfProductShape -> ex:ClassOfProduct ;
+	sh:name "Class of Product"@en {
+	ex:name xsd:string [1..1] %
+		sh:name "name"@en
+	% .
+}
+
 shape :OntologyShape -> ex:Ontology ;
 	sh:name "Ontology"@en {
 	ex:name xsd:string [1..1] % sh:name "name"@en % .
