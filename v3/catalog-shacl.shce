@@ -160,11 +160,11 @@ shape :ProductShape -> ex:Product ;
 		sh:name "technical keyword"@en ;
 		sh:description "comma-separated list for product type e.g. game, calendar, contacts manager"
 	% .
-	spec:conformsTo IRI ex:CassOfProduct %
+	ex:conformsTo IRI ex:CassOfProduct %
 		sh:name "conforms to"@en ;
 		sh:description "a class of product, from a specification, that this implementation conforms to"
 	% .
-	spec:hasDependencyOn IRI ex:Product %
+	ex:hasDependencyOn IRI ex:Product %
 		sh:name "has dependency on"@en ;
 		sh:description "a library/module that this software depends on"
 	% .
@@ -189,7 +189,7 @@ shape :SpecificationShape -> spec:Specification ;
 	schema:author IRI ex:Person %
 		sh:name "author"@en
 	% .
-	spec:definesConformanceFor IRI ex:CassOfProduct %
+	ex:definesConformanceFor IRI ex:CassOfProduct %
 		sh:name "defines conformance for"@en ;
 		sh:description "a class of product which this specification defines"
 	% .
