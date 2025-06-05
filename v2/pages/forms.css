@@ -107,11 +107,13 @@ form.record select {
   padding:0.5em;
   margin-bottom:1em;
   background:#3a3a3a;
-  color:#eeeeff;
+  color:#eeeeff !important;
 
 }
 form.record option {
   background:#6a6a6a;
+  background:#afaaaa;
+  color:black
 }
 form.record select {
   width:25em;

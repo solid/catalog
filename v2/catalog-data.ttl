@@ -52,23 +52,13 @@ cdata:SolidWebDotOrg a ex:Service ;
     ex:status  con:Exploration ;
     ex:description  """solidweb.org is a public Solid server based in Germany which is in an experimental state."""@en ;
     ex:contactEmail  """info@meisdata.io"""@en ;
-    ex:logo  <logo2.png> ;
+    ex:logo  <https://www.serverproject.de/logo2.png> ;
     ex:serviceEndpoint  <https://solidweb.org> ;
-    ex:provider  """SolidGrassroots"""@en ;
+    ex:provider  cdata:SolidGrassroots ;
     ex:domainKeyword  """Pod-Provider"""@en ;
     ex:serviceBackend  cdata:NSS ;
     ex:serviceFrontend  cdata:SolidOS ;
     ex:modified "2025-04-22T03:40:39.786Z"^^xsd:dateTime .
-
-cdata:SolidWebDotOrg a ex:Service ;
-  ex:name "solidweb.org" ;
-  ex:status con:Production ;
-  ex:subType con:GeneralPurposePodService ;
-  ex:serviceEndpoint <https://solidweb.org> ;
-  ex:serviceBackend cdata:NSS ;
-  ex:provider cdata:SolidGrassroots ;
-  ex:description "solidweb.org is a public Solid server based in Germany which is in an experimental state." ;
-  ex:logo <https://www.serverproject.de/logo2.png> .
 
 cdata:SolidGrassroots a ex:Organization ;
   ex:name "Solid Grassroots" ;
@@ -1284,7 +1274,6 @@ cdata:Tim_Berners-Lee a ex:Person ;
 
 cdata:Timea_Turdean a ex:Person ;
   ex:name "Timea Turdean" ;
-  ex:description "Example of HTML page as a pod's root." ;
   ex:repository <https://github.com/timea-solid> ;
   ex:webid <https://timea.solidcommunity.net/profile/card#me> .
 
@@ -1857,6 +1846,21 @@ cdata:Rdflib a ex:Product ;
   ex:repository <https://github.com/linkeddata/rdflib.js> ;
   ex:status con:Production ;
   ex:technicalKeyword "rdf parsing" .
+
+cdata:Solid_Bench a ex:Product ;
+    ex:name  "SolidBench"@en ;
+    ex:subType  con:PodApp ;
+    ex:status  con:Development ;
+    ex:contactEmail  "phd@highlatitud.es" ;
+    ex:description  """A multi-purpose platform, containing a pod browser, and a framework to plug domain-specific apps."""@en ;
+    ex:logo  <https://solidbench.dev/images/solidbench-256.png> ;
+    ex:landingPage  <https://solidbench.dev> ;
+    ex:repository  <https://github.com/pduchesne/solidbench> ;
+    ex:webAppEndpoint  <https://solidbench.dev> ;
+    ex:provider  cdata:Philippe_Duchesne ;
+    ex:technicalKeyword  """pod browser, pod manager, rich content viewer"""@en ;
+    ex:modified "2025-06-04T12:46:08.117Z"^^xsd:dateTime .
+
 
 cdata:Solid_namespace a ex:Product ;
   ex:name "Solid namespace" ;
