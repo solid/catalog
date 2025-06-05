@@ -36,6 +36,17 @@
     sh:path ex:landingPage ;
     sh:maxCount 1 ;
     sh:nodeKind sh:IRI
+  ], [
+    sh:name "provider"@en ;
+    sh:path ex:provider ;
+    sh:nodeKind sh:IRI ;
+    sh:description "comma-separated list of name(s) of Person(s) and/or Organization(s)"
+  ], [
+    sh:name "description"@en ;
+    sh:path ex:description ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:maxLength 280
   ] .
 
 :EventShape a sh:NodeShape ;
@@ -436,4 +447,3 @@
     sh:description "funding, mentorship, collaboration, offered; separate multiple with a blank line" ;
     sh:maxLength 280
   ] .
-

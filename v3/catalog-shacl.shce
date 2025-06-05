@@ -20,6 +20,13 @@ shape :LearningResourceShape -> ex:LearningResource ;
 	ex:landingPage IRI [0..1] % 
 		sh:name "landing page"@en 
 	% .
+	ex:provider IRI %
+		sh:name "provider"@en ;
+		sh:description "comma-separated list of name(s) of Person(s) and/or Organization(s)"
+	% .
+	ex:description xsd:string [0..1] maxLength=280 %
+		sh:name "description"@en
+	% .
 }
 shape :EventShape -> ex:Event ;
 	sh:name "Event"@en {
