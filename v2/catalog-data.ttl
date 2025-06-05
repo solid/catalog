@@ -2515,10 +2515,19 @@ cdata:OpenLink_Structured_Data_Sniffer a ex:Product ;
   ex:status con:Development .
 
 cdata:OpenLink_YouID a ex:Product ;
-  ex:name "OpenLink YouID" ;
+  ex:name "OpenLink YouID"@en ;
   ex:subType con:ProductivityApp ;
   ex:description "Identity and credentials document generator." ;
   ex:status con:Development .
+
+
+cdata:LDP_Streams a ex:LearningResource ;
+    ex:name  "Linked Data Event Streams in Solid LDP containers"@en ;
+    ex:subType  con:ResearchPaper ;
+    ex:technicalKeyword  """LDP, LDES, Event Sourcing, TREE, hypermedia"""@en ;
+    ex:landingPage  <https://ceur-ws.org/Vol-3339/paper4.pdf> ;
+    ex:modified "2025-06-05T21:09:44.753Z"^^xsd:dateTime .
+
 
 cdata:0data_hello a ex:Product ;
   ex:name "0data hello" ;
