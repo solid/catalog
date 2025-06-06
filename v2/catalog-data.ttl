@@ -1080,7 +1080,7 @@ cdata:Ruben_Verborgh a ex:Person ;
   ex:webid <https://ruben.verborgh.org/profile/#me> .
 
 cdata:RuiZhao a ex:Person ;
-    ex:name  """Rui Zhao"""@en ;
+    ex:name  "Rui Zhao"@en ;
     ex:contactEmail  """me@ryey.icu"""@en ;
     ex:webid <https://renyuneyun.solidcommunity.net/profile/card#me> ;
     ex:forumHandle  """@renyuneyun"""@en ;
@@ -2566,7 +2566,7 @@ cdata:Record_0004 a ex:LearningResource ;
     ex:name  """Perennial Semantic Data Terms of Use for Decentralized Web"""@en ;
     ex:technicalKeyword  "Solid, authentication, data usage control" ;
     ex:landingPage  <https://me.ryey.icu/solid-dtou/> ;
-    ex:provider  cdata:Oxford_University, cdata:Rui_Zhao ;
+    ex:provider  cdata:Oxford_University, cdata:RuiZhao ;
     ex:description  """Preprint available at https://arxiv.org/abs/2403.07587"""@en ;
     ex:modified "2025-06-05T22:22:45.822Z"^^xsd:dateTime .
 
