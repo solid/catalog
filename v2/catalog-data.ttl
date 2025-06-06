@@ -460,6 +460,10 @@ cdata:DataSwift a ex:Organization ;
   ex:name "Data Swift" ;
   ex:subType con:Company .
 
+cdata:Oxford_University a ex:Organization ;
+  ex:name "Oxford University" ;
+  ex:subType con:UniversityProject .
+
 cdata:OxfordHumanCenteredComputingGroup a ex:Organization ;
   ex:name "Oxford University, Human Centered Computing Group" ;
   ex:subType con:UniversityProject .
@@ -606,6 +610,15 @@ cdata:KnightFoundationTechnologyInnovation a ex:Organization ;
   ex:name "The Knight Foundation for Technology Innovation"@en ;
   ex:subType con:FundingOrganization ;
   ex:landingPage <https://knightfoundation.org/programs/technology> .
+
+cdata:Ruben_Dedecker a ex:Person ;
+  ex:name "Ruben Dedecker" .
+
+cdata:Sindhu_Vasireddy a ex:Person ;
+  ex:name "Sindhu Vasireddy" .
+
+cdata:Pieter_Colpaert a ex:Person ;
+  ex:name "Pieter Colpaert" .
 
 cdata:RezaSoltani a ex:Person ;
   ex:name "Reza Soltani" .
@@ -1351,6 +1364,9 @@ cdata:Wonsuk_Lee a ex:Person ;
 
 cdata:Woods_Denny a ex:Person ;
   ex:name "Woods Denny" .
+
+cdata:Wout_Slabbinck a ex:Person ;
+  ex:name "Wout Slabbinick" .
 
 cdata:Wout_Schellaert a ex:Person ;
   ex:name "Wout Schellaert" ;
@@ -2520,14 +2536,83 @@ cdata:OpenLink_YouID a ex:Product ;
   ex:description "Identity and credentials document generator." ;
   ex:status con:Development .
 
+cdata:Record_0001 a ex:Specification ;
+    ex:name  """Writing Linked Data Event Streams in LDP Basic Containers"""@en ;
+    ex:description  """Writing to a time-based fragmented Linked Data Event Stream that is stored on a Linked Data Platform."""@en ;
+    ex:repository  <https://github.com/woutslabbinck/LDESinLDP/> ;
+    ex:landingPage  <https://woutslabbinck.github.io/LDESinLDP/> ;
+    ex:modified "2025-06-05T21:36:50.756Z"^^xsd:dateTime .
+
+cdata:Record_0002 a ex:Specification ;
+    ex:name  """DToU Language Spec"""@en ;
+    ex:description  """This document provides the specification and examples of the perennial DToU language, a language for describing the Terms of Use of Data, both for data providers (e.g. users) and data consumers (e.g. applications).
+
+It accompanies the paper "Perennial Semantic Data Terms of Use for Decentralized Web" by Rui Zhao and Jun Zhao, at ACM Web Conference 2024 (previously known as International World Wide Web Conference; WWW2024), doi 10.1145/3589334.3645631."""@en ;
+    ex:repository  <https://github.com/OxfordHCC/solid-dtou/> ;
+    ex:landingPage  <https://me.ryey.icu/solid-dtou/dtou-spec.html> ;
+    ex:modified "2025-06-05T21:39:22.437Z"^^xsd:dateTime .
+
+cdata:Record_0003 a ex:LearningResource ;
+    ex:subType con:ResearchPaper ;
+    ex:name  """Libertas: Privacy-Preserving Collective Computation for Decentralised Personal Data Stores"""@en ;
+    ex:technicalKeyword  """architecture, Solid, MPC, privacy, user autonomy"""@en ;
+    ex:landingPage  <https://arxiv.org/abs/2309.16365> ;
+    ex:provider  cdata:Oxford_University ;
+    ex:description  """See also https://oxfordhcc.github.io/libertas/"""@en ;
+    ex:modified "2025-06-05T22:20:07.569Z"^^xsd:dateTime .
+
+cdata:Record_0004 a ex:LearningResource ;
+    ex:subType con:ResearchPaper ;
+    ex:name  """Perennial Semantic Data Terms of Use for Decentralized Web"""@en ;
+    ex:technicalKeyword  "Solid, authentication, data usage control" ;
+    ex:landingPage  <https://me.ryey.icu/solid-dtou/> ;
+    ex:provider  cdata:Oxford_University, cdata:Rui_Zhao ;
+    ex:description  """Preprint available at https://arxiv.org/abs/2403.07587"""@en ;
+    ex:modified "2025-06-05T22:22:45.822Z"^^xsd:dateTime .
+
+cdata:Record_0005 a ex:LearningResource ;
+    ex:subType con:ResearchPaper ;
+    ex:name  """SocialGenPod: Privacy-Friendly Generative AI Social Web Applications with Decentralised Personal Data Stores"""@en ;
+    ex:technicalKeyword "Solid, LLM, AI, RAG, privacy" ;
+    ex:landingPage  <https://arxiv.org/abs/2403.10408> ;
+    ex:description  """Code available at https://github.com/Vidminas/socialgenpod"""@en ;
+    ex:modified "2025-06-05T22:32:51.048Z"^^xsd:dateTime .
+
+cdata:Record_0006 a ex:LearningResource ;
+    ex:subType con:ResearchPaper ;
+    ex:name  """Long-living Service for Cooperative Knowledge Use in Decentralized Data Stores"""@en ;
+    ex:technicalKeyword  """Calendar, Meeting Scheduling"""@en ;
+    ex:landingPage  <https://arxiv.org/abs/2306.14890> ;
+    ex:description  """Companion code available at https://github.com/OxfordHCC/knoodle"""@en ;
+    ex:modified "2025-06-05T22:41:14.985Z"^^xsd:dateTime .
 
 cdata:LDP_Streams a ex:LearningResource ;
-    ex:name  "Linked Data Event Streams in Solid LDP containers"@en ;
+    ex:name  """Linked Data Event Streams in Solid LDP containers"""@en ;
     ex:subType  con:ResearchPaper ;
     ex:technicalKeyword  """LDP, LDES, Event Sourcing, TREE, hypermedia"""@en ;
     ex:landingPage  <https://ceur-ws.org/Vol-3339/paper4.pdf> ;
-    ex:modified "2025-06-05T21:09:44.753Z"^^xsd:dateTime .
-
+    ex:provider  cdata:Wout_Slabbinck, cdata:Ruben_Dedecker, cdata:Sindhu_Vasireddy, cdata:Ruben_Verborgh, cdata:Pieter_Colpaert ;
+    ex:description  """The Solid Project – at the time of writing – uses containers with resources in them as defined in the
+LDP specification as a way to give developers the flexibility to write to a storage in the way they see
+fit. With cross-app interoperability and read performance in mind, choosing an application profile and
+container-resource structure becomes guesswork for the app writing the data, as all possible apps reading
+from the storage are not yet defined. Event sourcing is a technique used in data architecture to decouple
+writing from reading. Multiple views will always stay in-sync with an event source, or allow one to
+view a historic state or study the changes that happened over time. In this paper, we study whether we
+can use the current version of the Solid protocol to store an event source using the Linked Data Event
+Streams (LDES) specification. We successfully implemented a client library, which we tested on the use
+case of storing your live location with history, for both reading and writing in two modes: version aware
+and version agnostic. However, the current Solid protocol based on LDP also shows some limitations
+towards event sourcing: (i) re-balancing the hypermedia structure publishing the LDES is not possible
+due to slash semantics, (ii) as the event source is fully managed by clients, a faulty client may corrupt
+the event source, and (iii) the client is also in charge of enforcing the retention policy, having to delete
+older resources one by one, while they have no information about the internal limits of the Solid storage.
+We conclude that the Solid spec as-is can be used to store an event source, and that client libraries
+can create an abstraction of the history without any server-specific functionality. However, we also
+had to work our way around some limitations, putting more strain on the client, and want to open the
+discussion on whether the Solid server protocol needs to be extended for more native support of the
+event sourcing pattern."""@en ;
+    ex:modified "2025-06-05T22:08:20.952Z"^^xsd:dateTime .
 
 cdata:0data_hello a ex:Product ;
   ex:name "0data hello" ;
