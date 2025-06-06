@@ -169,7 +169,7 @@ shape :ProductShape -> ex:Product ;
 		sh:description "a library/module that this software depends on"
 	% .
 }
-shape :SpecificationShape -> spec:Specification ;
+shape :SpecificationShape -> ex:Specification ;
 	sh:name "Specification"@en {
 	ex:name xsd:string [1..1] %
 		sh:name "name"@en
