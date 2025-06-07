@@ -72,13 +72,19 @@ cdata:NSS a ex:Product ;
   ex:repository <https://github.com/nodeSolidServer/node-solid-server> .
 
 cdata:SolidWebDotMe a ex:Service ;
-  ex:name "solidweb.me" ;
-  ex:subType con:GeneralPurposePodService ;
-  ex:status con:Production ;
-  ex:serviceEndpoint <https://solidweb.me> ;
-  ex:serviceBackend cdata:CSS ;
-  ex:provider cdata:Meisdata .
-
+    ex:name  """solidweb.me"""@en ;
+    ex:subType  con:GeneralPurposePodService ;
+    ex:status  con:Production ;
+    ex:description  """solidweb.me is a community-run Pod-Provider that uses CSS and the SolidOS frontend and is based in Germany."""@en ;
+    ex:contactEmail  """info@meisdata.io"""@en ;
+    ex:logo  <https://www.serverproject.de/logo2.png> ;
+    ex:repository  <https://github.com/serverproject-dev/solidweb.me> ;
+    ex:serviceEndpoint  <https://solidweb.me> ;
+    ex:provider  cdata:Meisdata ;
+    ex:socialKeyword  """solid, pod-provider, idp, css"""@en ;
+    ex:serviceBackend  cdata:CSS ;
+    ex:serviceFrontend  cdata:SolidOS ;
+    ex:modified "2025-06-06T11:36:27.968Z"^^xsd:dateTime .
 
 cdata:Meisdata a ex:Organization ;
     ex:name  """Meisdata"""@en ;
