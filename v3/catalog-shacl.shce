@@ -6,7 +6,7 @@ PREFIX spec: <http://www.w3.org/ns/spec#>
 PREFIX schema: <http://schema.org/>
 PREFIX doap: <http://usefulinc.com/ns/doap#>
 
-shape :LearningResourceShape -> ex:LearningResource ;
+shape :LearningResource -> ex:LearningResource ;
 	sh:name "Learning Resource"@en {
 	ex:name xsd:string [1..1] % 
 		sh:name "name"@en 
@@ -31,7 +31,7 @@ shape :LearningResourceShape -> ex:LearningResource ;
 		sh:name "description"@en
 	% .
 }
-shape :EventShape -> ex:Event ;
+shape :Event -> ex:Event ;
 	sh:name "Event"@en {
 	ex:name xsd:string [1..1] %
 		sh:name "name"@en
@@ -57,7 +57,7 @@ shape :EventShape -> ex:Event ;
 		sh:name "landing page"@en
 	% .
 }
-shape :ServiceShape -> ex:Service ;
+shape :Service -> ex:Service ;
 	sh:name "Service"@en {
 	ex:name xsd:string [1..1] %
 		sh:name "name"@en
@@ -108,7 +108,7 @@ shape :ServiceShape -> ex:Service ;
 		sh:description "for targeted Pod Services only; e.g. 'citizens of Belgium' or 'Yarrabah community'"
 	% .
 }
-shape :ProductShape -> ex:Product ;
+shape :Product -> ex:Product ;
 	sh:name "Product"@en {
 	ex:name xsd:string [1..1] %
 		sh:name "name"@en
@@ -176,7 +176,7 @@ shape :ProductShape -> ex:Product ;
 		sh:description "a library/module that this software depends on"
 	% .
 }
-shape :SpecificationShape -> ex:Specification ;
+shape :Specification -> ex:Specification ;
 	sh:name "Specification"@en {
 	ex:name xsd:string [1..1] %
 		sh:name "name"@en
@@ -202,14 +202,14 @@ shape :SpecificationShape -> ex:Specification ;
 	% .
 }
 
-shape :ClassOfProductShape -> ex:ClassOfProduct ;
+shape :ClassOfProduct -> ex:ClassOfProduct ;
 	sh:name "Class of Product"@en {
 	ex:name xsd:string [1..1] %
 		sh:name "name"@en
 	% .
 }
 
-shape :OntologyShape -> ex:Ontology ;
+shape :Ontology -> ex:Ontology ;
 	sh:name "Ontology"@en {
 	ex:name xsd:string [1..1] % sh:name "name"@en % .
 	ex:description xsd:string [0..1] maxLength=280 %
@@ -224,7 +224,7 @@ shape :OntologyShape -> ex:Ontology ;
 		sh:description "e.g. sh: for the SHACL ontology"
 	% .
 }
-shape :OrganizationShape -> ex:Organization ;
+shape :Organization -> ex:Organization ;
 	sh:name "Organization"@en {
 	ex:name xsd:string [1..1] %
 		sh:name "name"@en
@@ -264,7 +264,7 @@ shape :OrganizationShape -> ex:Organization ;
 		sh:description "funding, mentorship, collaboration, offered; separate multiple with a blank line"
 	% .
 }
-shape :PersonShape -> ex:Person ;
+shape :Person -> ex:Person ;
 	sh:name "Person"@en {
 	ex:name xsd:string [1..1] %
 		sh:name "name"@en
