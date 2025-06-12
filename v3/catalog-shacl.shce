@@ -65,6 +65,10 @@ shape :ServiceShape -> ex:Service ;
 	ex:subType [1..1] in=[con:GeneralPurposePodService con:SpecializedPodService con:CommunicationService con:IdentityService con:StorageService] %
 		sh:name "subtype"@en
 	% .
+	ex:launchAt IRI [0..1] %
+		sh:name "launch at" ;
+		sh:description "URL that can be opened in a web browser to use this app/service"
+	% .
 	ex:status [1..1] in=[con:Exploration con:Development con:Production con:Archived] %
 		sh:name "status"@en
 	% .
@@ -95,13 +99,9 @@ shape :ServiceShape -> ex:Service ;
 		sh:name "social keyword"@en ;
 		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry"
 	% .
-	ex:serviceBackend IRI %
-		sh:name "service backend"@en ;
-		sh:description "name of server software (e.g. ESS for inrupt.com)"
-	% .
-	ex:serviceFrontend IRI %
-		sh:name "service frontend"@en ;
-		sh:description "name of server frontend (e.g. SolidOS or Penny)"
+	ex:softwareStackIncludes IRI %
+		sh:name "software stack includes"@en ;
+		sh:description "software used in this deplyoment"
 	% .
 	ex:serviceAudience xsd:string [0..1] %
 		sh:name "service audience"@en ;
@@ -143,9 +143,9 @@ shape :ProductShape -> ex:Product ;
 	ex:repository IRI [0..1] %
 		sh:name "repository"@en
 	% .
-	ex:webAppEndpoint IRI [0..1] %
-		sh:name "Webapp URL" ;
-		sh:description "URL of an app that can be run from an online endpoint"
+	ex:showcase IRI [0..1] %
+		sh:name "showcase" ;
+		sh:description "Service with a showcase/demo deployment"
 	% .
 	ex:provider IRI %
 		sh:name "provider"@en ;
