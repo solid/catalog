@@ -56,8 +56,12 @@
 <p>To read more about the catalog and other viewers for it, see <a href="https://github.com/solid/catalog">the gitihub repository</a> and/or catch me (@jeff-zucker) on matrix.</p>
 </div>
 
+  <script>
+    var sh;
+  </script>
   <script type="module">
-    import {viewer} from '../scripts/viewer.js';
+    import {viewer,showSubtypes} from '../scripts/viewer.js';
+    sh = showSubtypes;
     await viewer();
   </script>
 

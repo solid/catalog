@@ -35,10 +35,8 @@ mainArea.style.display="none";
 
 //console.log(1,shapeNode.value)
 //shapeNode=$rdf.sym('http://localhost:8444/home/s/catalog/v2/catalog-shacl.ttl#LearningResourceShape');
-//console.log(2,shapeNode.value)
   const properties = store.match(shapeNode, $rdf.sym('http://www.w3.org/ns/shacl#property'),null,source().shaclNode);
 //  const properties = store.match(null, $rdf.sym('http://www.w3.org/ns/shacl#property'),null,source().shaclNode);
-console.log(3,properties);
   createMenubar(shapeNode,id);
   properties.forEach( property => {
     const path = store.any(property.object, $rdf.sym('http://www.w3.org/ns/shacl#path'));

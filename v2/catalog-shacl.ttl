@@ -1,14 +1,35 @@
+@base <#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix : <#> .
-@prefix con: <catalog-skos.ttl#> .
+@prefix con: <./catalog-skos.ttl#> .
 @prefix ex: <http://example.org/#> .
+@prefix schema: <http://schema.org/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
 
-:LearningResourceShape a sh:NodeShape ;
-  sh:targetClass ex:LearningResource ;
-  sh:name "Learning Resource"@en ;
+<> a owl:Ontology.
+
+:SolidResourceShape a sh:NodeShape ;
+  sh:targetSubjectsOf rdf:type;
+  sh:property [
+    sh:path rdf:type ;
+    sh:in(
+      ex:CreativeWork
+      ex:Event
+      ex:Software
+      ex:Service
+      ex:Person
+      ex:Organization
+      ex:Specification
+      ex:Ontology
+    )
+  ].
+
+:CreativeWorkShape a sh:NodeShape ;
+  sh:targetClass ex:CreativeWork ;
+  sh:name "Creative Work"@en ;
   sh:property [
     sh:name "name"@en ;
     sh:path ex:name ;
@@ -16,31 +37,47 @@
     sh:minCount 1 ;
     sh:maxCount 1
   ], [
+    sh:name "subtype"@en ;
     sh:path ex:subType ;
     sh:minCount 1 ;
-    sh:maxCount 1 ;
-    sh:in (con:Tutorial con:ResearchPaper con:Explainer con:SpecificationSupplement con:OtherLearningResource)
+    sh:in (
+      con:AboutSolid
+      con:AboutSolidApps
+      con:ResearchPaper
+      con:OtherLearningResource
+      con:OtherTechResource
+    )
   ], [
     sh:name "about" ;
     sh:path ex:about ;
     sh:maxCount 1 ;
     sh:nodeKind sh:IRI ;
-    sh:description "the product or topic of the learning resource"
+    sh:description "the topic of the creative work or name of product described in it"
   ], [
-    sh:name "technical keyword"@en ;
+    sh:name "keyword"@en ;
     sh:path ex:technicalKeyword ;
-    sh:datatype xsd:string ;
-    sh:description "comma-separated list for product type e.g. game, calendar, contacts manager"
+    sh:datatype xsd:string 
   ], [
     sh:name "landing page"@en ;
     sh:path ex:landingPage ;
     sh:maxCount 1 ;
-    sh:nodeKind sh:IRI
+    sh:nodeKind sh:IRI ;
+    sh:description "URL(s) where the work is available, or described"
   ], [
     sh:name "provider"@en ;
     sh:path ex:provider ;
     sh:nodeKind sh:IRI ;
-    sh:description "comma-separated list of name(s) of Person(s) and/or Organization(s)"
+    sh:description "Organization(s) responsible for creating the work"
+  ], [
+    sh:name "author"@en ;
+    sh:path ex:author ;
+    sh:nodeKind sh:IRI ;
+    sh:class ex:Person
+  ], [
+    sh:name "editor"@en ;
+    sh:path ex:editor ;
+    sh:nodeKind sh:IRI ;
+    sh:class ex:Person
   ], [
     sh:name "description"@en ;
     sh:path ex:description ;
@@ -74,7 +111,7 @@
     sh:name "provider"@en ;
     sh:path ex:provider ;
     sh:nodeKind sh:IRI ;
-    sh:description "comma-separated list of name(s) of Person(s) and/or Organization(s)"
+    sh:description "organization(s) responsible for hosting the event"
   ], [
     sh:name "schedule" ;
     sh:path ex:schedule ;
@@ -89,7 +126,8 @@
     sh:name "landing page"@en ;
     sh:path ex:landingPage ;
     sh:maxCount 1 ;
-    sh:nodeKind sh:IRI
+    sh:nodeKind sh:IRI ;
+    sh:description "URL where the event is described"
   ] .
 
 :ServiceShape a sh:NodeShape ;
@@ -105,8 +143,7 @@
     sh:name "subtype"@en ;
     sh:path ex:subType ;
     sh:minCount 1 ;
-    sh:maxCount 1 ;
-    sh:in (con:GeneralPurposePodService con:SpecializedPodService con:CommunicationService con:IdentityService con:StorageService)
+    sh:in (con:GeneralPurposePodService con:SpecializedPodService con:CommunicationService con:OtherService)
   ], [
     sh:name "status"@en ;
     sh:path ex:status ;
@@ -132,40 +169,32 @@
     sh:maxCount 1 ;
     sh:nodeKind sh:IRI
   ], [
-    sh:name "landing page"@en ;
-    sh:path ex:landingPage ;
-    sh:maxCount 1 ;
-    sh:nodeKind sh:IRI
-  ], [
-    sh:name "repository"@en ;
-    sh:path ex:repository ;
-    sh:maxCount 1 ;
-    sh:nodeKind sh:IRI
-  ], [
     sh:name "service endpoint"@en ;
     sh:path ex:serviceEndpoint ;
     sh:maxCount 1 ;
-    sh:nodeKind sh:IRI
+    sh:nodeKind sh:IRI ;
+    sh:description "URL where the service can be accessed"
+  ], [
+    sh:name "landing page"@en ;
+    sh:path ex:landingPage ;
+    sh:maxCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:description "URL where the service is described"
+  ], [
+    sh:name "software stack includes"@en ;
+    sh:path ex:softwareStackIncludes ;
+    sh:nodeKind sh:IRI ;
+    sh:description "software used by this service"
   ], [
     sh:name "provider"@en ;
     sh:path ex:provider ;
     sh:nodeKind sh:IRI ;
-    sh:description "comma-separated list of name(s) of Person(s) and/or Organization(s)"
+    sh:description "Organization(s) responsible for providing the service"
   ], [
     sh:name "social keyword"@en ;
     sh:path ex:socialKeyword ;
     sh:datatype xsd:string ;
-    sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry"
-  ], [
-    sh:name "service backend"@en ;
-    sh:path ex:serviceBackend ;
-    sh:nodeKind sh:IRI ;
-    sh:description "name of server software (e.g. ESS for inrupt.com)"
-  ], [
-    sh:name "service frontend"@en ;
-    sh:path ex:serviceFrontend ;
-    sh:nodeKind sh:IRI ;
-    sh:description "name of server frontend (e.g. SolidOS or Penny)"
+    sh:description "for targeted Pod Services only: social domain of service e.g. housing, transportation, name of an industry"
   ], [
     sh:name "service audience"@en ;
     sh:path ex:serviceAudience ;
@@ -174,9 +203,9 @@
     sh:description "for targeted Pod Services only; e.g. 'citizens of Belgium' or 'Yarrabah community'"
   ] .
 
-:ProductShape a sh:NodeShape ;
-  sh:targetClass ex:Product ;
-  sh:name "Product"@en ;
+:SoftwareShape a sh:NodeShape ;
+  sh:targetClass ex:Software ;
+  sh:name "Software"@en ;
   sh:property [
     sh:name "name"@en ;
     sh:path ex:name ;
@@ -187,13 +216,7 @@
     sh:name "subtype" ;
     sh:path ex:subType ;
     sh:minCount 1 ;
-    sh:maxCount 1 ;
     sh:in (con:ProductivityApp con:LeisureApp con:PodApp con:OtherApp con:PodServer con:ServerPlugin con:SoftwareLibrary)
-  ], [
-    sh:name "part of" ;
-    sh:path ex:partOf ;
-    sh:datatype xsd:string ;
-    sh:description "for ServerPlugin/Component, name of server; for other product, name of software product is part of"
   ], [
     sh:name "status"@en ;
     sh:path ex:status ;
@@ -228,33 +251,59 @@
     sh:name "landing page"@en ;
     sh:path ex:landingPage ;
     sh:maxCount 1 ;
-    sh:nodeKind sh:IRI
+    sh:nodeKind sh:IRI ;
+    sh:description "URL where the resource is described"
   ], [
     sh:name "repository"@en ;
     sh:path ex:repository ;
     sh:maxCount 1 ;
-    sh:nodeKind sh:IRI
+    sh:nodeKind sh:IRI ;
+    sh:description "URL where code for the resource is available"
   ], [
-    sh:name "Webapp URL" ;
-    sh:path ex:webAppEndpoint ;
+    sh:name "showcase" ;
+    sh:path ex:showcase ;
     sh:maxCount 1 ;
     sh:nodeKind sh:IRI ;
-    sh:description "URL of an app that can be run from an online endpoint"
+    sh:description "URL that can be opened in a web browser to use this app"
   ], [
     sh:name "provider"@en ;
     sh:path ex:provider ;
     sh:nodeKind sh:IRI ;
-    sh:description "comma-separated list of name(s) of Person(s) and/or Organization(s)"
+    sh:description "Organization(s) responsible for creating/maintaining the softare"
+  ], [
+    sh:name "maintainer"@en ;
+    sh:path ex:maintainer ;
+    sh:nodeKind sh:IRI ;
+    sh:description "person responsible for maintaining the software" ;
+    sh:class ex:Person
+  ], [
+    sh:name "developer"@en ;
+    sh:path ex:developer ;
+    sh:nodeKind sh:IRI ;
+    sh:description "person contributiong to the software" ;
+    sh:class ex:Person
   ], [
     sh:name "social keyword"@en ;
     sh:path ex:socialKeyword ;
     sh:datatype xsd:string ;
-    sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry"
+    sh:description "social domain addressed by the software e.g. housing, transportation, name of an industry"
   ], [
     sh:name "technical keyword"@en ;
     sh:path ex:technicalKeyword ;
     sh:datatype xsd:string ;
     sh:description "comma-separated list for product type e.g. game, calendar, contacts manager"
+  ], [
+    sh:name "conforms to"@en ;
+    sh:path ex:conformsTo ;
+    sh:nodeKind sh:IRI ;
+    sh:description "a class of product, from a specification, that this implementation conforms to" ;
+    sh:class ex:ClassOfProduct
+  ], [
+    sh:name "has dependency on"@en ;
+    sh:path ex:hasDependencyOn ;
+    sh:nodeKind sh:IRI ;
+    sh:description "a library/module that this software depends on" ;
+    sh:class ex:Product
   ] .
 
 :SpecificationShape a sh:NodeShape ;
@@ -276,12 +325,41 @@
     sh:name "repository"@en ;
     sh:path ex:repository ;
     sh:maxCount 1 ;
-    sh:nodeKind sh:IRI
+    sh:nodeKind sh:IRI ;
+    sh:description "URL where the specification is being worked on"
   ], [
     sh:name "landing page"@en ;
     sh:path ex:landingPage ;
     sh:maxCount 1 ;
-    sh:nodeKind sh:IRI
+    sh:nodeKind sh:IRI ;
+    sh:description "URL where the specification is described"
+  ], [
+    sh:name "editor"@en ;
+    sh:path ex:editor ;
+    sh:nodeKind sh:IRI ;
+    sh:class ex:Person
+  ], [
+    sh:name "author"@en ;
+    sh:path ex:author ;
+    sh:nodeKind sh:IRI ;
+    sh:class ex:Person
+  ], [
+    sh:name "defines conformance for"@en ;
+    sh:path ex:definesConformanceFor ;
+    sh:nodeKind sh:IRI ;
+    sh:description "a class of product which this specification defines" ;
+    sh:class ex:ClassOfProduct
+  ] .
+
+:ClassOfProductShape a sh:NodeShape ;
+  sh:targetClass ex:ClassOfProduct ;
+  sh:name "Class of Product"@en ;
+  sh:property [
+    sh:name "name"@en ;
+    sh:path ex:name ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1
   ] .
 
 :OntologyShape a sh:NodeShape ;
@@ -311,6 +389,18 @@
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
     sh:description "e.g. sh: for the SHACL ontology"
+  ], [
+    sh:name "repository"@en ;
+    sh:path ex:repository ;
+    sh:maxCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:description "URL where the ontology is available in RDF"
+  ], [
+    sh:name "landing page"@en ;
+    sh:path ex:landingPage ;
+    sh:maxCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:description "URL where the ontology is described"
   ] .
 
 :OrganizationShape a sh:NodeShape ;
@@ -326,7 +416,6 @@
     sh:name "subtype" ;
     sh:path ex:subType ;
     sh:minCount 1 ;
-    sh:maxCount 1 ;
     sh:in (con:Company con:GovernmentalOrganization con:UniversityProject con:OpenSourceProject con:FundingOrganization con:OtherNGO)
   ], [
     sh:name "contact email"@en ;
@@ -355,17 +444,13 @@
     sh:name "landing page"@en ;
     sh:path ex:landingPage ;
     sh:maxCount 1 ;
-    sh:nodeKind sh:IRI
-  ], [
-    sh:name "repository"@en ;
-    sh:path ex:repository ;
-    sh:maxCount 1 ;
-    sh:nodeKind sh:IRI
+    sh:nodeKind sh:IRI ;
+    sh:description "URL where the organization is described"
   ], [
     sh:name "social keyword"@en ;
     sh:path ex:socialKeyword ;
     sh:datatype xsd:string ;
-    sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry"
+    sh:description "social domain of organization's activies e.g. housing, transportation, name of an industry"
   ], [
     sh:name "resources wanted"@en ;
     sh:path ex:resourcesWanted ;
@@ -428,12 +513,8 @@
     sh:name "landing page"@en ;
     sh:path ex:landingPage ;
     sh:maxCount 1 ;
-    sh:nodeKind sh:IRI
-  ], [
-    sh:name "repository"@en ;
-    sh:path ex:repository ;
-    sh:maxCount 1 ;
-    sh:nodeKind sh:IRI
+    sh:nodeKind sh:IRI ;
+    sh:description "URL where the person is described and/or links to their resources are available"
   ], [
     sh:name "resources wanted"@en ;
     sh:path ex:resourcesWanted ;
@@ -447,3 +528,4 @@
     sh:description "funding, mentorship, collaboration, offered; separate multiple with a blank line" ;
     sh:maxLength 280
   ] .
+

@@ -1,7 +1,12 @@
-import {getTypes,noSubTypes,makeTypesTree} from './report.js';
-import {editRecord} from './form.js';
-import {findFullText,findKeywords,findRecord,findPrefLabel,findName,findTechKeywords,findRecordsByType,findRecordsBySubtype,findRecordsByKeyword,showPage} from './utils.js';
+import {showRecord} from './showRecord.js';
+import {makeTOC} from './makeTOC.js';
+import {findFullText,findKeywords,findRecord,findRecordsBySubtype,findName,findRecordsByKeyword,showPage} from './utils.js';
 
+export async function viewer(){
+  await makeTOC( document.getElementById('left-column') );
+  addListeners();
+  readSearchParams();
+}
 function addListeners(){
     let searchInput = document.querySelector(".search-input input");
     let searchButton = document.querySelector(".search-button");
@@ -36,7 +41,6 @@ function showHelp(){
   let help = document.getElementById('help');
   document.body.classList.remove('noHelp');
   document.body.classList.add('showHelp');
-//  main.style.display="none";
   help.style.display="block";
 }
 function hideHelp(){
@@ -69,185 +73,11 @@ function showSearchResults(term){
   for(let a of div.querySelectorAll('a')){
     a.addEventListener('click',(e)=>{
       e.preventDefault();
-      showRecord(e.target.getAttribute('href'));
+      findAndShowRecord( e.target.getAttribute('href') );
     });
   }
 }
-
-export async function viewer(){
-  let all = await getTypes();
-  let tree = makeTypesTree(all);
-  document.getElementById('left-column').innerHTML = tree;
-  let anchors = document.querySelectorAll('.noSubTypes');
-  for(let anchorWrapper of anchors){
-    let label = anchorWrapper.innerHTML;
-    let type = anchorWrapper.getAttribute('value');
-    anchorWrapper.innerHTML = `<a href="javascript:findType('${type}')">${label}</a>`;
-    anchorWrapper.innerHTML = `<a href="#")">${label}</a>`;
-    anchorWrapper.addEventListener('click', (e)=>{showFoundTypes(e,all,type,label)});
-  }
-  let subAnchors = document.querySelectorAll('li span');
-  const target = ' target="#center-column"';
-  for(let span of subAnchors){
-    let subType = span.innerHTML;
-    let label = findPrefLabel(subType).replace(/\(.*/,'').trim(); //*
-/*
-    if(hasKeywords[label]){
-      span.innerHTML = `<a href="#")">${label}</a>`;
-      span.addEventListener('click', (e)=>{showFoundKeywords(e,all,subType,label)});
-    }
-    else {
-*/
-      span.innerHTML = `<a href="#")">${label}</a>`;
-      span.addEventListener('click', (e)=>{e.preventDefault();showFoundSubTypes(e,all,subType,label)});
-//    }
-  }
-  addListeners();
-  readSearchParams();
-}
-
-function showFoundTypes(event,all,type,label){
-  event.preventDefault();
-  let records = findRecordsByType(type);
-  const display = document.getElementById('right-top');
-  const linkDisplay = document.getElementById('right-bottom');
-  linkDisplay.innerHTML="";
-  display.innerHTML="";
-  let div = document.createElement('div');
-  div.classList.add('types');
-  let str = `<p class="link-head"><b>${label}</b></p>`;
-  for(let r of records){
-    let name = findName(r);
-    str += `<a class="link" href="${r.value}">${name}</a>`;
-  }
-  div.innerHTML = str;
-  display.appendChild(div);
-  for(let a of div.querySelectorAll('a')){
-    a.addEventListener('click',(e)=>{
-      e.preventDefault();
-      showRecord(e.target.getAttribute('href'));
-    });
-  }
-}
-
-function showFoundSubTypes(event,all,subtype,label){
-  event.preventDefault();
-  let records = findRecordsBySubtype(subtype);
-  const linkDisplay = document.getElementById('right-top');
-  const recordDisplay = document.getElementById('right-bottom');
-  linkDisplay.innerHTML="";
-  recordDisplay.innerHTML="";
-  let div=document.createElement('div');
-  let str = `<p class="link-head"><b>${label}</b></p>`;
-  for(let r of records){
-    str += `<a class="link" href="${r.value}">${findName(r)}</a>`;
-  }
-  div.innerHTML = str;
-  linkDisplay.appendChild(div);
-  for(let a of div.querySelectorAll('a')){
-    a.addEventListener('click',(e)=>{
-      e.preventDefault();
-      let href = e.target.getAttribute('href');
-      showRecord(href);
-    });
-  }
-}
-function showRecord(subject){
-  let record = findRecord(subject);
-  const display = document.getElementById('right-bottom');
-  display.innerHTML="";
-  let displayType = record.subType || record.type ;
-  let article = displayType.match(/^(a|e|i|o|u|n)/i) ?"an" : "a";
-  let div = document.createElement('div');
-  div.classList.add('record');
-  display.appendChild(div);
-  let str = `
-      <p class="edit-row"><a class="edit-button" href="${subject}">edit</a></p>
-      <p><b class="record-name">${record.name}</b><br>${article} ${displayType.replace(/\(.*$/,'')}</p>
-    <p>${record.description||""}</p>
-  `;
-  if(record.logo) {
-    str+= `<img src="${record.logo}" alt="logo">`;
-  }
-  for(let f of Object.keys(record)){
-    if(f==="name" || f.match(/(type|description|keyword|landingPage|serviceEndpoint|socialKeyword|technicalKeyword|webid|clientid|videoCallPage|repository|logo)/i)) continue;
-    if(f=="contactEmail"){
-      let val = (record[f].match(/^mailto:/)) ?record[f] :`mailto:${record[f]}`
-      val = `<a href="${val}" target="_BLANK">${val}</a>`;
-      str += `
-        <div class="field">
-          <b class="fieldName">contact email</b> <span class="fieldValue">${val}</span>
-        </div>
-      `
-    }
-    else {
-      str += `
-        <div class="field">
-          <b class="fieldName">${f}</b> <span class="fieldValue">${record[f]}</span>
-        </div>
-      `;
-     }
-  }
-  let s = `<p class="record-links">`;
-  if(record.webid) s += `<a href="${record.webid}" target="_BLANK">WebID profile</a>`;
-  if(record.repository) s += `<a href="${record.repository}" target="_BLANK">Repository</a>`;
-  if(record.videoCallPage) s += `<a href="${record.videoCallPage}" target="_BLANK">Video Call Link</a>`;
-  if(record.serviceEndpoint) s += `<a href="${record.serviceEndpoint}" target="_BLANK">Service Endpoint</a>`;
-  if(record.landingPage) s += `<a href="${record.landingPage}" target="_BLANK">Landing Page</a>`;
-  s += '</p>';
-  str += s;
-  if(record.socialKeyword||record.technicalKeyword){
-    str += `<p class="keywords">`;
-    str += (record.socialKeyword || "") + (record.technicalKeyword ||"");
-    str += `</p>`;
-  }
-  div.innerHTML = str;
-  /*
-    field link listeners
-  */
-  let fieldAnchors = display.querySelectorAll('.field a');
-  for(let fa of fieldAnchors){
-    fa.addEventListener('click',(e)=> {
-      e.preventDefault();
-      showRecord(e.target.getAttribute('href'));
-    });
-  }
-  /*
-    keyword listeners
-  */
-  let keyAnchors = display.querySelectorAll('.keywords a');
-  for(let ka of keyAnchors){
-    ka.addEventListener('click',(e)=> {
-      e.preventDefault();
-      showRecordsByKeyword(e.target.getAttribute('href'));
-    });
-  }
-  /*
-    edit button listener
-  */
-  let button = display.querySelector('.edit-button');
-  button.addEventListener('click',(e)=> {
-    e.preventDefault();
-    editRecord(e.target.getAttribute('href'));
-  });
-}
-function showFoundKeywords(event,all,subtype,label){
-  event.preventDefault();
-  let keys = findTechKeywords(subtype);
-  const display = document.getElementById('right-top');
-  document.getElementById('right-bottom').innerHTML="";
-  display.innerHTML = `<b>${label}</b><ul>`;
-  for(let k of keys){
-    let newItem = document.createElement('li');
-    let newLink = document.createElement('a');
-    newItem.appendChild(newLink);
-    display.appendChild(newItem);
-    newLink.innerHTML = k;
-    newLink.setAttribute('href','#');
-    newLink.addEventListener('click', (e)=>{showRecordsByKeyword(e,all,k)});
-  }
-}
-function showRecordsByKeyword(keyword){
+export function showRecordsByKeyword(keyword){
   let records = findRecordsByKeyword(keyword);
   const recordDisplay = document.getElementById('right-bottom');
   const linkDisplay = document.getElementById('right-top');
@@ -262,9 +92,13 @@ function showRecordsByKeyword(keyword){
   for(let ka of keyAnchors){
     ka.addEventListener('click',(e)=> {
       e.preventDefault();
-      showRecord(e.target.getAttribute('href'));
+      findAndShowRecord(e.target.getAttribute('href'));
     });
   }
+}
+function findAndShowRecord(subject){
+  let record = findRecord(subject);
+  showRecord(  document.getElementById('right-bottom'), subject,record);
 }
 function showKeywordIndex(){
   let keywords = findKeywords();
@@ -285,7 +119,26 @@ function showKeywordIndex(){
     });
   }
 }
-const hasKeywords = {
-  "Development Tool":1,
-  Application:1,
+export function showSubtypes(subtype,label){
+  let records = findRecordsBySubtype(subtype);
+  const linkDisplay = document.getElementById('right-top');
+  const recordDisplay = document.getElementById('right-bottom');
+  linkDisplay.innerHTML="";
+  recordDisplay.innerHTML="";
+  let div=document.createElement('div');
+  let str = `<p class="link-head"><b>${label}</b></p>`;
+  for(let r of records){
+    str += `<a class="link" href="${r.value}">${findName(r)}</a>`;
+  }
+  div.innerHTML = str;
+  linkDisplay.appendChild(div);
+  for(let a of div.querySelectorAll('a')){
+    a.addEventListener('click',(e)=>{
+      e.preventDefault();
+      let href = e.target.getAttribute('href');
+      findAndShowRecord( href );
+    });
+  }
 }
+
+

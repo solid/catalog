@@ -112,48 +112,16 @@ export function findRecord(subjectURL){
   let objects = store.match(null,null,subject,source().dataNode) ;
   let record = getRecordPredicates({},subject,predicates,'subject');
   record = getRecordPredicates(record,subject,objects,'object');
-/*
-  let subtype = store.any(subject,source().subtypeNode,null,source().dataNode);
-  if(subtype && subtype.value.match(source().skosURL)) subtype = findPrefLabel(subtype);
-  let name = findName(subject);
-  let type = store.any(subject,source().isa,null,source().dataNode);
-  let isPred = {};
-  let record = {};
-  for(let p of triples){
-    if(isPred[p.predicate.value]) continue;
-    isPred[p.predicate.value]=true;
-    let fieldName = node2label(p.predicate.value);
-    let newValue = store.match(subject,p.predicate,null,source().dataNode);
-    let valArray= [];
-    for(let nv of newValue){
-      let n = {...nv.object};  
-      if(n.value.match(source().dataURL)){
-        let label = findName(n.value);
-        n.value = `<a href="${n.value}">${label}</a>`;
-      }
-      else if(n.value.match(source().skosURL)){
-        n.value = findPrefLabel(n.value);
-      }
-      else if(p.predicate.value.match(/keyword/i)){
-        n.value = `<a href="${n.value}">${n.value}</a>`;
-      }
-      valArray.push(n.value);
-    }
-    let fieldValue= valArray.join(', ')
-    if(p.predicate.value.match(/subType/i)) fieldValue = subtype;
-    record[fieldName]=fieldValue;
-  }
-  let type = store.any(subject,source().isa,null,source().dataNode);
-  record.type = node2label(type);
-*/
   return record;
 }
 
 function getRecordPredicates(record,subject,triples,posOfThing) {
   let isPred = {};
   let name = findName(subject);
-  let subtype = store.any(subject,source().subtypeNode,null,source().dataNode);
-  if(subtype && subtype.value.match(source().skosURL)) subtype = findPrefLabel(subtype);
+  let subtype = store.each(subject,source().subtypeNode,null,source().dataNode);
+  for(let s of subtype){
+    if(s.value.match(source().skosURL)) s = findPrefLabel(s);
+  }
   for(let p of triples){
     if(isPred[p.predicate.value]) continue;
     isPred[p.predicate.value]=true;
@@ -225,17 +193,20 @@ export function findRecordsByKeyword(keyword){
   return records;
 }
 export function findKeywords(){
-  let keys = [];
+  let allKeys = [];
   let isKey = {};
   let tech = store.match(null,source().techKeywordsNode,null,source().dataNode);
   let soc = store.match(null,source().socKeywordsNode,null,source().dataNode);
   for(let r of tech.concat(soc)){
-    let key = r.object.value;
-    if(isKey[key]) continue ;
-    isKey[key]=true;
-    keys.push(key);
+    let keys = r.object.value;
+    keys = keys.match(/,/) ?keys.split(/,/) :[keys];
+    for(let key of keys){   
+      if(isKey[key]) continue ;
+      isKey[key]=true;
+      allKeys.push(key);
+    }
   }
-  return keys.sort();
+  return allKeys.sort();
 }
 
 
@@ -309,7 +280,8 @@ export function findFullText(term){
     for(let a of all){  
       recordStr += [a.subject.value,a.predicate.value,a.object.value].join(" ");
     }
-    if(recordStr.match(term)){
+    let rterm = new RegExp(term,'i');
+    if(recordStr.match(rterm)){
       let label = findName(s.subject);
       subjects.push({link:s.subject.value,label});
       continue;

@@ -9,7 +9,8 @@ export async function prepNewRecordForm(){
   let createRecordButton = document.getElementById('createRecordButton');
   let cancelButton = document.getElementById('cancelButton');
   await fetcher.load(source().shaclURL);
-  let types = findNodeShapes();
+  // let types = findNodeShapes();
+  let types = findTopTypes();
   selector.innerHTML = "";
   for(let t  of Object.keys(types)){
     selector.innerHTML += `<option value="${t}">${types[t]}</option>`;
@@ -21,6 +22,23 @@ export async function prepNewRecordForm(){
     showPage('main')
   });
 
+}
+function findTopTypes(){
+   let topType = {};
+   let shape = $rdf.sym(source().shaclNode.uri+'#SolidResourceShape');
+   const propertyPredicate = $rdf.sym('http://www.w3.org/ns/shacl#property');
+   const collectionPredicate = $rdf.sym('http://www.w3.org/ns/shacl#in');
+   let property = store.any(shape,propertyPredicate,null);
+   let collection = store.any(property,collectionPredicate);
+   for(let type of collection.elements){
+     let label = labelFromUrl(type.value);
+     topType[type.value] = label;
+   }
+   return topType;
+}
+function labelFromUrl(url){
+   let label = url.replace(/^.*#/,'').replace(/^[^\/]*\//,'');
+   return label.replace(/([A-Z])/g, ' $1').trim();  // separate camelcase words
 }
 /*
   prepRecordSearchForm -- adds listeners to search page

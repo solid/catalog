@@ -8,63 +8,104 @@
 con:SolidCatalogTaxonomy 
   a skos:ConceptScheme ;
   skos:hasTopConcept
-    con:ProductType,
-    con:ServiceType,
-    con:OrganizationType,
-    con:LearningResourceType,
-    con:Status .
+    con:LearningResource,
+    con:ParticipationOpportunity,
+    con:Service,
+    con:Product,
+    con:Organization,
+    con:Person,
+    con:TechnicalResource.
 
-###
-# Product Type
-###
-
-con:ProductType
+con:Person
   a skos:Concept;
   skos:inScheme con:SolidCatalogTaxonomy ;
-  skos:prefLabel "Product Type".
+  skos:altLabel "People"@en ;
+  skos:prefLabel "Person".
 
-con:OtherApp
-  a skos:Concept ;
-  skos:broader con:ProductType ;
-  skos:prefLabel "Application" .
+con:TechnicalResource
+  a skos:Concept;
+  skos:inScheme con:SolidCatalogTaxonomy ;
+  skos:altLabel "Technical Resources"@en ;
+  skos:prefLabel "Technical Resource".
 
-con:PodServer
+con:Specification
   a skos:Concept ;
-  skos:broader con:ProductType ;
-  skos:description "supports identity & storage" ;
-  skos:prefLabel "Pod Server" .
+  skos:broader con:TechnicalResource ;
+  skos:altLabel "Specifications"@en ;
+  skos:prefLabel "Specification" .
 
-con:ServerPlugin
+con:Ontology
   a skos:Concept ;
-  skos:broader con:ProductType ;
-  skos:prefLabel "Server Extension" .
+  skos:broader con:TechnicalResource ;
+  skos:altLabel "Ontologies";
+  skos:prefLabel "Ontology" .
 
-con:SoftwareLibrary
+con:OtherLearningResource
   a skos:Concept ;
-  skos:broader con:ProductType ;
-  skos:prefLabel "Software Library (module,webcomponent,SDK,...)" .
+  skos:broader con:LearningResource ;
+  skos:prefLabel "General audience creative work" .
+
+con:ResearchPaper
+  a skos:Concept ;
+  skos:broader con:TechnicalResource ;
+  skos:prefLabel "Research Paper" .
+
+con:OtherTechResource
+  a skos:Concept ;
+  skos:broader con:TechnicalResource ;
+  skos:prefLabel "Other Tech Resource (primer, use case, etc)".
+
+###
+# Product
+###
+
+con:Product
+  a skos:Concept;
+  skos:inScheme con:SolidCatalogTaxonomy ;
+  skos:prefLabel "Software".
 
 con:ProductivityApp
   a skos:Concept ;
-  skos:broader con:ProductType ;
+  skos:broader con:Product ;
   skos:prefLabel "Personal Productivity App" .
 
 con:PodApp
   a skos:Concept ;
-  skos:broader con:ProductType ;
+  skos:broader con:Product ;
   skos:prefLabel "Pod Management App" .
 
 con:LeisureApp
   a skos:Concept ;
-  skos:broader con:ProductType ;
+  skos:broader con:Product ;
   skos:prefLabel "Leisure Activity App" .
 
+con:OtherApp
+  a skos:Concept ;
+  skos:broader con:Product ;
+  skos:prefLabel "Other Application" .
+
+con:Server
+  a skos:Concept ;
+  skos:broader con:Product ;
+  skos:description "supports either or both of identity & storage" ;
+  skos:prefLabel "Server" .
+
+con:ServerPlugin
+  a skos:Concept ;
+  skos:broader con:Product ;
+  skos:prefLabel "Server Extension" .
+
+con:SoftwareLibrary
+  a skos:Concept ;
+  skos:broader con:Product ;
+  skos:prefLabel "Software Library (module,webcomponent,SDK,...)" .
 
 ###
 # STATUS
 ###
 con:Status
     a skos:Concept ;
+    skos:prefLabel "status" ;
     skos:definition "Predefined values for specifying the status of a project." ;
     skos:inScheme con:SolidCatalogTaxonomy .
 
@@ -93,110 +134,116 @@ con:Archived
     skos:definition "Project has been archived for historical purposes." .
 
 ###
-# Service Type
+# Service
 ###
 
-con:ServiceType
+con:Service
   a skos:Concept;
   skos:inScheme con:SolidCatalogTaxonomy ;
-  skos:prefLabel "Service Type".
+  skos:altLabel "Pod Providers" ;
+  skos:prefLabel "Service".
 
 con:GeneralPurposePodService
   a skos:Concept ;
-  skos:broader con:ServiceType ;
-  skos:prefLabel "General Public Pod Provider" .
+  skos:broader con:Service ;
+  skos:prefLabel "General Public Pod Provider (identity &/or storage)" .
 
 con:SpecializedPodService
   a skos:Concept ;
-  skos:broader con:ServiceType ;
-  skos:prefLabel "Targeted Audience Pod Provider" .
+  skos:broader con:Service ;
+  skos:prefLabel "Targeted Audience Pod Provider (identity &/or storage)" .
 
-con:IdentityService
+con:OtherService
   a skos:Concept ;
-  skos:broader con:ServiceType ;
-  skos:prefLabel "Identity Service" .
-
-con:StorageService
-  a skos:Concept ;
-  skos:broader con:ServiceType ;
-  skos:prefLabel "Storage Service" .
-
-con:CommunicationService
-  a skos:Concept ;
-  skos:broader con:ServiceType ;
-  skos:prefLabel "Communication Service" .
+  skos:broader con:Service ;
+  skos:prefLabel "Other Service or WebApp" .
 
 ###
-# Organization Type
+# Organization
 ###
 
-con:OrganizationType
+con:Organization
   a skos:Concept;
   skos:inScheme con:SolidCatalogTaxonomy ;
-  skos:prefLabel "Organization Type".
+  skos:altLabel "Organizations"@en ;
+  skos:prefLabel "Organization".
 
 con:Company
   a skos:Concept ;
-  skos:broader con:OrganizationType ;
+  skos:broader con:Organization ;
   skos:prefLabel "Company or Enterprise" .
 
 con:GovernmentalOrganization
   a skos:Concept ;
-  skos:broader con:OrganizationType ;
+  skos:broader con:Organization ;
   skos:prefLabel "Governmental Organiazation" .
 
 con:UniversityProject
   a skos:Concept ;
-  skos:broader con:OrganizationType ;
+  skos:broader con:Organization ;
   skos:prefLabel "University department or unit" .
 
 con:OpenSourceProject
   a skos:Concept ;
-  skos:broader con:OrganizationType ;
+  skos:broader con:Organization ;
   skos:prefLabel "Open Source Project" .
 
 con:FundingOrganization
   a skos:Concept ;
-  skos:broader con:OrganizationType ;
+  skos:broader con:Organization ;
   skos:prefLabel "Funding Organization" .
 
 con:NonGovernmentalOrganization
   a skos:Concept ;
-  skos:broader con:OrganizationType ;
+  skos:broader con:Organization ;
   skos:prefLabel "NGO" .
 
 ###
-# Learning Resource Type
+# Learning Resource
 ###
 
-con:LearningResourceType
+con:LearningResource
   a skos:Concept;
   skos:inScheme con:SolidCatalogTaxonomy ;
-  skos:prefLabel "Learning Resource Type".
+  skos:altLabel "Learning Resources";
+  skos:prefLabel "Learning Resource".
 
-con:Tutorial
+con:AboutSolid
   a skos:Concept ;
-  skos:broader con:LearningResourceType ;
-  skos:prefLabel "Tutorial" .
+  skos:broader con:LearningResource ;
+  skos:prefLabel "About Solid" .
 
-con:ResearchPaper
+con:AboutSolidApps
   a skos:Concept ;
-  skos:broader con:LearningResourceType ;
-  skos:prefLabel "Research Paper" .
+  skos:broader con:LearningResource ;
+  skos:prefLabel "About Solid Apps" .
 
-con:Explainer
+con:SolidGlossary
   a skos:Concept ;
-  skos:broader con:LearningResourceType ;
-  skos:prefLabel "Explainer" .
+  skos:broader con:LearningResource ;
+  skos:prefLabel "Glossary of Solid Terms" .
 
-con:SpecificationSupplement
+con:CommunicationService
   a skos:Concept ;
-  skos:broader con:LearningResourceType ;
-  skos:prefLabel "Infrastructure Information (primer,use case,test result)" .
+  skos:broader con:ParticipationOpportunity ;
+  skos:altLabel "Communication Channels" ;
+  skos:prefLabel "Communication Channel" .
 
-con:OtherLearningResource
-  a skos:Concept ;
-  skos:broader con:LearningResourceType ;
-  skos:prefLabel "Learning Resource" .
+con:ParticipationOpportunity
+  a skos:Concept;
+  skos:inScheme con:SolidCatalogTaxonomy ;
+  skos:altLabel "Participation Opportunities" ;
+  skos:prefLabel "Participation Opportunity" .
+
+con:Event
+  a skos:Concept;
+  skos:broader con:ParticipationOpportunity ;
+  skos:altLabel "Events"@en ;
+  skos:prefLabel "Event"@en .
+
+# con:OtherLearningResource
+#  a skos:Concept ;
+#  skos:broader con:LearningResource ;
+#  skos:prefLabel "Other Learning Resources" .
 
 

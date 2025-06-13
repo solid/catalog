@@ -1,131 +1,74 @@
-import {rdf,store,fetcher,loadCatalog,source,findName,findUniqueSubjects,findNodeShapes,findKnownSubTypes,node2label,findShaclName,findPrefLabel} from './utils.js'
-const $rdf=rdf;
+import * as $rdf from 'rdflib';
 
-export function unCamel(str) {
-  return str.replace(/([A-Z])/g, ' $1').trim();
-}
+const store = $rdf.graph();
+const fetcher = $rdf.fetcher(store);
 
-export async function report(){
-  let all = await getTypes();
-  let date = new Date().toLocaleDateString();
-  let tree = `<p><b>Solid Resources Catalog Report</b> (${date}) ${all.subjects.length} records</p>`;
-  tree += reportMissing(all.types,all.subTypes,all.missingNames,all.duplicatedNames) ;
-  return tree;
-}
-export function makeTypesTree(all){
-  let types = all.types;
-  let subTypes = all.subTypes;
-  let subjects = all.subjects;
-  let tree = "";
-  for(let dType of Object.keys(types.found)){
-    if(noSubTypes[node2label(dType)]){
-      tree += `<b class="noSubTypes" value="${dType}">${unCamel(node2label(dType))}</b>&nbsp;&nbsp;${types.found[dType].count}`;
-    }
-    else {
-      tree += `<b>${unCamel(node2label(dType))}</b>&nbsp;&nbsp;${types.found[dType].count}`;
-    }
-    tree += "<ul>";
-    for(let dSubType of Object.keys(subTypes.found)){
-      if(subTypes.found[dSubType].inType != dType) continue;
-      let sub = dSubType;
-      tree += `<li><span>${sub}</span>&nbsp;${subTypes.found[dSubType].count} </li>`;
-    }
-    tree += "</ul>";
-  }
-  tree+= `<p><b>${all.subjects.length} records</b></p>`;
-  return tree;
-}
+const typePredicate = $rdf.sym(`http://www.w3.org/1999/02/22-rdf-syntax-ns#type`);
+const subtypePredicate = $rdf.sym('http://example.org/#subType');
+const modifiedPredicate = $rdf.sym('http://example.org/#modified');
+const concept = $rdf.sym('http://www.w3.org/2004/02/skos/core#Concept') ;
 
-export const noSubTypes = {
-  Person:1,
-  Specification:1,
-  Ontology:1,
-  Event:1,
-}
+const base = 'http://localhost:8444/home/s/catalog/v2/';
+const dataNode = $rdf.sym(base+'catalog-data.ttl');
+const shaclNode = $rdf.sym(base+'catalog-shacl.ttl');
+const skosNode = $rdf.sym(base+'catalog-skos.ttl');
 
-export async function getTypes(){
-  await loadCatalog();
-  const typeNode = $rdf.sym('http://www.w3.org/1999/02/22-rdf-syntax-ns#type');
-  const isa = $rdf.sym('http://www.w3.org/1999/02/22-rdf-syntax-ns#type') ;
-  const dataNode = source().dataNode;
-  const subTypeNode = $rdf.sym(source().vocURL+'#'+'subType');
-  const subjects = findUniqueSubjects(store,source().dataURL);
-  const types = {found:{},missing:[]};
-  const subTypes= {found:{},missing:[]};
-  const missingNames = [];
-  const knownType = findNodeShapes();
-  const knownSubType = findKnownSubTypes();
-  const duplicatedNames = [];
-  const knownName = {}
-  for(let s of subjects){
-    let type = store.any(s,isa,null,dataNode);
-    let subType = store.any(s,subTypeNode,null,dataNode);
-    let name = findName(s);
-    if(knownName[s.value]) duplicatedNames.push(s.value);
-    knownName[s.value] = true;
-    let tval = type ?type.value : "";
-    let sval = subType ?subType.value : "";
-    let tvalLabel = node2label(tval);
-    let svalLabel = findPrefLabel(sval);
-    if(!name){
-      missingNames.push(s.value);
-    }
-    if(!knownType[type]){
-      types.missing.push(s.value);
-    }
-/*
-    if(!subType || !type || (!noSubTypes[tvalLabel] && !knownSubType[sval])){
-      subTypes.missing.push(s.value);
-    }
-*/
-    if(type && knownType[type]){
-      types.found[type.value] ||= {};
-      types.found[type.value].count ||= 0;
-      types.found[type.value].count++;
-    }
-    if(subType && knownSubType[subType.value]){
-      subTypes.found[subType.value] ||= {};
-      subTypes.found[subType.value].count ||= 0;
-      subTypes.found[subType.value].count++;
-      subTypes.found[subType.value].inType = type.value; 
-    }
-  }
-  return {types,subTypes,subjects:subjects,missingNames,duplicatedNames} ;
-}
+let topType = {};
 
-function reportMissing(types,subTypes,missingNames,duplicatedNames){
-  let missing = "<p><b>Records with missing names</b> "+missingNames.length + "</p>";
-  if(missingNames.length>0){
-    missing += "<ul>";
-    for(let m of missingNames) {
-     missing += `<li>${m}</li>` ;
-    }
-    missing += "</ul>";
+async function report(){
+  await fetcher.load( dataNode );
+  await fetcher.load( shaclNode );
+  await fetcher.load( skosNode );
+  findTopTypes();
+  let records = store.match(null,null,null,dataNode);
+  let uniqueRecords = [];
+  let isSubject = {};
+  for(let record of records){
+    let subject = record.subject;    
+    if(isSubject[subject]) continue;
+    isSubject[subject]=true;
+    uniqueRecords.push(subject)
   }
-  missing += "<p><b>Duplicated Names</b> "+duplicatedNames.length + "</p>";
-  if(duplicatedNames.length>0){
-    missing += "<ul>";
-    for(let d of duplicatedNames) {
-     missing += `<li>${d}</li>` ;
-    }
-    missing += "</ul>";
+  console.log( `${uniqueRecords.length} total records` );
+  for(let record of uniqueRecords){
+    record = record;
+    let type = isType( store.each(record,typePredicate,null,dataNode) );
+    let subtype = isSubtype( store.any(record,subtypePredicate,null,dataNode) );
+    if(!type) console.log( `No type : ${record.value}`);
+    if(!subtype) console.log( `No subtype : ${record.value}` );
   }
-  missing +=  "<p><b>Records with missing or unknown types</b> "+types.missing.length + "</p>";
-  if(types.missing.length>0){
-    missing += "<ul>";
-    for(let t of types.missing) {
-      missing += `<li>${t}</li>`;
-    }
-    missing += "</ul>";
-  }
-  missing += "<p><b>Records with missing or unknown subtypes</b> "+subTypes.missing.length+"</p>";
-  missing += "</ul>";
-  if(subTypes.missing.length>0){
-    missing += "<ul>";
-    for(let t of subTypes.missing) {
-      missing += `<li>${t}</li>`;
-    }
-    missing += "</ul>";
-  }
-  return missing;
+//  showModifiedRecords(uniqueRecords);
 }
+function isSubtype(subtype){
+  let knownSubtype = store.any(subtype,typePredicate,null);
+  return (knownSubtype && knownSubtype.value==concept.value)
+}
+function isType(type){
+  for(let t of type){
+    if(topType[t.value]) return true;
+  }
+  return false;
+}
+function findTopTypes(){
+   let shape = $rdf.sym(shaclNode.uri+'#SolidResourceShape');
+   const propertyPredicate = $rdf.sym('http://www.w3.org/ns/shacl#property');
+   const collectionPredicate = $rdf.sym('http://www.w3.org/ns/shacl#in');
+   let property = store.any(shape,propertyPredicate,null);
+   let collection = store.any(property,collectionPredicate);
+   for(let type of collection.elements){
+     topType[type.value] = true;
+   }
+}
+function showModifiedRecords(records){
+  let modified = [];
+  for(let record of records){
+    let timestamp = store.any(record,modifiedPredicate);
+    if(!timestamp) continue;
+    modified.push({record,timestamp:timestamp.value});
+  }
+  modified.sort((a, b) => {
+    return new Date(b.timestamp) - new Date(a.timestamp);
+  });
+  console.log(modified)
+}
+report();
