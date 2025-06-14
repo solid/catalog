@@ -1,5 +1,5 @@
-
-PREFIX : <urn:x-base:default#>
+BASE <#>
+PREFIX : <#>
 PREFIX con: <urn:x-base:default./catalog-skos.ttl#>
 PREFIX ex: <http://example.org/#>
 
