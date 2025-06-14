@@ -6,8 +6,9 @@
   "main": "catalog.html",
   "scripts": {
     "test": "rdf-dereference ./v3/catalog-shacl.ttl && rdf-dereference ./v3/catalog-skos.ttl && rdf-dereference ./v3/catalog-data.ttl",
-    "build": "rdf-transform-cli ./v3/catalog-shacl.shce ./v3/catalog-shacl.ttl -p",
-    "v2ttl2shce": "rdf-transform-cli ./v2/catalog-shacl.ttl ./v2/catalog-shacl.shce -p"
+    "build:v1": "rdf-transform-cli ./v3/catalog-shacl.shce ./v3/catalog-shacl.ttl -p",
+    "build:v2": "rdf-transform-cli ./v2/catalog-shacl.shce ./v2/catalog-shacl.ttl -p",
+    "build": "npm run build:v1 && npm run build:v2"
   },
   "keywords": [],
   "author": "Jeff Zucker",
