@@ -1,31 +1,40 @@
 BASE <#>
 PREFIX : <#>
-PREFIX con: <catalog-skos.ttl#>
+PREFIX con: <./catalog-skos.ttl#>
 PREFIX ex: <http://example.org/#>
-PREFIX spec: <http://www.w3.org/ns/spec#>
-PREFIX schema: <http://schema.org/>
-PREFIX doap: <http://usefulinc.com/ns/doap#>
 
-shape :LearningResourceShape -> ex:LearningResource ;
-	sh:name "Learning Resource"@en {
-	ex:name xsd:string [1..1] % 
-		sh:name "name"@en 
+shape :SolidResourceShape {
+	targetSubjectsOf=rdf:type .
+	rdf:type in=[ex:CreativeWork ex:Event ex:Software ex:Service ex:Person ex:Organization ex:Specification ex:Ontology] .
+}
+shape :CreativeWorkShape -> ex:CreativeWork ;
+	sh:name "Creative Work"@en {
+	ex:name xsd:string [1..1] %
+		sh:name "name"@en
 	% .
-	ex:subType [1..1] in=[con:Tutorial con:ResearchPaper con:Explainer con:SpecificationSupplement con:OtherLearningResource] .
+	ex:subType [1..*] in=[con:AboutSolid con:AboutSolidApps con:ResearchPaper con:OtherLearningResource con:OtherTechResource] %
+		sh:name "subtype"@en
+	% .
 	ex:about IRI [0..1] %
-		sh:name "about" ;
-		sh:description "the product or topic of the learning resource"
+		sh:name "references" ;
+		sh:description "if specific to a product, the  name of the product"
 	% .
 	ex:technicalKeyword xsd:string %
-		sh:name "technical keyword"@en ;
-		sh:description "comma-separated list for product type e.g. game, calendar, contacts manager"
+		sh:name "keyword"@en
 	% .
-	ex:landingPage IRI [0..1] % 
-		sh:name "landing page"@en 
+	ex:landingPage IRI [0..1] %
+		sh:name "landing page"@en ;
+		sh:description "URL(s) where the work is available, or described"
 	% .
 	ex:provider IRI %
 		sh:name "provider"@en ;
-		sh:description "comma-separated list of name(s) of Person(s) and/or Organization(s)"
+		sh:description "Organization(s) responsible for creating the work"
+	% .
+	ex:author IRI ex:Person %
+		sh:name "author"@en
+	% .
+	ex:editor IRI ex:Person %
+		sh:name "editor"@en
 	% .
 	ex:description xsd:string [0..1] maxLength=280 %
 		sh:name "description"@en
@@ -39,13 +48,9 @@ shape :EventShape -> ex:Event ;
 	ex:description xsd:string [0..1] maxLength=280 %
 		sh:name "description"@en
 	% .
-	ex:about IRI [0..1] %
-		sh:name "about" ;
-		sh:description "the topic of the event"
-	% .
 	ex:provider IRI %
 		sh:name "provider"@en ;
-		sh:description "comma-separated list of name(s) of Person(s) and/or Organization(s)"
+		sh:description "organization(s) responsible for hosting the event"
 	% .
 	ex:schedule xsd:string [0..1] %
 		sh:name "schedule"
@@ -54,7 +59,8 @@ shape :EventShape -> ex:Event ;
 		sh:name "video call URL"
 	% .
 	ex:landingPage IRI [0..1] %
-		sh:name "landing page"@en
+		sh:name "landing page"@en ;
+		sh:description "URL where the event is described"
 	% .
 }
 shape :ServiceShape -> ex:Service ;
@@ -62,12 +68,8 @@ shape :ServiceShape -> ex:Service ;
 	ex:name xsd:string [1..1] %
 		sh:name "name"@en
 	% .
-	ex:subType [1..1] in=[con:GeneralPurposePodService con:SpecializedPodService con:CommunicationService con:IdentityService con:StorageService] %
+	ex:subType [1..*] in=[con:GeneralPurposePodService con:SpecializedPodService con:CommunicationService con:OtherService] %
 		sh:name "subtype"@en
-	% .
-	ex:launchAt IRI [0..1] %
-		sh:name "launch at" ;
-		sh:description "URL that can be opened in a web browser to use this app/service"
 	% .
 	ex:status [1..1] in=[con:Exploration con:Development con:Production con:Archived] %
 		sh:name "status"@en
@@ -82,43 +84,38 @@ shape :ServiceShape -> ex:Service ;
 	ex:logo IRI [0..1] %
 		sh:name "logo"@en
 	% .
-	ex:landingPage IRI [0..1] %
-		sh:name "landing page"@en
-	% .
-	ex:repository IRI [0..1] %
-		sh:name "repository"@en
-	% .
 	ex:serviceEndpoint IRI [0..1] %
-		sh:name "service endpoint"@en
+		sh:name "service endpoint"@en ;
+		sh:description "URL where the service can be accessed"
 	% .
-	ex:provider IRI %
-		sh:name "provider"@en ;
-		sh:description "comma-separated list of name(s) of Person(s) and/or Organization(s)"
-	% .
-	ex:socialKeyword xsd:string %
-		sh:name "social keyword"@en ;
-		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry"
+	ex:landingPage IRI [0..1] %
+		sh:name "landing page"@en ;
+		sh:description "URL where the service is described"
 	% .
 	ex:softwareStackIncludes IRI %
 		sh:name "software stack includes"@en ;
-		sh:description "software used in this deplyoment"
+		sh:description "software used by this service"
+	% .
+	ex:provider IRI %
+		sh:name "provider"@en ;
+		sh:description "Organization(s) responsible for providing the service"
+	% .
+	ex:socialKeyword xsd:string %
+		sh:name "social keyword"@en ;
+		sh:description "for targeted Pod Services only: social domain of service e.g. housing, transportation, name of an industry"
 	% .
 	ex:serviceAudience xsd:string [0..1] %
 		sh:name "service audience"@en ;
 		sh:description "for targeted Pod Services only; e.g. 'citizens of Belgium' or 'Yarrabah community'"
 	% .
 }
-shape :ProductShape -> ex:Product ;
-	sh:name "Product"@en {
+shape :SoftwareShape -> ex:Software ;
+	sh:name "Software"@en {
 	ex:name xsd:string [1..1] %
 		sh:name "name"@en
 	% .
-	ex:subType [1..1] in=[con:ProductivityApp con:LeisureApp con:PodApp con:OtherApp con:PodServer con:ServerPlugin con:SoftwareLibrary] %
+	ex:subType [1..*] in=[con:ProductivityApp con:LeisureApp con:PodApp con:OtherApp con:PodServer con:ServerPlugin con:SoftwareLibrary] %
 		sh:name "subtype"
-	% .
-	ex:partOf xsd:string %
-		sh:name "part of" ;
-		sh:description "for ServerPlugin/Component, name of server; for other product, name of software product is part of"
 	% .
 	ex:status [1..1] in=[con:Exploration con:Development con:Production con:Archived] %
 		sh:name "status"@en
@@ -138,36 +135,38 @@ shape :ProductShape -> ex:Product ;
 		sh:name "logo"@en
 	% .
 	ex:landingPage IRI [0..1] %
-		sh:name "landing page"@en
+		sh:name "landing page"@en ;
+		sh:description "URL where the resource is described"
 	% .
 	ex:repository IRI [0..1] %
-		sh:name "repository"@en
+		sh:name "repository"@en ;
+		sh:description "URL where code for the resource is available"
 	% .
 	ex:showcase IRI [0..1] %
 		sh:name "showcase" ;
-		sh:description "Service with a showcase/demo deployment"
+		sh:description "URL that can be opened in a web browser to use this app"
 	% .
 	ex:provider IRI %
 		sh:name "provider"@en ;
-		sh:description "comma-separated list of name(s) of Person(s) and/or Organization(s)"
+		sh:description "organization(s) responsible for creating/maintaining the softare"
 	% .
-	doap:maintainer IRI ex:Person %
+	ex:maintainer IRI ex:Person %
 		sh:name "maintainer"@en ;
 		sh:description "person responsible for maintaining the software"
 	% .
-	doap:developer IRI ex:Person %
+	ex:developer IRI ex:Person %
 		sh:name "developer"@en ;
 		sh:description "person contributiong to the software"
 	% .
 	ex:socialKeyword xsd:string %
 		sh:name "social keyword"@en ;
-		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry"
+		sh:description "social domain addressed by the software e.g. housing, transportation, name of an industry"
 	% .
 	ex:technicalKeyword xsd:string %
 		sh:name "technical keyword"@en ;
 		sh:description "comma-separated list for product type e.g. game, calendar, contacts manager"
 	% .
-	ex:conformsTo IRI ex:CassOfProduct %
+	ex:conformsTo IRI ex:ClassOfProduct %
 		sh:name "conforms to"@en ;
 		sh:description "a class of product, from a specification, that this implementation conforms to"
 	% .
@@ -185,33 +184,35 @@ shape :SpecificationShape -> ex:Specification ;
 		sh:name "description"@en
 	% .
 	ex:repository IRI [0..1] %
-		sh:name "repository"@en
+		sh:name "repository"@en ;
+		sh:description "URL where the specification is being worked on"
 	% .
 	ex:landingPage IRI [0..1] %
-		sh:name "landing page"@en
+		sh:name "landing page"@en ;
+		sh:description "URL where the specification is described"
 	% .
-	schema:editor IRI ex:Person %
+	ex:editor IRI ex:Person %
 		sh:name "editor"@en
 	% .
-	schema:author IRI ex:Person %
+	ex:author IRI ex:Person %
 		sh:name "author"@en
 	% .
-	ex:definesConformanceFor IRI ex:CassOfProduct %
+	ex:definesConformanceFor IRI ex:ClassOfProduct %
 		sh:name "defines conformance for"@en ;
 		sh:description "a class of product which this specification defines"
 	% .
 }
-
 shape :ClassOfProductShape -> ex:ClassOfProduct ;
 	sh:name "Class of Product"@en {
 	ex:name xsd:string [1..1] %
 		sh:name "name"@en
 	% .
 }
-
 shape :OntologyShape -> ex:Ontology ;
 	sh:name "Ontology"@en {
-	ex:name xsd:string [1..1] % sh:name "name"@en % .
+	ex:name xsd:string [1..1] %
+		sh:name "name"@en
+	% .
 	ex:description xsd:string [0..1] maxLength=280 %
 		sh:name "description"@en
 	% .
@@ -223,13 +224,21 @@ shape :OntologyShape -> ex:Ontology ;
 		sh:name "prefix" ;
 		sh:description "e.g. sh: for the SHACL ontology"
 	% .
+	ex:repository IRI [0..1] %
+		sh:name "repository"@en ;
+		sh:description "URL where the ontology is available in RDF"
+	% .
+	ex:landingPage IRI [0..1] %
+		sh:name "landing page"@en ;
+		sh:description "URL where the ontology is described"
+	% .
 }
 shape :OrganizationShape -> ex:Organization ;
 	sh:name "Organization"@en {
 	ex:name xsd:string [1..1] %
 		sh:name "name"@en
 	% .
-	ex:subType [1..1] in=[con:Company con:GovernmentalOrganization con:UniversityProject con:OpenSourceProject con:FundingOrganization con:OtherNGO] %
+	ex:subType [1..*] in=[con:Company con:GovernmentalOrganization con:UniversityProject con:OpenSourceProject con:FundingOrganization con:OtherNGO] %
 		sh:name "subtype"
 	% .
 	ex:contactEmail xsd:string [0..1] pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
@@ -246,14 +255,12 @@ shape :OrganizationShape -> ex:Organization ;
 		sh:name "WebID"
 	% .
 	ex:landingPage IRI [0..1] %
-		sh:name "landing page"@en
-	% .
-	ex:repository IRI [0..1] %
-		sh:name "repository"@en
+		sh:name "landing page"@en ;
+		sh:description "URL where the organization is described"
 	% .
 	ex:socialKeyword xsd:string %
 		sh:name "social keyword"@en ;
-		sh:description "comma-separated list for specialized services e.g. housing, transportation, name of an industry"
+		sh:description "social domain of organization's activies e.g. housing, transportation, name of an industry"
 	% .
 	ex:resourcesWanted xsd:string maxLength=280 %
 		sh:name "resources wanted"@en ;
@@ -291,10 +298,8 @@ shape :PersonShape -> ex:Person ;
 		sh:name "logo"@en
 	% .
 	ex:landingPage IRI [0..1] %
-		sh:name "landing page"@en
-	% .
-	ex:repository IRI [0..1] %
-		sh:name "repository"@en
+		sh:name "landing page"@en ;
+		sh:description "URL where the person is described and/or links to their resources are available"
 	% .
 	ex:resourcesWanted xsd:string maxLength=280 %
 		sh:name "resources wanted"@en ;
