@@ -3914,7 +3914,6 @@ cdata:DataModulesVideoCall a ex:Event ;
 cdata:Solid_E2EE a ex:CreativeWork ;
     ex:name  """Solid E2EE"""@en ;
     ex:subType  con:ResearchPaper ;
-    ex:about  "Enhancing privacy in the Solid protocol through Attribute-Based Encryption" ;
     ex:technicalKeyword  """e2ee,cp-abe"""@en ;
     ex:landingPage  <https://github.com/henricattoire/solid-e2ee> ;
     ex:author cdata:Henri_Cattoire, cdata:KU_Leuven ;

@@ -16,8 +16,9 @@
     background:#141414;
     background:#222222;
     background:#111111;
+    background:#090600;
     color:#baafa3;
-    color:#cacaca;
+//    color:#cacaca;
   }
   #main {
     padding:1em;
@@ -149,7 +150,7 @@ body.showHelp #help {
   border-radius:0.4em;  
   opacity:1;
   z-index:1;
-    background:#111111;
+  background:#111111;
 }
 #main-content  { 
   display:block; 
@@ -179,3 +180,4 @@ body.showHelp #help {
   font-weight:italic !important;
   font-size:0.9em !important;
 }
+
