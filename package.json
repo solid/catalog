@@ -37,7 +37,12 @@
         "prerelease": true
       }
     ],
-    "repositoryUrl": "https://github.com/solid/catalo"
+    "repositoryUrl": "https://github.com/solid/catalog",
+    "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/git"
+  ]
   },
   "commitlint": {
     "extends": [
