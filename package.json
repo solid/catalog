@@ -16,6 +16,7 @@
     "rdflib": "^2.2.37"
   },
   "devDependencies": {
+    "pre-commit": "^1.2.2",
     "rdf-dereference": "^4.0.0",
     "rdf-transform-cli": "^1.1.0",
     "semantic-release": "^24.2.5"
