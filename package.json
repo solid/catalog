@@ -5,8 +5,8 @@
   "description": "-- a listing of things useful to the Solid Community",
   "main": "catalog.html",
   "scripts": {
-    "test": "rdf-dereference ./v3/catalog-shacl.ttl && rdf-dereference ./v3/catalog-skos.ttl && rdf-dereference ./v3/catalog-data.ttl",
-    "build": "rdf-transform-cli ./v3/catalog-shacl.shce ./v3/catalog-shacl.ttl -p"
+    "test": "rdf-dereference ./catalog-shacl.ttl > /dev/null && echo '✓ SHACL' && rdf-dereference ./catalog-skos.ttl > /dev/null && echo '✓ SKOS' && rdf-dereference ./catalog-data.ttl > /dev/null && echo '✓ DATA'",
+    "build": "rdf-transform-cli ./catalog-shacl.shce ./catalog-shacl.ttl -p"
   },
   "keywords": [],
   "author": "Jeff Zucker",
@@ -16,7 +16,37 @@
     "rdflib": "^2.2.37"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "husky": "^9.0.11",
     "rdf-dereference": "^4.0.0",
-    "rdf-transform-cli": "^1.1.0"
+    "rdf-transform-cli": "^1.1.0",
+    "semantic-release": "^24.2.5"
+  },
+  "release": {
+    "branches": [
+      "main",
+      "+([0-9])?(.{+([0-9]),x}).x",
+      "next",
+      {
+        "name": "alpha",
+        "prerelease": true
+      },
+      {
+        "name": "beta",
+        "prerelease": true
+      }
+    ],
+    "repositoryUrl": "https://github.com/solid/catalog",
+    "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/git"
+  ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }

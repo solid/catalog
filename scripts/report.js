@@ -8,7 +8,7 @@ const subtypePredicate = $rdf.sym('http://example.org/#subType');
 const modifiedPredicate = $rdf.sym('http://example.org/#modified');
 const concept = $rdf.sym('http://www.w3.org/2004/02/skos/core#Concept') ;
 
-const base = 'http://localhost:8444/home/s/catalog/v2/';
+const base = 'http://localhost:8444/home/s/catalog/';
 const dataNode = $rdf.sym(base+'catalog-data.ttl');
 const shaclNode = $rdf.sym(base+'catalog-shacl.ttl');
 const skosNode = $rdf.sym(base+'catalog-skos.ttl');

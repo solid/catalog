@@ -34,7 +34,7 @@ formsArea.style.display="block";
 mainArea.style.display="none";
 
 //console.log(1,shapeNode.value)
-//shapeNode=$rdf.sym('http://localhost:8444/home/s/catalog/v2/catalog-shacl.ttl#LearningResourceShape');
+//shapeNode=$rdf.sym('http://localhost:8444/home/s/catalog/catalog-shacl.ttl#LearningResourceShape');
   const properties = store.match(shapeNode, $rdf.sym('http://www.w3.org/ns/shacl#property'),null,source().shaclNode);
 //  const properties = store.match(null, $rdf.sym('http://www.w3.org/ns/shacl#property'),null,source().shaclNode);
   createMenubar(shapeNode,id);
