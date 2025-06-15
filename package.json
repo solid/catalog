@@ -19,7 +19,6 @@
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
     "husky": "^9.0.11",
-    "pre-commit": "^1.2.2",
     "rdf-dereference": "^4.0.0",
     "rdf-transform-cli": "^1.1.0",
     "semantic-release": "^24.2.5"
@@ -40,11 +39,9 @@
     ],
     "repositoryUrl": "https://github.com/solid/catalo"
   },
-  "pre-commit": [
-    "build",
-    "test"
-  ],
   "commitlint": {
-    "extends": ["@commitlint/config-conventional"]
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }

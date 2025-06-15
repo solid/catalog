@@ -1,3 +1,2 @@
-commitlint --edit $1 
 npm run build
 npm run test
