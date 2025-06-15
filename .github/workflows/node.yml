@@ -10,6 +10,24 @@ on:
   pull_request:
 
 jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+      - run: npm ci
+      - name: Lint commit messages
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            npx commitlint --from=${{ github.event.pull_request.base.sha }} --to=${{ github.event.pull_request.head.sha }} --verbose
+          else
+            npx commitlint --from=HEAD~1 --to=HEAD --verbose
+          fi
+
   test:
     runs-on: ubuntu-latest
     steps:
@@ -22,7 +40,7 @@ jobs:
       - run: npm run test
   release:
     if: ${{ github.ref == 'refs/heads/main' }}
-    needs: [ test ]
+    needs: [ test, commitlint ]
     runs-on: ubuntu-latest
     permissions:
       contents: write
