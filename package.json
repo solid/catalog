@@ -35,5 +35,9 @@
       }
     ],
     "repositoryUrl": "https://github.com/solid/catalo"
-  }
+  },
+  "pre-commit": [
+    "build",
+    "test"
+  ]
 }
