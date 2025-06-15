@@ -1,1 +1,0 @@
-This is version 1 of the catalog and is in quite rough shape - the data is messy, the predicates inconsistent, and the SHACL not quite correct.  It serves the function of supporting some POC viewers. Version 2 is in progress and will hopefully address these issues.
