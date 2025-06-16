@@ -51,7 +51,6 @@ Types include:
 This project uses Husky and commitlint to enforce commit message conventions. When you make a commit, the following checks will run automatically:
 
 1. **Commit Message Validation**: Your commit message will be checked against the Conventional Commits specification. If your message doesn't follow the format, the commit will be rejected with helpful error messages.
-
 2. **RDF Validation**: The test script will run to ensure all RDF files are valid.
 
 To bypass these checks in exceptional cases (not recommended), you can use the `--no-verify` flag with your git commit command. However, please ensure your commit message follows the conventions even when bypassing the checks.
@@ -59,22 +58,23 @@ To bypass these checks in exceptional cases (not recommended), you can use the `
 ### Development Setup
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/solid/catalog.git
    cd catalog
    ```
-
 2. Install dependencies:
+
    ```bash
    npm install
    ```
-
 3. Build the project:
+
    ```bash
    npm run build
    ```
-
 4. Run tests:
+
    ```bash
    npm test
    ```
@@ -102,7 +102,6 @@ When contributing RDF data:
 For questions and discussions about the catalog:
 
 - Join the [Solid Practitioners matrix chat](https://matrix.to/#/#solid-practitioners:matrix.org)
-- Contact @jeff-zucker or @elf-pavlik on Matrix
 - Participate in the [GitHub Discussions](https://github.com/solid/catalog/discussions)
 
 ## License
