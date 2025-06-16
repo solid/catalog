@@ -28,6 +28,8 @@ The repo will be versioned e.g. v1, v2, etc. This will support apps continuing t
 
 ## Contributing
 
+Please read our [Contributing Guide](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
 The questions regarding the structure of the catalog can benefit from community input.  Please add your ideas to one of the issues below.
 
 1. [What should the basic shape of a catalog entrty look like?](https://github.com/solid/catalog/issues/1)
