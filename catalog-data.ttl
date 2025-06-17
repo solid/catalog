@@ -1044,14 +1044,24 @@ cdata:Paula_Veltens a ex:Person ;
   ex:name "Paula Veltens" ;
   ex:webid <https://paula.veltens.org/profile/card#me> .
 
-cdata:Pavlik_Elf a ex:Person ;
+<https://people.apache.org/~acoburn/#i> a ex:Person ;
   ex:subType con:Person ;
-    ex:name  """elf Pavlik"""@en ;
-    ex:webid  <https://elf-pavlik.hackers4peace.net> ;
-    ex:description  """On of Solid CG co-chairs. Co-editor of Solid Application Interoperability, Solid-OIDC, Security Consi  derations and some Solid Notification channel types. Maintainer of sai-js."""@en ;
-    ex:landingPage <https://github.com/elf-pavlik> ;
-    ex:modified "2025-05-08T01:08:56.392Z"^^xsd:dateTime .
+  ex:name "Aaron Coburn" ; 
+  ex:logo <https://avatars.githubusercontent.com/u/1265883?v=4> .
 
+<https://elf-pavlik.hackers4peace.net> a ex:Person ;
+  ex:subType con:Person ;
+  ex:name  """elf Pavlik"""@en ;
+  ex:webid  <https://elf-pavlik.hackers4peace.net> ;
+  ex:description  """One of Solid CG co-chairs. Co-editor of Solid Application Interoperability, Solid-OIDC, Security Consi  derations and some Solid Notification channel types. Maintainer of sai-js."""@en ;
+  ex:landingPage <https://elf-pavlik.hackers4peace.net> ;
+  ex:logo <https://avatars.githubusercontent.com/u/876431?v=4> .
+
+<https://samurex.hackers4peace.net> a ex:Person ;
+  ex:subType con:Person ;
+  ex:name  """Maciej Samoraj"""@en ;
+  ex:webid  <https://samurex.hackers4peace.net> ;
+  ex:landingPage <https://samurex.hackers4peace.net> .
 
 cdata:Pavlos_Pseftoyiannis a ex:Person ;
   ex:subType con:Person ;
@@ -1340,6 +1350,14 @@ cdata:Soto_Estevez a ex:Person ;
   ex:subType con:Person ;
   ex:name "Soto Estevez" ;
   ex:landingPage <https://github.com/kriogenia> .
+
+cdata:Beatriz_Estevez a ex:Person ;
+  ex:subType con:Person ;
+  ex:name "Beatriz Esteves" .
+
+cdata:Ben_De_Meester a ex:Person ;
+  ex:subType con:Person ;
+  ex:name "Ben De Meester" .
 
 cdata:Stefan_Dercon a ex:Person ;
   ex:subType con:Person ;
@@ -2125,6 +2143,42 @@ cdata:PHP_Solid_Server a ex:Software ;
   ex:provider cdata:PDSINTEROP ;
   ex:landingPage <https://pdsinterop.org/php-solid-server/> .
 
+<https://sai.js.org/authorization-agent> a ex:Software ;
+  ex:name "SAI Authorization Agent" ;
+  ex:status con:Production ;
+  ex:subType con:SoftwareLibrary ;
+  ex:maintainer <https://elf-pavlik.hackers4peace.net> ;
+  ex:developer <https://samurex.hackers4peace.net> ;
+  ex:landingPage <https://sai.js.org> ;
+  ex:conformsTo cdata:SAI_Authorization_Agent .
+
+<https://sai.js.org/authorization-agent-server> a ex:Software ;
+  ex:name "SAI Authorization Agent" ;
+  ex:status con:Production ;
+  ex:subType con:Server ;
+  ex:maintainer <https://elf-pavlik.hackers4peace.net> ;
+  ex:developer <https://samurex.hackers4peace.net> ;
+  ex:hasDependencyOn <https://sai.js.org/authorization-agent> ;
+  ex:landingPage <https://sai.js.org> .
+
+<https://sai.js.org/application> a ex:Software ;
+  ex:name "SAI Application" ;
+  ex:status con:Production ;
+  ex:subType con:SoftwareLibrary ;
+  ex:maintainer <https://elf-pavlik.hackers4peace.net> ;
+  ex:developer <https://samurex.hackers4peace.net> ;
+  ex:landingPage <https://sai.js.org> ;
+  ex:conformsTo cdata:SAI_Application .
+
+<https://sai.js.org/vuejectron> a ex:Software ;
+  ex:name "Vuejectron" ;
+  ex:status con:Production ;
+  ex:subType con:ProductivityApp ;
+  ex:maintainer <https://elf-pavlik.hackers4peace.net> ;
+  ex:developer <https://samurex.hackers4peace.net> ;
+  ex:hasDependencyOn <https://sai.js.org/application> ;
+  ex:landingPage <https://sai.js.org> .
+
 cdata:Manas a ex:Software ;
   ex:name "Manas (मनस्)" ;
   ex:status con:Production ;
@@ -2904,9 +2958,25 @@ cdata:Record_0003 a ex:CreativeWork ;
     ex:landingPage  <https://oxfordhcc.github.io/libertas/> ;
     ex:provider  cdata:OxfordHumanCenteredComputingGroup ;
     ex:description  """Data and data processing have become an indispensable aspect for our society. Insights drawn from collective data make invaluable contribution to scientific and societal research and business. But there are increasing worries about privacy issues and data misuse. This has prompted the emergence of decentralised personal data stores (PDS) like Solid that provide individuals more control over their personal data. However, existing PDS frameworks face challenges in ensuring data privacy when performing collective computations with data from multiple users. While Secure Multi-Party Computation (MPC) offers input secrecy protection during the computation without relying on any single party, issues emerge when directly applying MPC in the context of PDS, particularly due to key factors like autonomy and decentralisation. In this work, we discuss the essence of this issue, identify a potential solution, and introduce a modular architecture, Libertas, to integrate MPC with PDS like Solid, without requiring protocol-level changes. We introduce a paradigm shift from an `omniscient' view to individual-based, user-centric view of trust and security, and discuss the threat model of Libertas. Two realistic use cases for collaborative data processing are used for evaluation, both for technical feasibility and empirical benchmark, highlighting its effectiveness in empowering gig workers and generating differentially private synthetic data. The results of our experiments underscore Libertas' linear scalability and provide valuable insights into compute optimisations, thereby advancing the state-of-the-art in privacy-preserving data processing practices. By offering practical solutions for maintaining both individual autonomy and privacy in collaborative data processing environments, Libertas contributes significantly to the ongoing discourse on privacy protection in data-driven decision-making contexts. 
-
 Prepring available at https://arxiv.org/abs/2309.16365"""@en ;
     ex:modified "2025-06-09T15:29:02.588Z"^^xsd:dateTime .
+
+<https://solidlab.be/wp-content/uploads/2024/11/User-Managed-Access-Whitepaper.pdf> a ex:CreativeWork ;
+    ex:name  """From Resource Control to Digital Trust with User-Managed Access"""@en ;
+    ex:subType  con:ResearchPaper ;
+    ex:technicalKeyword  """Authorization, UMA"""@en ;
+    ex:landingPage  <https://solidlab.be/wp-content/uploads/2024/11/User-Managed-Access-Whitepaper.pdf> ;
+    ex:author
+      cdata:Wouter_Termont,
+      cdata:Ruben_Dedecker,
+      cdata:Wout_Slabbinck,
+      cdata:Beatriz_Estevez,
+      cdata:Ben_De_Meester,
+      cdata:Ruben_Verborgh;
+    ex:about
+      cdata:Web_Access_Control ,
+      cdata:Access_Control_Policy ;
+    ex:description  """The User-Managed Access (UMA) extension to OAuth 2.0 is a promising candidate for increasing Digital Trust in personal data ecosystems like Solid. With minor modifications, it can achieve many requirements regarding usage control and transaction contextualization, even though additional specification is needed to address delegation of control and retraction of usage policies."""@en .
 
 cdata:Record_0004 a ex:CreativeWork ;
     ex:name  """Perennial Semantic Data Terms of Use for Decentralized Web"""@en ;
@@ -3433,10 +3503,16 @@ cdata:Solid_WebID_Profile a ex:Specification ;
   ex:repository  <https://github.com/solid/webid-profile> .
 
 cdata:Solid-OIDC a ex:Specification ;
-    ex:subType con:Specification ;
+  ex:subType con:Specification ;
   ex:name "Solid-OIDC" ;
   ex:landingPage <https://solidproject.org/TR/oidc> ;
-  ex:repository <https://github.com/solid/solid-oidc> .
+  ex:repository <https://github.com/solid/solid-oidc> ;
+  ex:editor
+    <https://elf-pavlik.hackers4peace.net>,
+    <https://people.apache.org/~acoburn/#i>;
+  ex:author
+    <https://elf-pavlik.hackers4peace.net>,
+    <https://people.apache.org/~acoburn/#i>.
 
 cdata:HTTPSig_Authentication_for_Solid a ex:Specification ;
     ex:subType con:Specification ;
@@ -3460,7 +3536,14 @@ cdata:Solid_Application_Interoperability a ex:Specification ;
     ex:subType con:Specification ;
   ex:name "Solid Application Interoperability" ;
   ex:landingPage <https://solid.github.io/data-interoperability-panel/specification/> ;
-  ex:repository  <https://github.com/solid/data-interoperability-panel> .
+  ex:repository  <https://github.com/solid/data-interoperability-panel> ;
+  ex:editor
+    <https://elf-pavlik.hackers4peace.net>;
+  ex:author
+    <https://elf-pavlik.hackers4peace.net>;
+  ex:definesConformanceFor
+    cdata:SAI_Application ,
+    cdata:SAI_Authorization_Agent .
 
 cdata:Shape_Trees a ex:Specification ;
     ex:subType con:Specification ;
@@ -3478,7 +3561,9 @@ cdata:Solid_Notifications_Protocol a ex:Specification ;
     ex:subType con:Specification ;
   ex:name "Solid Notifications Protocol" ;
   ex:landingPage <https://solidproject.org/TR/notifications-protocol> ;
-  ex:repository <https://github.com/solid/notifications> .
+  ex:repository <https://github.com/solid/notifications> ;
+  ex:author
+    <https://elf-pavlik.hackers4peace.net>.
 
 cdata:EventSourceChannel2023 a ex:Specification ;
     ex:subType con:Specification ;
@@ -3496,7 +3581,11 @@ cdata:StreamingHTTPChannel2023 a ex:Specification ;
     ex:subType con:Specification ;
   ex:name "StreamingHTTPChannel2023" ;
   ex:repository <https://github.com/solid/notifications> ;
-  ex:landingPage <https://solid.github.io/notifications/streaming-http-channel-2023> .
+  ex:landingPage <https://solid.github.io/notifications/streaming-http-channel-2023> ;
+  ex:editor
+    <https://elf-pavlik.hackers4peace.net>;
+  ex:author
+    <https://elf-pavlik.hackers4peace.net>.
 
 cdata:WebSocketChannel2023 a ex:Specification ;
     ex:subType con:Specification ;
@@ -3508,7 +3597,11 @@ cdata:WebhookChannel2023 a ex:Specification ;
     ex:subType con:Specification ;
   ex:name "WebhookChannel2023" ;
   ex:landingPage <https://solid.github.io/notifications/webhook-channel-2023> ;
-  ex:repository <https://github.com/solid/notifications> .
+  ex:repository <https://github.com/solid/notifications> ;
+  ex:editor
+    <https://elf-pavlik.hackers4peace.net>;
+  ex:author
+    <https://elf-pavlik.hackers4peace.net>.
 
 cdata:Solid_Chat_Spec a ex:Specification ;
     ex:subType con:Specification ;
@@ -3844,10 +3937,16 @@ cdata:Solid_Security_Considerations a ex:CreativeWork ;
 
 cdata:Solid_OIDC_Primer a ex:CreativeWork ;
   ex:name "Solid OIDC Primer" ;
-  ex:subType con:OtherTechResource ;
+  ex:subType con:Primer ;
   ex:landingPage <https://github.com/solid/solid-oidc>, <https://solidproject.org/TR/oidc-primer> ;
   ex:technicalKeyword "authentication", "specifications", "solid-OIDC" ;
-  ex:about cdata:Solid-OIDC .
+  ex:about cdata:Solid-OIDC ;
+  ex:editor
+    <https://elf-pavlik.hackers4peace.net>,
+    <https://people.apache.org/~acoburn/#i>;
+  ex:author
+    <https://elf-pavlik.hackers4peace.net>,
+    <https://people.apache.org/~acoburn/#i>.
 
 cdata:Authorization_Use_Cases_and_Requirements a ex:CreativeWork ;
   ex:name "Authorization Use Cases and Requirements" ;
@@ -3863,15 +3962,25 @@ cdata:Authorization_Use_Cases_Survey a ex:CreativeWork ;
 
 cdata:Solid_Application_Interoperability__Application_Primer a ex:CreativeWork ;
   ex:name "Solid Application Interoperability: Application Primer" ;
-  ex:subType con:OtherTechResource ;
+  ex:subType con:Primer ;
   ex:landingPage <https://github.com/solid/data-interoperability-panel>, <https://solid.github.io/data-interoperability-panel/primer/application.html> ;
-  ex:technicalKeyword "specifications", "interoperability", "applications" .
+  ex:technicalKeyword "specifications", "interoperability", "applications" ;
+  ex:about cdata:Solid_Application_Interoperability ;
+  ex:editor
+    <https://elf-pavlik.hackers4peace.net>;
+  ex:author
+    <https://elf-pavlik.hackers4peace.net>.
 
 cdata:Solid_Application_Interoperability__Authorization_Agent_Primer a ex:CreativeWork ;
   ex:name "Solid Application Interoperability: Authorization Agent Primer" ;
-  ex:subType con:OtherTechResource ;
+  ex:subType con:Primer ;
   ex:landingPage <https://github.com/solid/data-interoperability-panel>, <https://solid.github.io/data-interoperability-panel/primer/authorization-agent.html> ;
-  ex:technicalKeyword "specifications", "interoperability", "authorization agent" .
+  ex:technicalKeyword "specifications", "interoperability", "authorization agent" ;
+  ex:about cdata:Solid_Application_Interoperability ;
+  ex:editor
+    <https://elf-pavlik.hackers4peace.net>;
+  ex:author
+    <https://elf-pavlik.hackers4peace.net>.
 
 cdata:SolidWorld a ex:Event ;
   ex:subType con:Event ;
@@ -3919,4 +4028,11 @@ cdata:Solid_E2EE a ex:CreativeWork ;
     ex:author cdata:Henri_Cattoire, cdata:KU_Leuven ;
     ex:description  """Extension to the Solid protocol that enables E2EE through Attribute-Based Encryption. The extension enables systems that are unwilling to entrust POD providers with their users' data, such as electronic health record (EHR) systems, to be built on top of Solid and benefit from the features it offers, such as application interoperability. The repository includes a proof-of-concept application."""@en ;
     ex:modified "2025-06-12T10:36:31.853Z"^^xsd:dateTime .
+
+
+cdata:SAI_Application a ex:ClassOfProduct ;
+  ex:name "SAI Application" .
+
+cdata:SAI_Authorization_Agent a ex:ClassOfProduct ;
+  ex:name "SAI Authorization Agent" .
 
