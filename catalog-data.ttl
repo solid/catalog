@@ -95,12 +95,16 @@ cdata:Meisdata a ex:Organization ;
     ex:resourcesOffered  """server-maintenance"""@en ;
     ex:modified "2025-04-22T03:39:06.075Z"^^xsd:dateTime .
 
-
 cdata:CSS a ex:Software ;
   ex:name "Community Solid Server (CSS)" ;
   ex:status con:Production ;
   ex:subType con:Server ;
   ex:provider cdata:Inrupt, cdata:Imec ;
+  ex:conformsTo
+    <https://solidproject.org/TR/wac#Server> ,
+    cdata:ACP_Resource_Server ,
+    cdata:ACP_Server ,
+    <https://solidproject.org/TR/oidc#Provider> ;
   ex:landingPage <https://communitysolidserver.github.io/CommunitySolidServer/latest/> .
 
 cdata:TrinpodService a ex:Service ;
@@ -1359,6 +1363,30 @@ cdata:Ben_De_Meester a ex:Person ;
   ex:subType con:Person ;
   ex:name "Ben De Meester" .
 
+cdata:Christoph_Braun a ex:Person ;
+  ex:subType con:Person ;
+  ex:name "Christoph Braun" .
+
+cdata:Andreas_Both a ex:Person ;
+  ex:subType con:Person ;
+  ex:name "Andreas Both" .
+
+cdata:Thorsten_Kastner a ex:Person ;
+  ex:subType con:Person ;
+  ex:name "Thorsten Kastner" .
+
+cdata:Dustin_Yeboah a ex:Person ;
+  ex:subType con:Person ;
+  ex:name "Dustin Yeboah" .
+
+cdata:Daniel_Schraudner a ex:Person ;
+  ex:subType con:Person ;
+  ex:name "Daniel Schraudner" .
+
+cdata:Sebastian_Schmid a ex:Person ;
+  ex:subType con:Person ;
+  ex:name "Sebastian Schmid" .
+
 cdata:Stefan_Dercon a ex:Person ;
   ex:subType con:Person ;
   ex:name "Stefan Dercon" .
@@ -2158,7 +2186,9 @@ cdata:PHP_Solid_Server a ex:Software ;
   ex:subType con:Server ;
   ex:maintainer <https://elf-pavlik.hackers4peace.net> ;
   ex:developer <https://samurex.hackers4peace.net> ;
-  ex:hasDependencyOn <https://sai.js.org/authorization-agent> ;
+  ex:hasDependencyOn
+    cdata:Solid_client_authn_node ,
+    <https://sai.js.org/authorization-agent> ;
   ex:landingPage <https://sai.js.org> .
 
 <https://sai.js.org/application> a ex:Software ;
@@ -2176,7 +2206,9 @@ cdata:PHP_Solid_Server a ex:Software ;
   ex:subType con:ProductivityApp ;
   ex:maintainer <https://elf-pavlik.hackers4peace.net> ;
   ex:developer <https://samurex.hackers4peace.net> ;
-  ex:hasDependencyOn <https://sai.js.org/application> ;
+  ex:hasDependencyOn
+    cdata:Solid_client_authn_browser ,
+    <https://sai.js.org/application> ;
   ex:landingPage <https://sai.js.org> .
 
 cdata:Manas a ex:Software ;
@@ -2381,8 +2413,11 @@ cdata:Solid_client_authn_browser a ex:Software ;
   ex:name "Solid client authn browser" ;
   ex:subType con:SoftwareLibrary ;
   ex:provider cdata:Inrupt ;
+  ex:description "A client library for authenticating with Solid." ;
+  ex:repository <https://github.com/inrupt/solid-client-authn-js> ;
   ex:status con:Production ;
   ex:programmingLanguage "Typescript" ;
+  ex:conformsTo <https://solidproject.org/TR/oidc#Client> ;
   ex:technicalKeyword "solid client" .
 
 cdata:Solid_client_authn_node a ex:Software ;
@@ -2393,6 +2428,7 @@ cdata:Solid_client_authn_node a ex:Software ;
   ex:repository <https://github.com/inrupt/solid-client-authn-js> ;
   ex:status con:Production ;
   ex:programmingLanguage "Typescript" ;
+  ex:conformsTo <https://solidproject.org/TR/oidc#Client> ;
   ex:technicalKeyword "solid client" .
 
 cdata:Solid_client_credentials_py a ex:Software ;
@@ -2974,9 +3010,44 @@ Prepring available at https://arxiv.org/abs/2309.16365"""@en ;
       cdata:Ben_De_Meester,
       cdata:Ruben_Verborgh;
     ex:about
-      cdata:Web_Access_Control ,
+      <https://solidproject.org/TR/wac> ,
       cdata:Access_Control_Policy ;
     ex:description  """The User-Managed Access (UMA) extension to OAuth 2.0 is a promising candidate for increasing Digital Trust in personal data ecosystems like Solid. With minor modifications, it can achieve many requirements regarding usage control and transaction contextualization, even though additional specification is needed to address delegation of control and retraction of usage policies."""@en .
+
+<https://publikationen.bibliothek.kit.edu/1000172187> a ex:CreativeWork ;
+    ex:name  """AuthApp – Portable, Reusable Solid App for GDPR-Compliant Access Granting"""@en ;
+    ex:subType  con:ResearchPaper ;
+    ex:technicalKeyword  """Authorization, Access Control, Data Sharing, Access Granting, Zero Trust, Data Sovereignty"""@en ;
+    ex:landingPage  <https://publikationen.bibliothek.kit.edu/1000172187/156135196> ;
+    ex:author
+      cdata:Andreas_Both ,
+      cdata:Thorsten_Kastner ,
+      cdata:Dustin_Yeboah ,
+      cdata:Christoph_Braun ,
+      cdata:Daniel_Schraudner ,
+      cdata:Sebastian_Schmid ,
+      cdata:Tobias_Käfer ,
+      cdata:Andreas_Harth ;
+    ex:about
+      <https://solidproject.org/TR/wac> ,
+      cdata:Solid_Application_Interoperability ;
+    ex:description  """The Solid (Social Linked Data) technology family was de-
+veloped to provide the foundation for Data Sovereignty in the context
+of web applications. The advantage of this innovative approach is the
+opportunity to dynamically bind an identity to a Solid application and a
+user-specific Solid data store (Solid Pod). These three basic components
+can be combined dynamically, allowing users to share their data with an
+application while retaining full control of the data in self-managed Solid
+Pods. This paper presents a prototype of a web-based user interface to
+grant access to data in a Solid Pod. To enable a dynamic binding into
+Solid-driven environments, we made the implementation available as a
+Solid application – AuthApp – with a specific focus on allowing users
+to configure the data access granting efficiently. To comply with data
+protection regulations, in particular Europe’s GDPR, we extended the
+standard to include the validation of the purpose of data sharing. Unlike
+previous work, we also make full use of robust technologies to avoid the
+need to copy or store data outside the personal context, meaning all data
+remains under the user’s control and so does the AuthApp."""@en .
 
 cdata:Record_0004 a ex:CreativeWork ;
     ex:name  """Perennial Semantic Data Terms of Use for Decentralized Web"""@en ;
@@ -3507,6 +3578,9 @@ cdata:Solid-OIDC a ex:Specification ;
   ex:name "Solid-OIDC" ;
   ex:landingPage <https://solidproject.org/TR/oidc> ;
   ex:repository <https://github.com/solid/solid-oidc> ;
+  ex:definesConformanceFor
+    <https://solidproject.org/TR/oidc#Client> ,
+    <https://solidproject.org/TR/oidc#Provider> ;
   ex:editor
     <https://elf-pavlik.hackers4peace.net>,
     <https://people.apache.org/~acoburn/#i>;
@@ -3520,7 +3594,7 @@ cdata:HTTPSig_Authentication_for_Solid a ex:Specification ;
   ex:landingPage <https://solid.github.io/httpsig/> ;
   ex:repository <https://github.com/solid/httpsig> .
 
-cdata:Web_Access_Control a ex:Specification ;
+<https://solidproject.org/TR/wac> a ex:Specification ;
     ex:subType con:Specification ;
   ex:name "Web Access Control" ;
   ex:landingPage <https://solidproject.org/TR/wac>;
@@ -3530,7 +3604,10 @@ cdata:Access_Control_Policy a ex:Specification ;
     ex:subType con:Specification ;
   ex:name "Access Control Policy" ;
   ex:landingPage <https://solidproject.org/TR/acp>;
-  ex:repository <https://github.com/solid/authorization-panel> .
+  ex:repository <https://github.com/solid/authorization-panel> ;
+  ex:definesConformanceFor
+    cdata:ACP_Resource_Server ,
+    cdata:ACP_Server .
 
 cdata:Solid_Application_Interoperability a ex:Specification ;
     ex:subType con:Specification ;
@@ -4036,3 +4113,20 @@ cdata:SAI_Application a ex:ClassOfProduct ;
 cdata:SAI_Authorization_Agent a ex:ClassOfProduct ;
   ex:name "SAI Authorization Agent" .
 
+cdata:ACP_Resource_Server a ex:ClassOfProduct ;
+  ex:name "ACP Resource Server" .
+
+cdata:ACP_Server a ex:ClassOfProduct ;
+  ex:name "ACP Server" .
+
+<https://solidproject.org/TR/oidc#Client> a ex:ClassOfProduct ;
+  ex:name "Solid-OIDC Client" .
+
+<https://solidproject.org/TR/oidc#Provider> a ex:ClassOfProduct ;
+  ex:name "Solid-OIDC Provider" .
+
+<https://solidproject.org/TR/wac#Client> a ex:ClassOfProduct ;
+  ex:name "WAC Client" .
+
+<https://solidproject.org/TR/wac#Server> a ex:ClassOfProduct ;
+  ex:name "WAC Server" .
