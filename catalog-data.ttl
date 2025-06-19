@@ -116,7 +116,7 @@ cdata:CSS a ex:Software ;
     cdata:WebSocketChannel2023SubscriptionServer ,
     cdata:WebSocketChannel2023NotificationSender .
 
-<urn:uuid:b659b08f-9054-47a5-af77-9a08016eb7ba> a ex:Software ;
+cdata:Solid_Notifications_Client a ex:Software ;
   ex:name "Solid Notifications Client" ;
   ex:status con:Production ;
   ex:subType con:SoftwareLibrary ;
@@ -2213,7 +2213,7 @@ cdata:PHP_Solid_Server a ex:Software ;
   ex:hasDependencyOn
     cdata:Solid_client_authn_node ,
     <https://sai.js.org/authorization-agent> ,
-    <urn:uuid:b659b08f-9054-47a5-af77-9a08016eb7ba> ;
+    cdata:Solid_Notifications_Client ;
   ex:conformsTo
     cdata:WebPushChannel2023NotificationSender ,
     cdata:WebPushChannel2023SubscriptionServer ,
@@ -2239,7 +2239,7 @@ cdata:PHP_Solid_Server a ex:Software ;
   ex:hasDependencyOn
     cdata:Solid_client_authn_browser ,
     <https://sai.js.org/application> ,
-    <urn:uuid:b659b08f-9054-47a5-af77-9a08016eb7ba> ;
+    cdata:Solid_Notifications_Client ;
   ex:conformsTo
     cdata:StreamingHTTPChannel2023NotificationReceiver ;
   ex:landingPage <https://sai.js.org> .
