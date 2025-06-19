@@ -100,12 +100,35 @@ cdata:CSS a ex:Software ;
   ex:status con:Production ;
   ex:subType con:Server ;
   ex:provider cdata:Inrupt, cdata:Imec ;
+  ex:landingPage <https://communitysolidserver.github.io/CommunitySolidServer/latest/> ;
   ex:conformsTo
+    <https://solidproject.org/TR/protocol#Server> ,
+    <https://solidproject.org/TR/oidc#Provider> ,
     <https://solidproject.org/TR/wac#Server> ,
     cdata:ACP_Resource_Server ,
     cdata:ACP_Server ,
-    <https://solidproject.org/TR/oidc#Provider> ;
-  ex:landingPage <https://communitysolidserver.github.io/CommunitySolidServer/latest/> .
+    <https://solidproject.org/TR/notifications-protocol#ResourceServer> ,
+    <https://solidproject.org/TR/notifications-protocol#SubscriptionServer> ,
+    <https://solidproject.org/TR/notifications-protocol#NotificationSender> ,
+    cdata:StreamingHTTPChannel2023NotificationSender ,
+    cdata:WebhookChannel2023SubscriptionServer ,
+    cdata:WebhookChannel2023NotificationSender ,
+    cdata:WebSocketChannel2023SubscriptionServer ,
+    cdata:WebSocketChannel2023NotificationSender .
+
+<urn:uuid:b659b08f-9054-47a5-af77-9a08016eb7ba> a ex:Software ;
+  ex:name "Solid Notifications Client" ;
+  ex:status con:Production ;
+  ex:subType con:SoftwareLibrary ;
+  ex:landingPage <https://github.com/o-development/solid-notification-client/> ;
+  ex:repository <https://github.com/o-development/solid-notification-client/> ;
+  ex:conformsTo
+    <https://solidproject.org/TR/notifications-protocol#DiscoveryClient> ,
+    <https://solidproject.org/TR/notifications-protocol#SubscriptionClient> ;
+  ex:maintainer
+    <https://elf-pavlik.hackers4peace.net>,
+    cdata:Jackson_Morgan ,
+    cdata:Wout_Slabbinck  .
 
 cdata:TrinpodService a ex:Service ;
   ex:name "Trinpod" ;
@@ -2186,10 +2209,17 @@ cdata:PHP_Solid_Server a ex:Software ;
   ex:subType con:Server ;
   ex:maintainer <https://elf-pavlik.hackers4peace.net> ;
   ex:developer <https://samurex.hackers4peace.net> ;
+  ex:landingPage <https://sai.js.org> ;
   ex:hasDependencyOn
     cdata:Solid_client_authn_node ,
-    <https://sai.js.org/authorization-agent> ;
-  ex:landingPage <https://sai.js.org> .
+    <https://sai.js.org/authorization-agent> ,
+    <urn:uuid:b659b08f-9054-47a5-af77-9a08016eb7ba> ;
+  ex:conformsTo
+    cdata:WebPushChannel2023NotificationSender ,
+    cdata:WebPushChannel2023SubscriptionServer ,
+    cdata:WebhookChannel2023SubscriptionClient ,
+    cdata:WebhookChannel2023NotificationReceiver .
+
 
 <https://sai.js.org/application> a ex:Software ;
   ex:name "SAI Application" ;
@@ -2208,7 +2238,10 @@ cdata:PHP_Solid_Server a ex:Software ;
   ex:developer <https://samurex.hackers4peace.net> ;
   ex:hasDependencyOn
     cdata:Solid_client_authn_browser ,
-    <https://sai.js.org/application> ;
+    <https://sai.js.org/application> ,
+    <urn:uuid:b659b08f-9054-47a5-af77-9a08016eb7ba> ;
+  ex:conformsTo
+    cdata:StreamingHTTPChannel2023NotificationReceiver ;
   ex:landingPage <https://sai.js.org> .
 
 cdata:Manas a ex:Software ;
@@ -3561,11 +3594,14 @@ cdata:webid_Profile_editor a ex:Software ;
   ex:status con:Development ;
   ex:technicalKeyword "pod management", "profile" .
 
-cdata:Solid_Protocol a ex:Specification ;
-    ex:subType con:Specification ;
+<https://solidproject.org/TR/protocol> a ex:Specification ;
+  ex:subType con:Specification ;
   ex:name "Solid Protocol" ;
   ex:landingPage <https://solidproject.org/TR/protocol>;
-  ex:repository <https://github.com/solid/specification> .
+  ex:repository <https://github.com/solid/specification> ;
+  ex:definesConformanceFor
+    <https://solidproject.org/TR/protocol#Client> ,
+    <https://solidproject.org/TR/protocol#Server> .
 
 cdata:Solid_WebID_Profile a ex:Specification ;
     ex:subType con:Specification ;
@@ -3634,13 +3670,20 @@ cdata:Solid_DID_Method a ex:Specification ;
   ex:landingPage <https://solid.github.io/did-method-solid/> ;
   ex:repository <https://github.com/solid/did-method-solid> .
 
-cdata:Solid_Notifications_Protocol a ex:Specification ;
+<https://solidproject.org/TR/notifications-protocol> a ex:Specification ;
     ex:subType con:Specification ;
   ex:name "Solid Notifications Protocol" ;
   ex:landingPage <https://solidproject.org/TR/notifications-protocol> ;
   ex:repository <https://github.com/solid/notifications> ;
   ex:author
-    <https://elf-pavlik.hackers4peace.net>.
+    <https://elf-pavlik.hackers4peace.net> ;
+  ex:definesConformanceFor
+    <https://solidproject.org/TR/notifications-protocol#ResourceServer> ,
+    <https://solidproject.org/TR/notifications-protocol#DiscoveryClient> ,
+    <https://solidproject.org/TR/notifications-protocol#SubscriptionClient> ,
+    <https://solidproject.org/TR/notifications-protocol#SubscriptionServer> ,
+    <https://solidproject.org/TR/notifications-protocol#NotificationSender> ,
+    <https://solidproject.org/TR/notifications-protocol#NotificationReceiver> .
 
 cdata:EventSourceChannel2023 a ex:Specification ;
     ex:subType con:Specification ;
@@ -3662,13 +3705,19 @@ cdata:StreamingHTTPChannel2023 a ex:Specification ;
   ex:editor
     <https://elf-pavlik.hackers4peace.net>;
   ex:author
-    <https://elf-pavlik.hackers4peace.net>.
+    <https://elf-pavlik.hackers4peace.net>;
+  ex:definesConformanceFor
+    cdata:StreamingHTTPChannel2023NotificationSender ,
+    cdata:StreamingHTTPChannel2023NotificationReceiver .
 
 cdata:WebSocketChannel2023 a ex:Specification ;
     ex:subType con:Specification ;
   ex:name "WebSocketChannel2023" ;
   ex:repository <https://github.com/solid/notifications> ;
-  ex:landingPage <https://solid.github.io/notifications/websocket-channel-2023> .
+  ex:landingPage <https://solid.github.io/notifications/websocket-channel-2023> ;
+  ex:definesConformanceFor
+    cdata:WebSocketChannel2023SubscriptionServer ,
+    cdata:WebSocketChannel2023NotificationSender .
 
 cdata:WebhookChannel2023 a ex:Specification ;
     ex:subType con:Specification ;
@@ -3678,7 +3727,24 @@ cdata:WebhookChannel2023 a ex:Specification ;
   ex:editor
     <https://elf-pavlik.hackers4peace.net>;
   ex:author
-    <https://elf-pavlik.hackers4peace.net>.
+    <https://elf-pavlik.hackers4peace.net>;
+  ex:definesConformanceFor
+    cdata:WebhookChannel2023SubscriptionClient ,
+    cdata:WebhookChannel2023NotificationSender ,
+    cdata:WebhookChannel2023NotificationReceiver .
+
+cdata:WebPushChannel2023 a ex:Specification ;
+  ex:subType con:Specification ;
+  ex:name "WebPushChannel2023" ;
+  ex:repository <https://github.com/solid/notifications> ;
+  ex:landingPage <https://solid.github.io/notifications/webpush-channel-2023> ;
+  ex:editor
+    <https://elf-pavlik.hackers4peace.net>;
+  ex:author
+    <https://elf-pavlik.hackers4peace.net>;
+  ex:definesConformanceFor
+    cdata:WebPushChannel2023NotificationSender ,
+    cdata:WebPushChannel2023SubscriptionServer .
 
 cdata:Solid_Chat_Spec a ex:Specification ;
     ex:subType con:Specification ;
@@ -4130,3 +4196,58 @@ cdata:ACP_Server a ex:ClassOfProduct ;
 
 <https://solidproject.org/TR/wac#Server> a ex:ClassOfProduct ;
   ex:name "WAC Server" .
+
+<https://solidproject.org/TR/protocol#Client> a ex:ClassOfProduct ;
+  ex:name "Solid Client" .
+
+<https://solidproject.org/TR/protocol#Server> a ex:ClassOfProduct ;
+  ex:name "Solid Server" .
+
+<https://solidproject.org/TR/notifications-protocol#ResourceServer> a ex:ClassOfProduct ;
+  ex:name "Solid Notifications Resource Server" .
+
+<https://solidproject.org/TR/notifications-protocol#DiscoveryClient> a ex:ClassOfProduct ;
+  ex:name "Solid Notifications Discovery Client" .
+
+<https://solidproject.org/TR/notifications-protocol#SubscriptionClient> a ex:ClassOfProduct ;
+  ex:name "Solid Notifications Subscription Client" .
+
+<https://solidproject.org/TR/notifications-protocol#SubscriptionServer> a ex:ClassOfProduct ;
+  ex:name "Solid Notifications Subscription Server" .
+
+<https://solidproject.org/TR/notifications-protocol#NotificationSender> a ex:ClassOfProduct ;
+  ex:name "Solid Notifications Notification Sender" .
+
+<https://solidproject.org/TR/notifications-protocol#NotificationReceiver> a ex:ClassOfProduct ;
+  ex:name "Solid Notifications Notification Receiver" .
+
+cdata:WebPushChannel2023NotificationSender a ex:ClassOfProduct ;
+  ex:name "Solid WebPush Notification Sender" .
+
+cdata:WebPushChannel2023SubscriptionServer a ex:ClassOfProduct ;
+  ex:name "Solid WebPush Subscription Server" .
+
+cdata:WebhookChannel2023SubscriptionClient a ex:ClassOfProduct ;
+  ex:name "Solid Webhook Subscription Client" .
+
+cdata:WebhookChannel2023SubscriptionServer a ex:ClassOfProduct ;
+  ex:name "Solid Webhook Subscription Server" .
+
+cdata:WebhookChannel2023NotificationSender a ex:ClassOfProduct ;
+  ex:name "Solid Webhook Notification Sender" .
+
+cdata:WebhookChannel2023NotificationReceiver a ex:ClassOfProduct ;
+  ex:name "Solid Webhook Notification Receiver" .
+
+cdata:StreamingHTTPChannel2023NotificationSender a ex:ClassOfProduct ;
+  ex:name "Solid Streaming HTTP Notification Sender" .
+
+cdata:StreamingHTTPChannel2023NotificationReceiver a ex:ClassOfProduct ;
+  ex:name "Solid Streaming HTTP Notification Receiver" .
+
+cdata:WebSocketChannel2023SubscriptionServer a ex:ClassOfProduct ;
+  ex:name "Solid WebSocket Subscription Server" .
+
+cdata:WebSocketChannel2023NotificationSender a ex:ClassOfProduct ;
+  ex:name "Solid WebSocket Notification Sender" .
+
