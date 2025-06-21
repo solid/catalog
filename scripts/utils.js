@@ -19,14 +19,16 @@ const pathNode = $rdf.sym('http://www.w3.org/ns/shacl#path') ;
 export function source(){
   window.currentFolder = window.location.href.replace(/\/pages\/[^\/]+$/,'/');
   let vocURL= 'http://example.org/';
+//  let shaclURL = 'urn:x-base:default' ;
+    let shaclURL = currentFolder + 'catalog-shacl.ttl';
   return {
     dataURL   : currentFolder + 'catalog-data.ttl',
-    shaclURL  : currentFolder + 'catalog-shacl.ttl',
+    shaclURL,
     skosURL   : currentFolder + 'catalog-skos.ttl',
     newDataURL    : currentFolder + 'new-data/',
     vocURL,
     dataNode  : $rdf.sym(currentFolder + 'catalog-data.ttl'),
-    shaclNode : $rdf.sym(currentFolder + 'catalog-shacl.ttl'),
+    shaclNode : $rdf.sym( shaclURL),
     skosNode  : $rdf.sym(currentFolder + 'catalog-skos.ttl'),
    isa : $rdf.sym('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'),
     subtypeNode : $rdf.sym(vocURL+'#subType'),
@@ -49,6 +51,8 @@ export function findName(url){
   let node = url.value ?url :$rdf.sym(url);
   const labelNode  = $rdf.sym(source().vocURL+'#name');
   let label = store.any(node,labelNode,null,source().dataNode);
+//console.log(44,node.value)
+//if(label && label.value) console.log(45,label.value)
   return (label && label.value) ?label.value :"";
 }
 
@@ -115,6 +119,19 @@ export function findRecord(subjectURL){
   return record;
 }
 
+function isLink(val){
+  val = val.replace(source().vocURL+'#','');
+  let link = {
+    webid : true,
+    repository : true,
+    videoCallPage : true,
+    showcase : true,
+    serviceEndpoint : true,
+    landingPage : true,
+  }
+  return link[val];
+}
+
 function getRecordPredicates(record,subject,triples,posOfThing) {
   let isPred = {};
   let name = findName(subject);
@@ -132,15 +149,16 @@ function getRecordPredicates(record,subject,triples,posOfThing) {
     let valArray= [];
     for(let nv of newValue){
       let n = posOfThing==='subject' ?{...nv.object} :{...nv.subject};  
-      if(n.value.match(source().dataURL)){
-        let label = findName(n.value);
-        n.value = `<a href="${n.value}">${label}</a>`;
-      }
-      else if(n.value.match(source().skosURL)){
+      if(n.value.match(source().skosURL)){
         n.value = findPrefLabel(n.value);
       }
       else if(p.predicate.value.match(/keyword/i)){
         n.value = `<a href="${n.value}">${n.value}</a>`;
+      }
+      else if(n.value.startsWith('http')&& !isLink(p.predicate.value)) {
+//      else if(n.value.match(source().dataURL)){
+        let label = findName(n.value);
+        if(label) n.value = `<a href="${n.value}">${label}</a>`;
       }
       valArray.push(n.value);
     }
@@ -154,15 +172,33 @@ function getRecordPredicates(record,subject,triples,posOfThing) {
   return record;
 }
 
+/* array.isort() -- case-insensitive sort
+*/
+Array.prototype.isort = function() {
+    return this.sort((a, b) => {
+    a=a.value||a.label||a;
+    b=b.value||b.label||b;
+        const nameA = a.toLowerCase(); // Convert to lowercase
+        const nameB = b.toLowerCase(); // Convert to lowercase
+        if (nameA < nameB) {
+            return -1; // a comes before b
+        }
+        if (nameA > nameB) {
+            return 1; // a comes after b
+        }
+        return 0; // a and b are equal
+    });
+};
+
 export function findRecordsByType(type){
   let subs = [];
   let records = store.match(null,source().isa,$rdf.sym(type),source().dataNode).map(match => match.subject);
-  return records.sort();
+  return records.isort();
 }
 export function findRecordsBySubtype(subtype){
   let subs = [];
   let records = store.match(null,source().subtypeNode,$rdf.sym(subtype),source().dataNode).map(match => match.subject);
-  return records.sort();
+  return records.isort();
 }
 export function findRecordsByTechKeyword(keyword){
   let records = [];
@@ -173,7 +209,7 @@ export function findRecordsByTechKeyword(keyword){
       records.push({link:r.subject,label});
     }
   }
-  return records.sort();
+  return records.isort();
 }
 export function findRecordsByKeyword(keyword){
   let records = [];
@@ -206,7 +242,7 @@ export function findKeywords(){
       allKeys.push(key);
     }
   }
-  return allKeys.sort();
+  return allKeys.isort();
 }
 
 
@@ -225,7 +261,7 @@ export function findTechKeywords(subtype){
       }
     }
   }
-  return keys.sort();
+  return keys.isort();
 }
 
 
@@ -287,7 +323,7 @@ export function findFullText(term){
       continue;
     }
   }
-  return subjects.sort();
+  return subjects.isort();
 }
 
 /* PAGE DISPLAY */

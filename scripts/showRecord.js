@@ -12,11 +12,12 @@ export function showRecord(display,subject,record){
   let str = makeRecordHeader(subject,record);
   for(let f of Object.keys(record)){
     if( recordDisplayFieldsToSkip(f) ) continue;
+    let label = f.replace(/aboutOf/,'is referenced in');
     if(f=="contactEmail") str += recordDisplayEmail(f,record[f]);
-    else if(f.match(/softwareStackIncludesOf|hasDependencyOnOf|hasDependencyOn/)){
+    else if(f.match(/softwareStackIncludesOf|hasDependencyOnOf|hasDependencyOn|conformsToOf|definesConformanceForOf|conformsTo/)){
       dependencyStr += recordDisplaySoftwareRelations(f,record[f]);
     }
-    else str += recordDisplayMakeDiv(f,record[f]);
+    else str += recordDisplayMakeDiv(label,record[f]);
   }
   str += recordDisplayLinks(record);
   div.innerHTML = str + dependencyStr;
@@ -30,7 +31,6 @@ function makeRecordHeader(subject,record){
     displayType.push( findPrefLabel( d ) );
   }
   displayType = displayType.join(', ');
-  console.log(displayType)
   let str = `
       <div class="edit-row"><a class="edit-button" href="${subject}">edit</a></div>
       <div><b class="record-name">${record.name}</b></div><div>${displayType}</div>`
@@ -54,9 +54,12 @@ function recordDisplayLinks(record){
   return s + '</p>';
 }
 function recordDisplaySoftwareRelations(label,value){
+  label = label.replace(/conforms toOf/,'conforms to');
   label = label.replace(/softwareStackIncludesOf/,'is used by');
   label = label.replace(/hasDependencyOnOf/,'is dependency of');
   label = label.replace(/hasDependencyOn/,'has dependency on');
+  label = label.replace(/conformsToOf/,'is conformed to by');
+  label = label.replace(/definesConformanceForOf/,'is defined in');
   return recordDisplayMakeDiv(label,value)
 }
 function recordDisplayEmail(label,value){

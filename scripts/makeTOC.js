@@ -1,4 +1,4 @@
-import {store,fetcher,source,findUniqueSubjects} from './utils.js';
+import {store,fetcher,source,findUniqueSubjects,parseRdfCollection,loadCatalog} from './utils.js';
 
 export async function makeTOC(displayElement){
   let tree = await skos2toc() ;
@@ -6,7 +6,35 @@ export async function makeTOC(displayElement){
   await addTocListeners();
 }
 
+function findTypes(){
+  let types={};
+  const shaclPrefix = 'http://www.w3.org/ns/shacl#';
+  const shaclNode = source().shaclNode;
+  const resourceShapeNode = UI.rdf.sym('urn:x-base:default#SolidResourceShape');
+  const propertyNode = UI.rdf.sym(shaclPrefix+'property');
+  const collectionProperty = store.any( resourceShapeNode, propertyNode );
+  const collectionNode = store.any( collectionProperty,UI.rdf.sym(shaclPrefix+'in') );
+  for(let e of collectionNode.elements){
+    types[e.value]=true
+  }
+  return types;
+}
+function countResources(resourceTypes){
+   let resourceRecords = [];  
+   const isa = $rdf.sym('http://www.w3.org/1999/02/22-rdf-syntax-ns#type') ;
+   let uniqueRecords = findUniqueSubjects();
+   for(let r of uniqueRecords){
+     let recordTypes = store.each(r,isa);
+     for(let rt of recordTypes){
+       if(resourceTypes[rt.value]){
+         resourceRecords.push(rt.value);
+       }
+     }
+   }
+   return resourceRecords.length;  
+}
 async function skos2toc(){
+  await loadCatalog();
   const skosPrefix = 'http://www.w3.org/2004/02/skos/core#';
   const skosNode = source().skosNode;
   const taxonomyNode = UI.rdf.sym( source().skosURL + '#SolidCatalogTaxonomy' );
@@ -61,8 +89,9 @@ async function skos2toc(){
 }
 
 async function addTocListeners(){
+  let resourceTypes = findTypes();
+  let count = countResources(resourceTypes);
   let dataNode = source().dataNode;
-  await fetcher.load(dataNode);
   let hasSubtype = source().subtypeNode ;
   let anchors = document.querySelectorAll('#toc a');
   let all = (await findUniqueSubjects()).length;
@@ -76,5 +105,5 @@ async function addTocListeners(){
     else anchor.remove();
     //all += instances.length
   }
-  document.getElementById('toc').innerHTML += `<p>${all} total records</p>`;
+  document.getElementById('toc').innerHTML += `<p>${count} total records</p>`;
 }

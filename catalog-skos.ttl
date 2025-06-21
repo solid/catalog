@@ -50,10 +50,21 @@ con:ResearchPaper
   skos:broader con:TechnicalResource ;
   skos:prefLabel "Research Paper" .
 
+con:Primer
+  a skos:Concept ;
+  skos:broader con:TechnicalResource ;
+  skos:prefLabel "Primer".
+
+con:ClassOfProduct
+  a skos:Concept ;
+  skos:broader con:TechnicalResource ;
+  skos:prefLabel "Class of Product".
+
 con:OtherTechResource
   a skos:Concept ;
   skos:broader con:TechnicalResource ;
   skos:prefLabel "Other Tech Resource (primer, use case, etc)".
+
 
 ###
 # Product
@@ -216,7 +227,7 @@ con:AboutSolid
 con:AboutSolidApps
   a skos:Concept ;
   skos:broader con:LearningResource ;
-  skos:prefLabel "About Solid Apps" .
+  skos:prefLabel "Building Solid Apps" .
 
 con:SolidGlossary
   a skos:Concept ;

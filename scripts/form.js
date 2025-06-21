@@ -12,7 +12,8 @@ export async function shacl2form(shape,id,area) {
     shape = (store.any($rdf.sym(id),source().isa,null,source().dataNode)||{}).value;
   }
   shape = shape.replace('>','').replace(/.*#/,'') + 'Shape';
-  let shapeNode = $rdf.sym(source().shaclURL + '#' + shape);
+//  let shapeNode = $rdf.sym(source().shaclURL + '#' + shape);
+  let shapeNode = $rdf.sym('urn:x-base:default#' + shape);
   const mainArea = document.getElementById('main-content');
   const formsArea = document.getElementById('forms-area');
   let menubar = document.querySelector('#menubar'); 

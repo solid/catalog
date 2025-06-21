@@ -25,7 +25,8 @@ export async function prepNewRecordForm(){
 }
 function findTopTypes(){
    let topType = {};
-   let shape = $rdf.sym(source().shaclNode.uri+'#SolidResourceShape');
+//   let shape = $rdf.sym(source().shaclNode.uri+'#SolidResourceShape');
+   let shape = $rdf.sym('urn:x-base:default#SolidResourceShape');
    const propertyPredicate = $rdf.sym('http://www.w3.org/ns/shacl#property');
    const collectionPredicate = $rdf.sym('http://www.w3.org/ns/shacl#in');
    let property = store.any(shape,propertyPredicate,null);
