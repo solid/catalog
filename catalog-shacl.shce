@@ -15,7 +15,7 @@ shape :CreativeWorkShape -> ex:CreativeWork ;
 	ex:subType [1..*] in=[con:AboutSolid con:AboutSolidApps con:ResearchPaper con:OtherLearningResource con:OtherTechResource] %
 		sh:name "subtype"@en
 	% .
-	ex:about IRI [0..1] %
+	ex:about IRI %
 		sh:name "references" ;
 		sh:description "if specific to a product, the  name of the product"
 	% .
