@@ -51,8 +51,6 @@ export function findName(url){
   let node = url.value ?url :$rdf.sym(url);
   const labelNode  = $rdf.sym(source().vocURL+'#name');
   let label = store.any(node,labelNode,null,source().dataNode);
-//console.log(44,node.value)
-//if(label && label.value) console.log(45,label.value)
   return (label && label.value) ?label.value :"";
 }
 
@@ -61,9 +59,10 @@ export function findName(url){
 export function findPrefLabel(subject){
   if(!subject) return "";
   let node = subject.value ?subject :$rdf.sym(subject);
+  node.value = source().skosURL + node.value.replace(/^.*\#/,'#');
   let labelNode = $rdf.sym("http://www.w3.org/2004/02/skos/core#prefLabel");
-//  let label = store.any(subject,labelNode,null,source().skosNode);
   let label = store.any(node,labelNode,null,source().skosNode);
+if(label) console.log(label);
   return (label && label.value) ?label.value :"";
 }
 
