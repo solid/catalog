@@ -1,8 +1,8 @@
-@prefix xsd: <https://www.w3.org/2001/XMLSchema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix cdata: <#> .
-@prefix con: <./catalog-skos.ttl#> .
-@prefix ex: <http://example.org/#> .
+@prefix cdata: <https://solidproject.org/data/catalog#> .
+@prefix con: <https://solidproject.org/skos/catalog#> .
+@prefix ex: <http://example.org#> .
 
 cdata:InruptPodSpaces a ex:Service ;
   ex:name "Inrupt Pod Spaces" ;
