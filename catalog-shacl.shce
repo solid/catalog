@@ -37,7 +37,7 @@ shape :CreativeWorkShape -> ex:CreativeWork ;
 	ex:editor IRI ex:Person %
 		sh:name "editor"@en
 	% .
-	ex:description xsd:string|rdf:langString [0..1] maxLength=280 %
+	ex:description xsd:string|rdf:langString [0..1] maxLength=2000 %
 		sh:name "description"@en
 	% .
 }
@@ -46,7 +46,7 @@ shape :EventShape -> ex:Event ;
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
 	% .
-	ex:description xsd:string|rdf:langString [0..1] maxLength=280 %
+	ex:description xsd:string|rdf:langString [0..1] maxLength=2000 %
 		sh:name "description"@en
 	% .
 	ex:provider IRI %
@@ -75,7 +75,7 @@ shape :ServiceShape -> ex:Service ;
 	ex:status [1..1] in=[con:Exploration con:Development con:Production con:Archived] %
 		sh:name "status"@en
 	% .
-	ex:description xsd:string|rdf:langString [0..1] maxLength=280 %
+	ex:description xsd:string|rdf:langString [0..1] maxLength=2000 %
 		sh:name "description"@en
 	% .
 	ex:contactEmail xsd:string|rdf:langString [0..1] pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
@@ -125,7 +125,7 @@ shape :SoftwareShape -> ex:Software ;
 		sh:name "contact email"@en ;
 		sh:description "if you wish to share the email privately to ODI, leave this blank & contact solid@theodi.org"
 	% .
-	ex:description xsd:string|rdf:langString [0..1] maxLength=280 %
+	ex:description xsd:string|rdf:langString [0..1] maxLength=2000 %
 		sh:name "description"@en
 	% .
 	ex:clientID IRI [0..1] %
@@ -181,7 +181,7 @@ shape :SpecificationShape -> ex:Specification ;
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
 	% .
-	ex:description xsd:string|rdf:langString [0..1] maxLength=280 %
+	ex:description xsd:string|rdf:langString [0..1] maxLength=2000 %
 		sh:name "description"@en
 	% .
 	ex:repository IRI [0..1] %
@@ -214,7 +214,7 @@ shape :OntologyShape -> ex:Ontology ;
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
 	% .
-	ex:description xsd:string|rdf:langString [0..1] maxLength=280 %
+	ex:description xsd:string|rdf:langString [0..1] maxLength=2000 %
 		sh:name "description"@en
 	% .
 	ex:namespaceURI IRI [0..1] %
@@ -246,7 +246,7 @@ shape :OrganizationShape -> ex:Organization ;
 		sh:name "contact email"@en ;
 		sh:description "if you wish to share the email privately to ODI, leave this blank & contact solid@theodi.org"
 	% .
-	ex:description xsd:string|rdf:langString [0..1] maxLength=280 %
+	ex:description xsd:string|rdf:langString [0..1] maxLength=2000 %
 		sh:name "description"@en
 	% .
 	ex:logo IRI [0..1] %
@@ -263,11 +263,11 @@ shape :OrganizationShape -> ex:Organization ;
 		sh:name "social keyword"@en ;
 		sh:description "social domain of organization's activies e.g. housing, transportation, name of an industry"
 	% .
-	ex:resourcesWanted xsd:string|rdf:langString maxLength=280 %
+	ex:resourcesWanted xsd:string|rdf:langString maxLength=2000 %
 		sh:name "resources wanted"@en ;
 		sh:description "funding, employees, interns, partners, separate multiple with a blank line"
 	% .
-	ex:resourcesOffered xsd:string|rdf:langString maxLength=280 %
+	ex:resourcesOffered xsd:string|rdf:langString maxLength=2000 %
 		sh:name "resources offered"@en ;
 		sh:description "funding, mentorship, collaboration, offered; separate multiple with a blank line"
 	% .
@@ -292,7 +292,7 @@ shape :PersonShape -> ex:Person ;
 		sh:name "matrix handle" ;
 		sh:description "your handle/nick in the Matrix chatrooms"
 	% .
-	ex:description xsd:string|rdf:langString [0..1] maxLength=280 %
+	ex:description xsd:string|rdf:langString [0..1] maxLength=2000 %
 		sh:name "description"@en
 	% .
 	ex:logo IRI [0..1] %
@@ -302,11 +302,11 @@ shape :PersonShape -> ex:Person ;
 		sh:name "landing page"@en ;
 		sh:description "URL where the person is described and/or links to their resources are available"
 	% .
-	ex:resourcesWanted xsd:string|rdf:langString maxLength=280 %
+	ex:resourcesWanted xsd:string|rdf:langString maxLength=2000 %
 		sh:name "resources wanted"@en ;
 		sh:description "funding, employees, interns, partners, separate multiple with a blank line"
 	% .
-	ex:resourcesOffered xsd:string|rdf:langString maxLength=280 %
+	ex:resourcesOffered xsd:string|rdf:langString maxLength=2000 %
 		sh:name "resources offered"@en ;
 		sh:description "funding, mentorship, collaboration, offered; separate multiple with a blank line"
 	% .
