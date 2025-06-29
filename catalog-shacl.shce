@@ -4,10 +4,10 @@ PREFIX con: <https://solidproject.org/skos/catalog#>
 PREFIX ex: <http://example.org#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-# shape :SolidResourceShape {
-# 	targetSubjectsOf=rdf:type .
-# 	rdf:type in=[ex:CreativeWork ex:Event ex:Software ex:Service ex:Person ex:Organization ex:Specification ex:Ontology ex:ClassOfProduct] .
-# }
+shape :SolidResourceShape {
+	targetSubjectsOf=rdf:type .
+	rdf:type in=[ex:CreativeWork ex:Event ex:Software ex:Service ex:Person ex:Organization ex:Specification ex:Ontology ex:ClassOfProduct] .
+}
 shape :CreativeWorkShape -> ex:CreativeWork ;
 	sh:name "Creative Work"@en {
 	ex:name xsd:string|rdf:langString [1..1] %
