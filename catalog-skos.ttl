@@ -95,11 +95,11 @@ con:OtherApp
   skos:broader con:Product ;
   skos:prefLabel "Other Application" .
 
-con:Server
+con:PodServer
   a skos:Concept ;
   skos:broader con:Product ;
   skos:description "supports either or both of identity & storage" ;
-  skos:prefLabel "Server" .
+  skos:prefLabel "Pod Server" .
 
 con:ServerPlugin
   a skos:Concept ;

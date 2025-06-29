@@ -13,7 +13,7 @@ shape :CreativeWorkShape -> ex:CreativeWork ;
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
 	% .
-	ex:subType [1..*] in=[con:AboutSolid con:AboutSolidApps con:ResearchPaper con:OtherLearningResource con:OtherTechResource] %
+	ex:subType [1..*] in=[con:AboutSolid con:AboutSolidApps con:ResearchPaper con:OtherLearningResource con:OtherTechResource con:Primer] %
 		sh:name "subtype"@en
 	% .
 	ex:about IRI %
@@ -23,7 +23,7 @@ shape :CreativeWorkShape -> ex:CreativeWork ;
 	ex:technicalKeyword xsd:string|rdf:langString %
 		sh:name "keyword"@en
 	% .
-	ex:landingPage IRI [0..1] %
+	ex:landingPage IRI %
 		sh:name "landing page"@en ;
 		sh:description "URL(s) where the work is available, or described"
 	% .
@@ -59,7 +59,7 @@ shape :EventShape -> ex:Event ;
 	ex:videoCallPage IRI [0..1] %
 		sh:name "video call URL"
 	% .
-	ex:landingPage IRI [0..1] %
+	ex:landingPage IRI %
 		sh:name "landing page"@en ;
 		sh:description "URL where the event is described"
 	% .
@@ -89,7 +89,7 @@ shape :ServiceShape -> ex:Service ;
 		sh:name "service endpoint"@en ;
 		sh:description "URL where the service can be accessed"
 	% .
-	ex:landingPage IRI [0..1] %
+	ex:landingPage IRI %
 		sh:name "landing page"@en ;
 		sh:description "URL where the service is described"
 	% .
@@ -135,7 +135,7 @@ shape :SoftwareShape -> ex:Software ;
 	ex:logo IRI [0..1] %
 		sh:name "logo"@en
 	% .
-	ex:landingPage IRI [0..1] %
+	ex:landingPage IRI %
 		sh:name "landing page"@en ;
 		sh:description "URL where the resource is described"
 	% .
@@ -171,7 +171,7 @@ shape :SoftwareShape -> ex:Software ;
 		sh:name "conforms to"@en ;
 		sh:description "a class of product, from a specification, that this implementation conforms to"
 	% .
-	ex:hasDependencyOn IRI ex:Product %
+	ex:hasDependencyOn IRI ex:Software %
 		sh:name "has dependency on"@en ;
 		sh:description "a library/module that this software depends on"
 	% .
@@ -188,7 +188,7 @@ shape :SpecificationShape -> ex:Specification ;
 		sh:name "repository"@en ;
 		sh:description "URL where the specification is being worked on"
 	% .
-	ex:landingPage IRI [0..1] %
+	ex:landingPage IRI %
 		sh:name "landing page"@en ;
 		sh:description "URL where the specification is described"
 	% .
@@ -229,7 +229,7 @@ shape :OntologyShape -> ex:Ontology ;
 		sh:name "repository"@en ;
 		sh:description "URL where the ontology is available in RDF"
 	% .
-	ex:landingPage IRI [0..1] %
+	ex:landingPage IRI %
 		sh:name "landing page"@en ;
 		sh:description "URL where the ontology is described"
 	% .
@@ -255,7 +255,7 @@ shape :OrganizationShape -> ex:Organization ;
 	ex:webid IRI [0..1] %
 		sh:name "WebID"
 	% .
-	ex:landingPage IRI [0..1] %
+	ex:landingPage IRI %
 		sh:name "landing page"@en ;
 		sh:description "URL where the organization is described"
 	% .
@@ -298,7 +298,7 @@ shape :PersonShape -> ex:Person ;
 	ex:logo IRI [0..1] %
 		sh:name "logo"@en
 	% .
-	ex:landingPage IRI [0..1] %
+	ex:landingPage IRI %
 		sh:name "landing page"@en ;
 		sh:description "URL where the person is described and/or links to their resources are available"
 	% .

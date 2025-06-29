@@ -16,7 +16,7 @@ cdata:InruptPodSpaces a ex:Service ;
 cdata:ESS a ex:Software ;
   ex:name "Enterprise Solid Server (ESS)" ;
   ex:status con:Production ;
-  ex:subType con:Server ;
+  ex:subType con:PodServer ;
   ex:provider cdata:Inrupt ;
   ex:landingPage <https://www.inrupt.com/products/enterprise-solid-server> .
 
@@ -35,12 +35,12 @@ cdata:SolidCommunityDotNet a ex:Service ;
 
 cdata:ODI a ex:Organization ;
   ex:name "Open Data Institute (ODI)" ;
-  ex:subType con:NonGovernmentalOrganization ;
+  ex:subType con:OtherNGO ;
   ex:landingPage <https://theodi.org/> .
 
 cdata:Pivot a ex:Software ;
   ex:name "Pivot" ;
-  ex:subType con:Server ;
+  ex:subType con:PodServer ;
   ex:status con:Production ;
   ex:description "\n    Pivot is a fork of CSS created as a community-maintained server.\n  " ;
   ex:repository <https://github.com/solid-lite/server> .
@@ -66,7 +66,7 @@ cdata:SolidGrassroots a ex:Organization ;
 cdata:NSS a ex:Software ;
   ex:name "Node Solid Server (NSS)" ;
   ex:status con:Production ;
-  ex:subType con:Server ;
+  ex:subType con:PodServer ;
   ex:repository <https://github.com/nodeSolidServer/node-solid-server> .
 
 cdata:SolidWebDotMe a ex:Service ;
@@ -98,7 +98,7 @@ cdata:Meisdata a ex:Organization ;
 cdata:CSS a ex:Software ;
   ex:name "Community Solid Server (CSS)" ;
   ex:status con:Production ;
-  ex:subType con:Server ;
+  ex:subType con:PodServer ;
   ex:provider cdata:Inrupt, cdata:Imec ;
   ex:landingPage <https://communitysolidserver.github.io/CommunitySolidServer/latest/> ;
   ex:conformsTo
@@ -147,7 +147,7 @@ cdata:Graphmetrix a ex:Organization ;
 cdata:Trinpod a ex:Software ;
   ex:name "Trinpod" ;
   ex:status con:Production ;
-  ex:subType con:Server ;
+  ex:subType con:PodServer ;
   ex:provider cdata:Graphmetrix ;
   ex:landingPage <https://graphmetrix.com/trinpod-server> .
 
@@ -211,7 +211,7 @@ cdata:TeamIdLive a ex:Service ;
     ex:subType  con:GeneralPurposePodService ;
     ex:status  con:Exploration ;
     ex:description  """Pivot"""@en ;
-    ex:contactEmail  <mailto:info@meisdata.io> ;
+    ex:contactEmail  "info@meisdata.io" ;
     ex:logo  <https://www.serverproject.de/logo2.png> ;
     ex:serviceEndpoint  <https://teamid.live> ;
     ex:provider  cdata:Meisdata ;
@@ -291,7 +291,7 @@ cdata:OpenLink a ex:Organization ;
 cdata:OpenLinkNSSFork a ex:Software ;
   ex:name "OpenLink NSS Fork" ;
   ex:status con:Production ;
-  ex:subType con:Server ;
+  ex:subType con:PodServer ;
   ex:provider cdata:OpenLink .
 
 cdata:OpenLinks1 a ex:Service ;
@@ -319,7 +319,7 @@ cdata:AUnationalU a ex:Organization ;
 
 cdata:GurrinyHealthClinic a ex:Organization ;
   ex:name "Gurriny Health Clinic" ;
-  ex:subType con:NonGovernmentalOrganization ;
+  ex:subType con:OtherNGO ;
   ex:landingPage <https://www.gyhsac.org.au/> .
 
 cdata:DigitalFlanders a ex:Service ;
@@ -365,16 +365,15 @@ cdata:SleepyBike a ex:Service ;
 
 cdata:OpenHospitalityNetwork a ex:Organization ;
   ex:name "Open Hospitality Network" ;
-  ex:subType con:NonGovernmentalOrganization ;
+  ex:subType con:OtherNGO ;
   ex:landingPage <https://github.com/OpenHospitalityNetwork> .
 
 cdata:SleepyBikePlatform a ex:Software ;
   ex:name "Sleepy Bike Platform" ;
   ex:status con:Production ;
-  ex:subType con:Server ;
+  ex:subType con:PodServer ;
   ex:description "'Couchsurfing' for bicycle travellers" ;
-  ex:repository <https://github.com/OpenHospitalityNetwork/sleepy.bike> ;
-  ex:status con:Development .
+  ex:repository <https://github.com/OpenHospitalityNetwork/sleepy.bike> .
 
 cdata:PASS a ex:Service ;
     ex:name  """Personalized Access System for Services (PASS)"""@en ;
@@ -476,7 +475,7 @@ cdata:SolidOSteam a ex:Organization ;
 
 cdata:DataFoodNetwork a ex:Organization ;
   ex:name "Data Food Network" ;
-  ex:subType con:NonGovernmentalOrganization .
+  ex:subType con:OtherNGO .
 
 cdata:UofSouthhampton a ex:Organization ;
   ex:name "University of Southampton" ;
@@ -646,6 +645,14 @@ cdata:Henri_Cattoire a ex:Person ;
   ex:name "Henri Cattoire" ;
   ex:subType  con:Person .
 
+cdata:Certiman a ex:Person ;
+  ex:name "Certiman" ;
+  ex:subType  con:Person .
+
+cdata:TimStanden a ex:Person ;
+  ex:name "Tim Standen" ;
+  ex:subType  con:Person .
+
 cdata:KU_Leuven a ex:Person ;
   ex:name "KU Leuven" ;
   ex:subType  con:Person .
@@ -710,7 +717,7 @@ cdata:Alexander_James_Phillips a ex:Person ;
 cdata:Friedrich-Alexander-Universität_Erlangen-Nürnberg a ex:Organization ;
     ex:name  """Friedrich-Alexander-Universität Erlangen-Nürnberg"""@en ;
     ex:subType  con:UniversityProject ;
-    ex:contactEmail  <mailto:andreas.harth@fau.de> ;
+    ex:contactEmail  "andreas.harth@fau.de" ;
     ex:description  """The Chair of Information Systems, with a focus on Technical Information Systems, conducts research in areas such as the Semantic Web, Linked Data, Knowledge Graphs, and decentralised information systems. The research is carried out in close collaboration with the department of Data Spaces and Internet of Things Solutions at the Fraunhofer Institute for Integrated Circuits IIS."""@en ;
     ex:modified "2025-04-25T07:56:28.092Z"^^xsd:dateTime .
 
@@ -772,7 +779,7 @@ cdata:Matthew_Fowle a ex:Person ;
 cdata:Matthias_Evering a ex:Person ;
   ex:subType con:Person ;
     ex:name  """Matthias Evering"""@en ;
-    ex:contactEmail  <mailto:me@evering.eu> ;
+    ex:contactEmail  "me@evering.eu" ;
     ex:webid  <https://solidweb.me/testpro-dev/profile/card#me> ;
     ex:forumHandle  """@ewingson"""@en ;
     ex:matrixHandle  """@ewingson"""@en ;
@@ -788,7 +795,7 @@ cdata:Matthias_Evering a ex:Person ;
 cdata:Ross_Horne a ex:Person ;
   ex:subType con:Person ;
     ex:name  """Ross Horne"""@en ;
-    ex:contactEmail  <mailto:ross.horne@strath.ac.uk> ;
+    ex:contactEmail  "ross.horne@strath.ac.uk" ;
     ex:description  """Interested in authentication protocols and security policy models."""@en ;
     ex:resourcesOffered  """Security analysis of proposals for authentication and access control."""@en ;
     ex:modified "2025-04-25T07:49:04.398Z"^^xsd:dateTime .
@@ -1458,7 +1465,7 @@ cdata:Sylvain_Le_Bon a ex:Person ;
 cdata:Andreas_Harth a ex:Person ;
   ex:subType con:Person ;
     ex:name  """Andreas Harth"""@en ;
-    ex:contactEmail  <mailto:andreas@harth.org> ;
+    ex:contactEmail  "andreas@harth.org" ;
     ex:webid  <http://harth.org/andreas/foaf#ah> ;
     ex:matrixHandle  """@aharth:matrix.org"""@en ;
     ex:modified "2025-04-25T07:53:45.052Z"^^xsd:dateTime .
@@ -1557,7 +1564,7 @@ cdata:Toby a ex:Person ;
 cdata:Tobias_Käfer a ex:Person ;
   ex:subType con:Person ;
     ex:name  """Tobias Käfer"""@en ;
-    ex:contactEmail  <mailto:tobias.kaefer@kit.edu> ;
+    ex:contactEmail  "tobias.kaefer@kit.edu" ;
     ex:webid  <https://kaefer3000.solidcommunity.net/profile/card#me> ;
     ex:landingPage  <https://websci.aifb.kit.edu/Tobias_Kaefer.php> ;
     ex:modified "2025-04-25T07:58:10.536Z"^^xsd:dateTime .
@@ -2190,7 +2197,7 @@ cdata:Matt_Wallis a ex:Person ;
 cdata:PHP_Solid_Server a ex:Software ;
   ex:name "PHP Solid Server" ;
   ex:status con:Production ;
-  ex:subType con:Server ;
+  ex:subType con:PodServer ;
   ex:provider cdata:PDSINTEROP ;
   ex:landingPage <https://pdsinterop.org/php-solid-server/> .
 
@@ -2206,7 +2213,7 @@ cdata:PHP_Solid_Server a ex:Software ;
 <https://sai.js.org/authorization-agent-server> a ex:Software ;
   ex:name "SAI Authorization Agent" ;
   ex:status con:Production ;
-  ex:subType con:Server ;
+  ex:subType con:PodServer ;
   ex:maintainer <https://elf-pavlik.hackers4peace.net> ;
   ex:developer <https://samurex.hackers4peace.net> ;
   ex:landingPage <https://sai.js.org> ;
@@ -2247,24 +2254,24 @@ cdata:PHP_Solid_Server a ex:Software ;
 cdata:Manas a ex:Software ;
   ex:name "Manas (मनस्)" ;
   ex:status con:Production ;
-  ex:subType con:Server ;
+  ex:subType con:PodServer ;
   ex:provider cdata:Manomayam ;
   ex:landingPage <https://manomayam.github.io/manas/introduction.html> .
 
 cdata:Gold a ex:Software ;
   ex:name "Gold" ;
   ex:status con:Production ;
-  ex:subType con:Server ;
+  ex:subType con:PodServer ;
   ex:repository <https://github.com/linkeddata/gold> .
 
 cdata:Solid-Lite a ex:Software ;
   ex:name "Solid Lite" ;
   ex:status con:Development ;
-  ex:subType con:Server ;
+  ex:subType con:PodServer ;
   ex:repository <https://github.com/solid-lite/server> .
 
 cdata:EmberSolid a ex:Software ;
-  ex:name "Startin'Blox", "Ember Solid" ;
+  ex:name "Ember Solid" ;
   ex:subType con:SoftwareLibrary ;
   ex:provider cdata:RedPencil ;
   ex:landingPage <https://chuixuewan.github.io/solid-clinic/> ;
@@ -2534,7 +2541,7 @@ cdata:SolidWebComponents a ex:Software ;
 cdata:Molid a ex:Software ;
   ex:name "Molid" ;
   ex:subType con:SoftwareLibrary ;
-  ex:description "A mock server that can be used for apps.", "Mock Solid Server" ;
+  ex:description "A mock server that can be used for apps." ;
   ex:landingPage <https://www.npmjs.com/package/molid> ;
   ex:status con:Production ;
   ex:programmingLanguage "javascript" ;
@@ -2702,7 +2709,7 @@ cdata:Spoggy a ex:Software ;
   ex:description "Creates nodes and edges of a graph" ;
   ex:status con:Development ;
   ex:technicalKeyword "uncategorized", "general purpose app" ;
-  ex:clientID <https://spoggy-test3.solidcommunity.net/profile/card#me>, <https://spoggy.solidcommunity.net/profile/card#me> .
+  ex:clientID <https://spoggy.solidcommunity.net/profile/card#me> .
 
 cdata:Stash-Dat a ex:Software ;
   ex:name "Stash-Dat" ;
@@ -2846,7 +2853,6 @@ cdata:Ramen a ex:Software ;
   ex:name "Ramen" ;
   ex:status con:Production ;
   ex:subType con:LeisureApp ;
-  ex:status con:Development ;
   ex:technicalKeyword "food" .
 
 cdata:Polymer a ex:Software ;
@@ -3138,7 +3144,7 @@ cdata:Soukai a ex:Software ;
 
 cdata:Laravel a ex:Software ;
     ex:name  """Laravel Solid Server (LSS)"""@en ;
-    ex:subType  con:Server ;
+    ex:subType  con:PodServer ;
     ex:status  con:Exploration ;
     ex:repository  <https://github.com/noeldemartin/lss> ;
     ex:maintainer cdata:Noel_De_Martin ;
@@ -3506,7 +3512,7 @@ cdata:PodOS a ex:Software ;
 
 cdata:SolidOSWebApp a ex:Service ;
   ex:name "SolidOS Webapp" ;
-  ex:subType con:PodApp ;
+  ex:subType con:OtherService ;
   ex:status con:Production ;
   ex:serviceEndpoint <https://solidos.github.io/mashlib/dist/browse.html> ;
   ex:softwareStackIncludes cdata:SolidOS;
