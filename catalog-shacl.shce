@@ -1,8 +1,9 @@
-BASE <https://solidproject.org/shapes/catalog>
-PREFIX : <https://solidproject.org/shapes/catalog#>
-PREFIX con: <https://solidproject.org/skos/catalog#>
-PREFIX ex: <http://example.org#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+PREFIX con: <https://solidproject.solidcommunity.net/catalog/taxonomy#>
+PREFIX ex: <http://example.org#>
+
+PREFIX : <https://solidproject.solidcommunity.net/catalog/shapes#>
 
 shape :SolidResourceShape {
 	targetSubjectsOf=rdf:type .
