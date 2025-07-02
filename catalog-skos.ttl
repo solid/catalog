@@ -1,9 +1,9 @@
-@prefix con: <#> . # this file, Solid SKOS concept tree
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
 
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+PREFIX con: <https://solidproject.solidcommunity.net/catalog/taxonomy#>
 
 con:SolidCatalogTaxonomy 
   a skos:ConceptScheme ;
@@ -95,11 +95,11 @@ con:OtherApp
   skos:broader con:Product ;
   skos:prefLabel "Other Application" .
 
-con:Server
+con:PodServer
   a skos:Concept ;
   skos:broader con:Product ;
   skos:description "supports either or both of identity & storage" ;
-  skos:prefLabel "Server" .
+  skos:prefLabel "Pod Server" .
 
 con:ServerPlugin
   a skos:Concept ;
