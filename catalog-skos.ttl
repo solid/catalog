@@ -1,9 +1,9 @@
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX sh: <http://www.w3.org/ns/shacl#>
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
 
-PREFIX con: <https://solidproject.solidcommunity.net/catalog/taxonomy#>
+@prefix con: <https://solidproject.solidcommunity.net/catalog/taxonomy#>.
 
 con:SolidCatalogTaxonomy 
   a skos:ConceptScheme ;
@@ -204,7 +204,7 @@ con:FundingOrganization
   skos:broader con:Organization ;
   skos:prefLabel "Funding Organization" .
 
-con:NonGovernmentalOrganization
+con:OtherNGO
   a skos:Concept ;
   skos:broader con:Organization ;
   skos:prefLabel "NGO" .
