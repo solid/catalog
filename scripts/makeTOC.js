@@ -1,8 +1,8 @@
 import {store,fetcher,source,findUniqueSubjects,parseRdfCollection,loadCatalog} from './utils.js';
 
 export async function makeTOC(displayElement){
-  let tree = await skos2toc() ;
-  displayElement.appendChild(tree);
+  let tree = await skos2toc(displayElement) ;
+//  displayElement.appendChild(tree);
   await addTocListeners();
 }
 
@@ -10,7 +10,8 @@ function findTypes(){
   let types={};
   const shaclPrefix = 'http://www.w3.org/ns/shacl#';
   const shaclNode = source().shaclNode;
-  const resourceShapeNode = UI.rdf.sym('urn:x-base:default#SolidResourceShape');
+//  const resourceShapeNode = UI.rdf.sym('urn:x-base:default#SolidResourceShape');
+  const resourceShapeNode = UI.rdf.sym(source().shaclURL+'#SolidResourceShape');
   const propertyNode = UI.rdf.sym(shaclPrefix+'property');
   const collectionProperty = store.any( resourceShapeNode, propertyNode );
   const collectionNode = store.any( collectionProperty,UI.rdf.sym(shaclPrefix+'in') );
@@ -33,7 +34,10 @@ function countResources(resourceTypes){
    }
    return resourceRecords.length;  
 }
-async function skos2toc(){
+async function skos2toc(displayElement){
+  let toc = document.createElement('div');
+  displayElement.appendChild(toc);
+  toc.setAttribute('id','toc');
   await loadCatalog();
   const skosPrefix = 'http://www.w3.org/2004/02/skos/core#';
   const skosNode = source().skosNode;
@@ -43,17 +47,14 @@ async function skos2toc(){
   const altLabelNode = UI.rdf.sym( skosPrefix + 'altLabel' );
   const narrower = UI.rdf.sym( skosPrefix + 'narrower' );
   const broader = UI.rdf.sym( skosPrefix + 'broader' );
-  await fetcher.load(skosNode);
-  let top = store.each(taxonomyNode,topConceptNode,null,skosNode);
-  let toc = document.createElement('div');
-  toc.setAttribute('id','toc');
+  let top = store.each(taxonomyNode,topConceptNode);
   let str = "";
   for(let topConcept of top){
     let value = topConcept.uri;
-    let label = (store.any(topConcept,altLabelNode,null,skosNode)||{}).value
-              || (store.any(topConcept,labelNode,null,skosNode)||{}).value;
-    let subtypes = store.each(topConcept,narrower,null,skosNode);
-    if(subtypes.length==0) subtypes = store.each(null,broader,topConcept,skosNode);
+    let label = (store.any(topConcept,altLabelNode)||{}).value
+              || (store.any(topConcept,labelNode)||{}).value;
+    let subtypes = store.each(topConcept,narrower);
+    if(subtypes.length==0) subtypes = store.each(null,broader,topConcept);
     if(subtypes.length==0){
       let div = document.createElement('div');
       let anc = document.createElement('a');
@@ -72,17 +73,21 @@ async function skos2toc(){
       toc.appendChild(div);
     }
     for(let subtype of subtypes){
-      let tlabel = (store.any(subtype,labelNode,null,skosNode)||{}).value;
+      let tlabel = (store.any(subtype,labelNode)||{}).value;
       tlabel = tlabel.replace(/\(.*$/,'');
-      let div = document.createElement('div');
+      let div2 = document.createElement('div');
       let anc = document.createElement('a');
-      anc.classList.add('subtype');
-      anc.setAttribute('href',`javascript:void(0)`);
-      anc.setAttribute('onclick',`sh('${subtype.value}','${tlabel}')`);
-      anc.setAttribute('about',subtype.value);
-      anc.innerHTML = tlabel;
-      div.appendChild(anc);
-      toc.appendChild(div);
+      let href=subtype.uri;
+      try {
+        anc.setAttribute('data-href',href);
+        anc.setAttribute('href','#');
+        anc.classList.add('subtype');
+        anc.setAttribute('onclick',`sh('${subtype.value}','${tlabel}')`);
+        anc.textContent = tlabel;
+        div2.appendChild(anc);
+        toc.appendChild(div2);
+      }
+      catch(e){console.log(88,e)}
     }
   }
   return toc;
@@ -94,16 +99,14 @@ async function addTocListeners(){
   let dataNode = source().dataNode;
   let hasSubtype = source().subtypeNode ;
   let anchors = document.querySelectorAll('#toc a');
-  let all = (await findUniqueSubjects()).length;
   for(let anchor of anchors){
-    let field = anchor.getAttribute('about') || anchor.getAttribute('href');
+    let field = anchor.getAttribute('data-href') || anchor.getAttribute('href');
     let subtype = UI.rdf.sym(field);
-    let instances = store.each(null,hasSubtype,subtype,dataNode);
+    let instances = store.each(null,hasSubtype,subtype);
     if(instances.length>0){
       anchor.parentNode.innerHTML += ` <span class="number">${instances.length}</span>`;
     }
     else anchor.remove();
-    //all += instances.length
   }
   document.getElementById('toc').innerHTML += `<p>${count} total records</p>`;
 }

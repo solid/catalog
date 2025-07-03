@@ -78,7 +78,9 @@ function showSearchResults(term){
   }
 }
 export function showRecordsByKeyword(keyword){
+alert(keyword)
   let records = findRecordsByKeyword(keyword);
+console.log(9,records)
   const recordDisplay = document.getElementById('right-bottom');
   const linkDisplay = document.getElementById('right-top');
   recordDisplay.innerHTML="";

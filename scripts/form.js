@@ -6,14 +6,14 @@ export async function editRecord(id,area,shape) {
 function shapeFromId(id){
 }
 export async function shacl2form(shape,id,area) {
-  await loadCatalog();
+//  await loadCatalog();
   area ||= 'forms-area';
   if(!shape){
-    shape = (store.any($rdf.sym(id),source().isa,null,source().dataNode)||{}).value;
+    shape = (store.any($rdf.sym(id),source().isa)||{}).value;
   }
   shape = shape.replace('>','').replace(/.*#/,'') + 'Shape';
-//  let shapeNode = $rdf.sym(source().shaclURL + '#' + shape);
-  let shapeNode = $rdf.sym('urn:x-base:default#' + shape);
+  let shapeNode = $rdf.sym(source().shaclURL + '#' + shape);
+//  let shapeNode = $rdf.sym('urn:x-base:default#' + shape);
   const mainArea = document.getElementById('main-content');
   const formsArea = document.getElementById('forms-area');
   let menubar = document.querySelector('#menubar'); 
@@ -36,7 +36,8 @@ mainArea.style.display="none";
 
 //console.log(1,shapeNode.value)
 //shapeNode=$rdf.sym('http://localhost:8444/home/s/catalog/catalog-shacl.ttl#LearningResourceShape');
-  const properties = store.match(shapeNode, $rdf.sym('http://www.w3.org/ns/shacl#property'),null,source().shaclNode);
+
+  const properties = store.match(shapeNode, $rdf.sym('http://www.w3.org/ns/shacl#property'));
 //  const properties = store.match(null, $rdf.sym('http://www.w3.org/ns/shacl#property'),null,source().shaclNode);
   createMenubar(shapeNode,id);
   properties.forEach( property => {
@@ -50,7 +51,6 @@ mainArea.style.display="none";
     let descField = document.createElement('span');
     descField.innerHTML = desc ?desc.value :"";
     descField.classList.add('fieldDescription');
-
     datatype = datatype ?datatype.value :'http://www.w3.org/ns/shacl#IRI';
     const orCollectionStart = store.any(property.object, $rdf.sym('http://www.w3.org/ns/shacl#in'));
 /*JZ
@@ -116,7 +116,7 @@ mainArea.style.display="none";
       let recordLabel = findName(recordURL);
       const text = recordLabel ?`Edit ${shapeLabel} - '${recordLabel}'` :`Edit new ${shapeLabel}</span>`;
       let targetNode = $rdf.sym('http://www.w3.org/ns/shacl#targetClass');
-      const targetClass = store.any($rdf.sym(shape),targetNode,null,source().shaclNode);
+      const targetClass = store.any($rdf.sym(shape),targetNode);
       menubar.innerHTML = `
         <b>Solid Resources Catalog - ${text}</b>
         <span class="buttons">
@@ -239,6 +239,7 @@ mainArea.style.display="none";
         if(element) input = element.getElementsByTagName('input')[0] || element.getElementsByTagName('textarea')[0] || element.getElementsByTagName('select')[0];
         if(input){
             let newValue = valueLabel.replace(new RegExp(source().dataURL+'#', 'g'), '').replace(/\s+/g,' ').trim();
+console.log(valueLabel,9,newValue);
 //          let newValue = node2label(valueLabel);
 	  input.value = input.tagName==='SELECT' ?value :newValue;
           input.value = input.value.trim();

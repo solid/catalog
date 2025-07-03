@@ -18,18 +18,24 @@ const pathNode = $rdf.sym('http://www.w3.org/ns/shacl#path') ;
 */   
 export function source(){
   window.currentFolder = window.location.href.replace(/\/pages\/[^\/]+$/,'/');
-  let vocURL= 'http://example.org/';
+  let vocURL= 'http://example.org';
 //  let shaclURL = 'urn:x-base:default' ;
-    let shaclURL = currentFolder + 'catalog-shacl.ttl';
+//   let shaclURL = currentFolder + 'catalog-shacl.ttl';
+  let dataURL = 'https://solidproject.solidcommunity.net/catalog/data';
+  let shaclURL = 'https://solidproject.solidcommunity.net/catalog/shapes';
+  let skosURL = 'https://solidproject.solidcommunity.net/catalog/taxonomy';
   return {
-    dataURL   : currentFolder + 'catalog-data.ttl',
-    shaclURL,
-    skosURL   : currentFolder + 'catalog-skos.ttl',
+    dataLoadURL   : currentFolder + 'catalog-data.ttl',
+    shaclLoadURL  : currentFolder + 'catalog-shacl.ttl',
+    skosLoadURL   : currentFolder + 'catalog-skos.ttl',
     newDataURL    : currentFolder + 'new-data/',
+    dataURL,
+    shaclURL,
+    skosURL,
     vocURL,
-    dataNode  : $rdf.sym(currentFolder + 'catalog-data.ttl'),
+    dataNode  : $rdf.sym(dataURL),
     shaclNode : $rdf.sym( shaclURL),
-    skosNode  : $rdf.sym(currentFolder + 'catalog-skos.ttl'),
+    skosNode  : $rdf.sym(skosURL),
    isa : $rdf.sym('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'),
     subtypeNode : $rdf.sym(vocURL+'#subType'),
     techKeywordsNode : $rdf.sym(vocURL+'#technicalKeyword'),
@@ -50,7 +56,7 @@ export function findName(url){
   if(!url) return "";
   let node = url.value ?url :$rdf.sym(url);
   const labelNode  = $rdf.sym(source().vocURL+'#name');
-  let label = store.any(node,labelNode,null,source().dataNode);
+  let label = store.any(node,labelNode);
   return (label && label.value) ?label.value :"";
 }
 
@@ -61,8 +67,7 @@ export function findPrefLabel(subject){
   let node = subject.value ?subject :$rdf.sym(subject);
   node.value = source().skosURL + node.value.replace(/^.*\#/,'#');
   let labelNode = $rdf.sym("http://www.w3.org/2004/02/skos/core#prefLabel");
-  let label = store.any(node,labelNode,null,source().skosNode);
-if(label) console.log(label);
+  let label = store.any(node,labelNode,);
   return (label && label.value) ?label.value :"";
 }
 
@@ -72,7 +77,7 @@ export function findShaclName(subject){
   if(!subject) return "";
   let node = subject.value ?subject :$rdf.sym(subject);
   let labelNode = $rdf.sym('http://www.w3.org/ns/shacl#name');
-  let label = store.any(subject,labelNode,null,source().shaclNode);
+  let label = store.any(subject,labelNode);
   return (label && label.value) ?label.value :"";
 }
 
@@ -83,12 +88,12 @@ export function findShaclName(subject){
 export function findNodeShapes(){
   const shapeNode = $rdf.sym('http://www.w3.org/ns/shacl#NodeShape');
   const targetNode = $rdf.sym('http://www.w3.org/ns/shacl#targetClass');
-  let shapes = store.each(null,isa,shapeNode,source().shaclNode);
+  let shapes = store.each(null,isa,shapeNode);
   let knownShape = {} ;
   for(let s of shapes){
 //    knownShape[s.value] = node2label(s.value);
 //    knownShape[s.value] = findShaclName(s);
-    const targetClass = store.any(s,targetNode,null,source().shaclNode);
+    const targetClass = store.any(s,targetNode);
     knownShape[targetClass] = findShaclName(s);
   }
   return knownShape;
@@ -111,8 +116,12 @@ export function findKnownSubTypes(){
 }
 export function findRecord(subjectURL){
   const subject = $rdf.sym(subjectURL);
+/*
   let predicates = store.match(subject,null,null,source().dataNode);
   let objects = store.match(null,null,subject,source().dataNode) ;
+*/
+  let predicates = store.match(subject);
+  let objects = store.match(null,null,subject) ;
   let record = getRecordPredicates({},subject,predicates,'subject');
   record = getRecordPredicates(record,subject,objects,'object');
   return record;
@@ -134,17 +143,20 @@ function isLink(val){
 function getRecordPredicates(record,subject,triples,posOfThing) {
   let isPred = {};
   let name = findName(subject);
-  let subtype = store.each(subject,source().subtypeNode,null,source().dataNode);
+  let subtype = store.each(subject,source().subtypeNode);
   for(let s of subtype){
-    if(s.value.match(source().skosURL)) s = findPrefLabel(s);
+ //   if(s.value.match(source().skosURL)) s = findPrefLabel(s);
+     let x = findPrefLabel(s);
+     if(x) s = x;
+
   }
   for(let p of triples){
     if(isPred[p.predicate.value]) continue;
     isPred[p.predicate.value]=true;
     let fieldName = node2label(p.predicate.value);
     let newValue = posOfThing==='subject' 
-      ? store.match(subject,p.predicate,null,source().dataNode)
-      : store.match(null,p.predicate,subject,source().dataNode);
+      ? store.match(subject,p.predicate)
+      : store.match(null,p.predicate,subject);
     let valArray= [];
     for(let nv of newValue){
       let n = posOfThing==='subject' ?{...nv.object} :{...nv.subject};  
@@ -166,7 +178,7 @@ function getRecordPredicates(record,subject,triples,posOfThing) {
     if(posOfThing==='object') fieldName += "Of";
     record[fieldName]=fieldValue;
   }
-  let type = store.any(subject,source().isa,null,source().dataNode);
+  let type = store.any(subject,source().isa);
   record.type = node2label(type);
   return record;
 }
@@ -196,12 +208,14 @@ export function findRecordsByType(type){
 }
 export function findRecordsBySubtype(subtype){
   let subs = [];
-  let records = store.match(null,source().subtypeNode,$rdf.sym(subtype),source().dataNode).map(match => match.subject);
+//  let records = store.match(null,source().subtypeNode,$rdf.sym(subtype),source().dataNode).map(match => match.subject);
+  let records = store.match(null,source().subtypeNode,$rdf.sym(subtype)).map(match => match.subject);
   return records.isort();
 }
 export function findRecordsByTechKeyword(keyword){
   let records = [];
-  let raw = store.match(null,source().techKeywordsNode,null,source().dataNode);
+//  let raw = store.match(null,source().techKeywordsNode,null,source().dataNode);
+  let raw = store.match(null,source().techKeywordsNode);
   for(let r of raw){
     if(r.object.value.trim().match(keyword)){
       let label = findName(r.subject);
@@ -212,8 +226,8 @@ export function findRecordsByTechKeyword(keyword){
 }
 export function findRecordsByKeyword(keyword){
   let records = [];
-  let tech = store.match(null,source().techKeywordsNode,null,source().dataNode);
-  let soc = store.match(null,source().socKeywordsNode,null,source().dataNode);
+  let tech = store.match(null,source().techKeywordsNode);
+  let soc = store.match(null,source().socKeywordsNode);
   for(let r of tech.concat(soc)){
     if(!keyword || r.object.value.trim().match(keyword)){
       let label = findName(r.subject);
@@ -230,8 +244,8 @@ export function findRecordsByKeyword(keyword){
 export function findKeywords(){
   let allKeys = [];
   let isKey = {};
-  let tech = store.match(null,source().techKeywordsNode,null,source().dataNode);
-  let soc = store.match(null,source().socKeywordsNode,null,source().dataNode);
+  let tech = store.match(null,source().techKeywordsNode);
+  let soc = store.match(null,source().socKeywordsNode);
   for(let r of tech.concat(soc)){
     let keys = r.object.value;
     keys = keys.match(/,/) ?keys.split(/,/) :[keys];
@@ -276,13 +290,22 @@ export function parseRdfCollection(collectionNode) {
   return concepts;
 }
 
+function isLocalhost() {
+    return window.location.hostname === 'localhost' || 
+           window.location.hostname === '127.0.0.1' || 
+           window.location.hostname === '::1'; // For IPv6 localhost
+}
+
 /* loadCatalog -- loads data, shacl, and skos into the store
 */   
 export async function loadCatalog() {
+  let data = isLocalhost() ? source().dataLoadURL : source().dataURL ;
+  let shacl = isLocalhost() ? source().shaclLoadURL : source().shaclURL ;
+  let skos = isLocalhost() ? source().skosLoadURL : source().skosURL ;
   try{
-    await fetcher.load(source().shaclURL);
-    await fetcher.load(source().skosURL);
-    await fetcher.load(source().dataURL);
+    await fetcher.load(shacl);
+    await fetcher.load(skos);
+    await fetcher.load(data);
   }
   catch(e){console.log(e);}
 }
@@ -292,7 +315,7 @@ export async function loadCatalog() {
 export function findUniqueSubjects(){
   const subjects = [];
   const isSubject = {}
-  const notUnique = store.match(null,null,null,source().dataNode);
+  const notUnique = store.match(null,null);
   for(let s of notUnique){
     if(isSubject[s.subject.value]) continue;
     isSubject[s.subject.value] = true;
@@ -306,12 +329,14 @@ export function findUniqueSubjects(){
 export function findFullText(term){
   const subjects = [];
   const isSubject = {}
-  const notUnique = store.match(null,null,null,source().dataNode);
+//  const notUnique = store.match(null,null,null,source().dataNode);
+  const notUnique = store.match();
   for(let s of notUnique){
     let recordStr="";
     if(isSubject[s.subject.value]) continue;
     isSubject[s.subject.value] = true;
-    let all = store.match(s.subject,null,null,source().dataNode);
+//    let all = store.match(s.subject,null,null,source().dataNode);
+    let all = store.match(s.subject);
     for(let a of all){  
       recordStr += [a.subject.value,a.predicate.value,a.object.value].join(" ");
     }
@@ -369,14 +394,15 @@ main.style.display="block";
   search -- performs search & returns results as ul HTML string
 */
 export async function search(term){
-  await fetcher.load(source().dataURL);
+//  await fetcher.load(source().dataURL);
   const dataNode  = source().dataNode;
   let vocURL = source().vocURL;
   const labelNode  = $rdf.sym(vocURL+'#name');
   let subjects = [... new Set( store.match(null,null,null,dataNode).map(match => match.subject) )];
   let string2search = `<ul class="search-results">`;
   for(let subject of subjects){
-    const label = (store.any(subject,labelNode,null,dataNode)||{}).value;
+//    const label = (store.any(subject,labelNode,null,dataNode)||{}).value;
+    const label = (store.any(subject,labelNode)||{}).value;
     if(label && label.match(new RegExp(term,'i'))) { 
 //      string2search += ( `<li><a href="${subject.value}">${label}</a></li>\n` );  
       string2search += ( `<li><a href="${subject.value}">${label}</a></li>\n` );  

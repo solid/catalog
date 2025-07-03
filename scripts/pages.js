@@ -8,7 +8,7 @@ export async function prepNewRecordForm(){
   let selector = document.getElementById('recordTypeChooser');
   let createRecordButton = document.getElementById('createRecordButton');
   let cancelButton = document.getElementById('cancelButton');
-  await fetcher.load(source().shaclURL);
+//  await fetcher.load(source().shaclURL);
   // let types = findNodeShapes();
   let types = findTopTypes();
   selector.innerHTML = "";
@@ -25,11 +25,11 @@ export async function prepNewRecordForm(){
 }
 function findTopTypes(){
    let topType = {};
-//   let shape = $rdf.sym(source().shaclNode.uri+'#SolidResourceShape');
-   let shape = $rdf.sym('urn:x-base:default#SolidResourceShape');
+   let shape = $rdf.sym(source().shaclNode.uri+'#SolidResourceShape');
+//   let shape = $rdf.sym('urn:x-base:default#SolidResourceShape');
    const propertyPredicate = $rdf.sym('http://www.w3.org/ns/shacl#property');
    const collectionPredicate = $rdf.sym('http://www.w3.org/ns/shacl#in');
-   let property = store.any(shape,propertyPredicate,null);
+   let property = store.any(shape,propertyPredicate);
    let collection = store.any(property,collectionPredicate);
    for(let type of collection.elements){
      let label = labelFromUrl(type.value);
@@ -69,7 +69,7 @@ export async function prepRecordSearchForm(){
       anchor.addEventListener('click',(e)=>{ 
         e.preventDefault();
         const node = $rdf.sym(e.target.getAttribute('href'));
-        const type = store.any(node,source().isa,null,dataNode)
+        const type = store.any(node,source().isa)
         showPage('record',{id:node.value,type:type.value+"Shape"});
         return false;
       });
