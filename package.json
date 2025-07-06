@@ -5,10 +5,12 @@
   "description": "-- a listing of things useful to the Solid Community",
   "main": "catalog.html",
   "scripts": {
-    "test:syntax": "rdf-dereference ./catalog-shacl.ttl > /dev/null && echo '✓ SHACL' && rdf-dereference ./catalog-skos.ttl > /dev/null && echo '✓ SKOS' && rdf-dereference ./catalog-data.ttl > /dev/null && echo '✓ DATA'",
     "build": "rdf-transform-cli ./catalog-shacl.shce ./catalog-shacl.ttl -p",
+    "format": "node format.js",
+    "test:syntax": "rdf-dereference ./catalog-shacl.ttl > /dev/null && echo '✓ SHACL' && rdf-dereference ./catalog-skos.ttl > /dev/null && echo '✓ SKOS' && rdf-dereference ./catalog-data.ttl > /dev/null && echo '✓ DATA'",
     "test:shacl": "rdf-ext-cli --shacl-url ./catalog-shacl.ttl ./catalog-data.ttl --pretty --output-prefix sh=http://www.w3.org/ns/shacl# --output-prefix skos=http://www.w3.org/2004/02/skos/core# --output-prefix ex=http://example.org/# --output-prefix xsd=http://www.w3.org/2001/XMLSchema# --shacl-details --shacl-error",
-    "test": "npm run test:syntax && npm run test:shacl"
+    "test": "npm run test:syntax && npm run test:shacl",
+    "all": "npm run build && npm run format && npm run test"
   },
   "keywords": [],
   "author": "Jeff Zucker",
@@ -19,6 +21,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
+    "@jeswr/pretty-turtle": "^1.8.1",
     "@semantic-release/commit-analyzer": "^13.0.1",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^11.0.3",
@@ -26,6 +29,7 @@
     "husky": "^9.0.11",
     "rdf-dereference": "^4.0.0",
     "rdf-ext-cli": "^0.1.6",
+    "rdf-parse": "^4.0.0",
     "rdf-transform-cli": "^1.1.0",
     "semantic-release": "^24.2.5",
     "shacl-engine": "^1.0.2"
