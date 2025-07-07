@@ -1,0 +1,782 @@
+"@context": https://solidproject.solidcommunity.net/catalog/context
+"@graph":
+  - id: https://solidproject.org/TR/notifications-protocol
+    type: Specification
+    subType: con:Specification
+    name:
+      "@none": Solid Notifications Protocol
+    landingPage: https://solidproject.org/TR/notifications-protocol
+    repository: https://github.com/solid/notifications
+    author: https://elf-pavlik.hackers4peace.net
+    definesConformanceFor:
+      - https://solidproject.org/TR/notifications-protocol#ResourceServer
+      - https://solidproject.org/TR/notifications-protocol#DiscoveryClient
+      - https://solidproject.org/TR/notifications-protocol#SubscriptionClient
+      - https://solidproject.org/TR/notifications-protocol#SubscriptionServer
+      - https://solidproject.org/TR/notifications-protocol#NotificationSender
+      - https://solidproject.org/TR/notifications-protocol#NotificationReceiver
+  - id: https://solidproject.org/TR/protocol
+    type: Specification
+    subType: con:Specification
+    name:
+      "@none": Solid Protocol
+    landingPage: https://solidproject.org/TR/protocol
+    repository: https://github.com/solid/specification
+    definesConformanceFor:
+      - https://solidproject.org/TR/protocol#Client
+      - https://solidproject.org/TR/protocol#Server
+  - id: https://solidproject.org/TR/wac
+    type: Specification
+    subType: con:Specification
+    name:
+      "@none": Web Access Control
+    landingPage: https://solidproject.org/TR/wac
+    repository: https://github.com/solid/web-access-control-spec/
+  - id: cdata:Access_Control_Policy
+    type: Specification
+    subType: con:Specification
+    name:
+      "@none": Access Control Policy
+    landingPage: https://solidproject.org/TR/acp
+    repository: https://github.com/solid/authorization-panel
+    definesConformanceFor:
+      - cdata:ACP_Resource_Server
+      - cdata:ACP_Server
+  - id: cdata:EventSourceChannel2023
+    type: Specification
+    subType: con:Specification
+    name:
+      "@none": EventSourceChannel2023
+    landingPage: https://solid.github.io/notifications/eventsource-channel-2023
+    repository: https://github.com/solid/notifications
+  - id: cdata:HTTPSig_Authentication_for_Solid
+    type: Specification
+    subType: con:Specification
+    name:
+      "@none": HTTPSig Authentication for Solid
+    landingPage: https://solid.github.io/httpsig/
+    repository: https://github.com/solid/httpsig
+  - id: cdata:LDNChannel2023
+    type: Specification
+    subType: con:Specification
+    name:
+      "@none": LDNChannel2023
+    landingPage: https://solid.github.io/notifications/ldn-channel-2023
+    repository: https://github.com/solid/notifications
+  - ex:modified:
+      "@value": 2025-06-05T21:36:50.756Z
+      type: xsd:dateTime
+    id: cdata:Record_0001
+    type: Specification
+    subType: con:Specification
+    name:
+      en: Writing Linked Data Event Streams in LDP Basic Containers
+    description:
+      en: Writing to a time-based fragmented Linked Data Event Stream that is stored
+        on a Linked Data Platform.
+    landingPage: https://woutslabbinck.github.io/LDESinLDP/
+    repository: https://github.com/woutslabbinck/LDESinLDP/
+  - ex:modified:
+      "@value": 2025-06-05T21:39:22.437Z
+      type: xsd:dateTime
+    id: cdata:Record_0002
+    type: Specification
+    subType: con:Specification
+    name:
+      en: DToU Language Spec
+    description:
+      en: >-
+        This document provides the specification and examples of the perennial
+        DToU language, a language for describing the Terms of Use of Data, both
+        for data providers (e.g. users) and data consumers (e.g. applications).
+
+
+        It accompanies the paper "Perennial Semantic Data Terms of Use for
+        Decentralized Web" by Rui Zhao and Jun Zhao, at ACM Web Conference 2024
+        (previously known as International World Wide Web Conference; WWW2024),
+        doi 10.1145/3589334.3645631.
+    landingPage: https://me.ryey.icu/solid-dtou/dtou-spec.html
+    repository: https://github.com/OxfordHCC/solid-dtou/
+  - id: cdata:Shape_Trees
+    type: Specification
+    subType: con:Specification
+    name:
+      "@none": Shape Trees
+    landingPage: https://shapetrees.org/TR/specification/
+    repository: https://github.com/shapetrees/specification
+  - id: cdata:Solid-OIDC
+    type: Specification
+    subType: con:Specification
+    name:
+      "@none": Solid-OIDC
+    landingPage: https://solidproject.org/TR/oidc
+    repository: https://github.com/solid/solid-oidc
+    author:
+      - https://elf-pavlik.hackers4peace.net
+      - https://people.apache.org/~acoburn/#i
+    editor:
+      - https://elf-pavlik.hackers4peace.net
+      - https://people.apache.org/~acoburn/#i
+    definesConformanceFor:
+      - https://solidproject.org/TR/oidc#Client
+      - https://solidproject.org/TR/oidc#Provider
+  - id: cdata:Solid-PREP
+    type: Specification
+    subType: con:Specification
+    name:
+      "@none": Solid-PREP
+    landingPage: https://solid.github.io/solid-prep/protocol/
+    repository: https://github.com/solid/solid-prep
+  - id: cdata:Solid_Application_Interoperability
+    type: Specification
+    subType: con:Specification
+    name:
+      "@none": Solid Application Interoperability
+    landingPage: https://solid.github.io/data-interoperability-panel/specification/
+    repository: https://github.com/solid/data-interoperability-panel
+    author: https://elf-pavlik.hackers4peace.net
+    editor: https://elf-pavlik.hackers4peace.net
+    definesConformanceFor:
+      - cdata:SAI_Application
+      - cdata:SAI_Authorization_Agent
+  - id: cdata:Solid_Chat_Spec
+    type: Specification
+    subType: con:Specification
+    name:
+      "@none": Solid Chat
+    landingPage: https://solid.github.io/chat/
+    repository: https://github.com/solid/chat
+  - id: cdata:Solid_DID_Method
+    type: Specification
+    subType: con:Specification
+    name:
+      "@none": Solid DID Method
+    landingPage: https://solid.github.io/did-method-solid/
+    repository: https://github.com/solid/did-method-solid
+  - id: cdata:Solid_WebID_Profile
+    type: Specification
+    subType: con:Specification
+    name:
+      "@none": Solid WebID Profile
+    landingPage: https://solid.github.io/webid-profile/
+    repository: https://github.com/solid/webid-profile
+  - id: cdata:StreamingHTTPChannel2023
+    type: Specification
+    subType: con:Specification
+    name:
+      "@none": StreamingHTTPChannel2023
+    landingPage: https://solid.github.io/notifications/streaming-http-channel-2023
+    repository: https://github.com/solid/notifications
+    author: https://elf-pavlik.hackers4peace.net
+    editor: https://elf-pavlik.hackers4peace.net
+    definesConformanceFor:
+      - cdata:StreamingHTTPChannel2023NotificationSender
+      - cdata:StreamingHTTPChannel2023NotificationReceiver
+  - id: cdata:WebPushChannel2023
+    type: Specification
+    subType: con:Specification
+    name:
+      "@none": WebPushChannel2023
+    landingPage: https://solid.github.io/notifications/webpush-channel-2023
+    repository: https://github.com/solid/notifications
+    author: https://elf-pavlik.hackers4peace.net
+    editor: https://elf-pavlik.hackers4peace.net
+    definesConformanceFor:
+      - cdata:WebPushChannel2023NotificationSender
+      - cdata:WebPushChannel2023SubscriptionServer
+  - id: cdata:WebSocketChannel2023
+    type: Specification
+    subType: con:Specification
+    name:
+      "@none": WebSocketChannel2023
+    landingPage: https://solid.github.io/notifications/websocket-channel-2023
+    repository: https://github.com/solid/notifications
+    definesConformanceFor:
+      - cdata:WebSocketChannel2023SubscriptionServer
+      - cdata:WebSocketChannel2023NotificationSender
+  - id: cdata:WebhookChannel2023
+    type: Specification
+    subType: con:Specification
+    name:
+      "@none": WebhookChannel2023
+    landingPage: https://solid.github.io/notifications/webhook-channel-2023
+    repository: https://github.com/solid/notifications
+    author: https://elf-pavlik.hackers4peace.net
+    editor: https://elf-pavlik.hackers4peace.net
+    definesConformanceFor:
+      - cdata:WebhookChannel2023SubscriptionClient
+      - cdata:WebhookChannel2023NotificationSender
+      - cdata:WebhookChannel2023NotificationReceiver
+  - about:
+      - https://solidproject.org/TR/wac
+      - cdata:Solid_Application_Interoperability
+    ex:technicalKeyword:
+      "@language": en
+      "@value": Authorization, Access Control, Data Sharing, Access Granting, Zero
+        Trust, Data Sovereignty
+    id: https://publikationen.bibliothek.kit.edu/1000172187
+    type: CreativeWork
+    subType: con:ResearchPaper
+    name:
+      en: AuthApp – Portable, Reusable Solid App for GDPR-Compliant Access Granting
+    description:
+      en: >-
+        The Solid (Social Linked Data) technology family was de-
+
+        veloped to provide the foundation for Data Sovereignty in the context
+
+        of web applications. The advantage of this innovative approach is the
+
+        opportunity to dynamically bind an identity to a Solid application and a
+
+        user-specific Solid data store (Solid Pod). These three basic components
+
+        can be combined dynamically, allowing users to share their data with an
+
+        application while retaining full control of the data in self-managed
+        Solid
+
+        Pods. This paper presents a prototype of a web-based user interface to
+
+        grant access to data in a Solid Pod. To enable a dynamic binding into
+
+        Solid-driven environments, we made the implementation available as a
+
+        Solid application – AuthApp – with a specific focus on allowing users
+
+        to configure the data access granting efficiently. To comply with data
+
+        protection regulations, in particular Europe’s GDPR, we extended the
+
+        standard to include the validation of the purpose of data sharing.
+        Unlike
+
+        previous work, we also make full use of robust technologies to avoid the
+
+        need to copy or store data outside the personal context, meaning all
+        data
+
+        remains under the user’s control and so does the AuthApp.
+    landingPage: https://publikationen.bibliothek.kit.edu/1000172187/156135196
+    author:
+      - cdata:Andreas_Both
+      - cdata:Thorsten_Kastner
+      - cdata:Dustin_Yeboah
+      - cdata:Christoph_Braun
+      - cdata:Daniel_Schraudner
+      - cdata:Sebastian_Schmid
+      - cdata:Tobias_Käfer
+      - cdata:Andreas_Harth
+  - about:
+      - https://solidproject.org/TR/wac
+      - cdata:Access_Control_Policy
+    ex:technicalKeyword:
+      "@language": en
+      "@value": Authorization, UMA
+    id: https://solidlab.be/wp-content/uploads/2024/11/User-Managed-Access-Whitepaper.pdf
+    type: CreativeWork
+    subType: con:ResearchPaper
+    name:
+      en: From Resource Control to Digital Trust with User-Managed Access
+    description:
+      en: The User-Managed Access (UMA) extension to OAuth 2.0 is a promising
+        candidate for increasing Digital Trust in personal data ecosystems like
+        Solid. With minor modifications, it can achieve many requirements
+        regarding usage control and transaction contextualization, even though
+        additional specification is needed to address delegation of control and
+        retraction of usage policies.
+    landingPage: https://solidlab.be/wp-content/uploads/2024/11/User-Managed-Access-Whitepaper.pdf
+    author:
+      - cdata:Wouter_Termont
+      - cdata:Ruben_Dedecker
+      - cdata:Wout_Slabbinck
+      - cdata:Beatriz_Estevez
+      - cdata:Ben_De_Meester
+      - cdata:Ruben_Verborgh
+  - status: con:Development
+    id: cdata:0data_hello
+    type: CreativeWork
+    subType: con:AboutSolidApps
+    name:
+      "@none": 0data hello
+    landingPage: https://github.com/0dataapp/hello
+    author: cdata:Rosano
+  - about: cdata:ActivityPods
+    id: cdata:ActivityPodsDocs
+    type: CreativeWork
+    subType: con:AboutSolidApps
+    name:
+      "@none": Create your first social app
+    description:
+      "@none": We created a boilerplate to help you quickly setup a social app in a
+        local environment, and connect it with a local Pod provider. In just a
+        few minutes, you should be able to play with your first
+        ActivityPods-compatible app!
+    landingPage: https://docs.activitypods.org/tutorials/create-your-first-social-app/
+  - ex:technicalKeyword:
+      - specifications
+      - authorization
+      - use case
+      - requirement
+    id: cdata:Authorization_Use_Cases_Survey
+    type: CreativeWork
+    subType: con:OtherTechResource
+    name:
+      "@none": Authorization Use Cases Survey
+    landingPage:
+      - https://github.com/solid/authorization-panel
+      - https://github.com/solid/authorization-panel/blob/master/proposals/authorization-ucr/uc-survey.md
+  - ex:technicalKeyword:
+      - specifications
+      - authorization
+      - use case
+      - requirement
+    id: cdata:Authorization_Use_Cases_and_Requirements
+    type: CreativeWork
+    subType: con:OtherTechResource
+    name:
+      "@none": Authorization Use Cases and Requirements
+    landingPage:
+      - https://github.com/solid/authorization-panel
+      - https://solid.github.io/authorization-panel/authorization-ucr/
+  - about: cdata:EmberSolid
+    id: cdata:EmberSolidVideo
+    type: CreativeWork
+    subType: con:AboutSolidApps
+    name:
+      "@none": Ember Solid - a video tutorial
+    landingPage: https://nextcloud.hellofuture.be/s/nYYNwGceFSNotJY
+    author: cdata:AadVersteden
+  - id: cdata:GettingStarted
+    type: CreativeWork
+    subType: con:AboutSolidApps
+    name:
+      "@none": Getting Started withSolid
+    repository: https://github.com/solid-contrib/getting-started/
+  - ex:provider:
+      id: cdata:Inrupt
+    id: cdata:JavaScriptTutorial
+    type: CreativeWork
+    subType: con:AboutSolidApps
+    name:
+      "@none": Javascript tutorial
+    landingPage: https://docs.inrupt.com/developer-tools/javascript/client-libraries/tutorial/getting-started/
+  - ex:provider:
+      id: cdata:Inrupt
+    id: cdata:JavaTutorial
+    type: CreativeWork
+    subType: con:AboutSolidApps
+    name:
+      "@none": Java tutorial
+    landingPage: https://docs.inrupt.com/developer-tools/java/client-libraries/getting-started/
+  - ex:maintainer:
+      id: cdata:Oteam
+    ex:modified:
+      "@value": 2025-06-09T15:26:08.167Z
+      type: xsd:dateTime
+    id: cdata:LDOtutorial
+    type: CreativeWork
+    subType: con:AboutSolidApps
+    name:
+      en: Using LDO to build a Solid Application for React
+    landingPage: https://ldo.js.org/latest/guides/solid_react/
+  - ex:modified:
+      "@value": 2025-06-05T22:08:20.952Z
+      type: xsd:dateTime
+    ex:technicalKeyword:
+      "@language": en
+      "@value": LDP, LDES, Event Sourcing, TREE, hypermedia
+    id: cdata:LDP_Streams
+    type: CreativeWork
+    subType: con:ResearchPaper
+    name:
+      en: Linked Data Event Streams in Solid LDP containers
+    description:
+      en: >-
+        The Solid Project – at the time of writing – uses containers with
+        resources in them as defined in the
+
+        LDP specification as a way to give developers the flexibility to write
+        to a storage in the way they see
+
+        fit. With cross-app interoperability and read performance in mind,
+        choosing an application profile and
+
+        container-resource structure becomes guesswork for the app writing the
+        data, as all possible apps reading
+
+        from the storage are not yet defined. Event sourcing is a technique used
+        in data architecture to decouple
+
+        writing from reading. Multiple views will always stay in-sync with an
+        event source, or allow one to
+
+        view a historic state or study the changes that happened over time. In
+        this paper, we study whether we
+
+        can use the current version of the Solid protocol to store an event
+        source using the Linked Data Event
+
+        Streams (LDES) specification. We successfully implemented a client
+        library, which we tested on the use
+
+        case of storing your live location with history, for both reading and
+        writing in two modes: version aware
+
+        and version agnostic. However, the current Solid protocol based on LDP
+        also shows some limitations
+
+        towards event sourcing: (i) re-balancing the hypermedia structure
+        publishing the LDES is not possible
+
+        due to slash semantics, (ii) as the event source is fully managed by
+        clients, a faulty client may corrupt
+
+        the event source, and (iii) the client is also in charge of enforcing
+        the retention policy, having to delete
+
+        older resources one by one, while they have no information about the
+        internal limits of the Solid storage.
+
+        We conclude that the Solid spec as-is can be used to store an event
+        source, and that client libraries
+
+        can create an abstraction of the history without any server-specific
+        functionality. However, we also
+
+        had to work our way around some limitations, putting more strain on the
+        client, and want to open the
+
+        discussion on whether the Solid server protocol needs to be extended for
+        more native support of the
+
+        event sourcing pattern.
+    landingPage: https://ceur-ws.org/Vol-3339/paper4.pdf
+    author:
+      - cdata:Wout_Slabbinck
+      - cdata:Ruben_Dedecker
+      - cdata:Sindhu_Vasireddy
+      - cdata:Ruben_Verborgh
+      - cdata:Pieter_Colpaert
+  - ex:provider:
+      id: cdata:PDSINTEROP
+    id: cdata:PdsInteropConventions
+    type: CreativeWork
+    subType: con:OtherTechResource
+    name:
+      "@none": PDS Interop Conventions
+    description:
+      "@none": Conventions around how apps and services store data on your personal
+        data store.
+    repository: https://github.com/pdsinterop/conventions?tab=readme-ov-file
+  - id: cdata:RDF-JS
+    type: CreativeWork
+    subType: con:AboutSolidApps
+    name:
+      "@none": RDF+JS = &hearts;
+    landingPage: https://rdfjs.dev/
+    author: cdata:Arne_Hassel
+  - ex:modified:
+      "@value": 2025-06-09T15:29:02.588Z
+      type: xsd:dateTime
+    ex:provider:
+      id: cdata:OxfordHumanCenteredComputingGroup
+    ex:technicalKeyword:
+      "@language": en
+      "@value": architecture, Solid, MPC, privacy, user autonomy
+    id: cdata:Record_0003
+    type: CreativeWork
+    subType: con:ResearchPaper
+    name:
+      en: "Libertas: Privacy-Preserving Collective Computation for Decentralised
+        Personal Data Stores"
+    description:
+      en: >-
+        Data and data processing have become an indispensable aspect for our
+        society. Insights drawn from collective data make invaluable
+        contribution to scientific and societal research and business. But there
+        are increasing worries about privacy issues and data misuse. This has
+        prompted the emergence of decentralised personal data stores (PDS) like
+        Solid that provide individuals more control over their personal data.
+        However, existing PDS frameworks face challenges in ensuring data
+        privacy when performing collective computations with data from multiple
+        users. While Secure Multi-Party Computation (MPC) offers input secrecy
+        protection during the computation without relying on any single party,
+        issues emerge when directly applying MPC in the context of PDS,
+        particularly due to key factors like autonomy and decentralisation. In
+        this work, we discuss the essence of this issue, identify a potential
+        solution, and introduce a modular architecture, Libertas, to integrate
+        MPC with PDS like Solid, without requiring protocol-level changes. We
+        introduce a paradigm shift from an `omniscient' view to
+        individual-based, user-centric view of trust and security, and discuss
+        the threat model of Libertas. Two realistic use cases for collaborative
+        data processing are used for evaluation, both for technical feasibility
+        and empirical benchmark, highlighting its effectiveness in empowering
+        gig workers and generating differentially private synthetic data. The
+        results of our experiments underscore Libertas' linear scalability and
+        provide valuable insights into compute optimisations, thereby advancing
+        the state-of-the-art in privacy-preserving data processing practices. By
+        offering practical solutions for maintaining both individual autonomy
+        and privacy in collaborative data processing environments, Libertas
+        contributes significantly to the ongoing discourse on privacy protection
+        in data-driven decision-making contexts. 
+
+        Prepring available at https://arxiv.org/abs/2309.16365
+    landingPage: https://oxfordhcc.github.io/libertas/
+  - ex:modified:
+      "@value": 2025-06-09T15:29:26.208Z
+      type: xsd:dateTime
+    ex:provider:
+      id: cdata:OxfordHumanCenteredComputingGroup
+    ex:technicalKeyword:
+      "@language": en
+      "@value": Solid, authentication, data usage control
+    id: cdata:Record_0004
+    type: CreativeWork
+    subType: con:ResearchPaper
+    name:
+      en: Perennial Semantic Data Terms of Use for Decentralized Web
+    description:
+      en: >-
+        In today's digital landscape, the Web has become increasingly
+        centralized, raising concerns about user privacy violations.
+        Decentralized Web architectures, such as Solid, offer a promising
+        solution by empowering users with better control over their data in
+        their personal `Pods'. However, a significant challenge remains: users
+        must navigate numerous applications to decide which application can be
+        trusted with access to their data Pods. This often involves reading
+        lengthy and complex Terms of Use agreements, a process that users often
+        find daunting or simply ignore. This compromises user autonomy and
+        impedes detection of data misuse. We propose a novel formal description
+        of Data Terms of Use (DToU), along with a DToU reasoner. Users and
+        applications specify their own parts of the DToU policy with local
+        knowledge, covering permissions, requirements, prohibitions and
+        obligations. Automated reasoning verifies compliance, and also derives
+        policies for output data. This constitutes a ``perennial'' DToU
+        language, where the policy authoring only occurs once, and we can
+        conduct ongoing automated checks across users, applications and activity
+        cycles. Our solution is built on Turtle, Notation 3 and RDF Surfaces,
+        for the language and the reasoning engine. It ensures seamless
+        integration with other semantic tools for enhanced interoperability. We
+        have successfully integrated this language into the 
+
+        Solid framework, and conducted performance benchmark. We believe this
+        work demonstrates a practicality of a perennial DToU language and the
+        potential of a paradigm shift to how users interact with data and
+        applications in a decentralized Web, offering both improved privacy and
+        usability. 
+
+
+        Preprint available at https://arxiv.org/abs/2403.07587
+    landingPage: https://me.ryey.icu/solid-dtou/
+    author: cdata:RuiZhao
+  - ex:modified:
+      "@value": 2025-06-09T15:29:59.383Z
+      type: xsd:dateTime
+    ex:technicalKeyword:
+      "@language": en
+      "@value": Solid, LLM, AI, RAG, privacy
+    id: cdata:Record_0005
+    type: CreativeWork
+    subType: con:ResearchPaper
+    name:
+      en: "SocialGenPod: Privacy-Friendly Generative AI Social Web Applications with
+        Decentralised Personal Data Stores"
+    description:
+      en: >-
+        We present SocialGenPod, a decentralised and privacy-friendly way of
+        deploying generative AI Web applications. Unlike centralised Web and
+        data architectures that keep user data tied to application and service
+        providers, we show how one can use Solid -- a decentralised Web
+        specification -- to decouple user data from generative AI applications.
+        We demonstrate SocialGenPod using a prototype that allows users to
+        converse with different Large Language Models, optionally leveraging
+        Retrieval Augmented Generation to generate answers grounded in private
+        documents stored in any Solid Pod that the user is allowed to access,
+        directly or indirectly. SocialGenPod makes use of Solid access control
+        mechanisms to give users full control of determining who has access to
+        data stored in their Pods. SocialGenPod keeps all user data (chat
+        history, app configuration, personal documents, etc) securely in the
+        user's personal Pod; separate from specific model or application
+        providers. Besides better privacy controls, this approach also enables
+        portability across different services and applications. Finally, we
+        discuss challenges, posed by the large compute requirements of
+        state-of-the-art models, that future research in this area should
+        address. Our prototype is open-source and available at: this https URL. 
+
+
+        Code available at https://github.com/Vidminas/socialgenpod
+    landingPage: https://arxiv.org/abs/2403.10408
+  - ex:modified:
+      "@value": 2025-06-09T15:30:38.474Z
+      type: xsd:dateTime
+    ex:technicalKeyword:
+      "@language": en
+      "@value": Calendar, Meeting Scheduling
+    id: cdata:Record_0006
+    type: CreativeWork
+    subType: con:ResearchPaper
+    name:
+      en: Long-living Service for Cooperative Knowledge Use in Decentralized Data
+        Stores
+    description:
+      en: >-
+        Personal Data Stores (PDS) like SoLiD is an emerging data and knowledge
+        management solution in recent years. They promise to give back ownership
+        and control of data to the user, and provide protocols for developers to
+        build applications using the data. However, existing Solid-based
+        applications often focus on using a single-user's data. In this article,
+        we use a simple but realistic calendar-and-meeting-scheduling scenario
+        to demonstrate the feasibility and design considerations for enabling
+        cooperative data-use across multiple users' SoLiD Pods. This scenario
+        identifies the bottleneck for certain cooperative use cases, namely
+        those involving offline-changing and synchronization of knowledge
+        information. We demonstrate a viable approach to mediate this issue,
+        introducing a long-living thin service, the orchestrator. We describe
+        our implementation and discuss its applicability to other ecosystems. We
+        conclude by discussing the implication of such services, in particular
+        their risks and challenges for building decentralised applications. 
+
+
+        Preprint at https://arxiv.org/abs/2306.14890
+    landingPage: https://github.com/OxfordHCC/knoodle
+  - id: cdata:SolidShapesWiki
+    type: CreativeWork
+    subType: con:OtherTechResource
+    name:
+      "@none": Solid Shapes Wiki
+    repository: https://github.com/solid/shapes/wiki
+  - id: cdata:SolidTagExplainer
+    type: CreativeWork
+    subType: con:AboutSolid
+    name:
+      "@none": TAG Explainer for Solid
+    landingPage: https://timbl.solidcommunity.net/2023/03%20EWADA/TAGExplainerforSolid.html
+    author: cdata:Tim_Berners-Lee
+  - about: cdata:Solid_Application_Interoperability
+    ex:technicalKeyword:
+      - specifications
+      - interoperability
+      - applications
+    id: cdata:Solid_Application_Interoperability__Application_Primer
+    type: CreativeWork
+    subType: con:Primer
+    name:
+      "@none": "Solid Application Interoperability: Application Primer"
+    landingPage:
+      - https://github.com/solid/data-interoperability-panel
+      - https://solid.github.io/data-interoperability-panel/primer/application.html
+    author: https://elf-pavlik.hackers4peace.net
+    editor: https://elf-pavlik.hackers4peace.net
+  - about: cdata:Solid_Application_Interoperability
+    ex:technicalKeyword:
+      - specifications
+      - interoperability
+      - authorization agent
+    id: cdata:Solid_Application_Interoperability__Authorization_Agent_Primer
+    type: CreativeWork
+    subType: con:Primer
+    name:
+      "@none": "Solid Application Interoperability: Authorization Agent Primer"
+    landingPage:
+      - https://github.com/solid/data-interoperability-panel
+      - https://solid.github.io/data-interoperability-panel/primer/authorization-agent.html
+    author: https://elf-pavlik.hackers4peace.net
+    editor: https://elf-pavlik.hackers4peace.net
+  - ex:modified:
+      "@value": 2025-06-12T10:36:31.853Z
+      type: xsd:dateTime
+    ex:technicalKeyword:
+      "@language": en
+      "@value": e2ee,cp-abe
+    id: cdata:Solid_E2EE
+    type: CreativeWork
+    subType: con:ResearchPaper
+    name:
+      en: Solid E2EE
+    description:
+      en: Extension to the Solid protocol that enables E2EE through Attribute-Based
+        Encryption. The extension enables systems that are unwilling to entrust
+        POD providers with their users' data, such as electronic health record
+        (EHR) systems, to be built on top of Solid and benefit from the features
+        it offers, such as application interoperability. The repository includes
+        a proof-of-concept application.
+    landingPage: https://github.com/henricattoire/solid-e2ee
+    author:
+      - cdata:Henri_Cattoire
+      - cdata:KU_Leuven
+  - about: cdata:Solid-OIDC
+    ex:technicalKeyword:
+      - authentication
+      - specifications
+      - solid-OIDC
+    id: cdata:Solid_OIDC_Primer
+    type: CreativeWork
+    subType: con:Primer
+    name:
+      "@none": Solid OIDC Primer
+    landingPage:
+      - https://github.com/solid/solid-oidc
+      - https://solidproject.org/TR/oidc-primer
+    author:
+      - https://elf-pavlik.hackers4peace.net
+      - https://people.apache.org/~acoburn/#i
+    editor:
+      - https://elf-pavlik.hackers4peace.net
+      - https://people.apache.org/~acoburn/#i
+  - ex:technicalKeyword:
+      - solid
+      - quality assurance
+      - specifications
+    id: cdata:Solid_QA
+    type: CreativeWork
+    subType: con:OtherTechResource
+    name:
+      "@none": Solid QA
+    landingPage:
+      - https://github.com/solid/specification
+      - https://solidproject.org/ED/qa
+  - ex:technicalKeyword:
+      - solid
+      - specifications
+      - security
+    id: cdata:Solid_Security_Considerations
+    type: CreativeWork
+    subType: con:OtherTechResource
+    name:
+      "@none": Solid Security Considerations
+    landingPage:
+      - https://solid.github.io/security-considerations/
+      - https://github.com/solid/security-considerations
+  - id: cdata:TodoApp
+    type: CreativeWork
+    subType: con:AboutSolidApps
+    name:
+      "@none": How to Build a Solid To-Do App with React
+    landingPage: https://virginiabalseiro.com/blogposts/tutorial-create-a-solid-to-do-app
+    author: cdata:VirginiaBalseiro
+  - ex:provider:
+      id: cdata:SolidTeam
+    id: cdata:VocabsTutorial
+    type: CreativeWork
+    subType: con:OtherTechResource
+    name:
+      "@none": Creating Vocabularies
+    repository: https://github.com/solid/solidproject.org/wiki/Vocabularies-Overview
+  - id: cdata:VueSolidPod
+    type: CreativeWork
+    subType: con:AboutSolidApps
+    name:
+      "@none": Vue Solid Pod
+    description:
+      "@none": This web application reproduces the SOLID POD Tutorial App using the
+        vite & vue3 starter template. The intention is to demo how Solid pods
+        can easily be integrated into Vue3 apps.
+    landingPage: https://github.com/Certiman/vue-solid-pod
+    author: cdata:Certiman
+  - id: cdata:WebComponentsDiscussion
+    type: CreativeWork
+    subType: con:OtherTechResource
+    name:
+      "@none": Solid Web Components Discussion
+
