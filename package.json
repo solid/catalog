@@ -5,6 +5,7 @@
   "description": "-- a listing of things useful to the Solid Community",
   "main": "catalog.html",
   "scripts": {
+    "prepare": "husky",
     "build": "rdf-transform-cli ./catalog-shacl.shce ./catalog-shacl.ttl -p",
     "format": "node format.js",
     "test:syntax": "rdf-dereference ./catalog-shacl.ttl > /dev/null && echo '✓ SHACL' && rdf-dereference ./catalog-skos.ttl > /dev/null && echo '✓ SKOS' && rdf-dereference ./catalog-data.ttl > /dev/null && echo '✓ DATA'",
