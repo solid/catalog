@@ -307,9 +307,14 @@ function isLocalhost() {
 /* loadCatalog -- loads data, shacl, and skos into the store
 */   
 export async function loadCatalog() {
+/*
   let data = isLocalhost() ? source().dataLoadURL : source().dataURL ;
   let shacl = isLocalhost() ? source().shaclLoadURL : source().shaclURL ;
   let skos = isLocalhost() ? source().skosLoadURL : source().skosURL ;
+*/
+  let data = source().dataLoadURL;
+  let shacl = source().shaclLoadURL;
+  let skos = source().skosLoadURL;
   try{
     await fetcher.load(shacl);
     await fetcher.load(skos);
