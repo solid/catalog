@@ -78,9 +78,7 @@ function showSearchResults(term){
   }
 }
 export function showRecordsByKeyword(keyword){
-alert(keyword)
   let records = findRecordsByKeyword(keyword);
-console.log(9,records)
   const recordDisplay = document.getElementById('right-bottom');
   const linkDisplay = document.getElementById('right-top');
   recordDisplay.innerHTML="";
@@ -130,7 +128,7 @@ export function showSubtypes(subtype,label){
   let div=document.createElement('div');
   let str = `<p class="link-head"><b>${label}</b></p>`;
   for(let r of records){
-    str += `<a class="link" href="${r.value}">${findName(r)}</a>`;
+    str += `<a class="link" href="${r.link}">${r.label}</a>`;
   }
   div.innerHTML = str;
   linkDisplay.appendChild(div);

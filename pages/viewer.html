@@ -62,8 +62,10 @@
   </script>
   <script type="module">
     import {viewer,showSubtypes} from '../scripts/viewer.js';
-    sh = showSubtypes;
-    await viewer();
+    document.addEventListener('DOMContentLoaded', async () => {
+      sh = showSubtypes;
+      await viewer();
+    });
   </script>
 
 </body>

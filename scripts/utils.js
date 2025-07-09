@@ -201,17 +201,24 @@ Array.prototype.isort = function() {
     });
 };
 
+/*
 export function findRecordsByType(type){
   let subs = [];
   let records = store.match(null,source().isa,$rdf.sym(type),source().dataNode).map(match => match.subject);
   return records.isort();
 }
+*/
 export function findRecordsBySubtype(subtype){
-  let subs = [];
-//  let records = store.match(null,source().subtypeNode,$rdf.sym(subtype),source().dataNode).map(match => match.subject);
-  let records = store.match(null,source().subtypeNode,$rdf.sym(subtype)).map(match => match.subject);
+  let records = [];
+  let matched = store.match(null,source().subtypeNode,$rdf.sym(subtype));
+  for(let m of matched){
+     let link = m.subject.value;
+     let label = findName(m.subject);
+     records.push({label,link});
+  }
   return records.isort();
 }
+/*
 export function findRecordsByTechKeyword(keyword){
   let records = [];
 //  let raw = store.match(null,source().techKeywordsNode,null,source().dataNode);
@@ -219,11 +226,12 @@ export function findRecordsByTechKeyword(keyword){
   for(let r of raw){
     if(r.object.value.trim().match(keyword)){
       let label = findName(r.subject);
-      records.push({link:r.subject,label});
+      records.push({label,link:r.subject.value});
     }
   }
   return records.isort();
 }
+*/
 export function findRecordsByKeyword(keyword){
   let records = [];
   let tech = store.match(null,source().techKeywordsNode);
