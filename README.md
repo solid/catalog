@@ -41,5 +41,5 @@ In addition to contributing to the issues and eventually to the catalog data its
 
 ## Acknowledgements
 
-The catalog was started by and is currently maintained by Jeff Zucker.  Jesse Wright and Elf Pavlik worked on the viewers mentioned above. The two of them and Daniel Bakas have contributed to the ongoing work defining shapes.  Timea Turdeen, Mathias Evering, and Denis Shirlov gathered some of the data which forms the basis for the catalog.  Thanks to all for their contributions.
+The catalog was started by and is currently maintained by Jeff Zucker.  Jesse Wright and Elf Pavlik worked on the viewers mentioned above. The two of them and Daniel Bakas have contributed to the ongoing work defining shapes.  Timea Turdean, Matthias Evering, and Denis Shilov gathered some of the data which forms the basis for the catalog.  Thanks to all for their contributions.
 
