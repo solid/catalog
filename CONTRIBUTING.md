@@ -99,9 +99,13 @@ When contributing RDF data:
 
 ## Questions and Discussion
 
-For questions and discussions about the catalog:
+For questions about the public Solid Resources Catalog on solidproject.org
 
 - Join the [Solid Practitioners matrix chat](https://matrix.to/#/#solid-practitioners:matrix.org)
+
+For questions and discussions about the catalog in general:
+
+- Join the [Solid Catalog matrix chat](https://matrix.to/#/#solid_catalog:matrix.org)
 - Participate in the [GitHub Discussions](https://github.com/solid/catalog/discussions)
 
 ## License
