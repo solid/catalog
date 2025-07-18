@@ -2,7 +2,6 @@ import {store,fetcher,source,findUniqueSubjects,parseRdfCollection,loadCatalog} 
 
 export async function makeTOC(displayElement){
   let tree = await skos2toc(displayElement) ;
-//  displayElement.appendChild(tree);
   await addTocListeners();
 }
 
@@ -10,7 +9,6 @@ function findTypes(){
   let types={};
   const shaclPrefix = 'http://www.w3.org/ns/shacl#';
   const shaclNode = source().shaclNode;
-//  const resourceShapeNode = UI.rdf.sym('urn:x-base:default#SolidResourceShape');
   const resourceShapeNode = UI.rdf.sym(source().shaclURL+'#SolidResourceShape');
   const propertyNode = UI.rdf.sym(shaclPrefix+'property');
   const collectionProperty = store.any( resourceShapeNode, propertyNode );
@@ -56,15 +54,16 @@ async function skos2toc(displayElement){
     let subtypes = store.each(topConcept,narrower);
     if(subtypes.length==0) subtypes = store.each(null,broader,topConcept);
     if(subtypes.length==0){
-      let div = document.createElement('div');
+      let div1 = document.createElement('div');
       let anc = document.createElement('a');
+      anc.setAttribute('data-href',value);
       anc.setAttribute('href',`javascript:void(0)`);
       anc.setAttribute('onclick',`sh('${value}','${label}')`);
       anc.setAttribute('about',value);
       anc.classList.add('type');
       anc.innerHTML = label;
-      div.appendChild(anc);
-      toc.appendChild(div);
+      toc.appendChild(div1);
+      div1.appendChild(anc);
     }
     else {
       let div = document.createElement('div');
@@ -106,7 +105,7 @@ async function addTocListeners(){
     if(instances.length>0){
       anchor.parentNode.innerHTML += ` <span class="number">${instances.length}</span>`;
     }
-    else anchor.remove();
+    else if(anchor.getAttribute('class')=="subtype") anchor.remove();
   }
   document.getElementById('toc').innerHTML += `<p>${count} total records</p>`;
 }

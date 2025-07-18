@@ -161,7 +161,7 @@ body.showHelp #help {
 /* TOC
 */
 #toc * {
-  font-size:1.03em !important;
+  font-size:1em !important;
 //  font-weight:600;
 }
 #toc *[class="type"] {
