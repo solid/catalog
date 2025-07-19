@@ -82,8 +82,9 @@
   ex:technicalKeyword "Authorization, UMA"@en .
 
 <https://solidproject.org/TR/notifications-protocol> a ex:Specification ;
-  ex:author <https://elf-pavlik.hackers4peace.net> ;
+  ex:author <https://elf-pavlik.hackers4peace.net>, <https://people.apache.org/~acoburn/#i>, cdata:RahulGupta, cdata:Sarven_Capadisli ;
   ex:definesConformanceFor <https://solidproject.org/TR/notifications-protocol#DiscoveryClient>, <https://solidproject.org/TR/notifications-protocol#NotificationReceiver>, <https://solidproject.org/TR/notifications-protocol#NotificationSender>, <https://solidproject.org/TR/notifications-protocol#ResourceServer>, <https://solidproject.org/TR/notifications-protocol#SubscriptionClient>, <https://solidproject.org/TR/notifications-protocol#SubscriptionServer> ;
+  ex:editor cdata:Sarven_Capadisli ;
   ex:landingPage <https://solidproject.org/TR/notifications-protocol> ;
   ex:name "Solid Notifications Protocol" ;
   ex:repository <https://github.com/solid/notifications> ;
@@ -137,6 +138,8 @@
   ex:subType con:ClassOfProduct .
 
 <https://solidproject.org/TR/wac> a ex:Specification ;
+  ex:author cdata:Henry_Story, cdata:Sarven_Capadisli, cdata:Tim_Berners-Lee ;
+  ex:editor cdata:Sarven_Capadisli ;
   ex:landingPage <https://solidproject.org/TR/wac> ;
   ex:name "Web Access Control" ;
   ex:repository <https://github.com/solid/web-access-control-spec/> ;
@@ -163,6 +166,7 @@ cdata:AadVersteden a ex:Person ;
 
 cdata:Access_Control_Policy a ex:Specification ;
   ex:definesConformanceFor cdata:ACP_Resource_Server, cdata:ACP_Server ;
+  ex:editor cdata:Matthieu_Bosquet ;
   ex:landingPage <https://solidproject.org/TR/acp> ;
   ex:name "Access Control Policy" ;
   ex:repository <https://github.com/solid/authorization-panel> ;
@@ -434,6 +438,7 @@ cdata:CRDT a ex:Ontology ;
 cdata:CSS a ex:Software ;
   ex:conformsTo <https://solidproject.org/TR/notifications-protocol#NotificationSender>, <https://solidproject.org/TR/notifications-protocol#ResourceServer>, <https://solidproject.org/TR/notifications-protocol#SubscriptionServer>, <https://solidproject.org/TR/oidc#Provider>, <https://solidproject.org/TR/protocol#Server>, <https://solidproject.org/TR/wac#Server>, cdata:ACP_Resource_Server, cdata:ACP_Server, cdata:StreamingHTTPChannel2023NotificationSender, cdata:WebhookChannel2023NotificationSender, cdata:WebhookChannel2023SubscriptionServer, cdata:WebSocketChannel2023NotificationSender, cdata:WebSocketChannel2023SubscriptionServer ;
   ex:landingPage <https://communitysolidserver.github.io/CommunitySolidServer/latest/> ;
+  ex:maintainer cdata:Joachim_van_Herwegen ;
   ex:name "Community Solid Server (CSS)" ;
   ex:provider cdata:Imec, cdata:Inrupt ;
   ex:status con:Production ;
@@ -643,6 +648,7 @@ cdata:Ess_table a ex:Software ;
   ex:technicalKeyword "visualization" .
 
 cdata:EventSourceChannel2023 a ex:Specification ;
+  ex:editor <https://people.apache.org/~acoburn/#i> ;
   ex:landingPage <https://solid.github.io/notifications/eventsource-channel-2023> ;
   ex:name "EventSourceChannel2023" ;
   ex:repository <https://github.com/solid/notifications> ;
@@ -775,6 +781,8 @@ cdata:httph-vocab a ex:Ontology ;
   ex:subType con:Ontology .
 
 cdata:HTTPSig_Authentication_for_Solid a ex:Specification ;
+  ex:author cdata:Henry_Story ;
+  ex:editor cdata:Henry_Story, cdata:Sarven_Capadisli ;
   ex:landingPage <https://solid.github.io/httpsig/> ;
   ex:name "HTTPSig Authentication for Solid" ;
   ex:repository <https://github.com/solid/httpsig> ;
@@ -1312,12 +1320,15 @@ cdata:Laurens_Debackere a ex:Person ;
   ex:webid <https://www.thundr.be/profile/laurens.ttl#me> .
 
 cdata:LDNChannel2023 a ex:Specification ;
+  ex:editor cdata:Sarven_Capadisli ;
   ex:landingPage <https://solid.github.io/notifications/ldn-channel-2023> ;
   ex:name "LDNChannel2023" ;
   ex:repository <https://github.com/solid/notifications> ;
   ex:subType con:Specification .
 
 cdata:LDO a ex:Software ;
+  ex:developer cdata:Jesse_Wright ;
+  ex:maintainer cdata:Jackson_Morgan ;
   ex:name "LDO - Linked Data Objects" ;
   ex:programmingLanguage "typescript" ;
   ex:status con:Production ;
@@ -2454,6 +2465,7 @@ cdata:rdfs-vocab a ex:Ontology ;
 
 cdata:Record_0001 a ex:Specification ;
   ex:description "Writing to a time-based fragmented Linked Data Event Stream that is stored on a Linked Data Platform."@en ;
+  ex:editor cdata:Pieter_Colpaert, cdata:Wout_Slabbinck ;
   ex:landingPage <https://woutslabbinck.github.io/LDESinLDP/> ;
   ex:modified "2025-06-05T21:36:50.756Z"^^xsd:dateTime ;
   ex:name "Writing Linked Data Event Streams in LDP Basic Containers"@en ;
@@ -2462,6 +2474,7 @@ cdata:Record_0001 a ex:Specification ;
 
 cdata:Record_0002 a ex:Specification ;
   ex:description "This document provides the specification and examples of the perennial DToU language, a language for describing the Terms of Use of Data, both for data providers (e.g. users) and data consumers (e.g. applications).\n\nIt accompanies the paper \"Perennial Semantic Data Terms of Use for Decentralized Web\" by Rui Zhao and Jun Zhao, at ACM Web Conference 2024 (previously known as International World Wide Web Conference; WWW2024), doi 10.1145/3589334.3645631."@en ;
+  ex:editor cdata:JunZhao, cdata:RuiZhao ;
   ex:landingPage <https://me.ryey.icu/solid-dtou/dtou-spec.html> ;
   ex:modified "2025-06-05T21:39:22.437Z"^^xsd:dateTime ;
   ex:name "DToU Language Spec"@en ;
@@ -2701,6 +2714,7 @@ cdata:Sebastien_Rosset a ex:Person ;
   ex:webid <https://armoise.co/sro> .
 
 cdata:Shape_Trees a ex:Specification ;
+  ex:editor cdata:Justin_Bingham ;
   ex:landingPage <https://shapetrees.org/TR/specification/> ;
   ex:name "Shape Trees" ;
   ex:repository <https://github.com/shapetrees/specification> ;
@@ -2846,7 +2860,7 @@ cdata:Sofia_Martin a ex:Person ;
 cdata:Solid_Application_Interoperability a ex:Specification ;
   ex:author <https://elf-pavlik.hackers4peace.net> ;
   ex:definesConformanceFor cdata:SAI_Application, cdata:SAI_Authorization_Agent ;
-  ex:editor <https://elf-pavlik.hackers4peace.net> ;
+  ex:editor <https://elf-pavlik.hackers4peace.net>, cdata:Justin_Bingham ;
   ex:landingPage <https://solid.github.io/data-interoperability-panel/specification/> ;
   ex:name "Solid Application Interoperability" ;
   ex:repository <https://github.com/solid/data-interoperability-panel> ;
@@ -2919,6 +2933,8 @@ cdata:Solid_Chat a ex:Software ;
   ex:technicalKeyword "chat" .
 
 cdata:Solid_Chat_Spec a ex:Specification ;
+  ex:author cdata:Tim_Berners-Lee ;
+  ex:editor cdata:Tim_Berners-Lee ;
   ex:landingPage <https://solid.github.io/chat/> ;
   ex:name "Solid Chat" ;
   ex:repository <https://github.com/solid/chat> ;
@@ -2972,6 +2988,7 @@ cdata:Solid_client_php a ex:Software ;
   ex:technicalKeyword "solid client" .
 
 cdata:Solid_DID_Method a ex:Specification ;
+  ex:editor cdata:Dmitri_Zagidulin, cdata:Sarven_Capadisli ;
   ex:landingPage <https://solid.github.io/did-method-solid/> ;
   ex:name "Solid DID Method" ;
   ex:repository <https://github.com/solid/did-method-solid> ;
@@ -3091,7 +3108,7 @@ cdata:Solid_Notifications_Client a ex:Software ;
 
 cdata:Solid_OIDC_Primer a ex:CreativeWork ;
   ex:about cdata:Solid-OIDC ;
-  ex:author <https://elf-pavlik.hackers4peace.net>, <https://people.apache.org/~acoburn/#i> ;
+  ex:author <https://elf-pavlik.hackers4peace.net>, <https://people.apache.org/~acoburn/#i>, cdata:Jackson_Morgan, cdata:Matthieu_Bosquet ;
   ex:editor <https://elf-pavlik.hackers4peace.net>, <https://people.apache.org/~acoburn/#i> ;
   ex:landingPage <https://github.com/solid/solid-oidc>, <https://solidproject.org/TR/oidc-primer> ;
   ex:name "Solid OIDC Primer" ;
@@ -3190,6 +3207,8 @@ cdata:Solid_Weather a ex:Software ;
   ex:technicalKeyword "weather" .
 
 cdata:Solid_WebID_Profile a ex:Specification ;
+  ex:author cdata:Jeff_Zucker, cdata:Sarven_Capadisli, cdata:Tim_Berners-Lee, cdata:Timea_Turdean, cdata:VirginiaBalseiro ;
+  ex:editor cdata:Jeff_Zucker, cdata:Sarven_Capadisli, cdata:VirginiaBalseiro ;
   ex:landingPage <https://solid.github.io/webid-profile/> ;
   ex:name "Solid WebID Profile" ;
   ex:repository <https://github.com/solid/webid-profile> ;
@@ -3215,7 +3234,7 @@ cdata:Solid-Lite a ex:Software ;
   ex:subType con:PodServer .
 
 cdata:Solid-OIDC a ex:Specification ;
-  ex:author <https://elf-pavlik.hackers4peace.net>, <https://people.apache.org/~acoburn/#i> ;
+  ex:author <https://elf-pavlik.hackers4peace.net>, <https://people.apache.org/~acoburn/#i>, cdata:Dmitri_Zagidulin ;
   ex:definesConformanceFor <https://solidproject.org/TR/oidc#Client>, <https://solidproject.org/TR/oidc#Provider> ;
   ex:editor <https://elf-pavlik.hackers4peace.net>, <https://people.apache.org/~acoburn/#i> ;
   ex:landingPage <https://solidproject.org/TR/oidc> ;
@@ -3224,6 +3243,8 @@ cdata:Solid-OIDC a ex:Specification ;
   ex:subType con:Specification .
 
 cdata:Solid-PREP a ex:Specification ;
+  ex:author <https://elf-pavlik.hackers4peace.net>, cdata:RahulGupta ;
+  ex:editor cdata:RahulGupta ;
   ex:landingPage <https://solid.github.io/solid-prep/protocol/> ;
   ex:name "Solid-PREP" ;
   ex:repository <https://github.com/solid/solid-prep> ;
@@ -3984,9 +4005,9 @@ cdata:WebComponentsDiscussion a ex:CreativeWork ;
   ex:subType con:OtherTechResource .
 
 cdata:WebhookChannel2023 a ex:Specification ;
-  ex:author <https://elf-pavlik.hackers4peace.net> ;
+  ex:author <https://elf-pavlik.hackers4peace.net>, cdata:Jackson_Morgan ;
   ex:definesConformanceFor cdata:WebhookChannel2023NotificationReceiver, cdata:WebhookChannel2023NotificationSender, cdata:WebhookChannel2023SubscriptionClient ;
-  ex:editor <https://elf-pavlik.hackers4peace.net> ;
+  ex:editor <https://elf-pavlik.hackers4peace.net>, cdata:Jackson_Morgan ;
   ex:landingPage <https://solid.github.io/notifications/webhook-channel-2023> ;
   ex:name "WebhookChannel2023" ;
   ex:repository <https://github.com/solid/notifications> ;
@@ -4017,9 +4038,9 @@ cdata:webid_Profile_editor a ex:Software ;
   ex:technicalKeyword "pod management", "profile" .
 
 cdata:WebPushChannel2023 a ex:Specification ;
-  ex:author <https://elf-pavlik.hackers4peace.net> ;
+  ex:author <https://elf-pavlik.hackers4peace.net>, cdata:Christoph_Braun ;
   ex:definesConformanceFor cdata:WebPushChannel2023NotificationSender, cdata:WebPushChannel2023SubscriptionServer ;
-  ex:editor <https://elf-pavlik.hackers4peace.net> ;
+  ex:editor <https://elf-pavlik.hackers4peace.net>, cdata:Christoph_Braun ;
   ex:landingPage <https://solid.github.io/notifications/webpush-channel-2023> ;
   ex:name "WebPushChannel2023" ;
   ex:repository <https://github.com/solid/notifications> ;
@@ -4034,7 +4055,9 @@ cdata:WebPushChannel2023SubscriptionServer a ex:ClassOfProduct ;
   ex:subType con:ClassOfProduct .
 
 cdata:WebSocketChannel2023 a ex:Specification ;
+  ex:author <https://people.apache.org/~acoburn/#i> ;
   ex:definesConformanceFor cdata:WebSocketChannel2023NotificationSender, cdata:WebSocketChannel2023SubscriptionServer ;
+  ex:editor <https://people.apache.org/~acoburn/#i> ;
   ex:landingPage <https://solid.github.io/notifications/websocket-channel-2023> ;
   ex:name "WebSocketChannel2023" ;
   ex:repository <https://github.com/solid/notifications> ;
