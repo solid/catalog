@@ -1209,10 +1209,6 @@ cdata:Kayode_Ezike a ex:Person ;
   ex:name "Kayode Ezike" ;
   ex:subType con:Person .
 
-cdata:Kelly_O_Brien a ex:Person ;
-  ex:name "Kelly O'Brien" ;
-  ex:subType con:Person .
-
 cdata:Kelly_OBrien a ex:Person ;
   ex:name "Kelly O'Brien" ;
   ex:subType con:Person ;
@@ -3948,16 +3944,12 @@ cdata:Vincent_Tunru a ex:Person ;
   ex:subType con:Person ;
   ex:webid <https://vincentt.inrupt.net/profile/card#me> .
 
-cdata:Virginia_Balseiro a ex:Person ;
+cdata:VirginiaBalseiro a ex:Person ;
   ex:forumHandle "@Virginia" ;
   ex:landingPage <https://github.com/VirginiaBalseiro> ;
   ex:name "Virginia Balseiro" ;
   ex:subType con:Person ;
   ex:webid <https://virginiabalseiro.com/#me> .
-
-cdata:VirginiaBalseiro a ex:Person ;
-  ex:name "Virginia Balseiro" ;
-  ex:subType con:Person .
 
 cdata:Visited_Countries a ex:Software ;
   ex:description "Tracks the countries and places you visited, and see all the visited countries and places shared by the other users of this application." ;
