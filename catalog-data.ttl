@@ -1432,6 +1432,7 @@ cdata:Maico_Oliveira_Buss a ex:Person ;
 
 cdata:Manas a ex:Software ;
   ex:landingPage <https://manomayam.github.io/manas/introduction.html> ;
+  ex:maintainer <urn:uuid:43a1b70e-f40c-49d6-baad-f070ed9ff9e2> ;
   ex:name "Manas (मनस्)" ;
   ex:provider cdata:Manomayam ;
   ex:status con:Production ;
@@ -2223,7 +2224,9 @@ cdata:Philippe_Duchesne a ex:Person ;
   ex:subType con:Person .
 
 cdata:PHP_Solid_Server a ex:Software ;
+  ex:developer cdata:Michiel_de_Jong ;
   ex:landingPage <https://pdsinterop.org/php-solid-server/> ;
+  ex:maintainer cdata:Yvo_Brevoort, <urn:uuid:d1e0e382-0e30-483e-b4b4-13d12299994e> ;
   ex:name "PHP Solid Server" ;
   ex:provider cdata:PDSINTEROP ;
   ex:status con:Production ;
@@ -2856,7 +2859,7 @@ cdata:Sofia_Martin a ex:Person ;
 cdata:Solid_Application_Interoperability a ex:Specification ;
   ex:author <https://elf-pavlik.hackers4peace.net> ;
   ex:definesConformanceFor cdata:SAI_Application, cdata:SAI_Authorization_Agent ;
-  ex:editor <https://elf-pavlik.hackers4peace.net>, cdata:Justin_Bingham ;
+  ex:editor <https://elf-pavlik.hackers4peace.net>, cdata:Justin_Bingham, <urn:uuid:3b05c17c-f44a-470e-8031-408abee6e2ca> ;
   ex:landingPage <https://solid.github.io/data-interoperability-panel/specification/> ;
   ex:name "Solid Application Interoperability" ;
   ex:repository <https://github.com/solid/data-interoperability-panel> ;
@@ -4143,3 +4146,12 @@ cdata:Zhilin_Zhang a ex:Person ;
 cdata:Zongyan_Li a ex:Person ;
   ex:name "Zongyan Li" ;
   ex:subType con:Person .
+
+<urn:uuid:3b05c17c-f44a-470e-8031-408abee6e2ca> a ex:Person ;
+  ex:name "Eric Prud'hommeaux" .
+
+<urn:uuid:43a1b70e-f40c-49d6-baad-f070ed9ff9e2> a ex:Person ;
+  ex:name "damooo" .
+
+<urn:uuid:d1e0e382-0e30-483e-b4b4-13d12299994e> a ex:Person ;
+  ex:name "Ben Peachey" .
