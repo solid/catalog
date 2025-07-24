@@ -611,7 +611,7 @@ cdata:EDWADAproject a ex:Organization ;
 cdata:EmberSolid a ex:Software ;
   ex:landingPage <https://chuixuewan.github.io/solid-clinic/> ;
   ex:name "Ember Solid" ;
-  ex:provider cdata:RedPencil ;
+  ex:provider cdata:Redpencil ;
   ex:status con:Production ;
   ex:subType con:SoftwareLibrary .
 
@@ -2096,7 +2096,7 @@ cdata:PASS a ex:Service ;
   ex:repository <https://github.com/codeforpdx/PASS> ;
   ex:serviceAudience "homeless people,housing services case workers"@en ;
   ex:socialKeyword "access to public resources,housing"@en ;
-  ex:softwareStackIncludes cdata:CSS, cdata:PASSPlatform ;
+  ex:softwareStackIncludes cdata:CSS ;
   ex:status con:Development ;
   ex:subType con:SpecializedPodService .
 
@@ -3554,7 +3554,7 @@ cdata:StartinBloxCo a ex:Organization ;
 
 cdata:StartinBloxDotCom a ex:Service ;
   ex:name "Startin'Blox" ;
-  ex:provider cdata:StartinBlox ;
+  ex:provider cdata:StartinBloxCo ;
   ex:serviceEndpoint <https://startinblox.com/> ;
   ex:softwareStackIncludes cdata:CSS ;
   ex:status con:Production ;
