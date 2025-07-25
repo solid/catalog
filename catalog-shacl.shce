@@ -112,7 +112,8 @@ shape :ServiceShape -> ex:Service ;
 	% .
 }
 shape :SoftwareShape -> ex:Software ;
-	sh:name "Software"@en {
+	sh:name "Software"@en;
+	sh:class ex:Software {
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
 	% .
@@ -205,7 +206,8 @@ shape :SpecificationShape -> ex:Specification ;
 	% .
 }
 shape :ClassOfProductShape -> ex:ClassOfProduct ;
-	sh:name "Class of Product"@en {
+	sh:name "Class of Product"@en;
+	sh:class ex:ClassOfProduct {
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
 	% .
@@ -236,7 +238,8 @@ shape :OntologyShape -> ex:Ontology ;
 	% .
 }
 shape :OrganizationShape -> ex:Organization ;
-	sh:name "Organization"@en {
+	sh:name "Organization"@en;
+	sh:class ex:Organization {
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
 	% .
@@ -274,7 +277,8 @@ shape :OrganizationShape -> ex:Organization ;
 	% .
 }
 shape :PersonShape -> ex:Person ;
-	sh:name "Person"@en {
+	sh:name "Person"@en;
+	sh:class ex:Person {
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
 	% .
