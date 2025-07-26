@@ -28,7 +28,7 @@ shape :CreativeWorkShape -> ex:CreativeWork ;
 		sh:name "landing page"@en ;
 		sh:description "URL(s) where the work is available, or described"
 	% .
-	ex:provider @:OrganizationShape %
+	ex:provider IRI @:OrganizationShape %
 		sh:name "provider"@en ;
 		sh:description "Organization(s) responsible for creating the work"
 	% .
@@ -50,7 +50,7 @@ shape :EventShape -> ex:Event ;
 	ex:description xsd:string|rdf:langString [0..1] maxLength=2000 %
 		sh:name "description"@en
 	% .
-	ex:provider @:OrganizationShape %
+	ex:provider IRI @:OrganizationShape %
 		sh:name "provider"@en ;
 		sh:description "organization(s) responsible for hosting the event"
 	% .
@@ -98,7 +98,7 @@ shape :ServiceShape -> ex:Service ;
 		sh:name "software stack includes"@en ;
 		sh:description "software used by this service"
 	% .
-	ex:provider @:OrganizationShape %
+	ex:provider IRI @:OrganizationShape %
 		sh:name "provider"@en ;
 		sh:description "Organization(s) responsible for providing the service"
 	% .
@@ -149,7 +149,7 @@ shape :SoftwareShape -> ex:Software ;
 		sh:name "showcase" ;
 		sh:description "URL that can be opened in a web browser to use this app"
 	% .
-	ex:provider @:OrganizationShape %
+	ex:provider IRI @:OrganizationShape %
 		sh:name "provider"@en ;
 		sh:description "organization(s) responsible for creating/maintaining the softare"
 	% .
