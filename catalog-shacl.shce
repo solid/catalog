@@ -28,14 +28,14 @@ shape :CreativeWorkShape -> ex:CreativeWork ;
 		sh:name "landing page"@en ;
 		sh:description "URL(s) where the work is available, or described"
 	% .
-	ex:provider IRI %
+	ex:provider IRI @:OrganizationShape %
 		sh:name "provider"@en ;
 		sh:description "Organization(s) responsible for creating the work"
 	% .
-	ex:author IRI ex:Person %
+	ex:author IRI @:PersonShape %
 		sh:name "author"@en
 	% .
-	ex:editor IRI ex:Person %
+	ex:editor IRI @:PersonShape %
 		sh:name "editor"@en
 	% .
 	ex:description xsd:string|rdf:langString [0..1] maxLength=2000 %
@@ -50,7 +50,7 @@ shape :EventShape -> ex:Event ;
 	ex:description xsd:string|rdf:langString [0..1] maxLength=2000 %
 		sh:name "description"@en
 	% .
-	ex:provider IRI %
+	ex:provider IRI @:OrganizationShape %
 		sh:name "provider"@en ;
 		sh:description "organization(s) responsible for hosting the event"
 	% .
@@ -94,11 +94,11 @@ shape :ServiceShape -> ex:Service ;
 		sh:name "landing page"@en ;
 		sh:description "URL where the service is described"
 	% .
-	ex:softwareStackIncludes IRI %
+	ex:softwareStackIncludes @:SoftwareShape %
 		sh:name "software stack includes"@en ;
 		sh:description "software used by this service"
 	% .
-	ex:provider IRI %
+	ex:provider IRI @:OrganizationShape %
 		sh:name "provider"@en ;
 		sh:description "Organization(s) responsible for providing the service"
 	% .
@@ -112,7 +112,8 @@ shape :ServiceShape -> ex:Service ;
 	% .
 }
 shape :SoftwareShape -> ex:Software ;
-	sh:name "Software"@en {
+	sh:name "Software"@en;
+	sh:class ex:Software {
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
 	% .
@@ -148,15 +149,15 @@ shape :SoftwareShape -> ex:Software ;
 		sh:name "showcase" ;
 		sh:description "URL that can be opened in a web browser to use this app"
 	% .
-	ex:provider IRI %
+	ex:provider IRI @:OrganizationShape %
 		sh:name "provider"@en ;
 		sh:description "organization(s) responsible for creating/maintaining the softare"
 	% .
-	ex:maintainer IRI ex:Person %
+	ex:maintainer IRI @:PersonShape %
 		sh:name "maintainer"@en ;
 		sh:description "person responsible for maintaining the software"
 	% .
-	ex:developer IRI ex:Person %
+	ex:developer IRI @:PersonShape %
 		sh:name "developer"@en ;
 		sh:description "person contributiong to the software"
 	% .
@@ -168,11 +169,11 @@ shape :SoftwareShape -> ex:Software ;
 		sh:name "technical keyword"@en ;
 		sh:description "comma-separated list for product type e.g. game, calendar, contacts manager"
 	% .
-	ex:conformsTo IRI ex:ClassOfProduct %
+	ex:conformsTo IRI @:ClassOfProductShape %
 		sh:name "conforms to"@en ;
 		sh:description "a class of product, from a specification, that this implementation conforms to"
 	% .
-	ex:hasDependencyOn IRI ex:Software %
+	ex:hasDependencyOn IRI @:SoftwareShape %
 		sh:name "has dependency on"@en ;
 		sh:description "a library/module that this software depends on"
 	% .
@@ -193,19 +194,20 @@ shape :SpecificationShape -> ex:Specification ;
 		sh:name "landing page"@en ;
 		sh:description "URL where the specification is described"
 	% .
-	ex:editor IRI ex:Person %
+	ex:editor IRI @:PersonShape %
 		sh:name "editor"@en
 	% .
-	ex:author IRI ex:Person %
+	ex:author IRI @:PersonShape %
 		sh:name "author"@en
 	% .
-	ex:definesConformanceFor IRI ex:ClassOfProduct %
+	ex:definesConformanceFor IRI @:ClassOfProductShape %
 		sh:name "defines conformance for"@en ;
 		sh:description "a class of product which this specification defines"
 	% .
 }
 shape :ClassOfProductShape -> ex:ClassOfProduct ;
-	sh:name "Class of Product"@en {
+	sh:name "Class of Product"@en;
+	sh:class ex:ClassOfProduct {
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
 	% .
@@ -236,7 +238,8 @@ shape :OntologyShape -> ex:Ontology ;
 	% .
 }
 shape :OrganizationShape -> ex:Organization ;
-	sh:name "Organization"@en {
+	sh:name "Organization"@en;
+	sh:class ex:Organization {
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
 	% .
@@ -274,7 +277,8 @@ shape :OrganizationShape -> ex:Organization ;
 	% .
 }
 shape :PersonShape -> ex:Person ;
-	sh:name "Person"@en {
+	sh:name "Person"@en;
+	sh:class ex:Person {
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
 	% .
