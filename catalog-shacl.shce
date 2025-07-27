@@ -10,7 +10,9 @@ shape :SolidResourceShape {
 	rdf:type in=[ex:CreativeWork ex:Event ex:Software ex:Service ex:Person ex:Organization ex:Specification ex:Ontology ex:ClassOfProduct] .
 }
 shape :CreativeWorkShape -> ex:CreativeWork ;
-	sh:name "Creative Work"@en {
+	sh:name "Creative Work"@en;
+	sh:nodeKind sh:IRI;
+	sh:class ex:CreativeWork {
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
 	% .
@@ -43,7 +45,9 @@ shape :CreativeWorkShape -> ex:CreativeWork ;
 	% .
 }
 shape :EventShape -> ex:Event ;
-	sh:name "Event"@en {
+	sh:name "Event"@en;
+	sh:nodeKind sh:IRI;
+	sh:class ex:Event {
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
 	% .
@@ -66,7 +70,9 @@ shape :EventShape -> ex:Event ;
 	% .
 }
 shape :ServiceShape -> ex:Service ;
-	sh:name "Service"@en {
+	sh:name "Service"@en;
+	sh:nodeKind sh:IRI;
+	sh:class ex:Service {
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
 	% .
@@ -113,6 +119,7 @@ shape :ServiceShape -> ex:Service ;
 }
 shape :SoftwareShape -> ex:Software ;
 	sh:name "Software"@en;
+	sh:nodeKind sh:IRI;
 	sh:class ex:Software {
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
@@ -179,7 +186,9 @@ shape :SoftwareShape -> ex:Software ;
 	% .
 }
 shape :SpecificationShape -> ex:Specification ;
-	sh:name "Specification"@en {
+	sh:name "Specification"@en;
+	sh:nodeKind sh:IRI;
+	sh:class ex:Specification {
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
 	% .
@@ -207,13 +216,16 @@ shape :SpecificationShape -> ex:Specification ;
 }
 shape :ClassOfProductShape -> ex:ClassOfProduct ;
 	sh:name "Class of Product"@en;
+	sh:nodeKind sh:IRI;
 	sh:class ex:ClassOfProduct {
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
 	% .
 }
 shape :OntologyShape -> ex:Ontology ;
-	sh:name "Ontology"@en {
+	sh:name "Ontology"@en;
+	sh:nodeKind sh:IRI;
+	sh:class ex:Ontology {
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
 	% .
@@ -239,6 +251,7 @@ shape :OntologyShape -> ex:Ontology ;
 }
 shape :OrganizationShape -> ex:Organization ;
 	sh:name "Organization"@en;
+	sh:nodeKind sh:IRI;
 	sh:class ex:Organization {
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
@@ -278,6 +291,7 @@ shape :OrganizationShape -> ex:Organization ;
 }
 shape :PersonShape -> ex:Person ;
 	sh:name "Person"@en;
+	sh:nodeKind sh:IRI;
 	sh:class ex:Person {
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
