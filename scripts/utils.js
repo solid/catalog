@@ -65,7 +65,7 @@ export function findName(url){
 export function findPrefLabel(subject){
   if(!subject) return "";
   let node = subject.value ?subject :$rdf.sym(subject);
-  node.value = source().skosURL + node.value.replace(/^.*\#/,'#');
+//  node.value = source().skosURL + node.value.replace(/^.*\#/,'#');
   let labelNode = $rdf.sym("http://www.w3.org/2004/02/skos/core#prefLabel");
   let label = store.any(node,labelNode,);
   return (label && label.value) ?label.value :"";
@@ -178,8 +178,10 @@ function getRecordPredicates(record,subject,triples,posOfThing) {
     if(posOfThing==='object') fieldName += "Of";
     record[fieldName]=fieldValue;
   }
-  let type = store.any(subject,source().isa);
-  record.type = node2label(type);
+  let type = store.each(subject,source().isa);
+//  record.type = node2label(type);
+  for(let t of type) t = t.value;
+  record.type = type;
   return record;
 }
 
@@ -210,7 +212,9 @@ export function findRecordsByType(type){
 */
 export function findRecordsBySubtype(subtype){
   let records = [];
-  let matched = store.match(null,source().subtypeNode,$rdf.sym(subtype));
+  const category = $rdf.sym(subtype);
+  let matched = store.match(null,source().subtypeNode,category);
+  if(matched.length==0) matched = store.match(null,source().isa, category)
   for(let m of matched){
      let link = m.subject.value;
      let label = findName(m.subject);
@@ -298,7 +302,7 @@ export function parseRdfCollection(collectionNode) {
   return concepts;
 }
 
-function isLocalhost() {
+export function isLocalhost() {
     return window.location.hostname === 'localhost' || 
            window.location.hostname === '127.0.0.1' || 
            window.location.hostname === '::1'; // For IPv6 localhost

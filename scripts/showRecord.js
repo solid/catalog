@@ -26,7 +26,8 @@ export function showRecord(display,subject,record){
 
 function makeRecordHeader(subject,record){
   let displayType = [] ;
-  let type = record.subType ;
+  let type = record.subType;
+  if(!type) type = record.type;
   for(let d of type){
     displayType.push( findPrefLabel( d ) );
   }
