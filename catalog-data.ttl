@@ -11,13 +11,11 @@
   ex:landingPage <https://elf-pavlik.hackers4peace.net> ;
   ex:logo <https://avatars.githubusercontent.com/u/876431?v=4> ;
   ex:name "elf Pavlik"@en ;
-  ex:subType con:Person ;
   ex:webid <https://elf-pavlik.hackers4peace.net> .
 
 <https://people.apache.org/~acoburn/#i> a ex:Person ;
   ex:logo <https://avatars.githubusercontent.com/u/1265883?v=4> ;
-  ex:name "Aaron Coburn" ;
-  ex:subType con:Person .
+  ex:name "Aaron Coburn" .
 
 <https://publikationen.bibliothek.kit.edu/1000172187> a ex:CreativeWork ;
   ex:about <https://solidproject.org/TR/wac>, cdata:Solid_Application_Interoperability ;
@@ -69,7 +67,6 @@
 <https://samurex.hackers4peace.net> a ex:Person ;
   ex:landingPage <https://samurex.hackers4peace.net> ;
   ex:name "Maciej Samoraj"@en ;
-  ex:subType con:Person ;
   ex:webid <https://samurex.hackers4peace.net> .
 
 <https://solidlab.be/wp-content/uploads/2024/11/User-Managed-Access-Whitepaper.pdf> a ex:CreativeWork ;
@@ -87,8 +84,7 @@
   ex:editor cdata:Sarven_Capadisli ;
   ex:landingPage <https://solidproject.org/TR/notifications-protocol> ;
   ex:name "Solid Notifications Protocol" ;
-  ex:repository <https://github.com/solid/notifications> ;
-  ex:subType con:Specification .
+  ex:repository <https://github.com/solid/notifications> .
 
 <https://solidproject.org/TR/notifications-protocol#DiscoveryClient> a ex:ClassOfProduct ;
   ex:name "Solid Notifications Discovery Client" ;
@@ -126,8 +122,7 @@
   ex:definesConformanceFor <https://solidproject.org/TR/protocol#Client>, <https://solidproject.org/TR/protocol#Server> ;
   ex:landingPage <https://solidproject.org/TR/protocol> ;
   ex:name "Solid Protocol" ;
-  ex:repository <https://github.com/solid/specification> ;
-  ex:subType con:Specification .
+  ex:repository <https://github.com/solid/specification> .
 
 <https://solidproject.org/TR/protocol#Client> a ex:ClassOfProduct ;
   ex:name "Solid Client" ;
@@ -142,8 +137,7 @@
   ex:editor cdata:Sarven_Capadisli ;
   ex:landingPage <https://solidproject.org/TR/wac> ;
   ex:name "Web Access Control" ;
-  ex:repository <https://github.com/solid/web-access-control-spec/> ;
-  ex:subType con:Specification .
+  ex:repository <https://github.com/solid/web-access-control-spec/> .
 
 <https://solidproject.org/TR/wac#Client> a ex:ClassOfProduct ;
   ex:name "WAC Client" ;
@@ -161,16 +155,14 @@ cdata:0data_hello a ex:CreativeWork ;
   ex:subType con:AboutSolidApps .
 
 cdata:AadVersteden a ex:Person ;
-  ex:name "Aad Versteden" ;
-  ex:subType con:Person .
+  ex:name "Aad Versteden" .
 
 cdata:Access_Control_Policy a ex:Specification ;
   ex:definesConformanceFor cdata:ACP_Resource_Server, cdata:ACP_Server ;
   ex:editor cdata:Matthieu_Bosquet ;
   ex:landingPage <https://solidproject.org/TR/acp> ;
   ex:name "Access Control Policy" ;
-  ex:repository <https://github.com/solid/authorization-panel> ;
-  ex:subType con:Specification .
+  ex:repository <https://github.com/solid/authorization-panel> .
 
 cdata:ACL_check a ex:Software ;
   ex:description "Simple check of Web Access Control (WAC) access." ;
@@ -185,8 +177,7 @@ cdata:acl-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/ns/auth/acl#> ;
   ex:name "Basic Access Control" ;
   ex:namespaceURI <http://www.w3.org/ns/auth/acl#> ;
-  ex:prefix "acl:" ;
-  ex:subType con:Ontology .
+  ex:prefix "acl:" .
 
 cdata:ACP_Resource_Server a ex:ClassOfProduct ;
   ex:name "ACP Resource Server" ;
@@ -226,51 +217,41 @@ cdata:AkamiTechnologies a ex:Organization ;
   ex:subType con:Company .
 
 cdata:Alain_Bourgeois a ex:Person ;
-  ex:name "Alain Bourgeois" ;
-  ex:subType con:Person .
+  ex:name "Alain Bourgeois" .
 
 cdata:Alexander_James_Phillips a ex:Person ;
-  ex:name "Alexander James Phillips" ;
-  ex:subType con:Person .
+  ex:name "Alexander James Phillips" .
 
 cdata:Altynbek_Orumbayev a ex:Person ;
-  ex:name "Altynbek Orumbayev" ;
-  ex:subType con:Person .
+  ex:name "Altynbek Orumbayev" .
 
 cdata:Andreas_Both a ex:Person ;
-  ex:name "Andreas Both" ;
-  ex:subType con:Person .
+  ex:name "Andreas Both" .
 
 cdata:Andreas_Harth a ex:Person ;
   ex:contactEmail "andreas@harth.org" ;
   ex:matrixHandle "@aharth:matrix.org"@en ;
   ex:modified "2025-04-25T07:53:45.052Z"^^xsd:dateTime ;
   ex:name "Andreas Harth"@en ;
-  ex:subType con:Person ;
   ex:webid <http://harth.org/andreas/foaf#ah> .
 
 cdata:Andrei_Sambra a ex:Person ;
-  ex:name "Andrei Sambra" ;
-  ex:subType con:Person .
+  ex:name "Andrei Sambra" .
 
 cdata:Angelo_Veltens a ex:Person ;
-  ex:name "Angelo Veltens" ;
-  ex:subType con:Person .
+  ex:name "Angelo Veltens" .
 
 cdata:Anna_Kallenborn-Bolden a ex:Person ;
-  ex:name "Anna Kallenborn-Bolden" ;
-  ex:subType con:Person .
+  ex:name "Anna Kallenborn-Bolden" .
 
 cdata:Arne_Hassel a ex:Person ;
-  ex:name "Arne Hassel" ;
-  ex:subType con:Person .
+  ex:name "Arne Hassel" .
 
 cdata:as-vocab a ex:Ontology ;
   ex:landingPage <https://www.w3.org/ns/activitystreams#> ;
   ex:name "Activity Streams"@en ;
   ex:namespaceURI <https://www.w3.org/ns/activitystreams#> ;
-  ex:prefix "as:" ;
-  ex:subType con:Ontology .
+  ex:prefix "as:" .
 
 cdata:Assemblage a ex:Software ;
   ex:landingPage <https://gitlab.com/omd_public/assemblage> ;
@@ -281,8 +262,7 @@ cdata:Assemblage a ex:Software ;
   ex:technicalKeyword "general purpose app" .
 
 cdata:Astrid_Gamoneda_Arrunada a ex:Person ;
-  ex:name "Astrid GamonedaArrunada" ;
-  ex:subType con:Person .
+  ex:name "Astrid GamonedaArrunada" .
 
 cdata:AUnationalU a ex:Organization ;
   ex:landingPage <https://sii.anu.edu.au/index.html> ;
@@ -310,12 +290,10 @@ cdata:basic-geo-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
   ex:name "Basic Geo" ;
   ex:namespaceURI <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
-  ex:prefix "wgs84_pos:" ;
-  ex:subType con:Ontology .
+  ex:prefix "wgs84_pos:" .
 
 cdata:Beatriz_Estevez a ex:Person ;
-  ex:name "Beatriz Esteves" ;
-  ex:subType con:Person .
+  ex:name "Beatriz Esteves" .
 
 cdata:Beer_counter a ex:Software ;
   ex:maintainer cdata:Ozcan_Seker ;
@@ -326,8 +304,7 @@ cdata:Beer_counter a ex:Software ;
   ex:technicalKeyword "food" .
 
 cdata:Ben_De_Meester a ex:Person ;
-  ex:name "Ben De Meester" ;
-  ex:subType con:Person .
+  ex:name "Ben De Meester" .
 
 cdata:Bingokaart a ex:Software ;
   ex:name "Bingokaart" ;
@@ -354,8 +331,7 @@ cdata:cc-vocab a ex:Ontology ;
   ex:landingPage <http://creativecommons.org/ns#> ;
   ex:name "Creative Commons" ;
   ex:namespaceURI <http://creativecommons.org/ns#> ;
-  ex:prefix "cc:" ;
-  ex:subType con:Ontology .
+  ex:prefix "cc:" .
 
 cdata:CCIG a ex:Organization ;
   ex:landingPage <http://agree.org/> ;
@@ -366,12 +342,10 @@ cdata:cert-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/ns/auth/cert#> ;
   ex:name "Cert" ;
   ex:namespaceURI <http://www.w3.org/ns/auth/cert#> ;
-  ex:prefix "cert:" ;
-  ex:subType con:Ontology .
+  ex:prefix "cert:" .
 
 cdata:Certiman a ex:Person ;
-  ex:name "Certiman" ;
-  ex:subType con:Person .
+  ex:name "Certiman" .
 
 cdata:CG-mailingList a ex:Service ;
   ex:landingPage <https://lists.w3.org/Archives/Public/public-solid/> ;
@@ -382,16 +356,13 @@ cdata:CG-mailingList a ex:Service ;
   ex:subType con:CommunicationService .
 
 cdata:Chelsea_Pinka a ex:Person ;
-  ex:name "Chelsea Pinka" ;
-  ex:subType con:Person .
+  ex:name "Chelsea Pinka" .
 
 cdata:Christian_Buggedei a ex:Person ;
-  ex:name "Christian Buggedei" ;
-  ex:subType con:Person .
+  ex:name "Christian Buggedei" .
 
 cdata:Christoph_Braun a ex:Person ;
-  ex:name "Christoph Braun" ;
-  ex:subType con:Person .
+  ex:name "Christoph Braun" .
 
 cdata:CodePDX a ex:Organization ;
   ex:name "CodePDX" ;
@@ -432,8 +403,7 @@ cdata:CRDT a ex:Ontology ;
   ex:modified "2025-06-10T18:06:28.878Z"^^xsd:dateTime ;
   ex:name "CRDT"@en ;
   ex:namespaceURI <https://vocab.noeldemartin.com/crdt/> ;
-  ex:prefix "crdt:"@en ;
-  ex:subType con:Ontology .
+  ex:prefix "crdt:"@en .
 
 cdata:CSS a ex:Software ;
   ex:conformsTo <https://solidproject.org/TR/notifications-protocol#NotificationSender>, <https://solidproject.org/TR/notifications-protocol#ResourceServer>, <https://solidproject.org/TR/notifications-protocol#SubscriptionServer>, <https://solidproject.org/TR/oidc#Provider>, <https://solidproject.org/TR/protocol#Server>, <https://solidproject.org/TR/wac#Server>, cdata:ACP_Resource_Server, cdata:ACP_Server, cdata:StreamingHTTPChannel2023NotificationSender, cdata:WebhookChannel2023NotificationSender, cdata:WebhookChannel2023SubscriptionServer, cdata:WebSocketChannel2023NotificationSender, cdata:WebSocketChannel2023SubscriptionServer ;
@@ -452,16 +422,13 @@ cdata:Cypress_Solid a ex:Software ;
   ex:subType con:ProductivityApp .
 
 cdata:Dan_Barclay a ex:Person ;
-  ex:name "Dan Barclay" ;
-  ex:subType con:Person .
+  ex:name "Dan Barclay" .
 
 cdata:Daniel_Friedman a ex:Person ;
-  ex:name "Daniel Friedman" ;
-  ex:subType con:Person .
+  ex:name "Daniel Friedman" .
 
 cdata:Daniel_Schraudner a ex:Person ;
-  ex:name "Daniel Schraudner" ;
-  ex:subType con:Person .
+  ex:name "Daniel Schraudner" .
 
 cdata:Darcy a ex:Software ;
   ex:maintainer cdata:Christian_Buggedei ;
@@ -486,8 +453,7 @@ cdata:DataKitchen a ex:Software ;
   ex:technicalKeyword "pod frontend", "self-hosted pod" .
 
 cdata:DataModulesVideoCall a ex:Event ;
-  ex:name "Data Modules Video Call" ;
-  ex:subType con:Event .
+  ex:name "Data Modules Video Call" .
 
 cdata:Datasister a ex:Software ;
   ex:name "Datasister" ;
@@ -516,22 +482,19 @@ cdata:DataVillage_platform a ex:Software ;
   ex:technicalKeyword "general purpose app" .
 
 cdata:David_Faveris a ex:Person ;
-  ex:name "David Faveris" ;
-  ex:subType con:Person .
+  ex:name "David Faveris" .
 
 cdata:dc-elements-vocab a ex:Ontology ;
   ex:landingPage <http://purl.org/dc/elements/1.1/> ;
   ex:name "Dublin Core Elements"@en ;
   ex:namespaceURI <http://purl.org/dc/elements/1.1/> ;
-  ex:prefix "elements:" ;
-  ex:subType con:Ontology .
+  ex:prefix "elements:" .
 
 cdata:dc-terms-vocab a ex:Ontology ;
   ex:landingPage <http://purl.org/dc/terms/> ;
   ex:name "Dublin Core Terms"@en ;
   ex:namespaceURI <http://purl.org/dc/terms/> ;
-  ex:prefix "terms:" ;
-  ex:subType con:Ontology .
+  ex:prefix "terms:" .
 
 cdata:DDG a ex:Organization ;
   ex:landingPage <https://duckduckgo.com/donations> ;
@@ -552,8 +515,7 @@ cdata:DigitalFlanders a ex:Service ;
   ex:subType con:SpecializedPodService .
 
 cdata:Dmitri_Zagidulin a ex:Person ;
-  ex:name "Dmitri Zagidulin" ;
-  ex:subType con:Person .
+  ex:name "Dmitri Zagidulin" .
 
 cdata:Dokieli a ex:Software ;
   ex:description "Clientside editor for decentralised article publishing, annotations and social interactions."@en ;
@@ -577,12 +539,10 @@ cdata:Drive a ex:Software ;
   ex:technicalKeyword "general purpose app" .
 
 cdata:Dustin_Yeboah a ex:Person ;
-  ex:name "Dustin Yeboah" ;
-  ex:subType con:Person .
+  ex:name "Dustin Yeboah" .
 
 cdata:Dylan_Martin a ex:Person ;
-  ex:name "Dylan Martin" ;
-  ex:subType con:Person .
+  ex:name "Dylan Martin" .
 
 cdata:EasyPenny a ex:Software ;
   ex:name "Easy Penny" ;
@@ -601,8 +561,7 @@ cdata:EasyRDF a ex:Software ;
 
 cdata:Eduardo_Rodriguez a ex:Person ;
   ex:forumHandle "@eduardoinnorway" ;
-  ex:name "Eduardo Rodriguez" ;
-  ex:subType con:Person .
+  ex:name "Eduardo Rodriguez" .
 
 cdata:EDWADAproject a ex:Organization ;
   ex:name "EDWADA Project" ;
@@ -623,8 +582,7 @@ cdata:EmberSolidVideo a ex:CreativeWork ;
   ex:subType con:AboutSolidApps .
 
 cdata:Emelia_Smith a ex:Person ;
-  ex:name "Emelia Smith" ;
-  ex:subType con:Person .
+  ex:name "Emelia Smith" .
 
 cdata:Espresso a ex:Organization ;
   ex:description "\n    Efficient Search over Personal Repositories - Secure and Sovereign\n  " ;
@@ -651,15 +609,13 @@ cdata:EventSourceChannel2023 a ex:Specification ;
   ex:editor <https://people.apache.org/~acoburn/#i> ;
   ex:landingPage <https://solid.github.io/notifications/eventsource-channel-2023> ;
   ex:name "EventSourceChannel2023" ;
-  ex:repository <https://github.com/solid/notifications> ;
-  ex:subType con:Specification .
+  ex:repository <https://github.com/solid/notifications> .
 
 cdata:foaf-vocab a ex:Ontology ;
   ex:landingPage <http://xmlns.com/foaf/0.1/> ;
   ex:name "Friends of a Friend"@en ;
   ex:namespaceURI <http://xmlns.com/foaf/0.1/> ;
-  ex:prefix "foaf:" ;
-  ex:subType con:Ontology .
+  ex:prefix "foaf:" .
 
 cdata:Focus a ex:Software ;
   ex:description "Solid Task Manager"@en ;
@@ -689,12 +645,10 @@ cdata:geo-vocab a ex:Ontology ;
   ex:landingPage <http://www.geonames.org/ontology> ;
   ex:name "GeoNames" ;
   ex:namespaceURI <http://www.geonames.org/ontology> ;
-  ex:prefix "geo:" ;
-  ex:subType con:Ontology .
+  ex:prefix "geo:" .
 
 cdata:Gertjan_de_Mulder a ex:Person ;
-  ex:name "Gertjan de Mulder" ;
-  ex:subType con:Person .
+  ex:name "Gertjan de Mulder" .
 
 cdata:GettingStarted a ex:CreativeWork ;
   ex:name "Getting Started withSolid" ;
@@ -752,12 +706,10 @@ cdata:GurrinyHealthClinic a ex:Organization ;
   ex:subType con:OtherNGO .
 
 cdata:Henri_Cattoire a ex:Person ;
-  ex:name "Henri Cattoire" ;
-  ex:subType con:Person .
+  ex:name "Henri Cattoire" .
 
 cdata:Henry_Story a ex:Person ;
-  ex:name "Henry Story" ;
-  ex:subType con:Person .
+  ex:name "Henry Story" .
 
 cdata:Holon a ex:Software ;
   ex:name "Holon" ;
@@ -770,23 +722,20 @@ cdata:http-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/2007/ont/http#> ;
   ex:name "HTTP" ;
   ex:namespaceURI <http://www.w3.org/2007/ont/http#> ;
-  ex:prefix "http:" ;
-  ex:subType con:Ontology .
+  ex:prefix "http:" .
 
 cdata:httph-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/2007/ont/httph#> ;
   ex:name "HTTPH" ;
   ex:namespaceURI <http://www.w3.org/2007/ont/httph#> ;
-  ex:prefix "httph:" ;
-  ex:subType con:Ontology .
+  ex:prefix "httph:" .
 
 cdata:HTTPSig_Authentication_for_Solid a ex:Specification ;
   ex:author cdata:Henry_Story ;
   ex:editor cdata:Henry_Story, cdata:Sarven_Capadisli ;
   ex:landingPage <https://solid.github.io/httpsig/> ;
   ex:name "HTTPSig Authentication for Solid" ;
-  ex:repository <https://github.com/solid/httpsig> ;
-  ex:subType con:Specification .
+  ex:repository <https://github.com/solid/httpsig> .
 
 cdata:HUBL a ex:Service ;
   ex:description "\n    allows you to find freelancers in a community of users\n  " ;
@@ -797,12 +746,10 @@ cdata:HUBL a ex:Service ;
   ex:subType con:SpecializedPodService .
 
 cdata:Hunar_Batra a ex:Person ;
-  ex:name "Hunar Batra" ;
-  ex:subType con:Person .
+  ex:name "Hunar Batra" .
 
 cdata:Hunter_Lester a ex:Person ;
   ex:name "Hunter Lester" ;
-  ex:subType con:Person ;
   ex:webid <https://hunterlester.inrupt.net/profile/card#me> .
 
 cdata:Hypey a ex:Software ;
@@ -815,15 +762,13 @@ cdata:Hypey a ex:Software ;
 cdata:Ian_Wilson a ex:Person ;
   ex:landingPage <https://github.com/YetAnotherJonWilson> ;
   ex:name "Ian Wilson" ;
-  ex:subType con:Person ;
   ex:webid <https://communitylinksense.inrupt.net/profile/card#me> .
 
 cdata:iana-vocab a ex:Ontology ;
   ex:landingPage <https://www.w3.org/ns/iana/media-types/> ;
   ex:name "Media Types" ;
   ex:namespaceURI <https://www.w3.org/ns/iana/media-types/> ;
-  ex:prefix "iana:" ;
-  ex:subType con:Ontology .
+  ex:prefix "iana:" .
 
 cdata:Ibex a ex:Software ;
   ex:name "Ibex" ;
@@ -835,8 +780,7 @@ cdata:ical-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/2002/12/cal/ical> ;
   ex:name "iCal" ;
   ex:namespaceURI <http://www.w3.org/2002/12/cal/ical> ;
-  ex:prefix "ical:" ;
-  ex:subType con:Ontology .
+  ex:prefix "ical:" .
 
 cdata:Idflex_query a ex:Software ;
   ex:name "Idflex query" ;
@@ -846,7 +790,6 @@ cdata:Idflex_query a ex:Software ;
 
 cdata:Ieben_Smessaert a ex:Person ;
   ex:name "Ieben Smessaert" ;
-  ex:subType con:Person ;
   ex:webid <https://solid.smessie.com/profile/card#me> .
 
 cdata:IgrantIo a ex:Service ;
@@ -881,8 +824,7 @@ cdata:Inbox_App a ex:Software ;
   ex:technicalKeyword "pod management" .
 
 cdata:Inge_La_Riviere a ex:Person ;
-  ex:name "Inge La Riviere" ;
-  ex:subType con:Person .
+  ex:name "Inge La Riviere" .
 
 cdata:Inox a ex:Software ;
   ex:name "Inox" ;
@@ -915,83 +857,67 @@ cdata:IPGS a ex:Software ;
 
 cdata:Isaac_Foster a ex:Person ;
   ex:forumHandle "@thegreatfatzby" ;
-  ex:name "Isaac Foster" ;
-  ex:subType con:Person .
+  ex:name "Isaac Foster" .
 
 cdata:issue-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/2005/01/wf/flow#> ;
   ex:name "Issue Tracking" ;
   ex:namespaceURI <http://www.w3.org/2005/01/wf/flow#> ;
-  ex:prefix "wf:" ;
-  ex:subType con:Ontology .
+  ex:prefix "wf:" .
 
 cdata:J_Reynolds a ex:Person ;
   ex:landingPage <https://github.com/JKReynolds> ;
-  ex:name "J Reynolds" ;
-  ex:subType con:Person .
+  ex:name "J Reynolds" .
 
 cdata:Jack_Lawson a ex:Person ;
   ex:landingPage <https://github.com/ajacksified> ;
-  ex:name "Jack Lawson" ;
-  ex:subType con:Person .
+  ex:name "Jack Lawson" .
 
 cdata:Jackson_Morgan a ex:Person ;
   ex:forumHandle "@jaxoncreed" ;
   ex:name "Jackson Morgan" ;
-  ex:subType con:Person ;
   ex:webid <https://jackson.solidcommunity.net/profile/card#me> .
 
 cdata:Jacob_Dreesen a ex:Person ;
-  ex:name "Jacob Dreesen" ;
-  ex:subType con:Person .
+  ex:name "Jacob Dreesen" .
 
 cdata:Jacopo_Scazzosi a ex:Person ;
   ex:landingPage <https://github.com/jacoscaz> ;
-  ex:name "Jacopo Scazzosi" ;
-  ex:subType con:Person .
+  ex:name "Jacopo Scazzosi" .
 
 cdata:Jake_Stein a ex:Person ;
-  ex:name "Jake Stein" ;
-  ex:subType con:Person .
+  ex:name "Jake Stein" .
 
 cdata:Jakub_Klimek a ex:Person ;
   ex:landingPage <https://github.com/jakubklimek> ;
-  ex:name "Jakub Klimek" ;
-  ex:subType con:Person .
+  ex:name "Jakub Klimek" .
 
 cdata:James_Birmingham a ex:Person ;
-  ex:name "James Birmingham" ;
-  ex:subType con:Person .
+  ex:name "James Birmingham" .
 
 cdata:James_Martin a ex:Person ;
   ex:forumHandle "@james.martin" ;
   ex:name "James Martin" ;
-  ex:subType con:Person ;
   ex:webid <https://jmartin.inrupt.net/profile/card#me> .
 
 cdata:Jan_Schill a ex:Person ;
   ex:forumHandle "@janschill" ;
   ex:landingPage <https://github.com/janschill> ;
-  ex:name "Jan Schill" ;
-  ex:subType con:Person .
+  ex:name "Jan Schill" .
 
 cdata:Jarlath_Holleran a ex:Person ;
   ex:name "Jarlath Holleran" ;
-  ex:subType con:Person ;
   ex:webid <https://jholleran.inrupt.net/profile/card#me> .
 
 cdata:Jasmine_Leonard a ex:Person ;
-  ex:name "Jasmine Leonard" ;
-  ex:subType con:Person .
+  ex:name "Jasmine Leonard" .
 
 cdata:Jason_Paulos a ex:Person ;
   ex:landingPage <https://github.com/jasonpaulos> ;
-  ex:name "Jason Paulos" ;
-  ex:subType con:Person .
+  ex:name "Jason Paulos" .
 
 cdata:Jasper_Vandenberghen a ex:Person ;
   ex:name "Jasper Vandenberghen" ;
-  ex:subType con:Person ;
   ex:webid <https://jaspervandenberghen.inrupt.net/profile/card#me> .
 
 cdata:JavaScriptTutorial a ex:CreativeWork ;
@@ -1008,228 +934,182 @@ cdata:JavaTutorial a ex:CreativeWork ;
 
 cdata:Jaxon_Creed a ex:Person ;
   ex:landingPage <https://github.com/jaxoncreed> ;
-  ex:name "Jaxon Creed" ;
-  ex:subType con:Person .
+  ex:name "Jaxon Creed" .
 
 cdata:Jeeth_Garageshwara a ex:Person ;
-  ex:name "Jeeth Garageshwara" ;
-  ex:subType con:Person .
+  ex:name "Jeeth Garageshwara" .
 
 cdata:Jeff_Zucker a ex:Person ;
   ex:forumHandle "@jeffz" ;
   ex:landingPage <https://github.com/jeff-zucker> ;
   ex:matrixHandle "@jeff-zucker" ;
   ex:name "Jeff Zucker" ;
-  ex:subType con:Person ;
   ex:webid <https://jeff-zucker.solidcommunity.net/profile/card#me> .
 
 cdata:Jegan_Davies-Jones a ex:Person ;
-  ex:name "Jegan Davies-Jones" ;
-  ex:subType con:Person .
+  ex:name "Jegan Davies-Jones" .
 
 cdata:Jenni_Inglis a ex:Person ;
   ex:name "Jenni Inglis" ;
-  ex:subType con:Person ;
   ex:webid <https://jenni.inrupt.net/profile/card#me> .
 
 cdata:Jeroen_van_Beele a ex:Person ;
-  ex:name "Jeroen van Beele" ;
-  ex:subType con:Person .
+  ex:name "Jeroen van Beele" .
 
 cdata:Jess_Martin a ex:Person ;
   ex:forumHandle "@jessmartin" ;
-  ex:name "Jess Martin" ;
-  ex:subType con:Person .
+  ex:name "Jess Martin" .
 
 cdata:Jesse_Wright a ex:Person ;
   ex:landingPage <https://github.com/jeswr> ;
-  ex:name "Jesse Wright" ;
-  ex:subType con:Person .
+  ex:name "Jesse Wright" .
 
 cdata:Jessica a ex:Person ;
   ex:description "Used vue.js trying make Solid apps" ;
   ex:forumHandle "@jessica" ;
-  ex:name "Jessica" ;
-  ex:subType con:Person .
+  ex:name "Jessica" .
 
 cdata:Jim_Collinson a ex:Person ;
   ex:forumHandle "@JimCollinson" ;
-  ex:name "Jim Collinson" ;
-  ex:subType con:Person .
+  ex:name "Jim Collinson" .
 
 cdata:Jim_Hendler a ex:Person ;
-  ex:name "Jim Hendler" ;
-  ex:subType con:Person .
+  ex:name "Jim Hendler" .
 
 cdata:Jitse_de_Smet a ex:Person ;
   ex:landingPage <https://github.com/jitsedesmet> ;
-  ex:name "Jitse de Smet" ;
-  ex:subType con:Person .
+  ex:name "Jitse de Smet" .
 
 cdata:Joachim_Dornbush a ex:Person ;
   ex:forumHandle "@jdp1ps" ;
-  ex:name "Joachim Dornbush" ;
-  ex:subType con:Person .
+  ex:name "Joachim Dornbush" .
 
 cdata:Joachim_van_Herwegen a ex:Person ;
   ex:landingPage <https://github.com/joachimvh> ;
-  ex:name "Joachim van Herwegen" ;
-  ex:subType con:Person .
+  ex:name "Joachim van Herwegen" .
 
 cdata:Joel_Bender a ex:Person ;
   ex:forumHandle "@JoelBender" ;
-  ex:name "Joel Bender" ;
-  ex:subType con:Person .
+  ex:name "Joel Bender" .
 
 cdata:Joep_Meindertsma a ex:Person ;
-  ex:name "Joep Meindertsma" ;
-  ex:subType con:Person .
+  ex:name "Joep Meindertsma" .
 
 cdata:Johan_Bove a ex:Person ;
   ex:name "Johan Bove" ;
-  ex:subType con:Person ;
   ex:webid <https://johanbove.inrupt.net/profile/card#me> .
 
 cdata:Johannes_Winter a ex:Person ;
   ex:landingPage <https://github.com/y0va> ;
-  ex:name "Johannes Winter" ;
-  ex:subType con:Person .
+  ex:name "Johannes Winter" .
 
 cdata:John_Bartas a ex:Person ;
   ex:forumHandle "@Stitch626" ;
-  ex:name "John Bartas" ;
-  ex:subType con:Person .
+  ex:name "John Bartas" .
 
 cdata:John_Bruce a ex:Person ;
   ex:name "John Bruce" ;
-  ex:subType con:Person ;
   ex:webid <https://johnb.inrupt.net/profile/card#me> .
 
 cdata:John_Fletcher a ex:Person ;
   ex:forumHandle "@ubernatural" ;
   ex:name "John Fletcher" ;
-  ex:subType con:Person ;
   ex:webid <https://ubernatural.inrupt.net/profile/card#me> .
 
 cdata:John_Yu a ex:Person ;
-  ex:name "John Yu" ;
-  ex:subType con:Person .
+  ex:name "John Yu" .
 
 cdata:Jon_Pederson a ex:Person ;
-  ex:name "Jon Pederson" ;
-  ex:subType con:Person .
+  ex:name "Jon Pederson" .
 
 cdata:Jon_Wilson a ex:Person ;
   ex:forumHandle "@jonwilson" ;
-  ex:name "Jon Wilson" ;
-  ex:subType con:Person .
+  ex:name "Jon Wilson" .
 
 cdata:Jonas_Smedegaard a ex:Person ;
-  ex:name "Jonas Smedegaard" ;
-  ex:subType con:Person .
+  ex:name "Jonas Smedegaard" .
 
 cdata:Jose_Emilio_Labra_Gayo a ex:Person ;
   ex:landingPage <https://github.com/labra> ;
-  ex:name "Jose Emilio Labra Gayo" ;
-  ex:subType con:Person .
+  ex:name "Jose Emilio Labra Gayo" .
 
 cdata:Joseph_Guillaume a ex:Person ;
   ex:forumHandle "@josephguillaume" ;
-  ex:name "Joseph Guillaume" ;
-  ex:subType con:Person .
+  ex:name "Joseph Guillaume" .
 
 cdata:Joseph_Wade_Nobles a ex:Person ;
   ex:forumHandle "@JosephWNobles" ;
-  ex:name "Joseph Wade Nobles" ;
-  ex:subType con:Person .
+  ex:name "Joseph Wade Nobles" .
 
 cdata:Josh_Collins a ex:Person ;
   ex:landingPage <https://github.com/joshdcollins> ;
   ex:name "Josh Collins" ;
-  ex:subType con:Person ;
   ex:webid <https://joshcollins.inrupt.net/profile/card#me> .
 
 cdata:Jules a ex:Person ;
   ex:name "Jules" ;
-  ex:subType con:Person ;
   ex:webid <https://julian-cole.inrupt.net/profile/card#me> .
 
 cdata:Juliette_Carter a ex:Person ;
-  ex:name "Juliette Carter" ;
-  ex:subType con:Person .
+  ex:name "Juliette Carter" .
 
 cdata:JunZhao a ex:Person ;
-  ex:name "Jun Zhao" ;
-  ex:subType con:Person .
+  ex:name "Jun Zhao" .
 
 cdata:Juraj_Zvolensky a ex:Person ;
   ex:forumHandle "@jzvolensky" ;
   ex:name "Juraj Zvolensky" ;
-  ex:subType con:Person ;
   ex:webid <https://jzvolensky.solidcommunity.net/profile/card#me> .
 
 cdata:Justin_Bingham a ex:Person ;
   ex:forumHandle "@justin" ;
   ex:landingPage <https://github.com/justinwb> ;
   ex:name "Justin Bingham" ;
-  ex:subType con:Person ;
   ex:webid <https://justin.inrupt.net/profile/card#me> .
 
 cdata:Kai_Chen a ex:Person ;
-  ex:name "Kai Chen" ;
-  ex:subType con:Person .
+  ex:name "Kai Chen" .
 
 cdata:Kai_Gilb a ex:Person ;
-  ex:name "Kai Gilb" ;
-  ex:subType con:Person .
+  ex:name "Kai Gilb" .
 
 cdata:Kangchan_Lee a ex:Person ;
-  ex:name "Kangchan Lee" ;
-  ex:subType con:Person .
+  ex:name "Kangchan Lee" .
 
 cdata:Karl_Richter a ex:Person ;
   ex:name "Karl Richter" ;
-  ex:subType con:Person ;
   ex:webid <https://karlhrichter.inrupt.net/profile/card#me> .
 
 cdata:Kartika_Tulusan a ex:Person ;
   ex:name "Kartika Tulusan" ;
-  ex:subType con:Person ;
   ex:webid <https://kartikatulusan.inrupt.net/profile/card#me> .
 
 cdata:Kay_Kim a ex:Person ;
   ex:forumHandle "@kay-kim" ;
   ex:landingPage <https://github.com/kay-kim> ;
   ex:name "Kay Kim" ;
-  ex:subType con:Person ;
   ex:webid <https://kay.inrupt.net/profile/card#me> .
 
 cdata:Kayode_Ezike a ex:Person ;
   ex:landingPage <https://github.com/kezike> ;
-  ex:name "Kayode Ezike" ;
-  ex:subType con:Person .
+  ex:name "Kayode Ezike" .
 
 cdata:Kelly_OBrien a ex:Person ;
   ex:name "Kelly O'Brien" ;
-  ex:subType con:Person ;
   ex:webid <https://kellyo.inrupt.net/profile/card#me> .
 
 cdata:Kevin_Dunglas a ex:Person ;
-  ex:name "Kevin Dunglas" ;
-  ex:subType con:Person .
+  ex:name "Kevin Dunglas" .
 
 cdata:Kevin_Howard a ex:Person ;
   ex:name "Kevin Howard" ;
-  ex:subType con:Person ;
   ex:webid <https://khoward.inrupt.net/profile/card#me> .
 
 cdata:Kevin_Poulsen a ex:Person ;
-  ex:name "Kevin Poulsen" ;
-  ex:subType con:Person .
+  ex:name "Kevin Poulsen" .
 
 cdata:Kevin_Weber a ex:Person ;
-  ex:name "Kevin Weber" ;
-  ex:subType con:Person .
+  ex:name "Kevin Weber" .
 
 cdata:KeyChain a ex:Software ;
   ex:description "KeyChain for use with Web Cryptography API in Node.js." ;
@@ -1240,17 +1120,14 @@ cdata:KeyChain a ex:Software ;
   ex:technicalKeyword "authentication", "encryption" .
 
 cdata:Khalid_Alnuaim a ex:Person ;
-  ex:name "Khalid Alnuaim" ;
-  ex:subType con:Person .
+  ex:name "Khalid Alnuaim" .
 
 cdata:Kingsley_Idehen a ex:Person ;
   ex:name "Kingsley Idehen" ;
-  ex:subType con:Person ;
   ex:webid <https://kingsley.idehen.net/public_home/kidehen/profile.ttl#i> .
 
 cdata:Kjetil_Kjernsmo a ex:Person ;
-  ex:name "Kjetil Kjernsmo" ;
-  ex:subType con:Person .
+  ex:name "Kjetil Kjernsmo" .
 
 cdata:KnightFoundation a ex:Organization ;
   ex:landingPage <https://knightfoundation.org> ;
@@ -1271,27 +1148,22 @@ cdata:KNoodle a ex:Software ;
   ex:technicalKeyword "visualization" .
 
 cdata:Knut-Olav_Hoven a ex:Person ;
-  ex:name "Knut-Olav Hoven" ;
-  ex:subType con:Person .
+  ex:name "Knut-Olav Hoven" .
 
 cdata:Kofi_Kyei a ex:Person ;
-  ex:name "Kofi Kyei" ;
-  ex:subType con:Person .
+  ex:name "Kofi Kyei" .
 
 cdata:KU_Leuven a ex:Person ;
-  ex:name "KU Leuven" ;
-  ex:subType con:Person .
+  ex:name "KU Leuven" .
 
 cdata:Kyra_Assaad a ex:Person ;
   ex:forumHandle "@KyraAssaad" ;
   ex:landingPage <https://github.com/kyraassaad> ;
   ex:name "Kyra Assaad" ;
-  ex:subType con:Person ;
   ex:webid <https://pod.inrupt.com/kyra/profile/card#me> .
 
 cdata:Lalana_Kagal a ex:Person ;
-  ex:name "Lalana Kagal" ;
-  ex:subType con:Person .
+  ex:name "Lalana Kagal" .
 
 cdata:Laravel a ex:Software ;
   ex:maintainer cdata:Noel_De_Martin ;
@@ -1303,24 +1175,20 @@ cdata:Laravel a ex:Software ;
 
 cdata:Lars_Fosdal a ex:Person ;
   ex:forumHandle "@LarsFosdal" ;
-  ex:name "Lars Fosdal" ;
-  ex:subType con:Person .
+  ex:name "Lars Fosdal" .
 
 cdata:Lauernce_Zhang a ex:Person ;
-  ex:name "Lauernce Zhang" ;
-  ex:subType con:Person .
+  ex:name "Lauernce Zhang" .
 
 cdata:Laurens_Debackere a ex:Person ;
   ex:name "Laurens Debackere" ;
-  ex:subType con:Person ;
   ex:webid <https://www.thundr.be/profile/laurens.ttl#me> .
 
 cdata:LDNChannel2023 a ex:Specification ;
   ex:editor cdata:Sarven_Capadisli ;
   ex:landingPage <https://solid.github.io/notifications/ldn-channel-2023> ;
   ex:name "LDNChannel2023" ;
-  ex:repository <https://github.com/solid/notifications> ;
-  ex:subType con:Specification .
+  ex:repository <https://github.com/solid/notifications> .
 
 cdata:LDO a ex:Software ;
   ex:developer cdata:Jesse_Wright ;
@@ -1351,8 +1219,7 @@ cdata:ldp-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/ns/ldp#> ;
   ex:name "Linked Data Platform" ;
   ex:namespaceURI <http://www.w3.org/ns/ldp#> ;
-  ex:prefix "ldp:" ;
-  ex:subType con:Ontology .
+  ex:prefix "ldp:" .
 
 cdata:Ledger a ex:Organization ;
   ex:landingPage <https://ledgerproject.eu> ;
@@ -1360,22 +1227,18 @@ cdata:Ledger a ex:Organization ;
   ex:subType con:FundingOrganization .
 
 cdata:Leon_Porter a ex:Person ;
-  ex:name "Leon Porter" ;
-  ex:subType con:Person .
+  ex:name "Leon Porter" .
 
 cdata:Leonard_Rosenthol a ex:Person ;
-  ex:name "Leonard Rosenthol" ;
-  ex:subType con:Person .
+  ex:name "Leonard Rosenthol" .
 
 cdata:Liam_Broza a ex:Person ;
   ex:name "Liam Broza" ;
-  ex:subType con:Person ;
   ex:webid <https://hegemon.inrupt.net/profile/card#me> .
 
 cdata:Lin_Onetwo a ex:Person ;
   ex:forumHandle "@linonetwo" ;
-  ex:name "Lin Onetwo" ;
-  ex:subType con:Person .
+  ex:name "Lin Onetwo" .
 
 cdata:Linked_Pipes a ex:Software ;
   ex:description "Linked Data visualizations sharing and collaboration via Solid." ;
@@ -1409,26 +1272,21 @@ cdata:LiquidSurfFedCM a ex:Software ;
 
 cdata:Luc a ex:Person ;
   ex:name "Luc" ;
-  ex:subType con:Person ;
   ex:webid <https://45h.inrupt.net/profile/card#me> .
 
 cdata:Ludwig_Schubi a ex:Person ;
   ex:forumHandle "@ludwigschubi" ;
-  ex:name "Ludwig Schubi" ;
-  ex:subType con:Person .
+  ex:name "Ludwig Schubi" .
 
 cdata:Luis_Aguilar a ex:Person ;
   ex:name "Luis Aguilar" ;
-  ex:subType con:Person ;
   ex:webid <https://ldaguilar88.inrupt.net/profile/card#me> .
 
 cdata:Luk_Overmeire a ex:Person ;
-  ex:name "Luk Overmeire" ;
-  ex:subType con:Person .
+  ex:name "Luk Overmeire" .
 
 cdata:Maico_Oliveira_Buss a ex:Person ;
-  ex:name "Maico Oliveira Buss" ;
-  ex:subType con:Person .
+  ex:name "Maico Oliveira Buss" .
 
 cdata:Manas a ex:Software ;
   ex:landingPage <https://manomayam.github.io/manas/introduction.html> ;
@@ -1439,8 +1297,7 @@ cdata:Manas a ex:Software ;
   ex:subType con:PodServer .
 
 cdata:Manoharan_Ramachandran a ex:Person ;
-  ex:name "Manoharan Ramachandran" ;
-  ex:subType con:Person .
+  ex:name "Manoharan Ramachandran" .
 
 cdata:Manomayam a ex:Organization ;
   ex:landingPage <https://github.com/manomayam> ;
@@ -1448,58 +1305,46 @@ cdata:Manomayam a ex:Organization ;
   ex:subType con:OpenSourceProject .
 
 cdata:Manu_Sporny a ex:Person ;
-  ex:name "Manu Sporny" ;
-  ex:subType con:Person .
+  ex:name "Manu Sporny" .
 
 cdata:Marc_Fornos a ex:Person ;
   ex:landingPage <https://gitlab.com/frozen.pomelo> ;
-  ex:name "Marc Fornos" ;
-  ex:subType con:Person .
+  ex:name "Marc Fornos" .
 
 cdata:Marc_Haddle a ex:Person ;
   ex:contactEmail "marc.haddle@datasolids.com" ;
   ex:description "CEO, Datasolids"@en ;
   ex:modified "2025-05-15T15:18:59.233Z"^^xsd:dateTime ;
-  ex:name "Marc Haddle" ;
-  ex:subType con:Person .
+  ex:name "Marc Haddle" .
 
 cdata:Marco_Neumann a ex:Person ;
-  ex:name "Marco Neumann" ;
-  ex:subType con:Person .
+  ex:name "Marco Neumann" .
 
 cdata:Maria_Dimou a ex:Person ;
-  ex:name "Maria Dimou" ;
-  ex:subType con:Person .
+  ex:name "Maria Dimou" .
 
 cdata:Mark a ex:Person ;
   ex:forumHandle "@happybeing" ;
   ex:name "Mark" ;
-  ex:subType con:Person ;
   ex:webid <https://thewebalyst.solidcommunity.net/profile/card#me> .
 
 cdata:Mark_Baker a ex:Person ;
-  ex:name "Mark Baker" ;
-  ex:subType con:Person .
+  ex:name "Mark Baker" .
 
 cdata:Mark_Hughes a ex:Person ;
-  ex:name "Mark Hughes" ;
-  ex:subType con:Person .
+  ex:name "Mark Hughes" .
 
 cdata:Mark_Lizar a ex:Person ;
-  ex:name "Mark Lizar" ;
-  ex:subType con:Person .
+  ex:name "Mark Lizar" .
 
 cdata:Mark_Senefsky a ex:Person ;
-  ex:name "Mark Senefsky" ;
-  ex:subType con:Person .
+  ex:name "Mark Senefsky" .
 
 cdata:Mark_Thompson a ex:Person ;
-  ex:name "Mark Thompson" ;
-  ex:subType con:Person .
+  ex:name "Mark Thompson" .
 
 cdata:Mark_Weiler a ex:Person ;
-  ex:name "Mark Weiler" ;
-  ex:subType con:Person .
+  ex:name "Mark Weiler" .
 
 cdata:Markbook a ex:Software ;
   ex:name "Markbook" ;
@@ -1509,12 +1354,10 @@ cdata:Markbook a ex:Software ;
 
 cdata:Markjspivey a ex:Person ;
   ex:name "Markjspivey" ;
-  ex:subType con:Person ;
   ex:webid <https://markjspivey.inrupt.net/profile/card#me> .
 
 cdata:Marrelle_Bailey a ex:Person ;
-  ex:name "Marrelle Bailey" ;
-  ex:subType con:Person .
+  ex:name "Marrelle Bailey" .
 
 cdata:Martin a ex:Software ;
   ex:maintainer cdata:Vincent_Tunru ;
@@ -1524,8 +1367,7 @@ cdata:Martin a ex:Software ;
   ex:technicalKeyword "general purpose app", "uncategorized" .
 
 cdata:Martin_Tews a ex:Person ;
-  ex:name "Martin Tews" ;
-  ex:subType con:Person .
+  ex:name "Martin Tews" .
 
 cdata:mashlib a ex:Software ;
   ex:description "software used in SolidOS app." ;
@@ -1546,22 +1388,18 @@ cdata:Mastopod a ex:Service ;
 
 cdata:Mats_Berg a ex:Person ;
   ex:name "Mats Berg" ;
-  ex:subType con:Person ;
   ex:webid <https://mats.inrupt.net/profile/card#me> .
 
 cdata:Matt_Wallis a ex:Person ;
-  ex:name "Matt Wallis" ;
-  ex:subType con:Person .
+  ex:name "Matt Wallis" .
 
 cdata:Matthew a ex:Person ;
   ex:forumHandle "@Kludgy4" ;
   ex:name "Matthew" ;
-  ex:subType con:Person ;
   ex:webid <https://comp495x.duckdns.org/Pod1/profile#me> .
 
 cdata:Matthew_Fowle a ex:Person ;
-  ex:name "Matthew Fowle" ;
-  ex:subType con:Person .
+  ex:name "Matthew Fowle" .
 
 cdata:Matthias_Evering a ex:Person ;
   ex:contactEmail "me@evering.eu" ;
@@ -1574,39 +1412,31 @@ cdata:Matthias_Evering a ex:Person ;
   ex:name "Matthias Evering"@en ;
   ex:resourcesOffered "NSS CSS and Pivot"@en, "pod-provider NSS CSS Pivot"@en ;
   ex:resourcesWanted "rdf turtle community building pod-provider solution-focused communication diversity equity inclusion"@en ;
-  ex:subType con:Person ;
   ex:webid <https://solidweb.me/testpro-dev/profile/card#me> .
 
 cdata:Matthias_Thorner a ex:Person ;
   ex:forumHandle "@mthorner" ;
-  ex:name "Matthias Thorner" ;
-  ex:subType con:Person .
+  ex:name "Matthias Thorner" .
 
 cdata:Matthieu_Bosquet a ex:Person ;
   ex:landingPage <https://github.com/matthieubosquet> ;
-  ex:name "Matthieu Bosquet" ;
-  ex:subType con:Person .
+  ex:name "Matthieu Bosquet" .
 
 cdata:Matthieu_Jacquot a ex:Person ;
-  ex:name "Matthieu Jacquot" ;
-  ex:subType con:Person .
+  ex:name "Matthieu Jacquot" .
 
 cdata:Max_Froumentin a ex:Person ;
-  ex:name "Max Froumentin" ;
-  ex:subType con:Person .
+  ex:name "Max Froumentin" .
 
 cdata:Max_Van_Kleek a ex:Person ;
-  ex:name "Max Van Kleek" ;
-  ex:subType con:Person .
+  ex:name "Max Van Kleek" .
 
 cdata:Max_Wardeh a ex:Person ;
-  ex:name "Max Wardeh" ;
-  ex:subType con:Person .
+  ex:name "Max Wardeh" .
 
 cdata:Maxime_Lecoq a ex:Person ;
   ex:forumHandle "@lecoqlibre" ;
-  ex:name "Maxime Lecoq" ;
-  ex:subType con:Person .
+  ex:name "Maxime Lecoq" .
 
 cdata:Mdr_Notes a ex:Software ;
   ex:name "Mdr Notes" ;
@@ -1629,8 +1459,7 @@ cdata:mee-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/ns/pim/meeting#> ;
   ex:name "Meeting" ;
   ex:namespaceURI <http://www.w3.org/ns/pim/meeting#> ;
-  ex:prefix "mee:" ;
-  ex:subType con:Ontology .
+  ex:prefix "mee:" .
 
 cdata:Meisdata a ex:Organization ;
   ex:contactEmail "info@meisdata.io"@en ;
@@ -1645,56 +1474,44 @@ cdata:Meisdata a ex:Organization ;
   ex:subType con:OpenSourceProject .
 
 cdata:Melissa_Wood a ex:Person ;
-  ex:name "Melissa Wood" ;
-  ex:subType con:Person .
+  ex:name "Melissa Wood" .
 
 cdata:Melvin_Carvalho a ex:Person ;
   ex:landingPage <https://github.com/melvincarvalho> ;
   ex:name "Melvin Carvalho" ;
-  ex:subType con:Person ;
   ex:webid <https://melvin.solidcommunity.net/profile/card#me> .
 
 cdata:Michael_Dierick a ex:Person ;
-  ex:name "Michaël Dierick" ;
-  ex:subType con:Person .
+  ex:name "Michaël Dierick" .
 
 cdata:Michael_Dundas a ex:Person ;
-  ex:name "Michael Dundas" ;
-  ex:subType con:Person .
+  ex:name "Michael Dundas" .
 
 cdata:Michael_Farber a ex:Person ;
-  ex:name "Michael Farber" ;
-  ex:subType con:Person .
+  ex:name "Michael Farber" .
 
 cdata:Michael_Herman a ex:Person ;
-  ex:name "Michael Herman" ;
-  ex:subType con:Person .
+  ex:name "Michael Herman" .
 
 cdata:Michael_McCallister a ex:Person ;
   ex:forumHandle "@workingwriter" ;
-  ex:name "Michael McCallister" ;
-  ex:subType con:Person .
+  ex:name "Michael McCallister" .
 
 cdata:Michael_Paduch a ex:Person ;
-  ex:name "Michael Paduch" ;
-  ex:subType con:Person .
+  ex:name "Michael Paduch" .
 
 cdata:Michael_Pelikan a ex:Person ;
-  ex:name "Michael Pelikan" ;
-  ex:subType con:Person .
+  ex:name "Michael Pelikan" .
 
 cdata:Michael_Pigott a ex:Person ;
-  ex:name "Michael Pigott" ;
-  ex:subType con:Person .
+  ex:name "Michael Pigott" .
 
 cdata:Michael_Thornburgh a ex:Person ;
-  ex:name "Michael Thornburgh" ;
-  ex:subType con:Person .
+  ex:name "Michael Thornburgh" .
 
 cdata:Michael_Toomim a ex:Person ;
   ex:forumHandle "@toomim" ;
-  ex:name "Michael Toomim" ;
-  ex:subType con:Person .
+  ex:name "Michael Toomim" .
 
 cdata:Michal a ex:Person ;
   ex:forumHandle "@mrkvon"@en ;
@@ -1702,59 +1519,48 @@ cdata:Michal a ex:Person ;
   ex:matrixHandle "@mrkvon:matrix.org"@en ;
   ex:modified "2025-05-08T01:12:44.757Z"^^xsd:dateTime ;
   ex:name "Michal"@en ;
-  ex:subType con:Person ;
   ex:webid <https://id.mrkvon.org> .
 
 cdata:Michiel_de_Jong a ex:Person ;
   ex:landingPage <https://github.com/michielbdejong> ;
   ex:name "Michiel de Jong" ;
-  ex:subType con:Person ;
   ex:webid <https://michielbdejong.inrupt.net/profile/card#me> .
 
 cdata:Miel_Vander_Sande a ex:Person ;
   ex:name "Miel Vander Sande" ;
-  ex:subType con:Person ;
   ex:webid <https://mvs.inrupt.net/profile/card#me> .
 
 cdata:Miguel_Ceriani a ex:Person ;
-  ex:name "Miguel Ceriani" ;
-  ex:subType con:Person .
+  ex:name "Miguel Ceriani" .
 
 cdata:Mike_Adams a ex:Person ;
   ex:forumHandle "@adventure" ;
   ex:name "Mike Adams" ;
-  ex:subType con:Person ;
   ex:webid <https://newyork.solid.community/profile/card#me> .
 
 cdata:Mike_O_Neill a ex:Person ;
-  ex:name "Mike O'Neill" ;
-  ex:subType con:Person .
+  ex:name "Mike O'Neill" .
 
 cdata:Mirek a ex:Person ;
   ex:name "Mirek" ;
-  ex:subType con:Person ;
   ex:webid <https://sopekmir.inrupt.net/profile/card#me> .
 
 cdata:Mischa_Tuffield a ex:Person ;
-  ex:name "Mischa Tuffield" ;
-  ex:subType con:Person .
+  ex:name "Mischa Tuffield" .
 
 cdata:Mitzi_Laszlo a ex:Person ;
   ex:forumHandle "@MitziLaszlo" ;
   ex:landingPage <https://github.com/Mitzi-Laszlo> ;
   ex:name "Mitzi Laszlo" ;
-  ex:subType con:Person ;
   ex:webid <https://mitzilaszlo.solidcommunity.net/profile/card#me> .
 
 cdata:mo-vocab a ex:Ontology ;
   ex:name "Music" ;
   ex:namespaceURI <http://purl.org/ontology/mo/> ;
-  ex:prefix "mo:" ;
-  ex:subType con:Ontology .
+  ex:prefix "mo:" .
 
 cdata:Mohamed_Hamed a ex:Person ;
   ex:name "Mohamed Hamed" ;
-  ex:subType con:Person ;
   ex:webid <https://mohamedsaidhamed.org/profile/card#me> .
 
 cdata:Molid a ex:Software ;
@@ -1768,8 +1574,7 @@ cdata:Molid a ex:Software ;
 
 cdata:Mordax a ex:Person ;
   ex:forumHandle "@Mordax" ;
-  ex:name "Mordax" ;
-  ex:subType con:Person .
+  ex:name "Mordax" .
 
 cdata:MozillaOpenScience a ex:Organization ;
   ex:landingPage <https://docs.google.com/document/d/1EJXg9G01CG7dBRbmbZzFnB9Bex2ibAVza_4xE8iqQqI/edit> ;
@@ -1799,17 +1604,14 @@ cdata:Mycelium a ex:Service ;
   ex:subType con:SpecializedPodService .
 
 cdata:Nada_Akl a ex:Person ;
-  ex:name "Nada Akl" ;
-  ex:subType con:Person .
+  ex:name "Nada Akl" .
 
 cdata:Naman_Goel a ex:Person ;
-  ex:name "Naman Goel" ;
-  ex:subType con:Person .
+  ex:name "Naman Goel" .
 
 cdata:Nathan_Borson a ex:Person ;
   ex:forumHandle "@nborson" ;
   ex:name "Nathan Borson" ;
-  ex:subType con:Person ;
   ex:webid <https://nborson.solidcommunity.net/profile/card#me> .
 
 cdata:NextFM a ex:Software ;
@@ -1850,23 +1652,19 @@ cdata:NGISargasso a ex:Organization ;
 cdata:Nick-Form a ex:Person ;
   ex:forumHandle "@nickform" ;
   ex:name "Nick-Form" ;
-  ex:subType con:Person ;
   ex:webid <https://nickform.inrupt.net/profile/card#me> .
 
 cdata:Nicolas_Mondada a ex:Person ;
   ex:landingPage <https://github.com/nicolasmondada> ;
-  ex:name "Nicolas Mondada" ;
-  ex:subType con:Person .
+  ex:name "Nicolas Mondada" .
 
 cdata:Nicolas_Seydoux a ex:Person ;
   ex:landingPage <https://github.com/NSeydoux> ;
   ex:name "Nicolas Seydoux" ;
-  ex:subType con:Person ;
   ex:webid <https://solid.zwifi.eu/profile/card#me> .
 
 cdata:Nigel_Shadbolt a ex:Person ;
-  ex:name "Nigel Shadbolt" ;
-  ex:subType con:Person .
+  ex:name "Nigel Shadbolt" .
 
 cdata:NLnet a ex:Organization ;
   ex:description "Since 1997 NLnet foundation has been financially supporting organizations and people that contribute to an open information society. It funds those with ideas to fix the internet." ;
@@ -1886,7 +1684,6 @@ cdata:Noel_De_Martin a ex:Person ;
   ex:landingPage <https://noeldemartin.com> ;
   ex:modified "2025-06-10T18:02:34.141Z"^^xsd:dateTime ;
   ex:name "Noel De Martin"@en ;
-  ex:subType con:Person ;
   ex:webid <https://noeldemartin.solidcommunity.net/profile/card#me> .
 
 cdata:Notepod a ex:Software ;
@@ -1966,12 +1763,10 @@ cdata:OKH_Solid_App a ex:Software ;
 cdata:Omar_Teixeira_Gonzalez a ex:Person ;
   ex:forumHandle "@Omitg24" ;
   ex:name "Omar Teixeira Gonzalez" ;
-  ex:subType con:Person ;
   ex:webid <https://omitg.inrupt.net/profile/card#me> .
 
 cdata:Onur_Yuksel a ex:Person ;
-  ex:name "Onur Yüksel" ;
-  ex:subType con:Person .
+  ex:name "Onur Yüksel" .
 
 cdata:OpenHospitalityNetwork a ex:Organization ;
   ex:landingPage <https://github.com/OpenHospitalityNetwork> ;
@@ -2029,12 +1824,10 @@ cdata:OpenLinks2 a ex:Service ;
   ex:subType con:GeneralPurposePodService .
 
 cdata:Osmar_Olivio a ex:Person ;
-  ex:name "Osmar Olivio" ;
-  ex:subType con:Person .
+  ex:name "Osmar Olivio" .
 
 cdata:Osmar_Olivo a ex:Person ;
   ex:name "Osmar Olivo" ;
-  ex:subType con:Person ;
   ex:webid <https://oz.inrupt.net/profile/card#me> .
 
 cdata:Oteam a ex:Organization ;
@@ -2042,19 +1835,16 @@ cdata:Oteam a ex:Organization ;
   ex:subType con:OpenSourceProject .
 
 cdata:Otto_AA a ex:Person ;
-  ex:name "Otto AA" ;
-  ex:subType con:Person .
+  ex:name "Otto AA" .
 
 cdata:Owen_Sacco a ex:Person ;
-  ex:name "Owen Sacco" ;
-  ex:subType con:Person .
+  ex:name "Owen Sacco" .
 
 cdata:owl-vocab a ex:Ontology ;
   ex:landingPage owl: ;
   ex:name "Web Ontology Language (OWL)" ;
   ex:namespaceURI owl: ;
-  ex:prefix "ex:" ;
-  ex:subType con:Ontology .
+  ex:prefix "ex:" .
 
 cdata:Oxford_University a ex:Organization ;
   ex:name "Oxford University" ;
@@ -2066,25 +1856,20 @@ cdata:OxfordHumanCenteredComputingGroup a ex:Organization ;
 
 cdata:Oz a ex:Person ;
   ex:forumHandle "@oolivo" ;
-  ex:name "Oz" ;
-  ex:subType con:Person .
+  ex:name "Oz" .
 
 cdata:Ozcan_Seker a ex:Person ;
-  ex:name "Özcan Seker" ;
-  ex:subType con:Person .
+  ex:name "Özcan Seker" .
 
 cdata:Pablo a ex:Person ;
   ex:name "Pablo" ;
-  ex:subType con:Person ;
   ex:webid <https://jprod.inrupt.net/profile/card#me> .
 
 cdata:Pano_Maria a ex:Person ;
-  ex:name "Pano Maria" ;
-  ex:subType con:Person .
+  ex:name "Pano Maria" .
 
 cdata:Parle a ex:Person ;
   ex:name "Parle" ;
-  ex:subType con:Person ;
   ex:webid <https://parle.inrupt.net/profile/card#me> .
 
 cdata:PASS a ex:Service ;
@@ -2104,47 +1889,38 @@ cdata:PASS a ex:Service ;
 cdata:Pat_McBennett a ex:Person ;
   ex:landingPage <https://github.com/pmcb55> ;
   ex:name "Pat McBennett" ;
-  ex:subType con:Person ;
   ex:webid <https://pmcb55.inrupt.net/profile/card#me> .
 
 cdata:Patricia_Garcia a ex:Person ;
   ex:forumHandle "@garciafdezpatricia" ;
-  ex:name "Patricia Garcia" ;
-  ex:subType con:Person .
+  ex:name "Patricia Garcia" .
 
 cdata:Patrick a ex:Person ;
   ex:name "Patrick" ;
-  ex:subType con:Person ;
   ex:webid <https://pmcb55.inrupt.net/profile/card#me> .
 
 cdata:Patrick_Hochstenbach a ex:Person ;
   ex:forumHandle "@hochstenbach" ;
   ex:name "Patrick Hochstenbach" ;
-  ex:subType con:Person ;
   ex:webid <https://hochstenbach.solidcommunity.net/profile/card#me> .
 
 cdata:Paul a ex:Person ;
   ex:forumHandle "@SolarDrift" ;
-  ex:name "Paul" ;
-  ex:subType con:Person .
+  ex:name "Paul" .
 
 cdata:Paul_Mundt a ex:Person ;
-  ex:name "Paul Mundt" ;
-  ex:subType con:Person .
+  ex:name "Paul Mundt" .
 
 cdata:Paul_Worrall a ex:Person ;
   ex:name "Paul Worrall" ;
-  ex:subType con:Person ;
   ex:webid <https://worrallp.inrupt.net/profile/card#me> .
 
 cdata:Paula_Veltens a ex:Person ;
   ex:name "Paula Veltens" ;
-  ex:subType con:Person ;
   ex:webid <https://paula.veltens.org/profile/card#me> .
 
 cdata:Pavlos_Pseftoyiannis a ex:Person ;
-  ex:name "Pavlos Pseftoyiannis" ;
-  ex:subType con:Person .
+  ex:name "Pavlos Pseftoyiannis" .
 
 cdata:PDSINTEROP a ex:Organization ;
   ex:landingPage <https://pdsinterop.org/> ;
@@ -2167,8 +1943,7 @@ cdata:Peditor a ex:Software ;
 
 cdata:Pedro_Gomez_Lopez a ex:Person ;
   ex:forumHandle "@pegomez" ;
-  ex:name "Pedro Gomez Lopez" ;
-  ex:subType con:Person .
+  ex:name "Pedro Gomez Lopez" .
 
 cdata:Penny a ex:Software ;
   ex:description "Pod data inspector" ;
@@ -2190,38 +1965,30 @@ cdata:PermiX a ex:Software ;
   ex:technicalKeyword "permission, pod management"@en .
 
 cdata:Pete_Edwards a ex:Person ;
-  ex:name "Pete Edwards" ;
-  ex:subType con:Person .
+  ex:name "Pete Edwards" .
 
 cdata:Peter_Bruhn_Andersen a ex:Person ;
-  ex:name "Peter Bruhn Andersen" ;
-  ex:subType con:Person .
+  ex:name "Peter Bruhn Andersen" .
 
 cdata:Peter_Hartman a ex:Person ;
   ex:name "Peter Hartman" ;
-  ex:subType con:Person ;
   ex:webid <https://pjh.inrupt.net/profile/card> .
 
 cdata:Peter_Hatherley a ex:Person ;
   ex:name "Peter Hatherley" ;
-  ex:subType con:Person ;
   ex:webid <https://peterhatherley.inrupt.net/profile/card#me> .
 
 cdata:Peter_Zuiddam a ex:Person ;
-  ex:name "Peter Zuiddam" ;
-  ex:subType con:Person .
+  ex:name "Peter Zuiddam" .
 
 cdata:Philip_Laszkowicz a ex:Person ;
-  ex:name "Philip Laszkowicz" ;
-  ex:subType con:Person .
+  ex:name "Philip Laszkowicz" .
 
 cdata:Philipp_Gfeller a ex:Person ;
-  ex:name "Philipp Gfeller" ;
-  ex:subType con:Person .
+  ex:name "Philipp Gfeller" .
 
 cdata:Philippe_Duchesne a ex:Person ;
-  ex:name "Philippe Duchesne" ;
-  ex:subType con:Person .
+  ex:name "Philippe Duchesne" .
 
 cdata:PHP_Solid_Server a ex:Software ;
   ex:developer cdata:Michiel_de_Jong ;
@@ -2235,29 +2002,24 @@ cdata:PHP_Solid_Server a ex:Software ;
 cdata:Pierre-Antoine_Champin a ex:Person ;
   ex:forumHandle "@p20n" ;
   ex:name "Pierre-Antoine Champin" ;
-  ex:subType con:Person ;
   ex:webid <https://solid.champin.net/pa/profile/card#me> .
 
 cdata:Pieter_Colpaert a ex:Person ;
-  ex:name "Pieter Colpaert" ;
-  ex:subType con:Person .
+  ex:name "Pieter Colpaert" .
 
 cdata:Pieter_Heyvaert a ex:Person ;
   ex:forumHandle "@pheyvaer" ;
-  ex:name "Pieter Heyvaert" ;
-  ex:subType con:Person .
+  ex:name "Pieter Heyvaert" .
 
 cdata:Pieter_van_Everdingen a ex:Person ;
   ex:forumHandle "@PietervanEverdingen" ;
-  ex:name "Pieter van Everdingen" ;
-  ex:subType con:Person .
+  ex:name "Pieter van Everdingen" .
 
 cdata:pim-spac-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/ns/pim/space#> ;
   ex:name "Workspace" ;
   ex:namespaceURI <http://www.w3.org/ns/pim/space#> ;
-  ex:prefix "space:" ;
-  ex:subType con:Ontology .
+  ex:prefix "space:" .
 
 cdata:Pivot a ex:Software ;
   ex:description "\n    Pivot is a fork of CSS created as a community-maintained server.\n  " ;
@@ -2339,8 +2101,7 @@ cdata:PodPro a ex:Software ;
   ex:technicalKeyword "pod management" .
 
 cdata:Pol_Alvarez a ex:Person ;
-  ex:name "Pol Alvarez" ;
-  ex:subType con:Person .
+  ex:name "Pol Alvarez" .
 
 cdata:Polymer a ex:Software ;
   ex:description "A rudimentary resource browser for Solid, using Polymer 2." ;
@@ -2379,8 +2140,7 @@ cdata:Practitioners-mailingList a ex:Service ;
 
 cdata:Presbrey a ex:Person ;
   ex:landingPage <https://github.com/presbrey> ;
-  ex:name "Presbrey" ;
-  ex:subType con:Person .
+  ex:name "Presbrey" .
 
 cdata:PROV4ITDaTa a ex:Software ;
   ex:maintainer cdata:Gertjan_de_Mulder ;
@@ -2402,13 +2162,11 @@ cdata:Query_solid a ex:Software ;
 cdata:RahulGupta a ex:Person ;
   ex:forumHandle "@CxRes" ;
   ex:landingPage <https://github.com/CxRes> ;
-  ex:name "Rahul Gupta" ;
-  ex:subType con:Person .
+  ex:name "Rahul Gupta" .
 
 cdata:Raju_George a ex:Person ;
   ex:forumHandle "@rajugeorge" ;
   ex:name "Raju George" ;
-  ex:subType con:Person ;
   ex:webid <https://id.inrupt.com/rajugeorge> .
 
 cdata:Ramen a ex:Software ;
@@ -2418,12 +2176,10 @@ cdata:Ramen a ex:Software ;
   ex:technicalKeyword "food" .
 
 cdata:Rami_Rustom a ex:Person ;
-  ex:name "Rami Rustom" ;
-  ex:subType con:Person .
+  ex:name "Rami Rustom" .
 
 cdata:Raul_R_Pearson a ex:Person ;
-  ex:name "Raúl R. Pearson" ;
-  ex:subType con:Person .
+  ex:name "Raúl R. Pearson" .
 
 cdata:Rdf_ext a ex:Software ;
   ex:description "RDF-Ext is a developer-friendly extension for RDF/JS." ;
@@ -2443,8 +2199,7 @@ cdata:rdf-vocab a ex:Ontology ;
   ex:landingPage rdf: ;
   ex:name "RDF Syntax" ;
   ex:namespaceURI rdf: ;
-  ex:prefix "rdf:" ;
-  ex:subType con:Ontology .
+  ex:prefix "rdf:" .
 
 cdata:rdflib a ex:Software ;
   ex:description "Linked Data API for JavaScript." ;
@@ -2459,8 +2214,7 @@ cdata:rdfs-vocab a ex:Ontology ;
   ex:landingPage rdfs: ;
   ex:name "RDF Schema" ;
   ex:namespaceURI rdfs: ;
-  ex:prefix "rdfs:" ;
-  ex:subType con:Ontology .
+  ex:prefix "rdfs:" .
 
 cdata:Record_0001 a ex:Specification ;
   ex:description "Writing to a time-based fragmented Linked Data Event Stream that is stored on a Linked Data Platform."@en ;
@@ -2468,8 +2222,7 @@ cdata:Record_0001 a ex:Specification ;
   ex:landingPage <https://woutslabbinck.github.io/LDESinLDP/> ;
   ex:modified "2025-06-05T21:36:50.756Z"^^xsd:dateTime ;
   ex:name "Writing Linked Data Event Streams in LDP Basic Containers"@en ;
-  ex:repository <https://github.com/woutslabbinck/LDESinLDP/> ;
-  ex:subType con:Specification .
+  ex:repository <https://github.com/woutslabbinck/LDESinLDP/> .
 
 cdata:Record_0002 a ex:Specification ;
   ex:description "This document provides the specification and examples of the perennial DToU language, a language for describing the Terms of Use of Data, both for data providers (e.g. users) and data consumers (e.g. applications).\n\nIt accompanies the paper \"Perennial Semantic Data Terms of Use for Decentralized Web\" by Rui Zhao and Jun Zhao, at ACM Web Conference 2024 (previously known as International World Wide Web Conference; WWW2024), doi 10.1145/3589334.3645631."@en ;
@@ -2477,8 +2230,7 @@ cdata:Record_0002 a ex:Specification ;
   ex:landingPage <https://me.ryey.icu/solid-dtou/dtou-spec.html> ;
   ex:modified "2025-06-05T21:39:22.437Z"^^xsd:dateTime ;
   ex:name "DToU Language Spec"@en ;
-  ex:repository <https://github.com/OxfordHCC/solid-dtou/> ;
-  ex:subType con:Specification .
+  ex:repository <https://github.com/OxfordHCC/solid-dtou/> .
 
 cdata:Record_0003 a ex:CreativeWork ;
   ex:description "Data and data processing have become an indispensable aspect for our society. Insights drawn from collective data make invaluable contribution to scientific and societal research and business. But there are increasing worries about privacy issues and data misuse. This has prompted the emergence of decentralised personal data stores (PDS) like Solid that provide individuals more control over their personal data. However, existing PDS frameworks face challenges in ensuring data privacy when performing collective computations with data from multiple users. While Secure Multi-Party Computation (MPC) offers input secrecy protection during the computation without relying on any single party, issues emerge when directly applying MPC in the context of PDS, particularly due to key factors like autonomy and decentralisation. In this work, we discuss the essence of this issue, identify a potential solution, and introduce a modular architecture, Libertas, to integrate MPC with PDS like Solid, without requiring protocol-level changes. We introduce a paradigm shift from an `omniscient' view to individual-based, user-centric view of trust and security, and discuss the threat model of Libertas. Two realistic use cases for collaborative data processing are used for evaluation, both for technical feasibility and empirical benchmark, highlighting its effectiveness in empowering gig workers and generating differentially private synthetic data. The results of our experiments underscore Libertas' linear scalability and provide valuable insights into compute optimisations, thereby advancing the state-of-the-art in privacy-preserving data processing practices. By offering practical solutions for maintaining both individual autonomy and privacy in collaborative data processing environments, Libertas contributes significantly to the ongoing discourse on privacy protection in data-driven decision-making contexts. \nPrepring available at https://arxiv.org/abs/2309.16365"@en ;
@@ -2529,104 +2281,84 @@ cdata:RedpencilService a ex:Service ;
   ex:subType con:GeneralPurposePodService .
 
 cdata:Reuben_Binns a ex:Person ;
-  ex:name "Reuben Binns" ;
-  ex:subType con:Person .
+  ex:name "Reuben Binns" .
 
 cdata:RezaSoltani a ex:Person ;
-  ex:name "Reza Soltani" ;
-  ex:subType con:Person .
+  ex:name "Reza Soltani" .
 
 cdata:Ricardo_Usbeck a ex:Person ;
-  ex:name "Ricardo Usbeck" ;
-  ex:subType con:Person .
+  ex:name "Ricardo Usbeck" .
 
 cdata:Richard a ex:Person ;
   ex:forumHandle "@richard" ;
-  ex:name "Richard" ;
-  ex:subType con:Person .
+  ex:name "Richard" .
 
 cdata:Richard_Marshall a ex:Person ;
-  ex:name "Richard Marshall" ;
-  ex:subType con:Person .
+  ex:name "Richard Marshall" .
 
 cdata:Ricky_White a ex:Person ;
-  ex:name "Ricky White" ;
-  ex:subType con:Person .
+  ex:name "Ricky White" .
 
 cdata:Rishabh_Gupta a ex:Person ;
-  ex:name "Rishabh Gupta" ;
-  ex:subType con:Person .
+  ex:name "Rishabh Gupta" .
 
 cdata:RJ_Herrick a ex:Person ;
-  ex:name "RJ Herrick" ;
-  ex:subType con:Person .
+  ex:name "RJ Herrick" .
 
 cdata:rLog-vocab a ex:Ontology ;
   ex:landingPage <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#> ;
   ex:name "rLog" ;
   ex:namespaceURI <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#> ;
-  ex:prefix "rlog:" ;
-  ex:subType con:Ontology .
+  ex:prefix "rlog:" .
 
 cdata:Rob a ex:Person ;
   ex:forumHandle "@rob" ;
-  ex:name "Rob" ;
-  ex:subType con:Person .
+  ex:name "Rob" .
 
 cdata:Robert_Ganger a ex:Person ;
   ex:forumHandle "@rganger" ;
-  ex:name "Robert Ganger" ;
-  ex:subType con:Person .
+  ex:name "Robert Ganger" .
 
 cdata:Rodrigo_Witzel a ex:Person ;
   ex:forumHandle "@rwitzel" ;
-  ex:name "Rodrigo Witzel" ;
-  ex:subType con:Person .
+  ex:name "Rodrigo Witzel" .
 
 cdata:Roger_Perry a ex:Person ;
-  ex:name "Roger Perry" ;
-  ex:subType con:Person .
+  ex:name "Roger Perry" .
 
 cdata:Ronald_Siebes a ex:Person ;
   ex:contactEmail "r.m.siebes@vu.nl"@en ;
   ex:description "Assistant professor at UCDS group, VU Amsterdam"@en ;
   ex:modified "2025-06-09T15:23:17.525Z"^^xsd:dateTime ;
-  ex:name "Ronald Siebes"@en ;
-  ex:subType con:Person .
+  ex:name "Ronald Siebes"@en .
 
 cdata:Rosano a ex:Person ;
   ex:forumHandle "@rosano" ;
   ex:landingPage <https://github.com/rosano> ;
-  ex:name "Rosano" ;
-  ex:subType con:Person .
+  ex:name "Rosano" .
 
 cdata:Ross_Horne a ex:Person ;
   ex:contactEmail "ross.horne@strath.ac.uk" ;
   ex:description "Interested in authentication protocols and security policy models."@en ;
   ex:modified "2025-04-25T07:49:04.398Z"^^xsd:dateTime ;
   ex:name "Ross Horne"@en ;
-  ex:resourcesOffered "Security analysis of proposals for authentication and access control."@en ;
-  ex:subType con:Person .
+  ex:resourcesOffered "Security analysis of proposals for authentication and access control."@en .
 
 cdata:Roy_Leon a ex:Person ;
-  ex:name "Roy Leon" ;
-  ex:subType con:Person .
+  ex:name "Roy Leon" .
 
 cdata:Ruben_Dedecker a ex:Person ;
-  ex:name "Ruben Dedecker" ;
-  ex:subType con:Person .
+  ex:name "Ruben Dedecker" .
 
 cdata:Ruben_Taelman a ex:Person ;
   ex:forumHandle "@rubensworks" ;
   ex:landingPage <https://github.com/rubensworks> ;
-  ex:name "Ruben Taelman" ;
-  ex:subType con:Person .
+  ex:name "Ruben Taelman" .
 
 cdata:Ruben_Verborgh a ex:Person ;
   ex:forumHandle "@RubenVerborgh" ;
   ex:landingPage <https://github.com/RubenVerborgh> ;
   ex:name "Ruben Verborgh" ;
-  ex:subType con:Person ;
   ex:webid <https://ruben.verborgh.org/profile/#me> .
 
 cdata:RuiZhao a ex:Person ;
@@ -2637,17 +2369,14 @@ cdata:RuiZhao a ex:Person ;
   ex:modified "2025-04-25T07:55:57.565Z"^^xsd:dateTime ;
   ex:name "Rui Zhao"@en ;
   ex:resourcesOffered "Mentorship\nResearch Collaboration\nDevelopment Collaboration\nLibraries\nApps"@en ;
-  ex:subType con:Person ;
   ex:webid <https://renyuneyun.solidcommunity.net/profile/card#me> .
 
 cdata:Ryan_Aelen a ex:Person ;
   ex:forumHandle "@RyanAelen" ;
-  ex:name "Ryan Aelen" ;
-  ex:subType con:Person .
+  ex:name "Ryan Aelen" .
 
 cdata:Sabrina_Kirrane a ex:Person ;
   ex:name "Sabrina Kirrane" ;
-  ex:subType con:Person ;
   ex:webid <https://skirrane.inrupt.net/profile/card#me> .
 
 cdata:SAI_Application a ex:ClassOfProduct ;
@@ -2660,75 +2389,61 @@ cdata:SAI_Authorization_Agent a ex:ClassOfProduct ;
 
 cdata:Samir_Loumachi a ex:Person ;
   ex:forumHandle "@GSL" ;
-  ex:name "Samir Loumachi" ;
-  ex:subType con:Person .
+  ex:name "Samir Loumachi" .
 
 cdata:Samy_Vincent a ex:Person ;
-  ex:name "Samy Vincent" ;
-  ex:subType con:Person .
+  ex:name "Samy Vincent" .
 
 cdata:Sander a ex:Person ;
   ex:name "Sander" ;
-  ex:subType con:Person ;
   ex:webid <https://gatos.inrupt.net/profile/card#me> .
 
 cdata:Sandra_Wachter a ex:Person ;
-  ex:name "Sandra Wachter" ;
-  ex:subType con:Person .
+  ex:name "Sandra Wachter" .
 
 cdata:Santi_Lozano a ex:Person ;
-  ex:name "Santi Lozano" ;
-  ex:subType con:Person .
+  ex:name "Santi Lozano" .
 
 cdata:Sarah_Hutton a ex:Person ;
-  ex:name "Sarah Hutton" ;
-  ex:subType con:Person .
+  ex:name "Sarah Hutton" .
 
 cdata:Sarven_Capadisli a ex:Person ;
   ex:name "Sarven Capadisli" ;
-  ex:subType con:Person ;
   ex:webid <https://csarven.ca/#i> .
 
 cdata:Sascha a ex:Person ;
   ex:forumHandle "@Sascha" ;
   ex:name "Sascha" ;
-  ex:subType con:Person ;
   ex:webid <https://sascha.inrupt.net/profile/card#me> .
 
 cdata:schema-vocab a ex:Ontology ;
   ex:landingPage <https://schema.org/> ;
   ex:name "Schema" ;
   ex:namespaceURI <https://schema.org/> ;
-  ex:prefix "schema:" ;
-  ex:subType con:Ontology .
+  ex:prefix "schema:" .
 
 cdata:Sebastian_Schmid a ex:Person ;
-  ex:name "Sebastian Schmid" ;
-  ex:subType con:Person .
+  ex:name "Sebastian Schmid" .
 
 cdata:Sebastien_Rosset a ex:Person ;
   ex:forumHandle "@srosset81" ;
   ex:name "Sebastien Rosset" ;
-  ex:subType con:Person ;
   ex:webid <https://armoise.co/sro> .
 
 cdata:Shape_Trees a ex:Specification ;
   ex:editor cdata:Justin_Bingham ;
   ex:landingPage <https://shapetrees.org/TR/specification/> ;
   ex:name "Shape Trees" ;
-  ex:repository <https://github.com/shapetrees/specification> ;
-  ex:subType con:Specification .
+  ex:repository <https://github.com/shapetrees/specification> .
 
 cdata:Sharon_Stratsianis a ex:Person ;
   ex:forumHandle "@SharonStrats" ;
   ex:landingPage <https://github.com/SharonStrats> ;
   ex:name "Sharon Stratsianis" ;
-  ex:subType con:Person ;
   ex:webid <https://sharonstrats.inrupt.net/profile/card#me> .
 
 cdata:Sheff_Engi a ex:Person ;
-  ex:name "Sheff Engi" ;
-  ex:subType con:Person .
+  ex:name "Sheff Engi" .
 
 cdata:Shighl a ex:Software ;
   ex:description "Lets to write simply HTML/JavaScript to interact with a Solid Pod Session, Profile, Inboxand Chat" ;
@@ -2748,8 +2463,7 @@ cdata:Shighl_elements a ex:Software ;
 
 cdata:Siddharth_Rahul_Raut a ex:Person ;
   ex:forumHandle "@SiddharthRaut" ;
-  ex:name "Siddharth Rahul Raut" ;
-  ex:subType con:Person .
+  ex:name "Siddharth Rahul Raut" .
 
 cdata:SIDN a ex:Organization ;
   ex:landingPage <https://www.sidnfonds.nl/excerpt/> ;
@@ -2758,48 +2472,39 @@ cdata:SIDN a ex:Organization ;
 
 cdata:Simon_Chabot a ex:Person ;
   ex:name "Simon Chabot" ;
-  ex:subType con:Person ;
   ex:webid <https://schabot.solidcommunity.net/profile/card#me> .
 
 cdata:Simon_Grant a ex:Person ;
-  ex:name "Simon Grant" ;
-  ex:subType con:Person .
+  ex:name "Simon Grant" .
 
 cdata:Simon_Lauvet a ex:Person ;
-  ex:name "Simon Lauvet" ;
-  ex:subType con:Person .
+  ex:name "Simon Lauvet" .
 
 cdata:Simon_Shapiro a ex:Person ;
   ex:forumHandle "@SimonShapiro" ;
-  ex:name "Simon Shapiro" ;
-  ex:subType con:Person .
+  ex:name "Simon Shapiro" .
 
 cdata:Sina_Bahram a ex:Person ;
-  ex:name "Sina Bahram" ;
-  ex:subType con:Person .
+  ex:name "Sina Bahram" .
 
 cdata:Sindhu_Vasireddy a ex:Person ;
-  ex:name "Sindhu Vasireddy" ;
-  ex:subType con:Person .
+  ex:name "Sindhu Vasireddy" .
 
 cdata:sioc-vocab a ex:Ontology ;
   ex:landingPage <http://rdfs.org/sioc/ns#> ;
   ex:name "Socially Inter-linked Online Communities " ;
   ex:namespaceURI <http://rdfs.org/sioc/ns#> ;
-  ex:prefix "sioc:" ;
-  ex:subType con:Ontology .
+  ex:prefix "sioc:" .
 
 cdata:Sjoerd_van_Groning a ex:Person ;
   ex:forumHandle "@sjoerdvangroning" ;
-  ex:name "Sjoerd van Groning" ;
-  ex:subType con:Person .
+  ex:name "Sjoerd van Groning" .
 
 cdata:skos-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/2004/02/skos/core#> ;
   ex:name "Simple Knowledge Organization System" ;
   ex:namespaceURI <http://www.w3.org/2004/02/skos/core#> ;
-  ex:prefix "skos:" ;
-  ex:subType con:Ontology .
+  ex:prefix "skos:" .
 
 cdata:Slack a ex:Organization ;
   ex:landingPage <https://slack.com/developers/fund> ;
@@ -2848,13 +2553,11 @@ cdata:Socialid a ex:Software ;
   ex:technicalKeyword "pod management" .
 
 cdata:Soeren_Grauslund a ex:Person ;
-  ex:name "Søren Grauslund" ;
-  ex:subType con:Person .
+  ex:name "Søren Grauslund" .
 
 cdata:Sofia_Martin a ex:Person ;
   ex:forumHandle "@sofimrtn" ;
-  ex:name "Sofía Martín" ;
-  ex:subType con:Person .
+  ex:name "Sofía Martín" .
 
 cdata:Solid_Application_Interoperability a ex:Specification ;
   ex:author <https://elf-pavlik.hackers4peace.net> ;
@@ -2862,8 +2565,7 @@ cdata:Solid_Application_Interoperability a ex:Specification ;
   ex:editor <https://elf-pavlik.hackers4peace.net>, cdata:Justin_Bingham, <urn:uuid:3b05c17c-f44a-470e-8031-408abee6e2ca> ;
   ex:landingPage <https://solid.github.io/data-interoperability-panel/specification/> ;
   ex:name "Solid Application Interoperability" ;
-  ex:repository <https://github.com/solid/data-interoperability-panel> ;
-  ex:subType con:Specification .
+  ex:repository <https://github.com/solid/data-interoperability-panel> .
 
 cdata:Solid_Application_Interoperability__Application_Primer a ex:CreativeWork ;
   ex:about cdata:Solid_Application_Interoperability ;
@@ -2936,8 +2638,7 @@ cdata:Solid_Chat_Spec a ex:Specification ;
   ex:editor cdata:Tim_Berners-Lee ;
   ex:landingPage <https://solid.github.io/chat/> ;
   ex:name "Solid Chat" ;
-  ex:repository <https://github.com/solid/chat> ;
-  ex:subType con:Specification .
+  ex:repository <https://github.com/solid/chat> .
 
 cdata:Solid_Chess a ex:Software ;
   ex:name "Solid Chess" ;
@@ -2990,8 +2691,7 @@ cdata:Solid_DID_Method a ex:Specification ;
   ex:editor cdata:Dmitri_Zagidulin, cdata:Sarven_Capadisli ;
   ex:landingPage <https://solid.github.io/did-method-solid/> ;
   ex:name "Solid DID Method" ;
-  ex:repository <https://github.com/solid/did-method-solid> ;
-  ex:subType con:Specification .
+  ex:repository <https://github.com/solid/did-method-solid> .
 
 cdata:Solid_E2EE a ex:CreativeWork ;
   ex:author cdata:Henri_Cattoire, cdata:KU_Leuven ;
@@ -3210,8 +2910,7 @@ cdata:Solid_WebID_Profile a ex:Specification ;
   ex:editor cdata:Jeff_Zucker, cdata:Sarven_Capadisli, cdata:VirginiaBalseiro ;
   ex:landingPage <https://solid.github.io/webid-profile/> ;
   ex:name "Solid WebID Profile" ;
-  ex:repository <https://github.com/solid/webid-profile> ;
-  ex:subType con:Specification .
+  ex:repository <https://github.com/solid/webid-profile> .
 
 cdata:Solid_wrap a ex:Software ;
   ex:description "Simple example of authenticated reads/writes to a Solid pod" ;
@@ -3238,23 +2937,20 @@ cdata:Solid-OIDC a ex:Specification ;
   ex:editor <https://elf-pavlik.hackers4peace.net>, <https://people.apache.org/~acoburn/#i> ;
   ex:landingPage <https://solidproject.org/TR/oidc> ;
   ex:name "Solid-OIDC" ;
-  ex:repository <https://github.com/solid/solid-oidc> ;
-  ex:subType con:Specification .
+  ex:repository <https://github.com/solid/solid-oidc> .
 
 cdata:Solid-PREP a ex:Specification ;
   ex:author <https://elf-pavlik.hackers4peace.net>, cdata:RahulGupta ;
   ex:editor cdata:RahulGupta ;
   ex:landingPage <https://solid.github.io/solid-prep/protocol/> ;
   ex:name "Solid-PREP" ;
-  ex:repository <https://github.com/solid/solid-prep> ;
-  ex:subType con:Specification .
+  ex:repository <https://github.com/solid/solid-prep> .
 
 cdata:solid-terms-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/ns/solid/terms#> ;
   ex:name "Solid Terms" ;
   ex:namespaceURI <http://www.w3.org/ns/solid/terms#> ;
-  ex:prefix "solid:" ;
-  ex:subType con:Ontology .
+  ex:prefix "solid:" .
 
 cdata:Solidarity a ex:Software ;
   ex:clientID <https://solidarity.inrupt.net/profile/card#me> ;
@@ -3289,7 +2985,6 @@ cdata:SolidCG-WeeklyCall a ex:Event ;
   ex:provider cdata:SolidCG ;
   ex:repository <https://github.com/solid/specification/tree/main/meetings> ;
   ex:Schedule "Every Wednesday at 15:00 UTC" ;
-  ex:subType con:Event ;
   ex:videoCallPage <https://meet.jit.si/solid-cg> .
 
 cdata:SolidCommunityAU a ex:Organization ;
@@ -3384,7 +3079,6 @@ cdata:SolidOS-WeeklyCall a ex:Event ;
   ex:name "SolidOS Video Call" ;
   ex:provider cdata:SolidOSteam ;
   ex:schedule "Every Wednesday at 17:00 UTC" ;
-  ex:subType con:Event ;
   ex:videoCallPage <https://meet.jit.si/solid-os> .
 
 cdata:SolidOSteam a ex:Organization ;
@@ -3420,7 +3114,6 @@ cdata:SolidPractitioners-WeeklyCall a ex:Event ;
   ex:provider cdata:SolidPractitioners ;
   ex:repository <https://github.com/solid-contrib/practitioners> ;
   ex:schedule "The first and third Monday of every month at 15:00 UTC" ;
-  ex:subType con:Event ;
   ex:videoCallPage <https://meet.jit.si/solid-practitioners> .
 
 cdata:SolidProject a ex:Organization ;
@@ -3440,8 +3133,7 @@ cdata:SolidShapesWiki a ex:CreativeWork ;
   ex:subType con:OtherTechResource .
 
 cdata:SolidSymposium a ex:Event ;
-  ex:name "Solid Symposium" ;
-  ex:subType con:Event .
+  ex:name "Solid Symposium" .
 
 cdata:SolidTagExplainer a ex:CreativeWork ;
   ex:author cdata:Tim_Berners-Lee ;
@@ -3498,8 +3190,7 @@ cdata:SolidWebDotOrg a ex:Service ;
   ex:subType con:GeneralPurposePodService .
 
 cdata:SolidWorld a ex:Event ;
-  ex:name "Solid World" ;
-  ex:subType con:Event .
+  ex:name "Solid World" .
 
 cdata:Solside a ex:Software ;
   ex:maintainer cdata:Mike_Adams ;
@@ -3518,12 +3209,10 @@ cdata:Solvent a ex:Software ;
 
 cdata:Soto_Estevez a ex:Person ;
   ex:landingPage <https://github.com/kriogenia> ;
-  ex:name "Soto Estevez" ;
-  ex:subType con:Person .
+  ex:name "Soto Estevez" .
 
 cdata:Souen_Mazouin a ex:Person ;
-  ex:name "Souen Mazouin" ;
-  ex:subType con:Person .
+  ex:name "Souen Mazouin" .
 
 cdata:Soukai a ex:Software ;
   ex:landingPage <https://soukai.js.org> ;
@@ -3573,35 +3262,28 @@ cdata:stat-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/ns/posix/stat#> ;
   ex:name "Stat" ;
   ex:namespaceURI <http://www.w3.org/ns/posix/stat#> ;
-  ex:prefix "posix:" ;
-  ex:subType con:Ontology .
+  ex:prefix "posix:" .
 
 cdata:Stefan_Dercon a ex:Person ;
-  ex:name "Stefan Dercon" ;
-  ex:subType con:Person .
+  ex:name "Stefan Dercon" .
 
 cdata:Stefan_Hohn a ex:Person ;
   ex:name "Stefan Höhn" ;
-  ex:subType con:Person ;
   ex:webid <https://dewomser.solidcommunity.net/profile/card#me> .
 
 cdata:Stefan_Rother-Stubs a ex:Person ;
   ex:name "Stefan Rother-Stübs" ;
-  ex:subType con:Person ;
   ex:webid <https://srs.solidcommunity.net/profile/card#me> .
 
 cdata:Stein_Vraale a ex:Person ;
   ex:forumHandle "@ztein" ;
-  ex:name "Stein Vråle" ;
-  ex:subType con:Person .
+  ex:name "Stein Vråle" .
 
 cdata:Steven_Vandevelde a ex:Person ;
-  ex:name "Steven Vandevelde" ;
-  ex:subType con:Person .
+  ex:name "Steven Vandevelde" .
 
 cdata:Stijn_Taelemans a ex:Person ;
   ex:name "Stijn Taelemans" ;
-  ex:subType con:Person ;
   ex:webid <https://stijntaelemans.inrupt.net/profile/card#me> .
 
 cdata:StreamingHTTPChannel2023 a ex:Specification ;
@@ -3610,8 +3292,7 @@ cdata:StreamingHTTPChannel2023 a ex:Specification ;
   ex:editor <https://elf-pavlik.hackers4peace.net> ;
   ex:landingPage <https://solid.github.io/notifications/streaming-http-channel-2023> ;
   ex:name "StreamingHTTPChannel2023" ;
-  ex:repository <https://github.com/solid/notifications> ;
-  ex:subType con:Specification .
+  ex:repository <https://github.com/solid/notifications> .
 
 cdata:StreamingHTTPChannel2023NotificationReceiver a ex:ClassOfProduct ;
   ex:name "Solid Streaming HTTP Notification Receiver" ;
@@ -3623,24 +3304,19 @@ cdata:StreamingHTTPChannel2023NotificationSender a ex:ClassOfProduct ;
 
 cdata:Sven_Lieber a ex:Person ;
   ex:name "Sven Lieber" ;
-  ex:subType con:Person ;
   ex:webid <https://sven-lieber.org/profile#me> .
 
 cdata:Swan_Bouvier-Muller a ex:Person ;
-  ex:name "Swan Bouvier-Muller" ;
-  ex:subType con:Person .
+  ex:name "Swan Bouvier-Muller" .
 
 cdata:Syed_Ali_Raza_Zaidi a ex:Person ;
-  ex:name "Syed Ali Raza Zaidi" ;
-  ex:subType con:Person .
+  ex:name "Syed Ali Raza Zaidi" .
 
 cdata:Sylvain_Le_Bon a ex:Person ;
-  ex:name "Sylvain Le Bon" ;
-  ex:subType con:Person .
+  ex:name "Sylvain Le Bon" .
 
 cdata:Sylvain_Saint-Andre a ex:Person ;
-  ex:name "Sylvain Saint-André" ;
-  ex:subType con:Person .
+  ex:name "Sylvain Saint-André" .
 
 cdata:Syntropize a ex:Software ;
   ex:description "a proposal to reclaim the original vision of the personal computer as the means for\n     intelligence augmentation and seamless collaboration\n  " ;
@@ -3661,13 +3337,11 @@ cdata:Tadanime a ex:Software ;
 
 cdata:Taekhoon_Kim a ex:Person ;
   ex:name "Taekhoon Kim" ;
-  ex:subType con:Person ;
   ex:webid <https://techny.inrupt.net/profile/card#me> .
 
 cdata:Taisuke_Fukuno a ex:Person ;
   ex:landingPage <https://github.com/taisukef> ;
-  ex:name "Taisuke Fukuno" ;
-  ex:subType con:Person .
+  ex:name "Taisuke Fukuno" .
 
 cdata:Taisukef a ex:Software ;
   ex:maintainer cdata:Taisuke_Fukuno ;
@@ -3678,12 +3352,10 @@ cdata:Taisukef a ex:Software ;
   ex:technicalKeyword "general purpose app", "pod management", "profile" .
 
 cdata:Takeo_Nishikata a ex:Person ;
-  ex:name "Takeo Nishikata" ;
-  ex:subType con:Person .
+  ex:name "Takeo Nishikata" .
 
 cdata:Tao_Chen a ex:Person ;
-  ex:name "Tao Chen" ;
-  ex:subType con:Person .
+  ex:name "Tao Chen" .
 
 cdata:TeamIdLive a ex:Service ;
   ex:contactEmail "info@meisdata.io" ;
@@ -3701,48 +3373,38 @@ cdata:TeamIdLive a ex:Service ;
 cdata:Ted_Thibodeau a ex:Person ;
   ex:landingPage <https://github.com/TallTed> ;
   ex:name "Ted Thibodeau" ;
-  ex:subType con:Person ;
   ex:webid <https://id.myopenlink.net/dataspace/person/tthibodeau#this> .
 
 cdata:Teodora_Petkova a ex:Person ;
   ex:name "Teodora Petkova" ;
-  ex:subType con:Person ;
   ex:webid <https://teodora.solidcommunity.net/profile/card#me> .
 
 cdata:Terence_Eden a ex:Person ;
-  ex:name "Terence Eden" ;
-  ex:subType con:Person .
+  ex:name "Terence Eden" .
 
 cdata:Theodora_Petkova a ex:Person ;
   ex:forumHandle "@TheodoraPetkova" ;
-  ex:name "Theodora Petkova" ;
-  ex:subType con:Person .
+  ex:name "Theodora Petkova" .
 
 cdata:Thomas_Fritz a ex:Person ;
   ex:landingPage <https://github.com/thomasfr> ;
-  ex:name "Thomas Fritz" ;
-  ex:subType con:Person .
+  ex:name "Thomas Fritz" .
 
 cdata:Thomas_Gallagher a ex:Person ;
-  ex:name "Thomas Gallagher" ;
-  ex:subType con:Person .
+  ex:name "Thomas Gallagher" .
 
 cdata:Thomas_Shouten a ex:Person ;
-  ex:name "Thomas Shouten" ;
-  ex:subType con:Person .
+  ex:name "Thomas Shouten" .
 
 cdata:Thomas_Tanon a ex:Person ;
   ex:landingPage <https://github.com/Tpt> ;
-  ex:name "Thomas Tanon" ;
-  ex:subType con:Person .
+  ex:name "Thomas Tanon" .
 
 cdata:Thorsten_Kastner a ex:Person ;
-  ex:name "Thorsten Kastner" ;
-  ex:subType con:Person .
+  ex:name "Thorsten Kastner" .
 
 cdata:Tic_Tac_Moe a ex:Person ;
   ex:name "Tic Tac Moe" ;
-  ex:subType con:Person ;
   ex:webid <https://tic-tac-moe.inrupt.net/profile/card#me> .
 
 cdata:Tiddlywiki a ex:Software ;
@@ -3759,49 +3421,41 @@ cdata:Tim_Berners-Lee a ex:Person ;
   ex:matrixHandle "@timbl" ;
   ex:modified "2025-05-15T19:00:05.011Z"^^xsd:dateTime ;
   ex:name "Tim Berners-Lee" ;
-  ex:subType con:Person ;
   ex:webid <https://timbl.solidcommunity.net/profile/card#me> .
 
 cdata:time-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/2006/time#> ;
   ex:name "Time" ;
   ex:namespaceURI <http://www.w3.org/2006/time#> ;
-  ex:prefix "time:" ;
-  ex:subType con:Ontology .
+  ex:prefix "time:" .
 
 cdata:Timea_Turdean a ex:Person ;
   ex:landingPage <https://github.com/timea-solid> ;
   ex:name "Timea Turdean" ;
-  ex:subType con:Person ;
   ex:webid <https://timea.solidcommunity.net/profile/card#me> .
 
 cdata:timezone-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/2006/timezone#> ;
   ex:name "Timezone" ;
   ex:namespaceURI <http://www.w3.org/2006/timezone#> ;
-  ex:prefix "tzont:" ;
-  ex:subType con:Ontology .
+  ex:prefix "tzont:" .
 
 cdata:Timo_Kankaanpaa a ex:Person ;
   ex:name "Timo Kankaanpää" ;
-  ex:subType con:Person ;
   ex:webid <https://timojkankaanpaa.solidcommunity.net/profile/card#me> .
 
 cdata:TimStanden a ex:Person ;
-  ex:name "Tim Standen" ;
-  ex:subType con:Person .
+  ex:name "Tim Standen" .
 
 cdata:Tobias_Käfer a ex:Person ;
   ex:contactEmail "tobias.kaefer@kit.edu" ;
   ex:landingPage <https://websci.aifb.kit.edu/Tobias_Kaefer.php> ;
   ex:modified "2025-04-25T07:58:10.536Z"^^xsd:dateTime ;
   ex:name "Tobias Käfer"@en ;
-  ex:subType con:Person ;
   ex:webid <https://kaefer3000.solidcommunity.net/profile/card#me> .
 
 cdata:Toby a ex:Person ;
   ex:name "Toby" ;
-  ex:subType con:Person ;
   ex:webid <https://tobytoberson.inrupt.net/profile/card#me> .
 
 cdata:TodoApp a ex:CreativeWork ;
@@ -3813,21 +3467,17 @@ cdata:TodoApp a ex:CreativeWork ;
 cdata:Tom a ex:Person ;
   ex:forumHandle "@anon36056958" ;
   ex:landingPage <https://gitlab.com/tag42git> ;
-  ex:name "Tom" ;
-  ex:subType con:Person .
+  ex:name "Tom" .
 
 cdata:Tom_Friendly a ex:Person ;
   ex:name "Tom Friendly" ;
-  ex:subType con:Person ;
   ex:webid <https://carloss.inrupt.net/profile/card#me> .
 
 cdata:Tory_Clasen a ex:Person ;
-  ex:name "Tory Clasen" ;
-  ex:subType con:Person .
+  ex:name "Tory Clasen" .
 
 cdata:Travis_Vachon a ex:Person ;
   ex:name "Travis Vachon" ;
-  ex:subType con:Person ;
   ex:webid <https://tvachon.inrupt.net/profile/card#me> .
 
 cdata:TrinAppSuite a ex:Software ;
@@ -3864,15 +3514,13 @@ cdata:Tripledoc a ex:Software ;
 cdata:Tyler_Childs a ex:Person ;
   ex:forumHandle "@tychi" ;
   ex:name "Tyler Childs" ;
-  ex:subType con:Person ;
   ex:webid <https://tychi.inrupt.net> .
 
 cdata:ui-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/ns/ui#> ;
   ex:name "User Interface" ;
   ex:namespaceURI <http://www.w3.org/ns/ui#> ;
-  ex:prefix "ui:" ;
-  ex:subType con:Ontology .
+  ex:prefix "ui:" .
 
 cdata:Umai a ex:Software ;
   ex:description "Collect and share recipes"@en ;
@@ -3921,37 +3569,31 @@ cdata:UseId a ex:Service ;
 
 cdata:V_Sri a ex:Person ;
   ex:name "V Sri" ;
-  ex:subType con:Person ;
   ex:webid <https://vsri.inrupt.net/profile/card#me> .
 
 cdata:vcard-vocab a ex:Ontology ;
   ex:landingPage <https://www.w3.org/2006/vcard/ns#> ;
   ex:name "vCard"@en ;
   ex:namespaceURI <https://www.w3.org/2006/vcard/ns#> ;
-  ex:prefix "vcard:" ;
-  ex:subType con:Ontology .
+  ex:prefix "vcard:" .
 
 cdata:Victor_Gonzalo_Cristobal a ex:Person ;
   ex:name "Víctor Gonzalo Cristóbal" ;
-  ex:subType con:Person ;
   ex:webid <https://victorgon.inrupt.net/profile/card#me> .
 
 cdata:Victor_Rodriguez-Doncel a ex:Person ;
-  ex:name "Víctor_Rodríguez-Doncel" ;
-  ex:subType con:Person .
+  ex:name "Víctor_Rodríguez-Doncel" .
 
 cdata:Vincent_Tunru a ex:Person ;
   ex:forumHandle "@Vincent" ;
   ex:landingPage <https://github.com/Vinnl> ;
   ex:name "Vincent Tunru" ;
-  ex:subType con:Person ;
   ex:webid <https://vincentt.inrupt.net/profile/card#me> .
 
 cdata:VirginiaBalseiro a ex:Person ;
   ex:forumHandle "@Virginia" ;
   ex:landingPage <https://github.com/VirginiaBalseiro> ;
   ex:name "Virginia Balseiro" ;
-  ex:subType con:Person ;
   ex:webid <https://virginiabalseiro.com/#me> .
 
 cdata:Visited_Countries a ex:Software ;
@@ -3976,8 +3618,7 @@ cdata:VueSolidPod a ex:CreativeWork ;
   ex:subType con:AboutSolidApps .
 
 cdata:Walter_Almeida a ex:Person ;
-  ex:name "Walter Almeida" ;
-  ex:subType con:Person .
+  ex:name "Walter Almeida" .
 
 cdata:Web_Solid_Auth a ex:Software ;
   ex:description "A Perl Solid web client" ;
@@ -4005,8 +3646,7 @@ cdata:WebhookChannel2023 a ex:Specification ;
   ex:editor <https://elf-pavlik.hackers4peace.net>, cdata:Jackson_Morgan ;
   ex:landingPage <https://solid.github.io/notifications/webhook-channel-2023> ;
   ex:name "WebhookChannel2023" ;
-  ex:repository <https://github.com/solid/notifications> ;
-  ex:subType con:Specification .
+  ex:repository <https://github.com/solid/notifications> .
 
 cdata:WebhookChannel2023NotificationReceiver a ex:ClassOfProduct ;
   ex:name "Solid Webhook Notification Receiver" ;
@@ -4038,8 +3678,7 @@ cdata:WebPushChannel2023 a ex:Specification ;
   ex:editor <https://elf-pavlik.hackers4peace.net>, cdata:Christoph_Braun ;
   ex:landingPage <https://solid.github.io/notifications/webpush-channel-2023> ;
   ex:name "WebPushChannel2023" ;
-  ex:repository <https://github.com/solid/notifications> ;
-  ex:subType con:Specification .
+  ex:repository <https://github.com/solid/notifications> .
 
 cdata:WebPushChannel2023NotificationSender a ex:ClassOfProduct ;
   ex:name "Solid WebPush Notification Sender" ;
@@ -4055,8 +3694,7 @@ cdata:WebSocketChannel2023 a ex:Specification ;
   ex:editor <https://people.apache.org/~acoburn/#i> ;
   ex:landingPage <https://solid.github.io/notifications/websocket-channel-2023> ;
   ex:name "WebSocketChannel2023" ;
-  ex:repository <https://github.com/solid/notifications> ;
-  ex:subType con:Specification .
+  ex:repository <https://github.com/solid/notifications> .
 
 cdata:WebSocketChannel2023NotificationSender a ex:ClassOfProduct ;
   ex:name "Solid WebSocket Notification Sender" ;
@@ -4076,76 +3714,60 @@ cdata:WelcomeToMyPlace a ex:Service ;
   ex:subType con:SpecializedPodService .
 
 cdata:Wendell_Baker a ex:Person ;
-  ex:name "Wendell Baker" ;
-  ex:subType con:Person .
+  ex:name "Wendell Baker" .
 
 cdata:Wim_Tobback a ex:Person ;
-  ex:name "Wim Tobback" ;
-  ex:subType con:Person .
+  ex:name "Wim Tobback" .
 
 cdata:Wonsuk_Lee a ex:Person ;
-  ex:name "Wonsuk Lee" ;
-  ex:subType con:Person .
+  ex:name "Wonsuk Lee" .
 
 cdata:Woods_Denny a ex:Person ;
-  ex:name "Woods Denny" ;
-  ex:subType con:Person .
+  ex:name "Woods Denny" .
 
 cdata:Wout_Schellaert a ex:Person ;
   ex:landingPage <https://github.com/wschella> ;
-  ex:name "Wout Schellaert" ;
-  ex:subType con:Person .
+  ex:name "Wout Schellaert" .
 
 cdata:Wout_Slabbinck a ex:Person ;
-  ex:name "Wout Slabbinick" ;
-  ex:subType con:Person .
+  ex:name "Wout Slabbinick" .
 
 cdata:Wouter_Janssens a ex:Person ;
   ex:name "Wouter Janssens" ;
-  ex:subType con:Person ;
   ex:webid <https://wouteraj.inrupt.net/profile/card#me> .
 
 cdata:Wouter_Kok a ex:Person ;
-  ex:name "Wouter Kok" ;
-  ex:subType con:Person .
+  ex:name "Wouter Kok" .
 
 cdata:Wouter_Termont a ex:Person ;
   ex:forumHandle "@woutermont" ;
   ex:name "Wouter Termont" ;
-  ex:subType con:Person ;
   ex:webid <https://woutermont.solidcommunity.net/profile/card#me> .
 
 cdata:xsd-vocab a ex:Ontology ;
   ex:landingPage xsd: ;
   ex:name "XML Schema" ;
   ex:namespaceURI xsd: ;
-  ex:prefix "xsd:" ;
-  ex:subType con:Ontology .
+  ex:prefix "xsd:" .
 
 cdata:Yehua_Chen a ex:Person ;
-  ex:name "Yehua Chen" ;
-  ex:subType con:Person .
+  ex:name "Yehua Chen" .
 
 cdata:Yujin_Park a ex:Person ;
   ex:name "Yujin Park" ;
-  ex:subType con:Person ;
   ex:webid <https://shrck1015.solidcommunity.net/profile/card#me> .
 
 cdata:Yuri_Savateev a ex:Person ;
-  ex:name "Yuri Savateev" ;
-  ex:subType con:Person .
+  ex:name "Yuri Savateev" .
 
 cdata:Yvo_Brevoort a ex:Person ;
-  ex:name "Yvo Brevoort" ;
-  ex:subType con:Person .
+  ex:name "Yvo Brevoort" .
 
 cdata:Zhilin_Zhang a ex:Person ;
-  ex:name "Zhilin Zhang" ;
-  ex:subType con:Person .
+  ex:name "Zhilin Zhang" .
 
 cdata:Zongyan_Li a ex:Person ;
-  ex:name "Zongyan Li" ;
-  ex:subType con:Person .
+  ex:name "Zongyan Li" .
 
 <urn:uuid:3b05c17c-f44a-470e-8031-408abee6e2ca> a ex:Person ;
   ex:name "Eric Prud'hommeaux" .

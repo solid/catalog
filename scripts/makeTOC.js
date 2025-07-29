@@ -1,4 +1,4 @@
-import {store,fetcher,source,findUniqueSubjects,parseRdfCollection,loadCatalog} from './utils.js';
+import {store,fetcher,source,findUniqueSubjects,parseRdfCollection,loadCatalog,isLocalhost} from './utils.js';
 
 export async function makeTOC(displayElement){
   let tree = await skos2toc(displayElement) ;
@@ -98,14 +98,18 @@ async function addTocListeners(){
   let dataNode = source().dataNode;
   let hasSubtype = source().subtypeNode ;
   let anchors = document.querySelectorAll('#toc a');
+  let subcount = 0;
   for(let anchor of anchors){
     let field = anchor.getAttribute('data-href') || anchor.getAttribute('href');
     let subtype = UI.rdf.sym(field);
     let instances = store.each(null,hasSubtype,subtype);
+    if(instances.length==0) instances = store.each(null,source().isa,subtype);
     if(instances.length>0){
+      subcount += instances.length;
       anchor.parentNode.innerHTML += ` <span class="number">${instances.length}</span>`;
     }
     else if(anchor.getAttribute('class')=="subtype") anchor.remove();
   }
-  document.getElementById('toc').innerHTML += `<p>${count} total records</p>`;
+  if(isLocalhost)  document.getElementById('toc').innerHTML += `<p>${count}/${subcount} total records</p>`;
+  else document.getElementById('toc').innerHTML += `<p>${count} total records</p>`;
 }

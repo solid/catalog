@@ -2,8 +2,9 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix ex: <http://example.org#> .
 
-@prefix con: <https://solidproject.solidcommunity.net/catalog/taxonomy#>.
+@prefix con: <https://solidproject.solidcommunity.net/catalog/taxonomy#> .
 
 con:SolidCatalogTaxonomy 
   a skos:ConceptScheme ;
@@ -13,11 +14,11 @@ con:SolidCatalogTaxonomy
     con:Service,
     con:Product,
     con:Organization,
-    con:Person,
+    ex:Person,
     con:TechnicalResource.
 
-con:Person
-  a skos:Concept;
+ex:Person
+  a skos:Concept, rdfs:Class;
   skos:inScheme con:SolidCatalogTaxonomy ;
   skos:altLabel "People"@en ;
   skos:prefLabel "Person".
@@ -28,14 +29,14 @@ con:TechnicalResource
   skos:altLabel "Technical Resources"@en ;
   skos:prefLabel "Technical Resource".
 
-con:Specification
-  a skos:Concept ;
+ex:Specification
+  a skos:Concept, rdfs:Class;
   skos:broader con:TechnicalResource ;
   skos:altLabel "Specifications"@en ;
   skos:prefLabel "Specification" .
 
-con:Ontology
-  a skos:Concept ;
+ex:Ontology
+  a skos:Concept, rdfs:Class;
   skos:broader con:TechnicalResource ;
   skos:altLabel "Ontologies";
   skos:prefLabel "Ontology" .
@@ -246,8 +247,8 @@ con:ParticipationOpportunity
   skos:altLabel "Participation Opportunities" ;
   skos:prefLabel "Participation Opportunity" .
 
-con:Event
-  a skos:Concept;
+ex:Event
+  a skos:Concept, rdfs:Class ;
   skos:broader con:ParticipationOpportunity ;
   skos:altLabel "Events"@en ;
   skos:prefLabel "Event"@en .
