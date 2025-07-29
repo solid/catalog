@@ -87,36 +87,28 @@
   ex:repository <https://github.com/solid/notifications> .
 
 <https://solidproject.org/TR/notifications-protocol#DiscoveryClient> a ex:ClassOfProduct ;
-  ex:name "Solid Notifications Discovery Client" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "Solid Notifications Discovery Client" .
 
 <https://solidproject.org/TR/notifications-protocol#NotificationReceiver> a ex:ClassOfProduct ;
-  ex:name "Solid Notifications Notification Receiver" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "Solid Notifications Notification Receiver" .
 
 <https://solidproject.org/TR/notifications-protocol#NotificationSender> a ex:ClassOfProduct ;
-  ex:name "Solid Notifications Notification Sender" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "Solid Notifications Notification Sender" .
 
 <https://solidproject.org/TR/notifications-protocol#ResourceServer> a ex:ClassOfProduct ;
-  ex:name "Solid Notifications Resource Server" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "Solid Notifications Resource Server" .
 
 <https://solidproject.org/TR/notifications-protocol#SubscriptionClient> a ex:ClassOfProduct ;
-  ex:name "Solid Notifications Subscription Client" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "Solid Notifications Subscription Client" .
 
 <https://solidproject.org/TR/notifications-protocol#SubscriptionServer> a ex:ClassOfProduct ;
-  ex:name "Solid Notifications Subscription Server" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "Solid Notifications Subscription Server" .
 
 <https://solidproject.org/TR/oidc#Client> a ex:ClassOfProduct ;
-  ex:name "Solid-OIDC Client" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "Solid-OIDC Client" .
 
 <https://solidproject.org/TR/oidc#Provider> a ex:ClassOfProduct ;
-  ex:name "Solid-OIDC Provider" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "Solid-OIDC Provider" .
 
 <https://solidproject.org/TR/protocol> a ex:Specification ;
   ex:definesConformanceFor <https://solidproject.org/TR/protocol#Client>, <https://solidproject.org/TR/protocol#Server> ;
@@ -125,12 +117,10 @@
   ex:repository <https://github.com/solid/specification> .
 
 <https://solidproject.org/TR/protocol#Client> a ex:ClassOfProduct ;
-  ex:name "Solid Client" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "Solid Client" .
 
 <https://solidproject.org/TR/protocol#Server> a ex:ClassOfProduct ;
-  ex:name "Solid Server" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "Solid Server" .
 
 <https://solidproject.org/TR/wac> a ex:Specification ;
   ex:author cdata:Henry_Story, cdata:Sarven_Capadisli, cdata:Tim_Berners-Lee ;
@@ -140,12 +130,10 @@
   ex:repository <https://github.com/solid/web-access-control-spec/> .
 
 <https://solidproject.org/TR/wac#Client> a ex:ClassOfProduct ;
-  ex:name "WAC Client" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "WAC Client" .
 
 <https://solidproject.org/TR/wac#Server> a ex:ClassOfProduct ;
-  ex:name "WAC Server" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "WAC Server" .
 
 cdata:0data_hello a ex:CreativeWork ;
   ex:author cdata:Rosano ;
@@ -180,12 +168,10 @@ cdata:acl-vocab a ex:Ontology ;
   ex:prefix "acl:" .
 
 cdata:ACP_Resource_Server a ex:ClassOfProduct ;
-  ex:name "ACP Resource Server" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "ACP Resource Server" .
 
 cdata:ACP_Server a ex:ClassOfProduct ;
-  ex:name "ACP Server" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "ACP Server" .
 
 cdata:ActivityPods a ex:Software ;
   ex:description "A new kind of architecture for web applications which aims to reconcile the ActivityPub and Solid standards., Brings together two game-changing technologies, ActivityPub and Solid Pods, and empowers developers to create truly decentralized applications"@en ;
@@ -2385,12 +2371,10 @@ cdata:Sabrina_Kirrane a ex:Person ;
   ex:webid <https://skirrane.inrupt.net/profile/card#me> .
 
 cdata:SAI_Application a ex:ClassOfProduct ;
-  ex:name "SAI Application" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "SAI Application" .
 
 cdata:SAI_Authorization_Agent a ex:ClassOfProduct ;
-  ex:name "SAI Authorization Agent" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "SAI Authorization Agent" .
 
 cdata:Samir_Loumachi a ex:Person ;
   ex:forumHandle "@GSL" ;
@@ -3300,12 +3284,10 @@ cdata:StreamingHTTPChannel2023 a ex:Specification ;
   ex:repository <https://github.com/solid/notifications> .
 
 cdata:StreamingHTTPChannel2023NotificationReceiver a ex:ClassOfProduct ;
-  ex:name "Solid Streaming HTTP Notification Receiver" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "Solid Streaming HTTP Notification Receiver" .
 
 cdata:StreamingHTTPChannel2023NotificationSender a ex:ClassOfProduct ;
-  ex:name "Solid Streaming HTTP Notification Sender" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "Solid Streaming HTTP Notification Sender" .
 
 cdata:Sven_Lieber a ex:Person ;
   ex:name "Sven Lieber" ;
@@ -3654,20 +3636,16 @@ cdata:WebhookChannel2023 a ex:Specification ;
   ex:repository <https://github.com/solid/notifications> .
 
 cdata:WebhookChannel2023NotificationReceiver a ex:ClassOfProduct ;
-  ex:name "Solid Webhook Notification Receiver" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "Solid Webhook Notification Receiver" .
 
 cdata:WebhookChannel2023NotificationSender a ex:ClassOfProduct ;
-  ex:name "Solid Webhook Notification Sender" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "Solid Webhook Notification Sender" .
 
 cdata:WebhookChannel2023SubscriptionClient a ex:ClassOfProduct ;
-  ex:name "Solid Webhook Subscription Client" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "Solid Webhook Subscription Client" .
 
 cdata:WebhookChannel2023SubscriptionServer a ex:ClassOfProduct ;
-  ex:name "Solid Webhook Subscription Server" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "Solid Webhook Subscription Server" .
 
 cdata:webid_Profile_editor a ex:Software ;
   ex:maintainer cdata:Andrei_Sambra ;
@@ -3686,12 +3664,10 @@ cdata:WebPushChannel2023 a ex:Specification ;
   ex:repository <https://github.com/solid/notifications> .
 
 cdata:WebPushChannel2023NotificationSender a ex:ClassOfProduct ;
-  ex:name "Solid WebPush Notification Sender" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "Solid WebPush Notification Sender" .
 
 cdata:WebPushChannel2023SubscriptionServer a ex:ClassOfProduct ;
-  ex:name "Solid WebPush Subscription Server" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "Solid WebPush Subscription Server" .
 
 cdata:WebSocketChannel2023 a ex:Specification ;
   ex:author <https://people.apache.org/~acoburn/#i> ;
@@ -3702,12 +3678,10 @@ cdata:WebSocketChannel2023 a ex:Specification ;
   ex:repository <https://github.com/solid/notifications> .
 
 cdata:WebSocketChannel2023NotificationSender a ex:ClassOfProduct ;
-  ex:name "Solid WebSocket Notification Sender" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "Solid WebSocket Notification Sender" .
 
 cdata:WebSocketChannel2023SubscriptionServer a ex:ClassOfProduct ;
-  ex:name "Solid WebSocket Subscription Server" ;
-  ex:subType con:ClassOfProduct .
+  ex:name "Solid WebSocket Subscription Server" .
 
 cdata:WelcomeToMyPlace a ex:Service ;
   ex:description "\n    Private meetings at home that promote a living together based on welcome,\n    trust and mutuall aid.\n  " ;
