@@ -56,7 +56,7 @@ con:Primer
   skos:broader con:TechnicalResource ;
   skos:prefLabel "Primer".
 
-con:ClassOfProduct
+ex:ClassOfProduct
   a skos:Concept ;
   skos:broader con:TechnicalResource ;
   skos:prefLabel "Class of Product".
