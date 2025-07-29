@@ -4,7 +4,7 @@
 @prefix sh: <http://www.w3.org/ns/shacl#>.
 @prefix ex: <http://example.org#> .
 
-@prefix con: <https://solidproject.solidcommunity.net/catalog/taxonomy#>.
+@prefix con: <https://solidproject.solidcommunity.net/catalog/taxonomy#> .
 
 con:SolidCatalogTaxonomy 
   a skos:ConceptScheme ;
