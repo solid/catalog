@@ -1882,9 +1882,14 @@ cdata:PASS a ex:Service ;
   ex:repository <https://github.com/codeforpdx/PASS> ;
   ex:serviceAudience "homeless people,housing services case workers"@en ;
   ex:socialKeyword "access to public resources,housing"@en ;
-  ex:softwareStackIncludes cdata:CSS ;
+  ex:softwareStackIncludes cdata:CSS, cdata:PASSplatform ;
   ex:status con:Development ;
   ex:subType con:SpecializedPodService .
+
+cdata:PASSplatform a ex:Software ;
+  ex:name "PASS Platform" ;
+  ex:status con:Production ;
+  ex:subType con:PodServer .
 
 cdata:Pat_McBennett a ex:Person ;
   ex:landingPage <https://github.com/pmcb55> ;
@@ -3770,6 +3775,11 @@ cdata:Zongyan_Li a ex:Person ;
   ex:name "Zongyan Li" .
 
 <urn:uuid:3b05c17c-f44a-470e-8031-408abee6e2ca> a ex:Person ;
+  ex:contactEmail "eric+solid@uu3.org" ;
+  ex:description "formal methods geek, well-versed in health care and life sciences" ;
+  ex:forumHandle "@ericP" ;
+  ex:landingPage <https://uu3.org/People/Eric/> ;
+  ex:modified "2025-07-28T13:48:41.367Z"^^xsd:dateTime ;
   ex:name "Eric Prud'hommeaux" .
 
 <urn:uuid:43a1b70e-f40c-49d6-baad-f070ed9ff9e2> a ex:Person ;
