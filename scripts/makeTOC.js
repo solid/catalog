@@ -110,6 +110,7 @@ async function addTocListeners(){
     }
     else if(anchor.getAttribute('class')=="subtype") anchor.remove();
   }
-  if(isLocalhost)  document.getElementById('toc').innerHTML += `<p>${count}/${subcount} total records</p>`;
-  else document.getElementById('toc').innerHTML += `<p>${count} total records</p>`;
+//  if(isLocalhost)  document.getElementById('toc').innerHTML += `<p>${count}/${subcount} total records</p>`;
+//  else 
+  document.getElementById('toc').innerHTML += `<p>${count} total records</p>`;
 }
