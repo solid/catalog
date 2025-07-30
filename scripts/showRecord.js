@@ -83,6 +83,7 @@ function addRecordListeners(display){
   /* field link listeners  */
   let fieldAnchors = display.querySelectorAll('.field a');
   for(let fa of fieldAnchors){
+    if(fa.getAttribute('target')) continue;
     fa.addEventListener('click',(e)=> {
       e.preventDefault();
       showRecord(display,e.target.getAttribute('href'));
