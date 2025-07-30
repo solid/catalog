@@ -85,7 +85,7 @@ shape :ServiceShape -> ex:Service ;
 	ex:description xsd:string|rdf:langString [0..1] maxLength=2000 %
 		sh:name "description"@en
 	% .
-	ex:contactEmail xsd:string|rdf:langString [0..1] pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
+        ex:contactEmail IRI [0..1] pattern="^mailto:[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
 		sh:name "contact email"@en ;
 		sh:description "if you wish to share the email privately to ODI, leave this blank & contact solid@theodi.org"
 	% .
@@ -130,7 +130,7 @@ shape :SoftwareShape -> ex:Software ;
 	ex:status [1..1] in=[con:Exploration con:Development con:Production con:Archived] %
 		sh:name "status"@en
 	% .
-	ex:contactEmail xsd:string|rdf:langString [0..1] pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
+	ex:contactEmail IRI [0..1] pattern="^mailto:[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
 		sh:name "contact email"@en ;
 		sh:description "if you wish to share the email privately to ODI, leave this blank & contact solid@theodi.org"
 	% .
@@ -259,7 +259,7 @@ shape :OrganizationShape -> ex:Organization ;
 	ex:subType [1..*] in=[con:Company con:GovernmentalOrganization con:UniversityProject con:OpenSourceProject con:FundingOrganization con:OtherNGO] %
 		sh:name "subtype"
 	% .
-	ex:contactEmail xsd:string|rdf:langString [0..1] pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
+	ex:contactEmail IRI [0..1] pattern="^mailto:[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
 		sh:name "contact email"@en ;
 		sh:description "if you wish to share the email privately to ODI, leave this blank & contact solid@theodi.org"
 	% .
@@ -296,7 +296,7 @@ shape :PersonShape -> ex:Person ;
 	ex:name xsd:string|rdf:langString [1..1] %
 		sh:name "name"@en
 	% .
-	ex:contactEmail xsd:string|rdf:langString [0..1] pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
+	ex:contactEmail IRI [0..1] pattern="^mailto:[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
 		sh:name "contact email"@en ;
 		sh:description "if you wish to share the email privately to ODI, leave this blank & contact solid@theodi.org"
 	% .
