@@ -215,7 +215,7 @@ cdata:Andreas_Both a ex:Person ;
   ex:name "Andreas Both" .
 
 cdata:Andreas_Harth a ex:Person ;
-  ex:contactEmail "andreas@harth.org" ;
+  ex:contactEmail <mailto:andreas@harth.org> ;
   ex:matrixHandle "@aharth:matrix.org"@en ;
   ex:modified "2025-04-25T07:53:45.052Z"^^xsd:dateTime ;
   ex:name "Andreas Harth"@en ;
@@ -448,7 +448,7 @@ cdata:Datasister a ex:Software ;
   ex:technicalKeyword "general purpose app" .
 
 cdata:Datasolids a ex:Organization ;
-  ex:contactEmail "marc.haddle@datasolids.com" ;
+  ex:contactEmail <mailto:marc.haddle@datasolids.com> ;
   ex:description "Solid principles to store & share health data."@en ;
   ex:modified "2025-05-28T14:21:51.810Z"^^xsd:dateTime ;
   ex:name "Datasolids" ;
@@ -614,7 +614,7 @@ cdata:Focus a ex:Software ;
   ex:technicalKeyword "task manager"@en .
 
 cdata:Friedrich-Alexander-Universität_Erlangen-Nürnberg a ex:Organization ;
-  ex:contactEmail "andreas.harth@fau.de" ;
+  ex:contactEmail <mailto:andreas.harth@fau.de> ;
   ex:description "The Chair of Information Systems, with a focus on Technical Information Systems, conducts research in areas such as the Semantic Web, Linked Data, Knowledge Graphs, and decentralised information systems. The research is carried out in close collaboration with the department of Data Spaces and Internet of Things Solutions at the Fraunhofer Institute for Integrated Circuits IIS."@en ;
   ex:modified "2025-04-25T07:56:28.092Z"^^xsd:dateTime ;
   ex:name "Friedrich-Alexander-Universität Erlangen-Nürnberg"@en ;
@@ -1298,7 +1298,7 @@ cdata:Marc_Fornos a ex:Person ;
   ex:name "Marc Fornos" .
 
 cdata:Marc_Haddle a ex:Person ;
-  ex:contactEmail "marc.haddle@datasolids.com" ;
+  ex:contactEmail <mailto:marc.haddle@datasolids.com> ;
   ex:description "CEO, Datasolids"@en ;
   ex:modified "2025-05-15T15:18:59.233Z"^^xsd:dateTime ;
   ex:name "Marc Haddle" .
@@ -1388,7 +1388,7 @@ cdata:Matthew_Fowle a ex:Person ;
   ex:name "Matthew Fowle" .
 
 cdata:Matthias_Evering a ex:Person ;
-  ex:contactEmail "me@evering.eu" ;
+  ex:contactEmail <mailto:me@evering.eu> ;
   ex:description "baby coder"@en ;
   ex:forumHandle "@ewingson"@en ;
   ex:landingPage <https://configedit.com/>, <https://github.com/ewingson> ;
@@ -1448,7 +1448,7 @@ cdata:mee-vocab a ex:Ontology ;
   ex:prefix "mee:" .
 
 cdata:Meisdata a ex:Organization ;
-  ex:contactEmail "info@meisdata.io"@en ;
+  ex:contactEmail <mailto:info@meisdata.io> ;
   ex:description "a small org providing a NSS a CSS and a Pivot"@en ;
   ex:domainKeyword "Pod-Provider"@en ;
   ex:landingPage <https://meisdata.io> ;
@@ -1601,7 +1601,7 @@ cdata:Nathan_Borson a ex:Person ;
   ex:webid <https://nborson.solidcommunity.net/profile/card#me> .
 
 cdata:NextFM a ex:Software ;
-  ex:contactEmail "product@inrupt.com"@en ;
+  ex:contactEmail <mailto:product@inrupt.com> ;
   ex:description "A file manager for Solid pods with support for multiple visual themes, inspired by Tim Berners-Lee."@en ;
   ex:modified "2025-06-09T15:50:49.306Z"^^xsd:dateTime ;
   ex:name "NextFM"@en ;
@@ -2318,7 +2318,7 @@ cdata:Roger_Perry a ex:Person ;
   ex:name "Roger Perry" .
 
 cdata:Ronald_Siebes a ex:Person ;
-  ex:contactEmail "r.m.siebes@vu.nl"@en ;
+  ex:contactEmail <mailto:r.m.siebes@vu.nl> ;
   ex:description "Assistant professor at UCDS group, VU Amsterdam"@en ;
   ex:modified "2025-06-09T15:23:17.525Z"^^xsd:dateTime ;
   ex:name "Ronald Siebes"@en .
@@ -2329,7 +2329,7 @@ cdata:Rosano a ex:Person ;
   ex:name "Rosano" .
 
 cdata:Ross_Horne a ex:Person ;
-  ex:contactEmail "ross.horne@strath.ac.uk" ;
+  ex:contactEmail <mailto:ross.horne@strath.ac.uk> ;
   ex:description "Interested in authentication protocols and security policy models."@en ;
   ex:modified "2025-04-25T07:49:04.398Z"^^xsd:dateTime ;
   ex:name "Ross Horne"@en ;
@@ -2353,7 +2353,7 @@ cdata:Ruben_Verborgh a ex:Person ;
   ex:webid <https://ruben.verborgh.org/profile/#me> .
 
 cdata:RuiZhao a ex:Person ;
-  ex:contactEmail "me@ryey.icu"@en ;
+  ex:contactEmail <mailto:me@ryey.icu> ;
   ex:forumHandle "@renyuneyun"@en ;
   ex:landingPage <https://me.ryey.icu> ;
   ex:matrixHandle "@renyuneyun:matrix.org"@en ;
@@ -2595,7 +2595,7 @@ cdata:Solid_auth_swift a ex:Software ;
   ex:technicalKeyword "solid client" .
 
 cdata:Solid_Bench a ex:Software ;
-  ex:contactEmail "phd@highlatitud.es" ;
+  ex:contactEmail <mailto:phd@highlatitud.es> ;
   ex:description "A multi-purpose platform, containing a pod browser, and a framework to plug domain-specific apps."@en ;
   ex:landingPage <https://solidbench.dev> ;
   ex:logo <https://solidbench.dev/images/solidbench-256.png> ;
@@ -3152,7 +3152,7 @@ cdata:SolidWebComponents a ex:Software ;
   ex:technicalKeyword "web components" .
 
 cdata:SolidWebDotMe a ex:Service ;
-  ex:contactEmail "info@meisdata.io"@en ;
+  ex:contactEmail <mailto:info@meisdata.io> ;
   ex:description "solidweb.me is a community-run Pod-Provider that uses CSS and the SolidOS frontend and is based in Germany."@en ;
   ex:logo <https://www.serverproject.de/logo2.png> ;
   ex:modified "2025-06-06T11:36:27.968Z"^^xsd:dateTime ;
@@ -3166,7 +3166,7 @@ cdata:SolidWebDotMe a ex:Service ;
   ex:subType con:GeneralPurposePodService .
 
 cdata:SolidWebDotOrg a ex:Service ;
-  ex:contactEmail "info@meisdata.io"@en ;
+  ex:contactEmail <mailto:info@meisdata.io> ;
   ex:description "solidweb.org is a public Solid server based in Germany which is in an experimental state."@en ;
   ex:domainKeyword "Pod-Provider"@en ;
   ex:logo <https://www.serverproject.de/logo2.png> ;
@@ -3345,7 +3345,7 @@ cdata:Tao_Chen a ex:Person ;
   ex:name "Tao Chen" .
 
 cdata:TeamIdLive a ex:Service ;
-  ex:contactEmail "info@meisdata.io" ;
+  ex:contactEmail <mailto:info@meisdata.io> ;
   ex:description "Pivot"@en ;
   ex:domainKeyword "Pod-Provider"@en ;
   ex:logo <https://www.serverproject.de/logo2.png> ;
@@ -3435,7 +3435,7 @@ cdata:TimStanden a ex:Person ;
   ex:name "Tim Standen" .
 
 cdata:Tobias_Käfer a ex:Person ;
-  ex:contactEmail "tobias.kaefer@kit.edu" ;
+  ex:contactEmail <mailto:tobias.kaefer@kit.edu> ;
   ex:landingPage <https://websci.aifb.kit.edu/Tobias_Kaefer.php> ;
   ex:modified "2025-04-25T07:58:10.536Z"^^xsd:dateTime ;
   ex:name "Tobias Käfer"@en ;
@@ -3749,7 +3749,7 @@ cdata:Zongyan_Li a ex:Person ;
   ex:name "Zongyan Li" .
 
 <urn:uuid:3b05c17c-f44a-470e-8031-408abee6e2ca> a ex:Person ;
-  ex:contactEmail "eric+solid@uu3.org" ;
+  ex:contactEmail <mailto:eric+solid@uu3.org> ;
   ex:description "formal methods geek, well-versed in health care and life sciences" ;
   ex:forumHandle "@ericP" ;
   ex:landingPage <https://uu3.org/People/Eric/> ;

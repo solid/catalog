@@ -189,8 +189,8 @@ function getRecordPredicates(record,subject,triples,posOfThing) {
 */
 Array.prototype.isort = function() {
     return this.sort((a, b) => {
-    a=a.value||a.label||a;
-    b=b.value||b.label||b;
+        a=a.value||a.label||a;
+        b=b.value||b.label||b;
         const nameA = a.toLowerCase(); // Convert to lowercase
         const nameB = b.toLowerCase(); // Convert to lowercase
         if (nameA < nameB) {
@@ -360,6 +360,7 @@ export function findFullText(term){
     let rterm = new RegExp(term,'i');
     if(recordStr.match(rterm)){
       let label = findName(s.subject);
+      if(!label) continue;
       subjects.push({link:s.subject.value,label});
       continue;
     }
