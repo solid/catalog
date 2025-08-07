@@ -13,7 +13,7 @@ shape :CreativeWorkShape -> ex:CreativeWork ;
 	sh:name "Creative Work"@en;
 	sh:nodeKind sh:IRI;
 	sh:class ex:CreativeWork {
-	ex:name xsd:string|rdf:langString [1..1] %
+	ex:name xsd:string [1..1] %
 		sh:name "name"@en
 	% .
 	ex:subType [1..*] in=[con:AboutSolid con:AboutSolidApps con:ResearchPaper con:OtherLearningResource con:OtherTechResource con:Primer] %
@@ -23,7 +23,7 @@ shape :CreativeWorkShape -> ex:CreativeWork ;
 		sh:name "references" ;
 		sh:description "if specific to a product, the  name of the product"
 	% .
-	ex:technicalKeyword xsd:string|rdf:langString %
+	ex:technicalKeyword xsd:string %
 		sh:name "keyword"@en
 	% .
 	ex:landingPage IRI %
@@ -40,7 +40,7 @@ shape :CreativeWorkShape -> ex:CreativeWork ;
 	ex:editor IRI @:PersonShape %
 		sh:name "editor"@en
 	% .
-	ex:description xsd:string|rdf:langString [0..1] maxLength=2000 %
+	ex:description xsd:string [0..1] maxLength=2000 %
 		sh:name "description"@en
 	% .
 }
@@ -48,17 +48,17 @@ shape :EventShape -> ex:Event ;
 	sh:name "Event"@en;
 	sh:nodeKind sh:IRI;
 	sh:class ex:Event {
-	ex:name xsd:string|rdf:langString [1..1] %
+	ex:name xsd:string [1..1] %
 		sh:name "name"@en
 	% .
-	ex:description xsd:string|rdf:langString [0..1] maxLength=2000 %
+	ex:description xsd:string [0..1] maxLength=2000 %
 		sh:name "description"@en
 	% .
 	ex:provider IRI @:OrganizationShape %
 		sh:name "provider"@en ;
 		sh:description "organization(s) responsible for hosting the event"
 	% .
-	ex:schedule xsd:string|rdf:langString [0..1] %
+	ex:schedule xsd:string [0..1] %
 		sh:name "schedule"
 	% .
 	ex:videoCallPage IRI [0..1] %
@@ -73,7 +73,7 @@ shape :ServiceShape -> ex:Service ;
 	sh:name "Service"@en;
 	sh:nodeKind sh:IRI;
 	sh:class ex:Service {
-	ex:name xsd:string|rdf:langString [1..1] %
+	ex:name xsd:string [1..1] %
 		sh:name "name"@en
 	% .
 	ex:subType [1..*] in=[con:GeneralPurposePodService con:SpecializedPodService con:CommunicationService con:OtherService] %
@@ -82,7 +82,7 @@ shape :ServiceShape -> ex:Service ;
 	ex:status [1..1] in=[con:Exploration con:Development con:Production con:Archived] %
 		sh:name "status"@en
 	% .
-	ex:description xsd:string|rdf:langString [0..1] maxLength=2000 %
+	ex:description xsd:string [0..1] maxLength=2000 %
 		sh:name "description"@en
 	% .
         ex:contactEmail IRI [0..1] pattern="^mailto:[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
@@ -108,11 +108,11 @@ shape :ServiceShape -> ex:Service ;
 		sh:name "provider"@en ;
 		sh:description "Organization(s) responsible for providing the service"
 	% .
-	ex:socialKeyword xsd:string|rdf:langString %
+	ex:socialKeyword xsd:string %
 		sh:name "social keyword"@en ;
 		sh:description "for targeted Pod Services only: social domain of service e.g. housing, transportation, name of an industry"
 	% .
-	ex:serviceAudience xsd:string|rdf:langString [0..1] %
+	ex:serviceAudience xsd:string [0..1] %
 		sh:name "service audience"@en ;
 		sh:description "for targeted Pod Services only; e.g. 'citizens of Belgium' or 'Yarrabah community'"
 	% .
@@ -121,7 +121,7 @@ shape :SoftwareShape -> ex:Software ;
 	sh:name "Software"@en;
 	sh:nodeKind sh:IRI;
 	sh:class ex:Software {
-	ex:name xsd:string|rdf:langString [1..1] %
+	ex:name xsd:string [1..1] %
 		sh:name "name"@en
 	% .
 	ex:subType [1..*] in=[con:ProductivityApp con:LeisureApp con:PodApp con:OtherApp con:PodServer con:ServerPlugin con:SoftwareLibrary] %
@@ -134,7 +134,7 @@ shape :SoftwareShape -> ex:Software ;
 		sh:name "contact email"@en ;
 		sh:description "if you wish to share the email privately to ODI, leave this blank & contact solid@theodi.org"
 	% .
-	ex:description xsd:string|rdf:langString [0..1] maxLength=2000 %
+	ex:description xsd:string [0..1] maxLength=2000 %
 		sh:name "description"@en
 	% .
 	ex:clientID IRI [0..1] %
@@ -168,11 +168,11 @@ shape :SoftwareShape -> ex:Software ;
 		sh:name "developer"@en ;
 		sh:description "person contributiong to the software"
 	% .
-	ex:socialKeyword xsd:string|rdf:langString %
+	ex:socialKeyword xsd:string %
 		sh:name "social keyword"@en ;
 		sh:description "social domain addressed by the software e.g. housing, transportation, name of an industry"
 	% .
-	ex:technicalKeyword xsd:string|rdf:langString %
+	ex:technicalKeyword xsd:string %
 		sh:name "technical keyword"@en ;
 		sh:description "comma-separated list for product type e.g. game, calendar, contacts manager"
 	% .
@@ -189,10 +189,10 @@ shape :SpecificationShape -> ex:Specification ;
 	sh:name "Specification"@en;
 	sh:nodeKind sh:IRI;
 	sh:class ex:Specification {
-	ex:name xsd:string|rdf:langString [1..1] %
+	ex:name xsd:string [1..1] %
 		sh:name "name"@en
 	% .
-	ex:description xsd:string|rdf:langString [0..1] maxLength=2000 %
+	ex:description xsd:string [0..1] maxLength=2000 %
 		sh:name "description"@en
 	% .
 	ex:repository IRI [0..1] %
@@ -218,7 +218,7 @@ shape :ClassOfProductShape -> ex:ClassOfProduct ;
 	sh:name "Class of Product"@en;
 	sh:nodeKind sh:IRI;
 	sh:class ex:ClassOfProduct {
-	ex:name xsd:string|rdf:langString [1..1] %
+	ex:name xsd:string [1..1] %
 		sh:name "name"@en
 	% .
 }
@@ -226,17 +226,17 @@ shape :OntologyShape -> ex:Ontology ;
 	sh:name "Ontology"@en;
 	sh:nodeKind sh:IRI;
 	sh:class ex:Ontology {
-	ex:name xsd:string|rdf:langString [1..1] %
+	ex:name xsd:string [1..1] %
 		sh:name "name"@en
 	% .
-	ex:description xsd:string|rdf:langString [0..1] maxLength=2000 %
+	ex:description xsd:string [0..1] maxLength=2000 %
 		sh:name "description"@en
 	% .
 	ex:namespaceURI IRI [0..1] %
 		sh:name "namespace URL" ;
 		sh:description "e.g. http://www.w3.org/ns/shacl#"
 	% .
-	ex:prefix xsd:string|rdf:langString [0..1] %
+	ex:prefix xsd:string [0..1] %
 		sh:name "prefix" ;
 		sh:description "e.g. sh: for the SHACL ontology"
 	% .
@@ -253,7 +253,7 @@ shape :OrganizationShape -> ex:Organization ;
 	sh:name "Organization"@en;
 	sh:nodeKind sh:IRI;
 	sh:class ex:Organization {
-	ex:name xsd:string|rdf:langString [1..1] %
+	ex:name xsd:string [1..1] %
 		sh:name "name"@en
 	% .
 	ex:subType [1..*] in=[con:Company con:GovernmentalOrganization con:UniversityProject con:OpenSourceProject con:FundingOrganization con:OtherNGO] %
@@ -263,7 +263,7 @@ shape :OrganizationShape -> ex:Organization ;
 		sh:name "contact email"@en ;
 		sh:description "if you wish to share the email privately to ODI, leave this blank & contact solid@theodi.org"
 	% .
-	ex:description xsd:string|rdf:langString [0..1] maxLength=2000 %
+	ex:description xsd:string [0..1] maxLength=2000 %
 		sh:name "description"@en
 	% .
 	ex:logo IRI [0..1] %
@@ -276,15 +276,15 @@ shape :OrganizationShape -> ex:Organization ;
 		sh:name "landing page"@en ;
 		sh:description "URL where the organization is described"
 	% .
-	ex:socialKeyword xsd:string|rdf:langString %
+	ex:socialKeyword xsd:string %
 		sh:name "social keyword"@en ;
 		sh:description "social domain of organization's activies e.g. housing, transportation, name of an industry"
 	% .
-	ex:resourcesWanted xsd:string|rdf:langString maxLength=2000 %
+	ex:resourcesWanted xsd:string maxLength=2000 %
 		sh:name "resources wanted"@en ;
 		sh:description "funding, employees, interns, partners, separate multiple with a blank line"
 	% .
-	ex:resourcesOffered xsd:string|rdf:langString maxLength=2000 %
+	ex:resourcesOffered xsd:string maxLength=2000 %
 		sh:name "resources offered"@en ;
 		sh:description "funding, mentorship, collaboration, offered; separate multiple with a blank line"
 	% .
@@ -293,7 +293,7 @@ shape :PersonShape -> ex:Person ;
 	sh:name "Person"@en;
 	sh:nodeKind sh:IRI;
 	sh:class ex:Person {
-	ex:name xsd:string|rdf:langString [1..1] %
+	ex:name xsd:string [1..1] %
 		sh:name "name"@en
 	% .
 	ex:contactEmail IRI [0..1] pattern="^mailto:[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$" %
@@ -303,15 +303,15 @@ shape :PersonShape -> ex:Person ;
 	ex:webid IRI [0..1] %
 		sh:name "WebID"
 	% .
-	ex:forumHandle xsd:string|rdf:langString [0..1] %
+	ex:forumHandle xsd:string [0..1] %
 		sh:name "forum handle" ;
 		sh:description "your handle/nick on the Solid Forum"
 	% .
-	ex:matrixHandle xsd:string|rdf:langString [0..1] %
+	ex:matrixHandle xsd:string [0..1] %
 		sh:name "matrix handle" ;
 		sh:description "your handle/nick in the Matrix chatrooms"
 	% .
-	ex:description xsd:string|rdf:langString [0..1] maxLength=2000 %
+	ex:description xsd:string [0..1] maxLength=2000 %
 		sh:name "description"@en
 	% .
 	ex:logo IRI [0..1] %
@@ -321,11 +321,11 @@ shape :PersonShape -> ex:Person ;
 		sh:name "landing page"@en ;
 		sh:description "URL where the person is described and/or links to their resources are available"
 	% .
-	ex:resourcesWanted xsd:string|rdf:langString maxLength=2000 %
+	ex:resourcesWanted xsd:string maxLength=2000 %
 		sh:name "resources wanted"@en ;
 		sh:description "funding, employees, interns, partners, separate multiple with a blank line"
 	% .
-	ex:resourcesOffered xsd:string|rdf:langString maxLength=2000 %
+	ex:resourcesOffered xsd:string maxLength=2000 %
 		sh:name "resources offered"@en ;
 		sh:description "funding, mentorship, collaboration, offered; separate multiple with a blank line"
 	% .
