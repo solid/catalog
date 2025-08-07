@@ -8,9 +8,9 @@
 
 <http://harth.org/andreas/foaf#ah> a ex:Person ;
   ex:contactEmail <mailto:andreas@harth.org> ;
-  ex:matrixHandle "@aharth:matrix.org"@en ;
+  ex:matrixHandle "@aharth:matrix.org" ;
   ex:modified "2025-04-25T07:53:45.052Z"^^xsd:dateTime ;
-  ex:name "Andreas Harth"@en ;
+  ex:name "Andreas Harth" ;
   ex:webid <http://harth.org/andreas/foaf#ah> .
 
 <https://45h.inrupt.net/profile/card#me> a ex:Person ;
@@ -45,10 +45,10 @@
   ex:webid <https://dewomser.solidcommunity.net/profile/card#me> .
 
 <https://elf-pavlik.hackers4peace.net> a ex:Person ;
-  ex:description "One of Solid CG co-chairs. Co-editor of Solid Application Interoperability, Solid-OIDC, Security Consi  derations and some Solid Notification channel types. Maintainer of sai-js."@en ;
+  ex:description "One of Solid CG co-chairs. Co-editor of Solid Application Interoperability, Solid-OIDC, Security Consi  derations and some Solid Notification channel types. Maintainer of sai-js." ;
   ex:landingPage <https://elf-pavlik.hackers4peace.net> ;
   ex:logo <https://avatars.githubusercontent.com/u/876431?v=4> ;
-  ex:name "elf Pavlik"@en ;
+  ex:name "elf Pavlik" ;
   ex:webid <https://elf-pavlik.hackers4peace.net> .
 
 <https://gatos.inrupt.net/profile/card#me> a ex:Person ;
@@ -74,11 +74,11 @@
   ex:webid <https://id.inrupt.com/rajugeorge> .
 
 <https://id.mrkvon.org> a ex:Person ;
-  ex:forumHandle "@mrkvon"@en ;
+  ex:forumHandle "@mrkvon" ;
   ex:landingPage <https://github.com/mrkvon>, <https://mrkvon.org> ;
-  ex:matrixHandle "@mrkvon:matrix.org"@en ;
+  ex:matrixHandle "@mrkvon:matrix.org" ;
   ex:modified "2025-05-08T01:12:44.757Z"^^xsd:dateTime ;
-  ex:name "Michal"@en ;
+  ex:name "Michal" ;
   ex:webid <https://id.mrkvon.org> .
 
 <https://id.myopenlink.net/dataspace/person/tthibodeau#this> a ex:Person ;
@@ -151,7 +151,7 @@
   ex:contactEmail <mailto:tobias.kaefer@kit.edu> ;
   ex:landingPage <https://websci.aifb.kit.edu/Tobias_Kaefer.php> ;
   ex:modified "2025-04-25T07:58:10.536Z"^^xsd:dateTime ;
-  ex:name "Tobias Käfer"@en ;
+  ex:name "Tobias Käfer" ;
   ex:webid <https://kaefer3000.solidcommunity.net/profile/card#me> .
 
 <https://karlhrichter.inrupt.net/profile/card#me> a ex:Person ;
@@ -232,10 +232,10 @@
   ex:webid <https://nickform.inrupt.net/profile/card#me> .
 
 <https://noeldemartin.solidcommunity.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@NoelDeMartin"@en ;
+  ex:forumHandle "@NoelDeMartin" ;
   ex:landingPage <https://noeldemartin.com> ;
   ex:modified "2025-06-10T18:02:34.141Z"^^xsd:dateTime ;
-  ex:name "Noel De Martin"@en ;
+  ex:name "Noel De Martin" ;
   ex:webid <https://noeldemartin.solidcommunity.net/profile/card#me> .
 
 <https://omitg.inrupt.net/profile/card#me> a ex:Person ;
@@ -281,20 +281,20 @@
 <https://publikationen.bibliothek.kit.edu/1000172187> a ex:CreativeWork ;
   ex:about <https://solidproject.org/TR/wac>, cdata:Solid_Application_Interoperability ;
   ex:author <http://harth.org/andreas/foaf#ah>, <https://kaefer3000.solidcommunity.net/profile/card#me>, cdata:Andreas_Both, cdata:Christoph_Braun, cdata:Daniel_Schraudner, cdata:Dustin_Yeboah, cdata:Sebastian_Schmid, cdata:Thorsten_Kastner ;
-  ex:description "The Solid (Social Linked Data) technology family was de-\nveloped to provide the foundation for Data Sovereignty in the context\nof web applications. The advantage of this innovative approach is the\nopportunity to dynamically bind an identity to a Solid application and a\nuser-specific Solid data store (Solid Pod). These three basic components\ncan be combined dynamically, allowing users to share their data with an\napplication while retaining full control of the data in self-managed Solid\nPods. This paper presents a prototype of a web-based user interface to\ngrant access to data in a Solid Pod. To enable a dynamic binding into\nSolid-driven environments, we made the implementation available as a\nSolid application – AuthApp – with a specific focus on allowing users\nto configure the data access granting efficiently. To comply with data\nprotection regulations, in particular Europe’s GDPR, we extended the\nstandard to include the validation of the purpose of data sharing. Unlike\nprevious work, we also make full use of robust technologies to avoid the\nneed to copy or store data outside the personal context, meaning all data\nremains under the user’s control and so does the AuthApp."@en ;
+  ex:description "The Solid (Social Linked Data) technology family was de-\nveloped to provide the foundation for Data Sovereignty in the context\nof web applications. The advantage of this innovative approach is the\nopportunity to dynamically bind an identity to a Solid application and a\nuser-specific Solid data store (Solid Pod). These three basic components\ncan be combined dynamically, allowing users to share their data with an\napplication while retaining full control of the data in self-managed Solid\nPods. This paper presents a prototype of a web-based user interface to\ngrant access to data in a Solid Pod. To enable a dynamic binding into\nSolid-driven environments, we made the implementation available as a\nSolid application – AuthApp – with a specific focus on allowing users\nto configure the data access granting efficiently. To comply with data\nprotection regulations, in particular Europe’s GDPR, we extended the\nstandard to include the validation of the purpose of data sharing. Unlike\nprevious work, we also make full use of robust technologies to avoid the\nneed to copy or store data outside the personal context, meaning all data\nremains under the user’s control and so does the AuthApp." ;
   ex:landingPage <https://publikationen.bibliothek.kit.edu/1000172187/156135196> ;
-  ex:name "AuthApp – Portable, Reusable Solid App for GDPR-Compliant Access Granting"@en ;
+  ex:name "AuthApp – Portable, Reusable Solid App for GDPR-Compliant Access Granting" ;
   ex:subType con:ResearchPaper ;
-  ex:technicalKeyword "Authorization, Access Control, Data Sharing, Access Granting, Zero Trust, Data Sovereignty"@en .
+  ex:technicalKeyword "Authorization, Access Control, Data Sharing, Access Granting, Zero Trust, Data Sovereignty" .
 
 <https://renyuneyun.solidcommunity.net/profile/card#me> a ex:Person ;
   ex:contactEmail <mailto:me@ryey.icu> ;
-  ex:forumHandle "@renyuneyun"@en ;
+  ex:forumHandle "@renyuneyun" ;
   ex:landingPage <https://me.ryey.icu> ;
-  ex:matrixHandle "@renyuneyun:matrix.org"@en ;
+  ex:matrixHandle "@renyuneyun:matrix.org" ;
   ex:modified "2025-04-25T07:55:57.565Z"^^xsd:dateTime ;
-  ex:name "Rui Zhao"@en ;
-  ex:resourcesOffered "Mentorship\nResearch Collaboration\nDevelopment Collaboration\nLibraries\nApps"@en ;
+  ex:name "Rui Zhao" ;
+  ex:resourcesOffered "Mentorship\nResearch Collaboration\nDevelopment Collaboration\nLibraries\nApps" ;
   ex:webid <https://renyuneyun.solidcommunity.net/profile/card#me> .
 
 <https://ruben.verborgh.org/profile/#me> a ex:Person ;
@@ -343,7 +343,7 @@
 
 <https://samurex.hackers4peace.net> a ex:Person ;
   ex:landingPage <https://samurex.hackers4peace.net> ;
-  ex:name "Maciej Samoraj"@en ;
+  ex:name "Maciej Samoraj" ;
   ex:webid <https://samurex.hackers4peace.net> .
 
 <https://sascha.inrupt.net/profile/card#me> a ex:Person ;
@@ -386,11 +386,11 @@
 <https://solidlab.be/wp-content/uploads/2024/11/User-Managed-Access-Whitepaper.pdf> a ex:CreativeWork ;
   ex:about <https://solidproject.org/TR/wac>, cdata:Access_Control_Policy ;
   ex:author <https://ruben.verborgh.org/profile/#me>, cdata:Beatriz_Estevez, cdata:Ben_De_Meester, cdata:Ruben_Dedecker, cdata:Wout_Slabbinck, <https://woutermont.solidcommunity.net/profile/card#me> ;
-  ex:description "The User-Managed Access (UMA) extension to OAuth 2.0 is a promising candidate for increasing Digital Trust in personal data ecosystems like Solid. With minor modifications, it can achieve many requirements regarding usage control and transaction contextualization, even though additional specification is needed to address delegation of control and retraction of usage policies."@en ;
+  ex:description "The User-Managed Access (UMA) extension to OAuth 2.0 is a promising candidate for increasing Digital Trust in personal data ecosystems like Solid. With minor modifications, it can achieve many requirements regarding usage control and transaction contextualization, even though additional specification is needed to address delegation of control and retraction of usage policies." ;
   ex:landingPage <https://solidlab.be/wp-content/uploads/2024/11/User-Managed-Access-Whitepaper.pdf> ;
-  ex:name "From Resource Control to Digital Trust with User-Managed Access"@en ;
+  ex:name "From Resource Control to Digital Trust with User-Managed Access" ;
   ex:subType con:ResearchPaper ;
-  ex:technicalKeyword "Authorization, UMA"@en .
+  ex:technicalKeyword "Authorization, UMA" .
 
 <https://solidproject.org/TR/notifications-protocol> a ex:Specification ;
   ex:author <https://csarven.ca/#i>, <https://elf-pavlik.hackers4peace.net>, <https://people.apache.org/~acoburn/#i>, cdata:RahulGupta ;
@@ -488,11 +488,11 @@ cdata:ACP_Server a ex:ClassOfProduct ;
   ex:name "ACP Server" .
 
 cdata:ActivityPods a ex:Software ;
-  ex:description "A new kind of architecture for web applications which aims to reconcile the ActivityPub and Solid standards., Brings together two game-changing technologies, ActivityPub and Solid Pods, and empowers developers to create truly decentralized applications"@en ;
+  ex:description "A new kind of architecture for web applications which aims to reconcile the ActivityPub and Solid standards., Brings together two game-changing technologies, ActivityPub and Solid Pods, and empowers developers to create truly decentralized applications" ;
   ex:landingPage <https://activitypods.org/> ;
   ex:maintainer <https://armoise.co/sro> ;
   ex:modified "2025-05-08T08:47:52.971Z"^^xsd:dateTime ;
-  ex:name "ActivityPods"@en ;
+  ex:name "ActivityPods" ;
   ex:repository <https://github.com/activitypods/activitypods> ;
   ex:status con:Production ;
   ex:subType con:SoftwareLibrary .
@@ -542,7 +542,7 @@ cdata:Arne_Hassel a ex:Person ;
 
 cdata:as-vocab a ex:Ontology ;
   ex:landingPage <https://www.w3.org/ns/activitystreams#> ;
-  ex:name "Activity Streams"@en ;
+  ex:name "Activity Streams" ;
   ex:namespaceURI <https://www.w3.org/ns/activitystreams#> ;
   ex:prefix "as:" .
 
@@ -576,7 +576,7 @@ cdata:Authorization_Use_Cases_Survey a ex:CreativeWork ;
 
 cdata:BAAS a ex:Organization ;
   ex:landingPage <https://www.sidnfonds.nl/nieuws/follow-up-call-je-data-de-baas> ;
-  ex:name "Je Data de Baas by SIDN"@en ;
+  ex:name "Je Data de Baas by SIDN" ;
   ex:subType con:FundingOrganization .
 
 cdata:basic-geo-vocab a ex:Ontology ;
@@ -628,7 +628,7 @@ cdata:cc-vocab a ex:Ontology ;
 
 cdata:CCIG a ex:Organization ;
   ex:landingPage <http://agree.org/> ;
-  ex:name "Consensus Community Innovation Grants"@en ;
+  ex:name "Consensus Community Innovation Grants" ;
   ex:subType con:FundingOrganization .
 
 cdata:cert-vocab a ex:Ontology ;
@@ -692,11 +692,11 @@ cdata:Contacts a ex:Software ;
   ex:technicalKeyword "contacts" .
 
 cdata:CRDT a ex:Ontology ;
-  ex:description "The Conflict-Free Replicated Datatypes (CRDT) ontology can be used to describe changes made to resources over time."@en ;
+  ex:description "The Conflict-Free Replicated Datatypes (CRDT) ontology can be used to describe changes made to resources over time." ;
   ex:modified "2025-06-10T18:06:28.878Z"^^xsd:dateTime ;
-  ex:name "CRDT"@en ;
+  ex:name "CRDT" ;
   ex:namespaceURI <https://vocab.noeldemartin.com/crdt/> ;
-  ex:prefix "crdt:"@en .
+  ex:prefix "crdt:" .
 
 cdata:CSS a ex:Software ;
   ex:conformsTo <https://solidproject.org/TR/notifications-protocol#NotificationSender>, <https://solidproject.org/TR/notifications-protocol#ResourceServer>, <https://solidproject.org/TR/notifications-protocol#SubscriptionServer>, <https://solidproject.org/TR/oidc#Provider>, <https://solidproject.org/TR/protocol#Server>, <https://solidproject.org/TR/wac#Server>, cdata:ACP_Resource_Server, cdata:ACP_Server, cdata:StreamingHTTPChannel2023NotificationSender, cdata:WebhookChannel2023NotificationSender, cdata:WebhookChannel2023SubscriptionServer, cdata:WebSocketChannel2023NotificationSender, cdata:WebSocketChannel2023SubscriptionServer ;
@@ -756,11 +756,11 @@ cdata:Datasister a ex:Software ;
 
 cdata:Datasolids a ex:Organization ;
   ex:contactEmail <mailto:marc.haddle@datasolids.com> ;
-  ex:description "Solid principles to store & share health data."@en ;
+  ex:description "Solid principles to store & share health data." ;
   ex:modified "2025-05-28T14:21:51.810Z"^^xsd:dateTime ;
   ex:name "Datasolids" ;
-  ex:resourcesOffered "Security expertise, GTM"@en ;
-  ex:resourcesWanted "Funding"@en ;
+  ex:resourcesOffered "Security expertise, GTM" ;
+  ex:resourcesWanted "Funding" ;
   ex:subType con:Company .
 
 cdata:DataSwift a ex:Organization ;
@@ -779,19 +779,19 @@ cdata:David_Faveris a ex:Person ;
 
 cdata:dc-elements-vocab a ex:Ontology ;
   ex:landingPage <http://purl.org/dc/elements/1.1/> ;
-  ex:name "Dublin Core Elements"@en ;
+  ex:name "Dublin Core Elements" ;
   ex:namespaceURI <http://purl.org/dc/elements/1.1/> ;
   ex:prefix "elements:" .
 
 cdata:dc-terms-vocab a ex:Ontology ;
   ex:landingPage <http://purl.org/dc/terms/> ;
-  ex:name "Dublin Core Terms"@en ;
+  ex:name "Dublin Core Terms" ;
   ex:namespaceURI <http://purl.org/dc/terms/> ;
   ex:prefix "terms:" .
 
 cdata:DDG a ex:Organization ;
   ex:landingPage <https://duckduckgo.com/donations> ;
-  ex:name "DuckDuckGo Donations"@en ;
+  ex:name "DuckDuckGo Donations" ;
   ex:subType con:FundingOrganization .
 
 cdata:Digita a ex:Organization ;
@@ -811,18 +811,18 @@ cdata:Dmitri_Zagidulin a ex:Person ;
   ex:name "Dmitri Zagidulin" .
 
 cdata:Dokieli a ex:Software ;
-  ex:description "Clientside editor for decentralised article publishing, annotations and social interactions."@en ;
+  ex:description "Clientside editor for decentralised article publishing, annotations and social interactions." ;
   ex:landingPage <https://dokie.li/> ;
   ex:logo <https://dokie.li/media/images/logo.png> ;
   ex:maintainer <https://csarven.ca/#i> ;
   ex:modified "2025-06-08T12:11:22.094Z"^^xsd:dateTime ;
-  ex:name "dokieli"@en ;
+  ex:name "dokieli" ;
   ex:repository <https://git.dokie.li/> ;
   ex:showcase <https://dokie.li/> ;
-  ex:socialKeyword "publisher, consumer"@en ;
+  ex:socialKeyword "publisher, consumer" ;
   ex:status con:Production ;
   ex:subType con:ProductivityApp ;
-  ex:technicalKeyword "authoring, annotations, notifications, publishing, reader, editor"@en .
+  ex:technicalKeyword "authoring, annotations, notifications, publishing, reader, editor" .
 
 cdata:Drive a ex:Software ;
   ex:description "Tool to create and share resources with contacts" ;
@@ -906,25 +906,25 @@ cdata:EventSourceChannel2023 a ex:Specification ;
 
 cdata:foaf-vocab a ex:Ontology ;
   ex:landingPage <http://xmlns.com/foaf/0.1/> ;
-  ex:name "Friends of a Friend"@en ;
+  ex:name "Friends of a Friend" ;
   ex:namespaceURI <http://xmlns.com/foaf/0.1/> ;
   ex:prefix "foaf:" .
 
 cdata:Focus a ex:Software ;
-  ex:description "Solid Task Manager"@en ;
+  ex:description "Solid Task Manager" ;
   ex:logo <https://noeldemartin.com/logos/focus.png> ;
   ex:maintainer <https://noeldemartin.solidcommunity.net/profile/card#me> ;
   ex:modified "2025-06-10T18:01:48.905Z"^^xsd:dateTime ;
-  ex:name "Focus"@en ;
+  ex:name "Focus" ;
   ex:status con:Development ;
   ex:subType con:ProductivityApp ;
-  ex:technicalKeyword "task manager"@en .
+  ex:technicalKeyword "task manager" .
 
 cdata:Friedrich-Alexander-Universität_Erlangen-Nürnberg a ex:Organization ;
   ex:contactEmail <mailto:andreas.harth@fau.de> ;
-  ex:description "The Chair of Information Systems, with a focus on Technical Information Systems, conducts research in areas such as the Semantic Web, Linked Data, Knowledge Graphs, and decentralised information systems. The research is carried out in close collaboration with the department of Data Spaces and Internet of Things Solutions at the Fraunhofer Institute for Integrated Circuits IIS."@en ;
+  ex:description "The Chair of Information Systems, with a focus on Technical Information Systems, conducts research in areas such as the Semantic Web, Linked Data, Knowledge Graphs, and decentralised information systems. The research is carried out in close collaboration with the department of Data Spaces and Internet of Things Solutions at the Fraunhofer Institute for Integrated Circuits IIS." ;
   ex:modified "2025-04-25T07:56:28.092Z"^^xsd:dateTime ;
-  ex:name "Friedrich-Alexander-Universität Erlangen-Nürnberg"@en ;
+  ex:name "Friedrich-Alexander-Universität Erlangen-Nürnberg" ;
   ex:subType con:UniversityProject .
 
 cdata:Friend_Requests a ex:Software ;
@@ -950,7 +950,7 @@ cdata:GettingStarted a ex:CreativeWork ;
 
 cdata:GithubSponsors a ex:Organization ;
   ex:landingPage <https://github.com/sponsors> ;
-  ex:name "GitHub Sponsors"@en ;
+  ex:name "GitHub Sponsors" ;
   ex:subType con:FundingOrganization .
 
 cdata:Gold a ex:Software ;
@@ -971,7 +971,7 @@ cdata:GovernmentOfFlanders a ex:Organization ;
 
 cdata:GrantForTheWeb a ex:Organization ;
   ex:landingPage <https://forum.grantfortheweb.org/t/call-for-proposals-early-2020/959> ;
-  ex:name "Grant for the web"@en ;
+  ex:name "Grant for the web" ;
   ex:subType con:FundingOrganization .
 
 cdata:Graphmetrix a ex:Organization ;
@@ -1121,7 +1121,7 @@ cdata:Inrupt a ex:Organization ;
   ex:subType con:Company .
 
 cdata:InruptPodSpaces a ex:Service ;
-  ex:description "Inrupt Pod Spaces is an instance of the Enterprise Solid Server provided by Inrupt, Inc., hosted by Amazon."@en ;
+  ex:description "Inrupt Pod Spaces is an instance of the Enterprise Solid Server provided by Inrupt, Inc., hosted by Amazon." ;
   ex:name "Inrupt Pod Spaces" ;
   ex:provider cdata:Inrupt ;
   ex:serviceEndpoint <https://start.inrupt.com/> ;
@@ -1323,12 +1323,12 @@ cdata:Kjetil_Kjernsmo a ex:Person ;
 
 cdata:KnightFoundation a ex:Organization ;
   ex:landingPage <https://knightfoundation.org> ;
-  ex:name "The Knight Foundation"@en ;
+  ex:name "The Knight Foundation" ;
   ex:subType con:FundingOrganization .
 
 cdata:KnightFoundationTechnologyInnovation a ex:Organization ;
   ex:landingPage <https://knightfoundation.org/programs/technology> ;
-  ex:name "The Knight Foundation for Technology Innovation"@en ;
+  ex:name "The Knight Foundation for Technology Innovation" ;
   ex:subType con:FundingOrganization .
 
 cdata:KNoodle a ex:Software ;
@@ -1354,7 +1354,7 @@ cdata:Lalana_Kagal a ex:Person ;
 cdata:Laravel a ex:Software ;
   ex:maintainer <https://noeldemartin.solidcommunity.net/profile/card#me> ;
   ex:modified "2025-06-10T18:05:30.617Z"^^xsd:dateTime ;
-  ex:name "Laravel Solid Server (LSS)"@en ;
+  ex:name "Laravel Solid Server (LSS)" ;
   ex:repository <https://github.com/noeldemartin/lss> ;
   ex:status con:Exploration ;
   ex:subType con:PodServer .
@@ -1385,17 +1385,17 @@ cdata:LDOtutorial a ex:CreativeWork ;
   ex:landingPage <https://ldo.js.org/latest/guides/solid_react/> ;
   ex:maintainer cdata:Oteam ;
   ex:modified "2025-06-09T15:26:08.167Z"^^xsd:dateTime ;
-  ex:name "Using LDO to build a Solid Application for React"@en ;
+  ex:name "Using LDO to build a Solid Application for React" ;
   ex:subType con:AboutSolidApps .
 
 cdata:LDP_Streams a ex:CreativeWork ;
   ex:author <https://ruben.verborgh.org/profile/#me>, cdata:Pieter_Colpaert, cdata:Ruben_Dedecker, cdata:Sindhu_Vasireddy, cdata:Wout_Slabbinck ;
-  ex:description "The Solid Project – at the time of writing – uses containers with resources in them as defined in the\nLDP specification as a way to give developers the flexibility to write to a storage in the way they see\nfit. With cross-app interoperability and read performance in mind, choosing an application profile and\ncontainer-resource structure becomes guesswork for the app writing the data, as all possible apps reading\nfrom the storage are not yet defined. Event sourcing is a technique used in data architecture to decouple\nwriting from reading. Multiple views will always stay in-sync with an event source, or allow one to\nview a historic state or study the changes that happened over time. In this paper, we study whether we\ncan use the current version of the Solid protocol to store an event source using the Linked Data Event\nStreams (LDES) specification. We successfully implemented a client library, which we tested on the use\ncase of storing your live location with history, for both reading and writing in two modes: version aware\nand version agnostic. However, the current Solid protocol based on LDP also shows some limitations\ntowards event sourcing: (i) re-balancing the hypermedia structure publishing the LDES is not possible\ndue to slash semantics, (ii) as the event source is fully managed by clients, a faulty client may corrupt\nthe event source, and (iii) the client is also in charge of enforcing the retention policy, having to delete\nolder resources one by one, while they have no information about the internal limits of the Solid storage.\nWe conclude that the Solid spec as-is can be used to store an event source, and that client libraries\ncan create an abstraction of the history without any server-specific functionality. However, we also\nhad to work our way around some limitations, putting more strain on the client, and want to open the\ndiscussion on whether the Solid server protocol needs to be extended for more native support of the\nevent sourcing pattern."@en ;
+  ex:description "The Solid Project – at the time of writing – uses containers with resources in them as defined in the\nLDP specification as a way to give developers the flexibility to write to a storage in the way they see\nfit. With cross-app interoperability and read performance in mind, choosing an application profile and\ncontainer-resource structure becomes guesswork for the app writing the data, as all possible apps reading\nfrom the storage are not yet defined. Event sourcing is a technique used in data architecture to decouple\nwriting from reading. Multiple views will always stay in-sync with an event source, or allow one to\nview a historic state or study the changes that happened over time. In this paper, we study whether we\ncan use the current version of the Solid protocol to store an event source using the Linked Data Event\nStreams (LDES) specification. We successfully implemented a client library, which we tested on the use\ncase of storing your live location with history, for both reading and writing in two modes: version aware\nand version agnostic. However, the current Solid protocol based on LDP also shows some limitations\ntowards event sourcing: (i) re-balancing the hypermedia structure publishing the LDES is not possible\ndue to slash semantics, (ii) as the event source is fully managed by clients, a faulty client may corrupt\nthe event source, and (iii) the client is also in charge of enforcing the retention policy, having to delete\nolder resources one by one, while they have no information about the internal limits of the Solid storage.\nWe conclude that the Solid spec as-is can be used to store an event source, and that client libraries\ncan create an abstraction of the history without any server-specific functionality. However, we also\nhad to work our way around some limitations, putting more strain on the client, and want to open the\ndiscussion on whether the Solid server protocol needs to be extended for more native support of the\nevent sourcing pattern." ;
   ex:landingPage <https://ceur-ws.org/Vol-3339/paper4.pdf> ;
   ex:modified "2025-06-05T22:08:20.952Z"^^xsd:dateTime ;
-  ex:name "Linked Data Event Streams in Solid LDP containers"@en ;
+  ex:name "Linked Data Event Streams in Solid LDP containers" ;
   ex:subType con:ResearchPaper ;
-  ex:technicalKeyword "LDP, LDES, Event Sourcing, TREE, hypermedia"@en .
+  ex:technicalKeyword "LDP, LDES, Event Sourcing, TREE, hypermedia" .
 
 cdata:ldp-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/ns/ldp#> ;
@@ -1405,7 +1405,7 @@ cdata:ldp-vocab a ex:Ontology ;
 
 cdata:Ledger a ex:Organization ;
   ex:landingPage <https://ledgerproject.eu> ;
-  ex:name "Ledger Project"@en ;
+  ex:name "Ledger Project" ;
   ex:subType con:FundingOrganization .
 
 cdata:Leon_Porter a ex:Person ;
@@ -1483,7 +1483,7 @@ cdata:Marc_Fornos a ex:Person ;
 
 cdata:Marc_Haddle a ex:Person ;
   ex:contactEmail <mailto:marc.haddle@datasolids.com> ;
-  ex:description "CEO, Datasolids"@en ;
+  ex:description "CEO, Datasolids" ;
   ex:modified "2025-05-15T15:18:59.233Z"^^xsd:dateTime ;
   ex:name "Marc Haddle" .
 
@@ -1584,15 +1584,15 @@ cdata:Mdr_Notes a ex:Software ;
   ex:technicalKeyword "editor" .
 
 cdata:Media_Kraken a ex:Software ;
-  ex:description "An app to track movies and create collections"@en ;
+  ex:description "An app to track movies and create collections" ;
   ex:landingPage <https://noeldemartin.github.io/media-kraken/> ;
   ex:logo <https://noeldemartin.com/logos/media-kraken.png> ;
   ex:maintainer <https://noeldemartin.solidcommunity.net/profile/card#me> ;
   ex:modified "2025-06-10T17:47:48.290Z"^^xsd:dateTime ;
-  ex:name "Media Kraken"@en ;
+  ex:name "Media Kraken" ;
   ex:status con:Production ;
   ex:subType con:LeisureApp ;
-  ex:technicalKeyword "movies"@en .
+  ex:technicalKeyword "movies" .
 
 cdata:mee-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/ns/pim/meeting#> ;
@@ -1602,14 +1602,14 @@ cdata:mee-vocab a ex:Ontology ;
 
 cdata:Meisdata a ex:Organization ;
   ex:contactEmail <mailto:info@meisdata.io> ;
-  ex:description "a small org providing a NSS a CSS and a Pivot"@en ;
-  ex:domainKeyword "Pod-Provider"@en ;
+  ex:description "a small org providing a NSS a CSS and a Pivot" ;
+  ex:domainKeyword "Pod-Provider" ;
   ex:landingPage <https://meisdata.io> ;
   ex:logo <https://www.serverproject.de/logo2.png> ;
   ex:modified "2025-04-22T03:39:06.075Z"^^xsd:dateTime ;
-  ex:name "Meisdata"@en ;
-  ex:resourcesOffered "server-maintenance"@en ;
-  ex:resourcesWanted "knowledge experience funding snippets rdf turtle"@en ;
+  ex:name "Meisdata" ;
+  ex:resourcesOffered "server-maintenance" ;
+  ex:resourcesWanted "knowledge experience funding snippets rdf turtle" ;
   ex:subType con:OpenSourceProject .
 
 cdata:Melissa_Wood a ex:Person ;
@@ -1676,12 +1676,12 @@ cdata:Mordax a ex:Person ;
 
 cdata:MozillaOpenScience a ex:Organization ;
   ex:landingPage <https://docs.google.com/document/d/1EJXg9G01CG7dBRbmbZzFnB9Bex2ibAVza_4xE8iqQqI/edit> ;
-  ex:name "Mozilla Open Science Mini Grants"@en ;
+  ex:name "Mozilla Open Science Mini Grants" ;
   ex:subType con:FundingOrganization .
 
 cdata:MozillaOpenSource a ex:Organization ;
   ex:landingPage <https://www.mozilla.org/en-US/moss/> ;
-  ex:name "Mozilla Open Source Support"@en ;
+  ex:name "Mozilla Open Source Support" ;
   ex:subType con:FundingOrganization .
 
 cdata:MutualAid a ex:Service ;
@@ -1709,37 +1709,37 @@ cdata:Naman_Goel a ex:Person ;
 
 cdata:NextFM a ex:Software ;
   ex:contactEmail <mailto:product@inrupt.com> ;
-  ex:description "A file manager for Solid pods with support for multiple visual themes, inspired by Tim Berners-Lee."@en ;
+  ex:description "A file manager for Solid pods with support for multiple visual themes, inspired by Tim Berners-Lee." ;
   ex:modified "2025-06-09T15:50:49.306Z"^^xsd:dateTime ;
-  ex:name "NextFM"@en ;
+  ex:name "NextFM" ;
   ex:provider cdata:Inrupt ;
   ex:repository <https://github.com/inrupt/nextfm> ;
   ex:status con:Exploration ;
   ex:subType con:PodApp ;
-  ex:technicalKeyword "file manager"@en .
+  ex:technicalKeyword "file manager" .
 
 cdata:NGI a ex:Organization ;
   ex:description "The Next Generation Internet (NGI) is a European Commission initiative that aims to shape the development and evolution of the Internet into an Internet of Trust. An Internet that responds to people’s fundamental needs, including trust, security, and inclusion, while reflecting the values and the norms all citizens enjoy in Europe." ;
   ex:landingPage <https://www.ngi.eu> ;
-  ex:name "Next Generation Internet"@en ;
+  ex:name "Next Generation Internet" ;
   ex:subType con:FundingOrganization .
 
 cdata:NGICore a ex:Organization ;
   ex:description "Moving the internet forward." ;
   ex:landingPage <https://nlnet.nl/core/> ;
-  ex:name "NGI Zero Core"@en ;
+  ex:name "NGI Zero Core" ;
   ex:subType con:FundingOrganization .
 
 cdata:NGIEntrust a ex:Organization ;
   ex:description "Trustworthiness and data sovereignty." ;
   ex:landingPage <https://nlnet.nl/entrust/> ;
-  ex:name "NGI Zero Entrust"@en ;
+  ex:name "NGI Zero Entrust" ;
   ex:subType con:FundingOrganization .
 
 cdata:NGISargasso a ex:Organization ;
   ex:description "Promoting the transatlantic cooperation for NGI technologies." ;
   ex:landingPage <https://ngisargasso.eu> ;
-  ex:name "NGI Sargasso"@en ;
+  ex:name "NGI Sargasso" ;
   ex:subType con:FundingOrganization .
 
 cdata:Nicolas_Mondada a ex:Person ;
@@ -1752,7 +1752,7 @@ cdata:Nigel_Shadbolt a ex:Person ;
 cdata:NLnet a ex:Organization ;
   ex:description "Since 1997 NLnet foundation has been financially supporting organizations and people that contribute to an open information society. It funds those with ideas to fix the internet." ;
   ex:landingPage <https://nlnet.nl> ;
-  ex:name "NLnet Foundation"@en ;
+  ex:name "NLnet Foundation" ;
   ex:subType con:FundingOrganization .
 
 cdata:Node_sparql_client a ex:Software ;
@@ -1868,7 +1868,7 @@ cdata:OpenLink_Structured_Data_Sniffer a ex:Software ;
 
 cdata:OpenLink_YouID a ex:Software ;
   ex:description "Identity and credentials document generator." ;
-  ex:name "OpenLink YouID"@en ;
+  ex:name "OpenLink YouID" ;
   ex:status con:Development ;
   ex:subType con:ProductivityApp .
 
@@ -1932,15 +1932,15 @@ cdata:Pano_Maria a ex:Person ;
   ex:name "Pano Maria" .
 
 cdata:PASS a ex:Service ;
-  ex:description "An open source digital wallet for providing home-insecure individuals a safe place to store documents within their control. PASS additionally aims to assist caseworkers with processing and providing documents needed to complete the housing-assistance application process."@en ;
+  ex:description "An open source digital wallet for providing home-insecure individuals a safe place to store documents within their control. PASS additionally aims to assist caseworkers with processing and providing documents needed to complete the housing-assistance application process." ;
   ex:landingPage <https://opencommons.org/Personal_Access_System_for_Services_(PASS)> ;
   ex:logo <https://avatars.githubusercontent.com/u/39497980?s=280&v=4> ;
   ex:modified "2025-06-09T15:24:34.285Z"^^xsd:dateTime ;
-  ex:name "Personalized Access System for Services (PASS)"@en ;
+  ex:name "Personalized Access System for Services (PASS)" ;
   ex:provider cdata:CodePDX ;
   ex:repository <https://github.com/codeforpdx/PASS> ;
-  ex:serviceAudience "homeless people,housing services case workers"@en ;
-  ex:socialKeyword "access to public resources,housing"@en ;
+  ex:serviceAudience "homeless people,housing services case workers" ;
+  ex:socialKeyword "access to public resources,housing" ;
   ex:softwareStackIncludes cdata:CSS, cdata:PASSplatform ;
   ex:status con:Development ;
   ex:subType con:SpecializedPodService .
@@ -1996,15 +1996,15 @@ cdata:Penny a ex:Software ;
   ex:technicalKeyword "pod frontend" .
 
 cdata:PermiX a ex:Software ;
-  ex:description "A permission explorer App for Solid"@en ;
+  ex:description "A permission explorer App for Solid" ;
   ex:maintainer <https://renyuneyun.solidcommunity.net/profile/card#me> ;
   ex:modified "2025-06-11T14:50:14.427Z"^^xsd:dateTime ;
-  ex:name "PermiX"@en ;
+  ex:name "PermiX" ;
   ex:repository <https://github.com/renyuneyun/PermiX> ;
   ex:showcase <https://me.ryey.icu/PermiX/> ;
   ex:status con:Exploration ;
   ex:subType con:PodApp ;
-  ex:technicalKeyword "permission, pod management"@en .
+  ex:technicalKeyword "permission, pod management" .
 
 cdata:Pete_Edwards a ex:Person ;
   ex:name "Pete Edwards" .
@@ -2112,14 +2112,14 @@ cdata:PodDotLiquidSurf a ex:Service ;
   ex:subType con:GeneralPurposePodService .
 
 cdata:PodOS a ex:Software ;
-  ex:description "Your personal online data operating system"@en ;
+  ex:description "Your personal online data operating system" ;
   ex:maintainer cdata:Angelo_Veltens ;
   ex:modified "2025-05-08T15:40:08.515Z"^^xsd:dateTime ;
-  ex:name "PodOS"@en ;
+  ex:name "PodOS" ;
   ex:repository <https://github.com/pod-os/PodOS> ;
   ex:status con:Development ;
   ex:subType con:PodApp ;
-  ex:technicalKeyword "pod frontend"@en .
+  ex:technicalKeyword "pod frontend" .
 
 cdata:PodPro a ex:Software ;
   ex:description "Development tool for working with Solid Pods" ;
@@ -2241,55 +2241,55 @@ cdata:rdfs-vocab a ex:Ontology ;
   ex:prefix "rdfs:" .
 
 cdata:Record_0001 a ex:Specification ;
-  ex:description "Writing to a time-based fragmented Linked Data Event Stream that is stored on a Linked Data Platform."@en ;
+  ex:description "Writing to a time-based fragmented Linked Data Event Stream that is stored on a Linked Data Platform." ;
   ex:editor cdata:Pieter_Colpaert, cdata:Wout_Slabbinck ;
   ex:landingPage <https://woutslabbinck.github.io/LDESinLDP/> ;
   ex:modified "2025-06-05T21:36:50.756Z"^^xsd:dateTime ;
-  ex:name "Writing Linked Data Event Streams in LDP Basic Containers"@en ;
+  ex:name "Writing Linked Data Event Streams in LDP Basic Containers" ;
   ex:repository <https://github.com/woutslabbinck/LDESinLDP/> .
 
 cdata:Record_0002 a ex:Specification ;
-  ex:description "This document provides the specification and examples of the perennial DToU language, a language for describing the Terms of Use of Data, both for data providers (e.g. users) and data consumers (e.g. applications).\n\nIt accompanies the paper \"Perennial Semantic Data Terms of Use for Decentralized Web\" by Rui Zhao and Jun Zhao, at ACM Web Conference 2024 (previously known as International World Wide Web Conference; WWW2024), doi 10.1145/3589334.3645631."@en ;
+  ex:description "This document provides the specification and examples of the perennial DToU language, a language for describing the Terms of Use of Data, both for data providers (e.g. users) and data consumers (e.g. applications).\n\nIt accompanies the paper \"Perennial Semantic Data Terms of Use for Decentralized Web\" by Rui Zhao and Jun Zhao, at ACM Web Conference 2024 (previously known as International World Wide Web Conference; WWW2024), doi 10.1145/3589334.3645631." ;
   ex:editor <https://renyuneyun.solidcommunity.net/profile/card#me>, cdata:JunZhao ;
   ex:landingPage <https://me.ryey.icu/solid-dtou/dtou-spec.html> ;
   ex:modified "2025-06-05T21:39:22.437Z"^^xsd:dateTime ;
-  ex:name "DToU Language Spec"@en ;
+  ex:name "DToU Language Spec" ;
   ex:repository <https://github.com/OxfordHCC/solid-dtou/> .
 
 cdata:Record_0003 a ex:CreativeWork ;
-  ex:description "Data and data processing have become an indispensable aspect for our society. Insights drawn from collective data make invaluable contribution to scientific and societal research and business. But there are increasing worries about privacy issues and data misuse. This has prompted the emergence of decentralised personal data stores (PDS) like Solid that provide individuals more control over their personal data. However, existing PDS frameworks face challenges in ensuring data privacy when performing collective computations with data from multiple users. While Secure Multi-Party Computation (MPC) offers input secrecy protection during the computation without relying on any single party, issues emerge when directly applying MPC in the context of PDS, particularly due to key factors like autonomy and decentralisation. In this work, we discuss the essence of this issue, identify a potential solution, and introduce a modular architecture, Libertas, to integrate MPC with PDS like Solid, without requiring protocol-level changes. We introduce a paradigm shift from an `omniscient' view to individual-based, user-centric view of trust and security, and discuss the threat model of Libertas. Two realistic use cases for collaborative data processing are used for evaluation, both for technical feasibility and empirical benchmark, highlighting its effectiveness in empowering gig workers and generating differentially private synthetic data. The results of our experiments underscore Libertas' linear scalability and provide valuable insights into compute optimisations, thereby advancing the state-of-the-art in privacy-preserving data processing practices. By offering practical solutions for maintaining both individual autonomy and privacy in collaborative data processing environments, Libertas contributes significantly to the ongoing discourse on privacy protection in data-driven decision-making contexts. \nPrepring available at https://arxiv.org/abs/2309.16365"@en ;
+  ex:description "Data and data processing have become an indispensable aspect for our society. Insights drawn from collective data make invaluable contribution to scientific and societal research and business. But there are increasing worries about privacy issues and data misuse. This has prompted the emergence of decentralised personal data stores (PDS) like Solid that provide individuals more control over their personal data. However, existing PDS frameworks face challenges in ensuring data privacy when performing collective computations with data from multiple users. While Secure Multi-Party Computation (MPC) offers input secrecy protection during the computation without relying on any single party, issues emerge when directly applying MPC in the context of PDS, particularly due to key factors like autonomy and decentralisation. In this work, we discuss the essence of this issue, identify a potential solution, and introduce a modular architecture, Libertas, to integrate MPC with PDS like Solid, without requiring protocol-level changes. We introduce a paradigm shift from an `omniscient' view to individual-based, user-centric view of trust and security, and discuss the threat model of Libertas. Two realistic use cases for collaborative data processing are used for evaluation, both for technical feasibility and empirical benchmark, highlighting its effectiveness in empowering gig workers and generating differentially private synthetic data. The results of our experiments underscore Libertas' linear scalability and provide valuable insights into compute optimisations, thereby advancing the state-of-the-art in privacy-preserving data processing practices. By offering practical solutions for maintaining both individual autonomy and privacy in collaborative data processing environments, Libertas contributes significantly to the ongoing discourse on privacy protection in data-driven decision-making contexts. \nPrepring available at https://arxiv.org/abs/2309.16365" ;
   ex:landingPage <https://oxfordhcc.github.io/libertas/> ;
   ex:modified "2025-06-09T15:29:02.588Z"^^xsd:dateTime ;
-  ex:name "Libertas: Privacy-Preserving Collective Computation for Decentralised Personal Data Stores"@en ;
+  ex:name "Libertas: Privacy-Preserving Collective Computation for Decentralised Personal Data Stores" ;
   ex:provider cdata:OxfordHumanCenteredComputingGroup ;
   ex:subType con:ResearchPaper ;
-  ex:technicalKeyword "architecture, Solid, MPC, privacy, user autonomy"@en .
+  ex:technicalKeyword "architecture, Solid, MPC, privacy, user autonomy" .
 
 cdata:Record_0004 a ex:CreativeWork ;
   ex:author <https://renyuneyun.solidcommunity.net/profile/card#me> ;
-  ex:description "In today's digital landscape, the Web has become increasingly centralized, raising concerns about user privacy violations. Decentralized Web architectures, such as Solid, offer a promising solution by empowering users with better control over their data in their personal `Pods'. However, a significant challenge remains: users must navigate numerous applications to decide which application can be trusted with access to their data Pods. This often involves reading lengthy and complex Terms of Use agreements, a process that users often find daunting or simply ignore. This compromises user autonomy and impedes detection of data misuse. We propose a novel formal description of Data Terms of Use (DToU), along with a DToU reasoner. Users and applications specify their own parts of the DToU policy with local knowledge, covering permissions, requirements, prohibitions and obligations. Automated reasoning verifies compliance, and also derives policies for output data. This constitutes a ``perennial'' DToU language, where the policy authoring only occurs once, and we can conduct ongoing automated checks across users, applications and activity cycles. Our solution is built on Turtle, Notation 3 and RDF Surfaces, for the language and the reasoning engine. It ensures seamless integration with other semantic tools for enhanced interoperability. We have successfully integrated this language into the \nSolid framework, and conducted performance benchmark. We believe this work demonstrates a practicality of a perennial DToU language and the potential of a paradigm shift to how users interact with data and applications in a decentralized Web, offering both improved privacy and usability. \n\nPreprint available at https://arxiv.org/abs/2403.07587"@en ;
+  ex:description "In today's digital landscape, the Web has become increasingly centralized, raising concerns about user privacy violations. Decentralized Web architectures, such as Solid, offer a promising solution by empowering users with better control over their data in their personal `Pods'. However, a significant challenge remains: users must navigate numerous applications to decide which application can be trusted with access to their data Pods. This often involves reading lengthy and complex Terms of Use agreements, a process that users often find daunting or simply ignore. This compromises user autonomy and impedes detection of data misuse. We propose a novel formal description of Data Terms of Use (DToU), along with a DToU reasoner. Users and applications specify their own parts of the DToU policy with local knowledge, covering permissions, requirements, prohibitions and obligations. Automated reasoning verifies compliance, and also derives policies for output data. This constitutes a ``perennial'' DToU language, where the policy authoring only occurs once, and we can conduct ongoing automated checks across users, applications and activity cycles. Our solution is built on Turtle, Notation 3 and RDF Surfaces, for the language and the reasoning engine. It ensures seamless integration with other semantic tools for enhanced interoperability. We have successfully integrated this language into the \nSolid framework, and conducted performance benchmark. We believe this work demonstrates a practicality of a perennial DToU language and the potential of a paradigm shift to how users interact with data and applications in a decentralized Web, offering both improved privacy and usability. \n\nPreprint available at https://arxiv.org/abs/2403.07587" ;
   ex:landingPage <https://me.ryey.icu/solid-dtou/> ;
   ex:modified "2025-06-09T15:29:26.208Z"^^xsd:dateTime ;
-  ex:name "Perennial Semantic Data Terms of Use for Decentralized Web"@en ;
+  ex:name "Perennial Semantic Data Terms of Use for Decentralized Web" ;
   ex:provider cdata:OxfordHumanCenteredComputingGroup ;
   ex:subType con:ResearchPaper ;
-  ex:technicalKeyword "Solid, authentication, data usage control"@en .
+  ex:technicalKeyword "Solid, authentication, data usage control" .
 
 cdata:Record_0005 a ex:CreativeWork ;
-  ex:description "We present SocialGenPod, a decentralised and privacy-friendly way of deploying generative AI Web applications. Unlike centralised Web and data architectures that keep user data tied to application and service providers, we show how one can use Solid -- a decentralised Web specification -- to decouple user data from generative AI applications. We demonstrate SocialGenPod using a prototype that allows users to converse with different Large Language Models, optionally leveraging Retrieval Augmented Generation to generate answers grounded in private documents stored in any Solid Pod that the user is allowed to access, directly or indirectly. SocialGenPod makes use of Solid access control mechanisms to give users full control of determining who has access to data stored in their Pods. SocialGenPod keeps all user data (chat history, app configuration, personal documents, etc) securely in the user's personal Pod; separate from specific model or application providers. Besides better privacy controls, this approach also enables portability across different services and applications. Finally, we discuss challenges, posed by the large compute requirements of state-of-the-art models, that future research in this area should address. Our prototype is open-source and available at: this https URL. \n\nCode available at https://github.com/Vidminas/socialgenpod"@en ;
+  ex:description "We present SocialGenPod, a decentralised and privacy-friendly way of deploying generative AI Web applications. Unlike centralised Web and data architectures that keep user data tied to application and service providers, we show how one can use Solid -- a decentralised Web specification -- to decouple user data from generative AI applications. We demonstrate SocialGenPod using a prototype that allows users to converse with different Large Language Models, optionally leveraging Retrieval Augmented Generation to generate answers grounded in private documents stored in any Solid Pod that the user is allowed to access, directly or indirectly. SocialGenPod makes use of Solid access control mechanisms to give users full control of determining who has access to data stored in their Pods. SocialGenPod keeps all user data (chat history, app configuration, personal documents, etc) securely in the user's personal Pod; separate from specific model or application providers. Besides better privacy controls, this approach also enables portability across different services and applications. Finally, we discuss challenges, posed by the large compute requirements of state-of-the-art models, that future research in this area should address. Our prototype is open-source and available at: this https URL. \n\nCode available at https://github.com/Vidminas/socialgenpod" ;
   ex:landingPage <https://arxiv.org/abs/2403.10408> ;
   ex:modified "2025-06-09T15:29:59.383Z"^^xsd:dateTime ;
-  ex:name "SocialGenPod: Privacy-Friendly Generative AI Social Web Applications with Decentralised Personal Data Stores"@en ;
+  ex:name "SocialGenPod: Privacy-Friendly Generative AI Social Web Applications with Decentralised Personal Data Stores" ;
   ex:subType con:ResearchPaper ;
-  ex:technicalKeyword "Solid, LLM, AI, RAG, privacy"@en .
+  ex:technicalKeyword "Solid, LLM, AI, RAG, privacy" .
 
 cdata:Record_0006 a ex:CreativeWork ;
-  ex:description "Personal Data Stores (PDS) like SoLiD is an emerging data and knowledge management solution in recent years. They promise to give back ownership and control of data to the user, and provide protocols for developers to build applications using the data. However, existing Solid-based applications often focus on using a single-user's data. In this article, we use a simple but realistic calendar-and-meeting-scheduling scenario to demonstrate the feasibility and design considerations for enabling cooperative data-use across multiple users' SoLiD Pods. This scenario identifies the bottleneck for certain cooperative use cases, namely those involving offline-changing and synchronization of knowledge information. We demonstrate a viable approach to mediate this issue, introducing a long-living thin service, the orchestrator. We describe our implementation and discuss its applicability to other ecosystems. We conclude by discussing the implication of such services, in particular their risks and challenges for building decentralised applications. \n\nPreprint at https://arxiv.org/abs/2306.14890"@en ;
+  ex:description "Personal Data Stores (PDS) like SoLiD is an emerging data and knowledge management solution in recent years. They promise to give back ownership and control of data to the user, and provide protocols for developers to build applications using the data. However, existing Solid-based applications often focus on using a single-user's data. In this article, we use a simple but realistic calendar-and-meeting-scheduling scenario to demonstrate the feasibility and design considerations for enabling cooperative data-use across multiple users' SoLiD Pods. This scenario identifies the bottleneck for certain cooperative use cases, namely those involving offline-changing and synchronization of knowledge information. We demonstrate a viable approach to mediate this issue, introducing a long-living thin service, the orchestrator. We describe our implementation and discuss its applicability to other ecosystems. We conclude by discussing the implication of such services, in particular their risks and challenges for building decentralised applications. \n\nPreprint at https://arxiv.org/abs/2306.14890" ;
   ex:landingPage <https://github.com/OxfordHCC/knoodle> ;
   ex:modified "2025-06-09T15:30:38.474Z"^^xsd:dateTime ;
-  ex:name "Long-living Service for Cooperative Knowledge Use in Decentralized Data Stores"@en ;
+  ex:name "Long-living Service for Cooperative Knowledge Use in Decentralized Data Stores" ;
   ex:subType con:ResearchPaper ;
-  ex:technicalKeyword "Calendar, Meeting Scheduling"@en .
+  ex:technicalKeyword "Calendar, Meeting Scheduling" .
 
 cdata:Redpencil a ex:Organization ;
   ex:landingPage <https://redpencil.io/> ;
@@ -2352,9 +2352,9 @@ cdata:Roger_Perry a ex:Person ;
 
 cdata:Ronald_Siebes a ex:Person ;
   ex:contactEmail <mailto:r.m.siebes@vu.nl> ;
-  ex:description "Assistant professor at UCDS group, VU Amsterdam"@en ;
+  ex:description "Assistant professor at UCDS group, VU Amsterdam" ;
   ex:modified "2025-06-09T15:23:17.525Z"^^xsd:dateTime ;
-  ex:name "Ronald Siebes"@en .
+  ex:name "Ronald Siebes" .
 
 cdata:Rosano a ex:Person ;
   ex:forumHandle "@rosano" ;
@@ -2363,10 +2363,10 @@ cdata:Rosano a ex:Person ;
 
 cdata:Ross_Horne a ex:Person ;
   ex:contactEmail <mailto:ross.horne@strath.ac.uk> ;
-  ex:description "Interested in authentication protocols and security policy models."@en ;
+  ex:description "Interested in authentication protocols and security policy models." ;
   ex:modified "2025-04-25T07:49:04.398Z"^^xsd:dateTime ;
-  ex:name "Ross Horne"@en ;
-  ex:resourcesOffered "Security analysis of proposals for authentication and access control."@en .
+  ex:name "Ross Horne" ;
+  ex:resourcesOffered "Security analysis of proposals for authentication and access control." .
 
 cdata:Roy_Leon a ex:Person ;
   ex:name "Roy Leon" .
@@ -2445,7 +2445,7 @@ cdata:Siddharth_Rahul_Raut a ex:Person ;
 
 cdata:SIDN a ex:Organization ;
   ex:landingPage <https://www.sidnfonds.nl/excerpt/> ;
-  ex:name "SIDN Fonds"@en ;
+  ex:name "SIDN Fonds" ;
   ex:subType con:FundingOrganization .
 
 cdata:Simon_Grant a ex:Person ;
@@ -2482,7 +2482,7 @@ cdata:skos-vocab a ex:Ontology ;
 
 cdata:Slack a ex:Organization ;
   ex:landingPage <https://slack.com/developers/fund> ;
-  ex:name "Slack Fund"@en ;
+  ex:name "Slack Fund" ;
   ex:subType con:FundingOrganization .
 
 cdata:SleepyBike a ex:Service ;
@@ -2581,17 +2581,17 @@ cdata:Solid_auth_swift a ex:Software ;
 
 cdata:Solid_Bench a ex:Software ;
   ex:contactEmail <mailto:phd@highlatitud.es> ;
-  ex:description "A multi-purpose platform, containing a pod browser, and a framework to plug domain-specific apps."@en ;
+  ex:description "A multi-purpose platform, containing a pod browser, and a framework to plug domain-specific apps." ;
   ex:landingPage <https://solidbench.dev> ;
   ex:logo <https://solidbench.dev/images/solidbench-256.png> ;
   ex:maintainer cdata:Philippe_Duchesne ;
   ex:modified "2025-06-04T12:46:08.117Z"^^xsd:dateTime ;
-  ex:name "SolidBench"@en ;
+  ex:name "SolidBench" ;
   ex:repository <https://github.com/pduchesne/solidbench> ;
   ex:showcase <https://solidbench.dev> ;
   ex:status con:Development ;
   ex:subType con:PodApp ;
-  ex:technicalKeyword "pod browser, pod manager, rich content viewer"@en .
+  ex:technicalKeyword "pod browser, pod manager, rich content viewer" .
 
 cdata:Solid_Calendar_1 a ex:Software ;
   ex:landingPage <https://bitbucket.org/dylanmartin/solidcalendar> ;
@@ -2669,12 +2669,12 @@ cdata:Solid_DID_Method a ex:Specification ;
 
 cdata:Solid_E2EE a ex:CreativeWork ;
   ex:author cdata:Henri_Cattoire, cdata:KU_Leuven ;
-  ex:description "Extension to the Solid protocol that enables E2EE through Attribute-Based Encryption. The extension enables systems that are unwilling to entrust POD providers with their users' data, such as electronic health record (EHR) systems, to be built on top of Solid and benefit from the features it offers, such as application interoperability. The repository includes a proof-of-concept application."@en ;
+  ex:description "Extension to the Solid protocol that enables E2EE through Attribute-Based Encryption. The extension enables systems that are unwilling to entrust POD providers with their users' data, such as electronic health record (EHR) systems, to be built on top of Solid and benefit from the features it offers, such as application interoperability. The repository includes a proof-of-concept application." ;
   ex:landingPage <https://github.com/henricattoire/solid-e2ee> ;
   ex:modified "2025-06-12T10:36:31.853Z"^^xsd:dateTime ;
-  ex:name "Solid E2EE"@en ;
+  ex:name "Solid E2EE" ;
   ex:subType con:ResearchPaper ;
-  ex:technicalKeyword "e2ee,cp-abe"@en .
+  ex:technicalKeyword "e2ee,cp-abe" .
 
 cdata:Solid_file_client a ex:Software ;
   ex:description "A Javascript library for creating and managing files and folders in Solid data stores." ;
@@ -3002,14 +3002,14 @@ cdata:SolidForum a ex:Service ;
   ex:subType con:CommunicationService .
 
 cdata:SolidFuse a ex:Software ;
-  ex:description "A FUSE filesystem for Solid (Social Linked Data) Pod storage"@en ;
+  ex:description "A FUSE filesystem for Solid (Social Linked Data) Pod storage" ;
   ex:maintainer <https://renyuneyun.solidcommunity.net/profile/card#me> ;
   ex:modified "2025-06-11T14:52:32.495Z"^^xsd:dateTime ;
-  ex:name "SoLiD FUSE"@en ;
+  ex:name "SoLiD FUSE" ;
   ex:repository <https://github.com/renyuneyun/solid-fuse> ;
   ex:status con:Exploration ;
   ex:subType con:PodApp ;
-  ex:technicalKeyword "fuse, filesystem, pod management"@en .
+  ex:technicalKeyword "fuse, filesystem, pod management" .
 
 cdata:SolidGrassroots a ex:Organization ;
   ex:landingPage <https://gitlab.com/groups/solidweb.org/-/group_members> ;
@@ -3138,25 +3138,25 @@ cdata:SolidWebComponents a ex:Software ;
 
 cdata:SolidWebDotMe a ex:Service ;
   ex:contactEmail <mailto:info@meisdata.io> ;
-  ex:description "solidweb.me is a community-run Pod-Provider that uses CSS and the SolidOS frontend and is based in Germany."@en ;
+  ex:description "solidweb.me is a community-run Pod-Provider that uses CSS and the SolidOS frontend and is based in Germany." ;
   ex:logo <https://www.serverproject.de/logo2.png> ;
   ex:modified "2025-06-06T11:36:27.968Z"^^xsd:dateTime ;
-  ex:name "solidweb.me"@en ;
+  ex:name "solidweb.me" ;
   ex:provider cdata:Meisdata ;
   ex:repository <https://github.com/serverproject-dev/solidweb.me> ;
   ex:serviceEndpoint <https://solidweb.me> ;
-  ex:socialKeyword "solid, pod-provider, idp, css"@en ;
+  ex:socialKeyword "solid, pod-provider, idp, css" ;
   ex:softwareStackIncludes cdata:CSS, cdata:SolidOS ;
   ex:status con:Production ;
   ex:subType con:GeneralPurposePodService .
 
 cdata:SolidWebDotOrg a ex:Service ;
   ex:contactEmail <mailto:info@meisdata.io> ;
-  ex:description "solidweb.org is a public Solid server based in Germany which is in an experimental state."@en ;
-  ex:domainKeyword "Pod-Provider"@en ;
+  ex:description "solidweb.org is a public Solid server based in Germany which is in an experimental state." ;
+  ex:domainKeyword "Pod-Provider" ;
   ex:logo <https://www.serverproject.de/logo2.png> ;
   ex:modified "2025-04-22T03:40:39.786Z"^^xsd:dateTime ;
-  ex:name "solidweb.org"@en ;
+  ex:name "solidweb.org" ;
   ex:provider cdata:SolidGrassroots ;
   ex:serviceEndpoint <https://solidweb.org> ;
   ex:softwareStackIncludes cdata:NSS, cdata:SolidOS ;
@@ -3192,11 +3192,11 @@ cdata:Soukai a ex:Software ;
   ex:landingPage <https://soukai.js.org> ;
   ex:maintainer <https://noeldemartin.solidcommunity.net/profile/card#me> ;
   ex:modified "2025-06-10T18:04:26.172Z"^^xsd:dateTime ;
-  ex:name "Soukai"@en ;
+  ex:name "Soukai" ;
   ex:repository <https://github.com/noeldemartin/soukai> ;
   ex:status con:Production ;
   ex:subType con:SoftwareLibrary ;
-  ex:technicalKeyword "library"@en .
+  ex:technicalKeyword "library" .
 
 cdata:Spoggy a ex:Software ;
   ex:clientID <https://spoggy.solidcommunity.net/profile/card#me> ;
@@ -3311,11 +3311,11 @@ cdata:Tao_Chen a ex:Person ;
 
 cdata:TeamIdLive a ex:Service ;
   ex:contactEmail <mailto:info@meisdata.io> ;
-  ex:description "Pivot"@en ;
-  ex:domainKeyword "Pod-Provider"@en ;
+  ex:description "Pivot" ;
+  ex:domainKeyword "Pod-Provider" ;
   ex:logo <https://www.serverproject.de/logo2.png> ;
   ex:modified "2025-04-22T03:43:06.788Z"^^xsd:dateTime ;
-  ex:name "teamid.live"@en ;
+  ex:name "teamid.live" ;
   ex:provider cdata:Meisdata ;
   ex:serviceEndpoint <https://teamid.live> ;
   ex:softwareStackIncludes cdata:Pivot, cdata:SolidOS ;
@@ -3421,16 +3421,16 @@ cdata:ui-vocab a ex:Ontology ;
   ex:prefix "ui:" .
 
 cdata:Umai a ex:Software ;
-  ex:description "Collect and share recipes"@en ;
+  ex:description "Collect and share recipes" ;
   ex:logo <https://noeldemartin.com/logos/umai.png> ;
   ex:maintainer <https://noeldemartin.solidcommunity.net/profile/card#me> ;
   ex:modified "2025-06-10T17:47:15.737Z"^^xsd:dateTime ;
-  ex:name "Umai"@en ;
+  ex:name "Umai" ;
   ex:repository <https://github.com/noeldemartin/umai> ;
   ex:showcase <https://umai.noeldemartin.com> ;
   ex:status con:Production ;
   ex:subType con:LeisureApp ;
-  ex:technicalKeyword "food"@en .
+  ex:technicalKeyword "food" .
 
 cdata:UofLondon a ex:Organization ;
   ex:name "University of London" ;
@@ -3467,7 +3467,7 @@ cdata:UseId a ex:Service ;
 
 cdata:vcard-vocab a ex:Ontology ;
   ex:landingPage <https://www.w3.org/2006/vcard/ns#> ;
-  ex:name "vCard"@en ;
+  ex:name "vCard" ;
   ex:namespaceURI <https://www.w3.org/2006/vcard/ns#> ;
   ex:prefix "vcard:" .
 
@@ -3628,15 +3628,15 @@ cdata:Zongyan_Li a ex:Person ;
 
 <https://solidweb.me/testpro-dev/profile/card#me> a ex:Person ;
   ex:contactEmail <mailto:me@evering.eu> ;
-  ex:description "baby coder"@en ;
-  ex:forumHandle "@ewingson"@en ;
+  ex:description "baby coder" ;
+  ex:forumHandle "@ewingson" ;
   ex:landingPage <https://configedit.com/>, <https://github.com/ewingson> ;
   ex:logo <https://avatars.githubusercontent.com/u/36561948?s=400&u=f9432d40dbea4f2291b9def6676dde978133709c&v=4> ;
-  ex:matrixHandle "@ewingson"@en ;
+  ex:matrixHandle "@ewingson" ;
   ex:modified "2025-05-08T04:34:58.868Z"^^xsd:dateTime ;
-  ex:name "Matthias Evering"@en ;
-  ex:resourcesOffered "NSS CSS and Pivot"@en, "pod-provider NSS CSS Pivot"@en ;
-  ex:resourcesWanted "rdf turtle community building pod-provider solution-focused communication diversity equity inclusion"@en ;
+  ex:name "Matthias Evering" ;
+  ex:resourcesOffered "NSS CSS and Pivot", "pod-provider NSS CSS Pivot" ;
+  ex:resourcesWanted "rdf turtle community building pod-provider solution-focused communication diversity equity inclusion" ;
   ex:webid <https://solidweb.me/testpro-dev/profile/card#me> .
 
 <https://sopekmir.inrupt.net/profile/card#me> a ex:Person ;
