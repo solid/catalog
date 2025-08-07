@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Solid Resources Catalog</title>
   <script type="module" src='https://cdn.jsdelivr.net/npm/mashlib@latest/dist/mashlib.min.js'></script>
-<!--  <script type="module" src='../node_modules/mashlib/dist/mashlib.min.js'></script> -->
-  <link rel="stylesheet" type="text/css" href="./viewer.css">  
-  <link rel="stylesheet" type="text/css" href="./forms.css">  
+  <!--  <script type="module" src='./node_modules/mashlib/dist/mashlib.min.js'></script> -->
+  <link rel="stylesheet" type="text/css" href="./pages/viewer.css">  
+  <link rel="stylesheet" type="text/css" href="./pages/forms.css">  
   <link rel="icon" href="https://solidproject.org/assets/img/solid-emblem.svg" type="image/svg+xml"> 
   <meta name="thumbnail" content="https://solidproject.org/assets/img/solid-emblem.svg"> 
 </head>
 <body>
 <div id="main-content">
   <div class="sol-header">
-    <img src="../assets/logo.svg" class="logo">
+    <img src="./assets/logo.svg" class="logo">
     <span class="sol-header-content">
       <b style="display:inline-block;padding-left:1rem;padding-right:1rem;"> Solid Resources Catalog </b>
       <sol-catalog-search class="search-input"><input type="text"> 
@@ -63,7 +63,7 @@
     var sh;
   </script>
   <script type="module">
-    import {viewer,showSubtypes} from '../scripts/viewer.js';
+    import {viewer,showSubtypes} from './scripts/viewer.js';
     document.addEventListener('DOMContentLoaded', async () => {
       sh = showSubtypes;
       await viewer();

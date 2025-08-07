@@ -170,7 +170,7 @@ mainArea.style.display="none";
             else object = `<${object}>`;
           }
           else  {
-            object = `"""${object.trim()}"""@en`;
+            object = `"""${object.trim()}"""`;
           }
           all += `    ${predicate}  ${object} ;\n`;
         }

@@ -6,302 +6,25 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://harth.org/andreas/foaf#ah> a ex:Person ;
-  ex:contactEmail <mailto:andreas@harth.org> ;
-  ex:matrixHandle "@aharth:matrix.org" ;
-  ex:modified "2025-04-25T07:53:45.052Z"^^xsd:dateTime ;
-  ex:name "Andreas Harth" ;
-  ex:webid <http://harth.org/andreas/foaf#ah> .
-
-<https://45h.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Luc" ;
-  ex:webid <https://45h.inrupt.net/profile/card#me> .
-
-<https://armoise.co/sro> a ex:Person ;
-  ex:forumHandle "@srosset81" ;
-  ex:name "Sebastien Rosset" ;
-  ex:webid <https://armoise.co/sro> .
-
-<https://carloss.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Tom Friendly" ;
-  ex:webid <https://carloss.inrupt.net/profile/card#me> .
-
-<https://communitylinksense.inrupt.net/profile/card#me> a ex:Person ;
-  ex:landingPage <https://github.com/YetAnotherJonWilson> ;
-  ex:name "Ian Wilson" ;
-  ex:webid <https://communitylinksense.inrupt.net/profile/card#me> .
-
-<https://comp495x.duckdns.org/Pod1/profile#me> a ex:Person ;
-  ex:forumHandle "@Kludgy4" ;
-  ex:name "Matthew" ;
-  ex:webid <https://comp495x.duckdns.org/Pod1/profile#me> .
-
-<https://csarven.ca/#i> a ex:Person ;
-  ex:name "Sarven Capadisli" ;
-  ex:webid <https://csarven.ca/#i> .
-
-<https://dewomser.solidcommunity.net/profile/card#me> a ex:Person ;
-  ex:name "Stefan Höhn" ;
-  ex:webid <https://dewomser.solidcommunity.net/profile/card#me> .
-
 <https://elf-pavlik.hackers4peace.net> a ex:Person ;
-  ex:description "One of Solid CG co-chairs. Co-editor of Solid Application Interoperability, Solid-OIDC, Security Consi  derations and some Solid Notification channel types. Maintainer of sai-js." ;
+  ex:description "One of Solid CG co-chairs. Co-editor of Solid Application Interoperability, Solid-OIDC, Security Consi  derations and some Solid Notification channel types. Maintainer of sai-js."@en ;
   ex:landingPage <https://elf-pavlik.hackers4peace.net> ;
   ex:logo <https://avatars.githubusercontent.com/u/876431?v=4> ;
-  ex:name "elf Pavlik" ;
+  ex:name "elf Pavlik"@en ;
   ex:webid <https://elf-pavlik.hackers4peace.net> .
-
-<https://gatos.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Sander" ;
-  ex:webid <https://gatos.inrupt.net/profile/card#me> .
-
-<https://hegemon.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Liam Broza" ;
-  ex:webid <https://hegemon.inrupt.net/profile/card#me> .
-
-<https://hochstenbach.solidcommunity.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@hochstenbach" ;
-  ex:name "Patrick Hochstenbach" ;
-  ex:webid <https://hochstenbach.solidcommunity.net/profile/card#me> .
-
-<https://hunterlester.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Hunter Lester" ;
-  ex:webid <https://hunterlester.inrupt.net/profile/card#me> .
-
-<https://id.inrupt.com/rajugeorge> a ex:Person ;
-  ex:forumHandle "@rajugeorge" ;
-  ex:name "Raju George" ;
-  ex:webid <https://id.inrupt.com/rajugeorge> .
-
-<https://id.mrkvon.org> a ex:Person ;
-  ex:forumHandle "@mrkvon" ;
-  ex:landingPage <https://github.com/mrkvon>, <https://mrkvon.org> ;
-  ex:matrixHandle "@mrkvon:matrix.org" ;
-  ex:modified "2025-05-08T01:12:44.757Z"^^xsd:dateTime ;
-  ex:name "Michal" ;
-  ex:webid <https://id.mrkvon.org> .
-
-<https://id.myopenlink.net/dataspace/person/tthibodeau#this> a ex:Person ;
-  ex:landingPage <https://github.com/TallTed> ;
-  ex:name "Ted Thibodeau" ;
-  ex:webid <https://id.myopenlink.net/dataspace/person/tthibodeau#this> .
-
-<https://jackson.solidcommunity.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@jaxoncreed" ;
-  ex:name "Jackson Morgan" ;
-  ex:webid <https://jackson.solidcommunity.net/profile/card#me> .
-
-<https://jaspervandenberghen.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Jasper Vandenberghen" ;
-  ex:webid <https://jaspervandenberghen.inrupt.net/profile/card#me> .
-
-<https://jeff-zucker.solidcommunity.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@jeffz" ;
-  ex:landingPage <https://github.com/jeff-zucker> ;
-  ex:matrixHandle "@jeff-zucker" ;
-  ex:name "Jeff Zucker" ;
-  ex:webid <https://jeff-zucker.solidcommunity.net/profile/card#me> .
-
-<https://jenni.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Jenni Inglis" ;
-  ex:webid <https://jenni.inrupt.net/profile/card#me> .
-
-<https://jholleran.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Jarlath Holleran" ;
-  ex:webid <https://jholleran.inrupt.net/profile/card#me> .
-
-<https://jmartin.inrupt.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@james.martin" ;
-  ex:name "James Martin" ;
-  ex:webid <https://jmartin.inrupt.net/profile/card#me> .
-
-<https://johanbove.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Johan Bove" ;
-  ex:webid <https://johanbove.inrupt.net/profile/card#me> .
-
-<https://johnb.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "John Bruce" ;
-  ex:webid <https://johnb.inrupt.net/profile/card#me> .
-
-<https://joshcollins.inrupt.net/profile/card#me> a ex:Person ;
-  ex:landingPage <https://github.com/joshdcollins> ;
-  ex:name "Josh Collins" ;
-  ex:webid <https://joshcollins.inrupt.net/profile/card#me> .
-
-<https://jprod.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Pablo" ;
-  ex:webid <https://jprod.inrupt.net/profile/card#me> .
-
-<https://julian-cole.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Jules" ;
-  ex:webid <https://julian-cole.inrupt.net/profile/card#me> .
-
-<https://justin.inrupt.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@justin" ;
-  ex:landingPage <https://github.com/justinwb> ;
-  ex:name "Justin Bingham" ;
-  ex:webid <https://justin.inrupt.net/profile/card#me> .
-
-<https://jzvolensky.solidcommunity.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@jzvolensky" ;
-  ex:name "Juraj Zvolensky" ;
-  ex:webid <https://jzvolensky.solidcommunity.net/profile/card#me> .
-
-<https://kaefer3000.solidcommunity.net/profile/card#me> a ex:Person ;
-  ex:contactEmail <mailto:tobias.kaefer@kit.edu> ;
-  ex:landingPage <https://websci.aifb.kit.edu/Tobias_Kaefer.php> ;
-  ex:modified "2025-04-25T07:58:10.536Z"^^xsd:dateTime ;
-  ex:name "Tobias Käfer" ;
-  ex:webid <https://kaefer3000.solidcommunity.net/profile/card#me> .
-
-<https://karlhrichter.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Karl Richter" ;
-  ex:webid <https://karlhrichter.inrupt.net/profile/card#me> .
-
-<https://kartikatulusan.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Kartika Tulusan" ;
-  ex:webid <https://kartikatulusan.inrupt.net/profile/card#me> .
-
-<https://kay.inrupt.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@kay-kim" ;
-  ex:landingPage <https://github.com/kay-kim> ;
-  ex:name "Kay Kim" ;
-  ex:webid <https://kay.inrupt.net/profile/card#me> .
-
-<https://kellyo.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Kelly O'Brien" ;
-  ex:webid <https://kellyo.inrupt.net/profile/card#me> .
-
-<https://khoward.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Kevin Howard" ;
-  ex:webid <https://khoward.inrupt.net/profile/card#me> .
-
-<https://kingsley.idehen.net/public_home/kidehen/profile.ttl#i> a ex:Person ;
-  ex:name "Kingsley Idehen" ;
-  ex:webid <https://kingsley.idehen.net/public_home/kidehen/profile.ttl#i> .
-
-<https://ldaguilar88.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Luis Aguilar" ;
-  ex:webid <https://ldaguilar88.inrupt.net/profile/card#me> .
-
-<https://markjspivey.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Markjspivey" ;
-  ex:webid <https://markjspivey.inrupt.net/profile/card#me> .
-
-<https://mats.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Mats Berg" ;
-  ex:webid <https://mats.inrupt.net/profile/card#me> .
-
-<https://melvin.solidcommunity.net/profile/card#me> a ex:Person ;
-  ex:landingPage <https://github.com/melvincarvalho> ;
-  ex:name "Melvin Carvalho" ;
-  ex:webid <https://melvin.solidcommunity.net/profile/card#me> .
-
-<https://michielbdejong.inrupt.net/profile/card#me> a ex:Person ;
-  ex:landingPage <https://github.com/michielbdejong> ;
-  ex:name "Michiel de Jong" ;
-  ex:webid <https://michielbdejong.inrupt.net/profile/card#me> .
-
-<https://mitzilaszlo.solidcommunity.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@MitziLaszlo" ;
-  ex:landingPage <https://github.com/Mitzi-Laszlo> ;
-  ex:name "Mitzi Laszlo" ;
-  ex:webid <https://mitzilaszlo.solidcommunity.net/profile/card#me> .
-
-<https://mohamedsaidhamed.org/profile/card#me> a ex:Person ;
-  ex:name "Mohamed Hamed" ;
-  ex:webid <https://mohamedsaidhamed.org/profile/card#me> .
-
-<https://mvs.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Miel Vander Sande" ;
-  ex:webid <https://mvs.inrupt.net/profile/card#me> .
-
-<https://nborson.solidcommunity.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@nborson" ;
-  ex:name "Nathan Borson" ;
-  ex:webid <https://nborson.solidcommunity.net/profile/card#me> .
-
-<https://newyork.solid.community/profile/card#me> a ex:Person ;
-  ex:forumHandle "@adventure" ;
-  ex:name "Mike Adams" ;
-  ex:webid <https://newyork.solid.community/profile/card#me> .
-
-<https://nickform.inrupt.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@nickform" ;
-  ex:name "Nick-Form" ;
-  ex:webid <https://nickform.inrupt.net/profile/card#me> .
-
-<https://noeldemartin.solidcommunity.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@NoelDeMartin" ;
-  ex:landingPage <https://noeldemartin.com> ;
-  ex:modified "2025-06-10T18:02:34.141Z"^^xsd:dateTime ;
-  ex:name "Noel De Martin" ;
-  ex:webid <https://noeldemartin.solidcommunity.net/profile/card#me> .
-
-<https://omitg.inrupt.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@Omitg24" ;
-  ex:name "Omar Teixeira Gonzalez" ;
-  ex:webid <https://omitg.inrupt.net/profile/card#me> .
-
-<https://oz.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Osmar Olivo" ;
-  ex:webid <https://oz.inrupt.net/profile/card#me> .
-
-<https://parle.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Parle" ;
-  ex:webid <https://parle.inrupt.net/profile/card#me> .
-
-<https://paula.veltens.org/profile/card#me> a ex:Person ;
-  ex:name "Paula Veltens" ;
-  ex:webid <https://paula.veltens.org/profile/card#me> .
 
 <https://people.apache.org/~acoburn/#i> a ex:Person ;
   ex:logo <https://avatars.githubusercontent.com/u/1265883?v=4> ;
   ex:name "Aaron Coburn" .
 
-<https://peterhatherley.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Peter Hatherley" ;
-  ex:webid <https://peterhatherley.inrupt.net/profile/card#me> .
-
-<https://pjh.inrupt.net/profile/card> a ex:Person ;
-  ex:name "Peter Hartman" ;
-  ex:webid <https://pjh.inrupt.net/profile/card> .
-
-<https://pmcb55.inrupt.net/profile/card#me> a ex:Person ;
-  ex:landingPage <https://github.com/pmcb55> ;
-  ex:name "Pat McBennett" ;
-  ex:webid <https://pmcb55.inrupt.net/profile/card#me> .
-
-<https://pod.inrupt.com/kyra/profile/card#me> a ex:Person ;
-  ex:forumHandle "@KyraAssaad" ;
-  ex:landingPage <https://github.com/kyraassaad> ;
-  ex:name "Kyra Assaad" ;
-  ex:webid <https://pod.inrupt.com/kyra/profile/card#me> .
-
 <https://publikationen.bibliothek.kit.edu/1000172187> a ex:CreativeWork ;
   ex:about <https://solidproject.org/TR/wac>, cdata:Solid_Application_Interoperability ;
-  ex:author <http://harth.org/andreas/foaf#ah>, <https://kaefer3000.solidcommunity.net/profile/card#me>, cdata:Andreas_Both, cdata:Christoph_Braun, cdata:Daniel_Schraudner, cdata:Dustin_Yeboah, cdata:Sebastian_Schmid, cdata:Thorsten_Kastner ;
-  ex:description "The Solid (Social Linked Data) technology family was de-\nveloped to provide the foundation for Data Sovereignty in the context\nof web applications. The advantage of this innovative approach is the\nopportunity to dynamically bind an identity to a Solid application and a\nuser-specific Solid data store (Solid Pod). These three basic components\ncan be combined dynamically, allowing users to share their data with an\napplication while retaining full control of the data in self-managed Solid\nPods. This paper presents a prototype of a web-based user interface to\ngrant access to data in a Solid Pod. To enable a dynamic binding into\nSolid-driven environments, we made the implementation available as a\nSolid application – AuthApp – with a specific focus on allowing users\nto configure the data access granting efficiently. To comply with data\nprotection regulations, in particular Europe’s GDPR, we extended the\nstandard to include the validation of the purpose of data sharing. Unlike\nprevious work, we also make full use of robust technologies to avoid the\nneed to copy or store data outside the personal context, meaning all data\nremains under the user’s control and so does the AuthApp." ;
+  ex:author cdata:Andreas_Both, cdata:Andreas_Harth, cdata:Christoph_Braun, cdata:Daniel_Schraudner, cdata:Dustin_Yeboah, cdata:Sebastian_Schmid, cdata:Thorsten_Kastner, cdata:Tobias_Käfer ;
+  ex:description "The Solid (Social Linked Data) technology family was de-\nveloped to provide the foundation for Data Sovereignty in the context\nof web applications. The advantage of this innovative approach is the\nopportunity to dynamically bind an identity to a Solid application and a\nuser-specific Solid data store (Solid Pod). These three basic components\ncan be combined dynamically, allowing users to share their data with an\napplication while retaining full control of the data in self-managed Solid\nPods. This paper presents a prototype of a web-based user interface to\ngrant access to data in a Solid Pod. To enable a dynamic binding into\nSolid-driven environments, we made the implementation available as a\nSolid application – AuthApp – with a specific focus on allowing users\nto configure the data access granting efficiently. To comply with data\nprotection regulations, in particular Europe’s GDPR, we extended the\nstandard to include the validation of the purpose of data sharing. Unlike\nprevious work, we also make full use of robust technologies to avoid the\nneed to copy or store data outside the personal context, meaning all data\nremains under the user’s control and so does the AuthApp."@en ;
   ex:landingPage <https://publikationen.bibliothek.kit.edu/1000172187/156135196> ;
-  ex:name "AuthApp – Portable, Reusable Solid App for GDPR-Compliant Access Granting" ;
+  ex:name "AuthApp – Portable, Reusable Solid App for GDPR-Compliant Access Granting"@en ;
   ex:subType con:ResearchPaper ;
-  ex:technicalKeyword "Authorization, Access Control, Data Sharing, Access Granting, Zero Trust, Data Sovereignty" .
-
-<https://renyuneyun.solidcommunity.net/profile/card#me> a ex:Person ;
-  ex:contactEmail <mailto:me@ryey.icu> ;
-  ex:forumHandle "@renyuneyun" ;
-  ex:landingPage <https://me.ryey.icu> ;
-  ex:matrixHandle "@renyuneyun:matrix.org" ;
-  ex:modified "2025-04-25T07:55:57.565Z"^^xsd:dateTime ;
-  ex:name "Rui Zhao" ;
-  ex:resourcesOffered "Mentorship\nResearch Collaboration\nDevelopment Collaboration\nLibraries\nApps" ;
-  ex:webid <https://renyuneyun.solidcommunity.net/profile/card#me> .
-
-<https://ruben.verborgh.org/profile/#me> a ex:Person ;
-  ex:forumHandle "@RubenVerborgh" ;
-  ex:landingPage <https://github.com/RubenVerborgh> ;
-  ex:name "Ruben Verborgh" ;
-  ex:webid <https://ruben.verborgh.org/profile/#me> .
+  ex:technicalKeyword "Authorization, Access Control, Data Sharing, Access Granting, Zero Trust, Data Sovereignty"@en .
 
 <https://sai.js.org/application> a ex:Software ;
   ex:conformsTo cdata:SAI_Application ;
@@ -343,59 +66,22 @@
 
 <https://samurex.hackers4peace.net> a ex:Person ;
   ex:landingPage <https://samurex.hackers4peace.net> ;
-  ex:name "Maciej Samoraj" ;
+  ex:name "Maciej Samoraj"@en ;
   ex:webid <https://samurex.hackers4peace.net> .
-
-<https://sascha.inrupt.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@Sascha" ;
-  ex:name "Sascha" ;
-  ex:webid <https://sascha.inrupt.net/profile/card#me> .
-
-<https://schabot.solidcommunity.net/profile/card#me> a ex:Person ;
-  ex:name "Simon Chabot" ;
-  ex:webid <https://schabot.solidcommunity.net/profile/card#me> .
-
-<https://sharonstrats.inrupt.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@SharonStrats" ;
-  ex:landingPage <https://github.com/SharonStrats> ;
-  ex:name "Sharon Stratsianis" ;
-  ex:webid <https://sharonstrats.inrupt.net/profile/card#me> .
-
-<https://shrck1015.solidcommunity.net/profile/card#me> a ex:Person ;
-  ex:name "Yujin Park" ;
-  ex:webid <https://shrck1015.solidcommunity.net/profile/card#me> .
-
-<https://skirrane.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Sabrina Kirrane" ;
-  ex:webid <https://skirrane.inrupt.net/profile/card#me> .
-
-<https://solid.champin.net/pa/profile/card#me> a ex:Person ;
-  ex:forumHandle "@p20n" ;
-  ex:name "Pierre-Antoine Champin" ;
-  ex:webid <https://solid.champin.net/pa/profile/card#me> .
-
-<https://solid.smessie.com/profile/card#me> a ex:Person ;
-  ex:name "Ieben Smessaert" ;
-  ex:webid <https://solid.smessie.com/profile/card#me> .
-
-<https://solid.zwifi.eu/profile/card#me> a ex:Person ;
-  ex:landingPage <https://github.com/NSeydoux> ;
-  ex:name "Nicolas Seydoux" ;
-  ex:webid <https://solid.zwifi.eu/profile/card#me> .
 
 <https://solidlab.be/wp-content/uploads/2024/11/User-Managed-Access-Whitepaper.pdf> a ex:CreativeWork ;
   ex:about <https://solidproject.org/TR/wac>, cdata:Access_Control_Policy ;
-  ex:author <https://ruben.verborgh.org/profile/#me>, cdata:Beatriz_Estevez, cdata:Ben_De_Meester, cdata:Ruben_Dedecker, cdata:Wout_Slabbinck, <https://woutermont.solidcommunity.net/profile/card#me> ;
-  ex:description "The User-Managed Access (UMA) extension to OAuth 2.0 is a promising candidate for increasing Digital Trust in personal data ecosystems like Solid. With minor modifications, it can achieve many requirements regarding usage control and transaction contextualization, even though additional specification is needed to address delegation of control and retraction of usage policies." ;
+  ex:author cdata:Beatriz_Estevez, cdata:Ben_De_Meester, cdata:Ruben_Dedecker, cdata:Ruben_Verborgh, cdata:Wout_Slabbinck, cdata:Wouter_Termont ;
+  ex:description "The User-Managed Access (UMA) extension to OAuth 2.0 is a promising candidate for increasing Digital Trust in personal data ecosystems like Solid. With minor modifications, it can achieve many requirements regarding usage control and transaction contextualization, even though additional specification is needed to address delegation of control and retraction of usage policies."@en ;
   ex:landingPage <https://solidlab.be/wp-content/uploads/2024/11/User-Managed-Access-Whitepaper.pdf> ;
-  ex:name "From Resource Control to Digital Trust with User-Managed Access" ;
+  ex:name "From Resource Control to Digital Trust with User-Managed Access"@en ;
   ex:subType con:ResearchPaper ;
-  ex:technicalKeyword "Authorization, UMA" .
+  ex:technicalKeyword "Authorization, UMA"@en .
 
 <https://solidproject.org/TR/notifications-protocol> a ex:Specification ;
-  ex:author <https://csarven.ca/#i>, <https://elf-pavlik.hackers4peace.net>, <https://people.apache.org/~acoburn/#i>, cdata:RahulGupta ;
+  ex:author <https://elf-pavlik.hackers4peace.net>, <https://people.apache.org/~acoburn/#i>, cdata:RahulGupta, cdata:Sarven_Capadisli ;
   ex:definesConformanceFor <https://solidproject.org/TR/notifications-protocol#DiscoveryClient>, <https://solidproject.org/TR/notifications-protocol#NotificationReceiver>, <https://solidproject.org/TR/notifications-protocol#NotificationSender>, <https://solidproject.org/TR/notifications-protocol#ResourceServer>, <https://solidproject.org/TR/notifications-protocol#SubscriptionClient>, <https://solidproject.org/TR/notifications-protocol#SubscriptionServer> ;
-  ex:editor <https://csarven.ca/#i> ;
+  ex:editor cdata:Sarven_Capadisli ;
   ex:landingPage <https://solidproject.org/TR/notifications-protocol> ;
   ex:name "Solid Notifications Protocol" ;
   ex:repository <https://github.com/solid/notifications> .
@@ -437,8 +123,8 @@
   ex:name "Solid Server" .
 
 <https://solidproject.org/TR/wac> a ex:Specification ;
-  ex:author <https://csarven.ca/#i>, cdata:Henry_Story, <https://timbl.solidcommunity.net/profile/card#me> ;
-  ex:editor <https://csarven.ca/#i> ;
+  ex:author cdata:Henry_Story, cdata:Sarven_Capadisli, cdata:Tim_Berners-Lee ;
+  ex:editor cdata:Sarven_Capadisli ;
   ex:landingPage <https://solidproject.org/TR/wac> ;
   ex:name "Web Access Control" ;
   ex:repository <https://github.com/solid/web-access-control-spec/> .
@@ -468,7 +154,7 @@ cdata:Access_Control_Policy a ex:Specification ;
 
 cdata:ACL_check a ex:Software ;
   ex:description "Simple check of Web Access Control (WAC) access." ;
-  ex:maintainer <https://michielbdejong.inrupt.net/profile/card#me>, cdata:Arne_Hassel, cdata:Kjetil_Kjernsmo ;
+  ex:maintainer cdata:Arne_Hassel, cdata:Kjetil_Kjernsmo, cdata:Michiel_de_Jong ;
   ex:name "ACL check" ;
   ex:repository <https://github.com/nodeSolidServer/acl-check> ;
   ex:status con:Production ;
@@ -488,11 +174,11 @@ cdata:ACP_Server a ex:ClassOfProduct ;
   ex:name "ACP Server" .
 
 cdata:ActivityPods a ex:Software ;
-  ex:description "A new kind of architecture for web applications which aims to reconcile the ActivityPub and Solid standards., Brings together two game-changing technologies, ActivityPub and Solid Pods, and empowers developers to create truly decentralized applications" ;
+  ex:description "A new kind of architecture for web applications which aims to reconcile the ActivityPub and Solid standards., Brings together two game-changing technologies, ActivityPub and Solid Pods, and empowers developers to create truly decentralized applications"@en ;
   ex:landingPage <https://activitypods.org/> ;
-  ex:maintainer <https://armoise.co/sro> ;
+  ex:maintainer cdata:Sebastien_Rosset ;
   ex:modified "2025-05-08T08:47:52.971Z"^^xsd:dateTime ;
-  ex:name "ActivityPods" ;
+  ex:name "ActivityPods"@en ;
   ex:repository <https://github.com/activitypods/activitypods> ;
   ex:status con:Production ;
   ex:subType con:SoftwareLibrary .
@@ -528,6 +214,13 @@ cdata:Altynbek_Orumbayev a ex:Person ;
 cdata:Andreas_Both a ex:Person ;
   ex:name "Andreas Both" .
 
+cdata:Andreas_Harth a ex:Person ;
+  ex:contactEmail <mailto:andreas@harth.org> ;
+  ex:matrixHandle "@aharth:matrix.org"@en ;
+  ex:modified "2025-04-25T07:53:45.052Z"^^xsd:dateTime ;
+  ex:name "Andreas Harth"@en ;
+  ex:webid <http://harth.org/andreas/foaf#ah> .
+
 cdata:Andrei_Sambra a ex:Person ;
   ex:name "Andrei Sambra" .
 
@@ -542,7 +235,7 @@ cdata:Arne_Hassel a ex:Person ;
 
 cdata:as-vocab a ex:Ontology ;
   ex:landingPage <https://www.w3.org/ns/activitystreams#> ;
-  ex:name "Activity Streams" ;
+  ex:name "Activity Streams"@en ;
   ex:namespaceURI <https://www.w3.org/ns/activitystreams#> ;
   ex:prefix "as:" .
 
@@ -576,7 +269,7 @@ cdata:Authorization_Use_Cases_Survey a ex:CreativeWork ;
 
 cdata:BAAS a ex:Organization ;
   ex:landingPage <https://www.sidnfonds.nl/nieuws/follow-up-call-je-data-de-baas> ;
-  ex:name "Je Data de Baas by SIDN" ;
+  ex:name "Je Data de Baas by SIDN"@en ;
   ex:subType con:FundingOrganization .
 
 cdata:basic-geo-vocab a ex:Ontology ;
@@ -628,7 +321,7 @@ cdata:cc-vocab a ex:Ontology ;
 
 cdata:CCIG a ex:Organization ;
   ex:landingPage <http://agree.org/> ;
-  ex:name "Consensus Community Innovation Grants" ;
+  ex:name "Consensus Community Innovation Grants"@en ;
   ex:subType con:FundingOrganization .
 
 cdata:cert-vocab a ex:Ontology ;
@@ -692,11 +385,11 @@ cdata:Contacts a ex:Software ;
   ex:technicalKeyword "contacts" .
 
 cdata:CRDT a ex:Ontology ;
-  ex:description "The Conflict-Free Replicated Datatypes (CRDT) ontology can be used to describe changes made to resources over time." ;
+  ex:description "The Conflict-Free Replicated Datatypes (CRDT) ontology can be used to describe changes made to resources over time."@en ;
   ex:modified "2025-06-10T18:06:28.878Z"^^xsd:dateTime ;
-  ex:name "CRDT" ;
+  ex:name "CRDT"@en ;
   ex:namespaceURI <https://vocab.noeldemartin.com/crdt/> ;
-  ex:prefix "crdt:" .
+  ex:prefix "crdt:"@en .
 
 cdata:CSS a ex:Software ;
   ex:conformsTo <https://solidproject.org/TR/notifications-protocol#NotificationSender>, <https://solidproject.org/TR/notifications-protocol#ResourceServer>, <https://solidproject.org/TR/notifications-protocol#SubscriptionServer>, <https://solidproject.org/TR/oidc#Provider>, <https://solidproject.org/TR/protocol#Server>, <https://solidproject.org/TR/wac#Server>, cdata:ACP_Resource_Server, cdata:ACP_Server, cdata:StreamingHTTPChannel2023NotificationSender, cdata:WebhookChannel2023NotificationSender, cdata:WebhookChannel2023SubscriptionServer, cdata:WebSocketChannel2023NotificationSender, cdata:WebSocketChannel2023SubscriptionServer ;
@@ -709,7 +402,7 @@ cdata:CSS a ex:Software ;
 
 cdata:Cypress_Solid a ex:Software ;
   ex:description "Cypress Plugin to test applications using the Solid Protocol" ;
-  ex:maintainer <https://noeldemartin.solidcommunity.net/profile/card#me> ;
+  ex:maintainer cdata:Noel_De_Martin ;
   ex:name "Cypress Solid" ;
   ex:status con:Development ;
   ex:subType con:ProductivityApp .
@@ -737,7 +430,7 @@ cdata:DataFoodNetwork a ex:Organization ;
 cdata:DataKitchen a ex:Software ;
   ex:description "The solid databrowser technology as a stand-alone electron app." ;
   ex:hasDependencyOn cdata:SolidOS ;
-  ex:maintainer <https://jeff-zucker.solidcommunity.net/profile/card#me> ;
+  ex:maintainer cdata:Jeff_Zucker ;
   ex:name "Data Kitchen" ;
   ex:provider cdata:SolidOSteam ;
   ex:repository <https://github.com/solidos/data-kitchen> ;
@@ -756,11 +449,11 @@ cdata:Datasister a ex:Software ;
 
 cdata:Datasolids a ex:Organization ;
   ex:contactEmail <mailto:marc.haddle@datasolids.com> ;
-  ex:description "Solid principles to store & share health data." ;
+  ex:description "Solid principles to store & share health data."@en ;
   ex:modified "2025-05-28T14:21:51.810Z"^^xsd:dateTime ;
   ex:name "Datasolids" ;
-  ex:resourcesOffered "Security expertise, GTM" ;
-  ex:resourcesWanted "Funding" ;
+  ex:resourcesOffered "Security expertise, GTM"@en ;
+  ex:resourcesWanted "Funding"@en ;
   ex:subType con:Company .
 
 cdata:DataSwift a ex:Organization ;
@@ -779,19 +472,19 @@ cdata:David_Faveris a ex:Person ;
 
 cdata:dc-elements-vocab a ex:Ontology ;
   ex:landingPage <http://purl.org/dc/elements/1.1/> ;
-  ex:name "Dublin Core Elements" ;
+  ex:name "Dublin Core Elements"@en ;
   ex:namespaceURI <http://purl.org/dc/elements/1.1/> ;
   ex:prefix "elements:" .
 
 cdata:dc-terms-vocab a ex:Ontology ;
   ex:landingPage <http://purl.org/dc/terms/> ;
-  ex:name "Dublin Core Terms" ;
+  ex:name "Dublin Core Terms"@en ;
   ex:namespaceURI <http://purl.org/dc/terms/> ;
   ex:prefix "terms:" .
 
 cdata:DDG a ex:Organization ;
   ex:landingPage <https://duckduckgo.com/donations> ;
-  ex:name "DuckDuckGo Donations" ;
+  ex:name "DuckDuckGo Donations"@en ;
   ex:subType con:FundingOrganization .
 
 cdata:Digita a ex:Organization ;
@@ -811,18 +504,18 @@ cdata:Dmitri_Zagidulin a ex:Person ;
   ex:name "Dmitri Zagidulin" .
 
 cdata:Dokieli a ex:Software ;
-  ex:description "Clientside editor for decentralised article publishing, annotations and social interactions." ;
+  ex:description "Clientside editor for decentralised article publishing, annotations and social interactions."@en ;
   ex:landingPage <https://dokie.li/> ;
   ex:logo <https://dokie.li/media/images/logo.png> ;
-  ex:maintainer <https://csarven.ca/#i> ;
+  ex:maintainer cdata:Sarven_Capadisli ;
   ex:modified "2025-06-08T12:11:22.094Z"^^xsd:dateTime ;
-  ex:name "dokieli" ;
+  ex:name "dokieli"@en ;
   ex:repository <https://git.dokie.li/> ;
   ex:showcase <https://dokie.li/> ;
-  ex:socialKeyword "publisher, consumer" ;
+  ex:socialKeyword "publisher, consumer"@en ;
   ex:status con:Production ;
   ex:subType con:ProductivityApp ;
-  ex:technicalKeyword "authoring, annotations, notifications, publishing, reader, editor" .
+  ex:technicalKeyword "authoring, annotations, notifications, publishing, reader, editor"@en .
 
 cdata:Drive a ex:Software ;
   ex:description "Tool to create and share resources with contacts" ;
@@ -906,25 +599,25 @@ cdata:EventSourceChannel2023 a ex:Specification ;
 
 cdata:foaf-vocab a ex:Ontology ;
   ex:landingPage <http://xmlns.com/foaf/0.1/> ;
-  ex:name "Friends of a Friend" ;
+  ex:name "Friends of a Friend"@en ;
   ex:namespaceURI <http://xmlns.com/foaf/0.1/> ;
   ex:prefix "foaf:" .
 
 cdata:Focus a ex:Software ;
-  ex:description "Solid Task Manager" ;
+  ex:description "Solid Task Manager"@en ;
   ex:logo <https://noeldemartin.com/logos/focus.png> ;
-  ex:maintainer <https://noeldemartin.solidcommunity.net/profile/card#me> ;
+  ex:maintainer cdata:Noel_De_Martin ;
   ex:modified "2025-06-10T18:01:48.905Z"^^xsd:dateTime ;
-  ex:name "Focus" ;
+  ex:name "Focus"@en ;
   ex:status con:Development ;
   ex:subType con:ProductivityApp ;
-  ex:technicalKeyword "task manager" .
+  ex:technicalKeyword "task manager"@en .
 
 cdata:Friedrich-Alexander-Universität_Erlangen-Nürnberg a ex:Organization ;
   ex:contactEmail <mailto:andreas.harth@fau.de> ;
-  ex:description "The Chair of Information Systems, with a focus on Technical Information Systems, conducts research in areas such as the Semantic Web, Linked Data, Knowledge Graphs, and decentralised information systems. The research is carried out in close collaboration with the department of Data Spaces and Internet of Things Solutions at the Fraunhofer Institute for Integrated Circuits IIS." ;
+  ex:description "The Chair of Information Systems, with a focus on Technical Information Systems, conducts research in areas such as the Semantic Web, Linked Data, Knowledge Graphs, and decentralised information systems. The research is carried out in close collaboration with the department of Data Spaces and Internet of Things Solutions at the Fraunhofer Institute for Integrated Circuits IIS."@en ;
   ex:modified "2025-04-25T07:56:28.092Z"^^xsd:dateTime ;
-  ex:name "Friedrich-Alexander-Universität Erlangen-Nürnberg" ;
+  ex:name "Friedrich-Alexander-Universität Erlangen-Nürnberg"@en ;
   ex:subType con:UniversityProject .
 
 cdata:Friend_Requests a ex:Software ;
@@ -950,7 +643,7 @@ cdata:GettingStarted a ex:CreativeWork ;
 
 cdata:GithubSponsors a ex:Organization ;
   ex:landingPage <https://github.com/sponsors> ;
-  ex:name "GitHub Sponsors" ;
+  ex:name "GitHub Sponsors"@en ;
   ex:subType con:FundingOrganization .
 
 cdata:Gold a ex:Software ;
@@ -971,7 +664,7 @@ cdata:GovernmentOfFlanders a ex:Organization ;
 
 cdata:GrantForTheWeb a ex:Organization ;
   ex:landingPage <https://forum.grantfortheweb.org/t/call-for-proposals-early-2020/959> ;
-  ex:name "Grant for the web" ;
+  ex:name "Grant for the web"@en ;
   ex:subType con:FundingOrganization .
 
 cdata:Graphmetrix a ex:Organization ;
@@ -1025,7 +718,7 @@ cdata:httph-vocab a ex:Ontology ;
 
 cdata:HTTPSig_Authentication_for_Solid a ex:Specification ;
   ex:author cdata:Henry_Story ;
-  ex:editor <https://csarven.ca/#i>, cdata:Henry_Story ;
+  ex:editor cdata:Henry_Story, cdata:Sarven_Capadisli ;
   ex:landingPage <https://solid.github.io/httpsig/> ;
   ex:name "HTTPSig Authentication for Solid" ;
   ex:repository <https://github.com/solid/httpsig> .
@@ -1041,12 +734,21 @@ cdata:HUBL a ex:Service ;
 cdata:Hunar_Batra a ex:Person ;
   ex:name "Hunar Batra" .
 
+cdata:Hunter_Lester a ex:Person ;
+  ex:name "Hunter Lester" ;
+  ex:webid <https://hunterlester.inrupt.net/profile/card#me> .
+
 cdata:Hypey a ex:Software ;
   ex:description "Images manipulation app in the development(?)" ;
   ex:name "Hypey" ;
   ex:status con:Development ;
   ex:subType con:OtherApp ;
   ex:technicalKeyword "visualization" .
+
+cdata:Ian_Wilson a ex:Person ;
+  ex:landingPage <https://github.com/YetAnotherJonWilson> ;
+  ex:name "Ian Wilson" ;
+  ex:webid <https://communitylinksense.inrupt.net/profile/card#me> .
 
 cdata:iana-vocab a ex:Ontology ;
   ex:landingPage <https://www.w3.org/ns/iana/media-types/> ;
@@ -1071,6 +773,10 @@ cdata:Idflex_query a ex:Software ;
   ex:status con:Exploration ;
   ex:subType con:SoftwareLibrary ;
   ex:technicalKeyword "rdf parsing" .
+
+cdata:Ieben_Smessaert a ex:Person ;
+  ex:name "Ieben Smessaert" ;
+  ex:webid <https://solid.smessie.com/profile/card#me> .
 
 cdata:IgrantIo a ex:Service ;
   ex:name "Data Pod" ;
@@ -1121,7 +827,7 @@ cdata:Inrupt a ex:Organization ;
   ex:subType con:Company .
 
 cdata:InruptPodSpaces a ex:Service ;
-  ex:description "Inrupt Pod Spaces is an instance of the Enterprise Solid Server provided by Inrupt, Inc., hosted by Amazon." ;
+  ex:description "Inrupt Pod Spaces is an instance of the Enterprise Solid Server provided by Inrupt, Inc., hosted by Amazon."@en ;
   ex:name "Inrupt Pod Spaces" ;
   ex:provider cdata:Inrupt ;
   ex:serviceEndpoint <https://start.inrupt.com/> ;
@@ -1153,6 +859,11 @@ cdata:Jack_Lawson a ex:Person ;
   ex:landingPage <https://github.com/ajacksified> ;
   ex:name "Jack Lawson" .
 
+cdata:Jackson_Morgan a ex:Person ;
+  ex:forumHandle "@jaxoncreed" ;
+  ex:name "Jackson Morgan" ;
+  ex:webid <https://jackson.solidcommunity.net/profile/card#me> .
+
 cdata:Jacob_Dreesen a ex:Person ;
   ex:name "Jacob Dreesen" .
 
@@ -1170,10 +881,19 @@ cdata:Jakub_Klimek a ex:Person ;
 cdata:James_Birmingham a ex:Person ;
   ex:name "James Birmingham" .
 
+cdata:James_Martin a ex:Person ;
+  ex:forumHandle "@james.martin" ;
+  ex:name "James Martin" ;
+  ex:webid <https://jmartin.inrupt.net/profile/card#me> .
+
 cdata:Jan_Schill a ex:Person ;
   ex:forumHandle "@janschill" ;
   ex:landingPage <https://github.com/janschill> ;
   ex:name "Jan Schill" .
+
+cdata:Jarlath_Holleran a ex:Person ;
+  ex:name "Jarlath Holleran" ;
+  ex:webid <https://jholleran.inrupt.net/profile/card#me> .
 
 cdata:Jasmine_Leonard a ex:Person ;
   ex:name "Jasmine Leonard" .
@@ -1181,6 +901,10 @@ cdata:Jasmine_Leonard a ex:Person ;
 cdata:Jason_Paulos a ex:Person ;
   ex:landingPage <https://github.com/jasonpaulos> ;
   ex:name "Jason Paulos" .
+
+cdata:Jasper_Vandenberghen a ex:Person ;
+  ex:name "Jasper Vandenberghen" ;
+  ex:webid <https://jaspervandenberghen.inrupt.net/profile/card#me> .
 
 cdata:JavaScriptTutorial a ex:CreativeWork ;
   ex:landingPage <https://docs.inrupt.com/developer-tools/javascript/client-libraries/tutorial/getting-started/> ;
@@ -1201,8 +925,19 @@ cdata:Jaxon_Creed a ex:Person ;
 cdata:Jeeth_Garageshwara a ex:Person ;
   ex:name "Jeeth Garageshwara" .
 
+cdata:Jeff_Zucker a ex:Person ;
+  ex:forumHandle "@jeffz" ;
+  ex:landingPage <https://github.com/jeff-zucker> ;
+  ex:matrixHandle "@jeff-zucker" ;
+  ex:name "Jeff Zucker" ;
+  ex:webid <https://jeff-zucker.solidcommunity.net/profile/card#me> .
+
 cdata:Jegan_Davies-Jones a ex:Person ;
   ex:name "Jegan Davies-Jones" .
+
+cdata:Jenni_Inglis a ex:Person ;
+  ex:name "Jenni Inglis" ;
+  ex:webid <https://jenni.inrupt.net/profile/card#me> .
 
 cdata:Jeroen_van_Beele a ex:Person ;
   ex:name "Jeroen van Beele" .
@@ -1246,6 +981,10 @@ cdata:Joel_Bender a ex:Person ;
 cdata:Joep_Meindertsma a ex:Person ;
   ex:name "Joep Meindertsma" .
 
+cdata:Johan_Bove a ex:Person ;
+  ex:name "Johan Bove" ;
+  ex:webid <https://johanbove.inrupt.net/profile/card#me> .
+
 cdata:Johannes_Winter a ex:Person ;
   ex:landingPage <https://github.com/y0va> ;
   ex:name "Johannes Winter" .
@@ -1253,6 +992,15 @@ cdata:Johannes_Winter a ex:Person ;
 cdata:John_Bartas a ex:Person ;
   ex:forumHandle "@Stitch626" ;
   ex:name "John Bartas" .
+
+cdata:John_Bruce a ex:Person ;
+  ex:name "John Bruce" ;
+  ex:webid <https://johnb.inrupt.net/profile/card#me> .
+
+cdata:John_Fletcher a ex:Person ;
+  ex:forumHandle "@ubernatural" ;
+  ex:name "John Fletcher" ;
+  ex:webid <https://ubernatural.inrupt.net/profile/card#me> .
 
 cdata:John_Yu a ex:Person ;
   ex:name "John Yu" .
@@ -1279,11 +1027,31 @@ cdata:Joseph_Wade_Nobles a ex:Person ;
   ex:forumHandle "@JosephWNobles" ;
   ex:name "Joseph Wade Nobles" .
 
+cdata:Josh_Collins a ex:Person ;
+  ex:landingPage <https://github.com/joshdcollins> ;
+  ex:name "Josh Collins" ;
+  ex:webid <https://joshcollins.inrupt.net/profile/card#me> .
+
+cdata:Jules a ex:Person ;
+  ex:name "Jules" ;
+  ex:webid <https://julian-cole.inrupt.net/profile/card#me> .
+
 cdata:Juliette_Carter a ex:Person ;
   ex:name "Juliette Carter" .
 
 cdata:JunZhao a ex:Person ;
   ex:name "Jun Zhao" .
+
+cdata:Juraj_Zvolensky a ex:Person ;
+  ex:forumHandle "@jzvolensky" ;
+  ex:name "Juraj Zvolensky" ;
+  ex:webid <https://jzvolensky.solidcommunity.net/profile/card#me> .
+
+cdata:Justin_Bingham a ex:Person ;
+  ex:forumHandle "@justin" ;
+  ex:landingPage <https://github.com/justinwb> ;
+  ex:name "Justin Bingham" ;
+  ex:webid <https://justin.inrupt.net/profile/card#me> .
 
 cdata:Kai_Chen a ex:Person ;
   ex:name "Kai Chen" .
@@ -1294,12 +1062,34 @@ cdata:Kai_Gilb a ex:Person ;
 cdata:Kangchan_Lee a ex:Person ;
   ex:name "Kangchan Lee" .
 
+cdata:Karl_Richter a ex:Person ;
+  ex:name "Karl Richter" ;
+  ex:webid <https://karlhrichter.inrupt.net/profile/card#me> .
+
+cdata:Kartika_Tulusan a ex:Person ;
+  ex:name "Kartika Tulusan" ;
+  ex:webid <https://kartikatulusan.inrupt.net/profile/card#me> .
+
+cdata:Kay_Kim a ex:Person ;
+  ex:forumHandle "@kay-kim" ;
+  ex:landingPage <https://github.com/kay-kim> ;
+  ex:name "Kay Kim" ;
+  ex:webid <https://kay.inrupt.net/profile/card#me> .
+
 cdata:Kayode_Ezike a ex:Person ;
   ex:landingPage <https://github.com/kezike> ;
   ex:name "Kayode Ezike" .
 
+cdata:Kelly_OBrien a ex:Person ;
+  ex:name "Kelly O'Brien" ;
+  ex:webid <https://kellyo.inrupt.net/profile/card#me> .
+
 cdata:Kevin_Dunglas a ex:Person ;
   ex:name "Kevin Dunglas" .
+
+cdata:Kevin_Howard a ex:Person ;
+  ex:name "Kevin Howard" ;
+  ex:webid <https://khoward.inrupt.net/profile/card#me> .
 
 cdata:Kevin_Poulsen a ex:Person ;
   ex:name "Kevin Poulsen" .
@@ -1318,17 +1108,21 @@ cdata:KeyChain a ex:Software ;
 cdata:Khalid_Alnuaim a ex:Person ;
   ex:name "Khalid Alnuaim" .
 
+cdata:Kingsley_Idehen a ex:Person ;
+  ex:name "Kingsley Idehen" ;
+  ex:webid <https://kingsley.idehen.net/public_home/kidehen/profile.ttl#i> .
+
 cdata:Kjetil_Kjernsmo a ex:Person ;
   ex:name "Kjetil Kjernsmo" .
 
 cdata:KnightFoundation a ex:Organization ;
   ex:landingPage <https://knightfoundation.org> ;
-  ex:name "The Knight Foundation" ;
+  ex:name "The Knight Foundation"@en ;
   ex:subType con:FundingOrganization .
 
 cdata:KnightFoundationTechnologyInnovation a ex:Organization ;
   ex:landingPage <https://knightfoundation.org/programs/technology> ;
-  ex:name "The Knight Foundation for Technology Innovation" ;
+  ex:name "The Knight Foundation for Technology Innovation"@en ;
   ex:subType con:FundingOrganization .
 
 cdata:KNoodle a ex:Software ;
@@ -1348,13 +1142,19 @@ cdata:Kofi_Kyei a ex:Person ;
 cdata:KU_Leuven a ex:Person ;
   ex:name "KU Leuven" .
 
+cdata:Kyra_Assaad a ex:Person ;
+  ex:forumHandle "@KyraAssaad" ;
+  ex:landingPage <https://github.com/kyraassaad> ;
+  ex:name "Kyra Assaad" ;
+  ex:webid <https://pod.inrupt.com/kyra/profile/card#me> .
+
 cdata:Lalana_Kagal a ex:Person ;
   ex:name "Lalana Kagal" .
 
 cdata:Laravel a ex:Software ;
-  ex:maintainer <https://noeldemartin.solidcommunity.net/profile/card#me> ;
+  ex:maintainer cdata:Noel_De_Martin ;
   ex:modified "2025-06-10T18:05:30.617Z"^^xsd:dateTime ;
-  ex:name "Laravel Solid Server (LSS)" ;
+  ex:name "Laravel Solid Server (LSS)"@en ;
   ex:repository <https://github.com/noeldemartin/lss> ;
   ex:status con:Exploration ;
   ex:subType con:PodServer .
@@ -1366,15 +1166,19 @@ cdata:Lars_Fosdal a ex:Person ;
 cdata:Lauernce_Zhang a ex:Person ;
   ex:name "Lauernce Zhang" .
 
+cdata:Laurens_Debackere a ex:Person ;
+  ex:name "Laurens Debackere" ;
+  ex:webid <https://www.thundr.be/profile/laurens.ttl#me> .
+
 cdata:LDNChannel2023 a ex:Specification ;
-  ex:editor <https://csarven.ca/#i> ;
+  ex:editor cdata:Sarven_Capadisli ;
   ex:landingPage <https://solid.github.io/notifications/ldn-channel-2023> ;
   ex:name "LDNChannel2023" ;
   ex:repository <https://github.com/solid/notifications> .
 
 cdata:LDO a ex:Software ;
   ex:developer cdata:Jesse_Wright ;
-  ex:maintainer <https://jackson.solidcommunity.net/profile/card#me> ;
+  ex:maintainer cdata:Jackson_Morgan ;
   ex:name "LDO - Linked Data Objects" ;
   ex:programmingLanguage "typescript" ;
   ex:status con:Production ;
@@ -1385,17 +1189,17 @@ cdata:LDOtutorial a ex:CreativeWork ;
   ex:landingPage <https://ldo.js.org/latest/guides/solid_react/> ;
   ex:maintainer cdata:Oteam ;
   ex:modified "2025-06-09T15:26:08.167Z"^^xsd:dateTime ;
-  ex:name "Using LDO to build a Solid Application for React" ;
+  ex:name "Using LDO to build a Solid Application for React"@en ;
   ex:subType con:AboutSolidApps .
 
 cdata:LDP_Streams a ex:CreativeWork ;
-  ex:author <https://ruben.verborgh.org/profile/#me>, cdata:Pieter_Colpaert, cdata:Ruben_Dedecker, cdata:Sindhu_Vasireddy, cdata:Wout_Slabbinck ;
-  ex:description "The Solid Project – at the time of writing – uses containers with resources in them as defined in the\nLDP specification as a way to give developers the flexibility to write to a storage in the way they see\nfit. With cross-app interoperability and read performance in mind, choosing an application profile and\ncontainer-resource structure becomes guesswork for the app writing the data, as all possible apps reading\nfrom the storage are not yet defined. Event sourcing is a technique used in data architecture to decouple\nwriting from reading. Multiple views will always stay in-sync with an event source, or allow one to\nview a historic state or study the changes that happened over time. In this paper, we study whether we\ncan use the current version of the Solid protocol to store an event source using the Linked Data Event\nStreams (LDES) specification. We successfully implemented a client library, which we tested on the use\ncase of storing your live location with history, for both reading and writing in two modes: version aware\nand version agnostic. However, the current Solid protocol based on LDP also shows some limitations\ntowards event sourcing: (i) re-balancing the hypermedia structure publishing the LDES is not possible\ndue to slash semantics, (ii) as the event source is fully managed by clients, a faulty client may corrupt\nthe event source, and (iii) the client is also in charge of enforcing the retention policy, having to delete\nolder resources one by one, while they have no information about the internal limits of the Solid storage.\nWe conclude that the Solid spec as-is can be used to store an event source, and that client libraries\ncan create an abstraction of the history without any server-specific functionality. However, we also\nhad to work our way around some limitations, putting more strain on the client, and want to open the\ndiscussion on whether the Solid server protocol needs to be extended for more native support of the\nevent sourcing pattern." ;
+  ex:author cdata:Pieter_Colpaert, cdata:Ruben_Dedecker, cdata:Ruben_Verborgh, cdata:Sindhu_Vasireddy, cdata:Wout_Slabbinck ;
+  ex:description "The Solid Project – at the time of writing – uses containers with resources in them as defined in the\nLDP specification as a way to give developers the flexibility to write to a storage in the way they see\nfit. With cross-app interoperability and read performance in mind, choosing an application profile and\ncontainer-resource structure becomes guesswork for the app writing the data, as all possible apps reading\nfrom the storage are not yet defined. Event sourcing is a technique used in data architecture to decouple\nwriting from reading. Multiple views will always stay in-sync with an event source, or allow one to\nview a historic state or study the changes that happened over time. In this paper, we study whether we\ncan use the current version of the Solid protocol to store an event source using the Linked Data Event\nStreams (LDES) specification. We successfully implemented a client library, which we tested on the use\ncase of storing your live location with history, for both reading and writing in two modes: version aware\nand version agnostic. However, the current Solid protocol based on LDP also shows some limitations\ntowards event sourcing: (i) re-balancing the hypermedia structure publishing the LDES is not possible\ndue to slash semantics, (ii) as the event source is fully managed by clients, a faulty client may corrupt\nthe event source, and (iii) the client is also in charge of enforcing the retention policy, having to delete\nolder resources one by one, while they have no information about the internal limits of the Solid storage.\nWe conclude that the Solid spec as-is can be used to store an event source, and that client libraries\ncan create an abstraction of the history without any server-specific functionality. However, we also\nhad to work our way around some limitations, putting more strain on the client, and want to open the\ndiscussion on whether the Solid server protocol needs to be extended for more native support of the\nevent sourcing pattern."@en ;
   ex:landingPage <https://ceur-ws.org/Vol-3339/paper4.pdf> ;
   ex:modified "2025-06-05T22:08:20.952Z"^^xsd:dateTime ;
-  ex:name "Linked Data Event Streams in Solid LDP containers" ;
+  ex:name "Linked Data Event Streams in Solid LDP containers"@en ;
   ex:subType con:ResearchPaper ;
-  ex:technicalKeyword "LDP, LDES, Event Sourcing, TREE, hypermedia" .
+  ex:technicalKeyword "LDP, LDES, Event Sourcing, TREE, hypermedia"@en .
 
 cdata:ldp-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/ns/ldp#> ;
@@ -1405,7 +1209,7 @@ cdata:ldp-vocab a ex:Ontology ;
 
 cdata:Ledger a ex:Organization ;
   ex:landingPage <https://ledgerproject.eu> ;
-  ex:name "Ledger Project" ;
+  ex:name "Ledger Project"@en ;
   ex:subType con:FundingOrganization .
 
 cdata:Leon_Porter a ex:Person ;
@@ -1413,6 +1217,10 @@ cdata:Leon_Porter a ex:Person ;
 
 cdata:Leonard_Rosenthol a ex:Person ;
   ex:name "Leonard Rosenthol" .
+
+cdata:Liam_Broza a ex:Person ;
+  ex:name "Liam Broza" ;
+  ex:webid <https://hegemon.inrupt.net/profile/card#me> .
 
 cdata:Lin_Onetwo a ex:Person ;
   ex:forumHandle "@linonetwo" ;
@@ -1431,7 +1239,7 @@ cdata:LinkedWebStoragWG a ex:Organization ;
   ex:subType con:OpenSourceProject .
 
 cdata:Liqid_Chat a ex:Software ;
-  ex:maintainer <https://jackson.solidcommunity.net/profile/card#me> ;
+  ex:maintainer cdata:Jackson_Morgan ;
   ex:name "Liqid Chat" ;
   ex:status con:Development ;
   ex:subType con:ProductivityApp ;
@@ -1448,9 +1256,17 @@ cdata:LiquidSurfFedCM a ex:Software ;
   ex:status con:Exploration ;
   ex:subType con:OtherApp .
 
+cdata:Luc a ex:Person ;
+  ex:name "Luc" ;
+  ex:webid <https://45h.inrupt.net/profile/card#me> .
+
 cdata:Ludwig_Schubi a ex:Person ;
   ex:forumHandle "@ludwigschubi" ;
   ex:name "Ludwig Schubi" .
+
+cdata:Luis_Aguilar a ex:Person ;
+  ex:name "Luis Aguilar" ;
+  ex:webid <https://ldaguilar88.inrupt.net/profile/card#me> .
 
 cdata:Luk_Overmeire a ex:Person ;
   ex:name "Luk Overmeire" .
@@ -1483,7 +1299,7 @@ cdata:Marc_Fornos a ex:Person ;
 
 cdata:Marc_Haddle a ex:Person ;
   ex:contactEmail <mailto:marc.haddle@datasolids.com> ;
-  ex:description "CEO, Datasolids" ;
+  ex:description "CEO, Datasolids"@en ;
   ex:modified "2025-05-15T15:18:59.233Z"^^xsd:dateTime ;
   ex:name "Marc Haddle" .
 
@@ -1492,6 +1308,11 @@ cdata:Marco_Neumann a ex:Person ;
 
 cdata:Maria_Dimou a ex:Person ;
   ex:name "Maria Dimou" .
+
+cdata:Mark a ex:Person ;
+  ex:forumHandle "@happybeing" ;
+  ex:name "Mark" ;
+  ex:webid <https://thewebalyst.solidcommunity.net/profile/card#me> .
 
 cdata:Mark_Baker a ex:Person ;
   ex:name "Mark Baker" .
@@ -1517,11 +1338,15 @@ cdata:Markbook a ex:Software ;
   ex:subType con:ProductivityApp ;
   ex:technicalKeyword "bookmarks", "general purpose app" .
 
+cdata:Markjspivey a ex:Person ;
+  ex:name "Markjspivey" ;
+  ex:webid <https://markjspivey.inrupt.net/profile/card#me> .
+
 cdata:Marrelle_Bailey a ex:Person ;
   ex:name "Marrelle Bailey" .
 
 cdata:Martin a ex:Software ;
-  ex:maintainer <https://vincentt.inrupt.net/profile/card#me> ;
+  ex:maintainer cdata:Vincent_Tunru ;
   ex:name "Martin" ;
   ex:status con:Development ;
   ex:subType con:OtherApp ;
@@ -1547,11 +1372,33 @@ cdata:Mastopod a ex:Service ;
   ex:status con:Production ;
   ex:subType con:GeneralPurposePodService .
 
+cdata:Mats_Berg a ex:Person ;
+  ex:name "Mats Berg" ;
+  ex:webid <https://mats.inrupt.net/profile/card#me> .
+
 cdata:Matt_Wallis a ex:Person ;
   ex:name "Matt Wallis" .
 
+cdata:Matthew a ex:Person ;
+  ex:forumHandle "@Kludgy4" ;
+  ex:name "Matthew" ;
+  ex:webid <https://comp495x.duckdns.org/Pod1/profile#me> .
+
 cdata:Matthew_Fowle a ex:Person ;
   ex:name "Matthew Fowle" .
+
+cdata:Matthias_Evering a ex:Person ;
+  ex:contactEmail <mailto:me@evering.eu> ;
+  ex:description "baby coder"@en ;
+  ex:forumHandle "@ewingson"@en ;
+  ex:landingPage <https://configedit.com/>, <https://github.com/ewingson> ;
+  ex:logo <https://avatars.githubusercontent.com/u/36561948?s=400&u=f9432d40dbea4f2291b9def6676dde978133709c&v=4> ;
+  ex:matrixHandle "@ewingson"@en ;
+  ex:modified "2025-05-08T04:34:58.868Z"^^xsd:dateTime ;
+  ex:name "Matthias Evering"@en ;
+  ex:resourcesOffered "NSS CSS and Pivot"@en, "pod-provider NSS CSS Pivot"@en ;
+  ex:resourcesWanted "rdf turtle community building pod-provider solution-focused communication diversity equity inclusion"@en ;
+  ex:webid <https://solidweb.me/testpro-dev/profile/card#me> .
 
 cdata:Matthias_Thorner a ex:Person ;
   ex:forumHandle "@mthorner" ;
@@ -1584,15 +1431,15 @@ cdata:Mdr_Notes a ex:Software ;
   ex:technicalKeyword "editor" .
 
 cdata:Media_Kraken a ex:Software ;
-  ex:description "An app to track movies and create collections" ;
+  ex:description "An app to track movies and create collections"@en ;
   ex:landingPage <https://noeldemartin.github.io/media-kraken/> ;
   ex:logo <https://noeldemartin.com/logos/media-kraken.png> ;
-  ex:maintainer <https://noeldemartin.solidcommunity.net/profile/card#me> ;
+  ex:maintainer cdata:Noel_De_Martin ;
   ex:modified "2025-06-10T17:47:48.290Z"^^xsd:dateTime ;
-  ex:name "Media Kraken" ;
+  ex:name "Media Kraken"@en ;
   ex:status con:Production ;
   ex:subType con:LeisureApp ;
-  ex:technicalKeyword "movies" .
+  ex:technicalKeyword "movies"@en .
 
 cdata:mee-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/ns/pim/meeting#> ;
@@ -1602,18 +1449,23 @@ cdata:mee-vocab a ex:Ontology ;
 
 cdata:Meisdata a ex:Organization ;
   ex:contactEmail <mailto:info@meisdata.io> ;
-  ex:description "a small org providing a NSS a CSS and a Pivot" ;
-  ex:domainKeyword "Pod-Provider" ;
+  ex:description "a small org providing a NSS a CSS and a Pivot"@en ;
+  ex:domainKeyword "Pod-Provider"@en ;
   ex:landingPage <https://meisdata.io> ;
   ex:logo <https://www.serverproject.de/logo2.png> ;
   ex:modified "2025-04-22T03:39:06.075Z"^^xsd:dateTime ;
-  ex:name "Meisdata" ;
-  ex:resourcesOffered "server-maintenance" ;
-  ex:resourcesWanted "knowledge experience funding snippets rdf turtle" ;
+  ex:name "Meisdata"@en ;
+  ex:resourcesOffered "server-maintenance"@en ;
+  ex:resourcesWanted "knowledge experience funding snippets rdf turtle"@en ;
   ex:subType con:OpenSourceProject .
 
 cdata:Melissa_Wood a ex:Person ;
   ex:name "Melissa Wood" .
+
+cdata:Melvin_Carvalho a ex:Person ;
+  ex:landingPage <https://github.com/melvincarvalho> ;
+  ex:name "Melvin Carvalho" ;
+  ex:webid <https://melvin.solidcommunity.net/profile/card#me> .
 
 cdata:Michael_Dierick a ex:Person ;
   ex:name "Michaël Dierick" .
@@ -1647,19 +1499,55 @@ cdata:Michael_Toomim a ex:Person ;
   ex:forumHandle "@toomim" ;
   ex:name "Michael Toomim" .
 
+cdata:Michal a ex:Person ;
+  ex:forumHandle "@mrkvon"@en ;
+  ex:landingPage <https://github.com/mrkvon>, <https://mrkvon.org> ;
+  ex:matrixHandle "@mrkvon:matrix.org"@en ;
+  ex:modified "2025-05-08T01:12:44.757Z"^^xsd:dateTime ;
+  ex:name "Michal"@en ;
+  ex:webid <https://id.mrkvon.org> .
+
+cdata:Michiel_de_Jong a ex:Person ;
+  ex:landingPage <https://github.com/michielbdejong> ;
+  ex:name "Michiel de Jong" ;
+  ex:webid <https://michielbdejong.inrupt.net/profile/card#me> .
+
+cdata:Miel_Vander_Sande a ex:Person ;
+  ex:name "Miel Vander Sande" ;
+  ex:webid <https://mvs.inrupt.net/profile/card#me> .
+
 cdata:Miguel_Ceriani a ex:Person ;
   ex:name "Miguel Ceriani" .
+
+cdata:Mike_Adams a ex:Person ;
+  ex:forumHandle "@adventure" ;
+  ex:name "Mike Adams" ;
+  ex:webid <https://newyork.solid.community/profile/card#me> .
 
 cdata:Mike_O_Neill a ex:Person ;
   ex:name "Mike O'Neill" .
 
+cdata:Mirek a ex:Person ;
+  ex:name "Mirek" ;
+  ex:webid <https://sopekmir.inrupt.net/profile/card#me> .
+
 cdata:Mischa_Tuffield a ex:Person ;
   ex:name "Mischa Tuffield" .
+
+cdata:Mitzi_Laszlo a ex:Person ;
+  ex:forumHandle "@MitziLaszlo" ;
+  ex:landingPage <https://github.com/Mitzi-Laszlo> ;
+  ex:name "Mitzi Laszlo" ;
+  ex:webid <https://mitzilaszlo.solidcommunity.net/profile/card#me> .
 
 cdata:mo-vocab a ex:Ontology ;
   ex:name "Music" ;
   ex:namespaceURI <http://purl.org/ontology/mo/> ;
   ex:prefix "mo:" .
+
+cdata:Mohamed_Hamed a ex:Person ;
+  ex:name "Mohamed Hamed" ;
+  ex:webid <https://mohamedsaidhamed.org/profile/card#me> .
 
 cdata:Molid a ex:Software ;
   ex:description "A mock server that can be used for apps." ;
@@ -1676,12 +1564,12 @@ cdata:Mordax a ex:Person ;
 
 cdata:MozillaOpenScience a ex:Organization ;
   ex:landingPage <https://docs.google.com/document/d/1EJXg9G01CG7dBRbmbZzFnB9Bex2ibAVza_4xE8iqQqI/edit> ;
-  ex:name "Mozilla Open Science Mini Grants" ;
+  ex:name "Mozilla Open Science Mini Grants"@en ;
   ex:subType con:FundingOrganization .
 
 cdata:MozillaOpenSource a ex:Organization ;
   ex:landingPage <https://www.mozilla.org/en-US/moss/> ;
-  ex:name "Mozilla Open Source Support" ;
+  ex:name "Mozilla Open Source Support"@en ;
   ex:subType con:FundingOrganization .
 
 cdata:MutualAid a ex:Service ;
@@ -1707,44 +1595,59 @@ cdata:Nada_Akl a ex:Person ;
 cdata:Naman_Goel a ex:Person ;
   ex:name "Naman Goel" .
 
+cdata:Nathan_Borson a ex:Person ;
+  ex:forumHandle "@nborson" ;
+  ex:name "Nathan Borson" ;
+  ex:webid <https://nborson.solidcommunity.net/profile/card#me> .
+
 cdata:NextFM a ex:Software ;
   ex:contactEmail <mailto:product@inrupt.com> ;
-  ex:description "A file manager for Solid pods with support for multiple visual themes, inspired by Tim Berners-Lee." ;
+  ex:description "A file manager for Solid pods with support for multiple visual themes, inspired by Tim Berners-Lee."@en ;
   ex:modified "2025-06-09T15:50:49.306Z"^^xsd:dateTime ;
-  ex:name "NextFM" ;
+  ex:name "NextFM"@en ;
   ex:provider cdata:Inrupt ;
   ex:repository <https://github.com/inrupt/nextfm> ;
   ex:status con:Exploration ;
   ex:subType con:PodApp ;
-  ex:technicalKeyword "file manager" .
+  ex:technicalKeyword "file manager"@en .
 
 cdata:NGI a ex:Organization ;
   ex:description "The Next Generation Internet (NGI) is a European Commission initiative that aims to shape the development and evolution of the Internet into an Internet of Trust. An Internet that responds to people’s fundamental needs, including trust, security, and inclusion, while reflecting the values and the norms all citizens enjoy in Europe." ;
   ex:landingPage <https://www.ngi.eu> ;
-  ex:name "Next Generation Internet" ;
+  ex:name "Next Generation Internet"@en ;
   ex:subType con:FundingOrganization .
 
 cdata:NGICore a ex:Organization ;
   ex:description "Moving the internet forward." ;
   ex:landingPage <https://nlnet.nl/core/> ;
-  ex:name "NGI Zero Core" ;
+  ex:name "NGI Zero Core"@en ;
   ex:subType con:FundingOrganization .
 
 cdata:NGIEntrust a ex:Organization ;
   ex:description "Trustworthiness and data sovereignty." ;
   ex:landingPage <https://nlnet.nl/entrust/> ;
-  ex:name "NGI Zero Entrust" ;
+  ex:name "NGI Zero Entrust"@en ;
   ex:subType con:FundingOrganization .
 
 cdata:NGISargasso a ex:Organization ;
   ex:description "Promoting the transatlantic cooperation for NGI technologies." ;
   ex:landingPage <https://ngisargasso.eu> ;
-  ex:name "NGI Sargasso" ;
+  ex:name "NGI Sargasso"@en ;
   ex:subType con:FundingOrganization .
+
+cdata:Nick-Form a ex:Person ;
+  ex:forumHandle "@nickform" ;
+  ex:name "Nick-Form" ;
+  ex:webid <https://nickform.inrupt.net/profile/card#me> .
 
 cdata:Nicolas_Mondada a ex:Person ;
   ex:landingPage <https://github.com/nicolasmondada> ;
   ex:name "Nicolas Mondada" .
+
+cdata:Nicolas_Seydoux a ex:Person ;
+  ex:landingPage <https://github.com/NSeydoux> ;
+  ex:name "Nicolas Seydoux" ;
+  ex:webid <https://solid.zwifi.eu/profile/card#me> .
 
 cdata:Nigel_Shadbolt a ex:Person ;
   ex:name "Nigel Shadbolt" .
@@ -1752,7 +1655,7 @@ cdata:Nigel_Shadbolt a ex:Person ;
 cdata:NLnet a ex:Organization ;
   ex:description "Since 1997 NLnet foundation has been financially supporting organizations and people that contribute to an open information society. It funds those with ideas to fix the internet." ;
   ex:landingPage <https://nlnet.nl> ;
-  ex:name "NLnet Foundation" ;
+  ex:name "NLnet Foundation"@en ;
   ex:subType con:FundingOrganization .
 
 cdata:Node_sparql_client a ex:Software ;
@@ -1762,9 +1665,16 @@ cdata:Node_sparql_client a ex:Software ;
   ex:subType con:ProductivityApp ;
   ex:technicalKeyword "search" .
 
+cdata:Noel_De_Martin a ex:Person ;
+  ex:forumHandle "@NoelDeMartin"@en ;
+  ex:landingPage <https://noeldemartin.com> ;
+  ex:modified "2025-06-10T18:02:34.141Z"^^xsd:dateTime ;
+  ex:name "Noel De Martin"@en ;
+  ex:webid <https://noeldemartin.solidcommunity.net/profile/card#me> .
+
 cdata:Notepod a ex:Software ;
   ex:description "A note-taking app for Solid" ;
-  ex:maintainer <https://vincentt.inrupt.net/profile/card#me> ;
+  ex:maintainer cdata:Vincent_Tunru ;
   ex:name "Notepod" ;
   ex:repository <https://github.com/Vinnl/notepod> ;
   ex:status con:Development ;
@@ -1830,11 +1740,16 @@ cdata:OIDC_resource_server_auth a ex:Software ;
 
 cdata:OKH_Solid_App a ex:Software ;
   ex:description "Stores hardware project data and files on Solid pods" ;
-  ex:maintainer <https://jackson.solidcommunity.net/profile/card#me>, cdata:Max_Wardeh, cdata:Sarah_Hutton ;
+  ex:maintainer cdata:Jackson_Morgan, cdata:Max_Wardeh, cdata:Sarah_Hutton ;
   ex:name "OKH Solid App" ;
   ex:status con:Development ;
   ex:subType con:ProductivityApp ;
   ex:technicalKeyword "general purpose app", "inventory" .
+
+cdata:Omar_Teixeira_Gonzalez a ex:Person ;
+  ex:forumHandle "@Omitg24" ;
+  ex:name "Omar Teixeira Gonzalez" ;
+  ex:webid <https://omitg.inrupt.net/profile/card#me> .
 
 cdata:Onur_Yuksel a ex:Person ;
   ex:name "Onur Yüksel" .
@@ -1868,7 +1783,7 @@ cdata:OpenLink_Structured_Data_Sniffer a ex:Software ;
 
 cdata:OpenLink_YouID a ex:Software ;
   ex:description "Identity and credentials document generator." ;
-  ex:name "OpenLink YouID" ;
+  ex:name "OpenLink YouID"@en ;
   ex:status con:Development ;
   ex:subType con:ProductivityApp .
 
@@ -1896,6 +1811,10 @@ cdata:OpenLinks2 a ex:Service ;
 
 cdata:Osmar_Olivio a ex:Person ;
   ex:name "Osmar Olivio" .
+
+cdata:Osmar_Olivo a ex:Person ;
+  ex:name "Osmar Olivo" ;
+  ex:webid <https://oz.inrupt.net/profile/card#me> .
 
 cdata:Oteam a ex:Organization ;
   ex:name "O-Team" ;
@@ -1928,19 +1847,27 @@ cdata:Oz a ex:Person ;
 cdata:Ozcan_Seker a ex:Person ;
   ex:name "Özcan Seker" .
 
+cdata:Pablo a ex:Person ;
+  ex:name "Pablo" ;
+  ex:webid <https://jprod.inrupt.net/profile/card#me> .
+
 cdata:Pano_Maria a ex:Person ;
   ex:name "Pano Maria" .
 
+cdata:Parle a ex:Person ;
+  ex:name "Parle" ;
+  ex:webid <https://parle.inrupt.net/profile/card#me> .
+
 cdata:PASS a ex:Service ;
-  ex:description "An open source digital wallet for providing home-insecure individuals a safe place to store documents within their control. PASS additionally aims to assist caseworkers with processing and providing documents needed to complete the housing-assistance application process." ;
+  ex:description "An open source digital wallet for providing home-insecure individuals a safe place to store documents within their control. PASS additionally aims to assist caseworkers with processing and providing documents needed to complete the housing-assistance application process."@en ;
   ex:landingPage <https://opencommons.org/Personal_Access_System_for_Services_(PASS)> ;
   ex:logo <https://avatars.githubusercontent.com/u/39497980?s=280&v=4> ;
   ex:modified "2025-06-09T15:24:34.285Z"^^xsd:dateTime ;
-  ex:name "Personalized Access System for Services (PASS)" ;
+  ex:name "Personalized Access System for Services (PASS)"@en ;
   ex:provider cdata:CodePDX ;
   ex:repository <https://github.com/codeforpdx/PASS> ;
-  ex:serviceAudience "homeless people,housing services case workers" ;
-  ex:socialKeyword "access to public resources,housing" ;
+  ex:serviceAudience "homeless people,housing services case workers"@en ;
+  ex:socialKeyword "access to public resources,housing"@en ;
   ex:softwareStackIncludes cdata:CSS, cdata:PASSplatform ;
   ex:status con:Development ;
   ex:subType con:SpecializedPodService .
@@ -1950,9 +1877,23 @@ cdata:PASSplatform a ex:Software ;
   ex:status con:Production ;
   ex:subType con:PodServer .
 
+cdata:Pat_McBennett a ex:Person ;
+  ex:landingPage <https://github.com/pmcb55> ;
+  ex:name "Pat McBennett" ;
+  ex:webid <https://pmcb55.inrupt.net/profile/card#me> .
+
 cdata:Patricia_Garcia a ex:Person ;
   ex:forumHandle "@garciafdezpatricia" ;
   ex:name "Patricia Garcia" .
+
+cdata:Patrick a ex:Person ;
+  ex:name "Patrick" ;
+  ex:webid <https://pmcb55.inrupt.net/profile/card#me> .
+
+cdata:Patrick_Hochstenbach a ex:Person ;
+  ex:forumHandle "@hochstenbach" ;
+  ex:name "Patrick Hochstenbach" ;
+  ex:webid <https://hochstenbach.solidcommunity.net/profile/card#me> .
 
 cdata:Paul a ex:Person ;
   ex:forumHandle "@SolarDrift" ;
@@ -1960,6 +1901,14 @@ cdata:Paul a ex:Person ;
 
 cdata:Paul_Mundt a ex:Person ;
   ex:name "Paul Mundt" .
+
+cdata:Paul_Worrall a ex:Person ;
+  ex:name "Paul Worrall" ;
+  ex:webid <https://worrallp.inrupt.net/profile/card#me> .
+
+cdata:Paula_Veltens a ex:Person ;
+  ex:name "Paula Veltens" ;
+  ex:webid <https://paula.veltens.org/profile/card#me> .
 
 cdata:Pavlos_Pseftoyiannis a ex:Person ;
   ex:name "Pavlos Pseftoyiannis" .
@@ -1989,28 +1938,36 @@ cdata:Pedro_Gomez_Lopez a ex:Person ;
 
 cdata:Penny a ex:Software ;
   ex:description "Pod data inspector" ;
-  ex:maintainer <https://vincentt.inrupt.net/profile/card#me> ;
+  ex:maintainer cdata:Vincent_Tunru ;
   ex:name "Penny" ;
   ex:status con:Development ;
   ex:subType con:PodApp ;
   ex:technicalKeyword "pod frontend" .
 
 cdata:PermiX a ex:Software ;
-  ex:description "A permission explorer App for Solid" ;
-  ex:maintainer <https://renyuneyun.solidcommunity.net/profile/card#me> ;
+  ex:description "A permission explorer App for Solid"@en ;
+  ex:maintainer cdata:RuiZhao ;
   ex:modified "2025-06-11T14:50:14.427Z"^^xsd:dateTime ;
-  ex:name "PermiX" ;
+  ex:name "PermiX"@en ;
   ex:repository <https://github.com/renyuneyun/PermiX> ;
   ex:showcase <https://me.ryey.icu/PermiX/> ;
   ex:status con:Exploration ;
   ex:subType con:PodApp ;
-  ex:technicalKeyword "permission, pod management" .
+  ex:technicalKeyword "permission, pod management"@en .
 
 cdata:Pete_Edwards a ex:Person ;
   ex:name "Pete Edwards" .
 
 cdata:Peter_Bruhn_Andersen a ex:Person ;
   ex:name "Peter Bruhn Andersen" .
+
+cdata:Peter_Hartman a ex:Person ;
+  ex:name "Peter Hartman" ;
+  ex:webid <https://pjh.inrupt.net/profile/card> .
+
+cdata:Peter_Hatherley a ex:Person ;
+  ex:name "Peter Hatherley" ;
+  ex:webid <https://peterhatherley.inrupt.net/profile/card#me> .
 
 cdata:Peter_Zuiddam a ex:Person ;
   ex:name "Peter Zuiddam" .
@@ -2025,13 +1982,18 @@ cdata:Philippe_Duchesne a ex:Person ;
   ex:name "Philippe Duchesne" .
 
 cdata:PHP_Solid_Server a ex:Software ;
-  ex:developer <https://michielbdejong.inrupt.net/profile/card#me> ;
+  ex:developer cdata:Michiel_de_Jong ;
   ex:landingPage <https://pdsinterop.org/php-solid-server/> ;
   ex:maintainer cdata:Yvo_Brevoort, <urn:uuid:d1e0e382-0e30-483e-b4b4-13d12299994e> ;
   ex:name "PHP Solid Server" ;
   ex:provider cdata:PDSINTEROP ;
   ex:status con:Production ;
   ex:subType con:PodServer .
+
+cdata:Pierre-Antoine_Champin a ex:Person ;
+  ex:forumHandle "@p20n" ;
+  ex:name "Pierre-Antoine Champin" ;
+  ex:webid <https://solid.champin.net/pa/profile/card#me> .
 
 cdata:Pieter_Colpaert a ex:Person ;
   ex:name "Pieter Colpaert" .
@@ -2065,7 +2027,7 @@ cdata:Pixolid a ex:Software ;
 
 cdata:Planning_Poker a ex:Software ;
   ex:description "A simple planner poker deck" ;
-  ex:maintainer <https://noeldemartin.solidcommunity.net/profile/card#me> ;
+  ex:maintainer cdata:Noel_De_Martin ;
   ex:name "Planning Poker" ;
   ex:status con:Development ;
   ex:subType con:LeisureApp ;
@@ -2096,7 +2058,7 @@ cdata:Pod_Explorer a ex:Software ;
 cdata:Poddit a ex:Software ;
   ex:description "Private bookmarking" ;
   ex:landingPage <https://gitlab.com/vincenttunru/poddit> ;
-  ex:maintainer <https://vincentt.inrupt.net/profile/card#me> ;
+  ex:maintainer cdata:Vincent_Tunru ;
   ex:name "Poddit" ;
   ex:status con:Development ;
   ex:subType con:PodApp ;
@@ -2112,14 +2074,14 @@ cdata:PodDotLiquidSurf a ex:Service ;
   ex:subType con:GeneralPurposePodService .
 
 cdata:PodOS a ex:Software ;
-  ex:description "Your personal online data operating system" ;
+  ex:description "Your personal online data operating system"@en ;
   ex:maintainer cdata:Angelo_Veltens ;
   ex:modified "2025-05-08T15:40:08.515Z"^^xsd:dateTime ;
-  ex:name "PodOS" ;
+  ex:name "PodOS"@en ;
   ex:repository <https://github.com/pod-os/PodOS> ;
   ex:status con:Development ;
   ex:subType con:PodApp ;
-  ex:technicalKeyword "pod frontend" .
+  ex:technicalKeyword "pod frontend"@en .
 
 cdata:PodPro a ex:Software ;
   ex:description "Development tool for working with Solid Pods" ;
@@ -2181,7 +2143,7 @@ cdata:PROV4ITDaTa a ex:Software ;
 
 cdata:Query_solid a ex:Software ;
   ex:description "Simple access to data in Solid pods through LDflex expressions." ;
-  ex:maintainer <https://ruben.verborgh.org/profile/#me> ;
+  ex:maintainer cdata:Ruben_Verborgh ;
   ex:name "Query solid" ;
   ex:repository <https://github.com/LDflex/Query-Solid> ;
   ex:status con:Production ;
@@ -2192,6 +2154,11 @@ cdata:RahulGupta a ex:Person ;
   ex:forumHandle "@CxRes" ;
   ex:landingPage <https://github.com/CxRes> ;
   ex:name "Rahul Gupta" .
+
+cdata:Raju_George a ex:Person ;
+  ex:forumHandle "@rajugeorge" ;
+  ex:name "Raju George" ;
+  ex:webid <https://id.inrupt.com/rajugeorge> .
 
 cdata:Ramen a ex:Software ;
   ex:name "Ramen" ;
@@ -2241,55 +2208,55 @@ cdata:rdfs-vocab a ex:Ontology ;
   ex:prefix "rdfs:" .
 
 cdata:Record_0001 a ex:Specification ;
-  ex:description "Writing to a time-based fragmented Linked Data Event Stream that is stored on a Linked Data Platform." ;
+  ex:description "Writing to a time-based fragmented Linked Data Event Stream that is stored on a Linked Data Platform."@en ;
   ex:editor cdata:Pieter_Colpaert, cdata:Wout_Slabbinck ;
   ex:landingPage <https://woutslabbinck.github.io/LDESinLDP/> ;
   ex:modified "2025-06-05T21:36:50.756Z"^^xsd:dateTime ;
-  ex:name "Writing Linked Data Event Streams in LDP Basic Containers" ;
+  ex:name "Writing Linked Data Event Streams in LDP Basic Containers"@en ;
   ex:repository <https://github.com/woutslabbinck/LDESinLDP/> .
 
 cdata:Record_0002 a ex:Specification ;
-  ex:description "This document provides the specification and examples of the perennial DToU language, a language for describing the Terms of Use of Data, both for data providers (e.g. users) and data consumers (e.g. applications).\n\nIt accompanies the paper \"Perennial Semantic Data Terms of Use for Decentralized Web\" by Rui Zhao and Jun Zhao, at ACM Web Conference 2024 (previously known as International World Wide Web Conference; WWW2024), doi 10.1145/3589334.3645631." ;
-  ex:editor <https://renyuneyun.solidcommunity.net/profile/card#me>, cdata:JunZhao ;
+  ex:description "This document provides the specification and examples of the perennial DToU language, a language for describing the Terms of Use of Data, both for data providers (e.g. users) and data consumers (e.g. applications).\n\nIt accompanies the paper \"Perennial Semantic Data Terms of Use for Decentralized Web\" by Rui Zhao and Jun Zhao, at ACM Web Conference 2024 (previously known as International World Wide Web Conference; WWW2024), doi 10.1145/3589334.3645631."@en ;
+  ex:editor cdata:JunZhao, cdata:RuiZhao ;
   ex:landingPage <https://me.ryey.icu/solid-dtou/dtou-spec.html> ;
   ex:modified "2025-06-05T21:39:22.437Z"^^xsd:dateTime ;
-  ex:name "DToU Language Spec" ;
+  ex:name "DToU Language Spec"@en ;
   ex:repository <https://github.com/OxfordHCC/solid-dtou/> .
 
 cdata:Record_0003 a ex:CreativeWork ;
-  ex:description "Data and data processing have become an indispensable aspect for our society. Insights drawn from collective data make invaluable contribution to scientific and societal research and business. But there are increasing worries about privacy issues and data misuse. This has prompted the emergence of decentralised personal data stores (PDS) like Solid that provide individuals more control over their personal data. However, existing PDS frameworks face challenges in ensuring data privacy when performing collective computations with data from multiple users. While Secure Multi-Party Computation (MPC) offers input secrecy protection during the computation without relying on any single party, issues emerge when directly applying MPC in the context of PDS, particularly due to key factors like autonomy and decentralisation. In this work, we discuss the essence of this issue, identify a potential solution, and introduce a modular architecture, Libertas, to integrate MPC with PDS like Solid, without requiring protocol-level changes. We introduce a paradigm shift from an `omniscient' view to individual-based, user-centric view of trust and security, and discuss the threat model of Libertas. Two realistic use cases for collaborative data processing are used for evaluation, both for technical feasibility and empirical benchmark, highlighting its effectiveness in empowering gig workers and generating differentially private synthetic data. The results of our experiments underscore Libertas' linear scalability and provide valuable insights into compute optimisations, thereby advancing the state-of-the-art in privacy-preserving data processing practices. By offering practical solutions for maintaining both individual autonomy and privacy in collaborative data processing environments, Libertas contributes significantly to the ongoing discourse on privacy protection in data-driven decision-making contexts. \nPrepring available at https://arxiv.org/abs/2309.16365" ;
+  ex:description "Data and data processing have become an indispensable aspect for our society. Insights drawn from collective data make invaluable contribution to scientific and societal research and business. But there are increasing worries about privacy issues and data misuse. This has prompted the emergence of decentralised personal data stores (PDS) like Solid that provide individuals more control over their personal data. However, existing PDS frameworks face challenges in ensuring data privacy when performing collective computations with data from multiple users. While Secure Multi-Party Computation (MPC) offers input secrecy protection during the computation without relying on any single party, issues emerge when directly applying MPC in the context of PDS, particularly due to key factors like autonomy and decentralisation. In this work, we discuss the essence of this issue, identify a potential solution, and introduce a modular architecture, Libertas, to integrate MPC with PDS like Solid, without requiring protocol-level changes. We introduce a paradigm shift from an `omniscient' view to individual-based, user-centric view of trust and security, and discuss the threat model of Libertas. Two realistic use cases for collaborative data processing are used for evaluation, both for technical feasibility and empirical benchmark, highlighting its effectiveness in empowering gig workers and generating differentially private synthetic data. The results of our experiments underscore Libertas' linear scalability and provide valuable insights into compute optimisations, thereby advancing the state-of-the-art in privacy-preserving data processing practices. By offering practical solutions for maintaining both individual autonomy and privacy in collaborative data processing environments, Libertas contributes significantly to the ongoing discourse on privacy protection in data-driven decision-making contexts. \nPrepring available at https://arxiv.org/abs/2309.16365"@en ;
   ex:landingPage <https://oxfordhcc.github.io/libertas/> ;
   ex:modified "2025-06-09T15:29:02.588Z"^^xsd:dateTime ;
-  ex:name "Libertas: Privacy-Preserving Collective Computation for Decentralised Personal Data Stores" ;
+  ex:name "Libertas: Privacy-Preserving Collective Computation for Decentralised Personal Data Stores"@en ;
   ex:provider cdata:OxfordHumanCenteredComputingGroup ;
   ex:subType con:ResearchPaper ;
-  ex:technicalKeyword "architecture, Solid, MPC, privacy, user autonomy" .
+  ex:technicalKeyword "architecture, Solid, MPC, privacy, user autonomy"@en .
 
 cdata:Record_0004 a ex:CreativeWork ;
-  ex:author <https://renyuneyun.solidcommunity.net/profile/card#me> ;
-  ex:description "In today's digital landscape, the Web has become increasingly centralized, raising concerns about user privacy violations. Decentralized Web architectures, such as Solid, offer a promising solution by empowering users with better control over their data in their personal `Pods'. However, a significant challenge remains: users must navigate numerous applications to decide which application can be trusted with access to their data Pods. This often involves reading lengthy and complex Terms of Use agreements, a process that users often find daunting or simply ignore. This compromises user autonomy and impedes detection of data misuse. We propose a novel formal description of Data Terms of Use (DToU), along with a DToU reasoner. Users and applications specify their own parts of the DToU policy with local knowledge, covering permissions, requirements, prohibitions and obligations. Automated reasoning verifies compliance, and also derives policies for output data. This constitutes a ``perennial'' DToU language, where the policy authoring only occurs once, and we can conduct ongoing automated checks across users, applications and activity cycles. Our solution is built on Turtle, Notation 3 and RDF Surfaces, for the language and the reasoning engine. It ensures seamless integration with other semantic tools for enhanced interoperability. We have successfully integrated this language into the \nSolid framework, and conducted performance benchmark. We believe this work demonstrates a practicality of a perennial DToU language and the potential of a paradigm shift to how users interact with data and applications in a decentralized Web, offering both improved privacy and usability. \n\nPreprint available at https://arxiv.org/abs/2403.07587" ;
+  ex:author cdata:RuiZhao ;
+  ex:description "In today's digital landscape, the Web has become increasingly centralized, raising concerns about user privacy violations. Decentralized Web architectures, such as Solid, offer a promising solution by empowering users with better control over their data in their personal `Pods'. However, a significant challenge remains: users must navigate numerous applications to decide which application can be trusted with access to their data Pods. This often involves reading lengthy and complex Terms of Use agreements, a process that users often find daunting or simply ignore. This compromises user autonomy and impedes detection of data misuse. We propose a novel formal description of Data Terms of Use (DToU), along with a DToU reasoner. Users and applications specify their own parts of the DToU policy with local knowledge, covering permissions, requirements, prohibitions and obligations. Automated reasoning verifies compliance, and also derives policies for output data. This constitutes a ``perennial'' DToU language, where the policy authoring only occurs once, and we can conduct ongoing automated checks across users, applications and activity cycles. Our solution is built on Turtle, Notation 3 and RDF Surfaces, for the language and the reasoning engine. It ensures seamless integration with other semantic tools for enhanced interoperability. We have successfully integrated this language into the \nSolid framework, and conducted performance benchmark. We believe this work demonstrates a practicality of a perennial DToU language and the potential of a paradigm shift to how users interact with data and applications in a decentralized Web, offering both improved privacy and usability. \n\nPreprint available at https://arxiv.org/abs/2403.07587"@en ;
   ex:landingPage <https://me.ryey.icu/solid-dtou/> ;
   ex:modified "2025-06-09T15:29:26.208Z"^^xsd:dateTime ;
-  ex:name "Perennial Semantic Data Terms of Use for Decentralized Web" ;
+  ex:name "Perennial Semantic Data Terms of Use for Decentralized Web"@en ;
   ex:provider cdata:OxfordHumanCenteredComputingGroup ;
   ex:subType con:ResearchPaper ;
-  ex:technicalKeyword "Solid, authentication, data usage control" .
+  ex:technicalKeyword "Solid, authentication, data usage control"@en .
 
 cdata:Record_0005 a ex:CreativeWork ;
-  ex:description "We present SocialGenPod, a decentralised and privacy-friendly way of deploying generative AI Web applications. Unlike centralised Web and data architectures that keep user data tied to application and service providers, we show how one can use Solid -- a decentralised Web specification -- to decouple user data from generative AI applications. We demonstrate SocialGenPod using a prototype that allows users to converse with different Large Language Models, optionally leveraging Retrieval Augmented Generation to generate answers grounded in private documents stored in any Solid Pod that the user is allowed to access, directly or indirectly. SocialGenPod makes use of Solid access control mechanisms to give users full control of determining who has access to data stored in their Pods. SocialGenPod keeps all user data (chat history, app configuration, personal documents, etc) securely in the user's personal Pod; separate from specific model or application providers. Besides better privacy controls, this approach also enables portability across different services and applications. Finally, we discuss challenges, posed by the large compute requirements of state-of-the-art models, that future research in this area should address. Our prototype is open-source and available at: this https URL. \n\nCode available at https://github.com/Vidminas/socialgenpod" ;
+  ex:description "We present SocialGenPod, a decentralised and privacy-friendly way of deploying generative AI Web applications. Unlike centralised Web and data architectures that keep user data tied to application and service providers, we show how one can use Solid -- a decentralised Web specification -- to decouple user data from generative AI applications. We demonstrate SocialGenPod using a prototype that allows users to converse with different Large Language Models, optionally leveraging Retrieval Augmented Generation to generate answers grounded in private documents stored in any Solid Pod that the user is allowed to access, directly or indirectly. SocialGenPod makes use of Solid access control mechanisms to give users full control of determining who has access to data stored in their Pods. SocialGenPod keeps all user data (chat history, app configuration, personal documents, etc) securely in the user's personal Pod; separate from specific model or application providers. Besides better privacy controls, this approach also enables portability across different services and applications. Finally, we discuss challenges, posed by the large compute requirements of state-of-the-art models, that future research in this area should address. Our prototype is open-source and available at: this https URL. \n\nCode available at https://github.com/Vidminas/socialgenpod"@en ;
   ex:landingPage <https://arxiv.org/abs/2403.10408> ;
   ex:modified "2025-06-09T15:29:59.383Z"^^xsd:dateTime ;
-  ex:name "SocialGenPod: Privacy-Friendly Generative AI Social Web Applications with Decentralised Personal Data Stores" ;
+  ex:name "SocialGenPod: Privacy-Friendly Generative AI Social Web Applications with Decentralised Personal Data Stores"@en ;
   ex:subType con:ResearchPaper ;
-  ex:technicalKeyword "Solid, LLM, AI, RAG, privacy" .
+  ex:technicalKeyword "Solid, LLM, AI, RAG, privacy"@en .
 
 cdata:Record_0006 a ex:CreativeWork ;
-  ex:description "Personal Data Stores (PDS) like SoLiD is an emerging data and knowledge management solution in recent years. They promise to give back ownership and control of data to the user, and provide protocols for developers to build applications using the data. However, existing Solid-based applications often focus on using a single-user's data. In this article, we use a simple but realistic calendar-and-meeting-scheduling scenario to demonstrate the feasibility and design considerations for enabling cooperative data-use across multiple users' SoLiD Pods. This scenario identifies the bottleneck for certain cooperative use cases, namely those involving offline-changing and synchronization of knowledge information. We demonstrate a viable approach to mediate this issue, introducing a long-living thin service, the orchestrator. We describe our implementation and discuss its applicability to other ecosystems. We conclude by discussing the implication of such services, in particular their risks and challenges for building decentralised applications. \n\nPreprint at https://arxiv.org/abs/2306.14890" ;
+  ex:description "Personal Data Stores (PDS) like SoLiD is an emerging data and knowledge management solution in recent years. They promise to give back ownership and control of data to the user, and provide protocols for developers to build applications using the data. However, existing Solid-based applications often focus on using a single-user's data. In this article, we use a simple but realistic calendar-and-meeting-scheduling scenario to demonstrate the feasibility and design considerations for enabling cooperative data-use across multiple users' SoLiD Pods. This scenario identifies the bottleneck for certain cooperative use cases, namely those involving offline-changing and synchronization of knowledge information. We demonstrate a viable approach to mediate this issue, introducing a long-living thin service, the orchestrator. We describe our implementation and discuss its applicability to other ecosystems. We conclude by discussing the implication of such services, in particular their risks and challenges for building decentralised applications. \n\nPreprint at https://arxiv.org/abs/2306.14890"@en ;
   ex:landingPage <https://github.com/OxfordHCC/knoodle> ;
   ex:modified "2025-06-09T15:30:38.474Z"^^xsd:dateTime ;
-  ex:name "Long-living Service for Cooperative Knowledge Use in Decentralized Data Stores" ;
+  ex:name "Long-living Service for Cooperative Knowledge Use in Decentralized Data Stores"@en ;
   ex:subType con:ResearchPaper ;
-  ex:technicalKeyword "Calendar, Meeting Scheduling" .
+  ex:technicalKeyword "Calendar, Meeting Scheduling"@en .
 
 cdata:Redpencil a ex:Organization ;
   ex:landingPage <https://redpencil.io/> ;
@@ -2352,9 +2319,9 @@ cdata:Roger_Perry a ex:Person ;
 
 cdata:Ronald_Siebes a ex:Person ;
   ex:contactEmail <mailto:r.m.siebes@vu.nl> ;
-  ex:description "Assistant professor at UCDS group, VU Amsterdam" ;
+  ex:description "Assistant professor at UCDS group, VU Amsterdam"@en ;
   ex:modified "2025-06-09T15:23:17.525Z"^^xsd:dateTime ;
-  ex:name "Ronald Siebes" .
+  ex:name "Ronald Siebes"@en .
 
 cdata:Rosano a ex:Person ;
   ex:forumHandle "@rosano" ;
@@ -2363,10 +2330,10 @@ cdata:Rosano a ex:Person ;
 
 cdata:Ross_Horne a ex:Person ;
   ex:contactEmail <mailto:ross.horne@strath.ac.uk> ;
-  ex:description "Interested in authentication protocols and security policy models." ;
+  ex:description "Interested in authentication protocols and security policy models."@en ;
   ex:modified "2025-04-25T07:49:04.398Z"^^xsd:dateTime ;
-  ex:name "Ross Horne" ;
-  ex:resourcesOffered "Security analysis of proposals for authentication and access control." .
+  ex:name "Ross Horne"@en ;
+  ex:resourcesOffered "Security analysis of proposals for authentication and access control."@en .
 
 cdata:Roy_Leon a ex:Person ;
   ex:name "Roy Leon" .
@@ -2379,9 +2346,29 @@ cdata:Ruben_Taelman a ex:Person ;
   ex:landingPage <https://github.com/rubensworks> ;
   ex:name "Ruben Taelman" .
 
+cdata:Ruben_Verborgh a ex:Person ;
+  ex:forumHandle "@RubenVerborgh" ;
+  ex:landingPage <https://github.com/RubenVerborgh> ;
+  ex:name "Ruben Verborgh" ;
+  ex:webid <https://ruben.verborgh.org/profile/#me> .
+
+cdata:RuiZhao a ex:Person ;
+  ex:contactEmail <mailto:me@ryey.icu> ;
+  ex:forumHandle "@renyuneyun"@en ;
+  ex:landingPage <https://me.ryey.icu> ;
+  ex:matrixHandle "@renyuneyun:matrix.org"@en ;
+  ex:modified "2025-04-25T07:55:57.565Z"^^xsd:dateTime ;
+  ex:name "Rui Zhao"@en ;
+  ex:resourcesOffered "Mentorship\nResearch Collaboration\nDevelopment Collaboration\nLibraries\nApps"@en ;
+  ex:webid <https://renyuneyun.solidcommunity.net/profile/card#me> .
+
 cdata:Ryan_Aelen a ex:Person ;
   ex:forumHandle "@RyanAelen" ;
   ex:name "Ryan Aelen" .
+
+cdata:Sabrina_Kirrane a ex:Person ;
+  ex:name "Sabrina Kirrane" ;
+  ex:webid <https://skirrane.inrupt.net/profile/card#me> .
 
 cdata:SAI_Application a ex:ClassOfProduct ;
   ex:name "SAI Application" .
@@ -2396,6 +2383,10 @@ cdata:Samir_Loumachi a ex:Person ;
 cdata:Samy_Vincent a ex:Person ;
   ex:name "Samy Vincent" .
 
+cdata:Sander a ex:Person ;
+  ex:name "Sander" ;
+  ex:webid <https://gatos.inrupt.net/profile/card#me> .
+
 cdata:Sandra_Wachter a ex:Person ;
   ex:name "Sandra Wachter" .
 
@@ -2404,6 +2395,15 @@ cdata:Santi_Lozano a ex:Person ;
 
 cdata:Sarah_Hutton a ex:Person ;
   ex:name "Sarah Hutton" .
+
+cdata:Sarven_Capadisli a ex:Person ;
+  ex:name "Sarven Capadisli" ;
+  ex:webid <https://csarven.ca/#i> .
+
+cdata:Sascha a ex:Person ;
+  ex:forumHandle "@Sascha" ;
+  ex:name "Sascha" ;
+  ex:webid <https://sascha.inrupt.net/profile/card#me> .
 
 cdata:schema-vocab a ex:Ontology ;
   ex:landingPage <https://schema.org/> ;
@@ -2414,11 +2414,22 @@ cdata:schema-vocab a ex:Ontology ;
 cdata:Sebastian_Schmid a ex:Person ;
   ex:name "Sebastian Schmid" .
 
+cdata:Sebastien_Rosset a ex:Person ;
+  ex:forumHandle "@srosset81" ;
+  ex:name "Sebastien Rosset" ;
+  ex:webid <https://armoise.co/sro> .
+
 cdata:Shape_Trees a ex:Specification ;
-  ex:editor <https://justin.inrupt.net/profile/card#me> ;
+  ex:editor cdata:Justin_Bingham ;
   ex:landingPage <https://shapetrees.org/TR/specification/> ;
   ex:name "Shape Trees" ;
   ex:repository <https://github.com/shapetrees/specification> .
+
+cdata:Sharon_Stratsianis a ex:Person ;
+  ex:forumHandle "@SharonStrats" ;
+  ex:landingPage <https://github.com/SharonStrats> ;
+  ex:name "Sharon Stratsianis" ;
+  ex:webid <https://sharonstrats.inrupt.net/profile/card#me> .
 
 cdata:Sheff_Engi a ex:Person ;
   ex:name "Sheff Engi" .
@@ -2445,8 +2456,12 @@ cdata:Siddharth_Rahul_Raut a ex:Person ;
 
 cdata:SIDN a ex:Organization ;
   ex:landingPage <https://www.sidnfonds.nl/excerpt/> ;
-  ex:name "SIDN Fonds" ;
+  ex:name "SIDN Fonds"@en ;
   ex:subType con:FundingOrganization .
+
+cdata:Simon_Chabot a ex:Person ;
+  ex:name "Simon Chabot" ;
+  ex:webid <https://schabot.solidcommunity.net/profile/card#me> .
 
 cdata:Simon_Grant a ex:Person ;
   ex:name "Simon Grant" .
@@ -2482,7 +2497,7 @@ cdata:skos-vocab a ex:Ontology ;
 
 cdata:Slack a ex:Organization ;
   ex:landingPage <https://slack.com/developers/fund> ;
-  ex:name "Slack Fund" ;
+  ex:name "Slack Fund"@en ;
   ex:subType con:FundingOrganization .
 
 cdata:SleepyBike a ex:Service ;
@@ -2536,7 +2551,7 @@ cdata:Sofia_Martin a ex:Person ;
 cdata:Solid_Application_Interoperability a ex:Specification ;
   ex:author <https://elf-pavlik.hackers4peace.net> ;
   ex:definesConformanceFor cdata:SAI_Application, cdata:SAI_Authorization_Agent ;
-  ex:editor <https://elf-pavlik.hackers4peace.net>, <https://justin.inrupt.net/profile/card#me>, <urn:uuid:3b05c17c-f44a-470e-8031-408abee6e2ca> ;
+  ex:editor <https://elf-pavlik.hackers4peace.net>, cdata:Justin_Bingham, <urn:uuid:3b05c17c-f44a-470e-8031-408abee6e2ca> ;
   ex:landingPage <https://solid.github.io/data-interoperability-panel/specification/> ;
   ex:name "Solid Application Interoperability" ;
   ex:repository <https://github.com/solid/data-interoperability-panel> .
@@ -2581,17 +2596,17 @@ cdata:Solid_auth_swift a ex:Software ;
 
 cdata:Solid_Bench a ex:Software ;
   ex:contactEmail <mailto:phd@highlatitud.es> ;
-  ex:description "A multi-purpose platform, containing a pod browser, and a framework to plug domain-specific apps." ;
+  ex:description "A multi-purpose platform, containing a pod browser, and a framework to plug domain-specific apps."@en ;
   ex:landingPage <https://solidbench.dev> ;
   ex:logo <https://solidbench.dev/images/solidbench-256.png> ;
   ex:maintainer cdata:Philippe_Duchesne ;
   ex:modified "2025-06-04T12:46:08.117Z"^^xsd:dateTime ;
-  ex:name "SolidBench" ;
+  ex:name "SolidBench"@en ;
   ex:repository <https://github.com/pduchesne/solidbench> ;
   ex:showcase <https://solidbench.dev> ;
   ex:status con:Development ;
   ex:subType con:PodApp ;
-  ex:technicalKeyword "pod browser, pod manager, rich content viewer" .
+  ex:technicalKeyword "pod browser, pod manager, rich content viewer"@en .
 
 cdata:Solid_Calendar_1 a ex:Software ;
   ex:landingPage <https://bitbucket.org/dylanmartin/solidcalendar> ;
@@ -2608,8 +2623,8 @@ cdata:Solid_Chat a ex:Software ;
   ex:technicalKeyword "chat" .
 
 cdata:Solid_Chat_Spec a ex:Specification ;
-  ex:author <https://timbl.solidcommunity.net/profile/card#me> ;
-  ex:editor <https://timbl.solidcommunity.net/profile/card#me> ;
+  ex:author cdata:Tim_Berners-Lee ;
+  ex:editor cdata:Tim_Berners-Lee ;
   ex:landingPage <https://solid.github.io/chat/> ;
   ex:name "Solid Chat" ;
   ex:repository <https://github.com/solid/chat> .
@@ -2662,23 +2677,23 @@ cdata:Solid_client_php a ex:Software ;
   ex:technicalKeyword "solid client" .
 
 cdata:Solid_DID_Method a ex:Specification ;
-  ex:editor <https://csarven.ca/#i>, cdata:Dmitri_Zagidulin ;
+  ex:editor cdata:Dmitri_Zagidulin, cdata:Sarven_Capadisli ;
   ex:landingPage <https://solid.github.io/did-method-solid/> ;
   ex:name "Solid DID Method" ;
   ex:repository <https://github.com/solid/did-method-solid> .
 
 cdata:Solid_E2EE a ex:CreativeWork ;
   ex:author cdata:Henri_Cattoire, cdata:KU_Leuven ;
-  ex:description "Extension to the Solid protocol that enables E2EE through Attribute-Based Encryption. The extension enables systems that are unwilling to entrust POD providers with their users' data, such as electronic health record (EHR) systems, to be built on top of Solid and benefit from the features it offers, such as application interoperability. The repository includes a proof-of-concept application." ;
+  ex:description "Extension to the Solid protocol that enables E2EE through Attribute-Based Encryption. The extension enables systems that are unwilling to entrust POD providers with their users' data, such as electronic health record (EHR) systems, to be built on top of Solid and benefit from the features it offers, such as application interoperability. The repository includes a proof-of-concept application."@en ;
   ex:landingPage <https://github.com/henricattoire/solid-e2ee> ;
   ex:modified "2025-06-12T10:36:31.853Z"^^xsd:dateTime ;
-  ex:name "Solid E2EE" ;
+  ex:name "Solid E2EE"@en ;
   ex:subType con:ResearchPaper ;
-  ex:technicalKeyword "e2ee,cp-abe" .
+  ex:technicalKeyword "e2ee,cp-abe"@en .
 
 cdata:Solid_file_client a ex:Software ;
   ex:description "A Javascript library for creating and managing files and folders in Solid data stores." ;
-  ex:maintainer <https://jeff-zucker.solidcommunity.net/profile/card#me> ;
+  ex:maintainer cdata:Jeff_Zucker ;
   ex:name "Solid file client" ;
   ex:repository <https://github.com/jeff-zucker/solid-file-client> ;
   ex:status con:Development ;
@@ -2731,7 +2746,7 @@ cdata:Solid_Health a ex:Software ;
   ex:technicalKeyword "general purpose app" .
 
 cdata:Solid_IDE a ex:Software ;
-  ex:maintainer <https://jeff-zucker.solidcommunity.net/profile/card#me> ;
+  ex:maintainer cdata:Jeff_Zucker ;
   ex:name "Solid IDE" ;
   ex:repository <https://github.com/jeff-zucker/solid-content-manager> ;
   ex:status con:Development ;
@@ -2739,7 +2754,7 @@ cdata:Solid_IDE a ex:Software ;
   ex:technicalKeyword "pod management" .
 
 cdata:Solid_LBS a ex:Software ;
-  ex:maintainer <https://sharonstrats.inrupt.net/profile/card#me> ;
+  ex:maintainer cdata:Sharon_Stratsianis ;
   ex:name "Solid LBS" ;
   ex:repository <https://github.com/SharonStrats/SOLIDLBSPrototype> ;
   ex:status con:Development ;
@@ -2773,7 +2788,7 @@ cdata:Solid_node_client a ex:Software ;
 cdata:Solid_Notifications_Client a ex:Software ;
   ex:conformsTo <https://solidproject.org/TR/notifications-protocol#DiscoveryClient>, <https://solidproject.org/TR/notifications-protocol#SubscriptionClient> ;
   ex:landingPage <https://github.com/o-development/solid-notification-client/> ;
-  ex:maintainer <https://elf-pavlik.hackers4peace.net>, <https://jackson.solidcommunity.net/profile/card#me>, cdata:Wout_Slabbinck ;
+  ex:maintainer <https://elf-pavlik.hackers4peace.net>, cdata:Jackson_Morgan, cdata:Wout_Slabbinck ;
   ex:name "Solid Notifications Client" ;
   ex:repository <https://github.com/o-development/solid-notification-client/> ;
   ex:status con:Production ;
@@ -2781,7 +2796,7 @@ cdata:Solid_Notifications_Client a ex:Software ;
 
 cdata:Solid_OIDC_Primer a ex:CreativeWork ;
   ex:about cdata:Solid-OIDC ;
-  ex:author <https://elf-pavlik.hackers4peace.net>, <https://jackson.solidcommunity.net/profile/card#me>, <https://people.apache.org/~acoburn/#i>, cdata:Matthieu_Bosquet ;
+  ex:author <https://elf-pavlik.hackers4peace.net>, <https://people.apache.org/~acoburn/#i>, cdata:Jackson_Morgan, cdata:Matthieu_Bosquet ;
   ex:editor <https://elf-pavlik.hackers4peace.net>, <https://people.apache.org/~acoburn/#i> ;
   ex:landingPage <https://github.com/solid/solid-oidc>, <https://solidproject.org/TR/oidc-primer> ;
   ex:name "Solid OIDC Primer" ;
@@ -2823,7 +2838,7 @@ cdata:Solid_react_graphql_ld a ex:Software ;
 
 cdata:Solid_rest a ex:Software ;
   ex:description "A client-side API which supports any backend for Solid requests." ;
-  ex:maintainer <https://jeff-zucker.solidcommunity.net/profile/card#me> ;
+  ex:maintainer cdata:Jeff_Zucker ;
   ex:name "Solid rest" ;
   ex:repository <https://github.com/solid-contrib/solid-rest> ;
   ex:status con:Production ;
@@ -2838,7 +2853,7 @@ cdata:Solid_Security_Considerations a ex:CreativeWork ;
 
 cdata:Solid_Shell a ex:Software ;
   ex:description "A command-line and interactive shell for Solid." ;
-  ex:maintainer <https://jeff-zucker.solidcommunity.net/profile/card#me> ;
+  ex:maintainer cdata:Jeff_Zucker ;
   ex:name "Solid Shell" ;
   ex:platform "node" ;
   ex:programmingLanguage "javascript" ;
@@ -2880,8 +2895,8 @@ cdata:Solid_Weather a ex:Software ;
   ex:technicalKeyword "weather" .
 
 cdata:Solid_WebID_Profile a ex:Specification ;
-  ex:author <https://csarven.ca/#i>, <https://jeff-zucker.solidcommunity.net/profile/card#me>, <https://timbl.solidcommunity.net/profile/card#me>, <https://timea.solidcommunity.net/profile/card#me>, <https://virginiabalseiro.com/#me> ;
-  ex:editor <https://csarven.ca/#i>, <https://jeff-zucker.solidcommunity.net/profile/card#me>, <https://virginiabalseiro.com/#me> ;
+  ex:author cdata:Jeff_Zucker, cdata:Sarven_Capadisli, cdata:Tim_Berners-Lee, cdata:Timea_Turdean, cdata:VirginiaBalseiro ;
+  ex:editor cdata:Jeff_Zucker, cdata:Sarven_Capadisli, cdata:VirginiaBalseiro ;
   ex:landingPage <https://solid.github.io/webid-profile/> ;
   ex:name "Solid WebID Profile" ;
   ex:repository <https://github.com/solid/webid-profile> .
@@ -2943,7 +2958,7 @@ cdata:SolidCalendar a ex:Software ;
 
 cdata:SolidCatlog a ex:Software ;
   ex:description "Catalog the resources of an organization with low-code" ;
-  ex:maintainer <https://jeff-zucker.solidcommunity.net/profile/card#me> ;
+  ex:maintainer cdata:Jeff_Zucker ;
   ex:name "Solid Catalog" ;
   ex:status con:Development ;
   ex:subType con:ProductivityApp ;
@@ -2987,7 +3002,7 @@ cdata:SolidCommunityDotNet a ex:Service ;
 cdata:SolidFlix a ex:Software ;
   ex:description "\n    A movie tracking and sharing application with personalised recommendations.\n  " ;
   ex:landingPage <https://github.com/OxfordHCC/solid-media>, <https://oxfordhcc.github.io/solid-media/login/?redirect=%2Fsolid-media%2F> ;
-  ex:maintainer <https://renyuneyun.solidcommunity.net/profile/card#me>, cdata:JunZhao ;
+  ex:maintainer cdata:JunZhao, cdata:RuiZhao ;
   ex:name "SolidFlix" ;
   ex:status con:Exploration ;
   ex:subType con:LeisureApp ;
@@ -3002,14 +3017,14 @@ cdata:SolidForum a ex:Service ;
   ex:subType con:CommunicationService .
 
 cdata:SolidFuse a ex:Software ;
-  ex:description "A FUSE filesystem for Solid (Social Linked Data) Pod storage" ;
-  ex:maintainer <https://renyuneyun.solidcommunity.net/profile/card#me> ;
+  ex:description "A FUSE filesystem for Solid (Social Linked Data) Pod storage"@en ;
+  ex:maintainer cdata:RuiZhao ;
   ex:modified "2025-06-11T14:52:32.495Z"^^xsd:dateTime ;
-  ex:name "SoLiD FUSE" ;
+  ex:name "SoLiD FUSE"@en ;
   ex:repository <https://github.com/renyuneyun/solid-fuse> ;
   ex:status con:Exploration ;
   ex:subType con:PodApp ;
-  ex:technicalKeyword "fuse, filesystem, pod management" .
+  ex:technicalKeyword "fuse, filesystem, pod management"@en .
 
 cdata:SolidGrassroots a ex:Organization ;
   ex:landingPage <https://gitlab.com/groups/solidweb.org/-/group_members> ;
@@ -3039,7 +3054,7 @@ cdata:SolidOS a ex:Software ;
   ex:description "Solid-compatible data mashup library and Data Browser. Includes a profile editor, chat, task manager, address book, rdf viewers, and more." ;
   ex:hasDependencyOn cdata:mashlib, cdata:rdflib, cdata:Solid_UI ;
   ex:landingPage <https://solidos.solidcomunity.net/> ;
-  ex:maintainer <https://timbl.solidcommunity.net/profile/card#me> ;
+  ex:maintainer cdata:Tim_Berners-Lee ;
   ex:name "SolidOS" ;
   ex:provider cdata:SolidOSteam ;
   ex:repository <https://github.com/solidos/mashlib> ;
@@ -3110,7 +3125,7 @@ cdata:SolidSymposium a ex:Event ;
   ex:name "Solid Symposium" .
 
 cdata:SolidTagExplainer a ex:CreativeWork ;
-  ex:author <https://timbl.solidcommunity.net/profile/card#me> ;
+  ex:author cdata:Tim_Berners-Lee ;
   ex:landingPage <https://timbl.solidcommunity.net/2023/03%20EWADA/TAGExplainerforSolid.html> ;
   ex:name "TAG Explainer for Solid" ;
   ex:subType con:AboutSolid .
@@ -3129,7 +3144,7 @@ cdata:SolidVC a ex:Software ;
 
 cdata:SolidWebComponents a ex:Software ;
   ex:hasDependencyOn cdata:SolidOS ;
-  ex:maintainer <https://jeff-zucker.solidcommunity.net/profile/card#me> ;
+  ex:maintainer cdata:Jeff_Zucker ;
   ex:name "Solid Web Components" ;
   ex:repository <https://github.com/solidos/solid-web-components> ;
   ex:status con:Production ;
@@ -3138,25 +3153,25 @@ cdata:SolidWebComponents a ex:Software ;
 
 cdata:SolidWebDotMe a ex:Service ;
   ex:contactEmail <mailto:info@meisdata.io> ;
-  ex:description "solidweb.me is a community-run Pod-Provider that uses CSS and the SolidOS frontend and is based in Germany." ;
+  ex:description "solidweb.me is a community-run Pod-Provider that uses CSS and the SolidOS frontend and is based in Germany."@en ;
   ex:logo <https://www.serverproject.de/logo2.png> ;
   ex:modified "2025-06-06T11:36:27.968Z"^^xsd:dateTime ;
-  ex:name "solidweb.me" ;
+  ex:name "solidweb.me"@en ;
   ex:provider cdata:Meisdata ;
   ex:repository <https://github.com/serverproject-dev/solidweb.me> ;
   ex:serviceEndpoint <https://solidweb.me> ;
-  ex:socialKeyword "solid, pod-provider, idp, css" ;
+  ex:socialKeyword "solid, pod-provider, idp, css"@en ;
   ex:softwareStackIncludes cdata:CSS, cdata:SolidOS ;
   ex:status con:Production ;
   ex:subType con:GeneralPurposePodService .
 
 cdata:SolidWebDotOrg a ex:Service ;
   ex:contactEmail <mailto:info@meisdata.io> ;
-  ex:description "solidweb.org is a public Solid server based in Germany which is in an experimental state." ;
-  ex:domainKeyword "Pod-Provider" ;
+  ex:description "solidweb.org is a public Solid server based in Germany which is in an experimental state."@en ;
+  ex:domainKeyword "Pod-Provider"@en ;
   ex:logo <https://www.serverproject.de/logo2.png> ;
   ex:modified "2025-04-22T03:40:39.786Z"^^xsd:dateTime ;
-  ex:name "solidweb.org" ;
+  ex:name "solidweb.org"@en ;
   ex:provider cdata:SolidGrassroots ;
   ex:serviceEndpoint <https://solidweb.org> ;
   ex:softwareStackIncludes cdata:NSS, cdata:SolidOS ;
@@ -3167,7 +3182,7 @@ cdata:SolidWorld a ex:Event ;
   ex:name "Solid World" .
 
 cdata:Solside a ex:Software ;
-  ex:maintainer <https://newyork.solid.community/profile/card#me> ;
+  ex:maintainer cdata:Mike_Adams ;
   ex:name "Solside" ;
   ex:status con:Development ;
   ex:subType con:PodApp ;
@@ -3190,13 +3205,13 @@ cdata:Souen_Mazouin a ex:Person ;
 
 cdata:Soukai a ex:Software ;
   ex:landingPage <https://soukai.js.org> ;
-  ex:maintainer <https://noeldemartin.solidcommunity.net/profile/card#me> ;
+  ex:maintainer cdata:Noel_De_Martin ;
   ex:modified "2025-06-10T18:04:26.172Z"^^xsd:dateTime ;
-  ex:name "Soukai" ;
+  ex:name "Soukai"@en ;
   ex:repository <https://github.com/noeldemartin/soukai> ;
   ex:status con:Production ;
   ex:subType con:SoftwareLibrary ;
-  ex:technicalKeyword "library" .
+  ex:technicalKeyword "library"@en .
 
 cdata:Spoggy a ex:Software ;
   ex:clientID <https://spoggy.solidcommunity.net/profile/card#me> ;
@@ -3241,12 +3256,24 @@ cdata:stat-vocab a ex:Ontology ;
 cdata:Stefan_Dercon a ex:Person ;
   ex:name "Stefan Dercon" .
 
+cdata:Stefan_Hohn a ex:Person ;
+  ex:name "Stefan Höhn" ;
+  ex:webid <https://dewomser.solidcommunity.net/profile/card#me> .
+
+cdata:Stefan_Rother-Stubs a ex:Person ;
+  ex:name "Stefan Rother-Stübs" ;
+  ex:webid <https://srs.solidcommunity.net/profile/card#me> .
+
 cdata:Stein_Vraale a ex:Person ;
   ex:forumHandle "@ztein" ;
   ex:name "Stein Vråle" .
 
 cdata:Steven_Vandevelde a ex:Person ;
   ex:name "Steven Vandevelde" .
+
+cdata:Stijn_Taelemans a ex:Person ;
+  ex:name "Stijn Taelemans" ;
+  ex:webid <https://stijntaelemans.inrupt.net/profile/card#me> .
 
 cdata:StreamingHTTPChannel2023 a ex:Specification ;
   ex:author <https://elf-pavlik.hackers4peace.net> ;
@@ -3261,6 +3288,10 @@ cdata:StreamingHTTPChannel2023NotificationReceiver a ex:ClassOfProduct ;
 
 cdata:StreamingHTTPChannel2023NotificationSender a ex:ClassOfProduct ;
   ex:name "Solid Streaming HTTP Notification Sender" .
+
+cdata:Sven_Lieber a ex:Person ;
+  ex:name "Sven Lieber" ;
+  ex:webid <https://sven-lieber.org/profile#me> .
 
 cdata:Swan_Bouvier-Muller a ex:Person ;
   ex:name "Swan Bouvier-Muller" .
@@ -3291,6 +3322,10 @@ cdata:Tadanime a ex:Software ;
   ex:subType con:LeisureApp ;
   ex:technicalKeyword "movies" .
 
+cdata:Taekhoon_Kim a ex:Person ;
+  ex:name "Taekhoon Kim" ;
+  ex:webid <https://techny.inrupt.net/profile/card#me> .
+
 cdata:Taisuke_Fukuno a ex:Person ;
   ex:landingPage <https://github.com/taisukef> ;
   ex:name "Taisuke Fukuno" .
@@ -3311,16 +3346,25 @@ cdata:Tao_Chen a ex:Person ;
 
 cdata:TeamIdLive a ex:Service ;
   ex:contactEmail <mailto:info@meisdata.io> ;
-  ex:description "Pivot" ;
-  ex:domainKeyword "Pod-Provider" ;
+  ex:description "Pivot"@en ;
+  ex:domainKeyword "Pod-Provider"@en ;
   ex:logo <https://www.serverproject.de/logo2.png> ;
   ex:modified "2025-04-22T03:43:06.788Z"^^xsd:dateTime ;
-  ex:name "teamid.live" ;
+  ex:name "teamid.live"@en ;
   ex:provider cdata:Meisdata ;
   ex:serviceEndpoint <https://teamid.live> ;
   ex:softwareStackIncludes cdata:Pivot, cdata:SolidOS ;
   ex:status con:Exploration ;
   ex:subType con:GeneralPurposePodService .
+
+cdata:Ted_Thibodeau a ex:Person ;
+  ex:landingPage <https://github.com/TallTed> ;
+  ex:name "Ted Thibodeau" ;
+  ex:webid <https://id.myopenlink.net/dataspace/person/tthibodeau#this> .
+
+cdata:Teodora_Petkova a ex:Person ;
+  ex:name "Teodora Petkova" ;
+  ex:webid <https://teodora.solidcommunity.net/profile/card#me> .
 
 cdata:Terence_Eden a ex:Person ;
   ex:name "Terence Eden" .
@@ -3346,6 +3390,10 @@ cdata:Thomas_Tanon a ex:Person ;
 cdata:Thorsten_Kastner a ex:Person ;
   ex:name "Thorsten Kastner" .
 
+cdata:Tic_Tac_Moe a ex:Person ;
+  ex:name "Tic Tac Moe" ;
+  ex:webid <https://tic-tac-moe.inrupt.net/profile/card#me> .
+
 cdata:Tiddlywiki a ex:Software ;
   ex:description "A non-linear personal web notebook" ;
   ex:maintainer cdata:Alain_Bourgeois ;
@@ -3354,11 +3402,24 @@ cdata:Tiddlywiki a ex:Software ;
   ex:subType con:ProductivityApp ;
   ex:technicalKeyword "editor", "wiki" .
 
+cdata:Tim_Berners-Lee a ex:Person ;
+  ex:forumHandle "@timbl" ;
+  ex:landingPage <https://github.com/timbl> ;
+  ex:matrixHandle "@timbl" ;
+  ex:modified "2025-05-15T19:00:05.011Z"^^xsd:dateTime ;
+  ex:name "Tim Berners-Lee" ;
+  ex:webid <https://timbl.solidcommunity.net/profile/card#me> .
+
 cdata:time-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/2006/time#> ;
   ex:name "Time" ;
   ex:namespaceURI <http://www.w3.org/2006/time#> ;
   ex:prefix "time:" .
+
+cdata:Timea_Turdean a ex:Person ;
+  ex:landingPage <https://github.com/timea-solid> ;
+  ex:name "Timea Turdean" ;
+  ex:webid <https://timea.solidcommunity.net/profile/card#me> .
 
 cdata:timezone-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/2006/timezone#> ;
@@ -3366,11 +3427,26 @@ cdata:timezone-vocab a ex:Ontology ;
   ex:namespaceURI <http://www.w3.org/2006/timezone#> ;
   ex:prefix "tzont:" .
 
+cdata:Timo_Kankaanpaa a ex:Person ;
+  ex:name "Timo Kankaanpää" ;
+  ex:webid <https://timojkankaanpaa.solidcommunity.net/profile/card#me> .
+
 cdata:TimStanden a ex:Person ;
   ex:name "Tim Standen" .
 
+cdata:Tobias_Käfer a ex:Person ;
+  ex:contactEmail <mailto:tobias.kaefer@kit.edu> ;
+  ex:landingPage <https://websci.aifb.kit.edu/Tobias_Kaefer.php> ;
+  ex:modified "2025-04-25T07:58:10.536Z"^^xsd:dateTime ;
+  ex:name "Tobias Käfer"@en ;
+  ex:webid <https://kaefer3000.solidcommunity.net/profile/card#me> .
+
+cdata:Toby a ex:Person ;
+  ex:name "Toby" ;
+  ex:webid <https://tobytoberson.inrupt.net/profile/card#me> .
+
 cdata:TodoApp a ex:CreativeWork ;
-  ex:author <https://virginiabalseiro.com/#me> ;
+  ex:author cdata:VirginiaBalseiro ;
   ex:landingPage <https://virginiabalseiro.com/blogposts/tutorial-create-a-solid-to-do-app> ;
   ex:name "How to Build a Solid To-Do App with React" ;
   ex:subType con:AboutSolidApps .
@@ -3380,8 +3456,16 @@ cdata:Tom a ex:Person ;
   ex:landingPage <https://gitlab.com/tag42git> ;
   ex:name "Tom" .
 
+cdata:Tom_Friendly a ex:Person ;
+  ex:name "Tom Friendly" ;
+  ex:webid <https://carloss.inrupt.net/profile/card#me> .
+
 cdata:Tory_Clasen a ex:Person ;
   ex:name "Tory Clasen" .
+
+cdata:Travis_Vachon a ex:Person ;
+  ex:name "Travis Vachon" ;
+  ex:webid <https://tvachon.inrupt.net/profile/card#me> .
 
 cdata:TrinAppSuite a ex:Software ;
   ex:landingPage <https://graphmetrix.com/trinapp> ;
@@ -3414,6 +3498,11 @@ cdata:Tripledoc a ex:Software ;
   ex:subType con:SoftwareLibrary ;
   ex:technicalKeyword "rdf parsing" .
 
+cdata:Tyler_Childs a ex:Person ;
+  ex:forumHandle "@tychi" ;
+  ex:name "Tyler Childs" ;
+  ex:webid <https://tychi.inrupt.net> .
+
 cdata:ui-vocab a ex:Ontology ;
   ex:landingPage <http://www.w3.org/ns/ui#> ;
   ex:name "User Interface" ;
@@ -3421,16 +3510,16 @@ cdata:ui-vocab a ex:Ontology ;
   ex:prefix "ui:" .
 
 cdata:Umai a ex:Software ;
-  ex:description "Collect and share recipes" ;
+  ex:description "Collect and share recipes"@en ;
   ex:logo <https://noeldemartin.com/logos/umai.png> ;
-  ex:maintainer <https://noeldemartin.solidcommunity.net/profile/card#me> ;
+  ex:maintainer cdata:Noel_De_Martin ;
   ex:modified "2025-06-10T17:47:15.737Z"^^xsd:dateTime ;
-  ex:name "Umai" ;
+  ex:name "Umai"@en ;
   ex:repository <https://github.com/noeldemartin/umai> ;
   ex:showcase <https://umai.noeldemartin.com> ;
   ex:status con:Production ;
   ex:subType con:LeisureApp ;
-  ex:technicalKeyword "food" .
+  ex:technicalKeyword "food"@en .
 
 cdata:UofLondon a ex:Organization ;
   ex:name "University of London" ;
@@ -3465,14 +3554,34 @@ cdata:UseId a ex:Service ;
   ex:status con:Production ;
   ex:subType con:GeneralPurposePodService .
 
+cdata:V_Sri a ex:Person ;
+  ex:name "V Sri" ;
+  ex:webid <https://vsri.inrupt.net/profile/card#me> .
+
 cdata:vcard-vocab a ex:Ontology ;
   ex:landingPage <https://www.w3.org/2006/vcard/ns#> ;
-  ex:name "vCard" ;
+  ex:name "vCard"@en ;
   ex:namespaceURI <https://www.w3.org/2006/vcard/ns#> ;
   ex:prefix "vcard:" .
 
+cdata:Victor_Gonzalo_Cristobal a ex:Person ;
+  ex:name "Víctor Gonzalo Cristóbal" ;
+  ex:webid <https://victorgon.inrupt.net/profile/card#me> .
+
 cdata:Victor_Rodriguez-Doncel a ex:Person ;
   ex:name "Víctor_Rodríguez-Doncel" .
+
+cdata:Vincent_Tunru a ex:Person ;
+  ex:forumHandle "@Vincent" ;
+  ex:landingPage <https://github.com/Vinnl> ;
+  ex:name "Vincent Tunru" ;
+  ex:webid <https://vincentt.inrupt.net/profile/card#me> .
+
+cdata:VirginiaBalseiro a ex:Person ;
+  ex:forumHandle "@Virginia" ;
+  ex:landingPage <https://github.com/VirginiaBalseiro> ;
+  ex:name "Virginia Balseiro" ;
+  ex:webid <https://virginiabalseiro.com/#me> .
 
 cdata:Visited_Countries a ex:Software ;
   ex:description "Tracks the countries and places you visited, and see all the visited countries and places shared by the other users of this application." ;
@@ -3519,9 +3628,9 @@ cdata:WebComponentsDiscussion a ex:CreativeWork ;
   ex:subType con:OtherTechResource .
 
 cdata:WebhookChannel2023 a ex:Specification ;
-  ex:author <https://elf-pavlik.hackers4peace.net>, <https://jackson.solidcommunity.net/profile/card#me> ;
+  ex:author <https://elf-pavlik.hackers4peace.net>, cdata:Jackson_Morgan ;
   ex:definesConformanceFor cdata:WebhookChannel2023NotificationReceiver, cdata:WebhookChannel2023NotificationSender, cdata:WebhookChannel2023SubscriptionClient ;
-  ex:editor <https://elf-pavlik.hackers4peace.net>, <https://jackson.solidcommunity.net/profile/card#me> ;
+  ex:editor <https://elf-pavlik.hackers4peace.net>, cdata:Jackson_Morgan ;
   ex:landingPage <https://solid.github.io/notifications/webhook-channel-2023> ;
   ex:name "WebhookChannel2023" ;
   ex:repository <https://github.com/solid/notifications> .
@@ -3602,8 +3711,17 @@ cdata:Wout_Schellaert a ex:Person ;
 cdata:Wout_Slabbinck a ex:Person ;
   ex:name "Wout Slabbinick" .
 
+cdata:Wouter_Janssens a ex:Person ;
+  ex:name "Wouter Janssens" ;
+  ex:webid <https://wouteraj.inrupt.net/profile/card#me> .
+
 cdata:Wouter_Kok a ex:Person ;
   ex:name "Wouter Kok" .
+
+cdata:Wouter_Termont a ex:Person ;
+  ex:forumHandle "@woutermont" ;
+  ex:name "Wouter Termont" ;
+  ex:webid <https://woutermont.solidcommunity.net/profile/card#me> .
 
 cdata:xsd-vocab a ex:Ontology ;
   ex:landingPage xsd: ;
@@ -3613,6 +3731,10 @@ cdata:xsd-vocab a ex:Ontology ;
 
 cdata:Yehua_Chen a ex:Person ;
   ex:name "Yehua Chen" .
+
+cdata:Yujin_Park a ex:Person ;
+  ex:name "Yujin Park" ;
+  ex:webid <https://shrck1015.solidcommunity.net/profile/card#me> .
 
 cdata:Yuri_Savateev a ex:Person ;
   ex:name "Yuri Savateev" .
@@ -3625,124 +3747,6 @@ cdata:Zhilin_Zhang a ex:Person ;
 
 cdata:Zongyan_Li a ex:Person ;
   ex:name "Zongyan Li" .
-
-<https://solidweb.me/testpro-dev/profile/card#me> a ex:Person ;
-  ex:contactEmail <mailto:me@evering.eu> ;
-  ex:description "baby coder" ;
-  ex:forumHandle "@ewingson" ;
-  ex:landingPage <https://configedit.com/>, <https://github.com/ewingson> ;
-  ex:logo <https://avatars.githubusercontent.com/u/36561948?s=400&u=f9432d40dbea4f2291b9def6676dde978133709c&v=4> ;
-  ex:matrixHandle "@ewingson" ;
-  ex:modified "2025-05-08T04:34:58.868Z"^^xsd:dateTime ;
-  ex:name "Matthias Evering" ;
-  ex:resourcesOffered "NSS CSS and Pivot", "pod-provider NSS CSS Pivot" ;
-  ex:resourcesWanted "rdf turtle community building pod-provider solution-focused communication diversity equity inclusion" ;
-  ex:webid <https://solidweb.me/testpro-dev/profile/card#me> .
-
-<https://sopekmir.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Mirek" ;
-  ex:webid <https://sopekmir.inrupt.net/profile/card#me> .
-
-<https://srs.solidcommunity.net/profile/card#me> a ex:Person ;
-  ex:name "Stefan Rother-Stübs" ;
-  ex:webid <https://srs.solidcommunity.net/profile/card#me> .
-
-<https://stijntaelemans.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Stijn Taelemans" ;
-  ex:webid <https://stijntaelemans.inrupt.net/profile/card#me> .
-
-<https://sven-lieber.org/profile#me> a ex:Person ;
-  ex:name "Sven Lieber" ;
-  ex:webid <https://sven-lieber.org/profile#me> .
-
-<https://techny.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Taekhoon Kim" ;
-  ex:webid <https://techny.inrupt.net/profile/card#me> .
-
-<https://teodora.solidcommunity.net/profile/card#me> a ex:Person ;
-  ex:name "Teodora Petkova" ;
-  ex:webid <https://teodora.solidcommunity.net/profile/card#me> .
-
-<https://thewebalyst.solidcommunity.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@happybeing" ;
-  ex:name "Mark" ;
-  ex:webid <https://thewebalyst.solidcommunity.net/profile/card#me> .
-
-<https://tic-tac-moe.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Tic Tac Moe" ;
-  ex:webid <https://tic-tac-moe.inrupt.net/profile/card#me> .
-
-<https://timbl.solidcommunity.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@timbl" ;
-  ex:landingPage <https://github.com/timbl> ;
-  ex:matrixHandle "@timbl" ;
-  ex:modified "2025-05-15T19:00:05.011Z"^^xsd:dateTime ;
-  ex:name "Tim Berners-Lee" ;
-  ex:webid <https://timbl.solidcommunity.net/profile/card#me> .
-
-<https://timea.solidcommunity.net/profile/card#me> a ex:Person ;
-  ex:landingPage <https://github.com/timea-solid> ;
-  ex:name "Timea Turdean" ;
-  ex:webid <https://timea.solidcommunity.net/profile/card#me> .
-
-<https://timojkankaanpaa.solidcommunity.net/profile/card#me> a ex:Person ;
-  ex:name "Timo Kankaanpää" ;
-  ex:webid <https://timojkankaanpaa.solidcommunity.net/profile/card#me> .
-
-<https://tobytoberson.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Toby" ;
-  ex:webid <https://tobytoberson.inrupt.net/profile/card#me> .
-
-<https://tvachon.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Travis Vachon" ;
-  ex:webid <https://tvachon.inrupt.net/profile/card#me> .
-
-<https://tychi.inrupt.net> a ex:Person ;
-  ex:forumHandle "@tychi" ;
-  ex:name "Tyler Childs" ;
-  ex:webid <https://tychi.inrupt.net> .
-
-<https://ubernatural.inrupt.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@ubernatural" ;
-  ex:name "John Fletcher" ;
-  ex:webid <https://ubernatural.inrupt.net/profile/card#me> .
-
-<https://victorgon.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Víctor Gonzalo Cristóbal" ;
-  ex:webid <https://victorgon.inrupt.net/profile/card#me> .
-
-<https://vincentt.inrupt.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@Vincent" ;
-  ex:landingPage <https://github.com/Vinnl> ;
-  ex:name "Vincent Tunru" ;
-  ex:webid <https://vincentt.inrupt.net/profile/card#me> .
-
-<https://virginiabalseiro.com/#me> a ex:Person ;
-  ex:forumHandle "@Virginia" ;
-  ex:landingPage <https://github.com/VirginiaBalseiro> ;
-  ex:name "Virginia Balseiro" ;
-  ex:webid <https://virginiabalseiro.com/#me> .
-
-<https://vsri.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "V Sri" ;
-  ex:webid <https://vsri.inrupt.net/profile/card#me> .
-
-<https://worrallp.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Paul Worrall" ;
-  ex:webid <https://worrallp.inrupt.net/profile/card#me> .
-
-<https://wouteraj.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Wouter Janssens" ;
-  ex:webid <https://wouteraj.inrupt.net/profile/card#me> .
-
-<https://woutermont.solidcommunity.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@woutermont" ;
-  ex:name "Wouter Termont" ;
-  ex:webid <https://woutermont.solidcommunity.net/profile/card#me> .
-
-<https://www.thundr.be/profile/laurens.ttl#me> a ex:Person ;
-  ex:name "Laurens Debackere" ;
-  ex:webid <https://www.thundr.be/profile/laurens.ttl#me> .
 
 <urn:uuid:3b05c17c-f44a-470e-8031-408abee6e2ca> a ex:Person ;
   ex:contactEmail <mailto:eric+solid@uu3.org> ;

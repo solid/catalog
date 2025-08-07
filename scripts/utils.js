@@ -17,7 +17,8 @@ const pathNode = $rdf.sym('http://www.w3.org/ns/shacl#path') ;
 /* source - returns data locations and nodes
 */   
 export function source(){
-  window.currentFolder = window.location.href.replace(/\/pages\/[^\/]+$/,'/');
+//  window.currentFolder = window.location.href.replace(/\/pages\/[^\/]+$/,'/');
+  window.currentFolder = window.location.href.replace(/\/pages\//,'/').replace(/\?.*/,'').replace(/\#.*/,'').replace(/viewer\.html/,'');
   let vocURL= 'http://example.org';
 //  let shaclURL = 'urn:x-base:default' ;
 //   let shaclURL = currentFolder + 'catalog-shacl.ttl';
