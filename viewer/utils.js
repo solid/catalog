@@ -27,13 +27,10 @@ export function source(){
   let dataURL = 'https://solidproject.solidcommunity.net/catalog/data';
   let shaclURL = 'https://solidproject.solidcommunity.net/catalog/shapes';
   let skosURL = 'https://solidproject.solidcommunity.net/catalog/taxonomy';
-//    dataLoadURL   : currentFolder + 'catalog-data.ttl',
-//    shaclLoadURL  : currentFolder + 'catalog-shacl.ttl',
-//    skosLoadURL   : currentFolder + 'catalog-skos.ttl',
   return {
-    dataLoadURL   : currentFolder + 'data',
-    shaclLoadURL  : currentFolder + 'shapes',
-    skosLoadURL   : currentFolder + 'taxonomy',
+    dataLoadURL   : currentFolder + 'catalog-data.ttl',
+    shaclLoadURL  : currentFolder + 'catalog-shacl.ttl',
+    skosLoadURL   : currentFolder + 'catalog-skos.ttl',
     newDataURL    : currentFolder + 'new-data/',
     dataURL,
     shaclURL,

@@ -9,7 +9,7 @@ import { Store, DataFactory } from 'n3'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const filePath = join(__dirname, '../catalog-data.ttl');
+const filePath = join(__dirname, '../catlog-data.ttl');
 const ex = createVocabulary('http://example.org#', 'webid')
 
 function changeSubject(quad, subject) {
