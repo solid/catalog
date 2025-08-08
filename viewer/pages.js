@@ -1,4 +1,5 @@
-import {pageContent} from '../pages/page-content.js';
+//import {pageContent} from '../pages/page-content.js';
+import {pageContent} from './page-content.js';
 import {store,fetcher,source,showPage,search,findNodeShapes} from './utils.js';
 
 /*

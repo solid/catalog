@@ -1,6 +1,8 @@
 import {shacl2form} from './form.js';
 import {prepNewRecordForm} from './pages.js';
-import {pageContent} from '../pages/page-content.js';
+import {pageContent} from './page-content.js';
+//import {prepNewRecordForm} from '../pages/pages.js';
+//import {pageContent} from '../pages/page-content.js';
 
 export const store = UI.store;
 export const fetcher = $rdf.fetcher(store);
@@ -17,7 +19,8 @@ const pathNode = $rdf.sym('http://www.w3.org/ns/shacl#path') ;
 /* source - returns data locations and nodes
 */   
 export function source(){
-  window.currentFolder = window.location.href.replace(/\/pages\/[^\/]+$/,'/');
+//  window.currentFolder = window.location.href.replace(/\/pages\/[^\/]+$/,'/');
+  window.currentFolder = window.location.href.replace(/\/pages\//,'/').replace(/\?.*/,'').replace(/\#.*/,'').replace(/(viewer|index)\.html/,'');
   let vocURL= 'http://example.org';
 //  let shaclURL = 'urn:x-base:default' ;
 //   let shaclURL = currentFolder + 'catalog-shacl.ttl';

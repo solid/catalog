@@ -1710,11 +1710,13 @@ cdata:Naman_Goel a ex:Person ;
 cdata:NextFM a ex:Software ;
   ex:contactEmail <mailto:product@inrupt.com> ;
   ex:description "A file manager for Solid pods with support for multiple visual themes, inspired by Tim Berners-Lee." ;
-  ex:modified "2025-06-09T15:50:49.306Z"^^xsd:dateTime ;
+  ex:logo <https://solidfm.app/favicon.ico> ;
+  ex:modified "2025-07-31T13:43:12.617Z"^^xsd:dateTime ;
   ex:name "NextFM" ;
   ex:provider cdata:Inrupt ;
   ex:repository <https://github.com/inrupt/nextfm> ;
-  ex:status con:Exploration ;
+  ex:showcase <https://solidfm.app/> ;
+  ex:status con:Production ;
   ex:subType con:PodApp ;
   ex:technicalKeyword "file manager" .
 
@@ -3087,7 +3089,7 @@ cdata:SolidPractitioners-WeeklyCall a ex:Event ;
   ex:name "Solid Practitioners Video Call" ;
   ex:provider cdata:SolidPractitioners ;
   ex:repository <https://github.com/solid-contrib/practitioners> ;
-  ex:schedule "The first and third Monday of every month at 15:00 UTC" ;
+  ex:schedule "The first and third Thursday of every month at 15:00 UTC" ;
   ex:videoCallPage <https://meet.jit.si/solid-practitioners> .
 
 cdata:SolidProject a ex:Organization ;
