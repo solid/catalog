@@ -181,6 +181,7 @@ mainArea.style.display="none";
           recordLabel = document.querySelector('[name=name]').value;
         }
         let url = source().newDataURL + encodeURIComponent(dateLabel+'-'+recordLabel.replace(/\s+/g,'_'))+'.ttl';
+        console.log(url);
         try {
           let r = await fetcher._fetch( url, {
             contentType: 'text/turtle',
