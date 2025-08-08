@@ -7,7 +7,8 @@ async function local2pod(){
   }
   catch(e){ console.log(e); }
   for(let file of files){
-    const from = `file:///home/jeff/solid/catalog/${file}`;
+    const from = `file:///`+process.cwd()+ '/' + file;
+console.log (from); process.exit();
     const to   = `https://solidproject.solidcommunity.net/catalog/${file}`;
     try {
       const getResponse = await client.fetch(from);
