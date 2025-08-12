@@ -177,8 +177,7 @@ function getRecordPredicates(record,subject,triples,posOfThing) {
       valArray.push(n.value);
     }
     let fieldValue= valArray.join(', ')
-console.log(fieldValue)
-    if(p.predicate.value.match(/subType/i)) fieldValue = subtype;
+   if(p.predicate.value.match(/subType/i)) fieldValue = subtype;
     if(posOfThing==='object') fieldName += "Of";
     record[fieldName]=fieldValue;
   }
