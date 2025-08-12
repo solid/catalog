@@ -169,14 +169,15 @@ function getRecordPredicates(record,subject,triples,posOfThing) {
       else if(p.predicate.value.match(/keyword/i)){
         n.value = `<a href="${n.value}">${n.value}</a>`;
       }
-      else if(n.value.startsWith('http')&& !isLink(p.predicate.value)) {
-//      else if(n.value.match(source().dataURL)){
+      else if((n.value.startsWith('http')&& !isLink(p.predicate.value) || n.value.startsWith('urn'))
+      ) {
         let label = findName(n.value);
         if(label) n.value = `<a href="${n.value}">${label}</a>`;
       }
       valArray.push(n.value);
     }
     let fieldValue= valArray.join(', ')
+console.log(fieldValue)
     if(p.predicate.value.match(/subType/i)) fieldValue = subtype;
     if(posOfThing==='object') fieldName += "Of";
     record[fieldName]=fieldValue;
