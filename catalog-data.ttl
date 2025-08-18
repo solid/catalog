@@ -1432,10 +1432,6 @@ cdata:Linked_Pipes a ex:Software ;
   ex:status con:Archived ;
   ex:subType con:OtherApp .
 
-cdata:LinkedWebStoragWG a ex:Organization ;
-  ex:name "W3C Linked Web Storage Working Group" ;
-  ex:subType con:OpenSourceProject .
-
 cdata:Liqid_Chat a ex:Software ;
   ex:maintainer <https://jackson.solidcommunity.net/profile/card#me> ;
   ex:name "Liqid Chat" ;
