@@ -616,7 +616,7 @@ cdata:Booklice a ex:Software ;
 cdata:Bookmarker a ex:Software ;
   ex:name "Bookmarker" ;
   ex:repository <https://github.com/pondersource/solidBookmarker> ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:ProductivityApp ;
   ex:technicalKeyword "bookmarks" .
 
@@ -827,7 +827,7 @@ cdata:Dokieli a ex:Software ;
 cdata:Drive a ex:Software ;
   ex:description "Tool to create and share resources with contacts" ;
   ex:name "drive" ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:ProductivityApp ;
   ex:technicalKeyword "general purpose app" .
 
@@ -961,7 +961,7 @@ cdata:Gold a ex:Software ;
 
 cdata:Golf_Course_Assistant a ex:Software ;
   ex:name "Golf Course Assistant" ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:LeisureApp ;
   ex:technicalKeyword "games" .
 
@@ -1423,7 +1423,7 @@ cdata:Linked_Pipes a ex:Software ;
   ex:maintainer cdata:Altynbek_Orumbayev, cdata:Jakub_Klimek ;
   ex:name "Linked Pipes" ;
   ex:repository <https://github.com/linkedpipes/applications> ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:OtherApp .
 
 cdata:LinkedWebStoragWG a ex:Organization ;
@@ -1433,7 +1433,7 @@ cdata:LinkedWebStoragWG a ex:Organization ;
 cdata:Liqid_Chat a ex:Software ;
   ex:maintainer <https://jackson.solidcommunity.net/profile/card#me> ;
   ex:name "Liqid Chat" ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:ProductivityApp ;
   ex:technicalKeyword "chat" .
 
@@ -1769,7 +1769,7 @@ cdata:Notepod a ex:Software ;
   ex:maintainer <https://vincentt.inrupt.net/profile/card#me> ;
   ex:name "Notepod" ;
   ex:repository <https://github.com/Vinnl/notepod> ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:ProductivityApp ;
   ex:technicalKeyword "editor" .
 
@@ -1794,7 +1794,7 @@ cdata:Ohmypod a ex:Software ;
   ex:maintainer cdata:Astrid_Gamoneda_Arrunada ;
   ex:name "Ohmypod" ;
   ex:repository <https://github.com/empathyco/solid-oh-my-pod> ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:PodApp ;
   ex:technicalKeyword "pod management" .
 
@@ -1853,13 +1853,13 @@ cdata:OpenLink a ex:Organization ;
 cdata:OpenLink_Smart_Data_Bot a ex:Software ;
   ex:description "Smart agent that provides a single RESTful interface for interacting with a variety of Actions (operations) provided by APIs." ;
   ex:name "OpenLink Smart Data Bot" ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:PodApp .
 
 cdata:OpenLink_Structured_Data_Editor a ex:Software ;
   ex:description "RDF editor that can save content to any Solid Pod." ;
   ex:name "OpenLink Structured Data Editor" ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:ProductivityApp .
 
 cdata:OpenLink_Structured_Data_Sniffer a ex:Software ;
@@ -1871,7 +1871,7 @@ cdata:OpenLink_Structured_Data_Sniffer a ex:Software ;
 cdata:OpenLink_YouID a ex:Software ;
   ex:description "Identity and credentials document generator." ;
   ex:name "OpenLink YouID" ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:ProductivityApp .
 
 cdata:OpenLinkNSSFork a ex:Software ;
@@ -2078,7 +2078,7 @@ cdata:Plume a ex:Software ;
   ex:maintainer cdata:Andrei_Sambra ;
   ex:name "Plume" ;
   ex:repository <https://github.com/happybeing/solid-plume> ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:ProductivityApp ;
   ex:technicalKeyword "blogs", "editor" .
 
@@ -2100,7 +2100,7 @@ cdata:Poddit a ex:Software ;
   ex:landingPage <https://gitlab.com/vincenttunru/poddit> ;
   ex:maintainer <https://vincentt.inrupt.net/profile/card#me> ;
   ex:name "Poddit" ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:PodApp ;
   ex:technicalKeyword "bookmarks" .
 
@@ -2146,7 +2146,7 @@ cdata:Polymer a ex:Software ;
 cdata:PoPock a ex:Software ;
   ex:name "PoPock" ;
   ex:repository <https://github.com/scenaristeur/solid-vue-panes> ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:PodApp ;
   ex:technicalKeyword "general purpose app", "pod management" .
 
@@ -2709,7 +2709,7 @@ cdata:Solid_file_widget a ex:Software ;
   ex:maintainer cdata:Alain_Bourgeois ;
   ex:name "Solid file widget" ;
   ex:repository <https://github.com/bourgeoa/solid-file-widget> ;
-  ex:status con:Production ;
+  ex:status con:Archived ;
   ex:subType con:SoftwareLibrary ;
   ex:technicalKeyword "authentication", "pod management" .
 
@@ -2718,7 +2718,7 @@ cdata:Solid_Groups a ex:Software ;
   ex:maintainer cdata:Angelo_Veltens ;
   ex:modified "2025-05-08T15:43:17.080Z"^^xsd:dateTime ;
   ex:name "Solid Groups" ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:ProductivityApp ;
   ex:technicalKeyword "contacts" .
 
@@ -2744,7 +2744,7 @@ cdata:Solid_LBS a ex:Software ;
   ex:maintainer <https://sharonstrats.inrupt.net/profile/card#me> ;
   ex:name "Solid LBS" ;
   ex:repository <https://github.com/SharonStrats/SOLIDLBSPrototype> ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:OtherApp ;
   ex:technicalKeyword "general purpose app", "uncategorized" .
 
@@ -2804,7 +2804,7 @@ cdata:Solid_Profile_Viewer a ex:Software ;
   ex:maintainer cdata:Angelo_Veltens ;
   ex:modified "2025-05-08T15:43:00.452Z"^^xsd:dateTime ;
   ex:name "Solid Profile Viewer" ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:PodApp ;
   ex:technicalKeyword "pod management" .
 
@@ -2877,7 +2877,7 @@ cdata:Solid_Weather a ex:Software ;
   ex:landingPage <https://bitbucket.org/dylanmartin/solidweatherapp/src/master> ;
   ex:maintainer cdata:Dylan_Martin ;
   ex:name "Solid Weather" ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:ProductivityApp ;
   ex:technicalKeyword "weather" .
 
@@ -2902,6 +2902,7 @@ cdata:Solid-Clinic a ex:Service ;
   ex:subType con:SpecializedPodService .
 
 cdata:Solid-Lite a ex:Software ;
+  ex:maintainer <https://melvin.solidcommunity.net/profile/card#me> ;
   ex:name "Solid Lite" ;
   ex:repository <https://github.com/solid-lite/server> ;
   ex:status con:Development ;
@@ -3204,7 +3205,7 @@ cdata:Spoggy a ex:Software ;
   ex:clientID <https://spoggy.solidcommunity.net/profile/card#me> ;
   ex:description "Creates nodes and edges of a graph" ;
   ex:name "Spoggy" ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:OtherApp ;
   ex:technicalKeyword "general purpose app", "uncategorized" .
 
@@ -3301,7 +3302,7 @@ cdata:Taisukef a ex:Software ;
   ex:maintainer cdata:Taisuke_Fukuno ;
   ex:name "Taisukef" ;
   ex:repository <https://github.com/taisukef/solid-addfriend> ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:PodApp ;
   ex:technicalKeyword "general purpose app", "pod management", "profile" .
 
@@ -3352,7 +3353,7 @@ cdata:Tiddlywiki a ex:Software ;
   ex:description "A non-linear personal web notebook" ;
   ex:maintainer cdata:Alain_Bourgeois ;
   ex:name "Tiddlywiki" ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:ProductivityApp ;
   ex:technicalKeyword "editor", "wiki" .
 
@@ -3449,7 +3450,7 @@ cdata:UofSouthhampton a ex:Organization ;
 cdata:URIBurner a ex:Software ;
   ex:description "SPARQL Query Service Endpoint that supports WebID-OIDC for authenticating WebIDs en route to functionality that isn’t granted to the un-authenticated Public." ;
   ex:name "URIBurner" ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:ProductivityApp ;
   ex:technicalKeyword "search" .
 
@@ -3512,7 +3513,7 @@ cdata:WebClip a ex:Software ;
   ex:description "Chrome extension to extract structured data from any web page and store it to a Solid Pod." ;
   ex:name "WebClip" ;
   ex:repository <https://github.com/codecentric/web-clip> ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:ProductivityApp ;
   ex:technicalKeyword "general purpose app", "uncategorized" .
 
@@ -3544,7 +3545,7 @@ cdata:webid_Profile_editor a ex:Software ;
   ex:maintainer cdata:Andrei_Sambra ;
   ex:name "WebID Profile editor" ;
   ex:repository <https://github.com/linkeddata/profile-editor> ;
-  ex:status con:Development ;
+  ex:status con:Archived ;
   ex:subType con:PodApp ;
   ex:technicalKeyword "pod management", "profile" .
 
