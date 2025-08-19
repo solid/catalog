@@ -3,6 +3,7 @@
 import { Command } from 'commander'
 import { getPath } from './util.ts'
 import { formatData } from './format.ts'
+import { validateWebid } from './validations/webid.ts'
 
 const dataPath = getPath(import.meta.url, '../catalog-data.ttl')
 
@@ -18,6 +19,14 @@ program.command('format')
   .action(async () => {
     console.info('Formatting data')
     await formatData(dataPath)
+  })// Add nested commands using `.command()`.
+
+const validate = program.command('validate')
+validate.command('webid')
+  .description('Checks statements with ex:webid that subject and object are the same')
+  .action(async () => {
+    console.info('Validate ex:webid statements')
+    await validateWebid(dataPath)
   })
 
-program.parse()
+program.parse(process.argv)
