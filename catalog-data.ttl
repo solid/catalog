@@ -877,6 +877,9 @@ cdata:EmberSolidVideo a ex:CreativeWork ;
 cdata:Emelia_Smith a ex:Person ;
   ex:name "Emelia Smith" .
 
+cdata:Erich_Bremer a ex:Person ;
+  ex:name "Erich Bremer" .
+
 cdata:Espresso a ex:Organization ;
   ex:description "\n    Efficient Search over Personal Repositories - Secure and Sovereign\n  " ;
   ex:landingPage <https://espressoproject.org/> ;
@@ -997,6 +1000,9 @@ cdata:GurrinyHealthClinic a ex:Organization ;
   ex:landingPage <https://www.gyhsac.org.au/> ;
   ex:name "Gurriny Health Clinic" ;
   ex:subType con:OtherNGO .
+
+cdata:Hadrian_Zbarcea a ex:Person ;
+  ex:name "Hadrian Zbarcea" .
 
 cdata:Henri_Cattoire a ex:Person ;
   ex:name "Henri Cattoire" .
@@ -1426,10 +1432,6 @@ cdata:Linked_Pipes a ex:Software ;
   ex:status con:Archived ;
   ex:subType con:OtherApp .
 
-cdata:LinkedWebStoragWG a ex:Organization ;
-  ex:name "W3C Linked Web Storage Working Group" ;
-  ex:subType con:OpenSourceProject .
-
 cdata:Liqid_Chat a ex:Software ;
   ex:maintainer <https://jackson.solidcommunity.net/profile/card#me> ;
   ex:name "Liqid Chat" ;
@@ -1454,6 +1456,36 @@ cdata:Ludwig_Schubi a ex:Person ;
 
 cdata:Luk_Overmeire a ex:Person ;
   ex:name "Luk Overmeire" .
+
+cdata:LWS a ex:Organization ;
+  ex:landingPage <https://www.w3.org/groups/wg/lws/> ;
+  ex:name "W3C Linked Web Storage Working Group" ;
+  ex:subType con:OpenSourceProject .
+
+cdata:LWS-Protocol a ex:Specification ;
+  ex:description "Draft Protocol for the W3CLinked Web Storage Group." ;
+  ex:editor <https://solid.champin.net/pa/profile/card#me>, cdata:Erich_Bremer, cdata:Jesse_Wright, <urn:uuid:3b05c17c-f44a-470e-8031-408abee6e2ca> ;
+  ex:landingPage <http://w3c.github.io/lws-protocol/spec/> ;
+  ex:name "Linked Web Storage Protocol" ;
+  ex:provider cdata:LWS ;
+  ex:repository <https://github.com/w3c/lws-protocol> .
+
+cdata:LWS-public-mailingList a ex:Service ;
+  ex:description "Announcements for W3C Linked Web Storage Working Group." ;
+  ex:name "W3C Linked Web Storage Working Group Public Mailing List" ;
+  ex:provider cdata:LWS ;
+  ex:repository <https://lists.w3.org/Archives/Public/public-lws-wg/> ;
+  ex:serviceEndpoint <mailto:public-lws-wg-request@w3.org> ;
+  ex:status con:Production ;
+  ex:subType con:CommunicationService .
+
+cdata:LWS-Use-Cases a ex:CreativeWork ;
+  ex:editor cdata:Hadrian_Zbarcea ;
+  ex:landingPage <https://w3c.github.io/lws-ucs/spec/> ;
+  ex:name "Linked Web Storage Use Cases" ;
+  ex:provider cdata:LWS ;
+  ex:repository <https://github.com/w3c/lws-ucs> ;
+  ex:subType con:OtherTechResource .
 
 cdata:Maico_Oliveira_Buss a ex:Person ;
   ex:name "Maico Oliveira Buss" .
