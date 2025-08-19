@@ -1,10 +1,8 @@
 import { arrayifyStream } from 'arrayify-stream'
-import { createVocabulary } from 'rdf-vocabulary'
 import { Store } from 'n3'
-import { readQuadStream } from '../util.ts'
+import { ex, readQuadStream } from '../util.ts'
 
 export async function validateWebid(filePath: string): Promise<void> {
-  const ex = createVocabulary('http://example.org#', 'webid')
 
   const fromStream = await readQuadStream(filePath)
   const dataset = new Store(await arrayifyStream(fromStream))

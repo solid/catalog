@@ -4,6 +4,7 @@ import { Command } from 'commander'
 import { getPath } from './util.ts'
 import { formatData } from './format.ts'
 import { validateWebid } from './validations/webid.ts'
+import { migrateWebid } from './migrations/webid.ts'
 
 const dataPath = getPath(import.meta.url, '../catalog-data.ttl')
 
@@ -27,6 +28,14 @@ validate.command('webid')
   .action(async () => {
     console.info('Validate ex:webid statements')
     await validateWebid(dataPath)
+  })
+
+const migrate = program.command('migrate')
+migrate.command('webid')
+  .description('Picks object in statement with ex:webid and makes it a subject, then updates all other statements using the old subject')
+  .action(async () => {
+    console.info('migrate ex:webid statements and related data')
+    await migrateWebid(dataPath)
   })
 
 program.parse(process.argv)
