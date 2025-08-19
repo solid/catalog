@@ -143,6 +143,23 @@ function isLink(val){
   return link[val];
 }
 
+/* inShape() == true if predicate is in the shape of the subject 
+   note : supports ignoring predicates not in the shape
+*/
+function inShape(subject,predicate){
+  const targetNode = $rdf.sym('http://www.w3.org/ns/shacl#targetClass');
+  const propertyNode = $rdf.sym('http://www.w3.org/ns/shacl#property');
+  const pathNode = $rdf.sym('http://www.w3.org/ns/shacl#path');
+  let types = store.match(subject,source().isa);
+  for(let type of types){
+     let shape = store.any(null,targetNode,type.object);
+     let props = store.match(shape,propertyNode);
+     for(let property of props){
+       if( store.any(property.object,pathNode,null).value==predicate.value ) return true;
+     }
+  }
+}
+
 function getRecordPredicates(record,subject,triples,posOfThing) {
   let isPred = {};
   let name = findName(subject);
@@ -157,6 +174,7 @@ function getRecordPredicates(record,subject,triples,posOfThing) {
     if(isPred[p.predicate.value]) continue;
     isPred[p.predicate.value]=true;
     let fieldName = node2label(p.predicate.value);
+    if(!inShape(subject,p.predicate)) continue;
     let newValue = posOfThing==='subject' 
       ? store.match(subject,p.predicate)
       : store.match(null,p.predicate,subject);
@@ -177,9 +195,9 @@ function getRecordPredicates(record,subject,triples,posOfThing) {
       valArray.push(n.value);
     }
     let fieldValue= valArray.join(', ')
-   if(p.predicate.value.match(/subType/i)) fieldValue = subtype;
+    if(p.predicate.value.match(/subType/i)) fieldValue = subtype;
     if(posOfThing==='object') fieldName += "Of";
-    record[fieldName]=fieldValue;
+    if(fieldName != "webidOf") record[fieldName]=fieldValue;
   }
   let type = store.each(subject,source().isa);
 //  record.type = node2label(type);

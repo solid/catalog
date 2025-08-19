@@ -76,10 +76,9 @@ function recordDisplayMakeDiv(label,value){
   `;
 }
 function recordDisplayFieldsToSkip(label){
-    return label.match(/(name|subType|type|description|keyword|landingPage|serviceEndpoint|socialKeyword|technicalKeyword|webid|clientid|videoCallPage|repository|logo|showcase)/i);
+    return label.match(/(name|subType|type|description|keyword|landingPage|serviceEndpoint|socialKeyword|technicalKeyword|clientid|videoCallPage|repository|logo|showcase)/i);
 }
 function addRecordListeners(display){
-
   /* field link listeners  */
   let fieldAnchors = display.querySelectorAll('.field a');
   for(let fa of fieldAnchors){
