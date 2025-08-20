@@ -5,6 +5,8 @@ import { getPath } from './util.ts'
 import { formatData } from './format.ts'
 import { validateWebid } from './validations/webid.ts'
 import { migrateWebid } from './migrations/webid.ts'
+import { aggregateW3C } from './aggregations/w3c.ts'
+import { aggregateGithub } from './aggregations/github.ts'
 
 const dataPath = getPath(import.meta.url, '../catalog-data.ttl')
 
@@ -36,6 +38,21 @@ migrate.command('webid')
   .action(async () => {
     console.info('migrate ex:webid statements and related data')
     await migrateWebid(dataPath)
+  })
+
+const aggregate = program.command('aggregate')
+aggregate.command('w3c')
+  .description('Adds data from W3C API')
+  .action(async () => {
+    console.info('Fetching data from W3C API')
+    await aggregateW3C(dataPath)
+  })
+
+aggregate.command('github')
+  .description('Adds data from Github API')
+  .action(async () => {
+    console.info('Fetching data from Github API')
+    await aggregateGithub(dataPath)
   })
 
 program.parse(process.argv)
