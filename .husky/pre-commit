@@ -1,2 +1,2 @@
-npm run format
+npx catalog format
 git update-index --again

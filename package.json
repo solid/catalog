@@ -1,23 +1,26 @@
 {
-  "name": "Solid Resources Catalog",
+  "name": "solid-catalog",
   "version": "2.0.0",
   "type": "module",
   "description": "-- a listing of things useful to the Solid Community",
   "main": "catalog.html",
+  "bin": {
+    "catalog": "cli/index.ts"
+  },
   "scripts": {
     "prepare": "husky",
     "build": "rdf-transform-cli ./catalog-shacl.shce ./catalog-shacl.ttl -p",
-    "format": "node format.js",
     "test:syntax": "rdf-dereference ./catalog-shacl.ttl > /dev/null && echo '✓ SHACL' && rdf-dereference ./catalog-skos.ttl > /dev/null && echo '✓ SKOS' && rdf-dereference ./catalog-data.ttl > /dev/null && echo '✓ CATALOG-DATA.TTL'",
     "test:shacl": "rdf-ext-cli --shacl-url ./catalog-shacl.ttl ./catalog-data.ttl --pretty --output-prefix sh=http://www.w3.org/ns/shacl# --output-prefix skos=http://www.w3.org/2004/02/skos/core# --output-prefix ex=http://example.org/# --output-prefix xsd=http://www.w3.org/2001/XMLSchema# --shacl-details --shacl-error",
-    "test:webid": "node validations/webid.js && echo '✓ WebID'",
+    "test:webid": "npx catalog validate webid && echo '✓ WebID'",
     "test": "npm run test:syntax && npm run test:shacl && npm run test:webid",
-    "all": "npm run build && npm run format && npm run test"
+    "all": "npm run build && npx catalog format && npm run test"
   },
   "keywords": [],
   "author": "Jeff Zucker",
   "license": "MIT",
   "dependencies": {
+    "commander": "^14.0.0",
     "mashlib": "^1.10.4"
   },
   "devDependencies": {
@@ -28,6 +31,7 @@
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^11.0.3",
     "@semantic-release/release-notes-generator": "^14.0.3",
+    "@types/n3": "^1.26.0",
     "husky": "^9.0.11",
     "n3": "^1.26.0",
     "rdf-dereference": "^4.0.0",
