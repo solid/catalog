@@ -4,8 +4,8 @@ import { dirname, join } from 'node:path'
 import { arrayifyStream } from 'arrayify-stream'
 import { rdfParser } from 'rdf-parse'
 import { createVocabulary } from 'rdf-vocabulary'
-import { DataFactory, type Quad, type NamedNode, type Literal } from 'n3'
-import type { Bindings } from '@rdfjs/types'
+import { DataFactory } from 'n3'
+import type { Bindings, NamedNode, Literal, Quad } from '@rdfjs/types'
 import { QueryEngine } from '@comunica/query-sparql-rdfjs'
 import { Store } from 'n3'
 import { write } from '@jeswr/pretty-turtle'
@@ -66,6 +66,8 @@ export async function queryDataset(dataset: Store, query: string): Promise<Bindi
   return arrayifyStream<Bindings>(bindingsStream)
 }
 
+export type Entity = { id: NamedNode, value: string }
+
 export type Silo = {
   prefix: string
 }
@@ -77,6 +79,22 @@ export const silos: { [key: string]: Silo } = {
   w3c: {
     prefix: 'w3c:'
   }
+}
 
+export function entitiesDifference(minuend: Entity[], subtrahend: Entity[]): Entity[] {
+  return minuend.filter(a => !subtrahend.find(b => a.id.equals(b.id)))
+}
+
+export async function selectSiloEntities(dataset: Store, predicate: string, silo: Silo, extraWhere = ''): Promise<Entity[]> {
+  const query = `
+    SELECT ?s ?captured
+    WHERE {
+      ?s <${predicate}> ?value .
+      ${extraWhere}
+      FILTER regex(?value, "^${silo.prefix}")
+      BIND(REPLACE(?value, "^${silo.prefix}", "") AS ?captured)
+    }`
+  const bindings = await queryDataset(dataset, query)
+  return bindings.map(b => ({ id: b.get('s') as NamedNode, value: b.get('captured')!.value }))
 }
 
