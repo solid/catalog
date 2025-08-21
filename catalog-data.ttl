@@ -49,6 +49,8 @@
   ex:landingPage <https://elf-pavlik.hackers4peace.net> ;
   ex:logo <https://avatars.githubusercontent.com/u/876431?v=4> ;
   ex:name "elf Pavlik" ;
+  ex:siloId "github:876431", "w3c:46577" ;
+  ex:siloUsername "github:elf-pavlik" ;
   ex:webid <https://elf-pavlik.hackers4peace.net> .
 
 <https://gatos.inrupt.net/profile/card#me> a ex:Person ;
@@ -100,6 +102,8 @@
   ex:landingPage <https://github.com/jeff-zucker> ;
   ex:matrixHandle "@jeff-zucker" ;
   ex:name "Jeff Zucker" ;
+  ex:siloId "github:44732708" ;
+  ex:siloUsername "github:jeff-zucker" ;
   ex:webid <https://jeff-zucker.solidcommunity.net/profile/card#me> .
 
 <https://jenni.inrupt.net/profile/card#me> a ex:Person ;
@@ -878,7 +882,9 @@ cdata:Emelia_Smith a ex:Person ;
   ex:name "Emelia Smith" .
 
 cdata:Erich_Bremer a ex:Person ;
-  ex:name "Erich Bremer" .
+  ex:name "Erich Bremer" ;
+  ex:siloId "github:4094961", "w3c:45759" ;
+  ex:siloUsername "github:ebremer" .
 
 cdata:Espresso a ex:Organization ;
   ex:description "\n    Efficient Search over Personal Repositories - Secure and Sovereign\n  " ;
@@ -1219,7 +1225,9 @@ cdata:Jess_Martin a ex:Person ;
 
 cdata:Jesse_Wright a ex:Person ;
   ex:landingPage <https://github.com/jeswr> ;
-  ex:name "Jesse Wright" .
+  ex:name "Jesse Wright" ;
+  ex:siloId "github:63333554", "w3c:132252" ;
+  ex:siloUsername "github:jeswr" .
 
 cdata:Jessica a ex:Person ;
   ex:description "Used vue.js trying make Solid apps" ;
@@ -1459,7 +1467,9 @@ cdata:Luk_Overmeire a ex:Person ;
 
 cdata:LWS a ex:Organization ;
   ex:landingPage <https://www.w3.org/groups/wg/lws/> ;
+  ex:member cdata:Erich_Bremer, cdata:Jesse_Wright ;
   ex:name "W3C Linked Web Storage Working Group" ;
+  ex:siloId "w3c:159634" ;
   ex:subType con:OpenSourceProject .
 
 cdata:LWS-Protocol a ex:Specification ;
@@ -2985,7 +2995,9 @@ cdata:SolidCatlog a ex:Software ;
   ex:technicalKeyword "OrganizationalApp" .
 
 cdata:SolidCG a ex:Organization ;
+  ex:member <https://elf-pavlik.hackers4peace.net>, cdata:Erich_Bremer, cdata:Jesse_Wright ;
   ex:name "W3C Solid Community Group" ;
+  ex:siloId "w3c:110151" ;
   ex:subType con:OpenSourceProject .
 
 cdata:SolidCG-WeeklyCall a ex:Event ;
