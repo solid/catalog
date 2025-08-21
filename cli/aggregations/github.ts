@@ -1,9 +1,6 @@
-import fs from 'node:fs'
-import { arrayifyStream } from 'arrayify-stream'
-import { write } from '@jeswr/pretty-turtle'
-import type { NamedNode } from '@rdfjs/types'
-import { DataFactory, Literal, Store } from 'n3'
-import { ex, queryDataset, readQuadStream, silos, type Silo } from '../util.ts'
+import type { NamedNode, Literal } from '@rdfjs/types'
+import { DataFactory, type Store } from 'n3'
+import { ex, queryDataset, silos, type Silo } from '../util.ts'
 
 export type Entity = { id: NamedNode, value: string }
 
@@ -33,10 +30,7 @@ async function fetchUserById(githubId: string) {
   return res.json()
 }
 
-export async function aggregateGithub(filePath: string): Promise<void> {
-  const fromStream = await readQuadStream(filePath)
-  const dataset = new Store(await arrayifyStream(fromStream))
-
+export async function aggregateGithub(dataset: Store): Promise<Store> {
   const withUsername = await selectWithPredicate(dataset, ex.siloUsername, silos.github)
   const withId = await selectWithPredicate(dataset, ex.siloId, silos.github)
   const withoutId = withUsername.filter(entity => !withId.find(e => entity.id.equals(e.id)))
@@ -55,6 +49,6 @@ export async function aggregateGithub(filePath: string): Promise<void> {
     const quad = DataFactory.quad(user.id, ex.terms.siloUsername, toLiteral(data.login))
     dataset.add(quad)
   }
-  const outString = await write([...dataset])
-  fs.writeFileSync(filePath, outString)
+
+  return dataset
 }

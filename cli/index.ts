@@ -1,14 +1,14 @@
 #!/usr/bin/env -S node --disable-warning=ExperimentalWarning
 
 import { Command } from 'commander'
-import { getPath } from './util.ts'
-import { formatData } from './format.ts'
+import { getPath, loadData, saveData } from './util.ts'
 import { validateWebid } from './validations/webid.ts'
 import { migrateWebid } from './migrations/webid.ts'
 import { aggregateW3C } from './aggregations/w3c.ts'
 import { aggregateGithub } from './aggregations/github.ts'
 
 const dataPath = getPath(import.meta.url, '../catalog-data.ttl')
+const dataset = await loadData(dataPath)
 
 const program = new Command()
 
@@ -21,8 +21,8 @@ program.command('format')
   .description('Formats catalog data in a deterministic way')
   .action(async () => {
     console.info('Formatting data')
-    await formatData(dataPath)
-  })// Add nested commands using `.command()`.
+    await saveData(dataset, dataPath)
+  })
 
 const validate = program.command('validate')
 validate.command('webid')
@@ -45,14 +45,16 @@ aggregate.command('w3c')
   .description('Adds data from W3C API')
   .action(async () => {
     console.info('Fetching data from W3C API')
-    await aggregateW3C(dataPath)
+    const updated = await aggregateW3C(dataset)
+    await saveData(updated, dataPath)
   })
 
 aggregate.command('github')
   .description('Adds data from Github API')
   .action(async () => {
     console.info('Fetching data from Github API')
-    await aggregateGithub(dataPath)
+    const updated = await aggregateGithub(dataset)
+    await saveData(updated, dataPath)
   })
 
 program.parse(process.argv)

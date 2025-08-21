@@ -7,7 +7,33 @@ import { createVocabulary } from 'rdf-vocabulary'
 import { DataFactory, type Quad, type NamedNode, type Literal } from 'n3'
 import type { Bindings } from '@rdfjs/types'
 import { QueryEngine } from '@comunica/query-sparql-rdfjs'
-import type { Store } from 'n3'
+import { Store } from 'n3'
+import { write } from '@jeswr/pretty-turtle'
+
+const prefixes = {
+  rdf: 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
+  xsd: 'http://www.w3.org/2001/XMLSchema#',
+  con: 'https://solidproject.solidcommunity.net/catalog/taxonomy#',
+  cdata: 'https://solidproject.solidcommunity.net/catalog/data#',
+  ex: 'http://example.org#',
+}
+
+export async function formatData(filePath: string): Promise<void> {
+  const fromStream = await readQuadStream(filePath)
+  const fromQuads = await arrayifyStream(fromStream)
+  const outString = await write(fromQuads, { prefixes, ordered: true })
+  fs.writeFileSync(filePath, outString)
+}
+
+export async function loadData(filePath: string): Promise<Store> {
+  const fromStream = await readQuadStream(filePath)
+  return new Store(await arrayifyStream(fromStream))
+}
+
+export async function saveData(dataset: Store, filePath: string): Promise<void> {
+  const outString = await write([...dataset], { prefixes, ordered: true })
+  fs.writeFileSync(filePath, outString)
+}
 
 export const ex = createVocabulary('http://example.org#', 'webid', 'siloId', 'member', 'siloUsername', 'Person', 'Organization')
 
