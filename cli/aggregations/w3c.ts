@@ -1,6 +1,6 @@
 import w3c from 'node-w3capi'
 import type { NamedNode, Literal } from '@rdfjs/types'
-import { Store, DataFactory } from 'n3'
+import { DataFactory, type Store } from 'n3'
 import { ex, queryDataset, silos } from '../util.ts'
 import { selectWithPredicate, type Entity } from './github.ts'
 

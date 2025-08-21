@@ -1,12 +1,8 @@
 import { arrayifyStream } from 'arrayify-stream'
-import { Store } from 'n3'
-import { ex, readQuadStream } from '../util.ts'
+import type { Store } from 'n3'
+import { ex } from '../util.ts'
 
-export async function validateWebid(filePath: string): Promise<void> {
-
-  const fromStream = await readQuadStream(filePath)
-  const dataset = new Store(await arrayifyStream(fromStream))
-
+export async function validateWebid(dataset: Store): Promise<void> {
   // TODO: fix TS error
   // @ts-expect-error
   const quads = await arrayifyStream(dataset.match(null, ex.terms.webid, null))

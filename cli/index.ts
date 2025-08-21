@@ -29,7 +29,7 @@ validate.command('webid')
   .description('Checks statements with ex:webid that subject and object are the same')
   .action(async () => {
     console.info('Validate ex:webid statements')
-    await validateWebid(dataPath)
+    await validateWebid(dataset)
   })
 
 const migrate = program.command('migrate')
@@ -37,7 +37,8 @@ migrate.command('webid')
   .description('Picks object in statement with ex:webid and makes it a subject, then updates all other statements using the old subject')
   .action(async () => {
     console.info('migrate ex:webid statements and related data')
-    await migrateWebid(dataPath)
+    const updated = await migrateWebid(dataset)
+    await saveData(updated, dataPath)
   })
 
 const aggregate = program.command('aggregate')
