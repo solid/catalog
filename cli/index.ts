@@ -6,6 +6,7 @@ import { validateWebid } from './validations/webid.ts'
 import { migrateWebid } from './migrations/webid.ts'
 import { aggregateW3C } from './aggregations/w3c.ts'
 import { aggregateGithub } from './aggregations/github.ts'
+import { aggregateWikidata } from './aggregations/wikidata.ts'
 
 const dataPath = getPath(import.meta.url, '../catalog-data.ttl')
 const dataset = await loadData(dataPath)
@@ -55,6 +56,14 @@ aggregate.command('github')
   .action(async () => {
     console.info('Fetching data from Github API')
     const updated = await aggregateGithub(dataset)
+    await saveData(updated, dataPath)
+  })
+
+aggregate.command('wikidata')
+  .description('Adds data from Wikidata')
+  .action(async () => {
+    console.info('Fetching data Wikiadta')
+    const updated = await aggregateWikidata(dataset)
     await saveData(updated, dataPath)
   })
 
