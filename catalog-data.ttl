@@ -4,6 +4,8 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wd: <http://www.wikidata.org/entity/> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://harth.org/andreas/foaf#ah> a ex:Person ;
@@ -12,6 +14,57 @@
   ex:modified "2025-04-25T07:53:45.052Z"^^xsd:dateTime ;
   ex:name "Andreas Harth" ;
   ex:webid <http://harth.org/andreas/foaf#ah> .
+
+wd:Q161053 ex:name "Ruby" ;
+  wdt:P31 wd:Q9143 .
+
+wd:Q17147733 ex:name "Swift" ;
+  wdt:P31 wd:Q9143 .
+
+wd:Q2005 ex:name "JavaScript" ;
+  wdt:P31 wd:Q9143 .
+
+wd:Q2370 ex:name "C#" ;
+  wdt:P31 wd:Q9143 .
+
+wd:Q251 ex:name "Java" ;
+  wdt:P31 wd:Q9143 .
+
+wd:Q28865 ex:name "Python" ;
+  wdt:P31 wd:Q9143 .
+
+wd:Q34010 ex:name "Haskell" ;
+  wdt:P31 wd:Q9143 .
+
+wd:Q37227 ex:name "Go" ;
+  wdt:P31 wd:Q9143 .
+
+wd:Q3816639 ex:name "Kotlin" ;
+  wdt:P31 wd:Q9143 .
+
+wd:Q406009 ex:name "Dart" ;
+  wdt:P31 wd:Q9143 .
+
+wd:Q42478 ex:name "Perl" ;
+  wdt:P31 wd:Q9143 .
+
+wd:Q460584 ex:name "Scala" ;
+  wdt:P31 wd:Q9143 .
+
+wd:Q51885456 ex:name "Zig" ;
+  wdt:P31 wd:Q9143 .
+
+wd:Q5362035 ex:name "Elixir" ;
+  wdt:P31 wd:Q9143 .
+
+wd:Q575650 ex:name "Rust" ;
+  wdt:P31 wd:Q9143 .
+
+wd:Q59 ex:name "PHP" ;
+  wdt:P31 wd:Q9143 .
+
+wd:Q978185 ex:name "TypeScript" ;
+  wdt:P31 wd:Q9143 .
 
 <https://45h.inrupt.net/profile/card#me> a ex:Person ;
   ex:name "Luc" ;

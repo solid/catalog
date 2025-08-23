@@ -10,19 +10,14 @@ import { QueryEngine } from '@comunica/query-sparql-rdfjs'
 import { Store } from 'n3'
 import { write } from '@jeswr/pretty-turtle'
 
-const prefixes = {
+export const prefixes = {
   rdf: 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
   xsd: 'http://www.w3.org/2001/XMLSchema#',
+  wd: 'http://www.wikidata.org/entity/',
+  wdt: 'http://www.wikidata.org/prop/direct/',
   con: 'https://solidproject.solidcommunity.net/catalog/taxonomy#',
   cdata: 'https://solidproject.solidcommunity.net/catalog/data#',
   ex: 'http://example.org#',
-}
-
-export async function formatData(filePath: string): Promise<void> {
-  const fromStream = await readQuadStream(filePath)
-  const fromQuads = await arrayifyStream(fromStream)
-  const outString = await write(fromQuads, { prefixes, ordered: true })
-  fs.writeFileSync(filePath, outString)
 }
 
 export async function loadData(filePath: string): Promise<Store> {
@@ -35,7 +30,9 @@ export async function saveData(dataset: Store, filePath: string): Promise<void> 
   fs.writeFileSync(filePath, outString)
 }
 
-export const ex = createVocabulary('http://example.org#', 'webid', 'siloId', 'member', 'siloUsername', 'Person', 'Organization')
+export const ex = createVocabulary('http://example.org#', 'name', 'webid', 'siloId', 'member', 'siloUsername', 'Person', 'Organization')
+export const schema = createVocabulary('http://schema.org/', 'name')
+export const rdfs = createVocabulary('http://www.w3.org/2000/01/rdf-schema#', 'label')
 
 export function getPath(from: string, to: string): string {
   const __filename = fileURLToPath(from)
