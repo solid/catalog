@@ -6,6 +6,7 @@ import { validateWebid } from './validations/webid.ts'
 import { migrateWebid } from './migrations/webid.ts'
 import { aggregateW3C } from './aggregations/w3c.ts'
 import { aggregateGithub } from './aggregations/github.ts'
+import { migrateTmpId } from './migrations/tmp-id.ts'
 
 const dataPath = getPath(import.meta.url, '../catalog-data.ttl')
 const dataset = await loadData(dataPath)
@@ -38,6 +39,13 @@ migrate.command('webid')
   .action(async () => {
     console.info('migrate ex:webid statements and related data')
     const updated = await migrateWebid(dataset)
+    await saveData(updated, dataPath)
+  })
+migrate.command('tmpid')
+  .description('Changes all cdata: temporary IRIs into urn:uuid')
+  .action(async () => {
+    console.info('migrate statements with temporary cdata: to urn:uuid')
+    const updated = await migrateTmpId(dataset)
     await saveData(updated, dataPath)
   })
 

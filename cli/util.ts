@@ -10,7 +10,7 @@ import { QueryEngine } from '@comunica/query-sparql-rdfjs'
 import { Store } from 'n3'
 import { write } from '@jeswr/pretty-turtle'
 
-const prefixes = {
+export const prefixes = {
   rdf: 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
   xsd: 'http://www.w3.org/2001/XMLSchema#',
   con: 'https://solidproject.solidcommunity.net/catalog/taxonomy#',
@@ -58,12 +58,20 @@ export function changeObject(quad: Quad, object: NamedNode | Literal): Quad {
   return DataFactory.quad(quad.subject, quad.predicate, object)
 }
 
-export async function queryDataset(dataset: Store, query: string): Promise<Bindings[]> {
+export async function queryDataset(dataset: Store, query: string,): Promise<Bindings[]> {
   const queryEngine = new QueryEngine()
   const bindingsStream = await queryEngine.queryBindings(query, {
     sources: [dataset],
   })
   return arrayifyStream<Bindings>(bindingsStream)
+}
+
+export async function queryDatasetConstruct(dataset: Store, query: string,): Promise<Quad[]> {
+  const queryEngine = new QueryEngine()
+  const quadsStream = await queryEngine.queryQuads(query, {
+    sources: [dataset],
+  })
+  return arrayifyStream<Quad>(quadsStream)
 }
 
 export type Entity = { id: NamedNode, value: string }
