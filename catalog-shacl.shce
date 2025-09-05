@@ -16,7 +16,7 @@ shape :CreativeWorkShape -> ex:CreativeWork ;
 	ex:name xsd:string [1..1] %
 		sh:name "name"@en
 	% .
-	ex:subType [1..*] in=[con:AboutSolid con:AboutSolidApps con:ResearchPaper con:OtherLearningResource con:OtherTechResource con:Primer] %
+	ex:subType [1..*] in=[con:AboutSolid con:AboutSolidApps con:OtherLearningResource] %
 		sh:name "subtype"@en
 	% .
 	ex:about IRI %
@@ -76,7 +76,7 @@ shape :ServiceShape -> ex:Service ;
 	ex:name xsd:string [1..1] %
 		sh:name "name"@en
 	% .
-	ex:subType [1..*] in=[con:GeneralPurposePodService con:SpecializedPodService con:CommunicationService con:OtherService] %
+	ex:subType [1..*] in=[con:GeneralPurposePodService con:SpecializedPodService con:CommunicationService con:OtherApp] %
 		sh:name "subtype"@en
 	% .
 	ex:status [1..1] in=[con:Exploration con:Development con:Production con:Archived] %
@@ -124,7 +124,7 @@ shape :SoftwareShape -> ex:Software ;
 	ex:name xsd:string [1..1] %
 		sh:name "name"@en
 	% .
-	ex:subType [1..*] in=[con:ProductivityApp con:LeisureApp con:PodApp con:OtherApp con:PodServer con:ServerPlugin con:SoftwareLibrary] %
+	ex:subType [1..*] in=[con:ProductivityApp con:LeisureApp con:PodApp  con:PodServer con:SpecializedPodService con:OtherApp con:AuthenticatedFetch con:RdfParsing con:Framework con:Search con:OtherLibrary ] %
 		sh:name "subtype"
 	% .
 	ex:status [1..1] in=[con:Exploration con:Development con:Production con:Archived] %

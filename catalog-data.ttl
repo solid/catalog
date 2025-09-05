@@ -295,14 +295,14 @@
   ex:maintainer <https://elf-pavlik.hackers4peace.net> ;
   ex:name "SAI Application" ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary .
+  ex:subType con:OtherLibrary .
 
 <https://sai.js.org/authorization-agent> a ex:Software ;
   ex:landingPage <https://sai.js.org> ;
   ex:maintainer <https://elf-pavlik.hackers4peace.net> ;
   ex:name "SAI Authorization Agent" ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary .
+  ex:subType con:OtherLibrary .
 
 <https://sai.js.org/authorization-agent-server> a ex:Software ;
   ex:landingPage <https://sai.js.org> ;
@@ -580,7 +580,7 @@
   ex:description "Webcomponents based on Shighl" ;
   ex:name "Shighl elements" ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:Framework ;
   ex:technicalKeyword "web components" .
 
 <urn:uuid:08b558f2-8bb9-4f6c-8d62-783aa3688784> a ex:Software ;
@@ -589,14 +589,14 @@
   ex:programmingLanguage "Swift" ;
   ex:repository <https://github.com/crspybits/SolidAuthSwift> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:AuthenticatedFetch ;
   ex:technicalKeyword "solid client" .
 
 <urn:uuid:08ef6601-5a71-4115-85b6-36f1d663fe63> a ex:Software ;
   ex:description "A library designed to make it easy to consume and produce RDF in PHP." ;
   ex:name "EasyRDF" ;
   ex:status con:Exploration ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:RdfParsing ;
   ex:technicalKeyword "rdf parsing" .
 
 <urn:uuid:092c872d-b447-4d28-a63e-cfb27689f663> a ex:Person ;
@@ -703,7 +703,7 @@
   ex:name "KeyChain" ;
   ex:repository <https://github.com/nodeSolidServer/keychain> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:OtherLibrary ;
   ex:technicalKeyword "authentication", "encryption" .
 
 <urn:uuid:15adce3f-7ce0-4b41-88b3-0e0cb5039015> a ex:Person ;
@@ -721,7 +721,7 @@
   ex:name "ActivityPods" ;
   ex:repository <https://github.com/activitypods/activitypods> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary .
+  ex:subType con:Framework .
 
 <urn:uuid:167e161b-74d0-40f8-9da2-21e3252854c0> a ex:Person ;
   ex:name "Thomas Shouten" .
@@ -758,7 +758,7 @@
   ex:name "LDO - Linked Data Objects" ;
   ex:programmingLanguage "typescript" ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:RdfParsing ;
   ex:technicalKeyword "rdf parsing" .
 
 <urn:uuid:1a9ed42c-bb14-4e0b-a616-2eb5d7eb1c8d> a ex:Person ;
@@ -840,7 +840,7 @@
   ex:name "GraphQL ld comunica solid" ;
   ex:repository <https://github.com/rubensworks/graphql-ld-comunica-solid.js> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:RdfParsing ;
   ex:technicalKeyword "rdf parsing" .
 
 <urn:uuid:24e8c2f9-309f-4ada-982e-672871f2176e> a ex:Person ;
@@ -878,7 +878,7 @@
   ex:name "Solid Notifications Client" ;
   ex:repository <https://github.com/o-development/solid-notification-client/> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary .
+  ex:subType con:OtherLibrary .
 
 <urn:uuid:28fcab5d-da83-45cc-b4ec-b0d3aed4f49d> a ex:Software ;
   ex:description "A non-linear personal web notebook" ;
@@ -1010,7 +1010,7 @@
   ex:name "Ember Solid" ;
   ex:provider <urn:uuid:d7837c3d-d0fd-4c77-8cd4-f1a7868b78b3> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary .
+  ex:subType con:OtherLibrary .
 
 <urn:uuid:3691b4f2-9ba8-4f75-bbb9-61d12bb38f72> a ex:Software ;
   ex:landingPage <https://graphmetrix.com/trinpod-server> ;
@@ -1095,14 +1095,14 @@
   ex:name "Query solid" ;
   ex:repository <https://github.com/LDflex/Query-Solid> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:RdfParsing ;
   ex:technicalKeyword "rdf parsing" .
 
 <urn:uuid:3afce3c5-affb-40ad-8ed3-fdf3a77355b4> a ex:Software ;
   ex:description "A library for easy manipulation of RDF." ;
   ex:name "Tripledoc" ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:RdfParsing ;
   ex:technicalKeyword "rdf parsing" .
 
 <urn:uuid:3b05c17c-f44a-470e-8031-408abee6e2ca> a ex:Person ;
@@ -1136,6 +1136,13 @@
   ex:status con:Production ;
   ex:subType con:PodServer .
 
+<urn:uuid:3d16a339-501e-484d-b64a-0a8233842447> a ex:CreativeWork ;
+  ex:description "Videos of presentations about Solid Apps." ;
+  ex:landingPage <https://spectra.video/c/solid_practitioners/videos> ;
+  ex:name "Solid Practitioner Presentations" ;
+  ex:provider <urn:uuid:7b52958c-2eb6-4c4d-8520-95b1f0305d86> ;
+  ex:subType con:OtherLearningResource .
+
 <urn:uuid:3d4cf3b1-eb8c-4113-9134-108812cf9162> a ex:Organization ;
   ex:description "Moving the internet forward." ;
   ex:landingPage <https://nlnet.nl/core/> ;
@@ -1151,7 +1158,7 @@
   ex:name "Solid client php" ;
   ex:programmingLanguage "PHP" ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:AuthenticatedFetch ;
   ex:technicalKeyword "solid client" .
 
 <urn:uuid:3eb7d2b4-eb76-46f0-a4d2-6fe2d0d511f3> a ex:Organization ;
@@ -1248,7 +1255,7 @@
   ex:name "OIDC provider" ;
   ex:repository <https://github.com/nodeSolidServer/oidc-op> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:OtherLibrary ;
   ex:technicalKeyword "authentication" .
 
 <urn:uuid:4786add8-56d1-4ac2-a921-1235c9678c66> a ex:Software ;
@@ -1318,6 +1325,12 @@
 <urn:uuid:4bb72c52-2d1d-4072-85e5-fb53753a91f9> a ex:Person ;
   ex:landingPage <https://github.com/labra> ;
   ex:name "Jose Emilio Labra Gayo" .
+
+<urn:uuid:4bb82dcd-ca2f-4931-92d9-f345826f06e3> a ex:CreativeWork ;
+  ex:description "Listing & links to Solid specifications, drafts, and reports." ;
+  ex:landingPage <https://solidproject.org/TR/> ;
+  ex:name "Solid Technical Reports" ;
+  ex:subType con:OtherLearningResource .
 
 <urn:uuid:4bbd8a08-b2fd-48f9-9540-d5dc9bf23998> a ex:Person ;
   ex:name "Gertjan de Mulder" .
@@ -1400,7 +1413,7 @@
   ex:name "OIDC resource server auth" ;
   ex:repository <https://github.com/nodeSolidServer/oidc-rs> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:OtherLibrary ;
   ex:technicalKeyword "authentication" .
 
 <urn:uuid:56cd7129-ff8f-4132-a474-521f83b3abf3> a ex:Person ;
@@ -1447,7 +1460,7 @@
   ex:name "Solid file client" ;
   ex:repository <https://github.com/jeff-zucker/solid-file-client> ;
   ex:status con:Development ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:OtherLibrary ;
   ex:technicalKeyword "pod management" .
 
 <urn:uuid:591bd011-ea84-4fc5-b563-1af4a8754b83> a ex:Person ;
@@ -1535,7 +1548,7 @@
   ex:name "Solid Web Components" ;
   ex:repository <https://github.com/solidos/solid-web-components> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:Framework ;
   ex:technicalKeyword "web components" .
 
 <urn:uuid:624b3aff-7e7f-4387-83f9-317199522066> a ex:Software ;
@@ -1543,7 +1556,7 @@
   ex:name "OIDC auth manager" ;
   ex:repository <https://github.com/nodeSolidServer/oidc-auth-manager> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:OtherLibrary ;
   ex:technicalKeyword "authentication" .
 
 <urn:uuid:6340aa05-3aa4-4b01-8300-6650b2307d75> a ex:Person ;
@@ -1567,7 +1580,7 @@
   ex:provider <urn:uuid:7e07df92-504c-4428-9c7b-bd124423423a> ;
   ex:repository <https://github.com/linkeddata/rdflib.js> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:RdfParsing ;
   ex:technicalKeyword "rdf parsing" .
 
 <urn:uuid:64fc684a-f13d-48fc-b62b-51b305636ddf> a ex:Person ;
@@ -1677,7 +1690,7 @@
 <urn:uuid:719fc942-2176-4b47-8cc8-f0c4a87687ba> a ex:Software ;
   ex:name "Idflex query" ;
   ex:status con:Exploration ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:RdfParsing ;
   ex:technicalKeyword "rdf parsing" .
 
 <urn:uuid:72f59abb-21b6-4832-9938-8508e00d8c34> a ex:Person ;
@@ -1693,7 +1706,7 @@
   ex:provider <urn:uuid:3eb7d2b4-eb76-46f0-a4d2-6fe2d0d511f3> ;
   ex:repository <https://github.com/inrupt/solid-client-authn-js> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:AuthenticatedFetch ;
   ex:technicalKeyword "solid client" .
 
 <urn:uuid:74c72ba4-1d3a-4d2f-8062-8a8973c83a1f> a ex:Event ;
@@ -1708,7 +1721,7 @@
   ex:name "Rdf ext" ;
   ex:repository <https://github.com/rdf-ext/rdf-ext> ;
   ex:status con:Exploration ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:RdfParsing ;
   ex:technicalKeyword "rdf parsing" .
 
 <urn:uuid:7515af4a-01d3-4daf-b3a0-bdc28885cdc8> a ex:Software ;
@@ -1725,7 +1738,7 @@
   ex:name "Soukai" ;
   ex:repository <https://github.com/noeldemartin/soukai> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:Framework ;
   ex:technicalKeyword "library" .
 
 <urn:uuid:75cccc48-ad7e-4095-966c-fe1bbc67442c> a ex:Service ;
@@ -1775,7 +1788,7 @@
   ex:name "Solid react graphql ld" ;
   ex:repository <https://github.com/rubensworks/solid-react-graphql-ld> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:RdfParsing ;
   ex:technicalKeyword "rdf parsing" .
 
 <urn:uuid:7850f041-5f34-4270-b18c-02747acd98b4> a ex:Person ;
@@ -1792,6 +1805,8 @@
   ex:subType con:ProductivityApp .
 
 <urn:uuid:7b52958c-2eb6-4c4d-8520-95b1f0305d86> a ex:Organization ;
+  ex:description "A group to support projects meant for end users.  Networking for developers, Showcase of new apps. Discussions on social impact." ;
+  ex:landingPage <https://github.com/solid-contrib/practitioners> ;
   ex:name "Solid Practitioners" ;
   ex:subType con:OpenSourceProject .
 
@@ -1902,7 +1917,7 @@
   ex:programmingLanguage "Javascript" ;
   ex:repository <https://github.com/solid-contrib/solid-auth-fetcher> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:AuthenticatedFetch ;
   ex:technicalKeyword "solid client" .
 
 <urn:uuid:885ce03b-2cfc-4276-b8f9-7f4e98b95128> a ex:Person ;
@@ -1935,7 +1950,7 @@
   ex:provider <urn:uuid:3eb7d2b4-eb76-46f0-a4d2-6fe2d0d511f3> ;
   ex:repository <https://github.com/inrupt/solid-client-authn-js> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:AuthenticatedFetch ;
   ex:technicalKeyword "solid client" .
 
 <urn:uuid:8c4b61f9-f6aa-4a1e-9ca6-d60a4672fc5e> a ex:Person ;
@@ -1950,8 +1965,7 @@
   ex:provider <urn:uuid:7e07df92-504c-4428-9c7b-bd124423423a> ;
   ex:repository <https://github.com/solidos/solid-ui> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
-  ex:technicalKeyword "uncategorized" .
+  ex:subType con:RdfParsing .
 
 <urn:uuid:8dd8682d-43e4-4bab-a48e-3af6f14198c8> a ex:Software ;
   ex:landingPage <https://bitbucket.org/dylanmartin/solidcalendar> ;
@@ -1970,7 +1984,7 @@
   ex:name "Molid" ;
   ex:programmingLanguage "javascript" ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:OtherLibrary ;
   ex:technicalKeyword "test server" .
 
 <urn:uuid:8f1bbcdb-bf5e-4284-9691-863c8f097ec2> a ex:Person ;
@@ -2027,7 +2041,7 @@
   ex:programmingLanguage "Typescript" ;
   ex:repository <https://github.com/solid/solid-node-client> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:AuthenticatedFetch ;
   ex:technicalKeyword "solid client" .
 
 <urn:uuid:93d804d1-c3c5-49d0-bab2-a581d65bedbd> a ex:Organization ;
@@ -2040,7 +2054,7 @@
   ex:provider <urn:uuid:7e07df92-504c-4428-9c7b-bd124423423a> ;
   ex:repository <https://github.com/solidos/solid-ui> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:Framework ;
   ex:technicalKeyword "uncategorized" .
 
 <urn:uuid:94e4bfbf-e826-4ec4-9893-da40490dcae8> a ex:Person ;
@@ -2063,7 +2077,7 @@
   ex:serviceEndpoint <https://solidos.github.io/mashlib/dist/browse.html> ;
   ex:softwareStackIncludes <urn:uuid:3b67c43c-5915-4e68-bf45-07895819d9b9> ;
   ex:status con:Production ;
-  ex:subType con:OtherService ;
+  ex:subType con:OtherApp ;
   ex:technicalKeyword "pod frontend" .
 
 <urn:uuid:97f4cff7-765a-4dc0-a280-4a9bc86a319b> a ex:Software ;
@@ -2092,7 +2106,7 @@
   ex:name "Web::Solid::Auth" ;
   ex:programmingLanguage "Perl" ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:AuthenticatedFetch ;
   ex:technicalKeyword "solid client" .
 
 <urn:uuid:9916069d-135e-4cee-82d4-79816dfc61b2> a ex:Software ;
@@ -2158,7 +2172,7 @@
   ex:name "Shighl" ;
   ex:programmingLanguage "javascript" ;
   ex:status con:Development ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:Framework ;
   ex:technicalKeyword "sdk" .
 
 <urn:uuid:9d95d7b6-7dec-4e65-96cb-cb0b9b91eb53> a ex:Service ;
@@ -2224,7 +2238,7 @@
   ex:landingPage <https://aerogel.js.org/> ;
   ex:name "AerogelJS" ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:Framework ;
   ex:technicalKeyword "application creator" .
 
 <urn:uuid:a13e7ae6-c72b-4e19-b7e2-749e4e70e3f4> a ex:Software ;
@@ -2329,7 +2343,7 @@
   ex:name "Solid rest" ;
   ex:repository <https://github.com/solid-contrib/solid-rest> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:OtherLibrary ;
   ex:technicalKeyword "alternate storage" .
 
 <urn:uuid:a934a0bd-2ab4-418c-858e-1905b2343f73> a ex:Person ;
@@ -2341,7 +2355,7 @@
   ex:name "ACL check" ;
   ex:repository <https://github.com/nodeSolidServer/acl-check> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:OtherLibrary ;
   ex:technicalKeyword "access control", "wac" .
 
 <urn:uuid:a9fc58b8-7ed8-47c7-af40-ed5f3ec14d91> a ex:Person ;
@@ -2370,7 +2384,7 @@
   ex:programmingLanguage "Python" ;
   ex:repository <https://github.com/Otto-AA/solid-client-credentials-py> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:AuthenticatedFetch ;
   ex:technicalKeyword "solid client" .
 
 <urn:uuid:ac791326-710c-4e58-9c45-1d7277eb806e> a ex:Organization ;
@@ -2394,7 +2408,7 @@
   ex:name "Solid file widget" ;
   ex:repository <https://github.com/bourgeoa/solid-file-widget> ;
   ex:status con:Archived ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:OtherLibrary ;
   ex:technicalKeyword "authentication", "pod management" .
 
 <urn:uuid:af7ed9c9-cf3a-4a73-8af7-950639eaf9e5> a ex:Person ;
@@ -2596,7 +2610,7 @@
   ex:programmingLanguage "Python" ;
   ex:repository <https://github.com/Otto-AA/solid-oidc-py> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:AuthenticatedFetch ;
   ex:technicalKeyword "solid client" .
 
 <urn:uuid:be000be4-28b5-4aba-9369-e4e379d79b1b> a ex:Service ;
@@ -2606,6 +2620,12 @@
   ex:serviceEndpoint <mailto:public-solid-request@w3.org?subject=subscribe> ;
   ex:status con:Production ;
   ex:subType con:CommunicationService .
+
+<urn:uuid:be0c2eb1-bf23-4a01-be9b-2c15b67073b5> a ex:CreativeWork ;
+  ex:description "Searchable database of vocabularies and terms." ;
+  ex:landingPage <https://lov.linkeddata.es/dataset/lov/> ;
+  ex:name "Linked Online Vocabularies (LOV)" ;
+  ex:subType con:OtherLearningResource .
 
 <urn:uuid:be88420d-8a6e-45b9-9a5a-9aa1a0d075fe> a ex:Person ;
   ex:name "Kofi Kyei" .
@@ -2628,6 +2648,12 @@
 
 <urn:uuid:c012249a-8365-450b-a12c-fa509f0ab855> a ex:Person ;
   ex:name "Jonas Smedegaard" .
+
+<urn:uuid:c133cf76-8808-4e79-a086-de87c93f4cdb> a ex:CreativeWork ;
+  ex:description "searchable namespace database" ;
+  ex:landingPage <https://prefix.cc> ;
+  ex:name "prefix.cc" ;
+  ex:subType con:OtherLearningResource .
 
 <urn:uuid:c23d85e7-67a1-48e4-9880-0b8eb5b38f8f> a ex:Person ;
   ex:name "Henri Cattoire" .
@@ -2662,7 +2688,7 @@
   ex:name "OIDC relying party" ;
   ex:repository <https://github.com/nodeSolidServer/oidc-rp> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:OtherLibrary ;
   ex:technicalKeyword "authentication" .
 
 <urn:uuid:c886a4e6-b2cc-45a1-a5e9-1626c16db46a> a ex:Person ;
@@ -2680,7 +2706,7 @@
   ex:name "Startin'Blox" ;
   ex:provider <urn:uuid:9813e58d-cd5c-40e3-a700-c86518566730> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:Framework ;
   ex:technicalKeyword "application creator", "web components" .
 
 <urn:uuid:ca450eb8-8751-4841-ac57-3d6bfe0b7fee> a ex:Person ;
@@ -2798,8 +2824,7 @@
   ex:provider <urn:uuid:70154451-c3cc-4adb-a542-b8b59b6061af> ;
   ex:repository <https://github.com/comunica/comunica> ;
   ex:status con:Development ;
-  ex:subType con:SoftwareLibrary ;
-  ex:technicalKeyword "search" .
+  ex:subType con:Search .
 
 <urn:uuid:d69e7421-cc6e-4477-a2a1-8c5047857e5d> a ex:Software ;
   ex:description "A proof-of-concept mobile app for decentralized health record management." ;
@@ -3086,7 +3111,7 @@
   ex:name "Solid namespace" ;
   ex:repository <https://github.com/solid/solid-namespace> ;
   ex:status con:Production ;
-  ex:subType con:SoftwareLibrary ;
+  ex:subType con:RdfParsing ;
   ex:technicalKeyword "ontologies", "rdf parsing" .
 
 <urn:uuid:f615dd6d-83d8-413d-ba6e-ab052bcd6963> a ex:Software ;
