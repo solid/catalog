@@ -13,8 +13,10 @@ function findTypes(){
   const propertyNode = UI.rdf.sym(shaclPrefix+'property');
   const collectionProperty = store.any( resourceShapeNode, propertyNode );
   const collectionNode = store.any( collectionProperty,UI.rdf.sym(shaclPrefix+'in') );
-  for(let e of collectionNode.elements){
-    types[e.value]=true
+  if(collectionNode) {
+    for(let e of collectionNode.elements){
+      types[e.value]=true
+    }
   }
   return types;
 }

@@ -5,7 +5,7 @@ import {pageContent} from './page-content.js';
 //import {pageContent} from '../pages/page-content.js';
 
 export const store = UI.store;
-export const fetcher = $rdf.fetcher(store);
+export const fetcher = store.fetcher;
 
 export const rdf = $rdf;
 
@@ -147,7 +147,6 @@ function isLink(val){
    note : supports ignoring predicates not in the shape
 */
 function inShape(subject,predicate){
-console.log(predicate.value);
   const targetNode = $rdf.sym('http://www.w3.org/ns/shacl#targetClass');
   const propertyNode = $rdf.sym('http://www.w3.org/ns/shacl#property');
   const pathNode = $rdf.sym('http://www.w3.org/ns/shacl#path');
