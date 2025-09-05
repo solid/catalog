@@ -4,11 +4,16 @@
 
 ## Overview
 
-The purpose of this project is to create and make public a comprehensive listing of people, organizations, products, services, and events useful to people wanting to learn about, use, create, or promote the Solid software ecosystyem.  Data will be kept in RDF as described in this repo and can therefore be reused by multiple applications.  Three initial applications are in progress. [Solid Catalog](https://github.com/solid-contrib/catalog) is an app to display a searchable version of the catalog on the Solid Project website and pod. [Solid Efforts](https://github.com/elf-pavlik/solid-efforts) is an app intended to support exploration of the interal links between the Solid Specifications and other parts of the Solid ecosystem; [Solid Catalog Viewer](https://solid-catalog.jeswr.org/) is an alternate viewer for the data. 
+The purpose of this project is to create and make public a comprehensive listing of people, organizations, products, services, and events useful to people wanting to learn about, use, create, or promote the Solid software ecosystyem.  Data will be kept in RDF as described in this repo and can therefore be reused by multiple applications.  Two initial applications are in progress. [Solid Catalog](https://github.com/solid-contrib/catalog) is an app to display a searchable version of the catalog on the Solid Project website and pod.  [Solid Catalog Viewer](https://solid-catalog.jeswr.org/) is an alternate viewer for the data. 
 
 **Checkout the (very preliminary) [online version of the catalog](https://solidproject.solidcommunity.net/catalog/)!**
 
 **Note** This is a work in progress, please do not take any of the data presented as representative of the people, organizations, and software listed - the data has not been vetted.  We are creating forms and will make a call for editing and adding once the forms are ready.
+
+### Similar projects
+
+[Solid Efforts](https://github.com/elf-pavlik/solid-efforts) is a project intended to support exploration of the links between various ongoing work, co-creating technological foundations for the Solid ecosystem. After an attempt to use this repo as a common core, currently there is an ongoing exploration of interop/reuse of shapes, taxonomies and data between the projects.
+
 
 ## Long Term Goals
 
@@ -22,7 +27,7 @@ In order to limit the work of updating the catalog, records are designed to cove
 
 ## Repository structure & versioning
 
-This repo is for the asset data, the SKOS concepts, and the SHACL shape of the catalog.  For contributions to apps using these resources, see [Solid Catalog](https://github.com/solid-contrib/catalog) and [Solid Efforts](https://github.com/elf-pavlik/solid-efforts).
+This repo is for the asset data, the SKOS concepts, and the SHACL shape of the catalog.  For contributions to apps using these resources, see [Solid Catalog](https://github.com/solid-contrib/catalog).
 
 The repo will be versioned e.g. v1, v2, etc. This will support apps continuing to function with an older version while transitioning to a newer version.
 
@@ -81,9 +86,9 @@ The questions regarding the structure of the catalog can benefit from community 
 3. [How should we handle links between assets (e.g. software dependencies)?](https://github.com/solid/catalog/issues/3)
 4. [What SKOS concepts should we use to structure the catalog?](https://github.com/solid/catalog/issues/4)
 
-In addition to contributing to the issues and eventually to the catalog data itself, everyone is invited to share their ideas in the [Solid Practitioners matrix chat](https://matrix.to/#/#solid-practitioners:matrix.org).  Occassional meetings regarding the catalog will be announced there. Ping me (@jeff-zucker) or @elf-pavlik if you have questions.
+In addition to contributing to the issues and eventually to the catalog data itself, everyone is invited to share their ideas in the [Solid Practitioners matrix chat](https://matrix.to/#/#solid-practitioners:matrix.org).  Occassional meetings regarding the catalog will be announced there. Ping me (@jeff-zucker) if you have questions.
 
 ## Acknowledgements
 
-The catalog was started by and is currently maintained by Jeff Zucker.  Jesse Wright and Elf Pavlik worked on the viewers mentioned above. The two of them and Daniel Bakas have contributed to the ongoing work defining shapes.  Timea Turdean, Matthias Evering, and Denis Shilov gathered some of the data which forms the basis for the catalog.  Thanks to all for their contributions.
+The catalog was started by and is currently maintained by Jeff Zucker.  Jesse Wright worked on the viewer mentioned above. The two of them and Daniel Bakas have contributed to the ongoing work defining shapes.  Timea Turdean, Matthias Evering, and Denis Shilov gathered some of the data which forms the basis for the catalog.  Thanks to all for their contributions.
 
