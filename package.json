@@ -13,7 +13,8 @@
     "test:syntax": "rdf-dereference ./catalog-shacl.ttl > /dev/null && echo '✓ SHACL' && rdf-dereference ./catalog-skos.ttl > /dev/null && echo '✓ SKOS' && rdf-dereference ./catalog-data.ttl > /dev/null && echo '✓ CATALOG-DATA.TTL'",
     "test:shacl": "rdf-ext-cli --shacl-url ./catalog-shacl.ttl ./catalog-data.ttl --pretty --output-prefix sh=http://www.w3.org/ns/shacl# --output-prefix skos=http://www.w3.org/2004/02/skos/core# --output-prefix ex=http://example.org/# --output-prefix xsd=http://www.w3.org/2001/XMLSchema# --shacl-details --shacl-error",
     "test:webid": "npx catalog validate webid && echo '✓ WebID'",
-    "test": "npm run test:syntax && npm run test:shacl && npm run test:webid",
+    "test:types": "echo 'validate types & predicates' && node viewer/validateTypes",
+    "test": "npm run test:syntax && npm run test:shacl && npm run test:webid && npm run test:types",
     "all": "npm run build && npx catalog format && npm run test"
   },
   "keywords": [],
@@ -23,7 +24,8 @@
     "@comunica/query-sparql-rdfjs": "^4.3.0",
     "commander": "^14.0.0",
     "mashlib": "^1.10.4",
-    "node-w3capi": "^2.2.0"
+    "node-w3capi": "^2.2.0",
+    "streamify-string": "^1.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",

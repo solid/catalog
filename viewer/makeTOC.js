@@ -13,8 +13,10 @@ function findTypes(){
   const propertyNode = UI.rdf.sym(shaclPrefix+'property');
   const collectionProperty = store.any( resourceShapeNode, propertyNode );
   const collectionNode = store.any( collectionProperty,UI.rdf.sym(shaclPrefix+'in') );
-  for(let e of collectionNode.elements){
-    types[e.value]=true
+  if(collectionNode) {
+    for(let e of collectionNode.elements){
+      types[e.value]=true
+    }
   }
   return types;
 }
@@ -72,7 +74,9 @@ async function skos2toc(displayElement){
       toc.appendChild(div);
     }
     for(let subtype of subtypes){
-      let tlabel = (store.any(subtype,labelNode)||{}).value;
+      let tlabel = (store.any(subtype,altLabelNode)||{}).value 
+                 || (store.any(subtype,labelNode)||{}).value ;
+
       tlabel = tlabel.replace(/\(.*$/,'');
       let div2 = document.createElement('div');
       let anc = document.createElement('a');
@@ -111,6 +115,6 @@ async function addTocListeners(){
     else if(anchor.getAttribute('class')=="subtype") anchor.remove();
   }
 //  if(isLocalhost)  document.getElementById('toc').innerHTML += `<p>${count}/${subcount} total records</p>`;
-//  else 
-  document.getElementById('toc').innerHTML += `<p>${count} total records</p>`;
+//  else
+    document.getElementById('toc').innerHTML += `<p>${count} total records</p>`;
 }

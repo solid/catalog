@@ -7,7 +7,7 @@ PREFIX : <https://solidproject.solidcommunity.net/catalog/shapes#>
 
 shape :SolidResourceShape {
 	targetSubjectsOf=rdf:type .
-	rdf:type in=[ex:CreativeWork ex:Event ex:Software ex:Service ex:Person ex:Organization ex:Specification ex:Ontology ex:ClassOfProduct] .
+	rdf:type in=[ex:CreativeWork ex:Event ex:Software ex:Service ex:Person ex:Organization] .
 }
 shape :CreativeWorkShape -> ex:CreativeWork ;
 	sh:name "Creative Work"@en;
@@ -16,7 +16,7 @@ shape :CreativeWorkShape -> ex:CreativeWork ;
 	ex:name xsd:string [1..1] %
 		sh:name "name"@en
 	% .
-	ex:subType [1..*] in=[con:AboutSolid con:AboutSolidApps con:ResearchPaper con:OtherLearningResource con:OtherTechResource con:Primer] %
+	ex:subType [1..*] in=[con:AboutSolid con:AboutSolidApps con:OtherLearningResource] %
 		sh:name "subtype"@en
 	% .
 	ex:about IRI %
@@ -76,7 +76,7 @@ shape :ServiceShape -> ex:Service ;
 	ex:name xsd:string [1..1] %
 		sh:name "name"@en
 	% .
-	ex:subType [1..*] in=[con:GeneralPurposePodService con:SpecializedPodService con:CommunicationService con:OtherService] %
+	ex:subType [1..*] in=[con:GeneralPurposePodService con:SpecializedPodService con:CommunicationService con:OtherApp] %
 		sh:name "subtype"@en
 	% .
 	ex:status [1..1] in=[con:Exploration con:Development con:Production con:Archived] %
@@ -124,7 +124,7 @@ shape :SoftwareShape -> ex:Software ;
 	ex:name xsd:string [1..1] %
 		sh:name "name"@en
 	% .
-	ex:subType [1..*] in=[con:ProductivityApp con:LeisureApp con:PodApp con:OtherApp con:PodServer con:ServerPlugin con:SoftwareLibrary] %
+	ex:subType [1..*] in=[con:ProductivityApp con:LeisureApp con:PodApp  con:PodServer con:SpecializedPodService con:OtherApp con:AuthenticatedFetch con:RdfParsing con:Framework con:Search con:OtherLibrary ] %
 		sh:name "subtype"
 	% .
 	ex:status [1..1] in=[con:Exploration con:Development con:Production con:Archived] %
@@ -135,6 +135,9 @@ shape :SoftwareShape -> ex:Software ;
 		sh:description "if you wish to share the email privately to ODI, leave this blank & contact solid@theodi.org"
 	% .
 	ex:description xsd:string [0..1] maxLength=2000 %
+		sh:name "description"@en
+	% .
+	ex:programmingLanguage xsd:string [0..1] %
 		sh:name "description"@en
 	% .
 	ex:clientID IRI [0..1] %
@@ -164,10 +167,6 @@ shape :SoftwareShape -> ex:Software ;
 		sh:name "maintainer"@en ;
 		sh:description "person responsible for maintaining the software"
 	% .
-	ex:developer IRI @:PersonShape %
-		sh:name "developer"@en ;
-		sh:description "person contributiong to the software"
-	% .
 	ex:socialKeyword xsd:string %
 		sh:name "social keyword"@en ;
 		sh:description "social domain addressed by the software e.g. housing, transportation, name of an industry"
@@ -176,79 +175,8 @@ shape :SoftwareShape -> ex:Software ;
 		sh:name "technical keyword"@en ;
 		sh:description "comma-separated list for product type e.g. game, calendar, contacts manager"
 	% .
-	ex:conformsTo IRI @:ClassOfProductShape %
-		sh:name "conforms to"@en ;
-		sh:description "a class of product, from a specification, that this implementation conforms to"
-	% .
-	ex:hasDependencyOn IRI @:SoftwareShape %
-		sh:name "has dependency on"@en ;
-		sh:description "a library/module that this software depends on"
-	% .
 }
-shape :SpecificationShape -> ex:Specification ;
-	sh:name "Specification"@en;
-	sh:nodeKind sh:IRI;
-	sh:class ex:Specification {
-	ex:name xsd:string [1..1] %
-		sh:name "name"@en
-	% .
-	ex:description xsd:string [0..1] maxLength=2000 %
-		sh:name "description"@en
-	% .
-	ex:repository IRI [0..1] %
-		sh:name "repository"@en ;
-		sh:description "URL where the specification is being worked on"
-	% .
-	ex:landingPage IRI %
-		sh:name "landing page"@en ;
-		sh:description "URL where the specification is described"
-	% .
-	ex:editor IRI @:PersonShape %
-		sh:name "editor"@en
-	% .
-	ex:author IRI @:PersonShape %
-		sh:name "author"@en
-	% .
-	ex:definesConformanceFor IRI @:ClassOfProductShape %
-		sh:name "defines conformance for"@en ;
-		sh:description "a class of product which this specification defines"
-	% .
-}
-shape :ClassOfProductShape -> ex:ClassOfProduct ;
-	sh:name "Class of Product"@en;
-	sh:nodeKind sh:IRI;
-	sh:class ex:ClassOfProduct {
-	ex:name xsd:string [1..1] %
-		sh:name "name"@en
-	% .
-}
-shape :OntologyShape -> ex:Ontology ;
-	sh:name "Ontology"@en;
-	sh:nodeKind sh:IRI;
-	sh:class ex:Ontology {
-	ex:name xsd:string [1..1] %
-		sh:name "name"@en
-	% .
-	ex:description xsd:string [0..1] maxLength=2000 %
-		sh:name "description"@en
-	% .
-	ex:namespaceURI IRI [0..1] %
-		sh:name "namespace URL" ;
-		sh:description "e.g. http://www.w3.org/ns/shacl#"
-	% .
-	ex:prefix xsd:string [0..1] %
-		sh:name "prefix" ;
-		sh:description "e.g. sh: for the SHACL ontology"
-	% .
-	ex:repository IRI [0..1] %
-		sh:name "repository"@en ;
-		sh:description "URL where the ontology is available in RDF"
-	% .
-	ex:landingPage IRI %
-		sh:name "landing page"@en ;
-		sh:description "URL where the ontology is described"
-	% .
-}
+
 shape :OrganizationShape -> ex:Organization ;
 	sh:name "Organization"@en;
 	sh:nodeKind sh:IRI;

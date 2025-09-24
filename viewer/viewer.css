@@ -18,8 +18,7 @@
     background:#111111;
     background:#090600;
     color:#baafa3;
-//    color:#cacaca;
-  }
+ }
   #main {
     padding:1em;
   }
@@ -165,7 +164,7 @@ body.showHelp #help {
 //  font-weight:600;
 }
 #toc *[class="type"] {
-  margin-top:0.45em;
+  margin-top:0.75em;
   display:inline-block;
   text-decoration:underline !important;
   text-decoration-color:white !important;
@@ -176,9 +175,12 @@ body.showHelp #help {
 }
 #toc div {
   margin-top:0.15em;
+  margin-top:0.30em;
 }
 #toc .number {
-  font-weight:italic !important;
-  font-size:0.9em !important;
+  font-weight:200 !important;
+  font-size:0.8em !important;
 }
-
+#main {
+  padding-top:0;
+}
