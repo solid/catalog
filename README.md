@@ -16,7 +16,7 @@ While the catalog will start as a single hard-coded RDF document, a long-term go
 
 The task of cataloging resources is shared by most organizations so a long term goal of this project is to create reusable shapes which can be formalized into client-to-client specifications and to document the process of creating the catalog and using the shapes so that other organizations don't have to reinvent the wheel.
 
-## Scope
+## Scope 
 
 In order to limit the work of updating the catalog, records are designed to cover only the basics - what type of thing is it? what is it useful for? what is its name and brief description? who made it? what other things perform similar functions? what other things apply to the same social domain? how can I find out more?  The catalog record is not like a full WebID or ClientID profile or github README - it covers the basics and points to those types of documents for further details.
 
