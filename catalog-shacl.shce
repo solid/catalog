@@ -138,7 +138,7 @@ shape :SoftwareShape -> ex:Software ;
 		sh:name "description"@en
 	% .
 	ex:programmingLanguage xsd:string [0..1] %
-		sh:name "description"@en
+		sh:name "programming language"@en
 	% .
 	ex:clientID IRI [0..1] %
 		sh:name "ClientID" ;
