@@ -1343,7 +1343,7 @@
 <urn:uuid:46a0b947-cfc1-4402-8fcd-a6b37da933c2> a ex:Service ;
   ex:description "\n    Private meetings at home that promote a living together based on welcome,\n    trust and mutuall aid.\n  " ;
   ex:name "Welcome to My Place" ;
-  ex:serviceEndpoint <https://mastopod.com/> ;
+  ex:serviceEndpoint <https://welcometomyplace.org/> ;
   ex:socialKeyword "housing", "resource sharing" ;
   ex:softwareStackIncludes <urn:uuid:15cb7f61-aa8e-401e-926c-b4ebfdc77c3f> ;
   ex:status con:Production ;
