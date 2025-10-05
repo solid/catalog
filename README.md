@@ -31,11 +31,57 @@ Please read our [Contributing Guide](CONTRIBUTING.md) for details on our code of
 
 The questions regarding the structure of the catalog can benefit from community input.  Please add your ideas by submitting or contributing to issues in this repo and by sharing your ideas in the [Solid Practitioners matrix chat](https://matrix.to/#/#solid-practitioners:matrix.org).  Occassional meetings regarding the catalog will be announced there. Ping me (@jeff-zucker) if you have questions.
 
+## CLI
+
+```bash
+$ npx catalog
+Usage: solid-catalog [options] [command]
+
+CLI to manage Solid Catalog
+
+Options:
+  -V, --version   output the version number
+  -h, --help      display help for command
+
+Commands:
+  format          Formats catalog data in a deterministic way
+  validate
+  migrate
+  help [command]  display help for command
+```
+
+```bash
+$ npx catalog validate
+Usage: solid-catalog validate [options] [command]
+
+Options:
+  -h, --help      display help for command
+
+Commands:
+  webid           Checks statements with ex:webid that subject and object are the same
+  help [command]  display help for command
+
+```
+
+```bash
+$ npx catalog migrate
+Usage: solid-catalog migrate [options] [command]
+
+Options:
+  -h, --help      display help for command
+
+Commands:
+  webid           Picks object in statement with ex:webid and makes it a subject, then updates all other statements using the old subject
+  help [command]  display help for command
+```
+
+
+
 ### Similar projects
 
 [Solid Efforts](https://github.com/elf-pavlik/solid-efforts) is a project intended to support exploration of the links between various ongoing work, co-creating technological foundations for the Solid ecosystem. Although there are plans to eventually coordinate between the projects, at this point in time they are separate projects.  In contrast to the orientation toward end-users, new developers, and the general public of the Solid Resources Catalog, Solid Efforts has an audience of those with a well-developed sense of technical processes interested in the technical underpinnings and terchnical interconnections of the Solid ecosystem.
 
 ## Acknowledgements
 
-The catalog was started by and is currently maintained by Jeff Zucker with the help of members of the [Solid Practitioners](https://github.com/solid-contrib/practitioners).  Jesse Wright Elf Pavlik, and Daniel Bakas have contributed to the ongoing work defining shapes.  Timea Turdean, Matthias Evering, and Denis Shilov gathered some of the data which forms the basis for the catalog.  Thanks to all for their contributions.
+The catalog was started by and is currently maintained by Jeff Zucker with the help of members of the [Solid Practitioners](https://github.com/solid-contrib/practitioners).  Elf Pavlik created the CLI; he and Jesse Wright, and Daniel Bakas have contributed to the ongoing work defining shapes.  Timea Turdean, Matthias Evering, and Denis Shilov gathered some of the data which forms the basis for the catalog.  Thanks to all for their contributions.
 
