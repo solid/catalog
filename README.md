@@ -10,7 +10,7 @@ The purpose of this project is to create and make public a comprehensive listing
 
 ## Audience
 
-The primary audience of the Solid Resources Catalog is potential adopters of Solid, funders, new and onboarding developers, end-users, and the general public at any level of technical knowledge. 
+The primary audience of the Solid Resources Catalog (Viewer) is potential adopters of Solid, funders, new and onboarding developers, end-users, and the general public at any level of technical knowledge. 
 
 
 ## Long Term Goals
