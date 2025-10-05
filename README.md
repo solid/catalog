@@ -4,7 +4,7 @@
 
 ## Overview
 
-The purpose of this project is to create and make public a comprehensive listing of people, organizations, products, services, and events useful to people wanting to learn about, use, create, or promote the Solid software ecosystyem.  It's focus is as much social as technical and will include categorization based on social issues and contexts related to any given resource. Data will be kept in RDF as described in this repo and can therefore be reused by multiple applications. The public view of the Catalog will be accessible from solidproject.org and the solidproject POD.
+The purpose of this project is to create and make public a comprehensive listing of people, organizations, products, services, and events useful to people wanting to learn about, use, create, or promote the Solid software ecosystem.  It's focus is as much social as technical and will include categorization based on social issues and contexts related to any given resource. Data will be kept in RDF as described in this repo and can therefore be reused by multiple applications. The public view of the Catalog will be accessible from solidproject.org and the solidproject Pod.
 
 **Checkout the [online version of the catalog](https://solidproject.solidcommunity.net/catalog/)!**
 
