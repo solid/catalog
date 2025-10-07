@@ -608,6 +608,10 @@
   ex:subType con:Framework ;
   ex:technicalKeyword "web components" .
 
+<urn:uuid:07a22f27-aa6c-47b6-b051-fef31e447977> a ex:Person ;
+  ex:landingPage <https://jacobdaniel.co.uk/> ;
+  ex:name "Jacob Daniel" .
+
 <urn:uuid:08b558f2-8bb9-4f6c-8d62-783aa3688784> a ex:Software ;
   ex:description "Swift-based authentication for a Solid Pod." ;
   ex:name "Solid auth swift" ;
@@ -1863,6 +1867,19 @@
   ex:status con:Archived ;
   ex:subType con:PodApp ;
   ex:technicalKeyword "general purpose app", "pod management" .
+
+<urn:uuid:75369102-594d-43e9-8618-9e2ba57b6e39> a ex:Software ;
+  ex:contactEmail <mailto:contact@jacobdaniel.co.uk> ;
+  ex:description "This pilot app is a working demonstration of how we could use modern, decentralised technology to create a community-driven digital archive. The goal is to introduce Solid to a wide range of artists and content producers, providing a tangible sense of its potential. The current implementation allows for basic pod creation and gives users access to a dashboard where they can upload documents and images, alongside managing access with ACL text fields. I hope to also make it possible to create annotated resources from the data stored within the pods. I hope that a decentralised approach will be considered for adoption by the archivist management and community steering group. There are several active archives in North Kensington, with work already going ahead on making them publicly available, so there is an opportunity for them to collaborate while maintaining their own individual integrity and control." ;
+  ex:landingPage <https://nksja-demo.northkensingtonlibrary.org/> ;
+  ex:maintainer <urn:uuid:07a22f27-aa6c-47b6-b051-fef31e447977> ;
+  ex:modified "2025-10-06T19:32:25.452Z"^^xsd:dateTime ;
+  ex:name "North Kensington Social Justice Archive - Pilot" ;
+  ex:repository <https://github.com/Jacob-Daniel/solidpod> ;
+  ex:showcase <https://nksja-demo.northkensingtonlibrary.org/> ;
+  ex:status con:Exploration ;
+  ex:subType con:SpecializedPodService ;
+  ex:technicalKeyword "archive,social history" .
 
 <urn:uuid:756ac964-cb3b-42fe-acdd-880ecf66c85c> a ex:Software ;
   ex:description "Active Record library with Solid support" ;
