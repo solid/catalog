@@ -13,6 +13,19 @@
   ex:name "Luc" ;
   ex:webid <https://45h.inrupt.net/profile/card#me> .
 
+<https://angelo.veltens.org/profile/card#me> a ex:Person ;
+  ex:contactEmail <mailto:inbox+solid@veltens.org> ;
+  ex:description "Angelo is working with linked data since 2010 and a member of the Solid community since 2019. He has developed several Solid Apps, participated in the development of SolidOS and is the founder of PodOS. He is also creating the Practical Solid video series." ;
+  ex:forumHandle "aveltens" ;
+  ex:landingPage <https://angelo.veltens.org/> ;
+  ex:logo <https://angelo.veltens.org/profile/me.jpg> ;
+  ex:matrixHandle "@aveltens:matrix.org" ;
+  ex:modified "2025-10-03T09:40:38.450Z"^^xsd:dateTime ;
+  ex:name "Angelo Veltens" ;
+  ex:resourcesOffered "collaboration, mentorship, tutorials" ;
+  ex:resourcesWanted "funding\ncollaboration" ;
+  ex:webid <https://angelo.veltens.org/profile/card#me> .
+
 <https://armoise.co/sro> a ex:Person ;
   ex:forumHandle "@srosset81" ;
   ex:name "Sebastien Rosset" ;
@@ -267,6 +280,18 @@
   ex:landingPage <https://github.com/pmcb55> ;
   ex:name "Pat McBennett" ;
   ex:webid <https://pmcb55.inrupt.net/profile/card#me> .
+
+<https://pod-os.solidcommunity.net/profile/card#me> a ex:Organization ;
+  ex:contactEmail <mailto:contact@pod-os.org> ;
+  ex:description "The PodOS project is building and maintaining the PodOS apps and software libraries" ;
+  ex:landingPage <https://pod-os.org> ;
+  ex:logo <https://pod-os.org/assets/logo-text.svg> ;
+  ex:modified "2025-10-03T09:58:36.589Z"^^xsd:dateTime ;
+  ex:name "PodOS" ;
+  ex:resourcesOffered "collaboration, open standards, client-to-client conventions, web components" ;
+  ex:resourcesWanted "developers, ux designers, testers, feedback" ;
+  ex:subType con:OpenSourceProject ;
+  ex:webid <https://pod-os.solidcommunity.net/profile/card#me> .
 
 <https://pod.inrupt.com/kyra/profile/card#me> a ex:Person ;
   ex:forumHandle "@KyraAssaad" ;
@@ -583,6 +608,10 @@
   ex:subType con:Framework ;
   ex:technicalKeyword "web components" .
 
+<urn:uuid:07a22f27-aa6c-47b6-b051-fef31e447977> a ex:Person ;
+  ex:landingPage <https://jacobdaniel.co.uk/> ;
+  ex:name "Jacob Daniel" .
+
 <urn:uuid:08b558f2-8bb9-4f6c-8d62-783aa3688784> a ex:Software ;
   ex:description "Swift-based authentication for a Solid Pod." ;
   ex:name "Solid auth swift" ;
@@ -810,6 +839,16 @@
   ex:landingPage <https://github.com/ajacksified> ;
   ex:name "Jack Lawson" .
 
+<urn:uuid:21c08b86-dadd-4678-a264-9a405dc90dbc> a ex:Software ;
+  ex:description "A data module to manage address books and contacts in Solid Pods in an interoperable way. Based on rdflib.js." ;
+  ex:landingPage <https://www.npmjs.com/package/@solid-data-modules/contacts-rdflib> ;
+  ex:maintainer <https://angelo.veltens.org/profile/card#me> ;
+  ex:modified "2025-10-03T09:52:54.098Z"^^xsd:dateTime ;
+  ex:name "@solid-data-modules/contacts-rdflib" ;
+  ex:repository <https://github.com/solid-contrib/data-modules/tree/main/contacts> ;
+  ex:status con:Production ;
+  ex:subType con:OtherLibrary .
+
 <urn:uuid:22cacfaa-f9b1-4987-a958-9136fbb0cab4> a ex:CreativeWork ;
   ex:author <https://timbl.solidcommunity.net/profile/card#me> ;
   ex:landingPage <https://timbl.solidcommunity.net/2023/03%20EWADA/TAGExplainerforSolid.html> ;
@@ -897,6 +936,16 @@
 <urn:uuid:299553b5-8995-47eb-b2e1-bed06dca558e> a ex:Person ;
   ex:name "Raúl R. Pearson" .
 
+<urn:uuid:29e68997-a50f-4b90-9fbe-f6e08ce62ec1> a ex:Software ;
+  ex:description "A data module to manage bookmarks in Solid Pods in an interoperable way. Based on rdflib.js." ;
+  ex:landingPage <https://www.npmjs.com/package/@solid-data-modules/bookmarks-rdflib> ;
+  ex:maintainer <https://angelo.veltens.org/profile/card#me> ;
+  ex:modified "2025-10-03T09:54:05.096Z"^^xsd:dateTime ;
+  ex:name "@solid-data-modules/bookmarks-rdflib" ;
+  ex:repository <https://github.com/solid-contrib/data-modules/tree/main/bookmarks/rdflib> ;
+  ex:status con:Production ;
+  ex:subType con:OtherLibrary .
+
 <urn:uuid:2a840ad9-0843-4d21-9c3c-75587186dd4f> a ex:Software ;
   ex:description "SPARQL Query Service Endpoint that supports WebID-OIDC for authenticating WebIDs en route to functionality that isn’t granted to the un-authenticated Public." ;
   ex:name "URIBurner" ;
@@ -909,6 +958,15 @@
 
 <urn:uuid:2ae3e556-718a-486f-96c5-d0c288b443f5> a ex:Person ;
   ex:name "Daniel Friedman" .
+
+<urn:uuid:2aee6105-0b46-40ab-9cc3-6015c8079386> a ex:Software ;
+  ex:description "With Solid Identity, you can give your Solid service a Solid-OIDC-compatible identity. (TypeScript library)" ;
+  ex:maintainer <https://id.mrkvon.org> ;
+  ex:modified "2025-09-23T16:33:15.002Z"^^xsd:dateTime ;
+  ex:name "SoId - Solid Identity" ;
+  ex:repository <https://github.com/solidcouch/solid-identity> ;
+  ex:status con:Development ;
+  ex:subType con:OtherLibrary .
 
 <urn:uuid:2b36c53e-9c77-4857-a8b4-afadd3d6e268> a ex:Organization ;
   ex:landingPage <https://gitlab.com/groups/solidweb.org/-/group_members> ;
@@ -940,6 +998,20 @@
 <urn:uuid:2ce912d9-d7be-4433-bfb1-32a090d72a21> a ex:Person ;
   ex:name "Astrid GamonedaArrunada" .
 
+<urn:uuid:2d04258e-d249-4926-aff5-405f1943d367> a ex:Software ;
+  ex:contactEmail <mailto:contact@pod-os.org> ;
+  ex:description "Open address books and manage your contacts." ;
+  ex:landingPage <https://pod-os.org> ;
+  ex:logo <https://pod-os.org/assets/logo.svg> ;
+  ex:maintainer <https://angelo.veltens.org/profile/card#me> ;
+  ex:modified "2025-10-03T09:23:07.449Z"^^xsd:dateTime ;
+  ex:name "PodOS Contacts" ;
+  ex:repository <https://github.com/pod-os/PodOS/tree/main/contacts> ;
+  ex:socialKeyword "any" ;
+  ex:status con:Development ;
+  ex:subType con:ProductivityApp ;
+  ex:technicalKeyword "contacts, groups" .
+
 <urn:uuid:2d43981c-4a99-4533-be44-56bbe29eb5e8> a ex:Person ;
   ex:name "Emelia Smith" .
 
@@ -959,6 +1031,20 @@
   ex:landingPage <https://github.com/thomasfr> ;
   ex:name "Thomas Fritz" .
 
+<urn:uuid:3023b1b2-ba51-4763-9bcb-a37ba9310d8c> a ex:Software ;
+  ex:contactEmail <mailto:contact@pod-os.org> ;
+  ex:description "Browse through Solid Pods — your own or those of your friends and coworkers. PodOS Browser is your entry point to the Solid Web." ;
+  ex:landingPage <https://pod-os.org> ;
+  ex:logo <https://pod-os.org/assets/logo.svg> ;
+  ex:maintainer <https://angelo.veltens.org/profile/card#me> ;
+  ex:modified "2025-10-03T09:23:05.109Z"^^xsd:dateTime ;
+  ex:name "PodOS Browser" ;
+  ex:repository <https://github.com/pod-os/PodOS> ;
+  ex:socialKeyword "any" ;
+  ex:status con:Production ;
+  ex:subType con:PodApp ;
+  ex:technicalKeyword "data browser, productivity, pod management" .
+
 <urn:uuid:30aabef5-d4f3-45a2-94aa-a3d1cbb4f9ac> a ex:Person ;
   ex:name "Michael Paduch" .
 
@@ -973,14 +1059,19 @@
   ex:name "Tim Standen" .
 
 <urn:uuid:31efbb1f-5193-434c-80f0-d3e8e3ea91ed> a ex:Software ;
-  ex:description "Your personal online data operating system" ;
-  ex:maintainer <urn:uuid:ccd1f5ca-2896-4a55-88eb-44a95e37d108> ;
-  ex:modified "2025-05-08T15:40:08.515Z"^^xsd:dateTime ;
+  ex:contactEmail <mailto:contact@pod-os.org> ;
+  ex:description "PodOS serves as your gateway to managing online data. Store your data anywhere across the web and access it whenever and wherever it is needed" ;
+  ex:landingPage <https://pod-os.org> ;
+  ex:logo <https://pod-os.org/assets/logo.svg> ;
+  ex:maintainer <https://angelo.veltens.org/profile/card#me> ;
+  ex:modified "2025-10-03T09:12:50.379Z"^^xsd:dateTime ;
   ex:name "PodOS" ;
   ex:repository <https://github.com/pod-os/PodOS> ;
-  ex:status con:Development ;
+  ex:showcase <https://browser.pod-os.org/> ;
+  ex:socialKeyword "any" ;
+  ex:status con:Production ;
   ex:subType con:PodApp ;
-  ex:technicalKeyword "pod frontend" .
+  ex:technicalKeyword "pod frontend, web operating system, data browser, development tool, knowledge management system" .
 
 <urn:uuid:31fda917-2ef6-4e31-823c-6de626015d41> a ex:Person ;
   ex:landingPage <https://github.com/jeswr> ;
@@ -1037,10 +1128,12 @@
   ex:name "Alexander James Phillips" .
 
 <urn:uuid:387508ca-7b30-4e1a-8aa3-32621b50096a> a ex:Software ;
+  ex:clientID <https://umai.noeldemartin.com/clientid.jsonld> ;
   ex:description "Collect and share recipes" ;
+  ex:landingPage <https://umai.noeldemartin.com> ;
   ex:logo <https://noeldemartin.com/logos/umai.png> ;
   ex:maintainer <https://noeldemartin.solidcommunity.net/profile/card#me> ;
-  ex:modified "2025-06-10T17:47:15.737Z"^^xsd:dateTime ;
+  ex:modified "2025-10-03T05:11:31.799Z"^^xsd:dateTime ;
   ex:name "Umai" ;
   ex:repository <https://github.com/noeldemartin/umai> ;
   ex:showcase <https://umai.noeldemartin.com> ;
@@ -1236,10 +1329,25 @@
 <urn:uuid:458bc741-5415-4d9c-965a-b76d84514dcc> a ex:Person ;
   ex:name "Jim Hendler" .
 
+<urn:uuid:464c43eb-de97-44ab-881b-3563f15a3b41> a ex:Software ;
+  ex:contactEmail <mailto:contact@pod-os.org> ;
+  ex:description "HTML custom elements (aka web components) for Solid. Use data from a Solid Pods as easy as writing HTML! Build custom dashboards and low-code apps facilitating your data." ;
+  ex:landingPage <https://pod-os.org> ;
+  ex:logo <https://pod-os.org/assets/logo.svg> ;
+  ex:maintainer <https://angelo.veltens.org/profile/card#me> ;
+  ex:modified "2025-10-03T09:28:08.932Z"^^xsd:dateTime ;
+  ex:name "PodOS elements" ;
+  ex:repository <https://github.com/pod-os/PodOS/tree/main/elements> ;
+  ex:showcase <https://pod-os.org/getting-started/quick-start/> ;
+  ex:socialKeyword "developers, citizen developers, creatives" ;
+  ex:status con:Production ;
+  ex:subType con:Framework ;
+  ex:technicalKeyword "component library, web components, custom elements, html" .
+
 <urn:uuid:46a0b947-cfc1-4402-8fcd-a6b37da933c2> a ex:Service ;
   ex:description "\n    Private meetings at home that promote a living together based on welcome,\n    trust and mutuall aid.\n  " ;
   ex:name "Welcome to My Place" ;
-  ex:serviceEndpoint <https://mastopod.com/> ;
+  ex:serviceEndpoint <https://welcometomyplace.org/> ;
   ex:socialKeyword "housing", "resource sharing" ;
   ex:softwareStackIncludes <urn:uuid:15cb7f61-aa8e-401e-926c-b4ebfdc77c3f> ;
   ex:status con:Production ;
@@ -1281,12 +1389,23 @@
 <urn:uuid:488c05b9-4242-4b1a-9a06-b1c433980b9e> a ex:Person ;
   ex:name "Kjetil Kjernsmo" .
 
+<urn:uuid:488edf4f-0e8c-4e87-a5c3-541bb63bcb77> a ex:Organization ;
+  ex:description "The solid data modules project aims to provide ready-to-use JavaScript modules to work with serveral data types (like bookmkars, contacts, chat, ...) and different data-access paradigmes (like LDO, rdflib, vanilla js, ...)" ;
+  ex:landingPage <https://github.com/solid-contrib/data-modules> ;
+  ex:modified "2025-10-03T09:48:24.835Z"^^xsd:dateTime ;
+  ex:name "Solid Data Modules" ;
+  ex:subType con:OpenSourceProject .
+
 <urn:uuid:48f199c8-3ee1-4c77-9f8d-98215178c39e> a ex:Software ;
+  ex:clientID <https://focus.noeldemartin.com/clientid.jsonld> ;
   ex:description "Solid Task Manager" ;
+  ex:landingPage <https://focus.noeldemartin.com> ;
   ex:logo <https://noeldemartin.com/logos/focus.png> ;
   ex:maintainer <https://noeldemartin.solidcommunity.net/profile/card#me> ;
-  ex:modified "2025-06-10T18:01:48.905Z"^^xsd:dateTime ;
+  ex:modified "2025-10-03T05:13:02.290Z"^^xsd:dateTime ;
   ex:name "Focus" ;
+  ex:repository <https://github.com/noeldemartin/solid-focus> ;
+  ex:showcase <https://focus.noeldemartin.com> ;
   ex:status con:Development ;
   ex:subType con:ProductivityApp ;
   ex:technicalKeyword "task manager" .
@@ -1316,11 +1435,12 @@
 
 <urn:uuid:4b9dcdec-695a-44eb-a238-d828d84efdd6> a ex:Software ;
   ex:maintainer <https://noeldemartin.solidcommunity.net/profile/card#me> ;
-  ex:modified "2025-06-10T18:05:30.617Z"^^xsd:dateTime ;
+  ex:modified "2025-10-03T05:14:25.853Z"^^xsd:dateTime ;
   ex:name "Laravel Solid Server (LSS)" ;
   ex:repository <https://github.com/noeldemartin/lss> ;
   ex:status con:Exploration ;
-  ex:subType con:PodServer .
+  ex:subType con:PodServer ;
+  ex:technicalKeyword "pod" .
 
 <urn:uuid:4bb72c52-2d1d-4072-85e5-fb53753a91f9> a ex:Person ;
   ex:landingPage <https://github.com/labra> ;
@@ -1420,12 +1540,19 @@
   ex:name "Joep Meindertsma" .
 
 <urn:uuid:570adb73-10d6-4096-932d-652f39c063f5> a ex:Software ;
+  ex:contactEmail <mailto:inbox+webclip@veltens.org> ;
   ex:description "Chrome extension to extract structured data from any web page and store it to a Solid Pod." ;
+  ex:landingPage <https://github.com/codecentric/web-clip> ;
+  ex:logo <https://raw.githubusercontent.com/codecentric/web-clip/refs/heads/main/chrome/icons/128.png> ;
+  ex:maintainer <https://angelo.veltens.org/profile/card#me> ;
+  ex:modified "2025-10-03T09:30:56.386Z"^^xsd:dateTime ;
   ex:name "WebClip" ;
+  ex:provider <urn:uuid:edf965e6-88c9-4298-9ea9-76894b4c5215> ;
   ex:repository <https://github.com/codecentric/web-clip> ;
+  ex:showcase <https://chromewebstore.google.com/detail/webclip-clip-all-the-thin/mfgjcggbpdkbnnpgllaicoeplfgkfnkj> ;
   ex:status con:Archived ;
   ex:subType con:ProductivityApp ;
-  ex:technicalKeyword "general purpose app", "uncategorized" .
+  ex:technicalKeyword "general purpose app,uncategorized" .
 
 <urn:uuid:5853cf01-bdc9-46ac-9130-4f1aa776cec1> a ex:Software ;
   ex:landingPage <https://pdsinterop.org/php-solid-server/> ;
@@ -1643,6 +1770,15 @@
 <urn:uuid:6c4507b8-b763-4769-9718-00df6169a353> a ex:Person ;
   ex:name "Ricky White" .
 
+<urn:uuid:6d2bbbe9-4149-4fc8-8277-b145bc67f3a4> a ex:CreativeWork ;
+  ex:author <https://angelo.veltens.org/profile/card#me> ;
+  ex:description "Video Channel about how you can use Solid - today and in practice. I am showing what Solid can actually do today and in practice and share my experience using it as an early adopter and developer for many years now." ;
+  ex:landingPage <https://tube.tchncs.de/c/practical_solid> ;
+  ex:modified "2025-10-03T09:33:46.444Z"^^xsd:dateTime ;
+  ex:name "Practical Solid" ;
+  ex:subType con:AboutSolid ;
+  ex:technicalKeyword "video, tutorial" .
+
 <urn:uuid:6e815fdd-927f-4748-8619-0ee057539d34> a ex:Person ;
   ex:name "Sina Bahram" .
 
@@ -1697,7 +1833,8 @@
   ex:name "Beatriz Esteves" .
 
 <urn:uuid:72f5f2a7-df9e-43f3-9fb5-054ddae29492> a ex:Event ;
-  ex:name "Data Modules Video Call" .
+  ex:name "Data Modules Video Call" ;
+  ex:provider <urn:uuid:488edf4f-0e8c-4e87-a5c3-541bb63bcb77> .
 
 <urn:uuid:7406a0b7-414a-469e-83e8-b4a47f6815d5> a ex:Software ;
   ex:description "A client library for authenticating with Solid." ;
@@ -1731,10 +1868,25 @@
   ex:subType con:PodApp ;
   ex:technicalKeyword "general purpose app", "pod management" .
 
+<urn:uuid:75369102-594d-43e9-8618-9e2ba57b6e39> a ex:Software ;
+  ex:contactEmail <mailto:contact@jacobdaniel.co.uk> ;
+  ex:description "This pilot app is a working demonstration of how we could use modern, decentralised technology to create a community-driven digital archive. The goal is to introduce Solid to a wide range of artists and content producers, providing a tangible sense of its potential. The current implementation allows for basic pod creation and gives users access to a dashboard where they can upload documents and images, alongside managing access with ACL text fields. I hope to also make it possible to create annotated resources from the data stored within the pods. I hope that a decentralised approach will be considered for adoption by the archivist management and community steering group. There are several active archives in North Kensington, with work already going ahead on making them publicly available, so there is an opportunity for them to collaborate while maintaining their own individual integrity and control." ;
+  ex:landingPage <https://nksja-demo.northkensingtonlibrary.org/> ;
+  ex:maintainer <urn:uuid:07a22f27-aa6c-47b6-b051-fef31e447977> ;
+  ex:modified "2025-10-06T19:32:25.452Z"^^xsd:dateTime ;
+  ex:name "North Kensington Social Justice Archive - Pilot" ;
+  ex:repository <https://github.com/Jacob-Daniel/solidpod> ;
+  ex:showcase <https://nksja-demo.northkensingtonlibrary.org/> ;
+  ex:status con:Exploration ;
+  ex:subType con:SpecializedPodService ;
+  ex:technicalKeyword "archive,social history" .
+
 <urn:uuid:756ac964-cb3b-42fe-acdd-880ecf66c85c> a ex:Software ;
+  ex:description "Active Record library with Solid support" ;
   ex:landingPage <https://soukai.js.org> ;
+  ex:logo <https://soukai.js.org/img/logo.svg> ;
   ex:maintainer <https://noeldemartin.solidcommunity.net/profile/card#me> ;
-  ex:modified "2025-06-10T18:04:26.172Z"^^xsd:dateTime ;
+  ex:modified "2025-10-03T05:15:18.750Z"^^xsd:dateTime ;
   ex:name "Soukai" ;
   ex:repository <https://github.com/noeldemartin/soukai> ;
   ex:status con:Production ;
@@ -1800,7 +1952,9 @@
 <urn:uuid:7a343bf9-995a-4224-8b82-6cf9f06d8999> a ex:Software ;
   ex:description "Cypress Plugin to test applications using the Solid Protocol" ;
   ex:maintainer <https://noeldemartin.solidcommunity.net/profile/card#me> ;
+  ex:modified "2025-10-03T05:15:54.666Z"^^xsd:dateTime ;
   ex:name "Cypress Solid" ;
+  ex:repository <https://github.com/NoelDeMartin/cypress-solid> ;
   ex:status con:Development ;
   ex:subType con:ProductivityApp .
 
@@ -1897,8 +2051,9 @@
   ex:landingPage <https://noeldemartin.github.io/media-kraken/> ;
   ex:logo <https://noeldemartin.com/logos/media-kraken.png> ;
   ex:maintainer <https://noeldemartin.solidcommunity.net/profile/card#me> ;
-  ex:modified "2025-06-10T17:47:48.290Z"^^xsd:dateTime ;
+  ex:modified "2025-10-03T05:16:24.563Z"^^xsd:dateTime ;
   ex:name "Media Kraken" ;
+  ex:repository <https://github.com/noeldemartin/media-kraken> ;
   ex:status con:Production ;
   ex:subType con:LeisureApp ;
   ex:technicalKeyword "movies" .
@@ -1929,6 +2084,16 @@
 <urn:uuid:89af24da-a16a-4bc0-99e7-ef7fdee8894a> a ex:Person ;
   ex:forumHandle "@RyanAelen" ;
   ex:name "Ryan Aelen" .
+
+<urn:uuid:89f7c449-5ad7-40c9-924d-81c20b329ef1> a ex:Software ;
+  ex:description "A query engine to follow your nose through Linked Data graph. (TypeScript)" ;
+  ex:logo <https://avatars.githubusercontent.com/u/160537947> ;
+  ex:maintainer <https://id.mrkvon.org> ;
+  ex:modified "2025-09-23T16:38:26.893Z"^^xsd:dateTime ;
+  ex:name "LDhop" ;
+  ex:repository <https://github.com/ldhop/ldhop/> ;
+  ex:status con:Development ;
+  ex:subType con:Search .
 
 <urn:uuid:8a6035e9-c29e-4129-96dd-014c12470271> a ex:Organization ;
   ex:landingPage <https://forum.grantfortheweb.org/t/call-for-proposals-early-2020/959> ;
@@ -2218,13 +2383,17 @@
   ex:subType con:PodServer .
 
 <urn:uuid:a0620a99-64a0-4526-8a86-0e4793993ec4> a ex:Software ;
+  ex:contactEmail <mailto:inbox+solid-groups@veltens.org> ;
+  ex:description "Solid Groups shows a way how social groups can be organized using Solid. The apps serves as a way to create groups and manage their members. These groups can then be used with the Solid permission system to give the group access to other resource and apps, like a group chat using SolidOS chat. Theoretical background: https://angelo.veltens.org/articles/2020/solid-groups" ;
   ex:landingPage <https://gitlab.com/angelo-v/solid-groups> ;
-  ex:maintainer <urn:uuid:ccd1f5ca-2896-4a55-88eb-44a95e37d108> ;
-  ex:modified "2025-05-08T15:43:17.080Z"^^xsd:dateTime ;
+  ex:maintainer <https://angelo.veltens.org/profile/card#me> ;
+  ex:modified "2025-10-03T09:06:19.877Z"^^xsd:dateTime ;
   ex:name "Solid Groups" ;
+  ex:repository <https://gitlab.com/angelo-v/solid-groups> ;
+  ex:showcase <https://welcome.solidcommunity.net/> ;
   ex:status con:Archived ;
-  ex:subType con:ProductivityApp ;
-  ex:technicalKeyword "contacts" .
+  ex:subType con:SpecializedPodService ;
+  ex:technicalKeyword "contacts, groups, social" .
 
 <urn:uuid:a0daceef-6fc9-4a24-ba0d-790b51cb6490> a ex:Software ;
   ex:description "Tracks the countries and places you visited, and see all the visited countries and places shared by the other users of this application." ;
@@ -2235,9 +2404,13 @@
   ex:technicalKeyword "travel" .
 
 <urn:uuid:a114ab75-4579-495a-8192-203486b44168> a ex:Software ;
+  ex:description "Solid Apps framework" ;
   ex:landingPage <https://aerogel.js.org/> ;
+  ex:maintainer <https://noeldemartin.solidcommunity.net/profile/card#me> ;
+  ex:modified "2025-10-03T05:18:29.690Z"^^xsd:dateTime ;
   ex:name "AerogelJS" ;
-  ex:status con:Production ;
+  ex:repository <https://github.com/NoelDeMartin/aerogel> ;
+  ex:status con:Development ;
   ex:subType con:Framework ;
   ex:technicalKeyword "application creator" .
 
@@ -2512,13 +2685,17 @@
   ex:technicalKeyword "pod frontend", "self-hosted pod" .
 
 <urn:uuid:b6f7f5ba-13d7-4994-b466-0a7df9928298> a ex:Software ;
+  ex:contactEmail <mailto:inbox+solid-profile-viewer@veltens.org> ;
+  ex:description "Allows to browse through Solid WebID profiles. Shows basic ifnormation like name and photo and the list of friends, so that you can browse through a global social graph" ;
   ex:landingPage <https://gitlab.com/angelo-v/solid-profile-viewer> ;
-  ex:maintainer <urn:uuid:ccd1f5ca-2896-4a55-88eb-44a95e37d108> ;
-  ex:modified "2025-05-08T15:43:00.452Z"^^xsd:dateTime ;
+  ex:maintainer <https://angelo.veltens.org/profile/card#me> ;
+  ex:modified "2025-10-03T09:15:10.682Z"^^xsd:dateTime ;
   ex:name "Solid Profile Viewer" ;
+  ex:repository <https://gitlab.com/angelo-v/solid-profile-viewer> ;
+  ex:showcase <https://profiles.veltens.org> ;
   ex:status con:Archived ;
   ex:subType con:PodApp ;
-  ex:technicalKeyword "pod management" .
+  ex:technicalKeyword "pod management, profile viewer, social graph, contacts" .
 
 <urn:uuid:b71f28fa-688a-46ec-bf86-4ab4e832dc5f> a ex:Organization ;
   ex:name "University of Singapore" ;
@@ -2745,9 +2922,6 @@
   ex:status con:Production ;
   ex:subType con:CommunicationService .
 
-<urn:uuid:ccd1f5ca-2896-4a55-88eb-44a95e37d108> a ex:Person ;
-  ex:name "Angelo Veltens" .
-
 <urn:uuid:cd6ecbaf-7cdb-4b7a-88ea-19bdba005e94> a ex:Person ;
   ex:name "Matthieu Jacquot" .
 
@@ -2964,6 +3138,15 @@
   ex:name "Create your first social app" ;
   ex:subType con:AboutSolidApps .
 
+<urn:uuid:e5539393-a7bf-4838-88c8-4162ac615ec4> a ex:Software ;
+  ex:description "A TypeScript library to authenticate to Community Solid Server via its API" ;
+  ex:maintainer <https://id.mrkvon.org> ;
+  ex:modified "2025-09-23T16:06:49.551Z"^^xsd:dateTime ;
+  ex:name "css-authn" ;
+  ex:repository <https://github.com/mrkvon/css-authn> ;
+  ex:status con:Production ;
+  ex:subType con:AuthenticatedFetch .
+
 <urn:uuid:e5a69426-d098-47c7-ad78-3a6c152702a5> a ex:Software ;
   ex:landingPage <https://graphmetrix.com/trinapp> ;
   ex:name "TrinApp Suite" ;
@@ -3025,6 +3208,16 @@
 <urn:uuid:e9d1d018-71e7-4eec-8b1f-0c5a24d90e25> a ex:Person ;
   ex:name "Richard Marshall" .
 
+<urn:uuid:ea7297c1-2543-4648-bf72-9dfe9da1fda6> a ex:Software ;
+  ex:description "A data module to manage chats in Solid Pods in an interoperable way. Based on rdflib.js." ;
+  ex:landingPage <https://www.npmjs.com/package/@solid-data-modules/chats-rdflib> ;
+  ex:maintainer <https://angelo.veltens.org/profile/card#me> ;
+  ex:modified "2025-10-03T09:54:08.456Z"^^xsd:dateTime ;
+  ex:name "@solid-data-modules/chats-rdflib" ;
+  ex:repository <https://github.com/solid-contrib/data-modules/tree/main/chats/rdflib> ;
+  ex:status con:Production ;
+  ex:subType con:OtherLibrary .
+
 <urn:uuid:ea9915a7-1ef5-49ab-8a70-5f5a41cdecec> a ex:Person ;
   ex:forumHandle "@thegreatfatzby" ;
   ex:name "Isaac Foster" .
@@ -3045,6 +3238,10 @@
   ex:repository <https://github.com/solid/specification/tree/main/meetings> ;
   ex:schedule "Every Wednesday at 15:00 UTC" ;
   ex:videoCallPage <https://meet.jit.si/solid-cg> .
+
+<urn:uuid:edf965e6-88c9-4298-9ea9-76894b4c5215> a ex:Organization ;
+  ex:name "codecentric" ;
+  ex:subType con:OpenSourceProject .
 
 <urn:uuid:ee113565-7724-4804-8867-c1da49d103ce> a ex:Person ;
   ex:name "Henry Story" .
