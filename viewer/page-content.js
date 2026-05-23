@@ -16,14 +16,22 @@ export const pageContent = {
 `,
   typeChooser:`
 <div class="searchPage" style="padding:1em;">
-  <div style="color:yellow"><b>Solid Resources Catalog</b> New Record Menu</div>
+  <div style="color:var(--link)"><b>Solid Resources Catalog</b> &mdash; New Record</div>
 <header>
-<p>Use the form below to indicate what type of new record you want to create.</p>
+<p>Start by pasting a link to the resource (e.g., its homepage, repo, or landing page). Then pick a type.</p>
 </header>
 
-  <select id="recordTypeChooser"></select>
-  &nbsp;&nbsp;<button id="createRecordButton"> create new record of this type </button>
-  &nbsp;&nbsp;<button id="cancelButton"> cancel </button>
+  <div style="margin-bottom:0.75em;">
+    <label for="newRecordLanding" style="display:block;margin-bottom:0.25em;"><b>Landing page URL</b></label>
+    <input id="newRecordLanding" type="url" placeholder="https://example.org/your-project" style="width:100%;max-width:60ch;padding:0.4em;border-radius:0.4em;background:var(--bg-search);color:var(--text);border:1px solid var(--border);" />
+  </div>
+
+  <div style="margin-bottom:0.75em;">
+    <label for="recordTypeChooser" style="display:block;margin-bottom:0.25em;"><b>Type</b></label>
+    <select id="recordTypeChooser"></select>
+  </div>
+
+  <button id="createRecordButton"> create new record </button>
 
 <p>
 <b>Notes:</b><ul>

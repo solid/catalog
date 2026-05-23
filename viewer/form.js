@@ -1,4 +1,7 @@
 import {findFullText,loadCatalog,source,store,fetcher,showPage,node2label,findName,parseRdfCollection,findShaclName} from './utils.js';
+import {saveDraft, deleteDraft} from './drafts.js';
+import {recordEditRequest} from './editRequests.js';
+import {notify, notifyError, notifySuccess, toast} from './notify.js';
 
 export async function editRecord(id,area,shape) {
   return await shacl2form(shape,id,area)
@@ -120,13 +123,27 @@ mainArea.style.display="none";
       menubar.innerHTML = `
         <b>Solid Resources Catalog - ${text}</b>
         <span class="buttons">
-          <button id="saveRecord">save</button>
-          <button id="cancelButton">cancel</button>
+          <button id="saveRecord">publish</button>
+          <button id="saveDraftBtn" type="button">save as draft</button>
         </span>
       `;
       let saveButton = document.getElementById('saveRecord');
       let deleteButton = document.getElementById('deleteButton');
-      let cancelButton = document.getElementById('cancelButton');
+      let saveDraftButton = document.getElementById('saveDraftBtn');
+      saveDraftButton.addEventListener('click', () => {
+        const draft = collectDraftFromForm(shape, shapeLabel, recordURL);
+        const nameVal = Object.entries(draft.fields).find(([k]) => k.toLowerCase() === 'name')?.[1];
+        if(!nameVal){
+          notify({ title: 'Name required', body: 'Give the draft a name first.', variant: 'error' });
+          return;
+        }
+        const opts = window._currentDraftOpts || {};
+        if(opts.draftId) draft.id = opts.draftId;
+        saveDraft(draft);
+        window._currentDraftOpts = null;
+        showPage('main');
+        toast('Saved as draft', { variant: 'success' });
+      });
       saveButton.addEventListener('click', async function() {
         let all = `
 @prefix cdata: <${source().dataURL}#> .
@@ -138,7 +155,7 @@ mainArea.style.display="none";
       let nameInput = form.querySelector('[name=name]');
       let description = form.querySelector('[name=description]');
       if(!nameInput.value) {
-        alert("ERROR: You must enter a name!");
+        notify({ title: 'Name required', body: 'You must enter a name before publishing.', variant: 'error' });
         return;
       }
 
@@ -191,16 +208,75 @@ mainArea.style.display="none";
             },
             body: all,
           });
+           const opts = window._currentDraftOpts || {};
+           if(opts.draftId) deleteDraft(opts.draftId);
+           window._currentDraftOpts = null;
+           const fieldsSnapshot = collectDraftFromForm(shape, shapeLabel, recordURL).fields;
+           recordEditRequest({
+             kind: recordURL ? 'edit' : 'create',
+             shape: (typeof shape === 'string' ? shape : shape?.value || '').replace(/.*#/,'').replace(/Shape$/, ''),
+             shapeLabel,
+             subject: subject,
+             name: fieldsSnapshot.name || nameInput.value,
+             targetUrl: url,
+             body: all,
+             fields: fieldsSnapshot,
+           });
            showPage( 'main' );
-           alert("File saved! -- Note: edits will not be immediately incorporated in the data.")
-          }catch(e){alert(e)}
+           notifySuccess('Edits will not be immediately incorporated in the live data, but your record is saved.', 'File saved');
+          }catch(e){ notifyError(e?.message || String(e), 'Could not save'); }
        });       
-       cancelButton.addEventListener('click', function() {
-        showPage( 'main' );
-      });
     }
     if(id) loadRecord(id);
 } // end shacl2form function
+
+function normalizeFieldName(s){
+  return (s || '').replace(/\*/g,'').trim();
+}
+export function collectDraftFromForm(shape, shapeLabel, recordURL){
+  const fields = {};
+  for(const fieldEl of document.querySelectorAll('form.record .field')){
+    const labelEl = fieldEl.querySelector('.fieldLabel');
+    const input = fieldEl.querySelector('input,textarea,select');
+    if(!labelEl || !input) continue;
+    const name = normalizeFieldName(labelEl.textContent);
+    if(input.value) fields[name] = input.value;
+  }
+  // shacl2form will append "Shape" to whatever we give it, so store the
+  // unsuffixed base name (e.g. "CreativeWork").
+  const shapeName = (typeof shape === 'string' ? shape : (shape?.value || ''))
+    .replace(/.*#/,'')
+    .replace(/Shape$/,'');
+  return {
+    shape: shapeName,
+    shapeLabel,
+    recordURL: recordURL || null,
+    fields,
+  };
+}
+
+export function applyDraftToForm(draft, retries = 20){
+  if(!draft) return;
+  const tryFill = () => {
+    const fieldEls = document.querySelectorAll('form.record .field');
+    if(!fieldEls.length){
+      if(retries-- > 0) return setTimeout(tryFill, 100);
+      return;
+    }
+    for(const fieldEl of fieldEls){
+      const labelEl = fieldEl.querySelector('.fieldLabel');
+      const input = fieldEl.querySelector('input,textarea,select');
+      if(!labelEl || !input) continue;
+      const name = normalizeFieldName(labelEl.textContent);
+      if(draft.fields && draft.fields[name] != null){
+        input.value = draft.fields[name];
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    }
+  };
+  tryFill();
+}
 
     function clearForm(form){
       form.setAttribute('id',"");

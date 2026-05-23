@@ -40,9 +40,10 @@ form.record {
   margin:1em;
   padding:1em;
   padding-bottom:0;
-  border:1px solid gray;
-  border-radius:0.4em;  
-  color:#eeeeff;
+  border:1px solid var(--border-strong);
+  border-radius:0.4em;
+  color:var(--text);
+  background:var(--bg-elev);
   width:fit-content;
 }
 form.record.formShown * {
@@ -70,12 +71,11 @@ form.record.formShown * {
   margin-left:3em;
 }
 select,button, #menubar button {
-//  background:#2683fb !important;
-  color:#2683fb !important;
+  color:var(--link) !important;
   background:transparent;
   padding:0.4em;
   border-radius:0.4em;
-  border:1px solid #2683fb;
+  border:1px solid var(--accent);
   cursor:pointer;
 }
 form.record .fieldLabel ,
@@ -85,6 +85,7 @@ form.record .fieldLabel ,
     width:10em;
     padding-right:1em;
     padding-bottom:0.5em;
+    text-transform:capitalize;
   }
   .fieldValue { 
     display:table-cell;
@@ -106,14 +107,13 @@ form.record select {
   border-radius:0.4em;
   padding:0.5em;
   margin-bottom:1em;
-  background:#3a3a3a;
-  color:#eeeeff !important;
-
+  background:var(--bg-search);
+  color:var(--text) !important;
+  border:1px solid var(--border);
 }
 form.record option {
-  background:#6a6a6a;
-  background:#afaaaa;
-  color:black
+  background:var(--bg-elev);
+  color:var(--text);
 }
 form.record select {
   width:25em;

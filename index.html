@@ -3,30 +3,310 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Solid Resources Catalog</title>
-<!--
-<script type="module" src='https://cdn.jsdelivr.net/npm/mashlib@latest/dist/solid-logic.min.js'></script>
-<script type="module" src='https://cdn.jsdelivr.net/npm/mashlib@latest/dist/solid-ui.min.js'></script>
--->
+  <title>Solid Catalog</title>
+<!-- auth.js MUST load before mashlib so its top-level redirect handler runs
+     before mashlib's Inrupt auth init can clear our sessionStorage values. -->
+<script type="importmap">
+{
+  "imports": {
+    "lucide": "/node_modules/lucide/dist/esm/lucide.mjs",
+    "lit": "/node_modules/lit/index.js",
+    "lit/": "/node_modules/lit/",
+    "lit-html": "/node_modules/lit-html/lit-html.js",
+    "lit-html/": "/node_modules/lit-html/",
+    "lit-element": "/node_modules/lit-element/lit-element.js",
+    "lit-element/": "/node_modules/lit-element/",
+    "@lit/reactive-element": "/node_modules/@lit/reactive-element/reactive-element.js",
+    "@lit/reactive-element/": "/node_modules/@lit/reactive-element/"
+  },
+  "scopes": {
+    "/node_modules/lucide/": {
+      "./createElement.mjs": "/node_modules/lucide/dist/esm/createElement.mjs",
+      "./replaceElement.mjs": "/node_modules/lucide/dist/esm/replaceElement.mjs",
+      "./iconsAndAliases.mjs": "/node_modules/lucide/dist/esm/iconsAndAliases.mjs",
+      "./defaultAttributes.mjs": "/node_modules/lucide/dist/esm/defaultAttributes.mjs"
+    }
+  }
+}
+</script>
+<script type="module" src='/viewer/auth.js'></script>
+<script type="module" src='/viewer/icons.js'></script>
+<script type="module" src='/viewer/solid-ui.js'></script>
 <script type="module" src='https://cdn.jsdelivr.net/npm/mashlib@latest/dist/mashlib.min.js'></script>
 
 
-  <link rel="stylesheet" type="text/css" href="./viewer/viewer.css">  
-  <link rel="stylesheet" type="text/css" href="./viewer/forms.css">  
-  <link rel="icon" href="https://solidproject.org/assets/img/solid-emblem.svg" type="image/svg+xml"> 
-  <meta name="thumbnail" content="https://solidproject.org/assets/img/solid-emblem.svg"> 
+  <style>
+    body { margin: 0; }
+    .nav-bar a:hover { opacity: 0.85; }
+    .nav-auth { display: inline-flex; gap: 0.5rem; align-items: center; }
+    .nav-auth button {
+      background: #ffffff;
+      color: #2d2454;
+      border: none;
+      border-radius: 0.4em;
+      padding: 0;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .nav-auth button.secondary {
+      background: transparent;
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+    .nav-account { position: relative; }
+    .nav-avatar {
+      width: 44px;
+      height: 44px;
+      max-width: 50px;
+      max-height: 50px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.5);
+      padding: 0;
+      margin: 0;
+      overflow: hidden;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      line-height: 1;
+    }
+    .nav-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .nav-avatar-initials { display: inline-flex; align-items: center; justify-content: center; }
+    .nav-avatar-initials svg { width: 20px; height: 20px; }
+    .nav-avatar:focus { outline: 2px solid #fff; outline-offset: 2px; }
+    .nav-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      right: 0;
+      min-width: 240px;
+      background: #fff;
+      color: #161616;
+      border: 1px solid #d8dade;
+      border-radius: 0.5em;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+      padding: 0.35em;
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+      gap: 0.15em;
+    }
+    .nav-menu[hidden] { display: none; }
+    .nav-menu-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      padding: 0.55em 0.7em;
+      border: none;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      text-align: left;
+      width: 100%;
+      border-radius: 0.35em;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-menu-item:hover { background: #f0f1f4; }
+    .dev-banner {
+      background: #b45309;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75em;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      padding: 0.4em 1em;
+      line-height: 1.35;
+    }
+    .dev-banner-main {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75em;
+      flex-wrap: wrap;
+    }
+    .dev-banner-btn {
+      display: inline-flex;
+      align-items: center;
+      background: #fff;
+      border: 1px solid #fff;
+      color: #b45309 !important;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.8rem;
+      padding: 0.15em 0.7em;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+    .dev-banner-btn { gap: 0.35em; }
+    .dev-banner-btn-icon { display: inline-flex; }
+    .dev-banner-btn-icon svg { width: 12px; height: 12px; }
+    .dev-banner-btn:hover { background: #fff7ed; border-color: #fff7ed; }
+    .dev-banner-close {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      padding: 0;
+      color: #fff !important;
+      cursor: pointer;
+      font-size: 1rem;
+      line-height: 1;
+      flex-shrink: 0;
+      opacity: 0.85;
+    }
+    .dev-banner-close:hover { opacity: 1; }
+    html.dev-banner-hidden .dev-banner { display: none !important; }
+    .nav-menu-webid {
+      font-size: 0.85em;
+      color: #4a4a4a;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .nav-menu-filter { cursor: pointer; }
+    .nav-menu-filter input { accent-color: #1565d8; }
+    .nav-menu-logout { color: #b04444; }
+    .nav-menu-divider {
+      height: 1px;
+      background: #e6e8ec;
+      margin: 0.2em 0;
+    }
+  </style>
+  <script>
+    // Hide the dev banner before first paint if it was dismissed (avoids a flash/jump).
+    try {
+      if (localStorage.getItem('catalog.devBannerDismissed') === '1') {
+        document.documentElement.classList.add('dev-banner-hidden');
+      }
+    } catch (e) {}
+    function dismissDevBanner() {
+      try { localStorage.setItem('catalog.devBannerDismissed', '1'); } catch (e) {}
+      document.documentElement.classList.add('dev-banner-hidden');
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap">
+  <link rel="stylesheet" type="text/css" href="/viewer/viewer.css">
+  <link rel="stylesheet" type="text/css" href="/viewer/forms.css">
+  <link rel="icon" href="https://solidproject.org/assets/img/solid-emblem.svg" type="image/svg+xml">
+  <meta name="thumbnail" content="https://solidproject.org/assets/img/solid-emblem.svg">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#2d2454">
+  <link rel="apple-touch-icon" href="/assets/icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Solid Catalog">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function(){
+        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      });
+    }
+  </script>
 </head>
 <body>
 <div id="main-content">
-  <div class="sol-header">
-    <img src="./assets/logo.svg" class="logo">
-    <span class="sol-header-content">
-      <b style="display:inline-block;padding-left:1rem;padding-right:1rem;"> Solid Resources Catalog </b>
-      <sol-catalog-search class="search-input"><input type="text"> 
-      <button class="search-button">search</button></sol-catalog-search>
-      <button class="keyword-index-button">keyword index</button>
-      <button class="new-record-button">new record</button>
-      <button class="about-button" source="./catalog-about.html">about</button>
+  <div class="nav-bar" style="display:flex;align-items:center;gap:1rem;min-height:60px;background:#2d2454;padding:0 1rem;color:#fff;">
+    <a href="/" aria-label="Home" style="display:inline-flex;align-items:center;gap:0.6rem;color:#fff;text-decoration:none;">
+      <img src="/assets/logo.svg" alt="" style="height:36px;display:block;">
+      <b class="sol-title" style="font-size:1.2rem;font-weight:600;color:#fff;line-height:1;margin:0;display:inline-flex;align-items:center;">Solid Catalog</b>
+    </a>
+    <nav id="sol-sections-nav" class="sol-sections" aria-label="Sections">
+      <a href="/learning" data-section="learning-resources">Learning</a>
+      <a href="/participation" data-section="participation-opportunities">Participation</a>
+      <a href="/apps" data-section="apps-and-services">Apps & Services</a>
+      <a href="/libraries" data-section="software-libraries">Libraries</a>
+      <a href="/people" data-section="organizations-and-people">Orgs & People</a>
+      <a href="#" class="nav-extra nav-keyword-index">Keyword index</a>
+      <a href="#" class="nav-extra nav-login">Log in</a>
+      <a href="#" class="nav-extra nav-signup">Sign up</a>
+    </nav>
+    <span style="flex:1 1 auto;"></span>
+    <div class="nav-auth"></div>
+    <button class="nav-hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sol-sections-nav" onclick="toggleNavSections()">
+      <i data-lucide="menu"></i>
+    </button>
+    <script>
+      // Mobile hamburger: toggles the sections nav as a dropdown panel.
+      function toggleNavSections(){
+        var bar = document.querySelector('.nav-bar');
+        var btn = document.querySelector('.nav-hamburger');
+        if(!bar) return;
+        var open = bar.classList.toggle('sections-open');
+        if(btn){ btn.setAttribute('aria-expanded', open ? 'true' : 'false'); btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); }
+      }
+      // Close the menu after navigating to a section.
+      document.querySelectorAll('#sol-sections-nav a').forEach(function(a){
+        a.addEventListener('click', function(){
+          var bar = document.querySelector('.nav-bar');
+          var btn = document.querySelector('.nav-hamburger');
+          if(bar){ bar.classList.remove('sections-open'); }
+          if(btn){ btn.setAttribute('aria-expanded','false'); btn.setAttribute('aria-label','Open menu'); }
+        });
+      });
+      // Keyword index entry in the mobile menu mirrors the sub-header button.
+      var kwLink = document.querySelector('.nav-keyword-index');
+      if(kwLink){
+        kwLink.addEventListener('click', function(e){
+          e.preventDefault();
+          var b = document.querySelector('.keyword-index-button');
+          if(b) b.click();
+        });
+      }
+      // Log in / Sign up mobile-menu entries proxy the auth buttons in .nav-auth.
+      function clickAuthBtn(idx){
+        var btns = document.querySelectorAll('.nav-auth solid-ui-button');
+        if(btns[idx]) btns[idx].click();
+      }
+      var li = document.querySelector('.nav-login');
+      if(li) li.addEventListener('click', function(e){ e.preventDefault(); clickAuthBtn(0); });
+      var si = document.querySelector('.nav-signup');
+      if(si) si.addEventListener('click', function(e){ e.preventDefault(); clickAuthBtn(1); });
+    </script>
+    <script>
+      // First-frame avatar: if a logged-in WebID + avatar were cached on a prior
+      // visit, paint the avatar immediately so it's present before modules load.
+      (function(){
+        try {
+          var wid = localStorage.getItem('catalog.cachedWebId');
+          if(!wid) return;
+          var avatar = localStorage.getItem('catalog.cachedAvatar') || '';
+          var slot = document.currentScript.previousElementSibling;
+          if(!slot || !slot.classList.contains('nav-auth')) return;
+          var initials = '?';
+          try { var u = new URL(wid); initials = (u.pathname.split('/').filter(Boolean)[0] || u.host).slice(0,2).toUpperCase(); } catch(e){}
+          slot.innerHTML =
+            '<div class="nav-account"><button class="nav-avatar" type="button" aria-label="Account menu">' +
+            (avatar ? '<img alt="" src="' + avatar.replace(/"/g,'&quot;') + '">' : '<span class="nav-avatar-initials">' + initials + '</span>') +
+            '</button></div>';
+        } catch(e){}
+      })();
+    </script>
+  </div>
+
+  <div class="dev-banner" role="note">
+    <div class="dev-banner-main">
+      <span>This is a development version.</span>
+      <a class="dev-banner-btn" href="https://solidproject.solidcommunity.net/catalog/" target="_blank" rel="noopener">Official catalog <i data-lucide="external-link" class="dev-banner-btn-icon"></i></a>
+    </div>
+    <button class="dev-banner-close" type="button" aria-label="Dismiss banner" onclick="dismissDevBanner()">✕</button>
+  </div>
+
+  <nav class="breadcrumb" aria-label="Breadcrumb"></nav>
+
+  <div class="sub-header">
+    <sol-catalog-search class="search-input">
+      <input type="text" placeholder="Search the catalog">
+      <button class="search-button" aria-label="search" title="search"><i data-lucide="search"></i></button>
+    </sol-catalog-search>
+    <span class="sub-header-actions">
+      <solid-ui-button class="keyword-index-button" label="Keyword index" size="md"></solid-ui-button>
     </span>
   </div>
 
@@ -45,8 +325,7 @@
 </div>
 
 <div id="help" style="display:none">
-<button style="text-align:right" onclick="document.body.classList.remove('showHelp')"><<</button>
-<h1 style="font-size:1.4em !important">Solid Resources Catalog</h1>
+<h1 style="font-size:1.4em !important">Solid Catalog</h1>
 
 <p>This catalog is a work in progress and not all data has been recently updated.  Please help by updataing records for yourself, your organization, and your projects.</p>
 
@@ -68,12 +347,23 @@
     var sh;
   </script>
   <script type="module">
-    import {viewer,showSubtypes} from './viewer/viewer.js';
+    import {viewer,showSubtypes} from '/viewer/viewer.js';
+    import {initAuth} from '/viewer/auth.js';
     document.addEventListener('DOMContentLoaded', async () => {
       sh = showSubtypes;
       await viewer();
+      initAuth().catch(e => console.warn('auth init failed:', e));
     });
   </script>
+
+  <!-- Feedback widget (floating button, bottom-right) -->
+  <script type="module" src="https://feedback.api.mpeters.dev/feedback-tracker.js"></script>
+  <feedback-tracker
+    adapter="pocketbase"
+    endpoint="https://feedback.api.mpeters.dev"
+    collection="feedback"
+    collect-email
+  ></feedback-tracker>
 
 </body>
 </html>

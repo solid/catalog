@@ -8,7 +8,6 @@ import {store,fetcher,source,showPage,search,findNodeShapes} from './utils.js';
 export async function prepNewRecordForm(){
   let selector = document.getElementById('recordTypeChooser');
   let createRecordButton = document.getElementById('createRecordButton');
-  let cancelButton = document.getElementById('cancelButton');
 //  await fetcher.load(source().shaclURL);
   // let types = findNodeShapes();
   let types = findTopTypes();
@@ -16,11 +15,10 @@ export async function prepNewRecordForm(){
   for(let t  of Object.keys(types)){
     selector.innerHTML += `<option value="${t}">${types[t]}</option>`;
   }
-  createRecordButton.addEventListener('click',async ()=>{ 
-    showPage('record',{type:selector.value})
-  });
-  cancelButton.addEventListener('click',async ()=>{ 
-    showPage('main')
+  createRecordButton.addEventListener('click',async ()=>{
+    const landingInput = document.getElementById('newRecordLanding');
+    const landingPage = landingInput && landingInput.value.trim();
+    showPage('record',{type:selector.value, landingPage});
   });
 
 }

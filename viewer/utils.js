@@ -24,8 +24,9 @@ const pathNode = $rdf.sym('http://www.w3.org/ns/shacl#path') ;
 /* source - returns data locations and nodes
 */   
 export function source(){
-//  window.currentFolder = window.location.href.replace(/\/pages\/[^\/]+$/,'/');
-  window.currentFolder = window.location.href.replace(/\/pages\//,'/').replace(/\?.*/,'').replace(/\#.*/,'').replace(/(viewer|index|shacl2form)\.html/,'');
+  // Static catalog files always live at the origin root, regardless of which
+  // client-side route the user is on (e.g. /apps, /learning).
+  window.currentFolder = window.location.origin + '/';
   let vocURL= 'http://example.org';
 //  let shaclURL = 'urn:x-base:default' ;
 //   let shaclURL = currentFolder + 'catalog-shacl.ttl';
@@ -36,7 +37,9 @@ export function source(){
     dataLoadURL   : currentFolder + 'catalog-data.ttl',
     shaclLoadURL  : currentFolder + 'catalog-shacl.ttl',
     skosLoadURL   : currentFolder + 'catalog-skos.ttl',
-    newDataURL    : currentFolder + 'new-data/',
+    // Always publish to the live pod, even from local dev, so submissions
+    // actually land on the central catalog folder.
+    newDataURL    : 'https://solidproject.solidcommunity.net/catalog/new-data/',
     dataURL,
     shaclURL,
     skosURL,
@@ -411,28 +414,121 @@ export async function showPage(pageType,options){
   let iframe = formsArea;
   let shaclURL = source().shaclURL;
   if(pageType=='main'){
-//    let main = parent.document.getElementById('searchPage');
+    closeModal(formsArea);
     main.style.display="block";
-//    form.classList.add('formHidden');
-formsArea.innerHTML="";
-formsArea.style.display="none";
-main.style.display="block";
-//    iframe.style.display="none";
   }
   if(pageType=='type-chooser'){
     iframe.innerHTML = pageContent.typeChooser;
     await prepNewRecordForm(source().shaclURL);
-    main.style.display = "none";
+    main.style.display = "block";
     iframe.style.display = "block";
+    iframe.classList.add('modal-open');
+    addModalChrome(iframe);
   }
   if(pageType=='record'){
-    main.style.display = "none";
     iframe.style.display = "block";
-    let shape    = node2label(o.type);
-    iframe.innerHTML = `<div id="menubar"></div><form id="shacl2form"></form>`;
-//shape = shape.replace('>','Shape');;
-    await shacl2form(shape,o.id);
+    iframe.classList.add('modal-open');
+    const shape = o.type ? node2label(o.type) : undefined;
+    iframe.innerHTML = `<div class="modal-panel"><div id="menubar"></div><form id="shacl2form"></form></div>`;
+    await shacl2form(shape, o.id);
+    main.style.display = "block";
+    addModalChrome(iframe);
+    if(options && options.landingPage){
+      prefillLandingPage(options.landingPage);
+    }
+    if(options && options.draft){
+      window._currentDraftOpts = { draftId: options.draft.id };
+      const { applyDraftToForm } = await import('./form.js');
+      applyDraftToForm(options.draft);
+    } else {
+      window._currentDraftOpts = null;
+    }
   }
+}
+
+/* findByName -- fast prefix/substring match on record name (label) only */
+export function findByName(term){
+  if(!term) return [];
+  const rx = new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'i');
+  const subjects = findUniqueSubjects();
+  const seen = {};
+  const out = [];
+  for(const s of subjects){
+    if(seen[s.value]) continue;
+    seen[s.value] = true;
+    if(s.termType && s.termType !== 'NamedNode') continue;
+    if(!/^https?:|^urn:/i.test(s.value)) continue;
+    const label = findName(s);
+    if(label && rx.test(label)){
+      out.push({link:s.value, label});
+    }
+  }
+  out.sort((a,b)=>{
+    const al = a.label.toLowerCase(), bl = b.label.toLowerCase(), t = term.toLowerCase();
+    const ai = al.indexOf(t), bi = bl.indexOf(t);
+    if(ai !== bi) return ai - bi;
+    return al < bl ? -1 : al > bl ? 1 : 0;
+  });
+  return out;
+}
+
+/* Modal chrome: top-right close button + ESC handler */
+let _modalEscHandler = null;
+function addModalChrome(modal){
+  const panel = modal.querySelector('.modal-panel') || modal.firstElementChild;
+  if(panel && !panel.querySelector(':scope > .modal-close')){
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'modal-close';
+    btn.setAttribute('aria-label','Close');
+    btn.title = 'Close (Esc)';
+    btn.textContent = '✕';
+    btn.addEventListener('click',(e)=>{
+      e.preventDefault();
+      showPage('main');
+    });
+    panel.appendChild(btn);
+  }
+  if(!_modalEscHandler){
+    _modalEscHandler = (e)=>{
+      if(e.key === 'Escape'){
+        e.preventDefault();
+        showPage('main');
+      }
+    };
+    document.addEventListener('keydown', _modalEscHandler);
+  }
+}
+function closeModal(modal){
+  modal.innerHTML = "";
+  modal.style.display = "none";
+  modal.classList.remove('modal-open');
+  if(_modalEscHandler){
+    document.removeEventListener('keydown', _modalEscHandler);
+    _modalEscHandler = null;
+  }
+}
+
+/* prefillLandingPage -- after a SHACL form renders, populate its landing-page input */
+function prefillLandingPage(url){
+  const formsArea = parent.document.getElementById('forms-area');
+  if(!formsArea) return;
+  const tryFill = (attempt=0) => {
+    const fields = formsArea.querySelectorAll('.field');
+    let target;
+    for(const f of fields){
+      const label = (f.querySelector('.fieldLabel')||{}).textContent || '';
+      if(/landing/i.test(label)){ target = f.querySelector('input,textarea'); break; }
+    }
+    if(target){
+      target.value = url;
+      target.dispatchEvent(new Event('input',{bubbles:true}));
+      target.dispatchEvent(new Event('change',{bubbles:true}));
+      return;
+    }
+    if(attempt < 20) setTimeout(()=>tryFill(attempt+1), 100);
+  };
+  tryFill();
 }
 
 /*

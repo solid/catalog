@@ -34,6 +34,22 @@ function countResources(resourceTypes){
    }
    return resourceRecords.length;  
 }
+function sectionSlug(label){
+  return (label||'').toLowerCase().replace(/&/g,'and').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+}
+const PATH_TO_SECTION = {
+  '/learning': 'learning-resources',
+  '/participation': 'participation-opportunities',
+  '/apps': 'apps-and-services',
+  '/libraries': 'software-libraries',
+  '/people': 'organizations-and-people',
+};
+function currentSection(){
+  const path = window.location.pathname.replace(/\/$/, '') || '/';
+  if(PATH_TO_SECTION[path]) return PATH_TO_SECTION[path];
+  const p = new URLSearchParams(window.location.search);
+  return p.get('section') || '';
+}
 async function skos2toc(displayElement){
   let toc = document.createElement('div');
   displayElement.appendChild(toc);
@@ -48,6 +64,13 @@ async function skos2toc(displayElement){
   const narrower = UI.rdf.sym( skosPrefix + 'narrower' );
   const broader = UI.rdf.sym( skosPrefix + 'broader' );
   let top = store.each(taxonomyNode,topConceptNode);
+  const section = currentSection();
+  if(section){
+    top = top.filter(tc => {
+      const lbl = (store.any(tc,altLabelNode)||{}).value || (store.any(tc,labelNode)||{}).value;
+      return sectionSlug(lbl) === section;
+    });
+  }
   let str = "";
   for(let topConcept of top){
     let value = topConcept.uri;
@@ -67,10 +90,12 @@ async function skos2toc(displayElement){
       toc.appendChild(div1);
       div1.appendChild(anc);
     }
-    else {
-      let div = document.createElement('div');
+    else if(!section){
+      // Top-level category heading: plain, non-clickable label.
+      // On a single-section page it's just the page title, so we omit it.
+      const div = document.createElement('div');
       div.classList.add('type');
-      div.innerHTML = label;
+      div.textContent = label;
       toc.appendChild(div);
     }
     for(let subtype of subtypes){
@@ -99,22 +124,61 @@ async function skos2toc(displayElement){
 async function addTocListeners(){
   let resourceTypes = findTypes();
   let count = countResources(resourceTypes);
-  let dataNode = source().dataNode;
   let hasSubtype = source().subtypeNode ;
   let anchors = document.querySelectorAll('#toc a');
   let subcount = 0;
+  let emptyCount = 0;
   for(let anchor of anchors){
-    let field = anchor.getAttribute('data-href') || anchor.getAttribute('href');
-    let subtype = UI.rdf.sym(field);
-    let instances = store.each(null,hasSubtype,subtype);
-    if(instances.length==0) instances = store.each(null,source().isa,subtype);
-    if(instances.length>0){
-      subcount += instances.length;
-      anchor.parentNode.innerHTML += ` <span class="number">${instances.length}</span>`;
+    const subtypesAttr = anchor.getAttribute('data-subtypes');
+    let total;
+    if(subtypesAttr){
+      total = 0;
+      for(const uri of subtypesAttr.split('|')){
+        const node = UI.rdf.sym(uri);
+        let inst = store.each(null,hasSubtype,node);
+        if(inst.length===0) inst = store.each(null,source().isa,node);
+        total += inst.length;
+      }
+    } else {
+      const field = anchor.getAttribute('data-href') || anchor.getAttribute('href');
+      const subtype = UI.rdf.sym(field);
+      let inst = store.each(null,hasSubtype,subtype);
+      if(inst.length===0) inst = store.each(null,source().isa,subtype);
+      total = inst.length;
     }
-    else if(anchor.getAttribute('class')=="subtype") anchor.remove();
+    const instances = { length: total };
+    if(!subtypesAttr) subcount += instances.length;
+    const isEmpty = instances.length === 0;
+    if(isEmpty){
+      emptyCount++;
+      anchor.parentNode.classList.add('is-empty');
+    }
+    const badge = document.createElement('span');
+    badge.className = 'number' + (isEmpty ? ' empty' : '');
+    badge.textContent = instances.length;
+    anchor.parentNode.appendChild(document.createTextNode(' '));
+    anchor.parentNode.appendChild(badge);
   }
-//  if(isLocalhost)  document.getElementById('toc').innerHTML += `<p>${count}/${subcount} total records</p>`;
-//  else
-    document.getElementById('toc').innerHTML += `<p>${count} total records</p>`;
+  const toc = document.getElementById('toc');
+  const total = document.createElement('p');
+  total.className = 'toc-total';
+  total.textContent = `${count} total records`;
+  toc.appendChild(total);
+  if(emptyCount > 0){
+    const toggle = document.createElement('button');
+    toggle.type = 'button';
+    toggle.className = 'toc-show-empty';
+    const setLabel = () => {
+      const showing = toc.classList.contains('show-empty');
+      toggle.textContent = showing
+        ? `Hide ${emptyCount} empty`
+        : `Show ${emptyCount} empty`;
+    };
+    setLabel();
+    toggle.addEventListener('click', () => {
+      toc.classList.toggle('show-empty');
+      setLabel();
+    });
+    toc.appendChild(toggle);
+  }
 }

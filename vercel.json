@@ -1,0 +1,32 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "node scripts/build.js",
+  "outputDirectory": "dist",
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/learning", "destination": "/index.html" },
+    { "source": "/participation", "destination": "/index.html" },
+    { "source": "/apps", "destination": "/index.html" },
+    { "source": "/libraries", "destination": "/index.html" },
+    { "source": "/people", "destination": "/index.html" },
+    { "source": "/drafts", "destination": "/index.html" },
+    { "source": "/edits", "destination": "/index.html" },
+    { "source": "/submissions", "destination": "/index.html" },
+    { "source": "/flags", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/node_modules/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*\\.ttl)",
+      "headers": [
+        { "key": "Content-Type", "value": "text/turtle; charset=utf-8" }
+      ]
+    }
+  ]
+}
