@@ -47,6 +47,16 @@
   ex:resourcesWanted "funding\ncollaboration" ;
   ex:webid <https://angelo.veltens.org/profile/card#me> .
 
+<https://timea.solidcommunity.net/profile/card#me> a ex:Person ;
+  ex:contactEmail <mailto:timea.turdean@gmail.com> ;
+  ex:description "Timea is working on SolidOS." ;
+  ex:landingPage <https://timea.solidcommunity.net/> ;
+  ex:logo <hhttps://timea.solidcommunity.net/profile/18238146_10155235814682370_4572264504492849633_o.jpg> ;
+  ex:matrixHandle "@timeat:matrix.org" ;
+  ex:modified "2026-05-28T09:40:38.450Z"^^xsd:dateTime ;
+  ex:name "Timea Turdean" ;
+  ex:webid <https://timea.solidcommunity.net/profile/card#me> .
+
 <https://armoise.co/sro> a ex:Person ;
   ex:forumHandle "@srosset81" ;
   ex:name "Sebastien Rosset" ;
