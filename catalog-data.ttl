@@ -30,10 +30,6 @@
   ex:name "Andreas Harth" ;
   ex:webid <http://harth.org/andreas/foaf#ah> .
 
-<https://45h.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Luc" ;
-  ex:webid <https://45h.inrupt.net/profile/card#me> .
-
 <https://angelo.veltens.org/profile/card#me> a ex:Person ;
   ex:contactEmail <mailto:inbox+solid@veltens.org> ;
   ex:description "Angelo is working with linked data since 2010 and a member of the Solid community since 2019. He has developed several Solid Apps, participated in the development of SolidOS and is the founder of PodOS. He is also creating the Practical Solid video series." ;
@@ -51,15 +47,6 @@
   ex:forumHandle "@srosset81" ;
   ex:name "Sebastien Rosset" ;
   ex:webid <https://armoise.co/sro> .
-
-<https://carloss.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Tom Friendly" ;
-  ex:webid <https://carloss.inrupt.net/profile/card#me> .
-
-<https://communitylinksense.inrupt.net/profile/card#me> a ex:Person ;
-  ex:landingPage <https://github.com/YetAnotherJonWilson> ;
-  ex:name "Ian Wilson" ;
-  ex:webid <https://communitylinksense.inrupt.net/profile/card#me> .
 
 <https://comp495x.duckdns.org/Pod1/profile#me> a ex:Person ;
   ex:forumHandle "@Kludgy4" ;
@@ -81,22 +68,10 @@
   ex:name "elf Pavlik" ;
   ex:webid <https://elf-pavlik.hackers4peace.net> .
 
-<https://gatos.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Sander" ;
-  ex:webid <https://gatos.inrupt.net/profile/card#me> .
-
-<https://hegemon.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Liam Broza" ;
-  ex:webid <https://hegemon.inrupt.net/profile/card#me> .
-
 <https://hochstenbach.solidcommunity.net/profile/card#me> a ex:Person ;
   ex:forumHandle "@hochstenbach" ;
   ex:name "Patrick Hochstenbach" ;
   ex:webid <https://hochstenbach.solidcommunity.net/profile/card#me> .
-
-<https://hunterlester.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Hunter Lester" ;
-  ex:webid <https://hunterlester.inrupt.net/profile/card#me> .
 
 <https://id.inrupt.com/rajugeorge> a ex:Person ;
   ex:forumHandle "@rajugeorge" ;
@@ -121,56 +96,12 @@
   ex:name "Jackson Morgan" ;
   ex:webid <https://jackson.solidcommunity.net/profile/card#me> .
 
-<https://jaspervandenberghen.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Jasper Vandenberghen" ;
-  ex:webid <https://jaspervandenberghen.inrupt.net/profile/card#me> .
-
 <https://jeff-zucker.solidcommunity.net/profile/card#me> a ex:Person ;
   ex:forumHandle "@jeffz" ;
   ex:landingPage <https://github.com/jeff-zucker> ;
   ex:matrixHandle "@jeff-zucker" ;
   ex:name "Jeff Zucker" ;
   ex:webid <https://jeff-zucker.solidcommunity.net/profile/card#me> .
-
-<https://jenni.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Jenni Inglis" ;
-  ex:webid <https://jenni.inrupt.net/profile/card#me> .
-
-<https://jholleran.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Jarlath Holleran" ;
-  ex:webid <https://jholleran.inrupt.net/profile/card#me> .
-
-<https://jmartin.inrupt.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@james.martin" ;
-  ex:name "James Martin" ;
-  ex:webid <https://jmartin.inrupt.net/profile/card#me> .
-
-<https://johanbove.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Johan Bove" ;
-  ex:webid <https://johanbove.inrupt.net/profile/card#me> .
-
-<https://johnb.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "John Bruce" ;
-  ex:webid <https://johnb.inrupt.net/profile/card#me> .
-
-<https://joshcollins.inrupt.net/profile/card#me> a ex:Person ;
-  ex:landingPage <https://github.com/joshdcollins> ;
-  ex:name "Josh Collins" ;
-  ex:webid <https://joshcollins.inrupt.net/profile/card#me> .
-
-<https://jprod.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Pablo" ;
-  ex:webid <https://jprod.inrupt.net/profile/card#me> .
-
-<https://julian-cole.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Jules" ;
-  ex:webid <https://julian-cole.inrupt.net/profile/card#me> .
-
-<https://justin.inrupt.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@justin" ;
-  ex:landingPage <https://github.com/justinwb> ;
-  ex:name "Justin Bingham" ;
-  ex:webid <https://justin.inrupt.net/profile/card#me> .
 
 <https://jzvolensky.solidcommunity.net/profile/card#me> a ex:Person ;
   ex:forumHandle "@jzvolensky" ;
@@ -184,53 +115,10 @@
   ex:name "Tobias Käfer" ;
   ex:webid <https://kaefer3000.solidcommunity.net/profile/card#me> .
 
-<https://karlhrichter.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Karl Richter" ;
-  ex:webid <https://karlhrichter.inrupt.net/profile/card#me> .
-
-<https://kartikatulusan.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Kartika Tulusan" ;
-  ex:webid <https://kartikatulusan.inrupt.net/profile/card#me> .
-
-<https://kay.inrupt.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@kay-kim" ;
-  ex:landingPage <https://github.com/kay-kim> ;
-  ex:name "Kay Kim" ;
-  ex:webid <https://kay.inrupt.net/profile/card#me> .
-
-<https://kellyo.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Kelly O'Brien" ;
-  ex:webid <https://kellyo.inrupt.net/profile/card#me> .
-
-<https://khoward.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Kevin Howard" ;
-  ex:webid <https://khoward.inrupt.net/profile/card#me> .
-
-<https://kingsley.idehen.net/public_home/kidehen/profile.ttl#i> a ex:Person ;
-  ex:name "Kingsley Idehen" ;
-  ex:webid <https://kingsley.idehen.net/public_home/kidehen/profile.ttl#i> .
-
-<https://ldaguilar88.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Luis Aguilar" ;
-  ex:webid <https://ldaguilar88.inrupt.net/profile/card#me> .
-
-<https://markjspivey.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Markjspivey" ;
-  ex:webid <https://markjspivey.inrupt.net/profile/card#me> .
-
-<https://mats.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Mats Berg" ;
-  ex:webid <https://mats.inrupt.net/profile/card#me> .
-
 <https://melvin.solidcommunity.net/profile/card#me> a ex:Person ;
   ex:landingPage <https://github.com/melvincarvalho> ;
   ex:name "Melvin Carvalho" ;
   ex:webid <https://melvin.solidcommunity.net/profile/card#me> .
-
-<https://michielbdejong.inrupt.net/profile/card#me> a ex:Person ;
-  ex:landingPage <https://github.com/michielbdejong> ;
-  ex:name "Michiel de Jong" ;
-  ex:webid <https://michielbdejong.inrupt.net/profile/card#me> .
 
 <https://mitzilaszlo.solidcommunity.net/profile/card#me> a ex:Person ;
   ex:forumHandle "@MitziLaszlo" ;
@@ -242,10 +130,6 @@
   ex:name "Mohamed Hamed" ;
   ex:webid <https://mohamedsaidhamed.org/profile/card#me> .
 
-<https://mvs.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Miel Vander Sande" ;
-  ex:webid <https://mvs.inrupt.net/profile/card#me> .
-
 <https://nborson.solidcommunity.net/profile/card#me> a ex:Person ;
   ex:forumHandle "@nborson" ;
   ex:name "Nathan Borson" ;
@@ -256,30 +140,12 @@
   ex:name "Mike Adams" ;
   ex:webid <https://newyork.solid.community/profile/card#me> .
 
-<https://nickform.inrupt.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@nickform" ;
-  ex:name "Nick-Form" ;
-  ex:webid <https://nickform.inrupt.net/profile/card#me> .
-
 <https://noeldemartin.solidcommunity.net/profile/card#me> a ex:Person ;
   ex:forumHandle "@NoelDeMartin" ;
   ex:landingPage <https://noeldemartin.com> ;
   ex:modified "2025-06-10T18:02:34.141Z"^^xsd:dateTime ;
   ex:name "Noel De Martin" ;
   ex:webid <https://noeldemartin.solidcommunity.net/profile/card#me> .
-
-<https://omitg.inrupt.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@Omitg24" ;
-  ex:name "Omar Teixeira Gonzalez" ;
-  ex:webid <https://omitg.inrupt.net/profile/card#me> .
-
-<https://oz.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Osmar Olivo" ;
-  ex:webid <https://oz.inrupt.net/profile/card#me> .
-
-<https://parle.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Parle" ;
-  ex:webid <https://parle.inrupt.net/profile/card#me> .
 
 <https://paula.veltens.org/profile/card#me> a ex:Person ;
   ex:name "Paula Veltens" ;
@@ -288,19 +154,6 @@
 <https://people.apache.org/~acoburn/#i> a ex:Person ;
   ex:logo <https://avatars.githubusercontent.com/u/1265883?v=4> ;
   ex:name "Aaron Coburn" .
-
-<https://peterhatherley.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Peter Hatherley" ;
-  ex:webid <https://peterhatherley.inrupt.net/profile/card#me> .
-
-<https://pjh.inrupt.net/profile/card> a ex:Person ;
-  ex:name "Peter Hartman" ;
-  ex:webid <https://pjh.inrupt.net/profile/card> .
-
-<https://pmcb55.inrupt.net/profile/card#me> a ex:Person ;
-  ex:landingPage <https://github.com/pmcb55> ;
-  ex:name "Pat McBennett" ;
-  ex:webid <https://pmcb55.inrupt.net/profile/card#me> .
 
 <https://pod-os.solidcommunity.net/profile/card#me> a ex:Organization ;
   ex:contactEmail <mailto:contact@pod-os.org> ;
@@ -369,28 +222,13 @@
   ex:name "Maciej Samoraj" ;
   ex:webid <https://samurex.hackers4peace.net> .
 
-<https://sascha.inrupt.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@Sascha" ;
-  ex:name "Sascha" ;
-  ex:webid <https://sascha.inrupt.net/profile/card#me> .
-
 <https://schabot.solidcommunity.net/profile/card#me> a ex:Person ;
   ex:name "Simon Chabot" ;
   ex:webid <https://schabot.solidcommunity.net/profile/card#me> .
 
-<https://sharonstrats.inrupt.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@SharonStrats" ;
-  ex:landingPage <https://github.com/SharonStrats> ;
-  ex:name "Sharon Stratsianis" ;
-  ex:webid <https://sharonstrats.inrupt.net/profile/card#me> .
-
 <https://shrck1015.solidcommunity.net/profile/card#me> a ex:Person ;
   ex:name "Yujin Park" ;
   ex:webid <https://shrck1015.solidcommunity.net/profile/card#me> .
-
-<https://skirrane.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Sabrina Kirrane" ;
-  ex:webid <https://skirrane.inrupt.net/profile/card#me> .
 
 <https://solid.champin.net/pa/profile/card#me> a ex:Person ;
   ex:forumHandle "@p20n" ;
@@ -419,25 +257,13 @@
   ex:resourcesWanted "rdf turtle community building pod-provider solution-focused communication diversity equity inclusion" ;
   ex:webid <https://solidweb.me/testpro-dev/profile/card#me> .
 
-<https://sopekmir.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Mirek" ;
-  ex:webid <https://sopekmir.inrupt.net/profile/card#me> .
-
 <https://srs.solidcommunity.net/profile/card#me> a ex:Person ;
   ex:name "Stefan Rother-Stübs" ;
   ex:webid <https://srs.solidcommunity.net/profile/card#me> .
 
-<https://stijntaelemans.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Stijn Taelemans" ;
-  ex:webid <https://stijntaelemans.inrupt.net/profile/card#me> .
-
 <https://sven-lieber.org/profile#me> a ex:Person ;
   ex:name "Sven Lieber" ;
   ex:webid <https://sven-lieber.org/profile#me> .
-
-<https://techny.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Taekhoon Kim" ;
-  ex:webid <https://techny.inrupt.net/profile/card#me> .
 
 <https://teodora.solidcommunity.net/profile/card#me> a ex:Person ;
   ex:name "Teodora Petkova" ;
@@ -447,10 +273,6 @@
   ex:forumHandle "@happybeing" ;
   ex:name "Mark" ;
   ex:webid <https://thewebalyst.solidcommunity.net/profile/card#me> .
-
-<https://tic-tac-moe.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Tic Tac Moe" ;
-  ex:webid <https://tic-tac-moe.inrupt.net/profile/card#me> .
 
 <https://timbl.solidcommunity.net/profile/card#me> a ex:Person ;
   ex:forumHandle "@timbl" ;
@@ -469,49 +291,17 @@
   ex:name "Timo Kankaanpää" ;
   ex:webid <https://timojkankaanpaa.solidcommunity.net/profile/card#me> .
 
-<https://tobytoberson.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Toby" ;
-  ex:webid <https://tobytoberson.inrupt.net/profile/card#me> .
-
-<https://tvachon.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Travis Vachon" ;
-  ex:webid <https://tvachon.inrupt.net/profile/card#me> .
-
-<https://tychi.inrupt.net> a ex:Person ;
-  ex:forumHandle "@tychi" ;
-  ex:name "Tyler Childs" ;
-  ex:webid <https://tychi.inrupt.net> .
-
-<https://ubernatural.inrupt.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@ubernatural" ;
-  ex:name "John Fletcher" ;
-  ex:webid <https://ubernatural.inrupt.net/profile/card#me> .
-
 <https://uvdsl.solid.aifb.kit.edu/profile/card#me> a ex:Person ;
   ex:landingPage <https://github.com/uvdsl> ;
   ex:modified "2025-12-05T10:53:15.993Z"^^xsd:dateTime ;
   ex:name "Christoph Braun" ;
   ex:webid <https://uvdsl.solid.aifb.kit.edu/profile/card#me> .
 
-<https://victorgon.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Víctor Gonzalo Cristóbal" ;
-  ex:webid <https://victorgon.inrupt.net/profile/card#me> .
-
-<https://vincentt.inrupt.net/profile/card#me> a ex:Person ;
-  ex:forumHandle "@Vincent" ;
-  ex:landingPage <https://github.com/Vinnl> ;
-  ex:name "Vincent Tunru" ;
-  ex:webid <https://vincentt.inrupt.net/profile/card#me> .
-
 <https://virginiabalseiro.com/#me> a ex:Person ;
   ex:forumHandle "@Virginia" ;
   ex:landingPage <https://github.com/VirginiaBalseiro> ;
   ex:name "Virginia Balseiro" ;
   ex:webid <https://virginiabalseiro.com/#me> .
-
-<https://vsri.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "V Sri" ;
-  ex:webid <https://vsri.inrupt.net/profile/card#me> .
 
 <https://w3id.org/people/sergio> a ex:Person ;
   ex:description "Senior Research Fellow in Knowledge Graph Engineering.\nSoftware Innovation Institute.\nSchool of Computing.\nCollege of Systems & Society.\nThe Australian National University." ;
@@ -520,14 +310,6 @@
   ex:name "Sergio José Rodríguez Méndez" ;
   ex:resourcesOffered "research\ncollaboration\nmentorship" ;
   ex:webid <https://w3id.org/people/sergio> .
-
-<https://worrallp.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Paul Worrall" ;
-  ex:webid <https://worrallp.inrupt.net/profile/card#me> .
-
-<https://wouteraj.inrupt.net/profile/card#me> a ex:Person ;
-  ex:name "Wouter Janssens" ;
-  ex:webid <https://wouteraj.inrupt.net/profile/card#me> .
 
 <https://woutermont.solidcommunity.net/profile/card#me> a ex:Person ;
   ex:forumHandle "@woutermont" ;
@@ -721,7 +503,7 @@
 
 <urn:uuid:1148e922-daa6-4047-9943-e9e6d9be4e3f> a ex:Software ;
   ex:description "A note-taking app for Solid" ;
-  ex:maintainer <https://vincentt.inrupt.net/profile/card#me> ;
+  ex:maintainer <https://github.com/Vinnl> ;
   ex:name "Notepod (VT)" ;
   ex:repository <https://github.com/Vinnl/notepod> ;
   ex:status con:Archived ;
@@ -963,7 +745,7 @@
 
 <urn:uuid:2474e337-7a77-4abd-bc89-23c0d6bee6ac> a ex:Software ;
   ex:landingPage <https://apps.nextcloud.com/apps/solid> ;
-  ex:maintainer <https://michielbdejong.inrupt.net/profile/card#me>, <urn:uuid:b5c7af17-0810-4956-98b1-95c7e56ac786> ;
+  ex:maintainer <https://github.com/michielbdejong>, <urn:uuid:b5c7af17-0810-4956-98b1-95c7e56ac786> ;
   ex:modified "2025-10-16T01:19:34.341Z"^^xsd:dateTime ;
   ex:name "Solid Pod Server for Nextcloud" ;
   ex:repository <https://apps.nextcloud.com/apps/solid> ;
@@ -2787,7 +2569,7 @@
 
 <urn:uuid:a9b30f3f-b04b-42cf-a3ae-cea4b75d7377> a ex:Software ;
   ex:description "Simple check of Web Access Control (WAC) access." ;
-  ex:maintainer <https://michielbdejong.inrupt.net/profile/card#me>, <urn:uuid:488c05b9-4242-4b1a-9a06-b1c433980b9e>, <urn:uuid:8c4b61f9-f6aa-4a1e-9ca6-d60a4672fc5e> ;
+  ex:maintainer <https://github.com/michielbdejong>, <urn:uuid:488c05b9-4242-4b1a-9a06-b1c433980b9e>, <urn:uuid:8c4b61f9-f6aa-4a1e-9ca6-d60a4672fc5e> ;
   ex:name "ACL check" ;
   ex:repository <https://github.com/nodeSolidServer/acl-check> ;
   ex:status con:Production ;
@@ -2982,7 +2764,7 @@
   ex:name "Michael Dundas" .
 
 <urn:uuid:b7acfb1e-ecce-42e8-800a-ac84dc52b427> a ex:Software ;
-  ex:maintainer <https://vincentt.inrupt.net/profile/card#me> ;
+  ex:maintainer <https://github.com/Vinnl> ;
   ex:name "Martin" ;
   ex:status con:Development ;
   ex:subType con:OtherApp ;
@@ -3037,7 +2819,7 @@
 <urn:uuid:bb67bd3b-4799-47dd-89f0-2d8cc1d3760d> a ex:Software ;
   ex:description "Private bookmarking" ;
   ex:landingPage <https://gitlab.com/vincenttunru/poddit> ;
-  ex:maintainer <https://vincentt.inrupt.net/profile/card#me> ;
+  ex:maintainer <https://github.com/Vinnl> ;
   ex:name "Poddit" ;
   ex:status con:Archived ;
   ex:subType con:PodApp ;

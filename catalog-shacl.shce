@@ -163,9 +163,13 @@ shape :SoftwareShape -> ex:Software ;
 		sh:name "provider"@en ;
 		sh:description "organization(s) responsible for creating/maintaining the softare"
 	% .
-	ex:maintainer IRI @:PersonShape %
+	ex:maintainer %
 		sh:name "maintainer"@en ;
-		sh:description "person responsible for maintaining the software"
+		sh:description "person responsible for maintaining the software" ;
+		sh:or (
+			[ sh:nodeKind sh:IRI ]
+			[ sh:node :PersonShape ]
+		)
 	% .
 	ex:socialKeyword xsd:string %
 		sh:name "social keyword"@en ;
