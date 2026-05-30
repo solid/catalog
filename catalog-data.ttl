@@ -378,11 +378,11 @@
   ex:name "Simon Chabot" ;
   ex:webid <https://schabot.solidcommunity.net/profile/card#me> .
 
-<https://sharonstrats.inrupt.net/profile/card#me> a ex:Person ;
+<https://sharonstratsianis.solidcommunity.net/profile/card#me> a ex:Person ;
   ex:forumHandle "@SharonStrats" ;
   ex:landingPage <https://github.com/SharonStrats> ;
   ex:name "Sharon Stratsianis" ;
-  ex:webid <https://sharonstrats.inrupt.net/profile/card#me> .
+  ex:webid <https://sharonstratsianis.solidcommunity.net/profile/card#me> .
 
 <https://shrck1015.solidcommunity.net/profile/card#me> a ex:Person ;
   ex:name "Yujin Park" ;
@@ -2509,7 +2509,7 @@
   ex:technicalKeyword "movies" .
 
 <urn:uuid:97fa72e3-7059-4e55-9b92-64e0c8d2b411> a ex:Software ;
-  ex:maintainer <https://sharonstrats.inrupt.net/profile/card#me> ;
+  ex:maintainer <https://sharonstratsianis.solidcommunity.net/profile/card#me> ;
   ex:name "Solid LBS" ;
   ex:repository <https://github.com/SharonStrats/SOLIDLBSPrototype> ;
   ex:status con:Archived ;
